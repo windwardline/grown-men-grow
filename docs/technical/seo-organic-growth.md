@@ -25,8 +25,8 @@ Ghost automatically supplies XML sitemaps, canonical tags, structured data, and 
 
 ## Launch indexing sequence
 
-1. Purchase Ghost(Pro) Publisher at the founder-approved checkout gate.
-2. Enable native web analytics.
+1. Recheck the Ghost trial and plan state at the launch checkpoint. The founder deferred the Publisher purchase while the trial remains active; do not complete a charge from the earlier approval alone.
+2. Complete the Publisher purchase only after the founder confirms the charge, then enable native web analytics.
 3. Remove private mode only when the founder authorizes launch.
 4. Verify `robots.txt`, `/sitemap.xml`, page canonicals, titles, descriptions, Open Graph data, `max-image-preview:large`, and response codes on the public domain.
 5. Publish Start Here, About, and Essay 1 under the approved slugs.

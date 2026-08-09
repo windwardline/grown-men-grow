@@ -1,6 +1,6 @@
 # Editorial Visual System
 
-Status: cross-surface system and custom-theme build approved. The collage-led replacement set is ready for founder review. Nothing is authorized for public use.
+Status: cross-surface system, custom-theme build, and collage-led launch set approved on 2026-08-08. Ghost web and Instagram use are authorized after the release checklist passes; live staging and rendering remain unverified.
 
 ## Objective
 

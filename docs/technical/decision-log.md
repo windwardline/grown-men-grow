@@ -287,10 +287,42 @@
 - **Hierarchy:** Grown Men Grow remains the primary publication identity. Michael Peacock appears as the credited writer on Ghost, not as the Instagram identity.
 - **Image boundary:** Launch with the text-only author treatment unless the founder later supplies or approves a staff photograph.
 
+## 2026-08-08 — Approve the exact Essay 1 distribution pack
+
+- **Status:** Approved
+- **Decision:** Approve the exact platform-specific copy and metadata in `content/distribution/essay-01-launch.md` without rewriting it.
+- **Sequence:** Publish and verify the canonical Ghost URL first. Then configure or verify each approved profile, preserve the Ghost canonical on Medium, and use the reviewed native adaptations and tracked links in the order defined by `distribution-plan.md`.
+- **Controls:** Approval of the pack does not authorize a duplicate newsletter, member-list synchronization, unreviewed automation, a paid upgrade, or publication before the canonical and platform-specific gates pass.
+- **Founder action required:** Complete any provider-owned identity, CAPTCHA, MFA, or consent step that cannot be delegated.
+
+## 2026-08-08 — Defer the Ghost Publisher purchase during the trial
+
+- **Status:** Approved deferral
+- **Decision:** Keep using the active Ghost trial and wait on the Publisher purchase. The founder reported 13 trial days remaining on 2026-08-08.
+- **Controls:** Recheck the dashboard and current price at the launch checkpoint. Do not rely on the earlier plan approval as authorization to complete a charge after this deferral.
+- **Founder action required:** Confirm the purchase when the trial or a required launch feature makes it necessary.
+
+## 2026-08-08 — Authorize the founder-controlled Gmail inbox for private tests
+
+- **Status:** Approved
+- **Decision:** Use the founder's signed-in Gmail inbox for private signup, magic-link, welcome-email, reply, account-management, and unsubscribe testing.
+- **Controls:** Do not record the Gmail address, credentials, messages, member export, cookies, or access codes in Git, chat, screenshots, or browser logs. This authorization does not permit an Essay 1 newsletter send.
+- **Founder action required:** Complete any provider-owned inbox confirmation that the agent cannot safely perform.
+
+## 2026-08-08 — Establish Field Note 2 as the current voice and platform reference
+
+- **Status:** Approved
+- **Decision:** Treat “Call Your Friends Before There’s a Reason” as the clearest current calibration for the Grown Men Grow voice: adult, specific, nuanced, dryly funny, imperfect, sincere, and willing to use profanity only when it earns emphasis.
+- **Platform direction:** Ghost carries the full canonical essay. Instagram receives a native carousel and caption built from the same argument rather than a mechanical excerpt. Later approved networks receive adaptations suited to their surface; they do not receive one duplicated block of copy.
+- **Visual direction:** Use the approved bright friendship-led collage brief with movement, daylight, ordinary life, and visible material texture. The direction is approved; final artwork and publication timing remain gated.
+- **Controls:** Do not turn the voice into therapeutic instruction, self-righteous positioning, formulaic comma-chain titles, grievance content, or forced ideological signaling. Preserve the distinct structures of future pieces instead of imitating this essay sentence by sentence.
+- **Founder action required:** Decide final artwork and release timing after production review.
+
 ## Current pending decisions
 
-- Ghost Publisher purchase if the approved checkout is still incomplete.
-- Founder test inbox or inbox-side action for end-to-end membership and welcome-email verification.
+- Ghost Publisher purchase confirmation at the later trial or launch checkpoint.
+- Inbox-side confirmation only if an end-to-end membership or welcome-email test requires founder interaction.
 - Any future newsletter send; Essay 1 is web-only under the current authorization.
-- Final approval of newly prepared copy for platforms beyond the already approved Ghost and Instagram launch packages.
+- Publication timing and final artwork for Field Note 2.
+- Final approval of platform adaptations for later essays; the Essay 1 distribution pack is approved.
 - Any future change from private to public repository visibility.

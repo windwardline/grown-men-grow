@@ -35,7 +35,7 @@ The founder makes every final decision. Codex prepares recommendations, verifies
 
 ## Gate 3 — Accounts and email
 
-- [x] Ghost(Pro) subscription level: Publisher at $29/month billed yearly; checkout prepared and purchase awaiting founder completion
+- [x] Ghost(Pro) subscription level: Publisher at $29/month billed yearly; purchase explicitly deferred while the trial remains active, with 13 trial days reported on 2026-08-08
 - [x] Ghost owner email: `michael@grownmengrow.com`
 - [ ] Ghost owner two-factor authentication — founder deferred this step
 - [x] Domain/DNS account owner and zone: founder-owned Cloudflare Windward Line account
@@ -46,7 +46,7 @@ The founder makes every final decision. Codex prepares recommendations, verifies
 - [x] Public support email: `hello@grownmengrow.com`
 - [x] Newsletter reply-to setting: `hello@grownmengrow.com`; Cloudflare route active and Ghost displays the address
 - [x] Ghost member Portal support address: `hello@grownmengrow.com`
-- [ ] Founder test inbox
+- [x] Founder-controlled Gmail inbox authorized for private membership and email testing; successful delivery and flow verification remain pending
 
 Credentials remain in authenticated sessions, a password manager, macOS Keychain, or provider secret stores. They must not be placed in this repository or copied into chat.
 
@@ -67,7 +67,7 @@ Credentials remain in authenticated sessions, a password manager, macOS Keychain
 - [x] Ghost and Instagram organic-discovery implementation strategy documented; no paid SEO service added
 - [x] Google Search Console, Bing Webmaster Tools, and Cloudflare crawler-signal evaluation approved; Crawler Hints is intentionally off because the Ghost records are DNS-only
 - [x] Launch-post discovery phrases and three-tag classification sets approved
-- [x] Field Note 2, “Call Your Friends Before There’s a Reason,” approved as written; the marked first-person statement was confirmed as true
+- [x] Field Note 2, “Call Your Friends Before There’s a Reason,” approved as written and established as the current voice reference; its marked first-person statement, Ghost and Instagram direction, social copy, and bright friendship-led collage brief are approved, while final artwork and publication timing remain gated
 - [x] Do not fabricate a concrete friendship anecdote. Add one later only from founder-supplied facts and only if it strengthens the piece.
 - [x] Launch timing: proceed as soon as the technical launch gates pass
 
@@ -90,6 +90,7 @@ Credentials remain in authenticated sessions, a password manager, macOS Keychain
 - [x] YouTube, TikTok, and X handle reservations approved; YouTube and TikTok activation waits for original motion work, and X remains inactive
 - [x] Google Search Console, Bing Webmaster Tools, Google Discover/News eligibility work, and Cloudflare Crawler Hints evaluation approved; Crawler Hints is not enabled in the DNS-only Ghost topology
 - [x] Buffer Free and Zapier Free approved for draft-first workflow support
+- [x] Exact Essay 1 copy in `content/distribution/essay-01-launch.md` approved for the broader platform sequence; execution waits for the canonical public Ghost URL and each platform's verification gate
 - [x] Subscriber-list import or synchronization into another platform prohibited
 - [x] No advertising spend or additional paid platform approved
 

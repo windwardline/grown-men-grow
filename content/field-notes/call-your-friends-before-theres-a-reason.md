@@ -11,6 +11,8 @@ approved: 2026-08-08
 personal_claims_verified: true
 publication_authorized: false
 social_copy_status: founder-approved
+ghost_and_instagram_direction_status: founder-approved
+visual_direction_status: founder-approved
 artwork_status: pending-production
 ---
 

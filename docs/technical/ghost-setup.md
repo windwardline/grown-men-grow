@@ -25,6 +25,7 @@ Approved concise staff bio: **Michael Peacock writes Grown Men Grow, a publicati
 ## Publication
 
 - [x] Create Ghost(Pro) trial publication under founder ownership.
+- [ ] Recheck the trial and plan state at the launch checkpoint. The founder reported 13 trial days remaining on 2026-08-08 and explicitly deferred the Publisher purchase while the trial remains active.
 - [x] Keep the publication in Ghost pre-launch/private mode during setup and review.
 - [x] Set the approved publication title.
 - [x] Set the approved publication description.
