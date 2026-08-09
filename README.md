@@ -29,8 +29,8 @@ Canonical local path:
 
 ## Current status
 
-The implementation plan was approved on 2026-08-07. The routed project email, public Instagram Creator profile, private Ghost staging baseline, approved launch drafts, corrected brand avatar, launch graphics, homepage metadata, social-sharing cards, custom apex domain, and prelaunch export are configured. Both `grownmengrow.com` and `www.grownmengrow.com` serve HTTPS, and `www` redirects to the canonical apex. Ghost billing, signup and delivery testing, final founder review, and launch remain pending.
+The implementation plan was approved on 2026-08-07. The routed project email, public Instagram Creator profile, private Ghost staging baseline, approved launch drafts, corrected brand avatar, initial launch graphics, homepage metadata, social-sharing cards, custom apex domain, and prelaunch export are configured. Both `grownmengrow.com` and `www.grownmengrow.com` serve HTTPS, and `www` redirects to the canonical apex. A representative high-end editorial redesign is prepared for founder review; the initial launch graphics remain staged and no live visual was replaced. Ghost billing, signup and delivery testing, final founder review, and launch remain pending.
 
 The source repository is private at `windwardline/grown-men-grow`. Repository publication does not authorize Ghost publication, newsletter delivery, Instagram posting, or a change to GitHub visibility.
 
-See `docs/README.md` for the document map, `docs/technical/founder-decisions.md` for the active decision gates, `docs/technical/release-checklist.md` for launch controls, and `docs/technical/handoff-log.md` for the current operational handoff.
+See `docs/README.md` for the document map, `docs/editorial-visual-system.md` for the proposed art direction, `docs/technical/founder-decisions.md` for the active decision gates, `docs/technical/release-checklist.md` for launch controls, and `docs/technical/handoff-log.md` for the current operational handoff.
