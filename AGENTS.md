@@ -44,7 +44,7 @@ Run these before committing material changes:
 6. `bash scripts/verify-svg-xml.sh`
 7. Review `git diff --check` and the complete staged file list.
 
-CI repeats the Ghost theme, repository, and SVG verification. Security workflows run Semgrep and secret scanning. The unused root `vercel.json` is retained solely because it is a fleet-conformance artifact; it is not the publication's hosting configuration.
+CI repeats the Ghost theme, repository, and SVG verification. Security workflows run Semgrep and secret scanning. An advisory Claude review runs on every same-repo PR via `claude-review.yml`, which deliberately calls the fleet reusable at `@main` — one merge updates every repo. It activates only when the `CLAUDE_CODE_OAUTH_TOKEN` secret is present — reviews bill the owner's Claude subscription, not Console credits; fork PRs never receive secrets, so they skip it by security design. The unused root `vercel.json` is retained solely because it is a fleet-conformance artifact; it is not the publication's hosting configuration.
 
 ## Shared handoff log
 
