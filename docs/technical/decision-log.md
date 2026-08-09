@@ -221,6 +221,14 @@
 - **Controls:** Preserve ignored private inputs and unrelated founder work; use non-default branches and pull requests; never force-push or bypass required checks.
 - **Founder action required:** None unless repository visibility or launch authority changes.
 
+## 2026-08-08 — Raise the visual system to an editorial-publication standard
+
+- **Status:** Founder direction approved; representative design review pending
+- **Decision:** Preserve the approved written voice and overhaul its presentation across Ghost and Instagram. The target is an original, visually arresting editorial system with the authority, hierarchy, pacing, and art direction of a high-end men's magazine.
+- **Scope:** Rework typography, composition, image strategy, page rhythm, carousel pacing, Stories, Reel covers, post cards, social previews, and Ghost article presentation. Maintain one recognizable brand without forcing every surface into one template.
+- **Controls:** Do not copy another publication's trade dress or rewrite approved launch copy. Nothing is published or posted during design development. Any departure from the previously approved unmodified Source theme requires a specific founder decision after representative surfaces are reviewed.
+- **Founder action required:** Review the proposed editorial direction and representative Ghost, feed, carousel, Story, and social-card surfaces before full propagation.
+
 ## Current pending decisions
 
 - Launch date.

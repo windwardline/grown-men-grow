@@ -24,6 +24,9 @@ The founder makes every final decision. Codex prepares recommendations, verifies
 - [x] Accent color: oxblood `#3A1518`
 - [x] Heading and body typography: Source theme defaults
 - [x] Publication cover: none at launch
+- [x] Editorial redesign direction: preserve the approved voice while raising every Ghost and Instagram surface to an original high-end publication standard
+- [ ] Representative editorial redesign approved before it replaces the staged launch graphics
+- [ ] Any change from the unmodified Source theme approved separately after the Ghost design audit
 
 ## Gate 3 — Accounts and email
 
