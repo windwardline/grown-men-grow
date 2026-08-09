@@ -88,15 +88,15 @@ const home = `<section class="publication-masthead">
 <section class="post-feed-wrap" aria-label="Latest writing">
   <div class="post-feed">
     <article class="post-card post-card--feature">
-      <a class="post-card__media" href="/output/playwright/theme-post.html" aria-label="Read Strength Has to Grow Up">${featurePicture("/assets/drafts/ghost/feature-images/strength-has-to-grow-up.png", "Collage of a chair being repaired beside a sunlit writing table")}</a>
+      <a class="post-card__media" href="/output/playwright/theme-post.html" aria-label="Read Strength Has to Grow Up">${featurePicture("/assets/drafts/ghost/feature-images/strength-has-to-grow-up.png", "A wooden chair mid-repair in a bright home workshop, framed in a paper collage")}</a>
       <div class="post-card__body"><div class="post-card__kicker"><span>Field Note</span><span aria-hidden="true">/</span><time datetime="2026-08-07">Aug 7, 2026</time></div><h2 class="post-card__title"><a href="/output/playwright/theme-post.html">Strength Has to Grow Up</a></h2><p class="post-card__excerpt">A man can look strong and still be hiding.</p><div class="post-card__footer"><span>11 min read</span><a class="text-link" href="/output/playwright/theme-post.html">Read <span aria-hidden="true">→</span></a></div></div>
     </article>
     <article class="post-card">
-      <a class="post-card__media" href="#">${featurePicture("/assets/drafts/ghost/feature-images/start-here.png", "A sunlit writing table and two men in conversation")}</a>
+      <a class="post-card__media" href="#">${featurePicture("/assets/drafts/ghost/feature-images/start-here.png", "A sunlit writing table with an open notebook and healthy plants, framed in a paper collage")}</a>
       <div class="post-card__body"><div class="post-card__kicker"><span>Recognition</span><span aria-hidden="true">/</span><time datetime="2026-08-07">Aug 7, 2026</time></div><h2 class="post-card__title"><a href="#">A Confession Can Still Be Selfish</a></h2><p class="post-card__excerpt">Opening up matters. Disclosure is not the same thing as repair.</p><div class="post-card__footer"><span>Field note</span><a class="text-link" href="#">Read <span aria-hidden="true">→</span></a></div></div>
     </article>
     <article class="post-card">
-      <a class="post-card__media" href="#">${featurePicture("/assets/drafts/ghost/feature-images/about.png", "Two men talking beside a repaired wooden chair")}</a>
+      <a class="post-card__media" href="#">${featurePicture("/assets/drafts/ghost/feature-images/about.png", "Layered paper collage of oxblood, green, and rust fields with tape and drawn marks")}</a>
       <div class="post-card__body"><div class="post-card__kicker"><span>Marginalia</span><span aria-hidden="true">/</span><time datetime="2026-08-07">Aug 7, 2026</time></div><h2 class="post-card__title"><a href="#">Fear With Good Posture</a></h2><p class="post-card__excerpt">A strategy can save a boy and still limit the man he becomes.</p><div class="post-card__footer"><span>Field note</span><a class="text-link" href="#">Read <span aria-hidden="true">→</span></a></div></div>
     </article>
   </div>
@@ -110,7 +110,7 @@ const post = `<article class="article post">
       <p class="article-header__deck">A man can look strong and still be hiding.</p>
       <div class="article-header__meta"><span class="article-header__brand">Grown Men Grow</span><span class="article-header__byline">By <a href="#">Michael Peacock</a></span><time datetime="2026-08-07">August 7, 2026</time><span>11 min read</span></div>
     </div>
-    <figure class="article-header__figure">${featurePicture("/assets/drafts/ghost/feature-images/strength-has-to-grow-up.png", "Collage of a chair being repaired beside a sunlit writing table")}<figcaption>Grown Men Grow / Field Note 01</figcaption></figure>
+    <figure class="article-header__figure">${featurePicture("/assets/drafts/ghost/feature-images/strength-has-to-grow-up.png", "A wooden chair mid-repair in a bright home workshop, framed in a paper collage")}<figcaption>Grown Men Grow / Field Note 01</figcaption></figure>
   </header>
   <div class="article-content gh-content">
     <p>I used to think composure was one of my better qualities.</p>
@@ -147,14 +147,14 @@ const aboutSource = await markdownPage("content/ghost/about.md");
 
 const startHere = `<article class="page page--start-here">
   <header class="page-header page-header--statement"><p class="eyebrow">Grown Men Grow</p><h1>${escapeHtml(startHereSource.metadata.title)}</h1></header>
-  <figure class="page-feature page-feature--start-here">${featurePicture("/assets/drafts/ghost/feature-images/start-here.png", "A sunlit writing table and two men in conversation")}</figure>
+  <figure class="page-feature page-feature--start-here">${featurePicture("/assets/drafts/ghost/feature-images/start-here.png", "A sunlit writing table with an open notebook and healthy plants, framed in a paper collage")}</figure>
   <div class="page-content gh-content">${startHereSource.content}</div>
   <section class="signup-panel signup-panel--page"><p class="eyebrow">Newsletter</p><h2>Grown Men Grow</h2><p>Essays on the unfinished work of being a man.</p><a class="button button--paper" href="#">Subscribe</a></section>
 </article>`;
 
 const about = `<article class="page page--about">
   <header class="page-header page-header--split"><p class="eyebrow">Grown Men Grow</p><h1>${escapeHtml(aboutSource.metadata.title)}</h1></header>
-  <figure class="page-feature">${featurePicture("/assets/drafts/ghost/feature-images/about.png", "Two men talking beside a repaired wooden chair")}</figure>
+  <figure class="page-feature">${featurePicture("/assets/drafts/ghost/feature-images/about.png", "Layered paper collage of oxblood, green, and rust fields with tape and drawn marks")}</figure>
   <div class="page-content gh-content">${aboutSource.content}</div>
 </article>`;
 

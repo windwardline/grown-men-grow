@@ -25,18 +25,15 @@
     <rect x="56" y="62" width="1018" height="858" fill="#F8F3EA"/>
     <image href="/assets/source/editorial/sunlit-writing-table.png" x="60" y="66" width="1010" height="850" preserveAspectRatio="xMidYMid slice" filter="url(#feature-start-photo)"/>
   </g>
-    <g transform="rotate(1.5 1284 504)">
-    <rect x="1022" y="212" width="524" height="618" fill="#60735A"/>
-    <rect x="1030" y="198" width="508" height="612" fill="#F8F3EA"/>
-    <image href="/assets/source/editorial/friends-in-conversation.png" x="1034" y="202" width="500" height="604" preserveAspectRatio="xMidYMid slice" filter="url(#feature-start-photo)"/>
-  </g>
+    <rect x="1122" y="128" width="392" height="430" fill="#60735A" transform="rotate(2 1318 343)"/>
+    <rect x="1160" y="196" width="316" height="80" fill="#F8F3EA" transform="rotate(2 1318 236)"/>
     <g transform="rotate(-4 360 67)">
     <rect x="244" y="44" width="232" height="46" fill="#D9CBAF" opacity="0.74"/>
     <line x1="252" y1="51" x2="466" y2="48" stroke="#fff" stroke-opacity="0.38"/>
   </g>
-    <g transform="rotate(5 1268 207)">
-    <rect x="1168" y="184" width="200" height="46" fill="#D9CBAF" opacity="0.74"/>
-    <line x1="1176" y1="191" x2="1358" y2="188" stroke="#fff" stroke-opacity="0.38"/>
+    <g transform="rotate(5 1298 135)">
+    <rect x="1198" y="112" width="200" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="1206" y1="119" x2="1388" y2="116" stroke="#fff" stroke-opacity="0.38"/>
   </g>
     <path d="M1112 878 C1210 814 1344 822 1434 750" fill="none" stroke="#3A1518" stroke-width="10" stroke-linecap="round"/>
     <path d="M1402 730 L1454 736 L1438 786" fill="none" stroke="#3A1518" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
