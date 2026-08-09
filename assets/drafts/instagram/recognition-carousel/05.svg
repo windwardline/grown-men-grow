@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#F2EBDD"/>
+  <line x1="68" y1="190" x2="68" y2="1160" stroke="#3A1518" stroke-opacity="0.34" stroke-width="3"/><circle cx="68" cy="190" r="9" fill="#3A1518"/>
+  <text x="108" y="102" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.8">GROWN MEN GROW</text>
+  <text x="990" y="102" text-anchor="end" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.8">05 / 07</text>
+  <text x="90" y="320" text-anchor="start" fill="#3A1518" font-family="Georgia, Times New Roman, serif" font-size="61" font-weight="700" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">Vulnerability becomes real</tspan><tspan x="90" dy="83">when it leaves room for</tspan><tspan x="90" dy="83">the other person’s reaction.</tspan></text>
+    <text x="90" y="780" text-anchor="start" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="83" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">Even the reaction</tspan><tspan x="90" dy="102">he does not want.</tspan></text>
+  <text x="108" y="1265" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5">GROWN MEN GROW</text>
+</svg>

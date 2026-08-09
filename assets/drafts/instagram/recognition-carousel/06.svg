@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#3A1518"/>
+  <text x="68" y="510" fill="#F2EBDD" fill-opacity="0.07" font-family="Georgia, Times New Roman, serif" font-size="430" font-weight="700">“</text>
+  <text x="108" y="102" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.8">GROWN MEN GROW</text>
+  <text x="990" y="102" text-anchor="end" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.8">06 / 07</text>
+  <text x="90" y="420" text-anchor="start" fill="#F2EBDD" font-family="Georgia, Times New Roman, serif" font-size="81" font-weight="700" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">The pain can be real.</tspan></text>
+    <line x1="90" y1="650" x2="430" y2="650" stroke="#F2EBDD" stroke-width="9"/>
+    <text x="90" y="840" text-anchor="start" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="76" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">The arrangement can</tspan><tspan x="90" dy="98">still be unfair.</tspan></text>
+  <text x="108" y="1265" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5">GROWN MEN GROW</text>
+</svg>

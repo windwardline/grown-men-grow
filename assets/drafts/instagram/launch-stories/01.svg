@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#3A1518"/>
+  <text x="1010" y="640" text-anchor="end" fill="#F2EBDD" fill-opacity="0.045" font-family="Helvetica Neue, Arial, sans-serif" font-size="380" font-weight="800" letter-spacing="-12">NEW</text>
+    <text x="90" y="210" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2.7">GROWN MEN GROW</text>
+  <text x="90" y="590" text-anchor="start" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="91" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">I made a new thing.</tspan></text>
+    <text x="90" y="900" text-anchor="start" fill="#F2EBDD" font-family="Georgia, Times New Roman, serif" font-size="57" font-weight="400" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">It is called Grown Men Grow,</tspan><tspan x="90" dy="82">which is either a thesis</tspan><tspan x="90" dy="82">or a reminder.</tspan></text>
+  <text x="90" y="1780" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="1.8">@GROWNMENGROW</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#3A1518"/>
+  <rect x="0" y="0" width="18" height="1350" fill="#F2EBDD"/><rect x="38" y="0" width="3" height="1350" fill="#F2EBDD" fill-opacity="0.34"/>
+  <text x="90" y="92" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2.6">GROWN MEN GROW</text>
+  <text x="90" y="128" fill="#F2EBDD" fill-opacity="0.62" font-family="Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2.1">FIELD NOTE 01</text>
+  <text x="990" y="92" text-anchor="end" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="1.8">05 / 07</text>
+  <text x="90" y="320" text-anchor="start" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="91" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">Can he stay?</tspan></text>
+    <text x="90" y="590" text-anchor="start" fill="#F2EBDD" font-family="Georgia, Times New Roman, serif" font-size="78" font-weight="700" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">Can he hear</tspan><tspan x="90" dy="96">the truth?</tspan></text>
+    <text x="90" y="890" text-anchor="start" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="52" font-weight="700" font-style="normal" letter-spacing="-0.8"><tspan x="90" dy="0">Can he ask for help</tspan><tspan x="90" dy="70">before the crisis belongs</tspan><tspan x="90" dy="70">to everyone?</tspan></text>
+  <text x="990" y="1270" text-anchor="end" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5">@GROWNMENGROW</text>
+</svg>

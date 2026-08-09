@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#F2EBDD"/>
+  <rect x="32" y="32" width="1016" height="1286" rx="2" fill="none" stroke="#3A1518" stroke-opacity="0.18" stroke-width="2"/>
+  <text x="90" y="112" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="2.4">GROWN MEN GROW</text>
+  <text x="990" y="112" text-anchor="end" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="1.8">06 / 07</text>
+  <line x1="90" y1="154" x2="990" y2="154" stroke="#3A1518" stroke-opacity="0.38" stroke-width="2"/>
+  <text x="90" y="330" fill="#3A1518" font-family="Georgia, Times New Roman, serif" font-size="86" font-weight="700" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">One field note</tspan><tspan x="90" dy="108">each week.</tspan></text>
+    <text x="90" y="655" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="3.2">START WITH</text>
+    <text x="90" y="790" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="101" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">Strength Has to</tspan><tspan x="90" dy="116">Grow Up</tspan></text>
+  <circle cx="90" cy="1252" r="7" fill="#3A1518"/>
+  <text x="114" y="1261" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="21" font-weight="600" letter-spacing="1.5">@GROWNMENGROW</text>
+</svg>
