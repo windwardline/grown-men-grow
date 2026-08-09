@@ -151,3 +151,11 @@ Never include credentials, private access codes, cookies, member data, or privat
 - **Correction to the 2026-08-09 audit entry's fleet-level note:** the review-lane failure is not a checkout-credential or OAuth-entitlement problem. The `persist-credentials` fix already landed in the reusable (windwardline#31), and a local replay of the exact CI credential returned `401 OAuth access token is invalid` — the shared token (fingerprint `719c0522`) is dead, and the Console API key is revoked. Every fleet review run fails until the owner mints a replacement with `claude setup-token`; that is an owner step outside this repository.
 - **Verification:** Documentation-only change; `git diff --check` clean. The advisory review check on this PR will fail with the fleet-wide credential error above — it is not a required gate and does not block auto-merge.
 - **Open blockers:** None for this repository. The fleet-level token replacement proceeds in windwardline/windwardline.
+
+## 2026-08-09 — Claude Code — Retired API-key pass-through from the review-lane caller
+
+- **Scope completed:** Fleet-wide retirement of the dead `ANTHROPIC_API_KEY` review credential reached this repository: removed its pass-through line from `.github/workflows/claude-review.yml`. The Console key is revoked and the secret no longer exists in any fleet repo; the reusable's gate never selects it. The reusable drops the `workflow_call` declaration in windwardline/windwardline once all fourteen callers are through. Context: the fleet review lane went green in all fourteen repos earlier today on the replacement OAuth token.
+- **Files changed:** `.github/workflows/claude-review.yml`, this log.
+- **External state changed:** GitHub only — this branch and its pull request.
+- **Verification:** Workflow YAML parses; the change is one deleted line passing an always-empty secret. This PR's own advisory review run exercises the OAuth-only path live.
+- **Open blockers:** None. Fleet-level follow-up (reusable declaration removal, FLEET.md wording) proceeds in windwardline/windwardline.
