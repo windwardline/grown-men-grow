@@ -1,7 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
-  <rect width="1080" height="1920" fill="#3A1518"/>
-  <text x="990" y="520" text-anchor="end" fill="none" stroke="#F2EBDD" stroke-opacity="0.12" stroke-width="4" font-family="Helvetica Neue, Arial, sans-serif" font-size="430" font-weight="800">01</text>
-  <text x="90" y="450" text-anchor="start" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="29" font-weight="700" font-style="normal" letter-spacing="3.2"><tspan x="90" dy="0">THE FIRST ONE IS LIVE</tspan></text>
-    <text x="90" y="720" text-anchor="start" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="111" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">Strength Has to</tspan><tspan x="90" dy="132">Grow Up</tspan></text>
-  <text x="90" y="1780" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="1.8">@GROWNMENGROW</text>
+  <defs>
+    <filter id="story-03-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="story-03-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="story-03-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1920" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="900" letter-spacing="4.2">GROWN MEN GROW</text>
+  <g transform="rotate(-0.7 540 624)">
+    <rect x="26" y="142" width="1028" height="998" fill="#3A1518"/>
+    <rect x="34" y="128" width="1012" height="992" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/repairing-wooden-chair.png" x="38" y="132" width="1004" height="984" preserveAspectRatio="xMidYMid slice" filter="url(#story-03-photo)"/>
+  </g>
+    <g transform="rotate(-4 217 135)">
+    <rect x="108" y="112" width="218" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="116" y1="119" x2="316" y2="116" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="58" y="1196" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="23" font-weight="900" letter-spacing="3.8">THE FIRST ONE IS LIVE</text>
+    <g transform="rotate(-1 468 1300)">
+    <rect x="48" y="1228" width="840" height="144" fill="#F8F3EA"/>
+    <text x="72" y="1337.44" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="96" font-weight="900" letter-spacing="-2.5">Strength Has to</text>
+  </g>
+    <g transform="rotate(1 627 1443)">
+    <rect x="226" y="1366" width="802" height="154" fill="#3A1518"/>
+    <text x="250" y="1483.04" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="114" font-weight="900" letter-spacing="-2.5">GROW UP</text>
+  </g>
+    <path d="M80 1574 C246 1542 414 1594 578 1558 C736 1522 870 1570 1004 1546" fill="none" stroke="#B14F3F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="58" y="1654" width="964" height="118" fill="none" stroke="#121416" stroke-opacity="0.3" stroke-width="2"/>
+    <text x="540" y="1728" text-anchor="middle" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="900" letter-spacing="3">LINK STICKER</text>
+  <text x="58" y="1868" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="2.6">@GROWNMENGROW</text>
+  <rect width="1080" height="1920" filter="url(#story-03-paper)" opacity="0.22" pointer-events="none"/>
 </svg>

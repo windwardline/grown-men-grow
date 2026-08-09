@@ -10,7 +10,7 @@ Launch the smallest reliable publication system that preserves the established e
 
 1. A local Git repository under `/Users/peacock/Projects/`.
 2. A managed Ghost publication with a custom domain.
-3. An official Ghost theme with minimal configuration.
+3. An original, locally maintained Ghost theme with Source retained as rollback material.
 4. Public Start Here and About pages.
 5. Free membership and one newsletter.
 6. One automated free-member welcome email.
@@ -27,7 +27,7 @@ Launch the smallest reliable publication system that preserves the established e
 - External email platforms.
 - Automation services.
 - Databases, custom member tools, or custom applications.
-- Custom Ghost themes unless the official theme cannot satisfy a launch requirement.
+- A purchased Ghost theme or external theme service.
 
 ## Delivery stages
 
@@ -69,3 +69,7 @@ Launch the smallest reliable publication system that preserves the established e
 ## Change control
 
 Any platform, paid service, automation, custom application, database, public-copy change, or disclosure change requires a separate written proposal and founder approval.
+
+## Approved amendment — 2026-08-08
+
+The founder approved an original Ghost theme after the unmodified Source baseline proved too limited for the required editorial hierarchy and variation. The theme adds no platform, paid service, application runtime, database, or tracking layer. Source and the existing export remain the rollback path.

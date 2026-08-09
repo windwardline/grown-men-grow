@@ -1,9 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
-  <rect width="1080" height="1350" fill="#F2EBDD"/>
-  <rect x="830" y="0" width="250" height="34" fill="#3A1518"/><rect x="960" y="34" width="120" height="120" fill="#3A1518" fill-opacity="0.1"/>
-  <text x="90" y="92" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2.6">GROWN MEN GROW</text>
-  <text x="90" y="128" fill="#3A1518" fill-opacity="0.62" font-family="Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2.1">FIELD NOTE 01</text>
-  <text x="990" y="92" text-anchor="end" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="1.8">06 / 07</text>
-  <text x="90" y="425" text-anchor="start" fill="#3A1518" font-family="Georgia, Times New Roman, serif" font-size="88" font-weight="700" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">Strength has to</tspan><tspan x="90" dy="112">grow with the rest</tspan><tspan x="90" dy="112">of the man.</tspan></text>
-  <text x="990" y="1270" text-anchor="end" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5">@GROWNMENGROW</text>
+  <defs>
+    <filter id="foundation-06-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="foundation-06-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="foundation-06-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 01 · 06 / 07</text>
+  <g transform="rotate(1.2 833 648)">
+    <rect x="614" y="138" width="438" height="1054" fill="#60735A"/>
+    <rect x="622" y="124" width="422" height="1048" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/repairing-wooden-chair.png" x="626" y="128" width="414" height="1040" preserveAspectRatio="xMidYMid slice" filter="url(#foundation-06-photo)"/>
+  </g>
+    <g transform="rotate(5 830 135)">
+    <rect x="740" y="112" width="180" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="748" y1="119" x2="910" y2="116" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <g transform="rotate(-1.2 410 293)">
+    <rect x="50" y="234" width="720" height="118" fill="#EEE6D8"/>
+    <text x="74" y="323.68" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="92" font-weight="900" letter-spacing="-2.5">STRENGTH</text>
+  </g>
+    <g transform="rotate(0.8 442 415)">
+    <rect x="116" y="354" width="652" height="122" fill="#3A1518"/>
+    <text x="140" y="446.72" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="78" font-weight="900" letter-spacing="-2.5">HAS TO GROW</text>
+  </g>
+    <text x="58" y="618" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="74" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">with the rest</text><text x="58" y="702" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="74" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">of the man.</text>
+    <path d="M66 790 C182 754 304 814 426 776 C490 756 544 764 600 752" fill="none" stroke="#B14F3F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="58" y="1036" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="2.7">THE UNFINISHED WORK</text>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#foundation-06-paper)" opacity="0.22" pointer-events="none"/>
 </svg>

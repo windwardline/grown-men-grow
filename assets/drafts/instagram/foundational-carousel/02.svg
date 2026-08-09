@@ -1,11 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
-  <rect width="1080" height="1350" fill="#F2EBDD"/>
-  <rect x="0" y="0" width="18" height="1350" fill="#3A1518"/><rect x="38" y="0" width="3" height="1350" fill="#3A1518" fill-opacity="0.34"/>
-  <text x="90" y="92" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2.6">GROWN MEN GROW</text>
-  <text x="90" y="128" fill="#3A1518" fill-opacity="0.62" font-family="Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2.1">FIELD NOTE 01</text>
-  <text x="990" y="92" text-anchor="end" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="1.8">02 / 07</text>
-  <text x="90" y="300" text-anchor="start" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="82" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">Courage.</tspan><tspan x="90" dy="96">Discipline.</tspan><tspan x="90" dy="96">Competence.</tspan></text>
-    <text x="90" y="710" text-anchor="start" fill="#3A1518" font-family="Georgia, Times New Roman, serif" font-size="54" font-weight="400" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">The ability to stay steady</tspan><tspan x="90" dy="76">when things get ugly.</tspan></text>
-    <text x="90" y="990" text-anchor="start" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="67" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">I want more of that,</tspan><tspan x="90" dy="82">not less.</tspan></text>
-  <text x="990" y="1270" text-anchor="end" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5">@GROWNMENGROW</text>
+  <defs>
+    <filter id="foundation-02-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="foundation-02-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="foundation-02-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#EEE6D8"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 01 · 02 / 07</text>
+  <rect x="724" y="128" width="356" height="510" fill="url(#foundation-02-dots)"/>
+    <text x="56" y="298" fill="none" stroke="#3A1518" stroke-opacity="0.22" stroke-width="3" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="264" font-weight="900">02</text>
+    <g transform="rotate(-1.3 343 305)">
+    <rect x="54" y="248" width="578" height="114" fill="#F8F3EA"/>
+    <text x="78" y="334.64" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="90" font-weight="900" letter-spacing="-2.5">COURAGE.</text>
+  </g>
+    <g transform="rotate(1 591 426)">
+    <rect x="196" y="368" width="790" height="116" fill="#3A1518"/>
+    <text x="220" y="456.15999999999997" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="91" font-weight="900" letter-spacing="-2.5">DISCIPLINE.</text>
+  </g>
+    <g transform="rotate(-0.8 428 548)">
+    <rect x="52" y="490" width="752" height="116" fill="#F8F3EA"/>
+    <text x="76" y="578.16" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="90" font-weight="900" letter-spacing="-2.5">COMPETENCE.</text>
+  </g>
+    <path d="M82 660 C224 634 372 682 516 646 C666 610 822 670 986 638" fill="none" stroke="#B14F3F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="64" y="772" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="57" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="-1.6">The ability to stay steady</text><text x="64" y="846" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="57" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="-1.6">when things get ugly.</text>
+    <g transform="rotate(0.8 590 1052)">
+    <rect x="148" y="976" width="884" height="152" fill="#60735A"/>
+    <text x="172" y="1091.52" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="72" font-weight="900" letter-spacing="-2.5">I WANT MORE OF THAT,</text>
+  </g>
+    <text x="1000" y="1190" text-anchor="end" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="55" font-style="italic">not less.</text>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#foundation-02-paper)" opacity="0.22" pointer-events="none"/>
 </svg>

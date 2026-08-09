@@ -16,17 +16,21 @@ The founder makes every final decision. Codex prepares recommendations, verifies
 
 ## Gate 2 — Brand presentation
 
-- [x] Official Ghost theme: Source, unmodified
+- [x] Initial private Ghost baseline: Source, unmodified; retained as rollback material
 - [x] Publication icon: approved stacked wordmark
 - [x] Publication logo: none at launch
 - [x] Instagram profile image
 - [x] Site and per-page social sharing images staged in Ghost
 - [x] Accent color: oxblood `#3A1518`
-- [x] Heading and body typography: Source theme defaults
+- [x] Initial private typography baseline: Source theme defaults; superseded for the approved custom-theme build
 - [x] Publication cover: none at launch
 - [x] Editorial redesign direction: preserve the approved voice while raising every Ghost and Instagram surface to an original high-end publication standard
-- [ ] Representative editorial redesign approved before it replaces the staged launch graphics
-- [ ] Any change from the unmodified Source theme approved separately after the Ghost design audit
+- [x] Representative editorial redesign approved on 2026-08-08
+- [x] Original custom Ghost theme approved for build and private staging on 2026-08-08
+- [x] Visual tone rule: constructive, warm, maintained, and alive; no despair-coded or dilapidated imagery
+- [x] Hyperreal generation rule: full-resolution physical-believability review; reject an image for one obvious synthetic tell
+- [x] Collage exploration rule: visible material texture and editorial energy; reuse the vocabulary without repeating one layout
+- [ ] Final custom-theme rendering and replacement launch assets approved before public launch
 
 ## Gate 3 — Accounts and email
 

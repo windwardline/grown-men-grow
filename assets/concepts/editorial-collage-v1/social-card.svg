@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <filter id="social-collage-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="19"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="social-collage-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.88"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.04" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.98" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="social-collage-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#121416" opacity="0.22"/>
+    </pattern>
+    <clipPath id="social-collage-torn-a">
+      <polygon points="18,26 294,10 566,28 832,8 1080,30 1062,316 1078,584 1054,840 786,826 528,846 274,824 12,842 28,572 8,298"/>
+    </clipPath>
+    <clipPath id="social-collage-torn-b">
+      <polygon points="16,18 328,6 634,24 1018,10 1034,350 1014,690 1030,1018 720,1006 414,1024 12,1008 28,672 8,334"/>
+    </clipPath>
+  </defs>
+  <rect width="1200" height="630" fill="#F8F3EA"/>
+  <rect x="0" y="0" width="458" height="630" fill="#3A1518"/>
+  <g transform="rotate(-2 260 310)">
+    <path d="M22 18 L516 2 L528 616 L6 630 Z" fill="#EEE6D8"/>
+    <image href="../../source/editorial/sunlit-writing-table.png" x="18" y="8" width="500" height="612" preserveAspectRatio="xMidYMid slice" filter="url(#social-collage-photo)"/>
+  </g>
+  <g transform="rotate(2 244 28)">
+    <rect x="154" y="4" width="180" height="48" fill="#D9CBAF" opacity="0.76"/>
+    <line x1="162" y1="11" x2="324" y2="8" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <text x="554" y="70" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="21" font-weight="900" letter-spacing="3.8">GROWN MEN GROW</text>
+  <text x="1144" y="70" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="900" text-anchor="end" letter-spacing="2.5">FIELD NOTE 01</text>
+  <g transform="rotate(-1 850 230)">
+    <rect x="526" y="142" width="636" height="100" fill="#EEE6D8"/>
+    <text x="548" y="220" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="74" font-weight="700" letter-spacing="-2.8">Strength Has to</text>
+  </g>
+  <g transform="rotate(1.2 850 330)">
+    <rect x="600" y="244" width="562" height="104" fill="#3A1518"/>
+    <text x="624" y="326" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="78" font-weight="900" letter-spacing="-2.7">GROW UP</text>
+  </g>
+  <path d="M552 382 C686 358 790 398 920 372 C1000 356 1070 374 1142 364" fill="none" stroke="#B14F3F" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="550" y="446" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="28" font-style="italic">A man can look strong and still be hiding.</text>
+  <line x1="550" y1="510" x2="1142" y2="510" stroke="#121416" stroke-opacity="0.28"/>
+  <text x="550" y="560" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="2.4">GROWNMENGROW.COM</text>
+  <rect x="24" y="24" width="1152" height="582" fill="none" stroke="#121416" stroke-opacity="0.2"/>
+  <rect width="1200" height="630" filter="url(#social-collage-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

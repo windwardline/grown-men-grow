@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{meta_title}}</title>
+    <link rel="preload" href="{{asset "fonts/bodoni-moda-latin-wght-normal.woff2"}}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{asset "fonts/source-serif-4-latin-wght-normal.woff2"}}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{{asset "css/screen.css"}}">
+    <style>:root { --color-accent: {{@site.accent_color}}; }</style>
+    <script src="{{asset "js/main.js"}}" defer></script>
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    <a class="skip-link" href="#site-content">Skip to content</a>
+
+    <div class="site-shell">
+        <header class="site-header" data-site-header>
+            <div class="site-header__rule" aria-hidden="true"></div>
+            <div class="site-header__inner">
+                <a class="site-brand" href="{{@site.url}}" aria-label="{{@site.title}} home">
+                    {{#if @site.logo}}
+                        <img class="site-brand__logo" src="{{@site.logo}}" alt="{{@site.title}}">
+                    {{else}}
+                        <span class="site-brand__name">{{@site.title}}</span>
+                    {{/if}}
+                </a>
+
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-menu-toggle>
+                    <span class="menu-toggle__label">Menu</span>
+                    <span class="menu-toggle__lines" aria-hidden="true"></span>
+                </button>
+
+                <nav class="site-navigation" id="site-navigation" aria-label="Primary navigation" data-site-navigation>
+                    {{navigation}}
+                </nav>
+
+                <div class="site-actions">
+                    {{search}}
+                    {{#if @site.members_enabled}}
+                        {{#if @member}}
+                            <a class="button button--small button--outline" href="#/portal/account">Account</a>
+                        {{else}}
+                            <a class="button button--small" href="{{@site.signup_url}}">Subscribe</a>
+                        {{/if}}
+                    {{/if}}
+                </div>
+            </div>
+        </header>
+
+        <main class="site-main" id="site-content">
+            {{{body}}} {{! nosemgrep: javascript.express.security.audit.xss.mustache.explicit-unescape.template-explicit-unescape -- Ghost supplies the server-rendered theme body. }}
+        </main>
+
+        <footer class="site-footer">
+            <div class="site-footer__inner">
+                <div class="site-footer__brand">
+                    <a class="site-footer__title" href="{{@site.url}}">{{@site.title}}</a>
+                    {{#if @site.description}}
+                        <p>{{@site.description}}</p>
+                    {{/if}}
+                </div>
+                <nav class="site-footer__nav" aria-label="Secondary navigation">
+                    {{navigation type="secondary"}}
+                </nav>
+                <p class="site-footer__meta">&copy; {{date format="YYYY"}} {{@site.title}}</p>
+            </div>
+        </footer>
+    </div>
+
+    {{ghost_foot}}
+</body>
+</html>

@@ -9,7 +9,7 @@ This repository is the private operational source for the Grown Men Grow Ghost p
 - Ghost(Pro) hosts the publication, membership, newsletter, and native analytics.
 - Cloudflare provides public DNS and routed inbound email.
 - Instagram is the only approved launch social channel.
-- Node.js rendering scripts generate review and launch assets; the repository has no application runtime, package manifest, or dependency installation step.
+- Node.js rendering scripts generate review and launch assets. The repository has no root application runtime. `theme/package.json` exists only to validate and package the static Ghost theme with GScan.
 
 Stack exception (owner-approved 2026-08-07): Ghost(Pro), rather than Vercel, hosts the publication because native publishing, membership, newsletters, analytics, and export are launch requirements. This repository stores content and operational assets; it does not deploy the public site.
 
@@ -17,11 +17,15 @@ Stack exception (owner-approved 2026-08-07): Ghost(Pro), rather than Vercel, hos
 
 Run these before committing material changes:
 
-1. `node scripts/verify-repository.mjs`
-2. `bash scripts/verify-svg-xml.sh`
-3. Review `git diff --check` and the complete staged file list.
+1. `node scripts/verify-ghost-theme.mjs`
+2. `pnpm --dir theme install --frozen-lockfile`
+3. `pnpm --dir theme test`
+4. `pnpm --dir theme zip && theme/node_modules/.bin/gscan -z --verbose dist/grown-men-grow.zip`
+5. `node scripts/verify-repository.mjs`
+6. `bash scripts/verify-svg-xml.sh`
+7. Review `git diff --check` and the complete staged file list.
 
-CI repeats the repository and SVG verification. Security workflows run Semgrep and secret scanning. The unused root `vercel.json` is retained solely because it is a fleet-conformance artifact; it is not the publication's hosting configuration.
+CI repeats the Ghost theme, repository, and SVG verification. Security workflows run Semgrep and secret scanning. The unused root `vercel.json` is retained solely because it is a fleet-conformance artifact; it is not the publication's hosting configuration.
 
 ## Shared handoff log
 

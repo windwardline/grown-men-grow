@@ -13,6 +13,7 @@
 node_modules/
 dist/
 build/
+output/
 
 # Sensitive or private material
 private/

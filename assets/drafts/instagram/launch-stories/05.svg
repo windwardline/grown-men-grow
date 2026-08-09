@@ -1,7 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
-  <rect width="1080" height="1920" fill="#3A1518"/>
-  <text x="1010" y="1550" text-anchor="end" fill="#F2EBDD" fill-opacity="0.045" font-family="Georgia, Times New Roman, serif" font-size="1180" font-weight="700">?</text>
-    <text x="90" y="200" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2.7">GROWN MEN GROW</text>
-  <text x="90" y="500" text-anchor="start" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="86" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">What did nobody</tspan><tspan x="90" dy="111">teach you about</tspan><tspan x="90" dy="111">becoming a man?</tspan></text>
-  <text x="90" y="1780" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="1.8">@GROWNMENGROW</text>
+  <defs>
+    <filter id="story-05-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="story-05-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="story-05-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1920" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="900" letter-spacing="4.2">GROWN MEN GROW</text>
+  <g transform="rotate(1 713 630)">
+    <rect x="374" y="136" width="678" height="1022" fill="#60735A"/>
+    <rect x="382" y="122" width="662" height="1016" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/sunlit-writing-table.png" x="386" y="126" width="654" height="1008" preserveAspectRatio="xMidYMid slice" filter="url(#story-05-photo)"/>
+  </g>
+    <g transform="rotate(5 740 131)">
+    <rect x="646" y="108" width="188" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="654" y1="115" x2="824" y2="112" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="44" y="410" fill="#B14F3F" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="250">?</text>
+    <g transform="rotate(-1 509 513)">
+    <rect x="48" y="442" width="922" height="142" fill="#F8F3EA"/>
+    <text x="72" y="549.92" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="88" font-weight="900" letter-spacing="-2.5">WHAT DID NOBODY</text>
+  </g>
+    <g transform="rotate(1 599 651)">
+    <rect x="170" y="578" width="858" height="146" fill="#3A1518"/>
+    <text x="194" y="688.96" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="110" font-weight="900" letter-spacing="-2.5">TEACH YOU</text>
+  </g>
+    <g transform="rotate(-0.7 538 791)">
+    <rect x="48" y="718" width="980" height="146" fill="#121416"/>
+    <text x="72" y="828.96" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="68" font-weight="900" letter-spacing="-2.5">ABOUT BECOMING A MAN?</text>
+  </g>
+    <path d="M76 924 C242 888 414 944 578 904 C742 868 872 916 1008 892" fill="none" stroke="#B14F3F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="58" y="1214" width="964" height="470" fill="#EEE6D8" stroke="#121416" stroke-opacity="0.18"/>
+    <line x1="98" y1="1336" x2="982" y2="1336" stroke="#121416" stroke-opacity="0.16"/>
+    <line x1="98" y1="1460" x2="982" y2="1460" stroke="#121416" stroke-opacity="0.16"/>
+    <line x1="98" y1="1584" x2="982" y2="1584" stroke="#121416" stroke-opacity="0.16"/>
+  <text x="58" y="1868" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="2.6">@GROWNMENGROW</text>
+  <rect width="1080" height="1920" filter="url(#story-05-paper)" opacity="0.22" pointer-events="none"/>
 </svg>

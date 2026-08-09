@@ -8,10 +8,11 @@ No production setting is changed without explicit founder approval.
 - Domain: `grownmengrow.com`.
 - Instagram: `@grownmengrow`.
 - Routed project address: `michael@grownmengrow.com`.
-- Theme: Source, unmodified.
+- Active private theme: Source v1.7.1, retained as rollback material.
+- Approved replacement: original Grown Men Grow theme v1.0.0; locally validated package at `dist/grown-men-grow.zip` after packaging.
 - Publication icon: approved stacked wordmark.
 - Accent color: oxblood `#3A1518`.
-- Typography: Source theme defaults.
+- Replacement-theme typography: bundled Bodoni Moda, Barlow Condensed, and Source Serif 4.
 - Publication logo and cover: none at launch.
 - Newsletter sender: **Grown Men Grow**.
 - Public support address: `hello@grownmengrow.com`.
@@ -27,15 +28,18 @@ The canonical hostname is apex `grownmengrow.com`, with `www` redirected to apex
 - [x] Set the approved publication description.
 - [x] Set publication language to English.
 - [x] Set timezone to Eastern Time (US & Canada).
-- [x] Select Source v1.7.1 and use native design settings only.
-- [x] Configure the approved icon, no logo, no cover, oxblood accent, and Source typography defaults.
+- [x] Preserve Source v1.7.1 as the active private rollback baseline.
+- [x] Build and validate the original replacement theme locally.
+- [ ] Upload and activate the replacement theme in private Ghost.
+- [ ] Preserve a downloadable copy of the previously active Source theme and current Ghost export before activation.
+- [x] Configure the approved icon, no logo, no cover, and oxblood accent.
 
 ## Navigation and pages
 
 - [x] Create Start Here as a Page with its approved slug.
 - [x] Create About as a Page with its approved slug.
 - [x] Add Start Here and About to primary navigation manually.
-- [x] Keep Source's native homepage treatment.
+- [ ] Verify the replacement theme's editorial homepage with the staged content.
 - [x] Verify Start Here, About, and Essay 1 in Ghost's phone and desktop previews.
 - [ ] Verify the public tablet layout during the launch smoke test.
 
@@ -56,7 +60,8 @@ The canonical hostname is apex `grownmengrow.com`, with `www` redirected to apex
 ## Essay 1
 
 - [x] Transfer approved copy without rewriting.
-- [x] Confirm title, dek, slug, Michael Peacock byline, excerpt, public access level, metadata, and social cards. No feature image is approved for launch.
+- [x] Confirm title, dek, slug, Michael Peacock byline, excerpt, public access level, metadata, and current social cards.
+- [ ] Approve and attach the title-free collage feature image, or explicitly launch without one.
 - [x] Review web desktop, web phone, email, and social previews.
 - [ ] Confirm publish-only versus publish-and-email.
 - [ ] Do not publish or send until explicitly authorized.
@@ -65,7 +70,8 @@ The canonical hostname is apex `grownmengrow.com`, with `www` redirected to apex
 
 - [x] Configure approved homepage metadata.
 - [x] Configure approved Start Here, About, and Essay 1 metadata.
-- [x] Configure approved homepage and per-page X/Open Graph social images.
+- [x] Configure the initial approved homepage and per-page X/Open Graph social images.
+- [ ] Approve and replace them with the locally prepared collage-led social cards.
 - [ ] Verify automatic canonical URLs and sitemap.
 - [ ] Confirm private-site mode is removed only at launch.
 

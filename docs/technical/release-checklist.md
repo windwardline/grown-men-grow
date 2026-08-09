@@ -7,6 +7,9 @@
 - [ ] Men's pain and men's responsibility remain in the same frame; no asset excuses men, shames men as a class, or makes other people responsible for men's healing.
 - [ ] No asset uses grievance, domination, gender-war controversy, or ideological pandering for reach.
 - [ ] Visuals may include strength, physicality, ambition, sex, competition, competence, anger, and edge; they do not rely on generic alpha-status shorthand or stock dominance clichés.
+- [ ] The final visual set feels constructive, warm, and alive; no image relies on decay, isolation, darkness, or distress to imply depth.
+- [ ] Every generated source passes full-resolution anatomy, object-continuity, light, shadow, reflection, and architecture review.
+- [ ] Adjacent posts vary composition, crop, scale, and paper treatment while retaining one recognizable material vocabulary.
 - [ ] Required advisor review is complete.
 - [ ] Public copy matches the approved source.
 - [ ] No confidential allegation, private party, or new disclosure was introduced.
@@ -17,6 +20,8 @@
 ## Ghost
 
 - [x] Start Here, About, and Essay 1 render correctly in Ghost's phone and desktop previews.
+- [x] The replacement theme passes its local contract test, GScan, and desktop/mobile fixture review.
+- [ ] The replacement theme and approved feature images render correctly in private Ghost.
 - [ ] Navigation, signup CTAs, and internal links work.
 - [ ] Free signup and magic-link sign-in work.
 - [ ] Welcome email reaches the test inbox exactly once.

@@ -13,3 +13,15 @@ updates:
       github-actions:
         patterns:
           - "*"
+  - package-ecosystem: npm
+    directory: /theme
+    schedule:
+      interval: weekly
+      day: monday
+      time: "09:45"
+      timezone: America/New_York
+    cooldown:
+      default-days: 7
+    groups:
+      ghost-theme-tooling:
+        dependency-type: development

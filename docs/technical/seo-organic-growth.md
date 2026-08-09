@@ -17,7 +17,7 @@ Earn qualified, organic discovery without turning the publication into generic s
 - Ghost's structured-data setting for LLM and AI search discovery is enabled.
 - Homepage, Start Here, About, and Essay 1 have approved search metadata and distinct 1200×630 social images.
 - Custom canonical fields remain blank. Ghost must generate self-canonicals and keep pages in its sitemap.
-- Source remains unmodified. No external scripts were added.
+- Source remains the private rollback theme. The locally validated replacement theme uses semantic Ghost templates, responsive image helpers, local fonts, and no external tracking or font scripts. Activation remains pending.
 - Member sources, email opens, email clicks, and outbound tagging use Ghost's native controls. Full web analytics requires the approved Publisher plan and remains unavailable until purchase.
 
 Ghost automatically supplies XML sitemaps, canonical tags, structured data, and fallback metadata. Private mode intentionally suppresses indexing, so crawl verification happens only after launch authorization.

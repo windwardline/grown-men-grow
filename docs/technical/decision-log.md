@@ -223,17 +223,48 @@
 
 ## 2026-08-08 — Raise the visual system to an editorial-publication standard
 
-- **Status:** Founder direction approved; representative design review pending
+- **Status:** Superseded by the approved representative system and custom-theme build below
 - **Decision:** Preserve the approved written voice and overhaul its presentation across Ghost and Instagram. The target is an original, visually arresting editorial system with the authority, hierarchy, pacing, and art direction of a high-end men's magazine.
 - **Scope:** Rework typography, composition, image strategy, page rhythm, carousel pacing, Stories, Reel covers, post cards, social previews, and Ghost article presentation. Maintain one recognizable brand without forcing every surface into one template.
 - **Controls:** Do not copy another publication's trade dress or rewrite approved launch copy. Nothing is published or posted during design development. Any departure from the previously approved unmodified Source theme requires a specific founder decision after representative surfaces are reviewed.
 - **Founder action required:** Review the proposed editorial direction and representative Ghost, feed, carousel, Story, and social-card surfaces before full propagation.
 
+## 2026-08-08 — Approve the editorial system and custom Ghost theme
+
+- **Status:** Approved
+- **Decision:** Adopt the representative editorial system in `docs/editorial-visual-system.md`, replace the staged launch graphics with the approved art direction, and build an original custom Ghost theme for private staging.
+- **Reason:** The approved writing needs stronger hierarchy, imagery, pacing, and variation than the unmodified Source baseline can provide. The representative Ghost, feed, carousel, Story, and social-card concepts establish the intended standard.
+- **Implementation:** Preserve Source and the prior Ghost export as rollback material. Build and validate the theme in this repository, regenerate the complete launch asset set in distinct visual families, then stage the result only on the still-private Ghost publication.
+- **Controls:** Do not copy another publication's trade dress. Do not rewrite approved launch copy. Do not purchase a plan, remove privacy, publish or email Ghost content, post to Instagram, or make another public launch action under this approval.
+- **External services:** None added. The custom theme is repository code uploaded to the existing Ghost publication.
+- **Founder action required:** Review the final private Ghost rendering and complete replacement asset set before public launch.
+
+## 2026-08-08 — Reject despair-coded and visibly synthetic launch imagery
+
+- **Status:** Approved standing visual rule
+- **Decision:** Keep the high-end editorial standard but make the visual world constructive, warm, maintained, and alive. Hyperreal generated photography remains available only when it passes a strict full-resolution believability review.
+- **Reason:** Dilapidated rooms, dusk-heavy isolation, and polished synthetic lifestyle scenes misstate a project about building, repair, and growth. Obvious generation artifacts also make the publication feel anonymous and cheap.
+- **Implementation:** Lead with daylight, capable action, conversation, useful objects, and forward motion. Reject an entire image for one physical inconsistency in anatomy, tools, furniture, reflections, architecture, lighting, or object continuity. Use generated people sparingly and prefer real founder footage when human presence is central.
+- **Controls:** Do not disguise weak imagery with darkness, grain, distress, or crops. Record prompts and distinguish composition studies from approved launch assets.
+- **Founder action required:** Review the final image library and launch compositions before any public use.
+
+## 2026-08-08 — Develop a tactile collage-led replacement set
+
+- **Status:** Prepared for founder review; not yet approved for public use
+- **Direction:** Use bright photography as raw material inside an original editorial collage system with visible paper, tape, halftone, drawn marks, irregular crops, and active changes of scale.
+- **Reason:** The treatment gives the publication energy and a human editorial hand while reducing the cheap perfection and repeated visual grammar common to generated lifestyle imagery.
+- **Variation rule:** Reuse the material vocabulary, not one layout. Consecutive covers must change image dominance, crop, color field, headline placement, and page rhythm.
+- **Implementation:** Replaced the working launch exports locally, built three title-free Ghost feature images, and prepared five cross-surface concept proofs and five review contact sheets. Removed the superseded dark concept package from the active tree; its history remains in Git.
+- **Controls:** Approved launch copy remains exact. Instagram remains brand-only. Nothing has been uploaded to Ghost, published, sent, or posted.
+- **Founder action required:** Approve or revise the complete replacement set after in-chat review.
+
 ## Current pending decisions
 
+- Final collage-led launch assets and private Ghost rendering.
 - Launch date.
 - Ghost Publisher purchase after staging approval.
 - Whether Essay 1 is published only or published and emailed.
+- Founder test inbox for end-to-end membership and newsletter verification.
 - Google Search Console property.
 - Launch-post hashtag/classification additions.
 - Any future change from private to public repository visibility.

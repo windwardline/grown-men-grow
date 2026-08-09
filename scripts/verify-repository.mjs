@@ -69,7 +69,7 @@ async function validateAssetFamily(directory, count, width, height) {
 }
 
 async function validateEditorialConcepts() {
-  const directory = 'assets/concepts/editorial-v1';
+  const directory = 'assets/concepts/editorial-collage-v1';
   const expected = new Map([
     ['ghost-feature-hero', { width: 1600, height: 1000 }],
     ['instagram-cover', { width: 1080, height: 1350 }],
@@ -80,21 +80,11 @@ async function validateEditorialConcepts() {
   const pngs = await filesUnder(directory, '.png');
   const svgs = await filesUnder(directory, '.svg');
 
-  if (pngs.length !== expected.size + 1) {
-    fail(`${directory} has ${pngs.length} PNG files; expected ${expected.size + 1}.`);
+  if (pngs.length !== expected.size) {
+    fail(`${directory} has ${pngs.length} PNG files; expected ${expected.size}.`);
   }
   if (svgs.length !== expected.size) {
     fail(`${directory} has ${svgs.length} SVG files; expected ${expected.size}.`);
-  }
-
-  const source = pngs.find((file) => path.basename(file) === 'essay-01-hero-source.png');
-  if (!source) {
-    fail(`${directory} is missing essay-01-hero-source.png.`);
-  } else {
-    const dimensions = await pngDimensions(source);
-    if (dimensions && (dimensions.width !== 1122 || dimensions.height !== 1402)) {
-      fail(`${relative(source)} is ${dimensions.width}x${dimensions.height}; expected 1122x1402.`);
-    }
   }
 
   const svgNames = new Set(svgs.map((file) => path.basename(file, '.svg')));
@@ -108,6 +98,25 @@ async function validateEditorialConcepts() {
     const actual = await pngDimensions(png);
     if (actual && (actual.width !== dimensions.width || actual.height !== dimensions.height)) {
       fail(`${relative(png)} is ${actual.width}x${actual.height}; expected ${dimensions.width}x${dimensions.height}.`);
+    }
+  }
+}
+
+async function validateNamedPngs(directory, expected) {
+  const pngs = await filesUnder(directory, '.png');
+  if (pngs.length !== expected.size) {
+    fail(`${directory} has ${pngs.length} PNG files; expected ${expected.size}.`);
+  }
+
+  for (const [name, dimensions] of expected) {
+    const file = pngs.find((item) => path.basename(item, '.png') === name);
+    if (!file) {
+      fail(`${directory} is missing ${name}.png.`);
+      continue;
+    }
+    const actual = await pngDimensions(file);
+    if (actual && (actual.width !== dimensions.width || actual.height !== dimensions.height)) {
+      fail(`${relative(file)} is ${actual.width}x${actual.height}; expected ${dimensions.width}x${dimensions.height}.`);
     }
   }
 }
@@ -144,8 +153,22 @@ const requiredFiles = [
   '.github/workflows/security.yml',
   '.github/workflows/claude-review.yml',
   'scripts/verify-svg-xml.sh',
-  'scripts/render-editorial-concepts.mjs',
+  'scripts/verify-ghost-theme.mjs',
+  'scripts/package-ghost-theme.mjs',
+  'scripts/render-editorial-collage-concepts.mjs',
+  'scripts/render-ghost-feature-images.mjs',
+  'scripts/render-review-contact-sheets.mjs',
+  'scripts/render-theme-preview.mjs',
+  'scripts/lib/editorial-collage.mjs',
+  'theme/package.json',
+  'theme/pnpm-lock.yaml',
+  'theme/default.hbs',
+  'theme/index.hbs',
+  'theme/post.hbs',
   'docs/editorial-visual-system.md',
+  'assets/concepts/editorial-collage-v1/README.md',
+  'assets/source/editorial/README.md',
+  'drafts/README.md',
   'content/ghost/start-here.md',
   'content/ghost/about.md',
   'content/ghost/welcome-email.md',
@@ -154,6 +177,9 @@ const requiredFiles = [
 ];
 for (const file of requiredFiles) {
   if (!tracked.includes(file)) fail(`Required tracked file is missing: ${file}`);
+}
+if (tracked.some((file) => file.startsWith('assets/concepts/editorial-v1/') || file === 'scripts/render-editorial-concepts.mjs')) {
+  fail('The superseded dark editorial concept package must not remain in the active tree.');
 }
 
 const claudePath = path.join(root, 'CLAUDE.md');
@@ -166,6 +192,14 @@ const scriptFiles = tracked
   .map((file) => path.join(root, file));
 for (const script of scriptFiles) checkNodeSyntax(script);
 
+const themeResult = spawnSync(process.execPath, ['scripts/verify-ghost-theme.mjs'], {
+  cwd: root,
+  encoding: 'utf8',
+});
+if (themeResult.status !== 0) {
+  fail(`Ghost theme contract failed: ${(themeResult.stderr || themeResult.stdout).trim()}`);
+}
+
 await validateAssetFamily('assets/drafts/instagram/pinned-introduction', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/foundational-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/recognition-carousel', 7, 1080, 1350);
@@ -173,7 +207,20 @@ await validateAssetFamily('assets/drafts/instagram/launch-stories', 5, 1080, 192
 await validateAssetFamily('assets/drafts/instagram/static-post', 1, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/reel', 1, 1080, 1920);
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
+await validateAssetFamily('assets/drafts/ghost/feature-images', 3, 1600, 1000);
 await validateEditorialConcepts();
+await validateNamedPngs('assets/source/editorial', new Map([
+  ['friends-in-conversation', { width: 1023, height: 1537 }],
+  ['repairing-wooden-chair', { width: 1024, height: 1536 }],
+  ['sunlit-writing-table', { width: 1024, height: 1536 }],
+]));
+await validateNamedPngs('assets/drafts/review', new Map([
+  ['foundational-carousel', { width: 1362, height: 1004 }],
+  ['ghost-social-cards', { width: 1310, height: 884 }],
+  ['pinned-introduction', { width: 1362, height: 1004 }],
+  ['recognition-carousel', { width: 1362, height: 1004 }],
+  ['stories-static-reel', { width: 1242, height: 1214 }],
+]));
 
 const sourceAvatar = await readFile(path.join(root, 'assets/source/grown-men-grow-instagram-avatar.png'));
 const brandAvatar = await readFile(path.join(root, 'assets/brand/grown-men-grow-profile-safe.png'));
@@ -182,12 +229,12 @@ const brandHash = createHash('sha256').update(brandAvatar).digest('hex');
 if (sourceHash !== brandHash) fail('The canonical source and reusable brand avatar PNGs differ.');
 
 const oldProjectPattern = new RegExp(['healthy', 'masculinity', 'project'].join('[ _-]'), 'i');
-const textExtensions = new Set(['.md', '.mjs', '.js', '.json', '.yml', '.yaml', '.html', '.css', '.txt', '.svg']);
+const textExtensions = new Set(['.md', '.mjs', '.js', '.json', '.yml', '.yaml', '.html', '.hbs', '.css', '.txt', '.svg']);
 for (const file of tracked.filter((item) => textExtensions.has(path.extname(item)))) {
   await checkTextPolicy(path.join(root, file), oldProjectPattern, 'the obsolete project-name rule');
 }
 
-for (const file of tracked.filter((item) => item.startsWith('content/'))) {
+for (const file of tracked.filter((item) => item.startsWith('content/') || item.startsWith('drafts/'))) {
   await checkTextPolicy(path.join(root, file), /\bGartner\b/i, 'the public Gartner exclusion');
 }
 
@@ -201,4 +248,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, 32 launch PNGs, 32 matching launch SVG sources, and five editorial concept pairs.`);
+console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 35 launch PNG/SVG pairs, five review sheets, three editorial source images, and five editorial concept pairs.`);

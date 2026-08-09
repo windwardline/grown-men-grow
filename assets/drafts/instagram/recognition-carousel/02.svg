@@ -1,10 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
-  <rect width="1080" height="1350" fill="#3A1518"/>
-  <text x="68" y="510" fill="#F2EBDD" fill-opacity="0.07" font-family="Georgia, Times New Roman, serif" font-size="430" font-weight="700">“</text>
-  <text x="108" y="102" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.8">GROWN MEN GROW</text>
-  <text x="990" y="102" text-anchor="end" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.8">02 / 07</text>
-  <text x="90" y="390" text-anchor="start" fill="#F2EBDD" font-family="Georgia, Times New Roman, serif" font-size="91" font-weight="700" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">Opening up matters.</tspan></text>
-    <line x1="90" y1="620" x2="430" y2="620" stroke="#F2EBDD" stroke-width="9"/>
-    <text x="90" y="800" text-anchor="start" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="78" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">Disclosure is not</tspan><tspan x="90" dy="94">the same thing</tspan><tspan x="90" dy="94">as repair.</tspan></text>
-  <text x="108" y="1265" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5">GROWN MEN GROW</text>
+  <defs>
+    <filter id="recognition-02-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="recognition-02-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="recognition-02-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#EEE6D8"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">RECOGNITION · 02 / 07</text>
+  <rect x="668" y="138" width="412" height="514" fill="url(#recognition-02-dots)"/>
+    <g transform="rotate(-1 513 290)">
+    <rect x="48" y="220" width="930" height="140" fill="#F8F3EA"/>
+    <text x="72" y="326.4" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="88" font-weight="900" letter-spacing="-2.5">OPENING UP MATTERS.</text>
+  </g>
+    <path d="M76 414 C264 378 436 434 618 398 C756 370 878 406 1002 388" fill="none" stroke="#B14F3F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="56" y="610" fill="none" stroke="#3A1518" stroke-opacity="0.18" stroke-width="3" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="286" font-weight="900">02</text>
+    <g transform="rotate(0.8 541 722)">
+    <rect x="54" y="650" width="974" height="144" fill="#3A1518"/>
+    <text x="78" y="759.44" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="82" font-weight="900" letter-spacing="-2.5">DISCLOSURE IS NOT</text>
+  </g>
+    <g transform="rotate(-0.7 601 859)">
+    <rect x="174" y="790" width="854" height="138" fill="#121416"/>
+    <text x="198" y="894.88" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="80" font-weight="900" letter-spacing="-2.5">THE SAME THING</text>
+  </g>
+    <g transform="rotate(1 722 995)">
+    <rect x="416" y="926" width="612" height="138" fill="#60735A"/>
+    <text x="440" y="1030.88" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="86" font-weight="900" letter-spacing="-2.5">AS REPAIR.</text>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#recognition-02-paper)" opacity="0.22" pointer-events="none"/>
 </svg>

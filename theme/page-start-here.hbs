@@ -1,0 +1,29 @@
+{{!< default}}
+
+{{#post}}
+<article class="page page--start-here {{post_class}}">
+    {{#if @page.show_title_and_feature_image}}
+        <header class="page-header page-header--statement">
+            <p class="eyebrow">{{@site.title}}</p>
+            <h1>{{title}}</h1>
+            {{#if custom_excerpt}}<p class="page-header__deck">{{custom_excerpt}}</p>{{/if}}
+        </header>
+        {{#if feature_image}}
+            <figure class="page-feature page-feature--start-here">
+                {{> "feature-image" eager=true sizes="(max-width: 760px) 100vw, 1200px"}}
+                {{#if feature_image_caption}}<figcaption>{{feature_image_caption}}</figcaption>{{/if}}
+            </figure>
+        {{/if}}
+    {{/if}}
+    <div class="page-content gh-content">
+        {{content}}
+    </div>
+    {{#if @site.members_enabled}}
+        <section class="signup-panel signup-panel--page">
+            <p class="eyebrow">Newsletter</p>
+            <h2>{{@site.title}}</h2>
+            <a class="button button--paper" href="{{@site.signup_url}}">Subscribe</a>
+        </section>
+    {{/if}}
+</article>
+{{/post}}

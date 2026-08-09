@@ -1,8 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
-  <rect width="1080" height="1920" fill="#F2EBDD"/>
-  <rect x="0" y="960" width="1080" height="960" fill="#3A1518"/>
-    <text x="90" y="200" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2.7">GROWN MEN GROW</text>
-  <text x="90" y="430" text-anchor="start" fill="#3A1518" font-family="Georgia, Times New Roman, serif" font-size="67" font-weight="700" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">One field note a week</tspan><tspan x="90" dy="93">about the unfinished work</tspan><tspan x="90" dy="93">of being a man.</tspan></text>
-    <text x="90" y="1190" text-anchor="start" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="92" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">No gurus.</tspan><tspan x="90" dy="116">No gender war.</tspan></text>
-  <text x="90" y="1780" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="1.8">@GROWNMENGROW</text>
+  <defs>
+    <filter id="story-02-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="story-02-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="story-02-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1920" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="900" letter-spacing="4.2">GROWN MEN GROW</text>
+  <g transform="rotate(-0.7 540 607)">
+    <rect x="26" y="142" width="1028" height="964" fill="#60735A"/>
+    <rect x="34" y="128" width="1012" height="958" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/friends-in-conversation.png" x="38" y="132" width="1004" height="950" preserveAspectRatio="xMidYMid slice" filter="url(#story-02-photo)"/>
+  </g>
+    <g transform="rotate(4 881 135)">
+    <rect x="790" y="112" width="182" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="798" y1="119" x2="962" y2="116" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <g transform="rotate(-1 538 1104)">
+    <rect x="48" y="1038" width="980" height="132" fill="#F8F3EA"/>
+    <text x="72" y="1138.32" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="72" font-weight="900" letter-spacing="-2.5">ONE FIELD NOTE A WEEK</text>
+  </g>
+    <text x="62" y="1288" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="61" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">about the unfinished work</text><text x="62" y="1366" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="61" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">of being a man.</text>
+    <g transform="rotate(-0.8 331 1525)">
+    <rect x="50" y="1460" width="562" height="130" fill="#3A1518"/>
+    <text x="74" y="1558.8" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="82" font-weight="900" letter-spacing="-2.5">NO GURUS.</text>
+  </g>
+    <g transform="rotate(1 657 1652)">
+    <rect x="286" y="1586" width="742" height="132" fill="#B14F3F"/>
+    <text x="310" y="1686.32" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="78" font-weight="900" letter-spacing="-2.5">NO GENDER WAR.</text>
+  </g>
+  <text x="58" y="1868" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="2.6">@GROWNMENGROW</text>
+  <rect width="1080" height="1920" filter="url(#story-02-paper)" opacity="0.22" pointer-events="none"/>
 </svg>
