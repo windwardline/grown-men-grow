@@ -90,13 +90,27 @@ Hyperreal generated imagery must pass the full-resolution believability gate in 
 
 Three earlier dusk-heavy studies were rejected and removed from the repository because distressed walls, isolation, and dark staging communicated decline rather than building, repair, and growth.
 
-## Planned studies — pending generation quota (2026-08-09)
+## Current composition studies — second set (generated 2026-08-09)
 
-The founder ruled that no photograph may appear on more than one surface and that the fix for repetition is a growing library of newly generated photography, with collage-rich compositions restored once these exist. Four prompts are validated (`mmx image generate`, model `image-01`, aspect 2:3, dry-run confirmed) and blocked only on MiniMax token-plan quota; the founder controls the top-up. Planned assignments keep the friends photograph exclusive to the Essay 1 body:
+The founder ruled on 2026-08-09 that no photograph may appear on more than one surface and directed a growing library of unique imagery. These four studies were generated through the founder's own ChatGPT account (GPT image generation, portrait 2:3, 1024x1536) at the founder's direction, each passed the full-resolution believability review, and each is assigned to exactly one surface. The friends photograph remains exclusive to the Essay 1 body.
 
-- `cooking-breakfast-together.png` — two friends cooking breakfast in a bright kitchen; planned About dominant. Prompt: house structure; candid two-figure domestic scene, late-morning daylight, friendship without performance; avoid staged laughter, gloom, luxury, alcohol.
-- `doorway-running-shoes.png` — still life, cared-for running shoes by a front door in morning light; planned Start Here inset (threshold and forward motion). No people; one deep-red accent; avoid gym cues and branding.
-- `balcony-plant-care.png` — hands repotting a healthy plant on a bright balcony; planned About inset (patience and care). Hands and forearms only; avoid wilted plants and catalog staging.
-- `workbench-hand-tools.png` — still life, tidy workbench with maintained hand tools and warm hardwood; planned Essay 1 inset (competence and work in progress). No people; avoid grime, rust, macho cliches.
+### `cooking-breakfast-together.png`
 
-Each generated study must pass the full-resolution believability gate before entering this directory, and its final prompt is recorded here in full at that point.
+- Status: composition study; consumed only by the About feature collage (dominant)
+- Prompt: original editorial photograph, two adult male friends cooking breakfast together in a bright well-kept home kitchen in late morning daylight, one at the stove and one slicing fruit, mid-conversation, engaged and at ease; clean lived-in kitchen, warm wood and off-white surfaces, herbs on the windowsill, ordinary cookware; simple well-fitting clothes, natural posture, friendship without performance; contemporary candid editorial photography, natural texture, restrained fine grain; asymmetric composition, clean negative space; bright optimistic daylight; adults only, pristine anatomy, no logos, no readable text, no watermark; avoid gloom, mess, decay, staged laughter, stock smiles, luxury signaling, alcohol, macho posing.
+
+### `doorway-running-shoes.png`
+
+- Status: composition study; consumed only by the Start Here feature collage (inset)
+- Prompt: editorial still life, well-used but cared-for running shoes beside a front door on a clean wooden floor, morning light through doorway glass, keys on a hook, folded jacket on a chair; discipline, readiness, forward motion; no people; contemporary magazine still-life photography, tactile materials, subtle grain; asymmetric composition, generous negative space; soft daylight with one small deep-red accent; avoid decay, clutter, gloom, gym cues, branding, luxury styling, heavy shadows.
+
+### `balcony-plant-care.png`
+
+- Status: composition study; consumed only by the About feature collage (inset)
+- Prompt: adult man's capable hands repotting a healthy plant on a small bright apartment balcony in morning light, terracotta pots, trowel, fresh soil on a work cloth; patience, care, things kept alive; hands and forearms only, no face; contemporary editorial photography, natural texture, restrained grain, candid; off-center composition, clean negative space; clear morning daylight; pristine anatomy, no logos, no readable text, no watermark; avoid decay, wilted plants, gloom, poverty cues, luxury signaling, catalog staging.
+
+### `workbench-hand-tools.png`
+
+- Status: composition study; consumed only by the Essay 1 feature collage (inset)
+- Review note: the hand plane's brass adjuster reads as a vintage adjustable pattern; flagged at review and accepted for inset-scale use, subject to normal founder review of the final rendering.
+- Prompt: editorial still life, tidy home workbench in bright late-morning daylight, clean well-maintained hand tools laid out with intention beside partly sanded warm hardwood, shavings gathered neatly, a pencil on the bench; competence, order, work in progress; no people; contemporary magazine still-life photography, tactile materials, subtle grain; asymmetric composition, generous negative space; soft daylight, warm paper-toned highlights; no logos, no readable text, no watermark; avoid grime, rust, decay, darkness, macho workshop cliches, dangerous-tool styling, luxury signaling, heavy shadows.

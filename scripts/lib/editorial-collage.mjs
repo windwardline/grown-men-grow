@@ -17,12 +17,6 @@ export const SMOKE = "#71706B";
 export const SERIF = "Bodoni 72, Didot, Georgia, Times New Roman, serif";
 export const SANS = "Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif";
 
-const sourcePaths = new Map([
-  ["/assets/source/editorial/repairing-wooden-chair.png", path.join(ROOT, "assets/source/editorial/repairing-wooden-chair.png")],
-  ["/assets/source/editorial/sunlit-writing-table.png", path.join(ROOT, "assets/source/editorial/sunlit-writing-table.png")],
-  ["/assets/source/editorial/friends-in-conversation.png", path.join(ROOT, "assets/source/editorial/friends-in-conversation.png")],
-  ["/assets/source/grown-men-grow-instagram-avatar.png", path.join(ROOT, "assets/source/grown-men-grow-instagram-avatar.png")],
-]);
 
 export function escapeXml(value) {
   const entities = {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"};
@@ -128,14 +122,14 @@ export function storyCanvas({id, body, background = PAPER_LIGHT, label = "GROWN 
 </svg>`;
 }
 
+// Resolve every source-image href dynamically so a newly added photograph can
+// never silently render as an empty frame.
 function embedImages(svg) {
-  let embedded = svg;
-  for (const [href, file] of sourcePaths) {
-    if (!embedded.includes(href)) continue;
+  return svg.replace(/\/assets\/source\/[^"]+/g, (href) => {
+    const file = path.join(ROOT, href.slice(1));
     const data = fs.readFileSync(file).toString("base64");
-    embedded = embedded.replaceAll(href, `data:image/png;base64,${data}`);
-  }
-  return embedded;
+    return `data:image/png;base64,${data}`;
+  });
 }
 
 export function writeAsset(relativeDirectory, name, svg) {

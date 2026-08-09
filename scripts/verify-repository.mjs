@@ -241,6 +241,10 @@ await validateNamedPngs('assets/source/editorial', new Map([
   ['friends-in-conversation', { width: 1023, height: 1537 }],
   ['repairing-wooden-chair', { width: 1024, height: 1536 }],
   ['sunlit-writing-table', { width: 1024, height: 1536 }],
+  ['cooking-breakfast-together', { width: 1024, height: 1536 }],
+  ['doorway-running-shoes', { width: 1024, height: 1536 }],
+  ['balcony-plant-care', { width: 1024, height: 1536 }],
+  ['workbench-hand-tools', { width: 1024, height: 1536 }],
 ]));
 await validateNamedPngs('assets/drafts/review', new Map([
   ['foundational-carousel', { width: 1362, height: 1004 }],
@@ -294,4 +298,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 35 launch PNG/SVG pairs, five review sheets, three editorial source images, and five editorial concept pairs.`);
+console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 35 launch PNG/SVG pairs, five review sheets, seven editorial source images, and five editorial concept pairs.`);
