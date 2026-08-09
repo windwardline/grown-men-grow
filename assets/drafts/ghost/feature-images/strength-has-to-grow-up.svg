@@ -18,27 +18,23 @@
     </pattern>
   </defs>
   <rect width="1600" height="1000" fill="#F8F3EA"/>
-  <rect x="34" y="46" width="520" height="864" fill="url(#feature-essay-dots)"/>
-    <rect x="510" y="58" width="1038" height="872" fill="#3A1518" transform="rotate(1 1029 494)"/>
-    <g transform="rotate(-0.7 1042 474)">
-    <rect x="536" y="54" width="1012" height="874" fill="#60735A"/>
-    <rect x="544" y="40" width="996" height="868" fill="#F8F3EA"/>
-    <image href="/assets/source/editorial/repairing-wooden-chair.png" x="548" y="44" width="988" height="860" preserveAspectRatio="xMidYMid slice" filter="url(#feature-essay-photo)"/>
+  <rect x="34" y="46" width="440" height="864" fill="url(#feature-essay-dots)"/>
+    <rect x="452" y="58" width="1096" height="872" fill="#3A1518" transform="rotate(1 1000 494)"/>
+    <g transform="rotate(-0.7 1014 474)">
+    <rect x="480" y="54" width="1068" height="874" fill="#60735A"/>
+    <rect x="488" y="40" width="1052" height="868" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/repairing-wooden-chair.png" x="492" y="44" width="1044" height="860" preserveAspectRatio="xMidYMid slice" filter="url(#feature-essay-photo)"/>
   </g>
-    <g transform="rotate(-2 318 421)">
-    <rect x="50" y="136" width="536" height="604" fill="#EEE6D8"/>
-    <rect x="58" y="122" width="520" height="598" fill="#F8F3EA"/>
-    <image href="/assets/source/editorial/sunlit-writing-table.png" x="62" y="126" width="512" height="590" preserveAspectRatio="xMidYMid slice" filter="url(#feature-essay-photo)"/>
+    <g transform="rotate(-3 704 45)">
+    <rect x="586" y="22" width="236" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="594" y1="29" x2="812" y2="26" stroke="#fff" stroke-opacity="0.38"/>
   </g>
-    <g transform="rotate(-4 302 127)">
-    <rect x="192" y="104" width="220" height="46" fill="#D9CBAF" opacity="0.74"/>
-    <line x1="200" y1="111" x2="402" y2="108" stroke="#fff" stroke-opacity="0.38"/>
+    <g transform="rotate(4 1341 891)">
+    <rect x="1236" y="868" width="210" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="1244" y1="875" x2="1436" y2="872" stroke="#fff" stroke-opacity="0.38"/>
   </g>
-    <g transform="rotate(3 1238 51)">
-    <rect x="1120" y="28" width="236" height="46" fill="#D9CBAF" opacity="0.74"/>
-    <line x1="1128" y1="35" x2="1346" y2="32" stroke="#fff" stroke-opacity="0.38"/>
-  </g>
-    <rect x="74" y="760" width="420" height="78" fill="#3A1518" transform="rotate(-1 284 799)"/>
-    <path d="M84 880 C294 838 506 900 716 852 C914 806 1122 882 1510 818" fill="none" stroke="#B14F3F" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="70" y="132" width="358" height="86" fill="#EEE6D8" transform="rotate(-2 249 175)"/>
+    <rect x="96" y="760" width="376" height="78" fill="#3A1518" transform="rotate(-1 284 799)"/>
+    <path d="M84 560 C170 512 286 584 404 528" fill="none" stroke="#B14F3F" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
   <rect width="1600" height="1000" filter="url(#feature-essay-paper)" opacity="0.22" pointer-events="none"/>
 </svg>
