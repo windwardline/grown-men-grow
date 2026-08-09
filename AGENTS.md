@@ -13,6 +13,16 @@ This repository is the private operational source for the Grown Men Grow Ghost p
 
 Stack exception (owner-approved 2026-08-07): Ghost(Pro), rather than Vercel, hosts the publication because native publishing, membership, newsletters, analytics, and export are launch requirements. This repository stores content and operational assets; it does not deploy the public site.
 
+## Editorial and identity contract
+
+- Founder-approved public copy under `content/` is canonical. Do not rewrite it during implementation or distribution without a new founder decision.
+- The voice is organic, nuanced, sophisticated, adult, and visibly human. It may be dry, funny, imperfect, or occasionally profane when emphasis earns it. Do not polish it into generic therapy language, self-help packaging, slogans, or an AI cadence.
+- Avoid formulaic titles and captions, including interchangeable comma-chain constructions. Concrete observations, tension, and earned humor carry the writing.
+- Grown Men Grow is pro-male and responsibility-centered. It rejects grievance, domination, gender-war framing, anti-male shame, forced ideological pandering, and the pursuit of anyone's approval as proof of virtue. Do not use the manosphere, women, or feminism as profile positioning.
+- Do not identify Gartner in public pages, essays, newsletters, metadata, social copy, captions, alt text, or public account fields.
+- Keep Grown Men Grow primary. Michael Peacock may appear as the credited writer on Ghost and Medium; Instagram and the other brand profiles remain brand-led.
+- Follow `docs/editorial-visual-system.md`: bright, energetic, tactile editorial collage; maintained environments; visible human authorship; varied compositions; and no despair-coded, dilapidated, or visibly synthetic imagery.
+
 ## Distribution boundary
 
 - Ghost is the canonical publication, archive, and only master email list.
@@ -54,6 +64,18 @@ Before ending any session that changes files, decisions, generated assets, or an
 4. Never write passwords, tokens, access codes, cookies, member data, private correspondence, or other secrets into the log.
 
 The handoff log is append-only. Do not rewrite earlier entries to make later work look cleaner; add a correction in a new entry.
+
+## Active Claude Code resume directive
+
+This directive is active for the first material Claude Code session after the 2026-08-08 Codex handoff. Complete it in this order:
+
+1. Audit the entire repository and its current GitHub state before changing a live publication or account. Check code, theme behavior, tests, dependencies, workflows, secrets or private-data exposure, tracked and ignored files, generated assets, documentation consistency, stale or orphaned material, Git hygiene, and avoidable complexity or inefficiency.
+2. Reproduce or substantiate findings, then fix verified repository errors, leaks, and inefficiencies through the normal branch, test, review, pull-request, and merge workflow. Never print a discovered secret. A credential rotation or destructive external cleanup remains a founder-controlled action.
+3. Review the implementation plan, founder decisions, release checklist, distribution plan, and latest handoff against one another. Identify missing gates, assumptions, sequencing problems, and stronger alternatives. Present recommendations to the founder in full; the founder makes every final product, editorial, billing, and launch decision.
+4. Reconcile the ordered backlog from that review, then begin executing it in dependency order. At the start and end of each phase, report what is complete, what is in progress, what comes next, and any decision or blocker that changes the sequence.
+5. Use Claude Code's own native browser or connector mechanisms for signed-in account work. Re-verify live state before acting. Existing launch authorizations do not expand the billing, newsletter, identity, security, or public-repository boundaries recorded here.
+
+When the audit, repair pass, and gap review are complete, record their evidence and the resulting queue in `docs/technical/handoff-log.md`, then remove this one-time section in the same reviewed change so it cannot become stale.
 
 ## Repository completion authority
 

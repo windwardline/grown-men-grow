@@ -1,10 +1,11 @@
 ---
 title: Strength Has to Grow Up — Distribution Pack
 canonical_url: https://grownmengrow.com/strength-has-to-grow-up/
-status: prepared-for-founder-review
+status: founder-approved
 strategy_approved: 2026-08-08
-exact_platform_copy_approved: false
+exact_platform_copy_approved: true
 public_authorized: false
+execution_gate: canonical-ghost-launch-and-platform-verification
 ---
 
 # Shared profile configuration

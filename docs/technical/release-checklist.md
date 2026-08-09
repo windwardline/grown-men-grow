@@ -21,6 +21,7 @@
 
 - [x] Start Here, About, and Essay 1 render correctly in Ghost's phone and desktop previews.
 - [x] The replacement theme passes its local contract test, GScan, and desktop/mobile fixture review.
+- [ ] Confirm the remaining Ghost trial and plan state before launch; the founder deferred the Publisher purchase while the trial remains active.
 - [ ] The replacement theme and approved feature images render correctly in private Ghost.
 - [x] Founder approved the exact concise staff bio.
 - [ ] Navigation, signup CTAs, and internal links work.
@@ -28,6 +29,7 @@
 - [ ] Welcome email reaches the test inbox exactly once.
 - [ ] Reply-to, support, account management, and unsubscribe work.
 - [x] Reply-to and Portal support identities are configured as `hello@grownmengrow.com`.
+- [x] A founder-controlled Gmail inbox is authorized for private membership and email tests; no inbox credentials are stored in the repository.
 - [ ] Essay 1 web, email, and social previews are approved.
 - [ ] Sitemap, canonical URLs, metadata, and social images are correct.
 - [ ] Native analytics and member-source attribution are enabled.
@@ -75,4 +77,4 @@
 - [ ] Medium imports only the live Ghost URL and reports Ghost as canonical.
 - [ ] Substack receives no Ghost member import and does not send a duplicate newsletter.
 - [ ] Buffer and Zapier create drafts or ideas only; no unreviewed public cross-posting exists.
-- [ ] Platform-specific copy beyond the approved Ghost and Instagram packages receives founder review before posting.
+- [x] The exact Essay 1 platform adaptations in `content/distribution/essay-01-launch.md` received founder approval; later essay adaptations still require their own review.

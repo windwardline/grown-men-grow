@@ -1,6 +1,6 @@
 # Distribution and Discovery Plan
 
-Status: founder-approved on 2026-08-08. Account creation, publication, and automation remain subject to platform-specific verification.
+Status: founder-approved on 2026-08-08. The exact Essay 1 platform pack is approved; account creation, publication, and automation remain subject to the canonical-launch sequence and platform-specific verification.
 
 ## Operating rule
 
