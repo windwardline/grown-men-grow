@@ -57,7 +57,7 @@ Approved concise staff bio: **Michael Peacock writes Grown Men Grow, a publicati
 - [x] Enable one newsletter.
 - [x] Set the approved sender name and `hello@grownmengrow.com` reply-to address.
 - [x] Replace Ghost's generic welcome scaffold with the founder-approved canonical body and verify the preview.
-- [ ] Enable the free-member welcome email only at the authorized launch gate.
+- [ ] Enable the free-member welcome email at the authorized launch gate. Enabling at launch is authorized (delegated ruling, 2026-08-09); newsletter sends remain separately gated.
 - [ ] Test signup, magic link, welcome delivery, account management, and unsubscribe.
 
 ## Essay 1

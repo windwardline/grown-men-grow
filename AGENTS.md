@@ -39,7 +39,7 @@ Run these before committing material changes:
 1. `node scripts/verify-ghost-theme.mjs`
 2. `pnpm --dir theme install --frozen-lockfile`
 3. `pnpm --dir theme test`
-4. `pnpm --dir theme zip && theme/node_modules/.bin/gscan -z --verbose dist/grown-men-grow.zip`
+4. `pnpm --dir theme zip && theme/node_modules/.bin/gscan -z --fatal --verbose dist/grown-men-grow.zip`
 5. `node scripts/verify-repository.mjs`
 6. `bash scripts/verify-svg-xml.sh`
 7. Review `git diff --check` and the complete staged file list.
@@ -64,18 +64,6 @@ Before ending any session that changes files, decisions, generated assets, or an
 4. Never write passwords, tokens, access codes, cookies, member data, private correspondence, or other secrets into the log.
 
 The handoff log is append-only. Do not rewrite earlier entries to make later work look cleaner; add a correction in a new entry.
-
-## Active Claude Code resume directive
-
-This directive is active for the first material Claude Code session after the 2026-08-08 Codex handoff. Complete it in this order:
-
-1. Audit the entire repository and its current GitHub state before changing a live publication or account. Check code, theme behavior, tests, dependencies, workflows, secrets or private-data exposure, tracked and ignored files, generated assets, documentation consistency, stale or orphaned material, Git hygiene, and avoidable complexity or inefficiency.
-2. Reproduce or substantiate findings, then fix verified repository errors, leaks, and inefficiencies through the normal branch, test, review, pull-request, and merge workflow. Never print a discovered secret. A credential rotation or destructive external cleanup remains a founder-controlled action.
-3. Review the implementation plan, founder decisions, release checklist, distribution plan, and latest handoff against one another. Identify missing gates, assumptions, sequencing problems, and stronger alternatives. Present recommendations to the founder in full; the founder makes every final product, editorial, billing, and launch decision.
-4. Reconcile the ordered backlog from that review, then begin executing it in dependency order. At the start and end of each phase, report what is complete, what is in progress, what comes next, and any decision or blocker that changes the sequence.
-5. Use Claude Code's own native browser or connector mechanisms for signed-in account work. Re-verify live state before acting. Existing launch authorizations do not expand the billing, newsletter, identity, security, or public-repository boundaries recorded here.
-
-When the audit, repair pass, and gap review are complete, record their evidence and the resulting queue in `docs/technical/handoff-log.md`, then remove this one-time section in the same reviewed change so it cannot become stale.
 
 ## Repository completion authority
 

@@ -17,7 +17,7 @@ Launch the smallest reliable publication system that preserves the established e
 7. One public launch essay.
 8. Native Ghost analytics and signup attribution.
 9. One public Instagram Creator account with native Insights.
-10. Search Console, Bing Webmaster Tools, Cloudflare crawler signals, Ghost Social Web, and Ghost Explore.
+10. Search Console, Bing Webmaster Tools, Ghost Social Web, and Ghost Explore. Cloudflare Crawler Hints was evaluated and stays off because the working Ghost records are DNS-only.
 11. The zero-cost distribution network and syndication boundary in `distribution-plan.md`.
 12. Manual backup/export and release procedures.
 

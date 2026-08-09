@@ -43,7 +43,7 @@
 
 ## 2026-08-07 — Launch with the unmodified Source theme
 
-- **Status:** Approved
+- **Status:** Superseded on 2026-08-08 by the approved editorial system and custom Ghost theme; Source is retained only as rollback material
 - **Decision:** Use Ghost's Source theme without custom theme code.
 - **Reason:** Source is the maintained default, supports publication and newsletter layouts through native settings, and minimizes implementation and update burden.
 - **Alternatives considered:** Solo, another official theme, a premium theme, or a custom theme.
@@ -318,9 +318,21 @@
 - **Controls:** Do not turn the voice into therapeutic instruction, self-righteous positioning, formulaic comma-chain titles, grievance content, or forced ideological signaling. Preserve the distinct structures of future pieces instead of imitating this essay sentence by sentence.
 - **Founder action required:** Decide final artwork and release timing after production review.
 
+## 2026-08-09 — Resolve the launch-sequencing gaps under delegated authority
+
+- **Status:** Decided by Claude Code under the founder's 2026-08-09 delegation ("decide these issues yourself using the same logic … durable fixes that adhere to the stated and implied goals of the project, taking user experience into account")
+- **Context:** The independent audit found the release checklist could not be completed under the recorded authorizations: no gate ever authorized enabling the welcome email, the launch-timing rule transitively depended on the deferred Publisher purchase through the analytics gate, two rendered launch slides deviated from the canonical slide copy while the fidelity box was checked, and the "required advisor review" gate was defined nowhere.
+- **Rulings:**
+  1. Enabling the free-member welcome automation is authorized as part of the already-authorized web launch. It is a signup acknowledgment, not a broadcast; the Essay 1 newsletter send remains unauthorized.
+  2. Launch proceeds on the active trial with whatever native analytics the plan provides. The Publisher purchase remains a founder-only checkout at the trial or launch checkpoint and upgrades analytics when completed.
+  3. The founder-approved rendered artwork wording is canonical for pinned-introduction slide 5 and recognition-carousel slide 5; the slide copy in `content/instagram/launch-package.md` was reconciled to it. The founder approved the complete rendered set on 2026-08-08, and the approved alt text already transcribed the artwork wording.
+  4. The undefined "required advisor review" checklist gate is the founder's own pre-launch reputation review per the private addendum; no external advisor exists in any tracked record.
+- **Controls:** None of these rulings authorizes a charge, a newsletter send, privacy removal, or a posting action; the existing founder gates for those are unchanged.
+- **Founder action required:** Veto or amend any ruling; otherwise none.
+
 ## Current pending decisions
 
-- Ghost Publisher purchase confirmation at the later trial or launch checkpoint.
+- Ghost Publisher purchase confirmation at the later trial or launch checkpoint; launch itself proceeds on the trial.
 - Inbox-side confirmation only if an end-to-end membership or welcome-email test requires founder interaction.
 - Any future newsletter send; Essay 1 is web-only under the current authorization.
 - Publication timing and final artwork for Field Note 2.

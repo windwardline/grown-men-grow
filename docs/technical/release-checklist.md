@@ -10,8 +10,8 @@
 - [x] The final visual set feels constructive, warm, and alive; no image relies on decay, isolation, darkness, or distress to imply depth.
 - [x] Every generated source passes full-resolution anatomy, object-continuity, light, shadow, reflection, and architecture review.
 - [x] Adjacent posts vary composition, crop, scale, and paper treatment while retaining one recognizable material vocabulary.
-- [ ] Required advisor review is complete.
-- [x] Public copy matches the approved source.
+- [ ] The founder confirms the pre-launch reputation review described in the private addendum; no tracked document defines a separate external advisor, so this gate is the founder's own sign-off.
+- [x] Public copy matches the approved source. The two launch slides whose rendered wording had drifted from the slide copy were reconciled on 2026-08-09; the founder-approved rendered artwork wording is canonical.
 - [x] No confidential allegation, private party, or new disclosure was introduced.
 - [x] Non-therapist boundary remains clear.
 - [x] Metadata and social previews received reputation review.
@@ -26,13 +26,13 @@
 - [x] Founder approved the exact concise staff bio.
 - [ ] Navigation, signup CTAs, and internal links work.
 - [ ] Free signup and magic-link sign-in work.
-- [ ] Welcome email reaches the test inbox exactly once.
+- [ ] Welcome email reaches the test inbox exactly once. Enabling the free-member welcome automation at launch is authorized (delegated ruling, 2026-08-09); it is distinct from the still-unauthorized Essay 1 newsletter send.
 - [ ] Reply-to, support, account management, and unsubscribe work.
 - [x] Reply-to and Portal support identities are configured as `hello@grownmengrow.com`.
 - [x] A founder-controlled Gmail inbox is authorized for private membership and email tests; no inbox credentials are stored in the repository.
 - [ ] Essay 1 web, email, and social previews are approved.
 - [ ] Sitemap, canonical URLs, metadata, and social images are correct.
-- [ ] Native analytics and member-source attribution are enabled.
+- [ ] Native analytics and member-source attribution are enabled to the extent the active plan provides. Launch may proceed on the trial (delegated ruling, 2026-08-09); the deferred Publisher purchase remains a founder-only checkout and upgrades analytics when completed.
 - [ ] `max-image-preview:large`, structured metadata, automatic canonicals, and the Ghost sitemap are present on the public pages.
 
 ## Domain and security
@@ -51,7 +51,7 @@
 - [x] Category label and contact display are off; Account Status shows no current restrictions.
 - [ ] Ghost link is approved and live.
 - [ ] Bio link resolves and carries the approved source parameter.
-- [x] Carousel, Story, Reel, and quote assets render at native dimensions.
+- [x] Carousel, Story, static-post, and Reel-cover assets render at native dimensions. The Reel video itself does not exist yet and remains gated on later audio and caption review.
 - [ ] Alt text or accessibility treatment is complete where supported.
 - [x] The canonical launch captions include their approved three-tag classification sets.
 - [ ] The published launch posts retain the exact approved classification sets.

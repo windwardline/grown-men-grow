@@ -47,13 +47,12 @@
 }
 
 :root {
-    --color-oxblood: #3a1518;
-    --color-oxblood-dark: #261012;
+    --color-oxblood: var(--color-accent, #3a1518);
     --color-paper: #eee6d8;
     --color-paper-light: #f7f2e9;
     --color-ink: #121416;
     --color-rust: #9a493f;
-    --color-smoke: #71706b;
+    --color-smoke: #63625d;
     --color-line: rgba(18, 20, 22, 0.2);
     --font-display: "Bodoni Moda", "Times New Roman", serif;
     --font-utility: "Barlow Condensed", "Arial Narrow", sans-serif;
@@ -319,6 +318,10 @@ a:hover {
     text-decoration-color: var(--color-rust);
     text-decoration-thickness: 2px;
     text-underline-offset: 0.4rem;
+}
+
+.site-navigation__actions {
+    display: none;
 }
 
 .site-actions {
@@ -1117,6 +1120,12 @@ a:hover {
     margin-block: 1.5rem;
 }
 
+.article-comments {
+    margin-top: clamp(3rem, 6vw, 5rem);
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-line);
+}
+
 .article-authors {
     margin-top: clamp(3rem, 6vw, 5rem);
 }
@@ -1473,6 +1482,11 @@ a:hover {
     .site-navigation a {
         width: 100%;
         border-bottom: 1px solid var(--color-line);
+    }
+
+    .site-navigation__actions {
+        display: block;
+        padding-top: 1rem;
     }
 
     .publication-masthead {

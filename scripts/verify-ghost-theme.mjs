@@ -54,8 +54,8 @@ if (!failures.length) {
   const packageJson = JSON.parse(await read('package.json'));
   if (packageJson.name !== 'grown-men-grow') fail('Theme package name must be grown-men-grow.');
   if (packageJson.license !== 'UNLICENSED') fail('Theme package must remain proprietary.');
-  if (packageJson.engines?.ghost !== '>=5.54.1') {
-    fail('Theme package must require Ghost >=5.54.1 because it uses @page.show_title_and_feature_image.');
+  if (packageJson.engines?.ghost !== '>=6.0.0') {
+    fail('Theme package must require Ghost >=6.0.0; GScan validation and the live publication cover 6.x only.');
   }
   if (packageJson.config?.card_assets !== true) fail('Ghost card assets must be enabled.');
   if (Object.keys(packageJson.config?.custom ?? {}).length > 20) fail('Ghost permits at most 20 custom settings.');
@@ -75,7 +75,7 @@ if (!failures.length) {
   }
 
   const postTemplate = await read('post.hbs');
-  for (const token of ['{{#post}}', '{{content}}', '{{> "feature-image"', '{{#foreach authors}}', '{{reading_time}}']) {
+  for (const token of ['{{#post}}', '{{content}}', '{{> "feature-image"', '{{#foreach authors}}', '{{reading_time}}', '{{comments}}']) {
     if (!postTemplate.includes(token)) fail(`post.hbs is missing ${token}.`);
   }
 
@@ -109,7 +109,7 @@ if (!failures.length) {
   }
   if (/https?:\/\/fonts\./i.test(css)) fail('Theme fonts must be hosted locally.');
 
-  const policyFiles = requiredFiles.filter((file) => /\.(?:hbs|css|js|json)$/.test(file));
+  const policyFiles = [...requiredFiles.filter((file) => /\.(?:hbs|css|js|json)$/.test(file)), 'README.md'];
   for (const relativePath of policyFiles) {
     const text = await read(relativePath);
     if (/\bGartner\b/i.test(text)) fail(`${relativePath} violates the Gartner exclusion.`);

@@ -21,7 +21,7 @@ function shell(title, body, bodyClass = "") {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${title}</title>
+  <title>${escapeHtml(title)}</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="/theme/assets/css/screen.css">
   <script src="/theme/assets/js/main.js" defer></script>
@@ -52,12 +52,12 @@ function shell(title, body, bodyClass = "") {
 }
 
 function featurePicture(source, alt) {
-  return `<picture class="feature-image"><img src="${source}" alt="${alt}" width="1600" height="1000" loading="eager"></picture>`;
+  return `<picture class="feature-image"><img src="${source}" alt="${escapeHtml(alt)}" width="1600" height="1000" loading="eager"></picture>`;
 }
 
 function escapeHtml(value) {
-  const entities = {"&": "&amp;", "<": "&lt;", ">": "&gt;"};
-  return value.replace(/[&<>]/g, (character) => entities[character]);
+  const entities = {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"};
+  return value.replace(/[&<>"]/g, (character) => entities[character]);
 }
 
 function inlineMarkdown(value) {
@@ -146,14 +146,14 @@ const startHereSource = await markdownPage("content/ghost/start-here.md");
 const aboutSource = await markdownPage("content/ghost/about.md");
 
 const startHere = `<article class="page page--start-here">
-  <header class="page-header page-header--statement"><p class="eyebrow">Grown Men Grow</p><h1>${startHereSource.metadata.title}</h1></header>
+  <header class="page-header page-header--statement"><p class="eyebrow">Grown Men Grow</p><h1>${escapeHtml(startHereSource.metadata.title)}</h1></header>
   <figure class="page-feature page-feature--start-here">${featurePicture("/assets/drafts/ghost/feature-images/start-here.png", "A sunlit writing table and two men in conversation")}</figure>
   <div class="page-content gh-content">${startHereSource.content}</div>
   <section class="signup-panel signup-panel--page"><p class="eyebrow">Newsletter</p><h2>Grown Men Grow</h2><p>Essays on the unfinished work of being a man.</p><a class="button button--paper" href="#">Subscribe</a></section>
 </article>`;
 
 const about = `<article class="page page--about">
-  <header class="page-header page-header--split"><p class="eyebrow">Grown Men Grow</p><h1>${aboutSource.metadata.title}</h1></header>
+  <header class="page-header page-header--split"><p class="eyebrow">Grown Men Grow</p><h1>${escapeHtml(aboutSource.metadata.title)}</h1></header>
   <figure class="page-feature">${featurePicture("/assets/drafts/ghost/feature-images/about.png", "Two men talking beside a repaired wooden chair")}</figure>
   <div class="page-content gh-content">${aboutSource.content}</div>
 </article>`;
