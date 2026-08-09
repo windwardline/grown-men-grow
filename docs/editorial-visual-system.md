@@ -89,6 +89,10 @@ The system must not become one template with new words.
 
 In a representative twelve-post run, aim for four image-led features, three typographic pieces, three documentary or detail-led carousels, and two motion or portrait-led posts. This is a variation check, not a publishing quota.
 
+## Image uniqueness (founder-ruled 2026-08-09)
+
+No photograph appears on more than one surface, ever. Each essay, page, feature image, inline body image, and social asset uses imagery created for it; the source library only grows, and published imagery is never recycled into a later composition. Compositions stay collage-rich — the fix for repetition is generating new source photography under the recorded house prompts, not thinning the collages. Photographs are interspersed where the narrative, theme, and brand earn them; the one intentional echo is the homepage feature card, which shows the current feature essay's own image. The feature-image renderer enforces uniqueness mechanically and fails if any source photograph is composed into more than one surface.
+
 ## Surface rules
 
 ### Ghost
