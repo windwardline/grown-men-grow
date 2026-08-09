@@ -166,6 +166,8 @@ const requiredFiles = [
   'theme/index.hbs',
   'theme/post.hbs',
   'docs/editorial-visual-system.md',
+  'docs/technical/distribution-plan.md',
+  'docs/technical/community-moderation.md',
   'assets/concepts/editorial-collage-v1/README.md',
   'assets/source/editorial/README.md',
   'drafts/README.md',
@@ -174,12 +176,34 @@ const requiredFiles = [
   'content/ghost/welcome-email.md',
   'content/ghost/essay-01-strength-has-to-grow-up.md',
   'content/instagram/launch-package.md',
+  'content/field-notes/call-your-friends-before-theres-a-reason.md',
+  'content/distribution/essay-01-launch.md',
 ];
 for (const file of requiredFiles) {
   if (!tracked.includes(file)) fail(`Required tracked file is missing: ${file}`);
 }
 if (tracked.some((file) => file.startsWith('assets/concepts/editorial-v1/') || file === 'scripts/render-editorial-concepts.mjs')) {
   fail('The superseded dark editorial concept package must not remain in the active tree.');
+}
+if (tracked.includes('drafts/field-note-02-call-your-friends-before-theres-a-reason.md')) {
+  fail('Approved Field Note 2 must live under content/, not drafts/.');
+}
+
+const launchPackage = await readFile(path.join(root, 'content/instagram/launch-package.md'), 'utf8');
+const captionSource = launchPackage.split('\n## 8. Approved discovery classifications')[0];
+const approvedTagLines = [
+  '#MensGrowth #EmotionalMaturity #GrownMenGrow',
+  '#HealthyMasculinity #EmotionalGrowth #GrownMenGrow',
+  '#Accountability #EmotionalMaturity #GrownMenGrow',
+  '#MensGrowth #SelfAwareness #GrownMenGrow',
+  '#HealthyMasculinity #MensMentalHealth #GrownMenGrow',
+];
+const captionTagLines = captionSource.match(/^#[A-Za-z]+(?: #[A-Za-z]+){2}$/gm) ?? [];
+if (captionTagLines.length !== approvedTagLines.length) {
+  fail(`Instagram launch captions contain ${captionTagLines.length} three-tag lines; expected ${approvedTagLines.length}.`);
+}
+for (const tagLine of approvedTagLines) {
+  if (!captionTagLines.includes(tagLine)) fail(`Instagram launch captions are missing the approved tag line: ${tagLine}`);
 }
 
 const claudePath = path.join(root, 'CLAUDE.md');

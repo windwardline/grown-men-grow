@@ -134,7 +134,7 @@ Unmodified Source can support clean typography, feature images, and simple layou
 - Retain editable SVG or source artwork and the final platform PNG for every published asset.
 - Record the image-generation prompt and source path for every generated photograph or illustration.
 
-## Current review set
+## Approved launch set
 
 The current concept package is under `assets/concepts/editorial-collage-v1/`:
 
@@ -144,7 +144,7 @@ The current concept package is under `assets/concepts/editorial-collage-v1/`:
 - Story cover
 - Social-sharing card
 
-The complete replacement set is under `assets/drafts/`, with five contact sheets under `assets/drafts/review/`. Title-free Ghost feature images are under `assets/drafts/ghost/feature-images/`. The package uses only approved launch copy. It is for review and is not authorized for publication or posting.
+The complete replacement set is under `assets/drafts/`, with five contact sheets under `assets/drafts/review/`. Title-free Ghost feature images are under `assets/drafts/ghost/feature-images/`. The package uses only approved launch copy and was approved for staging and launch on 2026-08-08. Live rendering still must pass the release checklist.
 
 ## Implementation status
 
@@ -153,8 +153,8 @@ The complete replacement set is under `assets/drafts/`, with five contact sheets
 3. [x] Regenerate the complete launch asset set in distinct content families.
 4. [x] Review local Ghost desktop and phone fixtures.
 5. [x] Prepare the complete Instagram feed, carousel, Story, Reel, and Ghost social-card contact sheets.
-6. [ ] Founder approves or revises the collage-led replacement set.
+6. [x] Founder approved the collage-led replacement set on 2026-08-08.
 7. [ ] Stage the approved theme and assets in private Ghost.
 8. [ ] Review private Ghost desktop, phone, email, search, and social previews.
 9. [ ] Preserve Source and the prior export as rollback material.
-10. [ ] Make public changes only through the separate launch gates.
+10. [x] Founder authorized Ghost web and Instagram launch changes after the technical gates pass; newsletter delivery remains separately gated.

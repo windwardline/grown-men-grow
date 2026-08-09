@@ -1,6 +1,6 @@
-# Ghost + Instagram Launch Implementation Plan
+# Ghost-led Launch Implementation Plan
 
-Status: Approved on 2026-08-07
+Status: Approved on 2026-08-07; distribution amendment approved on 2026-08-08
 
 ## Objective
 
@@ -17,15 +17,16 @@ Launch the smallest reliable publication system that preserves the established e
 7. One public launch essay.
 8. Native Ghost analytics and signup attribution.
 9. One public Instagram Creator account with native Insights.
-10. Manual backup/export and release procedures.
+10. Search Console, Bing Webmaster Tools, Cloudflare crawler signals, Ghost Social Web, and Ghost Explore.
+11. The zero-cost distribution network and syndication boundary in `distribution-plan.md`.
+12. Manual backup/export and release procedures.
 
 ## Excluded from launch
 
-- Additional social or publishing platforms.
 - Paid memberships or Stripe.
 - Third-party analytics, pixels, tag managers, or link shorteners.
 - External email platforms.
-- Automation services.
+- Paid automation or custom cross-posting services.
 - Databases, custom member tools, or custom applications.
 - A purchased Ghost theme or external theme service.
 
@@ -63,13 +64,18 @@ Launch the smallest reliable publication system that preserves the established e
 - Publish Ghost pages and Essay 1.
 - Send Essay 1 only if separately authorized.
 - Publish the approved Instagram launch sequence manually.
+- Activate the approved search and platform-discovery surfaces in the controlled order recorded in `distribution-plan.md`.
 - Verify live signup, welcome email, attribution, social previews, and analytics.
 - Create a dated export set and capture day-0, day-7, and day-30 metrics.
 
 ## Change control
 
-Any platform, paid service, automation, custom application, database, public-copy change, or disclosure change requires a separate written proposal and founder approval.
+Any unapproved platform, paid service, custom application, database, public-copy change, or disclosure change requires a separate written proposal and founder approval.
 
 ## Approved amendment — 2026-08-08
 
 The founder approved an original Ghost theme after the unmodified Source baseline proved too limited for the required editorial hierarchy and variation. The theme adds no platform, paid service, application runtime, database, or tracking layer. Source and the existing export remain the rollback path.
+
+## Approved distribution amendment — 2026-08-08
+
+The founder approved the zero-cost distribution network in `distribution-plan.md`. Ghost remains canonical and retains the only master email list. Medium may receive full essays only through verified canonical import. Other channels receive native excerpts, visuals, conversation, and links. Buffer Free and Zapier Free may create reviewed scheduling drafts; direct unreviewed cross-posting remains prohibited.

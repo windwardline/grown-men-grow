@@ -64,6 +64,9 @@ if (!failures.length) {
   for (const token of ['{{ghost_head}}', '{{ghost_foot}}', '{{{body}}}', 'viewport', 'skip-link', '{{search}}']) {
     if (!defaultTemplate.includes(token)) fail(`default.hbs is missing ${token}.`);
   }
+  if (!defaultTemplate.includes('max-image-preview:large')) {
+    fail('default.hbs must permit large search and Discover image previews.');
+  }
   if (!defaultTemplate.includes('@site.signup_url')) fail('default.hbs must use the Ghost signup URL.');
 
   const indexTemplate = await read('index.hbs');

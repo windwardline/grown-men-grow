@@ -10,6 +10,7 @@
 - **Reversibility:** High. Ghost provides content and member exports; Instagram assets remain locally retained.
 - **External services:** Ghost, Instagram, and the existing domain/DNS provider only.
 - **Founder action required:** Founder retains final authority over all account, editorial, billing, DNS, and publication decisions.
+- **Later resolution:** The 2026-08-08 zero-cost distribution decision supersedes the Instagram-only channel boundary while keeping Ghost canonical and Instagram primary.
 
 ## 2026-08-07 — Keep imported source material outside Git
 
@@ -192,6 +193,7 @@
 - **Search Console:** Recommend the free Google Search Console after the site is live because it can submit the sitemap and report indexing and search queries without a tracking script. It remains a founder decision because it adds an account platform.
 - **Instagram:** Keep the approved handle, display name, and bio. Put discovery context in captions, on-screen text, honest alt text, and narrowly relevant hashtags rather than keyword-stuffing the profile.
 - **Founder action required:** Approve Search Console and the proposed launch-post classification additions before they are used.
+- **Later resolution:** The founder approved Search Console, Bing Webmaster Tools, the exact launch classifications, and the broader distribution plan on 2026-08-08. The paid-service and tracking exclusions remain in force.
 
 ## 2026-08-07 — Cut over the approved apex domain without disturbing routed email
 
@@ -250,21 +252,45 @@
 
 ## 2026-08-08 — Develop a tactile collage-led replacement set
 
-- **Status:** Prepared for founder review; not yet approved for public use
+- **Status:** Approved for private staging and launch on 2026-08-08; live rendering remains subject to technical verification
 - **Direction:** Use bright photography as raw material inside an original editorial collage system with visible paper, tape, halftone, drawn marks, irregular crops, and active changes of scale.
 - **Reason:** The treatment gives the publication energy and a human editorial hand while reducing the cheap perfection and repeated visual grammar common to generated lifestyle imagery.
 - **Variation rule:** Reuse the material vocabulary, not one layout. Consecutive covers must change image dominance, crop, color field, headline placement, and page rhythm.
 - **Implementation:** Replaced the working launch exports locally, built three title-free Ghost feature images, and prepared five cross-surface concept proofs and five review contact sheets. Removed the superseded dark concept package from the active tree; its history remains in Git.
 - **Controls:** Approved launch copy remains exact. Instagram remains brand-only. Nothing has been uploaded to Ghost, published, sent, or posted.
-- **Founder action required:** Approve or revise the complete replacement set after in-chat review.
+- **Founder action required:** None for the visual direction or replacement assets. Live Ghost and Instagram output must still pass the release checklist.
+
+## 2026-08-08 — Approve launch execution and Field Note 2
+
+- **Status:** Approved
+- **Decision:** Approve the complete collage-led launch set, original Ghost theme, launch classifications, immediate Ghost web launch work, and Instagram launch sequence after technical verification. Approve Field Note 2, “Call Your Friends Before There’s a Reason,” as written and confirm its marked first-person statement as true.
+- **Friendship-scene rule:** The current piece is strong enough without another anecdote. A concrete personal scene may be added later only from facts supplied by the founder; no event may be invented for narrative force.
+- **Delivery boundary:** Essay 1 may be published on the web. No newsletter send was authorized, so launch remains publish-only unless the founder later says otherwise.
+- **Controls:** Complete the theme, page, link, signup, metadata, canonical, analytics, and public-destination checks before removing privacy or posting to Instagram.
+- **Founder action required:** Complete any provider checkout or inbox-side verification that the dashboard still requires.
+
+## 2026-08-08 — Approve the zero-cost distribution network
+
+- **Status:** Approved
+- **Decision:** Replace the Instagram-only channel rule with the platform roles and sequencing in `distribution-plan.md`.
+- **Canonical boundary:** Ghost remains the permanent source and only master email list. Medium is the only approved complete-essay syndication channel and must point its canonical to the live Ghost URL. Other platforms receive native excerpts, visuals, discussion, and tracked links.
+- **Approved surfaces:** Ghost Social Web and Explore, Threads, Medium, Bluesky, LinkedIn Page, Pinterest Business, Facebook Page, Substack Notes, Google Search Console, Bing Webmaster Tools, Google Discover/News eligibility work, and evaluation of Cloudflare Crawler Hints. Reserve YouTube, TikTok, and X handles; do not activate video channels without original motion work, and leave X inactive.
+- **Crawler Hints disposition:** Do not enable it in the current Ghost(Pro) topology. The working domain records are DNS-only, while Crawler Hints depends on proxied traffic. Ghost's sitemap and Bing Webmaster Tools provide the indexing path without risking the custom domain or certificate.
+- **Automation:** Buffer Free and Zapier Free may create reviewed ideas and scheduling drafts. Automated unreviewed public cross-posting, subscriber-list synchronization, and custom cross-posting infrastructure are prohibited.
+- **Cost:** No incremental paid platform, ads, or paid SEO service approved.
+- **Founder action required:** Retain control of credentials, provider verification messages, and any platform-required identity or MFA step.
+
+## 2026-08-08 — Approve the concise Ghost staff bio
+
+- **Status:** Approved
+- **Decision:** Use **Michael Peacock writes Grown Men Grow, a publication about the unfinished work of being a man.** on the Ghost staff profile.
+- **Hierarchy:** Grown Men Grow remains the primary publication identity. Michael Peacock appears as the credited writer on Ghost, not as the Instagram identity.
+- **Image boundary:** Launch with the text-only author treatment unless the founder later supplies or approves a staff photograph.
 
 ## Current pending decisions
 
-- Final collage-led launch assets and private Ghost rendering.
-- Launch date.
-- Ghost Publisher purchase after staging approval.
-- Whether Essay 1 is published only or published and emailed.
-- Founder test inbox for end-to-end membership and newsletter verification.
-- Google Search Console property.
-- Launch-post hashtag/classification additions.
+- Ghost Publisher purchase if the approved checkout is still incomplete.
+- Founder test inbox or inbox-side action for end-to-end membership and welcome-email verification.
+- Any future newsletter send; Essay 1 is web-only under the current authorization.
+- Final approval of newly prepared copy for platforms beyond the already approved Ghost and Instagram launch packages.
 - Any future change from private to public repository visibility.

@@ -1,13 +1,15 @@
 # Grown Men Grow
 
-Technical operations repository for a content-first Ghost publication distributed through Instagram.
+Technical operations repository for a content-first Ghost publication with a controlled, multi-platform discovery system.
 
 ## Launch boundary
 
 - Ghost is the canonical publishing home.
-- Instagram is the only launch social channel.
+- Instagram is the primary launch social channel. Threads, Medium, Bluesky, LinkedIn, Pinterest, Facebook, Substack Notes, Ghost Social Web, and search discovery are approved extensions.
 - Launch uses one public essay, free newsletter membership, and native analytics.
-- No custom application, database, paid membership, additional social platform, or automation service is approved.
+- Ghost remains the only canonical publication and master email list. Medium is the only approved full-essay syndication channel.
+- No custom application, database, paid membership, advertising product, or paid distribution service is approved.
+- Buffer Free and Zapier Free are approved for draft-first scheduling support. They do not publish unreviewed copy.
 - Public copy is not rewritten during technical implementation.
 - Production changes require explicit founder approval.
 
@@ -31,8 +33,8 @@ Canonical local path:
 
 The implementation plan was approved on 2026-08-07. The routed project email, public Instagram Creator profile, private Ghost baseline, approved launch copy, corrected brand avatar, metadata, custom apex domain, and prelaunch export are configured. Both `grownmengrow.com` and `www.grownmengrow.com` serve HTTPS, and `www` redirects to the canonical apex.
 
-The original Ghost theme and complete collage-led launch asset set are built and validated locally. Source remains active in private Ghost as rollback material. The next field note is isolated under `drafts/` for founder review. No replacement theme, artwork, or new copy has been uploaded, published, sent, or posted. Founder review, Ghost billing, signup and delivery testing, and launch remain pending.
+The original Ghost theme and complete collage-led launch asset set are built and validated locally. Field Note 2 is approved and retained under `content/`. Search configuration, launch classifications, the concise Ghost staff bio, immediate Ghost and Instagram launch work, and the zero-cost distribution network are approved. Source remains active in private Ghost because authenticated Chrome control was not callable in the launch-execution task. No replacement theme or artwork was uploaded, no content was published or sent, and no Instagram post was made.
 
-The source repository is private at `windwardline/grown-men-grow`. Repository publication does not authorize Ghost publication, newsletter delivery, Instagram posting, or a change to GitHub visibility.
+The source repository is private at `windwardline/grown-men-grow`. The founder authorized Ghost web publication and Instagram launch posting after the technical gates pass. Newsletter delivery and any change to GitHub visibility remain separately gated.
 
 See `docs/README.md` for the document map, `docs/editorial-visual-system.md` for the current art direction, `docs/technical/founder-decisions.md` for the active decision gates, `docs/technical/release-checklist.md` for launch controls, and `docs/technical/handoff-log.md` for the current operational handoff.

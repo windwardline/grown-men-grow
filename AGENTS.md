@@ -4,14 +4,23 @@ All machine-wide engineering and safety standards remain in force. This file add
 
 ## Purpose and stack
 
-This repository is the private operational source for the Grown Men Grow Ghost publication and its Instagram launch assets. It does not deploy the public website.
+This repository is the private operational source for the Grown Men Grow Ghost publication and its approved distribution assets. It does not deploy the public website.
 
 - Ghost(Pro) hosts the publication, membership, newsletter, and native analytics.
 - Cloudflare provides public DNS and routed inbound email.
-- Instagram is the only approved launch social channel.
+- Instagram is the primary launch social channel. The founder also approved the zero-cost discovery network recorded in `docs/technical/distribution-plan.md` on 2026-08-08.
 - Node.js rendering scripts generate review and launch assets. The repository has no root application runtime. `theme/package.json` exists only to validate and package the static Ghost theme with GScan.
 
 Stack exception (owner-approved 2026-08-07): Ghost(Pro), rather than Vercel, hosts the publication because native publishing, membership, newsletters, analytics, and export are launch requirements. This repository stores content and operational assets; it does not deploy the public site.
+
+## Distribution boundary
+
+- Ghost is the canonical publication, archive, and only master email list.
+- Medium is the only approved full-essay syndication surface, and only through URL import with the Ghost canonical verified.
+- Other platforms receive reviewed native excerpts, visuals, conversation, or links.
+- Never import Ghost members into another service or synchronize subscriber lists.
+- Automation may create drafts and scheduling stubs. It may not publish unreviewed platform copy.
+- Social profiles remain brand-first. Michael Peacock may be credited on Ghost and Medium but must not be introduced as the Instagram identity.
 
 ## Commands and gates
 

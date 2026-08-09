@@ -1,6 +1,6 @@
 # Editorial image sources
 
-These private working sources support the approved editorial redesign. They are not authorized for publication. Final launch use requires founder review.
+These private working sources support the approved editorial redesign. The founder approved their use inside the final collage-led launch compositions on 2026-08-08. Do not publish a source study as standalone documentary photography or reuse it outside an approved, full-resolution-reviewed composition.
 
 ## Quality standard
 

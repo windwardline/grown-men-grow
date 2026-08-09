@@ -20,6 +20,8 @@ No production setting is changed without explicit founder approval.
 
 The canonical hostname is apex `grownmengrow.com`, with `www` redirected to apex. Ghost credits **Michael Peacock** as the writer while **Grown Men Grow** remains the primary publication identity. Instagram remains brand-only. The approved site description, homepage metadata, and homepage/per-page social images are staged. Do not reuse the Instagram bio as site metadata.
 
+Approved concise staff bio: **Michael Peacock writes Grown Men Grow, a publication about the unfinished work of being a man.** Use no staff profile photograph until the founder supplies or approves one; the theme supports the text-only author card.
+
 ## Publication
 
 - [x] Create Ghost(Pro) trial publication under founder ownership.
@@ -61,19 +63,21 @@ The canonical hostname is apex `grownmengrow.com`, with `www` redirected to apex
 
 - [x] Transfer approved copy without rewriting.
 - [x] Confirm title, dek, slug, Michael Peacock byline, excerpt, public access level, metadata, and current social cards.
-- [ ] Approve and attach the title-free collage feature image, or explicitly launch without one.
+- [x] Approve the title-free collage feature image.
+- [ ] Attach the approved title-free collage feature image and accurate alt text.
 - [x] Review web desktop, web phone, email, and social previews.
-- [ ] Confirm publish-only versus publish-and-email.
-- [ ] Do not publish or send until explicitly authorized.
+- [x] Confirm web publication is authorized and launch remains publish-only.
+- [ ] Do not send Essay 1 as a newsletter without a later explicit authorization.
 
 ## SEO and metadata
 
 - [x] Configure approved homepage metadata.
 - [x] Configure approved Start Here, About, and Essay 1 metadata.
 - [x] Configure the initial approved homepage and per-page X/Open Graph social images.
-- [ ] Approve and replace them with the locally prepared collage-led social cards.
+- [x] Approve the locally prepared collage-led social cards.
+- [ ] Replace the staged social cards with the approved collage-led files.
 - [ ] Verify automatic canonical URLs and sitemap.
-- [ ] Confirm private-site mode is removed only at launch.
+- [x] Confirm private-site removal is authorized only after the remaining technical launch checks pass.
 
 ## Domain
 

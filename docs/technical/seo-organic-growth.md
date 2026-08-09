@@ -1,10 +1,10 @@
-# Ghost and Instagram Organic Discovery
+# Organic Discovery Standard
 
-Status: technical baseline implemented; public launch and account additions remain gated.
+Status: founder-approved; technical baseline implemented and launch execution authorized on 2026-08-08.
 
 ## Objective
 
-Earn qualified, organic discovery without turning the publication into generic self-help, grievance content, or keyword paste. Ghost is the canonical source. Instagram is the only launch social channel. No paid SEO platform, advertising product, tracking pixel, scheduler, link shortener, or additional social account is required.
+Earn qualified, organic discovery without turning the publication into generic self-help, grievance content, or keyword paste. Ghost is the canonical source and only master email list. The approved channel network is defined in `distribution-plan.md`. No paid SEO platform, advertising product, tracking pixel, link shortener, or paid scheduler is approved.
 
 ## Implemented Ghost baseline
 
@@ -17,6 +17,7 @@ Earn qualified, organic discovery without turning the publication into generic s
 - Ghost's structured-data setting for LLM and AI search discovery is enabled.
 - Homepage, Start Here, About, and Essay 1 have approved search metadata and distinct 1200×630 social images.
 - Custom canonical fields remain blank. Ghost must generate self-canonicals and keep pages in its sitemap.
+- The original theme requests `max-image-preview:large` so Google may use the full editorial feature images in search and Discover.
 - Source remains the private rollback theme. The locally validated replacement theme uses semantic Ghost templates, responsive image helpers, local fonts, and no external tracking or font scripts. Activation remains pending.
 - Member sources, email opens, email clicks, and outbound tagging use Ghost's native controls. Full web analytics requires the approved Publisher plan and remains unavailable until purchase.
 
@@ -27,16 +28,23 @@ Ghost automatically supplies XML sitemaps, canonical tags, structured data, and 
 1. Purchase Ghost(Pro) Publisher at the founder-approved checkout gate.
 2. Enable native web analytics.
 3. Remove private mode only when the founder authorizes launch.
-4. Verify `robots.txt`, `/sitemap.xml`, page canonicals, titles, descriptions, Open Graph data, and response codes on the public domain.
+4. Verify `robots.txt`, `/sitemap.xml`, page canonicals, titles, descriptions, Open Graph data, `max-image-preview:large`, and response codes on the public domain.
 5. Publish Start Here, About, and Essay 1 under the approved slugs.
 6. Add the approved tracked Start Here URL to Instagram.
-7. Record day-0 baselines.
+7. Add the verified domain to Google Search Console and submit Ghost's sitemap.
+8. Import the verified property into Bing Webmaster Tools and submit the same sitemap.
+9. Keep the Ghost records DNS-only. Cloudflare Crawler Hints requires proxied traffic and is therefore not enabled for the current Ghost(Pro) topology. Do not risk the working Ghost certificate and domain mapping for this optional signal.
+10. Record day-0 baselines.
 
-## Search Console recommendation
+## Search discovery accounts
 
-Add `grownmengrow.com` to Google Search Console after the site is public. This is the one additional account platform recommended for launch. It is free, adds no tracking script, and is the direct way to submit Ghost's sitemap, inspect indexing, and see Google queries, impressions, and clicks. It is not configured without founder approval.
+Google Search Console and Bing Webmaster Tools are approved. Search Console submits Ghost's sitemap, inspects indexing, and reports Google queries, impressions, and clicks without a tracking script. Bing can import the verified Search Console property.
+
+Cloudflare Crawler Hints was approved for evaluation but is not compatible with the current DNS-only Ghost(Pro) mapping because it depends on proxied traffic. Leave it off. Ghost's sitemap and Bing Webmaster Tools provide the launch indexing path without changing the working domain topology.
 
 Do not add Google Analytics, Tag Manager, Meta Pixel, Semrush, a keyword service, or a backlink service at launch.
+
+Google News and Google Discover require no separate publication submission. Eligibility comes from a public, indexed, policy-compliant site. Discover favors relevant high-resolution images; every essay therefore needs a text-light landscape feature image at least 1200 pixels wide in addition to its platform-specific social compositions.
 
 ## Editorial topic architecture
 
@@ -91,9 +99,9 @@ For each post:
 7. Reply to good-faith comments in the publication voice. Remove misogyny, dehumanization, harassment, and gender-war recruitment instead of debating it for reach.
 8. Use the direct tracked site link; no link shortener.
 
-### Launch classification recommendations
+### Approved launch classifications
 
-These additions are prepared for founder approval before posting; they do not alter the approved captions yet.
+The founder approved these classifications on 2026-08-08. Append them to the corresponding caption after a blank line; do not expand them into generic hashtag blocks.
 
 | Post | Primary discovery phrase | Suggested hashtags |
 |---|---|---|
@@ -105,16 +113,32 @@ These additions are prepared for founder approval before posting; they do not al
 
 Hashtags are classification aids, not a growth strategy. If they make a caption feel packaged, omit them.
 
+Instagram's professional dashboard is the current source for personalized creation, reach, and hashtag guidance. Recheck it at launch and at each 30-day review because platform recommendations change. Original, materially authored work remains mandatory for recommendation eligibility.
+
+## Cross-platform discovery standard
+
+- Use **Grown Men Grow** as the display name and `@grownmengrow` where available. Use `@grownmengrow.com` on Bluesky after DNS verification.
+- Reuse the approved site description on non-Instagram profiles: **Essays on the unfinished work of being a man.**
+- Link directly to Ghost with platform-specific UTM parameters.
+- Publish full essays on Medium only through URL import and verify the canonical points to Ghost.
+- Do not publish full duplicate essays on Substack, LinkedIn, Facebook, or another surface without a verified canonical control.
+- Use keyword-complete plain language in titles, captions, alt text, Pin descriptions, and opening lines. Do not hide keywords in inaccessible fields or repeat them mechanically.
+- Use Medium topics, Pinterest descriptions, LinkedIn framing, and short-form platform language to clarify the actual subject of each piece.
+- Treat Ghost Social Web, Pinterest RSS, and later Flipboard RSS as canonical-link distribution, not independent publications.
+- Keep platform adaptations original enough for the surface. Do not repost watermarked or mechanically duplicated content.
+
 ## Measurement
 
-Use Ghost native analytics and Instagram Insights at launch. Measure visitors, referral source, Start Here views, Essay 1 views, signups, signup conversion, newsletter opens/clicks, Instagram reach, profile visits, link taps, saves, shares, substantive comments, and follows at day 0, day 7, and day 30.
+Use Ghost native analytics, webmaster tools, and platform-native insights at launch. Measure visitors, referral source, Start Here views, Essay 1 views, signups, signup conversion, Instagram reach, profile visits, link taps, saves, shares, substantive comments, and follows at day 0, day 7, and day 30. Newsletter opens and clicks begin only after a separately authorized send.
 
-If approved, Search Console adds indexing status, impressions, clicks, click-through rate, and actual search queries. No ranking guarantee is made; technical SEO makes the work legible, while sustained original publishing and reader response create demand.
+Search Console and Bing add indexing status, impressions, clicks, click-through rate, and actual search queries. No ranking guarantee is made; technical SEO makes the work legible, while sustained original publishing and reader response create demand.
 
 ## Optional later work
 
-- Enable Ghost Explore after the public site has enough work to represent the publication.
-- Reconsider Ghost Network only through a new founder decision; it would expand distribution beyond the locked Instagram-only launch channel.
+- Enable Ghost Explore and Social Web when the site becomes public; verify their current beta controls and profile presentation first.
+- Activate YouTube Shorts and TikTok only after original motion work is ready.
+- Submit Flipboard after the archive and RSS cadence are established.
+- Consider founder-narrated audio after six to eight strong essays.
 - Add topic/tag archive pages only after each archive has enough material to avoid thin collections.
 - Consider formal keyword research only after Search Console shows real query data.
 - Review Search Console and analytics quarterly, then refine titles, internal links, and future editorial coverage from evidence.

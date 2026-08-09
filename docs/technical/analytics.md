@@ -4,10 +4,12 @@
 
 - Ghost native analytics and member-source attribution.
 - Instagram Insights from a public Creator account.
+- Google Search Console and Bing Webmaster Tools.
+- Native insights from each approved distribution platform.
 
 No third-party on-site analytics, tracking pixel, tag manager, or link shortener is approved.
 
-Google Search Console is recommended as a free webmaster tool after the custom domain is live. It would be used only to submit Ghost's sitemap, confirm indexing, and see Google queries, impressions, and clicks. It does not require a tracking script. It remains unconfigured until the founder approves adding the account property.
+Google Search Console and Bing Webmaster Tools are approved. They submit or import Ghost's sitemap, confirm indexing, and report search queries, impressions, and clicks without adding a tracking script.
 
 ## Instagram link
 
@@ -27,11 +29,19 @@ Track:
 - Essay views and signup contribution.
 - Newsletter sends, opens, and clicks.
 - Instagram reach, interactions, saves, shares, and follows.
+- Referrals and signups from Medium, Threads, Bluesky, LinkedIn, Pinterest, Facebook, Substack, Ghost Social Web, and search.
+- Platform-native saves, shares, replies, profile visits, and outbound clicks.
+- Production time required for each platform.
+
+## Attribution standard
+
+Use direct canonical links with `utm_source`, `utm_medium`, and `utm_campaign`. Platform profile links use `utm_medium=profile`. Essay posts use `utm_campaign=<essay-slug>`. Do not use a link shortener.
 
 ## Measurement points
 
 - Day 0: capture pre-publication baselines and launch totals.
 - Day 7: capture launch-week performance.
 - Day 30: capture sustained traffic, subscriber growth, and content performance.
+- Day 60 and day 90: compare qualified Ghost actions with the operating effort for each platform and pause high-maintenance, low-result channels.
 
 Exported analytics and member data contain sensitive information and must remain outside Git.
