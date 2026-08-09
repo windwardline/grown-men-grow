@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#3A1518"/>
+  <rect x="0" y="0" width="330" height="1920" fill="#F2EBDD" fill-opacity="0.055"/>
+  <rect x="58" y="300" width="964" height="1320" fill="none" stroke="#F2EBDD" stroke-opacity="0.2" stroke-width="3"/>
+  <text x="90" y="380" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="2.5">GROWN MEN GROW</text>
+  <text x="90" y="650" text-anchor="start" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="103" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">A man can</tspan><tspan x="90" dy="121">look strong</tspan><tspan x="90" dy="121">and still</tspan><tspan x="90" dy="121">be hiding.</tspan></text>
+  <text x="90" y="1370" fill="#F2EBDD" font-family="Georgia, Times New Roman, serif" font-size="43" font-style="italic">Strength Has to Grow Up</text>
+  <text x="90" y="1540" fill="#F2EBDD" fill-opacity="0.62" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.9">FIELD NOTE 01</text>
+</svg>

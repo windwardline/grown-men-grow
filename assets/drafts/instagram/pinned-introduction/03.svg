@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#3A1518"/>
+  <rect x="32" y="32" width="1016" height="1286" rx="2" fill="none" stroke="#F2EBDD" stroke-opacity="0.18" stroke-width="2"/>
+  <text x="90" y="112" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="2.4">GROWN MEN GROW</text>
+  <text x="990" y="112" text-anchor="end" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="1.8">03 / 07</text>
+  <line x1="90" y1="154" x2="990" y2="154" stroke="#F2EBDD" stroke-opacity="0.38" stroke-width="2"/>
+  <text x="90" y="330" fill="#F2EBDD" font-family="Georgia, Times New Roman, serif" font-size="72" font-weight="400" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">A lot of that training</tspan><tspan x="90" dy="96">was useful.</tspan></text>
+    <line x1="90" y1="590" x2="430" y2="590" stroke="#F2EBDD" stroke-width="9"/>
+    <text x="90" y="770" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="82" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">Some of it was just</tspan><tspan x="90" dy="105">fear with good posture.</tspan></text>
+  <circle cx="90" cy="1252" r="7" fill="#F2EBDD"/>
+  <text x="114" y="1261" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="21" font-weight="600" letter-spacing="1.5">@GROWNMENGROW</text>
+</svg>

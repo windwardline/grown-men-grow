@@ -1,6 +1,29 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# OS and editors
 .DS_Store
+.vscode/
+.idea/
+.playwright-cli/
+
+# Generated files and dependencies
 node_modules/
-.env*
-*.pem
-.vercel
-.claude/
+dist/
+build/
+
+# Sensitive or private material
+private/
+evidence/
+legal/
+backups/
+exports/
+*.ghost.json
+*members*.csv
+*analytics*.csv
+
+# Local handoff inputs; never publish or commit as a unit
+/codex_handoff_pack_v0_2/
+/*.pdf

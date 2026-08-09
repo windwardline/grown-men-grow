@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#3A1518"/>
+  <rect x="830" y="0" width="250" height="34" fill="#F2EBDD"/><rect x="960" y="34" width="120" height="120" fill="#F2EBDD" fill-opacity="0.1"/>
+  <text x="90" y="92" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2.6">GROWN MEN GROW</text>
+  <text x="90" y="128" fill="#F2EBDD" fill-opacity="0.62" font-family="Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2.1">FIELD NOTE 01</text>
+  <text x="990" y="92" text-anchor="end" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="1.8">03 / 07</text>
+  <text x="90" y="350" text-anchor="start" fill="#F2EBDD" font-family="Georgia, Times New Roman, serif" font-size="75" font-weight="700" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">But strength tells us</tspan><tspan x="90" dy="96">what a man can do.</tspan></text>
+    <line x1="90" y1="640" x2="430" y2="640" stroke="#F2EBDD" stroke-width="9"/>
+    <text x="90" y="820" text-anchor="start" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="84" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">It does not tell us</tspan><tspan x="90" dy="106">what he serves.</tspan></text>
+  <text x="990" y="1270" text-anchor="end" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5">@GROWNMENGROW</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#3A1518"/>
+  <text x="70" y="95" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="2.5">GROWN MEN GROW</text>
+  <text x="1010" y="95" text-anchor="end" fill="#F2EBDD" fill-opacity="0.62" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">FIELD NOTE</text>
+  <text x="1070" y="1210" transform="rotate(-90 1070 1210)" fill="#F2EBDD" fill-opacity="0.055" font-family="Helvetica Neue, Arial, sans-serif" font-size="230" font-weight="800" letter-spacing="-6">POSTURE</text>
+  <text x="70" y="365" text-anchor="start" fill="#F2EBDD" font-family="Georgia, Times New Roman, serif" font-size="83" font-weight="700" font-style="normal" letter-spacing="-1.4"><tspan x="70" dy="0">Some of what</tspan><tspan x="70" dy="106">we called strength</tspan></text>
+  <line x1="70" y1="650" x2="520" y2="650" stroke="#F2EBDD" stroke-width="10"/>
+  <text x="70" y="850" text-anchor="start" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="94" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="70" dy="0">was fear with</tspan><tspan x="70" dy="116">good posture.</tspan></text>
+  <text x="70" y="1270" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="1.6">@GROWNMENGROW</text>
+</svg>
