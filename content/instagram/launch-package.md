@@ -1,6 +1,6 @@
 ---
 status: founder-approved
-approved: 2026-08-07
+approved: 2026-08-07 copy; 2026-08-08 classifications and alt text; 2026-08-09 slides 1.5 and 3.5 reconciled to the founder-approved rendered artwork
 publication: Grown Men Grow
 account: "@grownmengrow"
 ---
@@ -33,7 +33,7 @@ I just no longer think looking strong tells us much about a man.
 
 ### Slide 5
 
-This is about the unfinished work of being a man.
+The unfinished work of being a man.
 
 No gurus. No gender war.
 
@@ -145,7 +145,7 @@ He can tell the story first so nobody gets to tell it differently.
 
 Vulnerability becomes real when it leaves room for the other person’s reaction.
 
-Even the reaction he does not want.
+Even the one he does not want.
 
 ### Slide 6
 

@@ -25,8 +25,8 @@ const sourcePaths = new Map([
 ]);
 
 export function escapeXml(value) {
-  const entities = {"&": "&amp;", "<": "&lt;", ">": "&gt;"};
-  return String(value).replace(/[&<>]/g, (character) => entities[character]);
+  const entities = {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"};
+  return String(value).replace(/[&<>"]/g, (character) => entities[character]);
 }
 
 export function defs(id) {

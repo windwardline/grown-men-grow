@@ -1,7 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
+import {fileURLToPath} from "node:url";
 
-const ROOT = "/Users/peacock/Projects/grown-men-grow";
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SOURCE_PNG = path.join(
   ROOT,
   "assets/source/grown-men-grow-instagram-avatar.png",

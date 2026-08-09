@@ -154,9 +154,13 @@ const requiredFiles = [
   '.github/workflows/claude-review.yml',
   'scripts/verify-svg-xml.sh',
   'scripts/verify-ghost-theme.mjs',
+  'scripts/verify-repository.mjs',
   'scripts/package-ghost-theme.mjs',
   'scripts/render-editorial-collage-concepts.mjs',
   'scripts/render-ghost-feature-images.mjs',
+  'scripts/render-instagram-pinned-intro.mjs',
+  'scripts/render-launch-graphics.mjs',
+  'scripts/render-profile-avatar.mjs',
   'scripts/render-review-contact-sheets.mjs',
   'scripts/render-theme-preview.mjs',
   'scripts/lib/editorial-collage.mjs',
@@ -246,11 +250,13 @@ await validateNamedPngs('assets/drafts/review', new Map([
   ['stories-static-reel', { width: 1242, height: 1214 }],
 ]));
 
+const approvedAvatarHash = 'b46abba3e8658304ca260b57a2697a4ab8d2b638acdcbfe39f809c6dd61aa4ff';
 const sourceAvatar = await readFile(path.join(root, 'assets/source/grown-men-grow-instagram-avatar.png'));
 const brandAvatar = await readFile(path.join(root, 'assets/brand/grown-men-grow-profile-safe.png'));
 const sourceHash = createHash('sha256').update(sourceAvatar).digest('hex');
 const brandHash = createHash('sha256').update(brandAvatar).digest('hex');
-if (sourceHash !== brandHash) fail('The canonical source and reusable brand avatar PNGs differ.');
+if (sourceHash !== approvedAvatarHash) fail('The canonical avatar source no longer matches the founder-approved fingerprint.');
+if (brandHash !== approvedAvatarHash) fail('The reusable brand avatar no longer matches the founder-approved fingerprint.');
 
 const oldProjectPattern = new RegExp(['healthy', 'masculinity', 'project'].join('[ _-]'), 'i');
 const textExtensions = new Set(['.md', '.mjs', '.js', '.json', '.yml', '.yaml', '.html', '.hbs', '.css', '.txt', '.svg']);
@@ -258,12 +264,28 @@ for (const file of tracked.filter((item) => textExtensions.has(path.extname(item
   await checkTextPolicy(path.join(root, file), oldProjectPattern, 'the obsolete project-name rule');
 }
 
-for (const file of tracked.filter((item) => item.startsWith('content/') || item.startsWith('drafts/'))) {
-  await checkTextPolicy(path.join(root, file), /\bGartner\b/i, 'the public Gartner exclusion');
+// The Gartner exclusion covers every surface whose text can reach the public:
+// canonical copy, draft copy, rendered asset sources, the theme (its README
+// ships inside the uploaded zip), and the renderer code whose copy strings
+// generate the public graphics. Internal registers under docs/ and the
+// verifier scripts record the rule itself and are deliberately out of scope.
+const publicSurface = (item) =>
+  ['content/', 'drafts/', 'assets/', 'theme/', 'scripts/render-', 'scripts/lib/'].some((prefix) => item.startsWith(prefix));
+for (const file of tracked.filter((item) => publicSurface(item) && textExtensions.has(path.extname(item)))) {
+  await checkTextPolicy(path.join(root, file), /gartner/i, 'the public Gartner exclusion');
 }
 
-for (const file of tracked.filter((item) => item.startsWith('content/instagram/') || (item.startsWith('assets/drafts/instagram/') && item.endsWith('.svg')))) {
-  await checkTextPolicy(path.join(root, file), /\bMichael Peacock\b/i, 'the Instagram founder-identity rule');
+// Instagram surfaces stay brand-led: the founder's name may not appear in
+// Instagram copy or any Instagram-facing rendered asset. Ghost-surface assets
+// (feature images, social cards) may credit the writer.
+const instagramFacing = (item) =>
+  item.startsWith('content/instagram/')
+  || (item.endsWith('.svg') && item.startsWith('assets/') && (
+    item.includes('instagram')
+    || /(?:^|\/)(?:carousel-spread|story-cover)\.svg$/.test(item)
+  ));
+for (const file of tracked.filter(instagramFacing)) {
+  await checkTextPolicy(path.join(root, file), /peacock/i, 'the Instagram founder-identity rule');
 }
 
 if (failures.length) {

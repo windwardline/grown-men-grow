@@ -1,6 +1,6 @@
 # Grown Men Grow Ghost theme
 
-This is the original, proprietary editorial theme for Grown Men Grow. It is a self-contained Ghost 5.54.1+ theme with no application runtime, tracking script, or remote font dependency.
+This is the original, proprietary editorial theme for Grown Men Grow. It is a self-contained Ghost 6.x theme (validated by GScan against Ghost 6.x, which is what the live publication runs) with no application runtime, tracking script, or remote font dependency.
 
 ## Validate
 

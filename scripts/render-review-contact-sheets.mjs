@@ -3,6 +3,7 @@ import os from "node:os";
 import path from "node:path";
 import {spawnSync} from "node:child_process";
 import {fileURLToPath} from "node:url";
+import {escapeXml} from "./lib/editorial-collage.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const assetRoot = path.join(root, "assets/drafts");
@@ -91,12 +92,12 @@ for (const sheet of sheets) {
     return `<g>
       <rect x="${x}" y="${y}" width="${sheet.itemWidth}" height="${sheet.itemHeight}" fill="#20262B" stroke="${paper}" stroke-opacity="0.18"/>
       <image href="${dataUri(item.path)}" x="${x}" y="${y}" width="${sheet.itemWidth}" height="${sheet.itemHeight}" preserveAspectRatio="xMidYMid meet"/>
-      <text x="${x}" y="${y + sheet.itemHeight + 25}" fill="${smoke}" font-family="Helvetica Neue, Arial, sans-serif" font-size="15">${item.label}</text>
+      <text x="${x}" y="${y + sheet.itemHeight + 25}" fill="${smoke}" font-family="Helvetica Neue, Arial, sans-serif" font-size="15">${escapeXml(item.label)}</text>
     </g>`;
   }).join("");
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
     <rect width="${width}" height="${height}" fill="${background}"/>
-    <text x="${margin}" y="${margin + 30}" fill="${paper}" font-family="Helvetica Neue, Arial, sans-serif" font-size="30" font-weight="700">${sheet.title}</text>
+    <text x="${margin}" y="${margin + 30}" fill="${paper}" font-family="Helvetica Neue, Arial, sans-serif" font-size="30" font-weight="700">${escapeXml(sheet.title)}</text>
     ${images}
   </svg>`;
   const temporarySvg = path.join(os.tmpdir(), `grown-men-grow-review-${process.pid}-${sheet.name}.svg`);

@@ -56,9 +56,15 @@
             </div>
         {{/if}}
 
+        {{#if comments}}
+            <section class="article-comments">
+                {{comments}}
+            </section>
+        {{/if}}
+
         {{#if @site.members_enabled}}
             <section class="signup-panel">
-                <p class="eyebrow">{{@site.title}}</p>
+                <p class="eyebrow">Newsletter</p>
                 <h2>{{@site.title}}</h2>
                 {{#if @site.description}}
                     <p>{{@site.description}}</p>

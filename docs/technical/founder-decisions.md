@@ -58,7 +58,7 @@ Credentials remain in authenticated sessions, a password manager, macOS Keychain
 - [x] First-glance positioning: keep the Instagram bio `Some assembly still required.`; make the distinction through the substance of the work and the restrained pinned-introduction line `No gurus. No gender war.`
 - [x] Start Here copy approved for staging; publication remains separately gated
 - [x] About copy approved for staging; publication remains separately gated
-- [x] Welcome email copy approved for staging; enabling or sending remains separately gated
+- [x] Welcome email copy approved for staging; enabling the automation at the authorized web launch is covered by the 2026-08-09 delegated ruling in `decision-log.md`, while any newsletter send remains separately gated
 - [x] Approved welcome email body staged and previewed in Ghost; automation remains disabled
 - [x] Essay 1 copy approved for staging; publication or email delivery remains separately gated
 - [x] Essay 1 web publication authorized for launch; no newsletter send has been authorized

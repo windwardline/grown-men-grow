@@ -1,6 +1,5 @@
 import {
   GREEN,
-  INK,
   OXBLOOD,
   PAPER,
   PAPER_LIGHT,

@@ -1,6 +1,6 @@
 ---
 status: founder-approved
-approved: 2026-08-07
+approved: 2026-08-07 copy; 2026-08-08 theme search-preview directive
 ---
 
 # Publication

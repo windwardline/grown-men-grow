@@ -9,6 +9,7 @@ import {
   SERIF,
   SMOKE,
   defs,
+  escapeXml,
   grain,
   lines,
   photo,
@@ -249,7 +250,7 @@ const stories = [
     ${scribble("M80 770 C252 734 426 790 596 750 C752 716 874 758 1004 740", OXBLOOD, 9)}
     ${["Silence", "Control", "Never needing anyone", "Winning every argument"].map((item, index) => `<g>
       <rect x="62" y="${874 + index * 190}" width="54" height="54" fill="none" stroke="${OXBLOOD}" stroke-width="3"/>
-      <text x="150" y="${918 + index * 190}" fill="${INK}" font-family="${SERIF}" font-size="48">${item}</text>
+      <text x="150" y="${918 + index * 190}" fill="${INK}" font-family="${SERIF}" font-size="48">${escapeXml(item)}</text>
       <line x1="62" y1="${958 + index * 190}" x2="1018" y2="${958 + index * 190}" stroke="${INK}" stroke-opacity="0.2"/>
     </g>`).join("")}`,
   }),
