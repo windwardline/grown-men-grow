@@ -70,12 +70,12 @@ if (!failures.length) {
   if (!defaultTemplate.includes('@site.signup_url')) fail('default.hbs must use the Ghost signup URL.');
 
   const indexTemplate = await read('index.hbs');
-  for (const token of ['{{#foreach posts}}', '{{> "card"', '{{pagination}}']) {
+  for (const token of ['{{#foreach posts}}', '{{> "card"', '{{pagination}}', 'signup-panel']) {
     if (!indexTemplate.includes(token)) fail(`index.hbs is missing ${token}.`);
   }
 
   const postTemplate = await read('post.hbs');
-  for (const token of ['{{#post}}', '{{content}}', '{{> "feature-image"', '{{#foreach authors}}', '{{reading_time}}', '{{comments}}']) {
+  for (const token of ['{{#post}}', '{{content}}', '{{> "feature-image"', '{{#foreach authors}}', '{{reading_time}}', '{{comments}}', 'Issue {{date format="YYYY.WW"}}']) {
     if (!postTemplate.includes(token)) fail(`post.hbs is missing ${token}.`);
   }
 
