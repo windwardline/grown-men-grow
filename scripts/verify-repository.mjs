@@ -68,6 +68,50 @@ async function validateAssetFamily(directory, count, width, height) {
   }
 }
 
+async function validateEditorialConcepts() {
+  const directory = 'assets/concepts/editorial-v1';
+  const expected = new Map([
+    ['ghost-feature-hero', { width: 1600, height: 1000 }],
+    ['instagram-cover', { width: 1080, height: 1350 }],
+    ['carousel-spread', { width: 1080, height: 1350 }],
+    ['story-cover', { width: 1080, height: 1920 }],
+    ['social-card', { width: 1200, height: 630 }],
+  ]);
+  const pngs = await filesUnder(directory, '.png');
+  const svgs = await filesUnder(directory, '.svg');
+
+  if (pngs.length !== expected.size + 1) {
+    fail(`${directory} has ${pngs.length} PNG files; expected ${expected.size + 1}.`);
+  }
+  if (svgs.length !== expected.size) {
+    fail(`${directory} has ${svgs.length} SVG files; expected ${expected.size}.`);
+  }
+
+  const source = pngs.find((file) => path.basename(file) === 'essay-01-hero-source.png');
+  if (!source) {
+    fail(`${directory} is missing essay-01-hero-source.png.`);
+  } else {
+    const dimensions = await pngDimensions(source);
+    if (dimensions && (dimensions.width !== 1122 || dimensions.height !== 1402)) {
+      fail(`${relative(source)} is ${dimensions.width}x${dimensions.height}; expected 1122x1402.`);
+    }
+  }
+
+  const svgNames = new Set(svgs.map((file) => path.basename(file, '.svg')));
+  for (const [name, dimensions] of expected) {
+    const png = pngs.find((file) => path.basename(file, '.png') === name);
+    if (!png) {
+      fail(`${directory} is missing ${name}.png.`);
+      continue;
+    }
+    if (!svgNames.has(name)) fail(`${relative(png)} has no matching SVG source.`);
+    const actual = await pngDimensions(png);
+    if (actual && (actual.width !== dimensions.width || actual.height !== dimensions.height)) {
+      fail(`${relative(png)} is ${actual.width}x${actual.height}; expected ${dimensions.width}x${dimensions.height}.`);
+    }
+  }
+}
+
 function stripEmbeddedRaster(text) {
   return text.replace(/data:image\/png;base64,[^"]+/g, '');
 }
@@ -100,6 +144,8 @@ const requiredFiles = [
   '.github/workflows/security.yml',
   '.github/workflows/claude-review.yml',
   'scripts/verify-svg-xml.sh',
+  'scripts/render-editorial-concepts.mjs',
+  'docs/editorial-visual-system.md',
   'content/ghost/start-here.md',
   'content/ghost/about.md',
   'content/ghost/welcome-email.md',
@@ -127,6 +173,7 @@ await validateAssetFamily('assets/drafts/instagram/launch-stories', 5, 1080, 192
 await validateAssetFamily('assets/drafts/instagram/static-post', 1, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/reel', 1, 1080, 1920);
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
+await validateEditorialConcepts();
 
 const sourceAvatar = await readFile(path.join(root, 'assets/source/grown-men-grow-instagram-avatar.png'));
 const brandAvatar = await readFile(path.join(root, 'assets/brand/grown-men-grow-profile-safe.png'));
@@ -154,4 +201,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, 32 launch PNGs, and 32 matching SVG sources.`);
+console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, 32 launch PNGs, 32 matching launch SVG sources, and five editorial concept pairs.`);
