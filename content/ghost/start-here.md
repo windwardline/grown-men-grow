@@ -76,7 +76,7 @@ No ten-step system. No promise of reinvention by Tuesday. Just an honest attempt
 
 The first field note is called:
 
-**Strength Has to Grow Up**
+[**Strength Has to Grow Up**](/strength-has-to-grow-up/)
 
 It begins with a question I wish more of us encountered before life found a harsher way to ask it:
 

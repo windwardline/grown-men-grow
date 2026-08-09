@@ -6,12 +6,15 @@ author: Michael Peacock
 access: public
 email_subject: Call Your Friends Before There’s a Reason
 preview: Doing things together counts. It just cannot carry everything forever.
-status: draft-founder-review
-personal_claims_verified: false
+status: founder-approved
+approved: 2026-08-08
+personal_claims_verified: true
 publication_authorized: false
+social_copy_status: founder-approved
+artwork_status: pending-production
 ---
 
-# Ghost essay draft
+# Ghost essay source
 
 On a Saturday morning, two men can spend four hours replacing a deck board, insulting each other’s tool choices, and discussing almost nothing that would qualify as personal.
 
@@ -42,8 +45,6 @@ If two men can discuss engines for six years but cannot tell each other that a m
 We do this with history too. We call a man one of our closest friends because he has known us since college, the Navy, the first job, the old neighborhood, or the version of ourselves that still had hair and unreasonable confidence.
 
 History matters, but it cannot substitute for current knowledge.
-
-<!-- Founder fact check: retain the following paragraph only if it is true in substance. -->
 
 I have mistaken shared history for present-tense intimacy. I assumed the friendship was secure because we could pick up where we left off. Sometimes what we were picking up was an old version of each other that neither of us had bothered to update.
 
@@ -139,7 +140,7 @@ Give the friendship something besides history to live on.
 
 **Which friend have you been waiting for a reason to call?**
 
-# Metadata draft
+# Metadata
 
 - Meta title: **Male Friendship Before Crisis | Grown Men Grow**
 - Meta description: **A field note on male friendship, ordinary contact, and why men should not wait for crisis to tell each other the truth.**
@@ -147,7 +148,7 @@ Give the friendship something besides history to live on.
 - Suggested internal links after launch: **Start Here** and **Strength Has to Grow Up**
 - Suggested tag after the archive has enough depth: **Friendship**
 
-# Instagram carousel draft
+# Instagram carousel source
 
 ## Slide 1
 
@@ -191,7 +192,7 @@ Call him while there is no emergency.
 
 Give the friendship something besides history to live on.
 
-# Instagram caption draft
+# Instagram caption source
 
 Men get told to open up more, which is advice that manages to be correct and almost useless at the same time.
 
@@ -205,7 +206,7 @@ A friendship needs practice before it can hold a crisis. That practice is usuall
 
 The next field note is about the friendships men say matter and the maintenance we keep pretending they do not require.
 
-# Visual direction draft
+# Visual direction
 
 - Family: Conversation with Dispatch pacing.
 - Lead image: two adult friends walking through a bright neighborhood after finishing an ordinary task. Movement, daylight, and unguarded conversation; no crisis-counseling posture.
@@ -216,9 +217,9 @@ The next field note is about the friendships men say matter and the maintenance 
 - Source rule: prefer founder-shot or commissioned real photography. If image generation is used for a composition study, it must pass the repository’s full-resolution believability gate before any public use.
 - Draft alt text: **Two men walking side by side on a bright neighborhood street, presented in a paper collage with a hand-drawn route line.**
 
-# Founder review notes
+# Production notes
 
-1. Confirm or replace the marked first-person paragraph. It is the only proposed personal claim not already established in approved copy.
-2. Decide whether the piece should remain broadly about friendship or include one true, concrete friendship scene.
-3. Approve the title, thesis, and Ghost draft before any social adaptation is treated as canonical.
-4. Approve a real-photo plan before final artwork. The current image library is composition-study material only.
+- The founder approved the title, thesis, Ghost essay, carousel, caption, and existing first-person paragraph on 2026-08-08.
+- The piece remains as written. Do not invent a concrete friendship scene for narrative force. Add one only from founder-supplied facts and only if it materially improves the opening.
+- `assets/source/editorial/friends-in-conversation.png` is a composition study, not documentary evidence of the essay's events. It may be used only under the repository's visible-collage and full-resolution review controls.
+- Publication timing and final artwork require a later release decision.

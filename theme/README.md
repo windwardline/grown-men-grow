@@ -18,7 +18,7 @@ pnpm --dir theme test
 pnpm --dir theme zip
 ```
 
-The package is written to `dist/grown-men-grow.zip`. Upload it only to the private Ghost staging publication until the founder separately approves a public launch.
+The package is written to `dist/grown-men-grow.zip`. Upload and inspect it in private Ghost first. The founder authorized web launch after the theme and remaining technical release gates pass; newsletter delivery remains separately gated.
 
 ## Local visual review
 
