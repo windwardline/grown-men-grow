@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="spread-collage-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="19"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="spread-collage-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.88"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.04" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.98" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="spread-collage-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#121416" opacity="0.22"/>
+    </pattern>
+    <clipPath id="spread-collage-torn-a">
+      <polygon points="18,26 294,10 566,28 832,8 1080,30 1062,316 1078,584 1054,840 786,826 528,846 274,824 12,842 28,572 8,298"/>
+    </clipPath>
+    <clipPath id="spread-collage-torn-b">
+      <polygon points="16,18 328,6 634,24 1018,10 1034,350 1014,690 1030,1018 720,1006 414,1024 12,1008 28,672 8,334"/>
+    </clipPath>
+  </defs>
+  <rect width="1080" height="1350" fill="#EEE6D8"/>
+  <rect x="646" y="-18" width="462" height="820" fill="#3A1518" transform="rotate(2 877 392)"/>
+  <g transform="rotate(-2 810 370)">
+    <path d="M558 10 L1050 30 L1032 762 L580 788 L566 514 Z" fill="#F8F3EA"/>
+    <image href="../../source/editorial/sunlit-writing-table.png" x="570" y="18" width="470" height="760" preserveAspectRatio="xMidYMid slice" filter="url(#spread-collage-photo)"/>
+  </g>
+  <g transform="rotate(5 816 26)">
+    <rect x="720" y="2" width="192" height="48" fill="#D9CBAF" opacity="0.76"/>
+    <line x1="728" y1="9" x2="902" y2="6" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <rect x="0" y="0" width="530" height="60" fill="url(#spread-collage-dots)"/>
+  <text x="52" y="104" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="21" font-weight="800" letter-spacing="3.8">GROWN MEN GROW</text>
+  <text x="52" y="152" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="2.7">FIELD NOTE 01 · 03 / 07</text>
+  <text x="36" y="376" fill="#B14F3F" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="220">“</text>
+  <g transform="rotate(-1.5 330 440)">
+    <rect x="44" y="312" width="592" height="104" fill="#F8F3EA"/>
+    <text x="62" y="395" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="76" font-weight="700" letter-spacing="-2.7">Some of what</text>
+  </g>
+  <g transform="rotate(1.2 360 540)">
+    <rect x="78" y="420" width="612" height="104" fill="#121416"/>
+    <text x="96" y="503" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="78" font-weight="900" letter-spacing="-2.5">WE CALLED</text>
+  </g>
+  <g transform="rotate(-1.1 350 650)">
+    <rect x="42" y="528" width="668" height="112" fill="#F8F3EA"/>
+    <text x="62" y="618" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="86" font-weight="700" letter-spacing="-3">strength</text>
+  </g>
+  <g transform="rotate(0.7 540 854)">
+    <rect x="48" y="748" width="980" height="216" fill="#3A1518"/>
+    <text x="78" y="846" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="84" font-weight="900" letter-spacing="-3">WAS FEAR WITH</text>
+    <text x="78" y="935" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="91" font-weight="700" font-style="italic" letter-spacing="-3">good posture.</text>
+  </g>
+  <path d="M86 1008 C244 1048 400 992 566 1024 C740 1058 868 1014 1004 1038" fill="none" stroke="#B14F3F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="54" y="1112" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="2.8">BUT STRENGTH TELLS US WHAT A MAN CAN DO.</text>
+  <text x="54" y="1174" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="34">It does not tell us what he serves.</text>
+  <line x1="54" y1="1240" x2="1026" y2="1240" stroke="#121416" stroke-opacity="0.3"/>
+  <text x="54" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="2.4">GROWNMENGROW.COM</text>
+  <text x="1026" y="1292" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" text-anchor="end" letter-spacing="2.4">SWIPE →</text>
+  <rect width="1080" height="1350" filter="url(#spread-collage-paper)" opacity="0.24" pointer-events="none"/>
+</svg>

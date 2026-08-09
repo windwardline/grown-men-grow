@@ -1,11 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
-  <rect width="1080" height="1350" fill="#3A1518"/>
-  <rect x="830" y="0" width="250" height="34" fill="#F2EBDD"/><rect x="960" y="34" width="120" height="120" fill="#F2EBDD" fill-opacity="0.1"/>
-  <text x="90" y="92" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2.6">GROWN MEN GROW</text>
-  <text x="90" y="128" fill="#F2EBDD" fill-opacity="0.62" font-family="Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2.1">FIELD NOTE 01</text>
-  <text x="990" y="92" text-anchor="end" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="1.8">03 / 07</text>
-  <text x="90" y="350" text-anchor="start" fill="#F2EBDD" font-family="Georgia, Times New Roman, serif" font-size="75" font-weight="700" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">But strength tells us</tspan><tspan x="90" dy="96">what a man can do.</tspan></text>
-    <line x1="90" y1="640" x2="430" y2="640" stroke="#F2EBDD" stroke-width="9"/>
-    <text x="90" y="820" text-anchor="start" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="84" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">It does not tell us</tspan><tspan x="90" dy="106">what he serves.</tspan></text>
-  <text x="990" y="1270" text-anchor="end" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5">@GROWNMENGROW</text>
+  <defs>
+    <filter id="foundation-03-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="foundation-03-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="foundation-03-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 01 · 03 / 07</text>
+  <g transform="rotate(1.2 817 480)">
+    <rect x="582" y="142" width="470" height="710" fill="#3A1518"/>
+    <rect x="590" y="128" width="454" height="704" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/sunlit-writing-table.png" x="594" y="132" width="446" height="696" preserveAspectRatio="xMidYMid slice" filter="url(#foundation-03-photo)"/>
+  </g>
+    <g transform="rotate(5 806 139)">
+    <rect x="714" y="116" width="184" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="722" y1="123" x2="888" y2="120" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="52" y="328" fill="#B14F3F" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="186">“</text>
+    <text x="58" y="414" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">Strength tells us</text><text x="58" y="492" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">what a man can do.</text>
+    <g transform="rotate(-0.8 539 837)">
+    <rect x="48" y="742" width="982" height="190" fill="#3A1518"/>
+    <text x="72" y="886.4" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="72" font-weight="900" letter-spacing="-2.5">IT DOES NOT TELL US</text>
+  </g>
+    <g transform="rotate(1 621 990)">
+    <rect x="212" y="916" width="818" height="148" fill="#EEE6D8"/>
+    <text x="236" y="1028.48" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="82" font-weight="900" letter-spacing="-2.5">WHAT HE SERVES.</text>
+  </g>
+    <path d="M72 1108 C252 1076 412 1128 586 1094 C746 1062 856 1108 1004 1086" fill="none" stroke="#B14F3F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#foundation-03-paper)" opacity="0.22" pointer-events="none"/>
 </svg>

@@ -1,9 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#F2EBDD"/>
-  <rect x="28" y="28" width="1144" height="574" rx="2" fill="none" stroke="#3A1518" stroke-opacity="0.18" stroke-width="2"/>
-  <text x="70" y="88" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="2.4">GROWN MEN GROW</text>
-  <line x1="70" y1="120" x2="1130" y2="120" stroke="#3A1518" stroke-opacity="0.38" stroke-width="2"/>
-  <text x="70" y="260" text-anchor="start" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="74" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="70" dy="0">Strength Has to Grow Up</tspan></text>
-    <text x="70" y="385" text-anchor="start" fill="#3A1518" font-family="Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="italic" letter-spacing="-1.4"><tspan x="70" dy="0">A man can look strong and still be hiding.</tspan></text>
-  <text x="70" y="565" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="600" letter-spacing="1.4">GROWNMENGROW.COM</text>
+  <defs>
+    <filter id="social-essay-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="social-essay-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="social-essay-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#F8F3EA"/>
+  <text x="550" y="68" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="21" font-weight="900" letter-spacing="3.8">GROWN MEN GROW</text>
+  <g transform="rotate(-1 264 315)">
+    <rect x="16" y="34" width="496" height="596" fill="#3A1518"/>
+    <rect x="24" y="20" width="480" height="590" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/repairing-wooden-chair.png" x="28" y="24" width="472" height="582" preserveAspectRatio="xMidYMid slice" filter="url(#social-essay-photo)"/>
+  </g>
+    <g transform="rotate(3 236 31)">
+    <rect x="146" y="8" width="180" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="154" y1="15" x2="316" y2="12" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <g transform="rotate(-0.7 845 193)">
+    <rect x="526" y="142" width="638" height="102" fill="#EEE6D8"/>
+    <text x="550" y="219.51999999999998" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="68" font-weight="900" letter-spacing="-2.5">Strength Has to</text>
+  </g>
+    <g transform="rotate(0.8 884 291)">
+    <rect x="604" y="238" width="560" height="106" fill="#3A1518"/>
+    <text x="628" y="318.56" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="78" font-weight="900" letter-spacing="-2.5">GROW UP</text>
+  </g>
+    <path d="M550 384 C686 360 818 396 948 374 C1020 362 1084 368 1140 360" fill="none" stroke="#B14F3F" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="550" y="454" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="28" font-style="italic">A man can look strong and still be hiding.</text>
+  <text x="550" y="568" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="900" letter-spacing="2.4">GROWNMENGROW.COM</text>
+  <rect x="24" y="24" width="1152" height="582" fill="none" stroke="#121416" stroke-opacity="0.2"/>
+  <rect width="1200" height="630" filter="url(#social-essay-paper)" opacity="0.22" pointer-events="none"/>
 </svg>

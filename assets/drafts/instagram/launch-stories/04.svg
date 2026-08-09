@@ -1,10 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
-  <rect width="1080" height="1920" fill="#F2EBDD"/>
-  <circle cx="910" cy="390" r="245" fill="none" stroke="#3A1518" stroke-opacity="0.08" stroke-width="70"/>
-    <text x="90" y="200" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2.7">GROWN MEN GROW</text>
-  <text x="90" y="500" text-anchor="start" fill="#3A1518" font-family="Georgia, Times New Roman, serif" font-size="81" font-weight="700" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">Which gets mistaken</tspan><tspan x="90" dy="105">for strength</tspan><tspan x="90" dy="105">most often?</tspan></text>
-    <line x1="90" y1="1120" x2="990" y2="1120" stroke="#3A1518" stroke-opacity="0.1" stroke-width="3"/>
-    <line x1="90" y1="1250" x2="990" y2="1250" stroke="#3A1518" stroke-opacity="0.1" stroke-width="3"/>
-    <line x1="90" y1="1380" x2="990" y2="1380" stroke="#3A1518" stroke-opacity="0.1" stroke-width="3"/>
-  <text x="90" y="1780" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="1.8">@GROWNMENGROW</text>
+  <defs>
+    <filter id="story-04-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="story-04-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="story-04-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1920" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="900" letter-spacing="4.2">GROWN MEN GROW</text>
+  <rect x="690" y="120" width="390" height="640" fill="url(#story-04-dots)"/>
+    <text x="1008" y="660" text-anchor="end" fill="none" stroke="#3A1518" stroke-opacity="0.16" stroke-width="3" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="580">?</text>
+    <g transform="rotate(-1 517 360)">
+    <rect x="48" y="290" width="938" height="140" fill="#F8F3EA"/>
+    <text x="72" y="396.4" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="78" font-weight="900" letter-spacing="-2.5">WHICH GETS MISTAKEN</text>
+  </g>
+    <g transform="rotate(1 620 499)">
+    <rect x="212" y="426" width="816" height="146" fill="#3A1518"/>
+    <text x="236" y="536.96" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="98" font-weight="900" letter-spacing="-2.5">FOR STRENGTH</text>
+  </g>
+    <g transform="rotate(-0.7 736 635)">
+    <rect x="444" y="566" width="584" height="138" fill="#B14F3F"/>
+    <text x="468" y="670.88" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="78" font-weight="900" letter-spacing="-2.5">MOST OFTEN?</text>
+  </g>
+    <path d="M80 770 C252 734 426 790 596 750 C752 716 874 758 1004 740" fill="none" stroke="#3A1518" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <g>
+      <rect x="62" y="874" width="54" height="54" fill="none" stroke="#3A1518" stroke-width="3"/>
+      <text x="150" y="918" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="48">Silence</text>
+      <line x1="62" y1="958" x2="1018" y2="958" stroke="#121416" stroke-opacity="0.2"/>
+    </g><g>
+      <rect x="62" y="1064" width="54" height="54" fill="none" stroke="#3A1518" stroke-width="3"/>
+      <text x="150" y="1108" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="48">Control</text>
+      <line x1="62" y1="1148" x2="1018" y2="1148" stroke="#121416" stroke-opacity="0.2"/>
+    </g><g>
+      <rect x="62" y="1254" width="54" height="54" fill="none" stroke="#3A1518" stroke-width="3"/>
+      <text x="150" y="1298" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="48">Never needing anyone</text>
+      <line x1="62" y1="1338" x2="1018" y2="1338" stroke="#121416" stroke-opacity="0.2"/>
+    </g><g>
+      <rect x="62" y="1444" width="54" height="54" fill="none" stroke="#3A1518" stroke-width="3"/>
+      <text x="150" y="1488" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="48">Winning every argument</text>
+      <line x1="62" y1="1528" x2="1018" y2="1528" stroke="#121416" stroke-opacity="0.2"/>
+    </g>
+  <text x="58" y="1868" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="2.6">@GROWNMENGROW</text>
+  <rect width="1080" height="1920" filter="url(#story-04-paper)" opacity="0.22" pointer-events="none"/>
 </svg>

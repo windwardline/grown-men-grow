@@ -1,0 +1,19 @@
+{{!< default}}
+
+{{#tag}}
+<header class="collection-header">
+    <div>
+        <p class="eyebrow">Filed under</p>
+        <h1>{{name}}</h1>
+        {{#if description}}<p class="collection-header__deck">{{description}}</p>{{/if}}
+    </div>
+    <span class="collection-header__count">{{plural ../pagination.total empty="No pieces" singular="% piece" plural="% pieces"}}</span>
+</header>
+{{/tag}}
+
+<section class="collection-feed" aria-label="Writing in this collection">
+    {{#foreach posts}}
+        {{> "card"}}
+    {{/foreach}}
+    {{pagination}}
+</section>

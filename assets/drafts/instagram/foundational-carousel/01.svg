@@ -1,9 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
-  <rect width="1080" height="1350" fill="#3A1518"/>
-  <text x="1020" y="405" text-anchor="end" fill="#F2EBDD" fill-opacity="0.055" font-family="Helvetica Neue, Arial, sans-serif" font-size="310" font-weight="800">01</text>
-  <text x="90" y="92" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2.6">GROWN MEN GROW</text>
-  <text x="90" y="128" fill="#F2EBDD" fill-opacity="0.62" font-family="Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2.1">FIELD NOTE 01</text>
-  <text x="990" y="92" text-anchor="end" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="1.8">01 / 07</text>
-  <text x="90" y="500" text-anchor="start" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="116" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">I still believe</tspan><tspan x="90" dy="132">in strength.</tspan></text>
-  <text x="990" y="1270" text-anchor="end" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5">@GROWNMENGROW</text>
+  <defs>
+    <filter id="foundation-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="foundation-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="foundation-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 01 · 01 / 07</text>
+  <g transform="rotate(-0.6 540 467)">
+    <rect x="22" y="152" width="1036" height="664" fill="#60735A"/>
+    <rect x="30" y="138" width="1020" height="658" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/repairing-wooden-chair.png" x="34" y="142" width="1012" height="650" preserveAspectRatio="xMidYMid slice" filter="url(#foundation-01-photo)"/>
+  </g>
+    <g transform="rotate(-4 216 147)">
+    <rect x="106" y="124" width="220" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="114" y1="131" x2="316" y2="128" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <g transform="rotate(-1 391 814)">
+    <rect x="46" y="748" width="690" height="132" fill="#F8F3EA"/>
+    <text x="70" y="848.32" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="102" font-weight="900" letter-spacing="-2.5">I still believe</text>
+  </g>
+    <g transform="rotate(1.1 593 948)">
+    <rect x="154" y="874" width="878" height="148" fill="#3A1518"/>
+    <text x="178" y="986.48" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="108" font-weight="900" letter-spacing="-2.5">IN STRENGTH.</text>
+  </g>
+    <path d="M76 1064 C250 1028 430 1078 602 1042 C754 1012 882 1054 1008 1032" fill="none" stroke="#B14F3F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#foundation-01-paper)" opacity="0.22" pointer-events="none"/>
 </svg>

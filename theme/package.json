@@ -1,0 +1,58 @@
+{
+  "name": "grown-men-grow",
+  "description": "The original editorial theme for the Grown Men Grow publication.",
+  "version": "1.0.0",
+  "engines": {
+    "ghost": ">=5.54.1"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "gscan --fatal --verbose .",
+    "zip": "node ../scripts/package-ghost-theme.mjs"
+  },
+  "packageManager": "pnpm@11.20.0",
+  "author": {
+    "name": "Grown Men Grow",
+    "email": "hello@grownmengrow.com",
+    "url": "https://grownmengrow.com"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Magazine",
+      "Minimal"
+    ]
+  },
+  "keywords": [
+    "ghost",
+    "ghost-theme",
+    "editorial"
+  ],
+  "config": {
+    "card_assets": true,
+    "posts_per_page": 9,
+    "image_sizes": {
+      "xxs": {
+        "width": 30
+      },
+      "xs": {
+        "width": 160
+      },
+      "s": {
+        "width": 400
+      },
+      "m": {
+        "width": 720
+      },
+      "l": {
+        "width": 1200
+      },
+      "xl": {
+        "width": 2000
+      }
+    }
+  },
+  "devDependencies": {
+    "gscan": "6.4.2"
+  }
+}

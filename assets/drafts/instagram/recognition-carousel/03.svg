@@ -1,8 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
-  <rect width="1080" height="1350" fill="#F2EBDD"/>
-  <line x1="68" y1="190" x2="68" y2="1160" stroke="#3A1518" stroke-opacity="0.34" stroke-width="3"/><circle cx="68" cy="190" r="9" fill="#3A1518"/>
-  <text x="108" y="102" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.8">GROWN MEN GROW</text>
-  <text x="990" y="102" text-anchor="end" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.8">03 / 07</text>
-  <text x="90" y="360" text-anchor="start" fill="#3A1518" font-family="Georgia, Times New Roman, serif" font-size="74" font-weight="700" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">A man can cry</tspan><tspan x="90" dy="99">and still leave</tspan><tspan x="90" dy="99">everyone else carrying</tspan><tspan x="90" dy="99">what his tears mean.</tspan></text>
-  <text x="108" y="1265" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5">GROWN MEN GROW</text>
+  <defs>
+    <filter id="recognition-03-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="recognition-03-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="recognition-03-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">RECOGNITION · 03 / 07</text>
+  <g transform="rotate(1 759 457)">
+    <rect x="470" y="146" width="578" height="656" fill="#60735A"/>
+    <rect x="478" y="132" width="562" height="650" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/friends-in-conversation.png" x="482" y="136" width="554" height="642" preserveAspectRatio="xMidYMid slice" filter="url(#recognition-03-photo)"/>
+  </g>
+    <g transform="rotate(5 757 141)">
+    <rect x="670" y="118" width="174" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="678" y1="125" x2="834" y2="122" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="46" y="414" fill="#B14F3F" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="190">“</text>
+    <text x="58" y="492" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="68" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">A man can cry</text><text x="58" y="570" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="68" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">and still leave</text>
+    <g transform="rotate(-0.8 536 815)">
+    <rect x="46" y="742" width="980" height="146" fill="#3A1518"/>
+    <text x="70" y="852.96" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="92" font-weight="900" letter-spacing="-2.5">EVERYONE ELSE</text>
+  </g>
+    <g transform="rotate(1 587 950)">
+    <rect x="148" y="882" width="878" height="136" fill="#EEE6D8"/>
+    <text x="172" y="985.36" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="86" font-weight="900" letter-spacing="-2.5">CARRYING WHAT</text>
+  </g>
+    <g transform="rotate(-0.6 536 1080)">
+    <rect x="46" y="1012" width="980" height="136" fill="#121416"/>
+    <text x="70" y="1115.36" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="80" font-weight="900" letter-spacing="-2.5">HIS TEARS MEAN.</text>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#recognition-03-paper)" opacity="0.22" pointer-events="none"/>
 </svg>

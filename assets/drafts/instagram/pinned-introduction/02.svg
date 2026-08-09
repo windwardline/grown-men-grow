@@ -1,10 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
-  <rect width="1080" height="1350" fill="#F2EBDD"/>
-  <rect x="32" y="32" width="1016" height="1286" rx="2" fill="none" stroke="#3A1518" stroke-opacity="0.18" stroke-width="2"/>
-  <text x="90" y="112" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="2.4">GROWN MEN GROW</text>
-  <text x="990" y="112" text-anchor="end" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="1.8">02 / 07</text>
-  <line x1="90" y1="154" x2="990" y2="154" stroke="#3A1518" stroke-opacity="0.38" stroke-width="2"/>
-  <text x="90" y="398" fill="#3A1518" font-family="Georgia, Times New Roman, serif" font-size="82" font-weight="700" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">Most of us learned</tspan><tspan x="90" dy="111">how to look like men</tspan><tspan x="90" dy="111">before we learned</tspan><tspan x="90" dy="111">how to live as one.</tspan></text>
-  <circle cx="90" cy="1252" r="7" fill="#3A1518"/>
-  <text x="114" y="1261" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="21" font-weight="600" letter-spacing="1.5">@GROWNMENGROW</text>
+  <defs>
+    <filter id="intro-02-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="intro-02-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="intro-02-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">INTRODUCTION · 02 / 07</text>
+  <g transform="rotate(-0.8 540 445)">
+    <rect x="30" y="150" width="1020" height="624" fill="#60735A"/>
+    <rect x="38" y="136" width="1004" height="618" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/sunlit-writing-table.png" x="42" y="140" width="996" height="610" preserveAspectRatio="xMidYMid slice" filter="url(#intro-02-photo)"/>
+  </g>
+    <g transform="rotate(4 879 145)">
+    <rect x="790" y="122" width="178" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="798" y1="129" x2="958" y2="126" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <g transform="rotate(-1 531 773)">
+    <rect x="48" y="710" width="966" height="126" fill="#F8F3EA"/>
+    <text x="72" y="805.76" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="79" font-weight="900" letter-spacing="-2.5">MOST OF US LEARNED</text>
+  </g>
+    <g transform="rotate(1 606 895)">
+    <rect x="184" y="830" width="844" height="130" fill="#3A1518"/>
+    <text x="208" y="928.8" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="73" font-weight="900" letter-spacing="-2.5">HOW TO LOOK LIKE MEN</text>
+  </g>
+    <g transform="rotate(-0.7 506 1017)">
+    <rect x="48" y="954" width="916" height="126" fill="#EEE6D8"/>
+    <text x="72" y="1049.76" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="75" font-weight="900" letter-spacing="-2.5">BEFORE WE LEARNED</text>
+  </g>
+    <g transform="rotate(1 666 1140)">
+    <rect x="304" y="1074" width="724" height="132" fill="#B14F3F"/>
+    <text x="328" y="1174.32" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="68" font-weight="900" letter-spacing="-2.5">HOW TO LIVE AS ONE.</text>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#intro-02-paper)" opacity="0.22" pointer-events="none"/>
 </svg>

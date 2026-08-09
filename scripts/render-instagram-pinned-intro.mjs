@@ -1,165 +1,109 @@
-import fs from "node:fs";
-import path from "node:path";
+import {
+  GREEN,
+  INK,
+  OXBLOOD,
+  PAPER,
+  PAPER_LIGHT,
+  RUST,
+  SANS,
+  SERIF,
+  lines,
+  photo,
+  portraitCanvas,
+  scribble,
+  strip,
+  tape,
+  writeAsset,
+} from "./lib/editorial-collage.mjs";
 
-const ROOT = "/Users/peacock/Projects/grown-men-grow";
-const OUTPUT = path.join(ROOT, "assets/drafts/instagram/pinned-introduction");
-const AVATAR = path.join(ROOT, "assets/source/grown-men-grow-instagram-avatar.png");
-
-const OXBLOOD = "#3A1518";
-const IVORY = "#F2EBDD";
-const WIDTH = 1080;
-const HEIGHT = 1350;
-
-fs.mkdirSync(OUTPUT, { recursive: true });
-
-function escapeXml(value) {
-  const entities = { "&": "&amp;", "<": "&lt;", ">": "&gt;" };
-  return value.replace(/[&<>]/g, (character) => entities[character]);
-}
-
-function linesSvg(lines, { x = 90, y, size, leading, family, weight = 700, style = "normal", fill }) {
-  return `<text x="${x}" y="${y}" fill="${fill}" font-family="${family}" font-size="${size}" font-weight="${weight}" font-style="${style}" letter-spacing="-1.4">${lines
-    .map((line, index) => `<tspan x="${x}" dy="${index === 0 ? 0 : leading}">${escapeXml(line)}</tspan>`)
-    .join("")}</text>`;
-}
-
-function frame({ number, background, foreground, body }) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}">
-  <rect width="${WIDTH}" height="${HEIGHT}" fill="${background}"/>
-  <rect x="32" y="32" width="1016" height="1286" rx="2" fill="none" stroke="${foreground}" stroke-opacity="0.18" stroke-width="2"/>
-  <text x="90" y="112" fill="${foreground}" font-family="Helvetica Neue, Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="2.4">GROWN MEN GROW</text>
-  <text x="990" y="112" text-anchor="end" fill="${foreground}" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="1.8">${String(number).padStart(2, "0")} / 07</text>
-  <line x1="90" y1="154" x2="990" y2="154" stroke="${foreground}" stroke-opacity="0.38" stroke-width="2"/>
-  ${body}
-  <circle cx="90" cy="1252" r="7" fill="${foreground}"/>
-  <text x="114" y="1261" fill="${foreground}" font-family="Helvetica Neue, Arial, sans-serif" font-size="21" font-weight="600" letter-spacing="1.5">@GROWNMENGROW</text>
-</svg>`;
-}
-
-const avatarBase64 = fs.readFileSync(AVATAR).toString("base64");
-const slide1 = `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}">
-  <rect width="${WIDTH}" height="${HEIGHT}" fill="${OXBLOOD}"/>
-  <image href="data:image/png;base64,${avatarBase64}" x="0" y="135" width="1080" height="1080"/>
-</svg>`;
+const AVATAR = "grown-men-grow-instagram-avatar.png";
+const CHAIR = "editorial/repairing-wooden-chair.png";
+const TABLE = "editorial/sunlit-writing-table.png";
+const FRIENDS = "editorial/friends-in-conversation.png";
 
 const slides = [
-  slide1,
-  frame({
+  portraitCanvas({
+    id: "intro-01",
+    number: 1,
+    label: "INTRODUCTION",
+    body: `<rect x="74" y="158" width="932" height="1000" fill="url(#intro-01-dots)"/>
+    ${photo({name: AVATAR, x: 162, y: 208, width: 756, height: 756, rotation: -1.2, position: "xMidYMid", backing: GREEN, id: "intro-01"})}
+    ${tape(402, 188, 246, 4)}
+    <text x="540" y="1082" text-anchor="middle" fill="${INK}" font-family="${SANS}" font-size="24" font-weight="900" letter-spacing="4">SOME ASSEMBLY STILL REQUIRED.</text>
+    ${scribble("M126 1138 C286 1106 444 1156 606 1120 C744 1088 860 1128 960 1110", RUST, 8)}`,
+  }),
+  portraitCanvas({
+    id: "intro-02",
     number: 2,
-    background: IVORY,
-    foreground: OXBLOOD,
-    body: linesSvg(["Most of us learned", "how to look like men", "before we learned", "how to live as one."], {
-      y: 398,
-      size: 82,
-      leading: 111,
-      family: "Georgia, Times New Roman, serif",
-      fill: OXBLOOD,
-    }),
+    label: "INTRODUCTION",
+    body: `${photo({name: TABLE, x: 42, y: 140, width: 996, height: 610, rotation: -0.8, position: "xMidYMid", backing: GREEN, id: "intro-02"})}
+    ${tape(790, 122, 178, 4)}
+    ${strip({x: 48, y: 710, width: 966, height: 126, fill: PAPER_LIGHT, text: "MOST OF US LEARNED", color: INK, size: 79, family: SERIF, rotation: -1})}
+    ${strip({x: 184, y: 830, width: 844, height: 130, fill: OXBLOOD, text: "HOW TO LOOK LIKE MEN", color: PAPER_LIGHT, size: 73, rotation: 1})}
+    ${strip({x: 48, y: 954, width: 916, height: 126, fill: PAPER, text: "BEFORE WE LEARNED", color: INK, size: 75, family: SERIF, rotation: -0.7})}
+    ${strip({x: 304, y: 1074, width: 724, height: 132, fill: RUST, text: "HOW TO LIVE AS ONE.", color: PAPER_LIGHT, size: 68, rotation: 1})}`,
   }),
-  frame({
+  portraitCanvas({
+    id: "intro-03",
     number: 3,
-    background: OXBLOOD,
-    foreground: IVORY,
-    body: `${linesSvg(["A lot of that training", "was useful."], {
-      y: 330,
-      size: 72,
-      leading: 96,
-      family: "Georgia, Times New Roman, serif",
-      weight: 400,
-      fill: IVORY,
-    })}
-    <line x1="90" y1="590" x2="430" y2="590" stroke="${IVORY}" stroke-width="9"/>
-    ${linesSvg(["Some of it was just", "fear with good posture."], {
-      y: 770,
-      size: 82,
-      leading: 105,
-      family: "Helvetica Neue, Arial, sans-serif",
-      weight: 800,
-      fill: IVORY,
-    })}`,
+    label: "INTRODUCTION",
+    body: `${photo({name: CHAIR, x: 520, y: 138, width: 516, height: 674, rotation: 1, position: "xMidYMid", backing: GREEN, id: "intro-03"})}
+    ${tape(686, 120, 182, 5)}
+    ${lines(["A lot of that", "training was useful."], {x: 58, y: 372, size: 65, leading: 76, fill: INK, family: SERIF, weight: 700})}
+    ${scribble("M70 566 C194 536 318 582 444 548 C486 538 510 540 534 534", RUST, 8)}
+    ${strip({x: 48, y: 744, width: 970, height: 140, fill: OXBLOOD, text: "SOME OF IT WAS JUST", color: PAPER_LIGHT, size: 75, rotation: -0.8})}
+    ${strip({x: 174, y: 880, width: 844, height: 144, fill: PAPER, text: "FEAR WITH", color: INK, size: 96, family: SERIF, rotation: 1})}
+    ${strip({x: 354, y: 1018, width: 664, height: 144, fill: RUST, text: "GOOD POSTURE.", color: PAPER_LIGHT, size: 78, rotation: -0.7})}`,
   }),
-  frame({
+  portraitCanvas({
+    id: "intro-04",
     number: 4,
-    background: IVORY,
-    foreground: OXBLOOD,
-    body: `${linesSvg(["I still believe", "in strength."], {
-      y: 330,
-      size: 104,
-      leading: 120,
-      family: "Helvetica Neue, Arial, sans-serif",
-      weight: 800,
-      fill: OXBLOOD,
-    })}
-    ${linesSvg(["I just no longer think", "looking strong tells us", "much about a man."], {
-      y: 735,
-      size: 65,
-      leading: 91,
-      family: "Georgia, Times New Roman, serif",
-      weight: 400,
-      fill: OXBLOOD,
-    })}`,
+    label: "INTRODUCTION",
+    background: PAPER,
+    body: `<rect x="680" y="130" width="400" height="530" fill="url(#intro-04-dots)"/>
+    <text x="1010" y="512" text-anchor="end" fill="none" stroke="${OXBLOOD}" stroke-opacity="0.17" stroke-width="3" font-family="${SANS}" font-size="430" font-weight="900">04</text>
+    ${strip({x: 48, y: 236, width: 864, height: 142, fill: PAPER_LIGHT, text: "I STILL BELIEVE", color: INK, size: 96, family: SERIF, rotation: -1})}
+    ${strip({x: 190, y: 372, width: 838, height: 146, fill: OXBLOOD, text: "IN STRENGTH.", color: PAPER_LIGHT, size: 108, rotation: 1})}
+    ${scribble("M78 576 C246 542 416 596 584 558 C742 522 874 574 1002 548", RUST, 9)}
+    ${lines(["I just no longer think", "looking strong tells us", "much about a man."], {x: 62, y: 750, size: 62, leading: 80, fill: INK, family: SERIF, weight: 700})}`,
   }),
-  frame({
+  portraitCanvas({
+    id: "intro-05",
     number: 5,
-    background: OXBLOOD,
-    foreground: IVORY,
-    body: `${linesSvg(["This is about the", "unfinished work", "of being a man."], {
-      y: 318,
-      size: 78,
-      leading: 103,
-      family: "Georgia, Times New Roman, serif",
-      weight: 700,
-      fill: IVORY,
-    })}
-    ${linesSvg(["No gurus.", "No gender war."], {
-      y: 825,
-      size: 92,
-      leading: 112,
-      family: "Helvetica Neue, Arial, sans-serif",
-      weight: 800,
-      fill: IVORY,
-    })}`,
+    label: "INTRODUCTION",
+    body: `${photo({name: FRIENDS, x: 42, y: 140, width: 996, height: 622, rotation: -0.8, position: "xMidYMid", backing: GREEN, id: "intro-05"})}
+    ${tape(792, 122, 176, 4)}
+    ${strip({x: 48, y: 722, width: 974, height: 126, fill: PAPER_LIGHT, text: "THE UNFINISHED WORK", color: INK, size: 78, family: SERIF, rotation: -1})}
+    ${strip({x: 300, y: 842, width: 722, height: 132, fill: OXBLOOD, text: "OF BEING A MAN.", color: PAPER_LIGHT, size: 77, rotation: 1})}
+    ${scribble("M78 1024 C236 992 400 1044 560 1008 C720 972 864 1022 1004 996", RUST, 8)}
+    ${strip({x: 50, y: 1058, width: 484, height: 118, fill: INK, text: "NO GURUS.", color: PAPER_LIGHT, size: 74, rotation: -0.8})}
+    ${strip({x: 416, y: 1104, width: 612, height: 118, fill: RUST, text: "NO GENDER WAR.", color: PAPER_LIGHT, size: 64, rotation: 1})}`,
   }),
-  frame({
+  portraitCanvas({
+    id: "intro-06",
     number: 6,
-    background: IVORY,
-    foreground: OXBLOOD,
-    body: `${linesSvg(["One field note", "each week."], {
-      y: 330,
-      size: 86,
-      leading: 108,
-      family: "Georgia, Times New Roman, serif",
-      weight: 700,
-      fill: OXBLOOD,
-    })}
-    <text x="90" y="655" fill="${OXBLOOD}" font-family="Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="3.2">START WITH</text>
-    ${linesSvg(["Strength Has to", "Grow Up"], {
-      y: 790,
-      size: 101,
-      leading: 116,
-      family: "Helvetica Neue, Arial, sans-serif",
-      weight: 800,
-      fill: OXBLOOD,
-    })}`,
+    label: "INTRODUCTION",
+    body: `${photo({name: CHAIR, x: 42, y: 140, width: 996, height: 568, rotation: -0.8, position: "xMidYMid", backing: OXBLOOD, id: "intro-06"})}
+    ${tape(108, 122, 206, -4)}
+    <text x="58" y="784" fill="${OXBLOOD}" font-family="${SANS}" font-size="22" font-weight="900" letter-spacing="3.6">ONE FIELD NOTE EACH WEEK · START WITH</text>
+    ${strip({x: 48, y: 818, width: 720, height: 126, fill: PAPER, text: "Strength Has to", color: INK, size: 84, family: SERIF, rotation: -1})}
+    ${strip({x: 232, y: 938, width: 796, height: 138, fill: OXBLOOD, text: "GROW UP", color: PAPER_LIGHT, size: 103, rotation: 1})}
+    ${scribble("M76 1122 C236 1088 402 1142 560 1106 C720 1070 864 1120 1004 1094", RUST, 8)}`,
   }),
-  frame({
+  portraitCanvas({
+    id: "intro-07",
     number: 7,
-    background: OXBLOOD,
-    foreground: IVORY,
-    body: linesSvg(["Link in bio."], {
-      y: 660,
-      size: 116,
-      leading: 120,
-      family: "Helvetica Neue, Arial, sans-serif",
-      weight: 800,
-      fill: IVORY,
-    }),
+    label: "INTRODUCTION",
+    background: PAPER,
+    body: `<rect x="58" y="146" width="964" height="756" fill="url(#intro-07-dots)"/>
+    <text x="540" y="656" text-anchor="middle" fill="none" stroke="${OXBLOOD}" stroke-opacity="0.18" stroke-width="3" font-family="${SANS}" font-size="520" font-weight="900">→</text>
+    ${strip({x: 70, y: 482, width: 940, height: 178, fill: OXBLOOD, text: "LINK IN BIO.", color: PAPER_LIGHT, size: 142, rotation: -1})}
+    ${scribble("M100 736 C252 702 414 758 574 720 C734 684 870 734 984 710", RUST, 10)}
+    <text x="540" y="940" text-anchor="middle" fill="${INK}" font-family="${SERIF}" font-size="46" font-style="italic">Strength Has to Grow Up</text>
+    <text x="540" y="1054" text-anchor="middle" fill="${OXBLOOD}" font-family="${SANS}" font-size="22" font-weight="900" letter-spacing="3.4">GROWNMENGROW.COM</text>`,
   }),
 ];
 
-slides.forEach((svg, index) => {
-  const number = String(index + 1).padStart(2, "0");
-  fs.writeFileSync(path.join(OUTPUT, `${number}.svg`), svg);
-});
+slides.forEach((svg, index) => writeAsset("instagram/pinned-introduction", String(index + 1).padStart(2, "0"), svg));
 
-console.log(`Rendered ${slides.length} SVG drafts to ${OUTPUT}`);
+console.log("Rendered seven collage-directed pinned-introduction SVG and PNG pairs.");

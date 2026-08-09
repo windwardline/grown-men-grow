@@ -1,10 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
-  <rect width="1080" height="1350" fill="#F2EBDD"/>
-  <text x="1020" y="405" text-anchor="end" fill="#3A1518" fill-opacity="0.055" font-family="Helvetica Neue, Arial, sans-serif" font-size="310" font-weight="800">04</text>
-  <text x="90" y="92" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2.6">GROWN MEN GROW</text>
-  <text x="90" y="128" fill="#3A1518" fill-opacity="0.62" font-family="Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2.1">FIELD NOTE 01</text>
-  <text x="990" y="92" text-anchor="end" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="1.8">04 / 07</text>
-  <text x="90" y="310" text-anchor="start" fill="#3A1518" font-family="Georgia, Times New Roman, serif" font-size="68" font-weight="400" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">You find that out</tspan><tspan x="90" dy="86">when he is</tspan></text>
-    <text x="90" y="590" text-anchor="start" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="86" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">ashamed,</tspan><tspan x="90" dy="103">rejected,</tspan><tspan x="90" dy="103">frightened,</tspan><tspan x="90" dy="103">or wrong.</tspan></text>
-  <text x="990" y="1270" text-anchor="end" fill="#3A1518" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5">@GROWNMENGROW</text>
+  <defs>
+    <filter id="foundation-04-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="foundation-04-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="foundation-04-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 01 · 04 / 07</text>
+  <g transform="rotate(-0.8 540 450)">
+    <rect x="30" y="152" width="1020" height="630" fill="#60735A"/>
+    <rect x="38" y="138" width="1004" height="624" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/friends-in-conversation.png" x="42" y="142" width="996" height="616" preserveAspectRatio="xMidYMid slice" filter="url(#foundation-04-photo)"/>
+  </g>
+    <g transform="rotate(4 888 149)">
+    <rect x="800" y="126" width="176" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="808" y1="133" x2="966" y2="130" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <g transform="rotate(-1 420 781)">
+    <rect x="48" y="724" width="744" height="114" fill="#F8F3EA"/>
+    <text x="72" y="810.64" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="72" font-weight="900" letter-spacing="-2.5">YOU FIND THAT OUT</text>
+  </g>
+    <text x="68" y="930" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="70" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">when he is</text>
+    <g transform="rotate(1 656 900)">
+    <rect x="282" y="842" width="748" height="116" fill="#3A1518"/>
+    <text x="306" y="930.16" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="82" font-weight="900" letter-spacing="-2.5">ASHAMED,</text>
+  </g>
+    <g transform="rotate(-0.7 540 1021)">
+    <rect x="72" y="964" width="936" height="114" fill="#121416"/>
+    <text x="96" y="1050.64" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="68" font-weight="900" letter-spacing="-2.5">REJECTED, FRIGHTENED,</text>
+  </g>
+    <g transform="rotate(1.1 706 1136)">
+    <rect x="404" y="1080" width="604" height="112" fill="#B14F3F"/>
+    <text x="428" y="1165.12" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="78" font-weight="900" letter-spacing="-2.5">OR WRONG.</text>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#foundation-04-paper)" opacity="0.22" pointer-events="none"/>
 </svg>

@@ -1,11 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
-  <rect width="1080" height="1350" fill="#3A1518"/>
-  <rect x="0" y="0" width="18" height="1350" fill="#F2EBDD"/><rect x="38" y="0" width="3" height="1350" fill="#F2EBDD" fill-opacity="0.34"/>
-  <text x="90" y="92" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2.6">GROWN MEN GROW</text>
-  <text x="90" y="128" fill="#F2EBDD" fill-opacity="0.62" font-family="Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2.1">FIELD NOTE 01</text>
-  <text x="990" y="92" text-anchor="end" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="1.8">05 / 07</text>
-  <text x="90" y="320" text-anchor="start" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="91" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">Can he stay?</tspan></text>
-    <text x="90" y="590" text-anchor="start" fill="#F2EBDD" font-family="Georgia, Times New Roman, serif" font-size="78" font-weight="700" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">Can he hear</tspan><tspan x="90" dy="96">the truth?</tspan></text>
-    <text x="90" y="890" text-anchor="start" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="52" font-weight="700" font-style="normal" letter-spacing="-0.8"><tspan x="90" dy="0">Can he ask for help</tspan><tspan x="90" dy="70">before the crisis belongs</tspan><tspan x="90" dy="70">to everyone?</tspan></text>
-  <text x="990" y="1270" text-anchor="end" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5">@GROWNMENGROW</text>
+  <defs>
+    <filter id="foundation-05-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="foundation-05-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="foundation-05-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#EEE6D8"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 01 · 05 / 07</text>
+  <text x="1008" y="524" text-anchor="end" fill="none" stroke="#3A1518" stroke-opacity="0.14" stroke-width="3" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="520">?</text>
+    <rect x="36" y="158" width="516" height="380" fill="url(#foundation-05-dots)"/>
+    <g transform="rotate(-1.1 379 285)">
+    <rect x="54" y="222" width="650" height="126" fill="#3A1518"/>
+    <text x="78" y="317.76" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="91" font-weight="900" letter-spacing="-2.5">CAN HE STAY?</text>
+  </g>
+    <g transform="rotate(1 608 469)">
+    <rect x="202" y="406" width="812" height="126" fill="#F8F3EA"/>
+    <text x="226" y="501.76" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="88" font-weight="900" letter-spacing="-2.5">CAN HE HEAR</text>
+  </g>
+    <g transform="rotate(-0.6 477 596)">
+    <rect x="50" y="532" width="854" height="128" fill="#121416"/>
+    <text x="74" y="629.28" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="94" font-weight="900" letter-spacing="-2.5">THE TRUTH?</text>
+  </g>
+    <path d="M84 712 C222 680 368 736 512 700 C672 662 830 724 996 688" fill="none" stroke="#B14F3F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="70" y="830" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">Can he ask for help</text><text x="70" y="912" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">before the crisis belongs</text><text x="70" y="994" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">to everyone?</text>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#foundation-05-paper)" opacity="0.22" pointer-events="none"/>
 </svg>

@@ -1,6 +1,6 @@
 # Editorial Visual System
 
-Status: representative direction prepared; founder approval required before full propagation or any live change.
+Status: cross-surface system and custom-theme build approved. The collage-led replacement set is ready for founder review. Nothing is authorized for public use.
 
 ## Objective
 
@@ -13,6 +13,7 @@ The approved voice and launch copy do not change as part of this work.
 - Adult, restrained, tactile, and confident.
 - Masculine without alpha-status shorthand, luxury cosplay, or grievance cues.
 - High contrast and visually assertive, but never loud for its own sake.
+- Constructive, warm, and alive. Growth must read as present-tense possibility, not recovery staged as despair.
 - One coherent publication identity with materially different compositions by story and surface.
 - Photography and illustration serve the argument. They do not merely decorate text.
 
@@ -32,20 +33,30 @@ Oxblood, Paper, and Ink remain dominant. Rust and Smoke add depth without turnin
 
 ### Type
 
-- Display serif: high-contrast, tightly set, used for feature titles and large quotations.
-- Condensed grotesk: publication name, folios, labels, navigation, captions, and selected social headlines.
-- Reading face: calm and highly legible at long-form sizes.
+- Display serif: Bodoni Moda, tightly set for feature titles and large quotations.
+- Condensed grotesk: Barlow Condensed for the publication name, folios, labels, navigation, captions, and selected social headlines.
+- Reading face: Source Serif 4 at a calm long-form measure.
 - Scale changes by surface. Hierarchy, not one fixed lockup, creates recognition.
 
-The concept renderer uses local system fonts as stand-ins. A Ghost theme implementation should bundle approved open-source web fonts so the published result is stable and does not require a paid font service.
+The Ghost theme bundles the three open-source families. Social renderers use system stand-ins where the rasterizer cannot load the theme fonts. No paid font service or remote font request is required.
 
 ### Imagery
 
 - Original editorial portraits, documentary details, still life, interiors, and restrained illustration.
-- Ordinary environments rendered with care: plaster, wood, worn fabric, window light, weather, hands, rooms, thresholds, and useful objects.
-- Natural skin and texture. Imperfection stays visible.
+- Ordinary environments rendered with care: maintained plaster, warm wood, useful objects, healthy plants, daylight, hands at work, conversation, and forward motion.
+- Natural skin and texture. Signs of use may remain visible; neglect, decay, and poverty-coded distress do not stand in for depth.
+- Bright and open imagery should lead the system. Oxblood and Ink provide graphic weight without pulling every photograph into darkness.
 - Negative space is composed for titles and crops; copy does not cover a face.
-- Avoid gyms, boxing shorthand, weapons, cigars, whiskey, watches, sports cars, shirtless dominance, staged therapy, and polished corporate-stock behavior.
+- Avoid gyms, boxing shorthand, weapons, cigars, whiskey, watches, sports cars, shirtless dominance, staged therapy, lonely brooding, dilapidated rooms, and polished corporate-stock behavior.
+
+### Image-generation quality gate
+
+- Hyperreal generated imagery is acceptable only when it survives full-resolution review as a believable commissioned photograph.
+- Hands, tools, furniture, reflections, architecture, shadows, fabric, depth of field, and object continuity must all make physical sense. One obvious synthetic tell rejects the entire image.
+- Avoid generic model casting, showroom-perfect rooms, excessive bokeh, cinematic blue-orange grading, waxy skin, over-sharpened eyes, symbolic isolation, and implausibly arranged props.
+- Use generated people sparingly. Real founder-shot video or photography is preferred whenever the human presence itself is the point.
+- Do not attempt to hide weak generation with grain, darkness, distressed texture, or an aggressive crop.
+- Record the exact generation prompt, source path, disposition, and any consuming assets. Composition studies are not launch assets.
 
 ### Editorial devices
 
@@ -55,6 +66,14 @@ The concept renderer uses local system fonts as stand-ins. A Ghost theme impleme
 - Hairline rules, occasional heavy rules, pull quotes, drop caps, marginal notes, and image breaks.
 - Paper texture or grain used lightly enough to preserve type clarity.
 - Deliberate empty space. Not every area needs text.
+
+### Collage system
+
+Photography is source material, not a finished post by itself. Visible paper edges, tape, offset blocks, halftone fields, pencil marks, irregular crops, and changes in scale give the work a made-by-hand editorial character.
+
+The material vocabulary stays consistent. The composition does not. Rotate image dominance, crop, color field, headline position, paper treatment, and pacing among posts. No two consecutive feed covers should share the same skeleton. Texture must add energy without making the work look distressed, nostalgic, or damaged.
+
+Collage is the default launch treatment because it reduces dependence on synthetic perfection and makes authorship visible. Straight photography remains available when a source image is strong enough to carry a surface without camouflage.
 
 ## Content families
 
@@ -115,9 +134,9 @@ Unmodified Source can support clean typography, feature images, and simple layou
 - Retain editable SVG or source artwork and the final platform PNG for every published asset.
 - Record the image-generation prompt and source path for every generated photograph or illustration.
 
-## Representative concept set
+## Current review set
 
-The first concept package is under `assets/concepts/editorial-v1/`:
+The current concept package is under `assets/concepts/editorial-collage-v1/`:
 
 - Ghost feature hero
 - Instagram feed cover
@@ -125,16 +144,17 @@ The first concept package is under `assets/concepts/editorial-v1/`:
 - Story cover
 - Social-sharing card
 
-The package uses only approved Essay 1 copy. It is for review and is not authorized for publication or posting.
+The complete replacement set is under `assets/drafts/`, with five contact sheets under `assets/drafts/review/`. Title-free Ghost feature images are under `assets/drafts/ghost/feature-images/`. The package uses only approved launch copy. It is for review and is not authorized for publication or posting.
 
-## Implementation sequence after approval
+## Implementation status
 
-1. Approve or revise the representative direction.
-2. Approve a custom Ghost theme as the replacement for unmodified Source.
-3. Build and locally validate the theme against Ghost's current theme contract.
-4. Regenerate the complete launch asset set in distinct content families.
-5. Review Ghost desktop, phone, email, search, and social previews.
-6. Review the complete Instagram feed, carousel, Story, and Reel exports in chat.
-7. Stage the approved theme and assets privately.
-8. Preserve the existing Source configuration and prior exports as rollback material.
-9. Make no public change until the separate launch gates are authorized.
+1. [x] Approve the editorial system and original Ghost theme build.
+2. [x] Build and locally validate the theme against Ghost's current theme contract.
+3. [x] Regenerate the complete launch asset set in distinct content families.
+4. [x] Review local Ghost desktop and phone fixtures.
+5. [x] Prepare the complete Instagram feed, carousel, Story, Reel, and Ghost social-card contact sheets.
+6. [ ] Founder approves or revises the collage-led replacement set.
+7. [ ] Stage the approved theme and assets in private Ghost.
+8. [ ] Review private Ghost desktop, phone, email, search, and social previews.
+9. [ ] Preserve Source and the prior export as rollback material.
+10. [ ] Make public changes only through the separate launch gates.

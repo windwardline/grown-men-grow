@@ -1,0 +1,22 @@
+{{!< default}}
+
+{{#post}}
+<article class="page page--about {{post_class}}">
+    {{#if @page.show_title_and_feature_image}}
+        <header class="page-header page-header--split">
+            <p class="eyebrow">{{@site.title}}</p>
+            <h1>{{title}}</h1>
+            {{#if custom_excerpt}}<p class="page-header__deck">{{custom_excerpt}}</p>{{/if}}
+        </header>
+        {{#if feature_image}}
+            <figure class="page-feature">
+                {{> "feature-image" eager=true sizes="(max-width: 760px) 100vw, 1200px"}}
+                {{#if feature_image_caption}}<figcaption>{{feature_image_caption}}</figcaption>{{/if}}
+            </figure>
+        {{/if}}
+    {{/if}}
+    <div class="page-content gh-content">
+        {{content}}
+    </div>
+</article>
+{{/post}}

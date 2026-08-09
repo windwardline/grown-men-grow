@@ -1,8 +1,47 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
-  <rect width="1080" height="1920" fill="#3A1518"/>
-  <text x="1010" y="640" text-anchor="end" fill="#F2EBDD" fill-opacity="0.045" font-family="Helvetica Neue, Arial, sans-serif" font-size="380" font-weight="800" letter-spacing="-12">NEW</text>
-    <text x="90" y="210" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2.7">GROWN MEN GROW</text>
-  <text x="90" y="590" text-anchor="start" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="91" font-weight="800" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">I made a new thing.</tspan></text>
-    <text x="90" y="900" text-anchor="start" fill="#F2EBDD" font-family="Georgia, Times New Roman, serif" font-size="57" font-weight="400" font-style="normal" letter-spacing="-1.4"><tspan x="90" dy="0">It is called Grown Men Grow,</tspan><tspan x="90" dy="82">which is either a thesis</tspan><tspan x="90" dy="82">or a reminder.</tspan></text>
-  <text x="90" y="1780" fill="#F2EBDD" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="1.8">@GROWNMENGROW</text>
+  <defs>
+    <filter id="story-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="story-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="story-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1920" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="900" letter-spacing="4.2">GROWN MEN GROW</text>
+  <g transform="rotate(-0.7 540 617)">
+    <rect x="26" y="142" width="1028" height="984" fill="#60735A"/>
+    <rect x="34" y="128" width="1012" height="978" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/sunlit-writing-table.png" x="38" y="132" width="1004" height="970" preserveAspectRatio="xMidYMid slice" filter="url(#story-01-photo)"/>
+  </g>
+    <g transform="rotate(-4 220 135)">
+    <rect x="110" y="112" width="220" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="118" y1="119" x2="320" y2="116" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <g transform="rotate(-1 454 1131)">
+    <rect x="48" y="1060" width="812" height="142" fill="#F8F3EA"/>
+    <text x="72" y="1167.92" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="82" font-weight="900" letter-spacing="-2.5">I MADE A NEW THING.</text>
+  </g>
+    <text x="64" y="1324" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="58" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">It is called Grown Men Grow,</text>
+    <g transform="rotate(0.8 581 1436)">
+    <rect x="132" y="1370" width="898" height="132" fill="#3A1518"/>
+    <text x="156" y="1470.32" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="61" font-weight="900" letter-spacing="-2.5">WHICH IS EITHER A THESIS</text>
+  </g>
+    <g transform="rotate(-0.7 660 1564)">
+    <rect x="290" y="1498" width="740" height="132" fill="#EEE6D8"/>
+    <text x="314" y="1598.32" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="70" font-weight="900" letter-spacing="-2.5">OR A REMINDER.</text>
+  </g>
+    <path d="M78 1688 C250 1656 420 1712 592 1672 C748 1636 876 1684 1006 1658" fill="none" stroke="#B14F3F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="1868" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="2.6">@GROWNMENGROW</text>
+  <rect width="1080" height="1920" filter="url(#story-01-paper)" opacity="0.22" pointer-events="none"/>
 </svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <filter id="story-collage-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="19"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="story-collage-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.88"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.04" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.98" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="story-collage-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#121416" opacity="0.22"/>
+    </pattern>
+    <clipPath id="story-collage-torn-a">
+      <polygon points="18,26 294,10 566,28 832,8 1080,30 1062,316 1078,584 1054,840 786,826 528,846 274,824 12,842 28,572 8,298"/>
+    </clipPath>
+    <clipPath id="story-collage-torn-b">
+      <polygon points="16,18 328,6 634,24 1018,10 1034,350 1014,690 1030,1018 720,1006 414,1024 12,1008 28,672 8,334"/>
+    </clipPath>
+  </defs>
+  <rect width="1080" height="1920" fill="#F8F3EA"/>
+  <rect x="-40" y="128" width="850" height="1170" fill="#60735A" transform="rotate(-2 -40 128)"/>
+  <g transform="translate(0 112) rotate(1.2 520 560)" clip-path="url(#story-collage-torn-b)">
+    <image href="../../source/editorial/friends-in-conversation.png" x="18" y="0" width="1030" height="1220" preserveAspectRatio="xMidYMid slice" filter="url(#story-collage-photo)"/>
+  </g>
+  <rect x="752" y="100" width="328" height="1150" fill="url(#story-collage-dots)" opacity="0.5"/>
+  <g transform="rotate(-5 218 120)">
+    <rect x="106" y="96" width="224" height="48" fill="#D9CBAF" opacity="0.76"/>
+    <line x1="114" y1="103" x2="320" y2="100" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g transform="rotate(4 874 1184)">
+    <rect x="776" y="1160" width="196" height="48" fill="#D9CBAF" opacity="0.76"/>
+    <line x1="784" y1="1167" x2="962" y2="1164" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <text x="58" y="90" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="900" letter-spacing="4.3">GROWN MEN GROW</text>
+  <text x="1022" y="90" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="3">FIELD NOTE 01</text>
+  <g transform="rotate(-1.2 530 1350)">
+    <rect x="42" y="1242" width="996" height="164" fill="#F8F3EA"/>
+    <text x="66" y="1370" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="121" font-weight="700" letter-spacing="-4">A man can</text>
+  </g>
+  <g transform="rotate(1.4 550 1480)">
+    <rect x="94" y="1388" width="944" height="154" fill="#3A1518"/>
+    <text x="122" y="1507" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="105" font-weight="900" letter-spacing="-3.5">LOOK STRONG</text>
+  </g>
+  <g transform="rotate(-0.8 520 1615)">
+    <rect x="42" y="1530" width="838" height="144" fill="#EEE6D8"/>
+    <text x="66" y="1642" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="103" font-weight="700" letter-spacing="-3.5">and still</text>
+  </g>
+  <g transform="rotate(1 565 1760)">
+    <rect x="302" y="1662" width="736" height="150" fill="#B14F3F"/>
+    <text x="330" y="1780" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="112" font-weight="900" letter-spacing="-3.5">BE HIDING.</text>
+  </g>
+  <path d="M70 1838 C220 1808 382 1852 520 1818 C678 1780 846 1846 1010 1810" fill="none" stroke="#3A1518" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="1884" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.7">@GROWNMENGROW</text>
+  <rect width="1080" height="1920" filter="url(#story-collage-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

@@ -1,0 +1,30 @@
+{{!< default}}
+
+<section class="publication-masthead">
+    <div class="publication-masthead__inner">
+        <p class="eyebrow">Essays</p>
+        <h1>{{@site.title}}</h1>
+        {{#if @site.description}}
+            <p class="publication-masthead__deck">{{@site.description}}</p>
+        {{/if}}
+    </div>
+    <div class="publication-masthead__mark" aria-hidden="true">01</div>
+</section>
+
+{{#if posts}}
+    <section class="post-feed-wrap" aria-label="Latest writing">
+        <div class="post-feed">
+            {{#foreach posts}}
+                {{> "card" feature=@first}}
+            {{/foreach}}
+        </div>
+        {{pagination}}
+    </section>
+{{else}}
+    <section class="empty-state">
+        {{#if @site.description}}<h2>{{@site.description}}</h2>{{/if}}
+        {{#if @site.members_enabled}}
+            <a class="button" href="{{@site.signup_url}}">Subscribe</a>
+        {{/if}}
+    </section>
+{{/if}}
