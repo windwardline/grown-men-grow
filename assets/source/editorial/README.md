@@ -89,3 +89,14 @@ Hyperreal generated imagery must pass the full-resolution believability gate in 
 ## Rejected studies
 
 Three earlier dusk-heavy studies were rejected and removed from the repository because distressed walls, isolation, and dark staging communicated decline rather than building, repair, and growth.
+
+## Planned studies — pending generation quota (2026-08-09)
+
+The founder ruled that no photograph may appear on more than one surface and that the fix for repetition is a growing library of newly generated photography, with collage-rich compositions restored once these exist. Four prompts are validated (`mmx image generate`, model `image-01`, aspect 2:3, dry-run confirmed) and blocked only on MiniMax token-plan quota; the founder controls the top-up. Planned assignments keep the friends photograph exclusive to the Essay 1 body:
+
+- `cooking-breakfast-together.png` — two friends cooking breakfast in a bright kitchen; planned About dominant. Prompt: house structure; candid two-figure domestic scene, late-morning daylight, friendship without performance; avoid staged laughter, gloom, luxury, alcohol.
+- `doorway-running-shoes.png` — still life, cared-for running shoes by a front door in morning light; planned Start Here inset (threshold and forward motion). No people; one deep-red accent; avoid gym cues and branding.
+- `balcony-plant-care.png` — hands repotting a healthy plant on a bright balcony; planned About inset (patience and care). Hands and forearms only; avoid wilted plants and catalog staging.
+- `workbench-hand-tools.png` — still life, tidy workbench with maintained hand tools and warm hardwood; planned Essay 1 inset (competence and work in progress). No people; avoid grime, rust, macho cliches.
+
+Each generated study must pass the full-resolution believability gate before entering this directory, and its final prompt is recorded here in full at that point.

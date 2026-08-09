@@ -68,6 +68,24 @@ const assets = {
     ${scribble("M120 930 C330 886 540 948 750 902 C954 856 1174 924 1520 866", RUST, 11)}`),
 };
 
+// Founder rule (2026-08-09): no photograph appears on more than one surface.
+// The friends photograph is reserved for the Essay 1 body and may not be
+// composed into any feature image.
+const reserved = new Set(["editorial/friends-in-conversation.png"]);
+const seen = new Map();
+for (const [name, svg] of Object.entries(assets)) {
+  for (const match of svg.matchAll(/href="\/assets\/source\/(editorial\/[^"]+)"/g)) {
+    const source = match[1];
+    if (reserved.has(source)) {
+      throw new Error(`${name} uses ${source}, which is reserved for the Essay 1 body.`);
+    }
+    if (seen.has(source)) {
+      throw new Error(`${source} appears in both ${seen.get(source)} and ${name}; no photograph may repeat across surfaces.`);
+    }
+    seen.set(source, name);
+  }
+}
+
 for (const [name, svg] of Object.entries(assets)) writeAsset("ghost/feature-images", name, svg);
 
 console.log("Rendered three title-free Ghost feature-image SVG and PNG pairs.");
