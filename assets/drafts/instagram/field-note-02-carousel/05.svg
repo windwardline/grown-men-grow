@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn2-05-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn2-05-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn2-05-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 02 · 05 / 07</text>
+  <rect x="88" y="200" width="904" height="880" fill="#EEE6D8" transform="rotate(-1 540 640)"/>
+    <g transform="rotate(-4 310 199)">
+    <rect x="200" y="176" width="220" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="208" y1="183" x2="410" y2="180" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <g transform="rotate(3 800 1063)">
+    <rect x="700" y="1040" width="200" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="708" y1="1047" x2="890" y2="1044" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="150" y="380" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="88" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">Ask better than</text><text x="150" y="480" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="88" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">“You good?”</text>
+    <path d="M150 520 C260 492 380 540 470 508" fill="none" stroke="#60735A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="150" y="660" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">What has been taking up</text><text x="150" y="726" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">your head lately?</text>
+    <text x="150" y="850" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">Do you want advice, help,</text><text x="150" y="916" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">or ten minutes to say</text><text x="150" y="982" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">the ugly version?</text>
+    <g transform="rotate(-3 840 380)">
+    <rect x="730" y="300" width="220" height="160" fill="#FBF8F1"/>
+    <rect x="730" y="300" width="220" height="160" fill="none" stroke="#121416" stroke-opacity="0.14" stroke-width="1.6"/>
+    <rect x="744" y="336.3636363636364" width="166" height="7" fill="#71706B" opacity="0.55"/><rect x="744" y="372.72727272727275" width="192" height="7" fill="#71706B" opacity="0.55"/><rect x="744" y="409.09090909090907" width="166" height="7" fill="#71706B" opacity="0.55"/>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn2-05-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

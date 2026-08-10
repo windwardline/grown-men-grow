@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn2-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn2-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn2-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 02 · 01 / 07</text>
+  <g transform="rotate(-1.5 324 360)">
+    <rect x="64" y="150" width="520" height="420" fill="#FFFFFF" opacity="0.55"/>
+    <rect x="64" y="150" width="520" height="420" fill="none" stroke="#121416" stroke-opacity="0.12" stroke-width="2"/>
+  </g>
+    <g transform="rotate(-0.8 589 728)">
+    <rect x="138" y="268" width="902" height="954" fill="#60735A"/>
+    <rect x="146" y="254" width="886" height="948" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/walking-after-the-work.png" x="150" y="258" width="878" height="940" preserveAspectRatio="xMidYMax slice" filter="url(#fn2-01-photo)"/>
+  </g>
+    <g transform="rotate(-4 368 259)">
+    <rect x="258" y="236" width="220" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="266" y1="243" x2="468" y2="240" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <path d="M96 1176 C300 1120 560 1204 812 1140 C930 1112 990 1128 1026 1120" fill="none" stroke="#B14F3F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M996 1092 L1030 1118 L990 1134" fill="none" stroke="#B14F3F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="104" y="1120" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="64" font-weight="900" letter-spacing="2.4" transform="rotate(-90 104 1120)">CALL YOUR FRIENDS</text>
+    <text x="176" y="1120" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="34" font-weight="900" letter-spacing="2.4" transform="rotate(-90 176 1120)">BEFORE THERE’S A REASON.</text>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn2-01-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

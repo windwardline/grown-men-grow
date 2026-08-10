@@ -13,7 +13,7 @@ publication_authorized: false
 social_copy_status: founder-approved
 ghost_and_instagram_direction_status: founder-approved
 visual_direction_status: founder-approved
-artwork_status: pending-production
+artwork_status: rendered 2026-08-09 for founder review; publication timing remains gated
 ---
 
 # Ghost essay source
