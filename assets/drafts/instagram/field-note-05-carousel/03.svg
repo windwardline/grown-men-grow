@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn5-03-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn5-03-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn5-03-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 05 · 03 / 07</text>
+  <text x="90" y="540" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="80" font-weight="700" font-style="italic" text-anchor="start" letter-spacing="-1.6">We let the window close.</text><text x="90" y="638" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="80" font-weight="700" font-style="italic" text-anchor="start" letter-spacing="-1.6">Then we pay</text><text x="90" y="736" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="80" font-weight="700" font-style="italic" text-anchor="start" letter-spacing="-1.6">the crisis rate.</text>
+    <g transform="rotate(-4 166 832)">
+    <path d="M110 774 C96 788 102 796 108 800" fill="none" stroke="#3A1518" stroke-width="4" stroke-linecap="round"/>
+    <rect x="92" y="800" width="148" height="64" fill="#F8F3EA" stroke="#3A1518" stroke-width="4"/>
+    <circle cx="110" cy="814" r="5" fill="none" stroke="#3A1518" stroke-width="3"/>
+    <text x="126" y="843" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="1.4">×100</text>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn5-03-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

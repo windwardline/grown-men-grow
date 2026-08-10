@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn5-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn5-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn5-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 05 · 01 / 07</text>
+  <text x="64" y="250" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="88" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="1.2">ASK FOR HELP</text>
+    <text x="64" y="360" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="60" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="1.2">WHILE IT’S STILL CHEAP.</text>
+    <g transform="rotate(8 894 242)">
+    <path d="M838 184 C824 198 830 206 836 210" fill="none" stroke="#60735A" stroke-width="4" stroke-linecap="round"/>
+    <rect x="820" y="210" width="148" height="64" fill="#F8F3EA" stroke="#60735A" stroke-width="4"/>
+    <circle cx="838" cy="224" r="5" fill="none" stroke="#60735A" stroke-width="3"/>
+    <text x="854" y="253" fill="#60735A" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="1.4">CHEAP</text>
+  </g>
+    <g transform="rotate(-0.8 550 820)">
+    <rect x="128" y="450" width="844" height="774" fill="#60735A"/>
+    <rect x="136" y="436" width="828" height="768" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/hardware-counter-question.png" x="140" y="440" width="820" height="760" preserveAspectRatio="xMidYMid slice" filter="url(#fn5-01-photo)"/>
+  </g>
+    <g transform="rotate(-4 355 439)">
+    <rect x="250" y="416" width="210" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="258" y1="423" x2="450" y2="420" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn5-01-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

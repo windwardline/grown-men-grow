@@ -244,3 +244,12 @@ Never include credentials, private access codes, cookies, member data, or privat
 - **Verification:** All gates green (246 tracked files; pack and alt-text checks passing for all four pieces).
 - **External state:** None. Launch remains blocked solely on the founder's Publisher checkout.
 - **Ordered next actions:** (1) Next batch: FN5 artwork and pack, FN6 draft. (2) On the Publisher checkout: launch window, platform signups, pack-by-pack distribution.
+
+## 2026-08-09 — Claude Code — FN5 round closed; FN6 drafted; recovery note
+
+- **Scope completed:** Field Note 5 fully produced and closed under the round-closure rule: three new believability-gated photographs through the founder's ChatGPT account (hardware-counter question lead, open-wall wiring, paperwork second-eyes), feature image and seven-slide carousel in a distinct price-tag vocabulary, per-slide alt text, ninth review sheet, and its complete cross-platform pack (`content/distribution/field-note-05-platforms.md`) — all five pieces now closed. Field Note 6 drafted (`drafts/field-note-06-anger-is-a-terrible-manager.md`, anger as alarm versus manager) — every word unapproved pending founder review. Pack-completeness and alt-text checks extended to FN5.
+- **Process incident, contained:** During this batch a download-verification gap caused three repository directories (`drafts/`, `scripts/`, `docs/`) to be briefly moved into the session scratchpad when a shell glob matched nothing and `ls` fell back to listing the working directory. Detected within minutes; all three directories restored intact; `git status` confirmed zero loss (moves, not deletions; the repository never left the machine). Downloads now verify file type and dimensions via `find` + `file` before any move — the failure mode is closed.
+- **Verification:** All gates green — 269 tracked files, 15 JavaScript files, 67 launch PNG/SVG pairs across fifteen families, nine review sheets, twenty editorial source images, 73 SVGs XML-valid, clean diff checks.
+- **External state:** ChatGPT generations only; Ghost untouched; nothing published, posted, sent, or purchased.
+- **Content bank position:** Five complete, closed pieces (Essay 1 + FN2–FN5, each with essay, artwork, alt text, and platform pack); FN6 in founder review. Five-plus weeks of weekly runway on launch day.
+- **Ordered next actions:** (1) Founder reviews FN5 rendered artwork and the FN6 draft. (2) On approval: FN6 production round. (3) On the Publisher checkout: launch window, platform signups, distribution.
