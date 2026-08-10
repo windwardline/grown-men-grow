@@ -38,14 +38,6 @@ The compass questions fit in a normal working life: If this works completely, wh
 
 The new field note is about the demotion of effort from answer to engine, and why turning is not quitting. [canonical link]
 
-# Facebook Page
-
-The man who won't turn gets to be impressive on the wrong trail his whole life — a monument to effort, miles from anywhere he actually wanted to be.
-
-The man who turns looks worse for one season and better for every season after.
-
-New field note: You Can't Outwork a Wrong Direction. [canonical link]
-
 # Substack Notes
 
 ## Note 1

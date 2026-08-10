@@ -297,6 +297,7 @@ await validateNamedPngs('assets/drafts/brand/banners', new Map([
   ['bluesky-banner', { width: 1500, height: 500 }],
   ['ghost-publication-cover', { width: 2000, height: 840 }],
   ['social-banner-wide', { width: 1584, height: 396 }],
+  ['linkedin-banner', { width: 1584, height: 396 }],
 ]));
 await validateNamedPngs('assets/drafts/review', new Map([
   ['foundational-carousel', { width: 1362, height: 1004 }],
@@ -349,9 +350,9 @@ for (const file of tracked.filter((item) => publicSurface(item) && textExtension
 
 // Round-closure rule (founder-ruled 2026-08-09): every piece carries a
 // complete cross-platform pack and per-slide Instagram alt text.
-// Pinterest (2026-08-09) and Threads (2026-08-10) were eliminated from the
-// network by founder decision.
-const packSections = ['# Medium', '# Bluesky', '# LinkedIn', '# Facebook', '# Substack'];
+// Pinterest (2026-08-09), Threads (2026-08-10), and Facebook (2026-08-10)
+// were eliminated from the network by founder decision.
+const packSections = ['# Medium', '# Bluesky', '# LinkedIn', '# Substack'];
 const packs = new Map([
   ['Essay 1', 'content/distribution/essay-01-launch.md'],
   ['Field Note 2', 'content/distribution/field-note-02-platforms.md'],
@@ -396,4 +397,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 107 launch PNG/SVG pairs, fourteen review sheets, thirty-five editorial source images, three brand banners, and five editorial concept pairs.`);
+console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 107 launch PNG/SVG pairs, fourteen review sheets, thirty-five editorial source images, four brand banners, and five editorial concept pairs.`);

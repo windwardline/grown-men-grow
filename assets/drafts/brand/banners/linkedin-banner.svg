@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396">
+  <defs>
+    <filter id="linkedin-banner-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="linkedin-banner-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="linkedin-banner-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1584" height="396" fill="#F8F3EA"/>
+  <rect x="1172" y="0" width="412" height="396" fill="#EEE6D8" transform="rotate(1.1 1378 198)"/>
+  <rect x="467" y="80" width="697" height="241" fill="#EEE6D8" transform="rotate(-0.9 815.5 200.5)"/>
+  <g transform="rotate(-4 762 91)">
+    <rect x="662" y="68" width="200" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="670" y1="75" x2="852" y2="72" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g transform="rotate(5 1086 330)">
+    <rect x="1011" y="307" width="150" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="1019" y1="314" x2="1151" y2="311" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <text x="531" y="171" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="41" font-weight="700" font-style="italic" letter-spacing="-1">Essays on the unfinished</text>
+  <text x="531" y="221" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="41" font-weight="700" font-style="italic" letter-spacing="-1">work of being a man.</text>
+  <path d="M535 237 q 106.60000000000001 12.299999999999999 217.29999999999998 0" fill="none" stroke="#B14F3F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="533" y="300" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="2.6">GROWNMENGROW.COM</text>
+  <rect x="1228" y="144" width="261" height="113" fill="#60735A" transform="rotate(1.4 1358.5 200.5)"/>
+  <g transform="rotate(-5 1367 156)">
+    <rect x="1312" y="133" width="110" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="1320" y1="140" x2="1412" y2="137" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <text x="1359" y="191" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="900" letter-spacing="1.6" text-anchor="middle" transform="rotate(1.4 1358.5 200.5)">ONE FIELD NOTE</text>
+  <text x="1359" y="232" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="900" letter-spacing="1.6" text-anchor="middle" transform="rotate(1.4 1358.5 200.5)">A WEEK</text>
+  <path d="M404 257 q 24.119999999999997 -42.88 53.6 -13.4 q 24.119999999999997 24.119999999999997 5.36 37.52" fill="none" stroke="#B14F3F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect width="1584" height="396" filter="url(#linkedin-banner-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

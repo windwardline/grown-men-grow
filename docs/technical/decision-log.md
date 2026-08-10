@@ -357,3 +357,9 @@
 - Publication timing and final artwork for Field Note 2.
 - Final approval of platform adaptations for later essays; the Essay 1 distribution pack is approved.
 - Any future change from private to public repository visibility.
+
+## 2026-08-10 — Forego Facebook; build the LinkedIn Page in full
+
+- **Status:** Decided by the founder ("I want you to build out that LinkedIn page in full, and set it up for automation. Similarly, set up the Instagram automation now that it is setup. I think we will forego Facebook, like Pinterest and Threads.")
+- **Context:** The founder created the LinkedIn Page (linkedin.com/company/grown-men-grow, vanity URL `grown-men-grow`) during the same session. No Facebook Page had ever been created, so the elimination unwinds no external account state.
+- **Effect:** Facebook sections were removed from all ten platform packs, the pack-completeness gate now requires four platform sections (Medium, Bluesky, LinkedIn, Substack Notes), and the distribution plan, prep register, analytics targets, SEO plan, and founder-decisions checklist no longer carry Facebook. The LinkedIn Page was built out in full — square wordmark logo, a LinkedIn-specific tagline-led cover (new `linkedin-banner` render target whose composition avoids duplicating the logo LinkedIn overlays on the cover; founder-approved in review), tagline, and an About assembled verbatim from approved copy — and connected to Buffer's third channel slot with the founder's OAuth grant. Buffer Free now carries Instagram, Bluesky, and the LinkedIn Page with no open slots. Meta tooling serves Instagram only.

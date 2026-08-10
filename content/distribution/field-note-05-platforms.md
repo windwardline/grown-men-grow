@@ -38,14 +38,6 @@ Wait, and the currency changes — money, time, health — with the pride paymen
 
 The new field note is about the reframe that holds: knowing when to ask is part of the skill. Every trade knows it. [canonical link]
 
-# Facebook Page
-
-Every man knows the moment. The bolt won’t move. The number on the screen has been wrong for three months, and the reason has stopped being interesting and started being frightening.
-
-There was a window where asking would have cost almost nothing.
-
-New field note: Ask for Help While It’s Still Cheap. [canonical link]
-
 # Substack Notes
 
 ## Note 1
