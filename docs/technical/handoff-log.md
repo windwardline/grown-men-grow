@@ -306,3 +306,9 @@ Following the denied Meta appeal, the founder eliminated Threads entirely ("Elim
 **Repository:** post.hbs byline and author-card blocks removed; author.hbs neutralized to archive framing; theme contract updated to forbid the byline loop; content frontmatter converted to "byline: none — publication voice"; metadata register and AGENTS.md identity contract updated; verify-repository founder-name gate broadened from Instagram-only to every public surface; concept and preview renderers re-rendered without the name; theme bumped to 1.3.0. Full gate suite green including GScan.
 
 **Note:** Threads elimination (PR #28) merged earlier this session. The Zapier→Buffer routing build remains scoped but blocked on a founder-created Buffer account and the live Ghost site.
+
+## 2026-08-10 — Claude Code: rounds 7-10 founder approval recorded
+
+**Client:** Claude Code (desktop). **Branch:** `docs/rounds-7-10-approved`.
+
+The founder approved rounds 7-10 in full ("Rounds 7-10 are approved."). Pack frontmatter, field-note artwork status, and the prep register now record the approval. All ten content rounds are closed and approved: essay, artwork, per-slide alt text, and five-platform pack each. Next per the founder's standing instruction: the platform settings-optimization sweep and Zapier routing scope.

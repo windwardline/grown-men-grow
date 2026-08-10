@@ -29,10 +29,10 @@ Shared profile configuration (bio line, avatar, link policy) is already recorded
 - Field Note 4: `content/distribution/field-note-04-platforms.md` — founder-approved under the round-closure directive.
 - Field Note 5: `content/distribution/field-note-05-platforms.md` — founder-approved under the round-closure directive.
 - Field Note 6: `content/distribution/field-note-06-platforms.md` — founder-approved under the ten-round directive.
-- Field Note 7: `content/distribution/field-note-07-platforms.md` — drafted under the ten-round directive; founder veto on sight.
-- Field Note 8: `content/distribution/field-note-08-platforms.md` — drafted under the ten-round directive; founder veto on sight.
-- Field Note 9: `content/distribution/field-note-09-platforms.md` — drafted under the ten-round directive; founder veto on sight.
-- Field Note 10: `content/distribution/field-note-10-platforms.md` — drafted under the ten-round directive; founder veto on sight.
+- Field Note 7: `content/distribution/field-note-07-platforms.md` — founder-approved 2026-08-10.
+- Field Note 8: `content/distribution/field-note-08-platforms.md` — founder-approved 2026-08-10.
+- Field Note 9: `content/distribution/field-note-09-platforms.md` — founder-approved 2026-08-10.
+- Field Note 10: `content/distribution/field-note-10-platforms.md` — founder-approved 2026-08-10.
 - All packs carry five platform sections (Medium, Bluesky, LinkedIn, Facebook, Substack Notes) after the 2026-08-09 Pinterest elimination and the 2026-08-10 Threads elimination.
 - Round-closure rule (founder-ruled 2026-08-09): a content round is complete only when essay, artwork, and cross-platform pack all exist; every future piece ships its pack at approval time.
 

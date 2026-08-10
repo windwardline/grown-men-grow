@@ -1,7 +1,8 @@
 ---
 essay: Rest Is Not a Reward
 canonical: https://grownmengrow.com/rest-is-not-a-reward/ (live only after launch)
-status: founder-approved copy source; pack drafted under the ten-round directive
+status: founder-approved
+approved: 2026-08-10 — rounds 7-10 approved in full
 image_rule: per-article — this pack may use only Field Note 7 imagery
 ---
 
