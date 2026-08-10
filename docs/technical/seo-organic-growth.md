@@ -26,7 +26,7 @@ Ghost automatically supplies XML sitemaps, canonical tags, structured data, and 
 ## Launch indexing sequence
 
 1. Recheck the Ghost trial and plan state at the launch checkpoint. The founder deferred the Publisher purchase while the trial remains active; do not complete a charge from the earlier approval alone.
-2. Launch does not wait for the purchase (delegated ruling, 2026-08-09): proceed on the trial with the analytics the active plan provides, and enable full native web analytics when the founder later confirms the Publisher charge.
+2. Live discovery 2026-08-09: the trial's pre-launch mode locks public access entirely, so launch waits for the founder's Publisher checkout. On purchase, remove privacy, then enable full native web analytics.
 3. Remove private mode only when the founder authorizes launch.
 4. Verify `robots.txt`, `/sitemap.xml`, page canonicals, titles, descriptions, Open Graph data, `max-image-preview:large`, and response codes on the public domain.
 5. Publish Start Here, About, and Essay 1 under the approved slugs.

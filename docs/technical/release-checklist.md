@@ -32,7 +32,7 @@
 - [x] A founder-controlled Gmail inbox is authorized for private membership and email tests; no inbox credentials are stored in the repository.
 - [ ] Essay 1 web, email, and social previews are approved.
 - [ ] Sitemap, canonical URLs, metadata, and social images are correct.
-- [ ] Native analytics and member-source attribution are enabled to the extent the active plan provides. Launch may proceed on the trial (delegated ruling, 2026-08-09); the deferred Publisher purchase remains a founder-only checkout and upgrades analytics when completed.
+- [ ] Native analytics and member-source attribution are enabled after the Publisher purchase. Live discovery 2026-08-09: the trial's pre-launch mode cannot go public, so the founder's checkout is the launch gate itself; the founder deferred it for affordability with 12 trial days remaining.
 - [ ] `max-image-preview:large`, structured metadata, automatic canonicals, and the Ghost sitemap are present on the public pages.
 
 ## Domain and security

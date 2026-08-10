@@ -114,3 +114,27 @@ The founder ruled on 2026-08-09 that no photograph may appear on more than one s
 - Status: composition study; consumed only by the Essay 1 feature collage (inset)
 - Review note: the hand plane's brass adjuster reads as a vintage adjustable pattern; flagged at review and accepted for inset-scale use, subject to normal founder review of the final rendering.
 - Prompt: editorial still life, tidy home workbench in bright late-morning daylight, clean well-maintained hand tools laid out with intention beside partly sanded warm hardwood, shavings gathered neatly, a pencil on the bench; competence, order, work in progress; no people; contemporary magazine still-life photography, tactile materials, subtle grain; asymmetric composition, generous negative space; soft daylight, warm paper-toned highlights; no logos, no readable text, no watermark; avoid grime, rust, decay, darkness, macho workshop cliches, dangerous-tool styling, luxury signaling, heavy shadows.
+
+## Current composition studies — Field Note 2 set (generated 2026-08-09)
+
+Generated through the founder's own ChatGPT account (GPT image generation, portrait 2:3, 1024x1536) for "Call Your Friends Before There's a Reason" under its approved bright friendship-led visual direction. Each passed the full-resolution believability review and is assigned to exactly one surface family (the Field Note 2 feature image and carousel). Nothing here may be reused elsewhere.
+
+### `walking-after-the-work.png`
+
+- Status: composition study; Field Note 2 lead (feature image and carousel cover)
+- Prompt: original editorial photograph, two adult male friends walking side by side along a bright well-kept neighborhood sidewalk in late morning after an ordinary weekend task, one carrying a small canvas tool bag, easy movement mid-stride, one mid-laugh; mature trees, warm brick homes, bicycles softly out of focus; candid editorial photography, natural texture, restrained grain; figures across the lower third with generous sky; bright open daylight; pristine anatomy, no logos, no readable text, no watermark; avoid dusk, gloom, staged sympathy, hugging, matching outfits, gym cues, luxury signaling, stock grins.
+
+### `deck-board-detail.png`
+
+- Status: composition study; Field Note 2 carousel detail slide
+- Prompt: close editorial detail, two men's hands from opposite sides aligning one fresh cedar deck board on a partly rebuilt backyard deck in bright late-morning sun, cordless drill and screws resting on finished boards; side-by-side work and easy collaboration; hands and forearms only, no faces; tight off-center composition; warm new wood against weathered boards; pristine anatomy, no logos, no readable text; avoid grime, rot, gloom, tool drama, catalog styling.
+
+### `truck-tailgate-loading.png`
+
+- Status: composition study; Field Note 2 carousel spread (first photograph)
+- Prompt: two adult male friends loading hand tools and a folded drop cloth into the open tailgate of an ordinary well-kept pickup on a bright residential street, one sliding a toolbox in, the other at the tailgate corner mid-remark, both at ease; plain truck with no badges or readable text; candid editorial photography, asymmetric composition, bright daylight; pristine anatomy, no logos, no watermark; avoid macho truck-ad styling, luxury signaling, catalog poses.
+
+### `porch-coffee-pause.png`
+
+- Status: composition study; Field Note 2 carousel spread (second photograph)
+- Prompt: editorial still life, two plain ceramic coffee mugs side by side on broad clean porch steps in bright late-morning light beside worn leather work gloves and a tape measure; a pause after shared work, ordinary friendship with no occasion; no people; magazine still-life photography, tactile materials, subtle grain, generous negative space, one small deep-red accent; avoid decay, clutter, gloom, catalog styling, heavy shadows.
