@@ -325,3 +325,9 @@ The founder approved rounds 7-10 in full ("Rounds 7-10 are approved."). Pack fro
 **Remaining founder-only step for scheduling (not required for the stub automation):** connecting the Bluesky channel inside Buffer requires a Bluesky app password typed into Buffer — credential entry stays with the founder by security policy. LinkedIn's Buffer slot waits until that Page exists.
 
 **Launch checklist addition:** turn the Zap on (one click, Zapier → Zaps) immediately after the site goes public.
+
+## 2026-08-10 — Claude Code: Bluesky channel connected to Buffer
+
+**Client:** Claude Code (desktop). **Branch:** `docs/buffer-bluesky-connected`.
+
+The Bluesky channel (Grown Men Grow, grownmengrow.com) is connected in Buffer and verified live — 1 of 3 free channel slots used, queue active. Division of labor followed the credential policy: the agent created the Bluesky app password (named `buffer`, direct-message access excluded) without viewing the revealed secret and pre-filled the Buffer handle field; the founder performed the single copy-paste of the secret and confirmed. The distribution pipeline is now fully assembled: Ghost publish → RSS → Zapier (draft Zap, on at launch) → Buffer Idea, with Bluesky connected for scheduling reviewed posts. LinkedIn's Buffer slot waits until that Page exists. Buffer's default posting-time suggestions are untouched; scheduling remains a per-post editorial decision under the review-before-publish boundary.
