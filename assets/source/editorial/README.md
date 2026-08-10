@@ -218,3 +218,8 @@ Generated through the founder's ChatGPT account (GPT image generation, 1024x1536
 - `cutting-board-vegetables.png` — Field Note 10: a man's hands slicing a red bell pepper on a wooden cutting board in bright daylight, greens and a tomato nearby.
 
 All ten rounds' photography is complete; each file passed the full-resolution believability gate at promotion.
+
+
+## Production home: the ChatGPT "Grown Men Grow" project (recorded 2026-08-10)
+
+All image-generation conversations now live in a dedicated ChatGPT Project named **Grown Men Grow** on the founder's Plus account (`https://chatgpt.com/g/g-p-6a7964e544d08191b72ae9209ec84f73-grown-men-grow/project`), pinned in the sidebar. It contains the six conversations that produced the complete 35-photo editorial library. Standing practice for future rounds: start every new image-generation chat inside this project so prompts, style continuity, and generation history stay in one place. The house prompt structure recorded above still governs every request.
