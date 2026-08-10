@@ -235,3 +235,12 @@ Never include credentials, private access codes, cookies, member data, or privat
 - **External state:** ChatGPT generations only; Ghost untouched; nothing published, posted, sent, or purchased. Launch remains blocked solely on the founder's Publisher checkout.
 - **Content bank position:** Four complete, closed pieces (Essay 1, FN2, FN3, FN4 — each with essay, artwork, and platform pack) plus FN5 in founder review. At weekly cadence: a month-plus of runway on launch day, with distribution copy ready for every approved platform.
 - **Ordered next actions:** (1) Founder reviews FN4 rendered artwork and the FN5 draft. (2) On approval: FN5 artwork and pack, FN6 draft. (3) On the Publisher checkout: launch window, then founder-performed platform signups per the prep doc, then the pack-by-pack distribution sequence.
+
+## 2026-08-09 — Claude Code — Pack completeness confirmed and mechanized; FN5 promoted
+
+- **Founder question answered:** A mechanical audit confirmed all four closed pieces carry every section of the cross-platform pack (Medium, Threads, Bluesky, LinkedIn, Facebook Page, Substack Notes, Pinterest) plus their Instagram carousels and captions. The one gap found — per-slide Instagram alt text existed only for Essay 1 — was closed: FN2, FN3, and FN4 now carry full seven-slide alt text sections describing the rendered artwork. Ghost Social Web/Explore are platform-level activations, not per-piece copy; launch Stories belong to the Essay 1 launch moment, matching the approved pack pattern.
+- **Mechanized:** `verify-repository.mjs` now fails if any closed piece's pack is missing a platform section or its Instagram alt text — the round-closure rule is a build gate, not a convention.
+- **FN5:** Promoted to `content/field-notes/ask-for-help-while-its-still-cheap.md` as founder-approved; artwork and platform pack queued for the next production batch, and the round stays open until both exist.
+- **Verification:** All gates green (246 tracked files; pack and alt-text checks passing for all four pieces).
+- **External state:** None. Launch remains blocked solely on the founder's Publisher checkout.
+- **Ordered next actions:** (1) Next batch: FN5 artwork and pack, FN6 draft. (2) On the Publisher checkout: launch window, platform signups, pack-by-pack distribution.

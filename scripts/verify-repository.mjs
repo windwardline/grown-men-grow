@@ -311,7 +311,36 @@ for (const file of tracked.filter(instagramFacing)) {
   await checkTextPolicy(path.join(root, file), /peacock/i, 'the Instagram founder-identity rule');
 }
 
+// Round-closure rule (founder-ruled 2026-08-09): every piece carries a
+// complete cross-platform pack and per-slide Instagram alt text.
+const packSections = ['# Medium', '# Threads', '# Bluesky', '# LinkedIn', '# Facebook', '# Substack', '# Pinterest'];
+const packs = new Map([
+  ['Essay 1', 'content/distribution/essay-01-launch.md'],
+  ['Field Note 2', 'content/distribution/field-note-02-platforms.md'],
+  ['Field Note 3', 'content/distribution/field-note-03-platforms.md'],
+  ['Field Note 4', 'content/distribution/field-note-04-platforms.md'],
+]);
+for (const [label, file] of packs) {
+  const text = await readFile(path.join(root, file), 'utf8');
+  for (const section of packSections) {
+    if (!text.split('\n').some((line) => line.startsWith(section))) {
+      fail(`${file} is missing the ${section.slice(2)} section of ${label}'s platform pack.`);
+    }
+  }
+}
+const altTexted = [
+  'content/instagram/launch-package.md',
+  'content/field-notes/call-your-friends-before-theres-a-reason.md',
+  'content/field-notes/friendship-has-a-maintenance-schedule.md',
+  'content/field-notes/a-confession-can-still-be-selfish.md',
+];
+for (const file of altTexted) {
+  const text = await readFile(path.join(root, file), 'utf8');
+  if (!/alt text/i.test(text)) fail(`${file} is missing its Instagram alt text section.`);
+}
+
 if (failures.length) {
+
   console.error('Repository verification failed:');
   for (const failure of failures) console.error(`- ${failure}`);
   process.exit(1);

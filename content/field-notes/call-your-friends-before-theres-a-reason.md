@@ -208,6 +208,16 @@ A friendship needs practice before it can hold a crisis. That practice is usuall
 
 The next field note is about the friendships men say matter and the maintenance we keep pretending they do not require.
 
+# Instagram alt text source
+
+- Slide 1: Two friends walking a bright neighborhood sidewalk carrying a canvas tool bag, in a paper collage with the title running up the left edge and a hand-drawn route line.
+- Slide 2: Large serif text reading Doing something together counts, lines about the game, the drive, and the project, and a green banner reading That is how trust gets built.
+- Slide 3: Sparse italic page reading The problem begins when the activity has to carry every subject forever.
+- Slide 4: Two men's hands aligning a fresh cedar deck board beside a drill, above strips reading Male friendship deserves more than emergency contact information.
+- Slide 5: Paper card asking Ask better than "You good?", with two follow-up questions in italic serif.
+- Slide 6: Two taped photographs — friends loading a pickup tailgate, and two coffee mugs beside work gloves on porch steps — above Friendship is not crisis management.
+- Slide 7: Closing page reading Call him while there is no emergency, with a hand-drawn route line ending in an arrow.
+
 # Visual direction
 
 - Family: Conversation with Dispatch pacing.

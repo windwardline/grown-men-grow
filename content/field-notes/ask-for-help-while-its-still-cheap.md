@@ -6,13 +6,13 @@ author: Michael Peacock
 access: public
 email_subject: Ask for Help While It’s Still Cheap
 preview: The price of help only goes one direction while you wait.
-status: draft-for-founder-review
-approved: none — every word requires founder review and approval before staging or publication
+status: founder-approved
+approved: 2026-08-09 — essay, carousel, caption, and visual direction approved as written; publication timing remains gated
 personal_claims: none included; add only from founder-supplied facts
-artwork_status: not-started; unique imagery required under the per-article image rule
+artwork_status: queued — next production batch under the per-article image rule; round closes only with artwork and platform pack
 ---
 
-# Ghost essay source — DRAFT, NOT APPROVED
+# Ghost essay source
 
 Every man knows the moment. The bolt will not move. The wire does not reach. The number on the screen has been wrong for three months, and the reason it is wrong has stopped being interesting and started being frightening.
 
@@ -58,7 +58,7 @@ Ask early. Ask specifically. Ask while it is still cheap.
 
 The window is open right now, on something. You know which one.
 
-# Instagram carousel source — DRAFT, NOT APPROVED
+# Instagram carousel source
 
 ## Slide 1
 
@@ -100,7 +100,7 @@ The window is open right now, on something.
 
 You know which one.
 
-# Instagram caption source — DRAFT, NOT APPROVED
+# Instagram caption source
 
 Every man knows the moment. The bolt won’t move. The number on the screen has been wrong for three months and the reason has stopped being interesting and started being frightening.
 
@@ -112,7 +112,7 @@ Knowing when to ask is part of the skill. Every trade knows it. The amateur move
 
 Ask early. Ask specifically. Ask while it’s still cheap.
 
-# Visual direction — DRAFT
+# Visual direction
 
 - Family: Field Note; image-led with practical energy. Must not reuse any prior article's photographs or signature vocabularies (FN2 route line, FN3 tally marks and circled day, FN4 weight bars).
 - Candidate lead: a hardware-store counter conversation, or an open wall with wiring paused mid-job and daylight through the studs; the open-window-of-time idea carried by work left honestly unfinished.
@@ -121,6 +121,6 @@ Ask early. Ask specifically. Ask while it’s still cheap.
 
 # Production notes
 
-- DRAFT. Nothing in this file is approved. The founder reviews and rules on the essay, carousel, caption, and visual direction before any staging.
+- The founder approved the essay, carousel, caption, and visual direction on 2026-08-09. Publication timing remains a later release decision.
 - No first-person concrete anecdote appears; none may be added except from founder-supplied facts.
 - Voice calibration source: Field Note 2 per the 2026-08-08 founder ruling.

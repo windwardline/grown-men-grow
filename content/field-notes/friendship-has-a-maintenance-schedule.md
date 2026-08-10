@@ -130,6 +130,16 @@ The schedule is short and unromantic, which is the point: a call with no reason 
 
 Somebody has to go first. Going first is not losing. It's what stewardship sounds like on the phone.
 
+# Instagram alt text source
+
+- Slide 1: Title Friendship Has a Maintenance Schedule above a photograph of a man taking a relaxed phone call in his open garage doorway, with tally marks in the corner.
+- Slide 2: Serif text reading Men maintain everything they value — oil, decks, smoke detectors — with green and oxblood tally marks.
+- Slide 3: Sparse italic page reading Then we put the friendships we'd run into traffic for on a schedule of never.
+- Slide 4: A man's hands checking a car's oil dipstick over a clean engine bay, above strips about the upkeep myth and truck brakes.
+- Slide 5: Large serif page reading History is why the friendship stands. It is not why the lights are on.
+- Slide 6: Hands replacing a ceiling smoke-detector battery, above a card listing the schedule with a hand-drawn circle around A call on a Tuesday.
+- Slide 7: Closing page reading Somebody has to go first. Going first isn't losing. It's ownership, with green tally marks.
+
 # Visual direction
 
 - Family: Recognition with detail-led pacing; must not reuse Field Note 2's route-line vocabulary or any existing photograph.
