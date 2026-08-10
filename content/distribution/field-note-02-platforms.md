@@ -85,19 +85,3 @@ Friendship is not crisis management. It needs honesty, limits, reciprocity, and 
 ## Note 3 — canonical link
 
 Call him while there is no emergency. Give the friendship something besides history to live on. [canonical link]
-
-# Pinterest
-
-## Pin 1
-
-- Image: Field Note 2 carousel slide 1 (cover)
-- Title: Call Your Friends Before There’s a Reason
-- Description: Male friendship deserves more than a crisis plan. A field note on ordinary contact, better questions, and giving friendship something besides history to live on. From Grown Men Grow.
-- Link: [canonical link]
-
-## Pin 2
-
-- Image: Field Note 2 carousel slide 5 (prompt card)
-- Title: Ask Better Than “You Good?”
-- Description: Two questions that give a friend somewhere to put an honest answer. From Grown Men Grow, essays on the unfinished work of being a man.
-- Link: [canonical link]

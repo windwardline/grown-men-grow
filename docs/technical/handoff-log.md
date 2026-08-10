@@ -263,3 +263,30 @@ Never include credentials, private access codes, cookies, member data, or privat
 - **Verification:** All gates green — 299 tracked files, 16 JavaScript files, 75 launch PNG/SVG pairs, ten review sheets, twenty-seven editorial source images, 81 SVGs valid.
 - **External state:** ChatGPT generations only; Ghost untouched; nothing published, posted, sent, or purchased.
 - **Ordered next actions:** (1) Recover FN9's two generated images from the ChatGPT conversation; generate FN10's two (blood-pressure cuff with notebook lead; running shoes with alarm clock detail). (2) Write renderers 7-10 in their recorded signatures and packs 7-10; wire verification; render sheets. (3) Merge the branch; ten rounds closed. (4) Launch window on the founder's Publisher checkout.
+
+## 2026-08-10 — Claude Code: platform profiles configured, Pinterest eliminated, content rounds 7–10 closed
+
+**Client:** Claude Code (desktop). **Branches:** `feat/platform-setup-pinterest-exit` (PR #27, auto-merge armed) and `feat/rounds-7-10-close` (PR follows this entry).
+
+**External account state changed (all founder-authorized this session):**
+- **Bluesky:** display name "Grown Men Grow", bio, brand avatar, and brand banner set via the signed-in session's own PDS API; `_atproto.grownmengrow.com` TXT record added in Cloudflare and the handle switched to **@grownmengrow.com** (verified live).
+- **Medium:** username **@grownmengrow** (grownmengrow.medium.com), display name "Grown Men Grow", bio, brand avatar. Third-party AI setting deliberately left on "Prioritize maximum reach" (still requests no-training; preserves crediting/referrals, which is Medium's role in the plan).
+- **Substack:** publication renamed **Grown Men Grow**, short description set, brand logo uploaded, "Tell AI tools not to train" ON, reader pledges OFF (keeps Substack inside the Notes-only, Ghost-is-the-only-paid-surface boundary). The founder's personal Substack user profile still shows "Michael Peacock" — flagged for a founder call.
+- **Ghost:** publication cover image and Michael Peacock author cover set to the new brand banner (uploaded via the signed-in admin session).
+- **Pinterest:** profile had been configured (avatar, username grownmengrow, bio, website), then the founder ruled Pinterest OUT of the network ("mostly for visual boards, not essays") and personally closed the account the same evening.
+- **Threads:** account suspension appeal DENIED; Meta states no further review is available. A new Threads presence would require a different Instagram account. Keep-or-drop ruling put to the founder.
+
+**Repository work:**
+- PR #27: Pinterest removed from the six platform packs, the pack gate (now six sections), the distribution plan, and the prep register; decision-log entry added; `scripts/render-brand-banners.mjs` renders the Bluesky/Ghost/wide brand banners (wordmark only — no article imagery).
+- Rounds 7–10 closed: eight new editorial source photographs generated through the founder's ChatGPT account, each verified 1024×1536 and passed the full-resolution believability gate (pegboard-end-of-day; trail-fork-daylight; garden-beds-two-heights, car-odometer-daylight, photos-notebook-spread; bp-cuff-notebook, running-shoes-alarm, cutting-board-vegetables). Renderers `render-field-note-07/08/09/10.mjs` with per-note signature vocabularies (battery gauge, diverging arrows, dashed loop, ledger marks) and cross-article guards; platform packs `field-note-07/08/09/10-platforms.md` (six platforms each); verify-repository wiring (families, 12 feature images, 35 sources, banners, packs, alt-text list, counts); contact sheets now 14.
+- Verification: verify-repository (390 tracked files, 107 launch pairs), verify-svg-xml (116 SVGs), verify-ghost-theme, GScan via `pnpm --dir theme test`, `git diff --check` clean.
+
+**Incidents:** Two FN9 images were recovered from the ChatGPT conversation thumbnail rail after an earlier failed download. A stray "Grown Men Grow" string briefly typed into Pinterest's Address Line 1 field was cleared immediately and never saved.
+
+**Open items, in order:**
+1. Founder veto pass on rounds 7–10 artwork and packs (contact sheets under `assets/drafts/review/`).
+2. Founder ruling on Threads: keep the drafted Threads sections as ready copy, or eliminate like Pinterest.
+3. Substack personal user-profile name (brand vs founder name) — founder call.
+4. Launch remains blocked solely on the founder's Ghost Publisher checkout; Instagram launch sequence and SEO/membership verifications queue behind it.
+
+Nothing was published, posted, sent, or purchased. All profile changes are account configuration on founder-created accounts.

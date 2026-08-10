@@ -85,6 +85,38 @@ const sheets = [
     itemHeight: 375,
   },
   {
+    name: "field-note-07-carousel",
+    title: "Field Note 7 carousel",
+    items: numbered("instagram/field-note-07-carousel", 7),
+    columns: 4,
+    itemWidth: 300,
+    itemHeight: 375,
+  },
+  {
+    name: "field-note-08-carousel",
+    title: "Field Note 8 carousel",
+    items: numbered("instagram/field-note-08-carousel", 7),
+    columns: 4,
+    itemWidth: 300,
+    itemHeight: 375,
+  },
+  {
+    name: "field-note-09-carousel",
+    title: "Field Note 9 carousel",
+    items: numbered("instagram/field-note-09-carousel", 7),
+    columns: 4,
+    itemWidth: 300,
+    itemHeight: 375,
+  },
+  {
+    name: "field-note-10-carousel",
+    title: "Field Note 10 carousel",
+    items: numbered("instagram/field-note-10-carousel", 7),
+    columns: 4,
+    itemWidth: 300,
+    itemHeight: 375,
+  },
+  {
     name: "stories-static-reel",
     title: "Stories, static post, and Reel cover",
     items: [

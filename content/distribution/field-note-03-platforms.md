@@ -83,19 +83,3 @@ Somebody has to go first, and going first feels like losing. It isn't. It's owne
 ## Note 3 — canonical link
 
 Friendship has a maintenance schedule. The oil change takes longer. [canonical link]
-
-# Pinterest
-
-## Pin 1
-
-- Image: Field Note 3 carousel slide 1 (cover)
-- Title: Friendship Has a Maintenance Schedule
-- Description: Men maintain everything they value — except the friendships that matter most. A field note on the short, unromantic schedule that keeps a friendship running. From Grown Men Grow.
-- Link: [canonical link]
-
-## Pin 2
-
-- Image: Field Note 3 carousel slide 6 (the schedule card)
-- Title: The Friendship Maintenance Schedule
-- Description: A call on a Tuesday. A specific question. One honest sentence back. A plan with a date on it. From Grown Men Grow, essays on the unfinished work of being a man.
-- Link: [canonical link]

@@ -14,7 +14,6 @@ Account creation, identity verification, CAPTCHA, MFA, and payment steps are fou
 | Medium | grownmengrow (publication name Grown Men Grow) | After canonical URLs are live |
 | Bluesky | @grownmengrow.bsky.social (custom domain later optional) | Any time; posting waits for launch |
 | LinkedIn Page | Grown Men Grow (company page) | Any time; posting waits for launch |
-| Pinterest Business | grownmengrow | Any time; pins wait for launch |
 | Facebook Page | Grown Men Grow | Any time; posting waits for launch |
 | Substack (Notes only) | grownmengrow — no newsletter import, no list sync, Notes only | After launch |
 | YouTube / TikTok / X | @grownmengrow — reserve only; inactive until original motion work (X stays inactive) | Founder convenience |
@@ -29,6 +28,13 @@ Shared profile configuration (bio line, avatar, link policy) is already recorded
 - Field Note 2: `content/distribution/field-note-02-platforms.md` — founder-approved.
 - Field Note 3: `content/distribution/field-note-03-platforms.md` — founder-approved under the round-closure directive.
 - Field Note 4: `content/distribution/field-note-04-platforms.md` — founder-approved under the round-closure directive.
+- Field Note 5: `content/distribution/field-note-05-platforms.md` — founder-approved under the round-closure directive.
+- Field Note 6: `content/distribution/field-note-06-platforms.md` — founder-approved under the ten-round directive.
+- Field Note 7: `content/distribution/field-note-07-platforms.md` — drafted under the ten-round directive; founder veto on sight.
+- Field Note 8: `content/distribution/field-note-08-platforms.md` — drafted under the ten-round directive; founder veto on sight.
+- Field Note 9: `content/distribution/field-note-09-platforms.md` — drafted under the ten-round directive; founder veto on sight.
+- Field Note 10: `content/distribution/field-note-10-platforms.md` — drafted under the ten-round directive; founder veto on sight.
+- All packs carry six platform sections (Medium, Threads, Bluesky, LinkedIn, Facebook, Substack Notes) after the 2026-08-09 Pinterest elimination.
 - Round-closure rule (founder-ruled 2026-08-09): a content round is complete only when essay, artwork, and cross-platform pack all exist; every future piece ships its pack at approval time.
 
 ## Gates that hold regardless of preparation

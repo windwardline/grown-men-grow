@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn9-07-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn9-07-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn9-07-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 09 · 07 / 07</text>
+  <text x="90" y="440" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="74" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">Want the thing?</text><text x="90" y="532" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="74" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">Study the man.</text><text x="90" y="624" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="74" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">Run your own route.</text>
+    <text x="92" y="800" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="italic" text-anchor="start" letter-spacing="-1.6">Want to have it?</text><text x="92" y="884" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="italic" text-anchor="start" letter-spacing="-1.6">Close the map.</text>
+    <path d="M620 1000 c 84 -62.4 180 -28.799999999999997 165.6 40.8 c -12 57.599999999999994 -115.19999999999999 69.6 -148.79999999999998 19.2 c -21.599999999999998 -32.4 -7.199999999999999 -45.6 -16.8 -60" fill="none" stroke="#60735A" stroke-width="7.199999999999999" stroke-linecap="round" stroke-dasharray="19.2 15.6"/>
+  <circle cx="620" cy="1000" r="9.6" fill="#60735A"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn9-07-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

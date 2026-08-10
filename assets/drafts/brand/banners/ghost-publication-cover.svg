@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="840" viewBox="0 0 2000 840">
+  <defs>
+    <filter id="ghost-publication-cover-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="ghost-publication-cover-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="ghost-publication-cover-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="2000" height="840" fill="#F8F3EA"/>
+  <rect x="180" y="101" width="600" height="638" fill="#3A1518"/>
+    <text x="480" y="316.74608" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="151.844" font-weight="900" text-anchor="middle" letter-spacing="1">GROWN</text><text x="480" y="474.66384" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="151.844" font-weight="900" text-anchor="middle" letter-spacing="1">MEN</text><text x="480" y="632.5816" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="151.844" font-weight="900" text-anchor="middle" letter-spacing="1">GROW</text>
+  <g transform="rotate(-3 480 101)">
+    <rect x="375" y="78" width="210" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="383" y1="85" x2="575" y2="82" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <text x="870" y="370" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="89" font-weight="700" font-style="italic" letter-spacing="-1">Essays on the unfinished</text>
+  <text x="870" y="480.36" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="89" font-weight="700" font-style="italic" letter-spacing="-1">work of being a man.</text>
+  <path d="M874 517.74 q 213.6 30.26 436.1 0" fill="none" stroke="#B14F3F" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="870" y="689" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="52" font-weight="900" letter-spacing="2.4">GROWNMENGROW.COM</text>
+  <rect width="2000" height="840" filter="url(#ghost-publication-cover-paper)" opacity="0.2" pointer-events="none"/>
+</svg>

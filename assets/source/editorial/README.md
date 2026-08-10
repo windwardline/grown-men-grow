@@ -199,3 +199,22 @@ Generated through the founder's ChatGPT account (GPT image generation, portrait 
 ## Current composition studies — Field Note 6 set and rounds 7-10 leads (generated 2026-08-09)
 
 Generated through the founder's ChatGPT account (GPT image generation, 1024x1536) under the ten-round directive. Field Note 6 set (detector-test-press, breaker-panel-check, kitchen-counter-pause) is complete, believability-reviewed, and exclusive to Field Note 6. The following are secured and assigned but their rounds remain in production: hammock-midday-rest and morning-armchair-mug (Field Note 7, "Rest Is Not a Reward"), truck-hood-map and compass-in-hand (Field Note 8, "You Can't Outwork a Wrong Direction"). Full prompts for all of these follow the house structure recorded above; each secured file passed type and dimension verification, with final full-resolution believability review recorded at round closure.
+
+
+## Field Note 9 and 10 sources (2026-08-09, ten-round directive)
+
+Generated through the founder's ChatGPT account (GPT image generation, 1024x1536), house prompt structure, each verified for type and dimensions and passed the full-resolution believability gate at promotion:
+
+- `garden-beds-two-heights.png` — Field Note 9 ("Comparison Is a Bad Map"): two neighboring raised garden beds at clearly different heights beside a white house, bright morning, watering can and coiled hose on gravel.
+- `car-odometer-daylight.png` — Field Note 9: clean analog dashboard and odometer (172,458 mi) in warm daylight from the driver's seat, folded paper map on the passenger seat.
+- `photos-notebook-spread.png` — Field Note 9: a man's hand with pencil resting on an open blank notebook beside scattered landscape photographs and a leather album, window light.
+- `bp-cuff-notebook.png` — Field Note 10 ("Your Body Keeps the Books"): home blood-pressure cuff with blank display beside an open notebook and pen on a kitchen table, morning light, red kettle accent.
+
+- `pegboard-end-of-day.png` — Field Note 7 ("Rest Is Not a Reward"): garage pegboard with hand tools hung in order at end of day, wiped workbench, coiled red extension cord, low warm raking light.
+
+- `trail-fork-daylight.png` — Field Note 8 ("You Can't Outwork a Wrong Direction"): a sunlit dirt trail forking around a plain wooden post in open woods, one path more worn, bright morning.
+
+- `running-shoes-alarm.png` — Field Note 10: worn running shoes beside a red analog alarm clock reading just past six on a wooden bedroom floor, early morning sun.
+- `cutting-board-vegetables.png` — Field Note 10: a man's hands slicing a red bell pepper on a wooden cutting board in bright daylight, greens and a tomato nearby.
+
+All ten rounds' photography is complete; each file passed the full-resolution believability gate at promotion.

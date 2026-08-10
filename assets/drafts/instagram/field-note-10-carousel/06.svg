@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn10-06-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn10-06-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn10-06-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#EEE6D8"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 10 · 06 / 07</text>
+  <g transform="rotate(1.1 600 510)">
+    <rect x="208" y="160" width="784" height="734" fill="#60735A"/>
+    <rect x="216" y="146" width="768" height="728" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/cutting-board-vegetables.png" x="220" y="150" width="760" height="720" preserveAspectRatio="xMidYMid slice" filter="url(#fn10-06-photo)"/>
+  </g>
+    <g transform="rotate(3 450 151)">
+    <rect x="350" y="128" width="200" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="358" y1="135" x2="540" y2="132" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="72" y="980" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="60" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">The audit comes either way.</text>
+    <text x="74" y="1120" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="46" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">The scheduled kind, on a Tuesday</text><text x="74" y="1182" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="46" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">you chose — or the kind that</text><text x="74" y="1244" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="46" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">picks its own date.</text>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn10-06-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

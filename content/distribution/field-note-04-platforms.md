@@ -81,19 +81,3 @@ If you would be irritated by a follow-up question, it was an exhale.
 ## Note 3 — canonical link
 
 Open up. Take the exhale. Then stay in the room. [canonical link]
-
-# Pinterest
-
-## Pin 1
-
-- Image: Field Note 4 carousel slide 1 (cover)
-- Title: A Confession Can Still Be Selfish
-- Description: Opening up is not the same as owning up. A field note on the exhale, the trap, and what repair actually looks like. From Grown Men Grow.
-- Link: [canonical link]
-
-## Pin 2
-
-- Image: Field Note 4 carousel slide 6 (repair definition)
-- Title: Repair Is Not a Speech
-- Description: Repair is disclosure plus everything disclosure lets you skip — and it repeats. From Grown Men Grow, essays on the unfinished work of being a man.
-- Link: [canonical link]

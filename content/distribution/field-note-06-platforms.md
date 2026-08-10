@@ -79,19 +79,3 @@ The interval between alarm and action is where the whole skill lives. Ten second
 ## Note 3 — canonical link
 
 When that man raises his voice, the room listens — because the alarm in his building only fires for fires. [canonical link]
-
-# Pinterest
-
-## Pin 1
-
-- Image: Field Note 6 carousel slide 1 (cover)
-- Title: Anger Is a Terrible Manager
-- Description: It's a decent alarm. The mistake is giving it the job. A field note on hearing the signal without handing it the wheel. From Grown Men Grow.
-- Link: [canonical link]
-
-## Pin 2
-
-- Image: Field Note 6 carousel slide 6 (the demotion)
-- Title: The Ten-Second Demotion
-- Description: Stop. Note the alarm. Find the actual fire — it's rarely where the smoke is thickest. Then decide. From Grown Men Grow.
-- Link: [canonical link]

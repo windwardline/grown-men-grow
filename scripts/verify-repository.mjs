@@ -162,6 +162,11 @@ const requiredFiles = [
   'scripts/render-field-note-04.mjs',
   'scripts/render-field-note-05.mjs',
   'scripts/render-field-note-06.mjs',
+  'scripts/render-field-note-07.mjs',
+  'scripts/render-field-note-08.mjs',
+  'scripts/render-field-note-09.mjs',
+  'scripts/render-field-note-10.mjs',
+  'scripts/render-brand-banners.mjs',
   'scripts/render-ghost-feature-images.mjs',
   'scripts/render-instagram-pinned-intro.mjs',
   'scripts/render-launch-graphics.mjs',
@@ -244,8 +249,12 @@ await validateAssetFamily('assets/drafts/instagram/field-note-03-carousel', 7, 1
 await validateAssetFamily('assets/drafts/instagram/field-note-04-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-05-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-06-carousel', 7, 1080, 1350);
+await validateAssetFamily('assets/drafts/instagram/field-note-07-carousel', 7, 1080, 1350);
+await validateAssetFamily('assets/drafts/instagram/field-note-08-carousel', 7, 1080, 1350);
+await validateAssetFamily('assets/drafts/instagram/field-note-09-carousel', 7, 1080, 1350);
+await validateAssetFamily('assets/drafts/instagram/field-note-10-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
-await validateAssetFamily('assets/drafts/ghost/feature-images', 8, 1600, 1000);
+await validateAssetFamily('assets/drafts/ghost/feature-images', 12, 1600, 1000);
 await validateEditorialConcepts();
 await validateNamedPngs('assets/source/editorial', new Map([
   ['friends-in-conversation', { width: 1023, height: 1537 }],
@@ -275,6 +284,19 @@ await validateNamedPngs('assets/source/editorial', new Map([
   ['morning-armchair-mug', { width: 1024, height: 1536 }],
   ['truck-hood-map', { width: 1024, height: 1536 }],
   ['compass-in-hand', { width: 1024, height: 1536 }],
+  ['pegboard-end-of-day', { width: 1024, height: 1536 }],
+  ['trail-fork-daylight', { width: 1024, height: 1536 }],
+  ['garden-beds-two-heights', { width: 1024, height: 1536 }],
+  ['car-odometer-daylight', { width: 1024, height: 1536 }],
+  ['photos-notebook-spread', { width: 1024, height: 1536 }],
+  ['bp-cuff-notebook', { width: 1024, height: 1536 }],
+  ['running-shoes-alarm', { width: 1024, height: 1536 }],
+  ['cutting-board-vegetables', { width: 1024, height: 1536 }],
+]));
+await validateNamedPngs('assets/drafts/brand/banners', new Map([
+  ['bluesky-banner', { width: 1500, height: 500 }],
+  ['ghost-publication-cover', { width: 2000, height: 840 }],
+  ['social-banner-wide', { width: 1584, height: 396 }],
 ]));
 await validateNamedPngs('assets/drafts/review', new Map([
   ['foundational-carousel', { width: 1362, height: 1004 }],
@@ -283,6 +305,10 @@ await validateNamedPngs('assets/drafts/review', new Map([
   ['field-note-04-carousel', { width: 1362, height: 1004 }],
   ['field-note-05-carousel', { width: 1362, height: 1004 }],
   ['field-note-06-carousel', { width: 1362, height: 1004 }],
+  ['field-note-07-carousel', { width: 1362, height: 1004 }],
+  ['field-note-08-carousel', { width: 1362, height: 1004 }],
+  ['field-note-09-carousel', { width: 1362, height: 1004 }],
+  ['field-note-10-carousel', { width: 1362, height: 1004 }],
   ['ghost-social-cards', { width: 1310, height: 884 }],
   ['pinned-introduction', { width: 1362, height: 1004 }],
   ['recognition-carousel', { width: 1362, height: 1004 }],
@@ -329,7 +355,8 @@ for (const file of tracked.filter(instagramFacing)) {
 
 // Round-closure rule (founder-ruled 2026-08-09): every piece carries a
 // complete cross-platform pack and per-slide Instagram alt text.
-const packSections = ['# Medium', '# Threads', '# Bluesky', '# LinkedIn', '# Facebook', '# Substack', '# Pinterest'];
+// Pinterest was eliminated from the network by founder decision on 2026-08-09.
+const packSections = ['# Medium', '# Threads', '# Bluesky', '# LinkedIn', '# Facebook', '# Substack'];
 const packs = new Map([
   ['Essay 1', 'content/distribution/essay-01-launch.md'],
   ['Field Note 2', 'content/distribution/field-note-02-platforms.md'],
@@ -337,6 +364,10 @@ const packs = new Map([
   ['Field Note 4', 'content/distribution/field-note-04-platforms.md'],
   ['Field Note 5', 'content/distribution/field-note-05-platforms.md'],
   ['Field Note 6', 'content/distribution/field-note-06-platforms.md'],
+  ['Field Note 7', 'content/distribution/field-note-07-platforms.md'],
+  ['Field Note 8', 'content/distribution/field-note-08-platforms.md'],
+  ['Field Note 9', 'content/distribution/field-note-09-platforms.md'],
+  ['Field Note 10', 'content/distribution/field-note-10-platforms.md'],
 ]);
 for (const [label, file] of packs) {
   const text = await readFile(path.join(root, file), 'utf8');
@@ -353,6 +384,10 @@ const altTexted = [
   'content/field-notes/a-confession-can-still-be-selfish.md',
   'content/field-notes/ask-for-help-while-its-still-cheap.md',
   'content/field-notes/anger-is-a-terrible-manager.md',
+  'content/field-notes/rest-is-not-a-reward.md',
+  'content/field-notes/you-cant-outwork-a-wrong-direction.md',
+  'content/field-notes/comparison-is-a-bad-map.md',
+  'content/field-notes/your-body-keeps-the-books.md',
 ];
 for (const file of altTexted) {
   const text = await readFile(path.join(root, file), 'utf8');
@@ -366,4 +401,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 75 launch PNG/SVG pairs, ten review sheets, twenty-seven editorial source images, and five editorial concept pairs.`);
+console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 107 launch PNG/SVG pairs, fourteen review sheets, thirty-five editorial source images, three brand banners, and five editorial concept pairs.`);
