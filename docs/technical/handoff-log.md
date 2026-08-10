@@ -355,3 +355,13 @@ Founder ruling executed: "I want you to build out that LinkedIn page in full, an
 **Repository:** `render-brand-banners.mjs` gains a `linkedin-banner` target (1584×396, content confined to the ~268px center band LinkedIn's display crop guarantees; no wordmark panel) and the banner gate now validates four banners. Facebook eliminated repo-wide per the same ruling: `# Facebook` sections and UTM rows removed from all ten packs, pack gate reduced to four sections (Medium, Bluesky, LinkedIn, Substack), distribution plan / prep register / analytics / SEO plan / founder-decisions cleaned, elimination sections appended to the distribution plan and decision log. Historical log entries untouched.
 
 **Verification:** full gate suite run before commit (results recorded in the PR). **Open blockers:** none for this scope. **Next actions:** (1) founder question answered in-session about Buffer's Claude/API connector — evaluate adding Buffer's MCP server to Claude Code so channel drafts can be staged without the browser; Zapier stays for the unattended publish-time trigger; (2) launch-gated founder tasks unchanged (Publisher checkout is the gate).
+
+## 2026-08-10 — Claude Code: API access to the distribution stack, Keychain-standard
+
+**Client:** Claude Code (desktop). **Branch:** `docs/api-access-keychain`.
+
+Founder directive: set up API access to the platform stack under the standard credential protocol, secrets in one place. Executed per policy — the agent staged every creation surface and the founder performed each single copy-paste into the Keychain via `pbpaste` one-liners; no secret entered the agent transcript.
+
+**External state changed:** (1) Ghost custom integration `ghost-admin-api` created in Ghost Admin. (2) Buffer Personal Access key created by the founder on Buffer's new GraphQL API page. (3) Bluesky app password `bluesky-claude-code` created (direct-message access excluded). (4) Cloudflare token `cloudflare-dns-edit` scope-extended to include the `grownmengrow.com` zone (same secret; "Token has been updated"). **Verification:** all four verified live with status-only output — Ghost `/admin/site/` 200, Buffer organizations query 200, Bluesky `createSession` 200 as `grownmengrow.com`, `cf-dns` zone lookup resolving `grownmengrow.com`. Also re-confirmed at the founder's request: the ChatGPT "Grown Men Grow" project remains accessible in the signed-in session with all image-generation chats.
+
+**Repository:** adds `docs/technical/api-access.md` (Keychain map, deliberately keyless surfaces, boundaries). **Open blockers:** none. **Next actions:** optionally add Buffer's MCP server to Claude Code for draft staging; launch remains gated on the founder's Publisher checkout.
