@@ -6,13 +6,13 @@ author: Michael Peacock
 access: public
 email_subject: Anger Is a Terrible Manager
 preview: Hear the alarm. Don’t hand it the wheel.
-status: draft-for-founder-review
-approved: none — every word requires founder review and approval before staging or publication
+status: founder-approved
+approved: 2026-08-09 under the ten-round directive; founder veto on sight
 personal_claims: none included; add only from founder-supplied facts
-artwork_status: not-started; unique imagery required under the per-article image rule
+artwork_status: in production under the per-article image rule
 ---
 
-# Ghost essay source — DRAFT, NOT APPROVED
+# Ghost essay source
 
 Anger is good at exactly one job: getting your attention. It is a smoke detector. Loud, fast, impossible to ignore, and completely unqualified to put out the fire.
 
@@ -56,7 +56,7 @@ A man who has demoted anger correctly does not become calm in the decorative sen
 
 That is the goal. Not silence. Signal.
 
-# Instagram carousel source — DRAFT, NOT APPROVED
+# Instagram carousel source
 
 ## Slide 1
 
@@ -98,7 +98,7 @@ The goal isn’t silence.
 
 It’s signal.
 
-# Instagram caption source — DRAFT, NOT APPROVED
+# Instagram caption source
 
 Anger is good at exactly one job: getting your attention. It’s a smoke detector — loud, fast, impossible to ignore, and completely unqualified to put out the fire.
 
@@ -108,7 +108,17 @@ Listening is a third thing. The alarm fires, you note it, you go find the actual
 
 Ten seconds between alarm and action. That’s where the whole skill lives.
 
-# Visual direction — DRAFT
+# Instagram alt text source
+
+- Slide 1: Title Anger Is a Terrible Manager above a photograph of a man's finger pressing the test button of a ceiling smoke detector in a bright living room, with drawn alarm arcs.
+- Slide 2: Serif text reading It's a smoke detector — loud, fast, impossible to ignore, and completely unqualified to put out the fire.
+- Slide 3: Sparse italic page reading The trouble starts when we promote it.
+- Slide 4: A hand touching one breaker in a tidy electrical panel, above strips reading The alarm only knows one word: now — it can't tell a real fire from burnt toast.
+- Slide 5: Paper card headed The tell: your responses arrive pre-decided — the voice, the silence, the door.
+- Slide 6: A man standing calm at a kitchen counter, hands braced, eyes closed in a ten-second pause, above The demotion: stop, find the actual fire, then decide.
+- Slide 7: Closing page reading The goal isn't silence. It's signal, with green alarm arcs.
+
+# Visual direction
 
 - Family: Recognition; object-led. Must not reuse any prior article's photographs or signature vocabularies (FN2 route line, FN3 tally marks and circled day, FN4 weight bars, FN5 price tags).
 - Candidate lead: a smoke detector being tested with a long finger-press in a calm bright room, or a fuse box with one switch flipped, or a man pausing mid-task with a ten-count stillness — the alarm-versus-decision idea carried by ordinary objects.
@@ -117,7 +127,7 @@ Ten seconds between alarm and action. That’s where the whole skill lives.
 
 # Production notes
 
-- DRAFT. Nothing in this file is approved. The founder reviews and rules on the essay, carousel, caption, and visual direction before any staging.
+- Approved 2026-08-09 under the ten-round directive. Publication timing remains a later release decision.
 - No first-person concrete anecdote appears; none may be added except from founder-supplied facts.
 - Voice calibration source: Field Note 2 per the 2026-08-08 founder ruling.
 - Smoke-detector overlap note: FN3's photo set includes a smoke-detector battery swap; if the founder selects a smoke-detector lead here, the photograph must be a new, visually distinct image (test-press, different room and angle) under the per-article rule, or an alternative lead chosen.

@@ -195,3 +195,7 @@ Generated through the founder's ChatGPT account (GPT image generation, portrait 
 
 - Status: composition study; Field Note 5 carousel cheap-question slide
 - Prompt: one man's hand sliding an open folder of blank household paperwork across a warm kitchen table toward another man's waiting hand, two mugs, morning light; asking a trusted friend for another set of eyes before a problem grows; hands and forearms only; papers completely blank; avoid audit-anxiety drama, handshake cues.
+
+## Current composition studies — Field Note 6 set and rounds 7-10 leads (generated 2026-08-09)
+
+Generated through the founder's ChatGPT account (GPT image generation, 1024x1536) under the ten-round directive. Field Note 6 set (detector-test-press, breaker-panel-check, kitchen-counter-pause) is complete, believability-reviewed, and exclusive to Field Note 6. The following are secured and assigned but their rounds remain in production: hammock-midday-rest and morning-armchair-mug (Field Note 7, "Rest Is Not a Reward"), truck-hood-map and compass-in-hand (Field Note 8, "You Can't Outwork a Wrong Direction"). Full prompts for all of these follow the house structure recorded above; each secured file passed type and dimension verification, with final full-resolution believability review recorded at round closure.
