@@ -6,13 +6,13 @@ author: Michael Peacock
 access: public
 email_subject: Friendship Has a Maintenance Schedule
 preview: Men maintain everything they value. Almost everything.
-status: draft-for-founder-review
-approved: none — every word requires founder review and approval before staging or publication
-personal_claims: none included; do not add any without founder-supplied facts
-artwork_status: not-started; unique imagery required under the no-repeat rule
+status: founder-approved
+approved: 2026-08-09 — essay, carousel, caption, and visual direction approved as written; publication timing remains gated
+personal_claims: none included; add only from founder-supplied facts
+artwork_status: in production 2026-08-09 under the per-article image rule
 ---
 
-# Ghost essay source — DRAFT, NOT APPROVED
+# Ghost essay source
 
 Ask a man what he would grab if his house caught fire and somewhere in the answer, after the dog and the hard drive, there is usually a person. A friend. The one he would call from the parking lot while the roof went.
 
@@ -78,7 +78,7 @@ So pick. Two, maybe three. The ones you would call from the parking lot. Put the
 
 Then make the call. There is no emergency. That is exactly why now is the right time.
 
-# Instagram carousel source — DRAFT, NOT APPROVED
+# Instagram carousel source
 
 ## Slide 1
 
@@ -118,7 +118,7 @@ Somebody has to go first.
 
 Going first isn't losing. It's ownership.
 
-# Instagram caption source — DRAFT, NOT APPROVED
+# Instagram caption source
 
 Men are excellent at maintenance. We change oil early, seal decks before the rain, sharpen things, rotate things, check the smoke detectors because a firefighter on TV told us to thirty years ago.
 
@@ -130,7 +130,7 @@ The schedule is short and unromantic, which is the point: a call with no reason 
 
 Somebody has to go first. Going first is not losing. It's what stewardship sounds like on the phone.
 
-# Visual direction — DRAFT
+# Visual direction
 
 - Family: Recognition with detail-led pacing; must not reuse Field Note 2's route-line vocabulary or any existing photograph.
 - Candidate lead: an ordinary maintenance object mid-care (oil change, deck sealing, blade sharpening) beside a phone that is face-up and alive — the two schedules side by side.
@@ -138,6 +138,6 @@ Somebody has to go first. Going first is not losing. It's what stewardship sound
 
 # Production notes
 
-- DRAFT. Nothing in this file is approved. The founder reviews and rules on the essay, carousel, caption, and visual direction before any staging.
+- The founder approved the essay, carousel, caption, and visual direction on 2026-08-09. Publication timing remains a later release decision.
 - No first-person concrete anecdote appears; none may be added except from founder-supplied facts.
 - Voice calibration source: Field Note 2 per the 2026-08-08 founder ruling.

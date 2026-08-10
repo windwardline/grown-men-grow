@@ -138,3 +138,22 @@ Generated through the founder's own ChatGPT account (GPT image generation, portr
 
 - Status: composition study; Field Note 2 carousel spread (second photograph)
 - Prompt: editorial still life, two plain ceramic coffee mugs side by side on broad clean porch steps in bright late-morning light beside worn leather work gloves and a tape measure; a pause after shared work, ordinary friendship with no occasion; no people; magazine still-life photography, tactile materials, subtle grain, generous negative space, one small deep-red accent; avoid decay, clutter, gloom, catalog styling, heavy shadows.
+
+## Current composition studies — Field Note 3 set (generated 2026-08-09)
+
+Generated through the founder's ChatGPT account (GPT image generation, portrait 2:3, 1024x1536) for "Friendship Has a Maintenance Schedule" (founder-approved 2026-08-09) under its approved Recognition-family direction. Each passed the full-resolution believability review; all three are exclusive to Field Note 3 under the per-article image rule.
+
+### `garage-doorway-call.png`
+
+- Status: composition study; Field Note 3 lead (feature image and carousel cover)
+- Prompt: adult man leaning easily against the frame of an open tidy home garage in bright late-morning light, mid phone call, relaxed natural half-smile, unhurried; bicycle and orderly shelves softly out of focus; an ordinary call on an ordinary day, no crisis; candid editorial photography, natural texture, restrained grain, clean negative space; no visible phone screen, no logos, no readable text; avoid gloom, crisis posture, luxury signaling, stock grins.
+
+### `oil-check-detail.png`
+
+- Status: composition study; Field Note 3 carousel detail slide
+- Prompt: close detail, a man's hands checking the oil dipstick over a clean engine bay in a bright driveway, one hand with the dipstick, the other a folded shop rag; routine maintenance done on schedule, care as a habit; hands and forearms only; tidy unbranded engine bay; avoid grime overload, rust, mechanic-shop drama, luxury-car signaling.
+
+### `smoke-detector-battery.png`
+
+- Status: composition study; Field Note 3 carousel schedule slide
+- Prompt: from below, a man's hands replacing the battery in a plain white ceiling smoke detector in a bright well-kept hallway; twice-a-year maintenance done faithfully; hands and forearms only, generous clean ceiling negative space; unbranded detector, no readable text; avoid alarm-emergency drama, clutter, catalog styling.

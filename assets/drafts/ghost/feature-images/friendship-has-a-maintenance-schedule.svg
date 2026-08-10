@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="fn3-feature-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn3-feature-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn3-feature-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="#EEE6D8"/>
+  <rect x="0" y="0" width="470" height="1000" fill="#F8F3EA"/>
+  <g transform="rotate(-0.7 820 495)">
+    <rect x="418" y="80" width="804" height="864" fill="#3A1518"/>
+    <rect x="426" y="66" width="788" height="858" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/garage-doorway-call.png" x="430" y="70" width="780" height="850" preserveAspectRatio="xMidYMid slice" filter="url(#fn3-feature-photo)"/>
+  </g>
+  <g transform="rotate(1.6 1365 500)">
+    <rect x="1168" y="260" width="394" height="514" fill="#60735A"/>
+    <rect x="1176" y="246" width="378" height="508" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/oil-check-detail.png" x="1180" y="250" width="370" height="500" preserveAspectRatio="xMidYMid slice" filter="url(#fn3-feature-photo)"/>
+  </g>
+  <g transform="rotate(-4 650 71)">
+    <rect x="540" y="48" width="220" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="548" y1="55" x2="750" y2="52" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g transform="rotate(4 1340 249)">
+    <rect x="1250" y="226" width="180" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="1258" y1="233" x2="1420" y2="230" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <line x1="90" y1="120" x2="87" y2="154" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="101" y1="120" x2="98" y2="154" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="112" y1="120" x2="109" y2="154" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="123" y1="120" x2="120" y2="154" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="82" y1="150" x2="130" y2="126" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="154" y1="120" x2="151" y2="154" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="165" y1="120" x2="162" y2="154" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="176" y1="120" x2="173" y2="154" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="187" y1="120" x2="184" y2="154" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="146" y1="150" x2="194" y2="126" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/>
+  <line x1="90" y1="210" x2="87" y2="244" stroke="#60735A" stroke-width="5" stroke-linecap="round"/><line x1="101" y1="210" x2="98" y2="244" stroke="#60735A" stroke-width="5" stroke-linecap="round"/><line x1="112" y1="210" x2="109" y2="244" stroke="#60735A" stroke-width="5" stroke-linecap="round"/><line x1="123" y1="210" x2="120" y2="244" stroke="#60735A" stroke-width="5" stroke-linecap="round"/><line x1="82" y1="240" x2="130" y2="216" stroke="#60735A" stroke-width="5" stroke-linecap="round"/><line x1="154" y1="210" x2="151" y2="244" stroke="#60735A" stroke-width="5" stroke-linecap="round"/><line x1="165" y1="210" x2="162" y2="244" stroke="#60735A" stroke-width="5" stroke-linecap="round"/><line x1="176" y1="210" x2="173" y2="244" stroke="#60735A" stroke-width="5" stroke-linecap="round"/><line x1="187" y1="210" x2="184" y2="244" stroke="#60735A" stroke-width="5" stroke-linecap="round"/><line x1="146" y1="240" x2="194" y2="216" stroke="#60735A" stroke-width="5" stroke-linecap="round"/>
+  <line x1="90" y1="300" x2="87" y2="334" stroke="#B14F3F" stroke-width="5" stroke-linecap="round"/><line x1="101" y1="300" x2="98" y2="334" stroke="#B14F3F" stroke-width="5" stroke-linecap="round"/><line x1="112" y1="300" x2="109" y2="334" stroke="#B14F3F" stroke-width="5" stroke-linecap="round"/><line x1="123" y1="300" x2="120" y2="334" stroke="#B14F3F" stroke-width="5" stroke-linecap="round"/><line x1="82" y1="330" x2="130" y2="306" stroke="#B14F3F" stroke-width="5" stroke-linecap="round"/>
+  <rect x="84" y="700" width="300" height="180" fill="#60735A" transform="rotate(-1.4 234 790)"/>
+  <rect width="1600" height="1000" filter="url(#fn3-feature-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
