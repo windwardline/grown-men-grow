@@ -290,3 +290,9 @@ Never include credentials, private access codes, cookies, member data, or privat
 4. Launch remains blocked solely on the founder's Ghost Publisher checkout; Instagram launch sequence and SEO/membership verifications queue behind it.
 
 Nothing was published, posted, sent, or purchased. All profile changes are account configuration on founder-created accounts.
+
+## 2026-08-10 — Claude Code: Threads eliminated by founder decision
+
+**Client:** Claude Code (desktop). **Branch:** `feat/threads-exit`.
+
+Following the denied Meta appeal, the founder eliminated Threads entirely ("Eliminate the threads material and plan. We are not going to pursue it. Do the same for Pinterest."). Threads sections and drafted copy removed from all ten packs; pack gate reduced to five sections (Medium, Bluesky, LinkedIn, Facebook, Substack Notes); distribution plan, prep register, analytics, and SEO docs updated; Buffer allocation now Bluesky + LinkedIn with one free slot; decision-log entry added. A Pinterest sweep confirmed the 2026-08-09 elimination was already complete except three stale doc mentions (analytics referral list, SEO plan, a founder-decisions checklist line amended in place), now fixed. No external account state changed this session beyond what the founder already did personally. Verification: full gate suite green before merge.

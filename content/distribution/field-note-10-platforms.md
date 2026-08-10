@@ -15,28 +15,6 @@ Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts unti
 - Subtitle: You can skip the accounting. It doesn’t.
 - Tags: Men, Health, Habits, Masculinity, Personal Growth
 
-# Threads
-
-## Post 1
-
-There is a bookkeeping style that works right up until it doesn't: don't open the mail.
-
-Men run their bodies this way for decades.
-
-## Post 2
-
-The statements arrive — the knee, the 3 a.m. ceiling, the stairs with a new opinion — and go on the pile. Not because he can't read. Because somewhere he learned that ignoring a number changes it.
-
-## Post 3
-
-The accounting is flawless. The missed sleep posts. The handled stress posts, with interest. So does every walk and every early night. Nothing is forgotten.
-
-## Post 4 — canonical link
-
-Every ledger gets audited eventually. Pick the auditor.
-
-New field note: Your Body Keeps the Books. [canonical link]
-
 # Bluesky
 
 ## Post 1

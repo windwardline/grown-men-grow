@@ -15,26 +15,6 @@ Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts unti
 - Subtitle: Effort is the easy part. Aim is the argument.
 - Tags: Men, Purpose, Discipline, Masculinity, Personal Growth
 
-# Threads
-
-## Post 1
-
-There is a specific kind of lost that only fit, capable, hardworking men achieve: miles from the truck, making excellent time, in exactly the wrong direction.
-
-## Post 2
-
-When the direction is uncertain, more effort feels like an answer. It's measurable. It's virtuous. It's a hiding place.
-
-## Post 3
-
-Some men are ten years into building a prize they stopped wanting in year three — the trail was well marked and their legs were strong.
-
-## Post 4 — canonical link
-
-Engine off. Map out.
-
-New field note: You Can't Outwork a Wrong Direction. [canonical link]
-
 # Bluesky
 
 ## Post 1

@@ -355,8 +355,9 @@ for (const file of tracked.filter(instagramFacing)) {
 
 // Round-closure rule (founder-ruled 2026-08-09): every piece carries a
 // complete cross-platform pack and per-slide Instagram alt text.
-// Pinterest was eliminated from the network by founder decision on 2026-08-09.
-const packSections = ['# Medium', '# Threads', '# Bluesky', '# LinkedIn', '# Facebook', '# Substack'];
+// Pinterest (2026-08-09) and Threads (2026-08-10) were eliminated from the
+// network by founder decision.
+const packSections = ['# Medium', '# Bluesky', '# LinkedIn', '# Facebook', '# Substack'];
 const packs = new Map([
   ['Essay 1', 'content/distribution/essay-01-launch.md'],
   ['Field Note 2', 'content/distribution/field-note-02-platforms.md'],

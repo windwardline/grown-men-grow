@@ -10,7 +10,6 @@ Account creation, identity verification, CAPTCHA, MFA, and payment steps are fou
 
 | Platform | Handle target | Timing |
 |---|---|---|
-| Threads | @grownmengrow (rides the Instagram account) | Activates from Instagram after IG launch |
 | Medium | grownmengrow (publication name Grown Men Grow) | After canonical URLs are live |
 | Bluesky | @grownmengrow.bsky.social (custom domain later optional) | Any time; posting waits for launch |
 | LinkedIn Page | Grown Men Grow (company page) | Any time; posting waits for launch |
@@ -34,7 +33,7 @@ Shared profile configuration (bio line, avatar, link policy) is already recorded
 - Field Note 8: `content/distribution/field-note-08-platforms.md` — drafted under the ten-round directive; founder veto on sight.
 - Field Note 9: `content/distribution/field-note-09-platforms.md` — drafted under the ten-round directive; founder veto on sight.
 - Field Note 10: `content/distribution/field-note-10-platforms.md` — drafted under the ten-round directive; founder veto on sight.
-- All packs carry six platform sections (Medium, Threads, Bluesky, LinkedIn, Facebook, Substack Notes) after the 2026-08-09 Pinterest elimination.
+- All packs carry five platform sections (Medium, Bluesky, LinkedIn, Facebook, Substack Notes) after the 2026-08-09 Pinterest elimination and the 2026-08-10 Threads elimination.
 - Round-closure rule (founder-ruled 2026-08-09): a content round is complete only when essay, artwork, and cross-platform pack all exist; every future piece ships its pack at approval time.
 
 ## Gates that hold regardless of preparation

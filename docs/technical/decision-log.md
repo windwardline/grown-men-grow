@@ -336,6 +336,12 @@
 - **Context:** Pinterest had been part of the approved zero-cost discovery network and the seven-section platform-pack template. The founder's own account had been created earlier the same evening and its profile partially configured; nothing had been published.
 - **Effect:** Pinterest sections were removed from the Essay 1 and Field Note 2–6 packs, the pack-completeness gate now requires six platform sections (Medium, Threads, Bluesky, LinkedIn, Facebook, Substack), and the distribution plan and platform prep register no longer carry Pinterest. The founder closed the Pinterest account personally the same evening. Every other element of the distribution plan is unchanged.
 
+## 2026-08-10 — Eliminate Threads from the distribution network
+
+- **Status:** Decided by the founder ("Eliminate the threads material and plan. We are not going to pursue it.")
+- **Context:** Meta suspended the Threads account at creation and denied the appeal with no further review available. Because Threads identities ride the Instagram account, a replacement would require abandoning the publication's Instagram identity. Nothing was ever published.
+- **Effect:** Threads sections were removed from all ten platform packs, the pack-completeness gate now requires five platform sections (Medium, Bluesky, LinkedIn, Facebook, Substack Notes), and the distribution plan, prep register, analytics targets, and SEO plan no longer carry Threads. Buffer Free now reserves channels for Bluesky and LinkedIn only, leaving one free slot open. The drafted Threads copy was removed with the sections rather than retained.
+
 ## Current pending decisions
 
 - Ghost Publisher purchase confirmation at the later trial or launch checkpoint; launch itself proceeds on the trial.

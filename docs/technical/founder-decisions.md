@@ -85,7 +85,7 @@ Credentials remain in authenticated sessions, a password manager, macOS Keychain
 
 - [x] Ghost remains the canonical publication and only master email list
 - [x] Ghost Social Web and Explore approved
-- [x] Threads, Medium, Bluesky, LinkedIn Page, Pinterest Business, Facebook Page, and Substack Notes approved
+- [x] Threads, Medium, Bluesky, LinkedIn Page, Pinterest Business, Facebook Page, and Substack Notes approved (amended: Pinterest eliminated 2026-08-09; Threads eliminated 2026-08-10 — see the decision log)
 - [x] Medium is the only approved full-essay syndication channel and must preserve the Ghost canonical
 - [x] YouTube, TikTok, and X handle reservations approved; YouTube and TikTok activation waits for original motion work, and X remains inactive
 - [x] Google Search Console, Bing Webmaster Tools, Google Discover/News eligibility work, and Cloudflare Crawler Hints evaluation approved; Crawler Hints is not enabled in the DNS-only Ghost topology

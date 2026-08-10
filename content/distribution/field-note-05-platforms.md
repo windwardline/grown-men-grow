@@ -16,28 +16,6 @@ Native adaptations per the roles in `docs/technical/distribution-plan.md`. Copy 
 - Subtitle: Men treat asking for help like a last resort. That’s the expensive way.
 - Tags: Men, Self Improvement, Masculinity, Help, Personal Growth
 
-# Threads
-
-## Post 1
-
-There is a window — usually weeks long — where asking for help costs almost nothing. A question at the counter. A text to the friend who does this for a living.
-
-We let it close. Then we pay the crisis rate.
-
-## Post 2
-
-The plumbing question becomes a flooring question. The budget question becomes a debt question. Same problem, new denomination.
-
-## Post 3
-
-Knowing when to ask is part of the skill. The electrician calls the inspector. The pilot calls the tower. That call is what being good at it looks like.
-
-## Post 4 — canonical link
-
-Ask early. Ask specifically. Ask while it’s still cheap.
-
-New field note: Ask for Help While It’s Still Cheap. [canonical link]
-
 # Bluesky
 
 ## Post 1

@@ -16,26 +16,6 @@ Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts unti
 - Subtitle: It’s a decent alarm. The mistake is giving it the job.
 - Tags: Men, Anger, Emotional Intelligence, Masculinity, Personal Growth
 
-# Threads
-
-## Post 1
-
-Anger is good at exactly one job: getting your attention. It is a smoke detector — loud, fast, and completely unqualified to put out the fire.
-
-## Post 2
-
-Nobody decides to let anger run things. The promotion happens through a thousand small deferrals, because anger never says "I don't know" — which should be disqualifying.
-
-## Post 3
-
-The tell that anger is managing you: your responses arrive pre-decided. The voice. The silence. The door.
-
-## Post 4 — canonical link
-
-The goal isn't silence. It's signal.
-
-New field note: Anger Is a Terrible Manager. [canonical link]
-
 # Bluesky
 
 ## Post 1
