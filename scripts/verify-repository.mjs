@@ -161,6 +161,7 @@ const requiredFiles = [
   'scripts/render-field-note-03.mjs',
   'scripts/render-field-note-04.mjs',
   'scripts/render-field-note-05.mjs',
+  'scripts/render-field-note-06.mjs',
   'scripts/render-ghost-feature-images.mjs',
   'scripts/render-instagram-pinned-intro.mjs',
   'scripts/render-launch-graphics.mjs',
@@ -242,8 +243,9 @@ await validateAssetFamily('assets/drafts/instagram/field-note-02-carousel', 7, 1
 await validateAssetFamily('assets/drafts/instagram/field-note-03-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-04-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-05-carousel', 7, 1080, 1350);
+await validateAssetFamily('assets/drafts/instagram/field-note-06-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
-await validateAssetFamily('assets/drafts/ghost/feature-images', 7, 1600, 1000);
+await validateAssetFamily('assets/drafts/ghost/feature-images', 8, 1600, 1000);
 await validateEditorialConcepts();
 await validateNamedPngs('assets/source/editorial', new Map([
   ['friends-in-conversation', { width: 1023, height: 1537 }],
@@ -266,6 +268,13 @@ await validateNamedPngs('assets/source/editorial', new Map([
   ['hardware-counter-question', { width: 1024, height: 1536 }],
   ['open-wall-wiring', { width: 1024, height: 1536 }],
   ['paperwork-second-eyes', { width: 1024, height: 1536 }],
+  ['detector-test-press', { width: 1024, height: 1536 }],
+  ['breaker-panel-check', { width: 1024, height: 1536 }],
+  ['kitchen-counter-pause', { width: 1024, height: 1536 }],
+  ['hammock-midday-rest', { width: 1024, height: 1536 }],
+  ['morning-armchair-mug', { width: 1024, height: 1536 }],
+  ['truck-hood-map', { width: 1024, height: 1536 }],
+  ['compass-in-hand', { width: 1024, height: 1536 }],
 ]));
 await validateNamedPngs('assets/drafts/review', new Map([
   ['foundational-carousel', { width: 1362, height: 1004 }],
@@ -273,6 +282,7 @@ await validateNamedPngs('assets/drafts/review', new Map([
   ['field-note-03-carousel', { width: 1362, height: 1004 }],
   ['field-note-04-carousel', { width: 1362, height: 1004 }],
   ['field-note-05-carousel', { width: 1362, height: 1004 }],
+  ['field-note-06-carousel', { width: 1362, height: 1004 }],
   ['ghost-social-cards', { width: 1310, height: 884 }],
   ['pinned-introduction', { width: 1362, height: 1004 }],
   ['recognition-carousel', { width: 1362, height: 1004 }],
@@ -326,6 +336,7 @@ const packs = new Map([
   ['Field Note 3', 'content/distribution/field-note-03-platforms.md'],
   ['Field Note 4', 'content/distribution/field-note-04-platforms.md'],
   ['Field Note 5', 'content/distribution/field-note-05-platforms.md'],
+  ['Field Note 6', 'content/distribution/field-note-06-platforms.md'],
 ]);
 for (const [label, file] of packs) {
   const text = await readFile(path.join(root, file), 'utf8');
@@ -341,6 +352,7 @@ const altTexted = [
   'content/field-notes/friendship-has-a-maintenance-schedule.md',
   'content/field-notes/a-confession-can-still-be-selfish.md',
   'content/field-notes/ask-for-help-while-its-still-cheap.md',
+  'content/field-notes/anger-is-a-terrible-manager.md',
 ];
 for (const file of altTexted) {
   const text = await readFile(path.join(root, file), 'utf8');
@@ -354,4 +366,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 67 launch PNG/SVG pairs, nine review sheets, twenty editorial source images, and five editorial concept pairs.`);
+console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 75 launch PNG/SVG pairs, ten review sheets, twenty-seven editorial source images, and five editorial concept pairs.`);
