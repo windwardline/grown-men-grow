@@ -38,12 +38,6 @@ The only reason this system feels hostile is that most of us have been running a
 
 The new field note is about reading your own books: open the mail, get audited on schedule, make boring deposits, and tell one person the real balance. [canonical link]
 
-# Facebook Page
-
-The audit comes either way. The only choice a man gets is the auditor: the scheduled kind, in a clinic, on a Tuesday you chose — or the unscheduled kind, which picks its own date and has never once picked well.
-
-New field note: Your Body Keeps the Books. [canonical link]
-
 # Substack Notes
 
 ## Note 1

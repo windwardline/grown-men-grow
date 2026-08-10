@@ -40,14 +40,6 @@ It just cannot carry every subject forever. A friendship needs practice before i
 
 The new field note is about giving male friendship something besides history to live on. [canonical link]
 
-# Facebook Page
-
-On a Saturday morning, two men can spend four hours replacing a deck board, insulting each other’s tool choices, and discussing almost nothing personal — and still leave feeling better.
-
-That counts. It just cannot be the whole system.
-
-New field note: Call Your Friends Before There’s a Reason. [canonical link]
-
 # Substack Notes
 
 ## Note 1

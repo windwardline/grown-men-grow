@@ -40,14 +40,6 @@ The myth is that strong friendships shouldn't need upkeep. We don't apply that l
 
 The new field note is about the short, unromantic schedule that keeps a friendship running: a call on a normal Tuesday, a specific question, one honest sentence back, a plan with a date on it. [canonical link]
 
-# Facebook Page
-
-Ask a man what he'd grab if his house caught fire and somewhere in the answer there's usually a friend — the one he'd call from the parking lot while the roof went.
-
-Ask him when he last talked to that friend and the math gets quiet.
-
-New field note: Friendship Has a Maintenance Schedule. [canonical link]
-
 # Substack Notes
 
 ## Note 1

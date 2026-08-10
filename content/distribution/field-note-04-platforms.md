@@ -38,14 +38,6 @@ That is the trap. A confession without follow-through is a withdrawal from someo
 
 The new field note is about the difference between opening up and owning up: repair answers on the other person's timeline, names the behavior, volunteers the cost, and repeats. [canonical link]
 
-# Facebook Page
-
-Watch a man right after he says the hard thing. Relief. A little pride. Someone setting down a heavy bag.
-
-He earned that. And sometimes the other person in the room just got handed the bag.
-
-New field note: A Confession Can Still Be Selfish. [canonical link]
-
 # Substack Notes
 
 ## Note 1

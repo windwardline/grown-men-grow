@@ -23,7 +23,6 @@ Ghost is the canonical publication, permanent archive, and only master email-sub
 | Medium | Full essay imported from its live Ghost URL | Manual URL import with canonical verification | $0 |
 | Bluesky | Short posts, discussion, and links | Buffer | $0 |
 | LinkedIn Page | Select work, leadership, identity, and relationship angles | Buffer or native scheduling | $0 |
-| Facebook Page | Adapted Instagram assets and direct links | Meta Business Suite | $0 |
 | Substack | Notes, excerpts, and Ghost links | Native scheduling | No paid feature approved |
 | Google and Bing | Search, Discover, News, image search, and Copilot discovery | Ghost sitemap and webmaster tools | $0 |
 
@@ -53,7 +52,6 @@ Public checks were run on 2026-08-08. A 404 or unresolved handle is only provisi
 | Substack | `grownmengrow.substack.com` | Public URL returned 404 | Confirm in signup flow |
 | Bluesky | `@grownmengrow.com` | `grownmengrow.bsky.social` did not resolve; domain handle not configured | Create account, then verify the domain handle by DNS |
 | LinkedIn | `/company/grown-men-grow` | Public URL returned 404 | Confirm while creating the Page |
-| Facebook | `/grownmengrow` | Public response was inconclusive | Confirm while creating the Page |
 | YouTube | `@grownmengrow` | Public URL returned 404 | Reserve in YouTube Studio |
 | TikTok | `@grownmengrow` | Public page reported that it could not find the account | Confirm in signup flow |
 | X | `@grownmengrow` | Public URL returned 404 | Reserve only; do not activate content |
@@ -69,7 +67,6 @@ No secret belongs in source files, Markdown, chat, commit messages, browser logs
 - A unique password generated and saved by the founder's password manager for each service that does not use OAuth
 - Platform verification codes, CAPTCHA, age/date-of-birth confirmation, or identity steps completed in the provider UI
 - The founder's personal LinkedIn account as the private administrator of the public Grown Men Grow Page
-- The connected Facebook Page through the existing Instagram identity
 - The founder's Google account for Search Console, YouTube Brand Account administration, and Bing's optional Search Console import authorization
 - Cloudflare DNS authority for the future Bluesky `_atproto` verification record
 - OAuth consent connecting only the approved Bluesky and LinkedIn Page accounts to Buffer
@@ -86,7 +83,7 @@ If a platform issues an API key or app password later, store it in the provider 
 5. Create platform-specific text and visual variants in the repository.
 6. Review those variants before scheduling.
 7. Import the live URL into Medium and verify the Ghost canonical before publishing.
-8. Schedule native excerpts and links on Bluesky, LinkedIn, Facebook, and Substack.
+8. Schedule native excerpts and links on Bluesky, LinkedIn, and Substack.
 9. Review referral traffic and Ghost signups at day 7 and day 30.
 
 ## Automation boundary
@@ -99,9 +96,8 @@ The approved low-cost workflow is:
 
 The Buffer idea is a distribution stub containing the title, canonical URL, and campaign slug. A person or coding agent writes and reviews each channel version before scheduling.
 
-- Buffer Free is reserved for Bluesky and the LinkedIn Page, leaving one of its three free channel slots open.
+- Buffer Free carries its full three channels: Instagram, Bluesky, and the LinkedIn Page (all connected as of 2026-08-10).
 - The current Zapier Free allowance supports one trigger plus one action and 100 tasks per month. This workflow uses exactly one Ghost `Post Published` trigger and one Buffer `Create Idea` action.
-- Meta Business Suite handles Instagram and Facebook.
 - Medium remains a manual URL import because Medium no longer issues new API tokens.
 - Substack Notes, YouTube, and TikTok use native tools.
 - Do not build a custom cross-posting service while the free workflow meets the publishing cadence.
@@ -148,3 +144,7 @@ Pinterest was removed from the network before any pin was published: the surface
 ## Threads elimination (founder decision, 2026-08-10)
 
 Threads was removed from the network before any post was published: Meta suspended the account at creation, denied the appeal with no further review available, and a replacement would require a different Instagram identity the publication does not want. The founder ruled the surface out entirely. Platform packs, the pack-completeness gate, and the prep register no longer carry Threads sections; the drafted Threads copy was removed with them.
+
+## Facebook elimination (founder decision, 2026-08-10)
+
+Facebook was removed from the network before the Page was ever created, in the same ruling that ordered the LinkedIn Page buildout: "I think we will forego Facebook, like Pinterest and Threads." No Facebook account state existed to unwind. Platform packs, the pack-completeness gate, the prep register, the analytics referral list, and the automation boundary no longer carry Facebook; Meta tooling now serves Instagram only.

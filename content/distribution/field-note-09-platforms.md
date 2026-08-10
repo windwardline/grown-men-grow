@@ -38,14 +38,6 @@ Another man's title, trajectory, or shoulders at forty-six is real, measurable i
 
 The only comparison with identical conditions and complete information: you, against you, over time — in the ways you decided matter, not the ways that photograph well. The new field note is about demoting other men from map to survey data. [canonical link]
 
-# Facebook Page
-
-Another man's life can show you what's possible — a way of being a father you hadn't seen, proof that the turn you're scared of survives being made. Taken that way, other men are a library.
-
-Taken as a map, they are a leash.
-
-New field note: Comparison Is a Bad Map. [canonical link]
-
 # Substack Notes
 
 ## Note 1

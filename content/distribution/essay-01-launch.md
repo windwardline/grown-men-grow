@@ -25,7 +25,6 @@ Instagram keeps its approved bio:
 | Medium | `https://grownmengrow.com/?utm_source=medium&utm_medium=profile&utm_campaign=launch` |
 | Bluesky | `https://grownmengrow.com/?utm_source=bluesky&utm_medium=profile&utm_campaign=launch` |
 | LinkedIn | `https://grownmengrow.com/?utm_source=linkedin&utm_medium=profile&utm_campaign=launch` |
-| Facebook | `https://grownmengrow.com/?utm_source=facebook&utm_medium=profile&utm_campaign=launch` |
 | Substack | `https://grownmengrow.com/?utm_source=substack&utm_medium=profile&utm_campaign=launch` |
 
 # Medium
@@ -73,20 +72,6 @@ The first Grown Men Grow field note is about the point where strength becomes a 
 **Strength Has to Grow Up**
 
 `https://grownmengrow.com/strength-has-to-grow-up/?utm_source=linkedin&utm_medium=social&utm_campaign=strength-has-to-grow-up`
-
-# Facebook Page
-
-I do not think strength is the problem.
-
-I think it becomes a problem when a man uses it to avoid everything strength cannot solve.
-
-The harder question is what his strength answers to when pride, fear, desire, and anger all want the final word.
-
-That is the subject of the first Grown Men Grow field note.
-
-**Strength Has to Grow Up**
-
-`https://grownmengrow.com/strength-has-to-grow-up/?utm_source=facebook&utm_medium=social&utm_campaign=strength-has-to-grow-up`
 
 # Substack Notes
 

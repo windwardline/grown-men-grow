@@ -40,14 +40,6 @@ It sounds disciplined. It is actually just debt, deferred at interest. And the c
 
 The new field note is about the other model — maintenance: scheduled, not earned, by interval, not by feeling. The pit crew doesn't wait until the engine seizes. [canonical link]
 
-# Facebook Page
-
-Watch a man close down his garage at the end of a Saturday. Everything valuable gets put away properly so it works tomorrow.
-
-Then he goes inside and treats himself like the one tool that doesn't need it.
-
-New field note: Rest Is Not a Reward. [canonical link]
-
 # Substack Notes
 
 ## Note 1

@@ -38,14 +38,6 @@ And it gets results, short-term. Every one of those wins invoices later — in t
 
 The new field note is about the demotion: hearing the alarm without handing it the wheel. [canonical link]
 
-# Facebook Page
-
-Most men have seen both failure modes up close. The man who ripped the batteries out — nothing makes him angry, he says, while his jaw does something geological. And the man who made anger his general manager.
-
-Neither one is listening. Listening is a third thing.
-
-New field note: Anger Is a Terrible Manager. [canonical link]
-
 # Substack Notes
 
 ## Note 1

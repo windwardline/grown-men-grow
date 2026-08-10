@@ -121,7 +121,7 @@ Instagram's professional dashboard is the current source for personalized creati
 - Reuse the approved site description on non-Instagram profiles: **Essays on the unfinished work of being a man.**
 - Link directly to Ghost with platform-specific UTM parameters.
 - Publish full essays on Medium only through URL import and verify the canonical points to Ghost.
-- Do not publish full duplicate essays on Substack, LinkedIn, Facebook, or another surface without a verified canonical control.
+- Do not publish full duplicate essays on Substack, LinkedIn, or another surface without a verified canonical control.
 - Use keyword-complete plain language in titles, captions, alt text, Pin descriptions, and opening lines. Do not hide keywords in inaccessible fields or repeat them mechanically.
 - Use Medium topics, LinkedIn framing, and short-form platform language to clarify the actual subject of each piece.
 - Treat Ghost Social Web and later Flipboard RSS as canonical-link distribution, not independent publications.
