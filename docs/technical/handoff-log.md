@@ -312,3 +312,16 @@ Following the denied Meta appeal, the founder eliminated Threads entirely ("Elim
 **Client:** Claude Code (desktop). **Branch:** `docs/rounds-7-10-approved`.
 
 The founder approved rounds 7-10 in full ("Rounds 7-10 are approved."). Pack frontmatter, field-note artwork status, and the prep register now record the approval. All ten content rounds are closed and approved: essay, artwork, per-slide alt text, and five-platform pack each. Next per the founder's standing instruction: the platform settings-optimization sweep and Zapier routing scope.
+
+## 2026-08-10 — Claude Code: Ghost→Buffer automation built; Substack user profile branded; categories set
+
+**Client:** Claude Code (desktop). **Branch:** `docs/automation-built`.
+
+**External state changed (founder-authorized: "None of this should be mine to do. You need to build this."):**
+- **Zapier:** Zap "Ghost post published → Buffer idea (launch distribution stub)" built and saved as a draft in the founder's account. Trigger: RSS by Zapier on `https://grownmengrow.com/rss/` (chosen over the Ghost app trigger so no Admin API key passes through an agent). Action: Buffer "Create Idea" in My Organization — title mapped from the feed, text = "New essay live: {title}\n{link}\nCampaign: launch — draft stub, review and adapt per platform pack before scheduling." Buffer account connected to Zapier via OAuth. End-to-end action test returned "Successfully created idea" (200); the test Idea was verified on Buffer's Ideas board and deleted. Zap left OFF until launch (private feed returns the password gate; Zapier would auto-pause an erroring Zap).
+- **Substack:** user profile converted to brand (Grown Men Grow, @grownmengrow, bio, brand avatar, brand header banner); publication discovery categories set to Culture (primary) and Health & Wellness (secondary).
+- **Bluesky:** email confirmation surfaced to the founder (was unconfirmed); the founder handled the confirmation email directly.
+
+**Remaining founder-only step for scheduling (not required for the stub automation):** connecting the Bluesky channel inside Buffer requires a Bluesky app password typed into Buffer — credential entry stays with the founder by security policy. LinkedIn's Buffer slot waits until that Page exists.
+
+**Launch checklist addition:** turn the Zap on (one click, Zapier → Zaps) immediately after the site goes public.
