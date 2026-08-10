@@ -157,3 +157,22 @@ Generated through the founder's ChatGPT account (GPT image generation, portrait 
 
 - Status: composition study; Field Note 3 carousel schedule slide
 - Prompt: from below, a man's hands replacing the battery in a plain white ceiling smoke detector in a bright well-kept hallway; twice-a-year maintenance done faithfully; hands and forearms only, generous clean ceiling negative space; unbranded detector, no readable text; avoid alarm-emergency drama, clutter, catalog styling.
+
+## Current composition studies — Field Note 4 set (generated 2026-08-09)
+
+Generated through the founder's ChatGPT account (GPT image generation, portrait 2:3, 1024x1536) for "A Confession Can Still Be Selfish" (founder-approved 2026-08-09) under its approved weight-and-handoff object direction. Each passed the full-resolution believability review; all three are exclusive to Field Note 4 under the per-article image rule.
+
+### `hallway-duffel-set-down.png`
+
+- Status: composition study; Field Note 4 lead (feature image and carousel cover)
+- Prompt: editorial still life, a heavy well-made canvas duffel set down in the middle of a bright well-kept home hallway in morning light, straps still upright as if just released, sunlight from a doorway ahead; weight just set down and relief; no people; plain unbranded bag, no readable text; avoid gloom, clutter, moving-day sadness, luxury-luggage styling.
+
+### `tool-bag-handoff.png`
+
+- Status: composition study; Field Note 4 carousel handoff slide
+- Prompt: close detail, one man's hands passing a loaded canvas tool bag to another man's outstretched hands in bright daylight at a front gate, strap tension showing the weight mid-handoff; a burden changing hands; hands and forearms only, no faces; pristine anatomy on all hands; avoid dramatic strain, charity-ad framing, catalog styling.
+
+### `porch-two-chairs.png`
+
+- Status: composition study; Field Note 4 carousel repair slide
+- Prompt: two simple wooden chairs angled toward each other on a bright well-kept front porch, one holding only a folded gray sweater, the other empty, small table with two glasses of water; a conversation ready and waiting for its second person; no people; avoid memorial or empty-chair-grief cues, decay, catalog staging.

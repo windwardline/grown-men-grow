@@ -6,14 +6,14 @@ author: Michael Peacock
 access: public
 email_subject: A Confession Can Still Be Selfish
 preview: Disclosure has a feel-better exit. Repair does not.
-status: draft-for-founder-review
-approved: none — every word requires founder review and approval before staging or publication
+status: founder-approved
+approved: 2026-08-09 — essay, carousel, caption, and visual direction approved as written; publication timing remains gated
 personal_claims: none included; add only from founder-supplied facts
-artwork_status: not-started; unique imagery required under the per-article image rule
+artwork_status: in production 2026-08-09 under the per-article image rule
 origin: expands the founder-approved "A confession can still be selfish" section of Essay 1 into its own field note
 ---
 
-# Ghost essay source — DRAFT, NOT APPROVED
+# Ghost essay source
 
 There is a specific look a man gets right after he finally says the hard thing. Relief, mostly. A little pride. The look of someone setting down a heavy bag at the end of a long carry.
 
@@ -55,7 +55,7 @@ Open up. Say the thing. Take the exhale — you are allowed to feel relief.
 
 Then stay in the room. The confession was the door. The friendship, the marriage, the kid who heard you say it — they live in what you carry through it.
 
-# Instagram carousel source — DRAFT, NOT APPROVED
+# Instagram carousel source
 
 ## Slide 1
 
@@ -93,7 +93,7 @@ Open up. Take the exhale.
 
 Then stay in the room.
 
-# Instagram caption source — DRAFT, NOT APPROVED
+# Instagram caption source
 
 There is a look a man gets right after he says the hard thing. Relief. A little pride. Someone setting down a heavy bag.
 
@@ -105,7 +105,7 @@ Repair answers on their timeline, names the behavior, volunteers the cost, and r
 
 Open up. Take the exhale. Then stay in the room.
 
-# Visual direction — DRAFT
+# Visual direction
 
 - Family: Recognition; object-detail and weight-led. Must not reuse any prior article's photographs or the FN2 route-line or FN3 signature vocabularies.
 - Candidate lead: a heavy canvas bag set down mid-hallway in daylight, or two chairs mid-conversation with one empty; the weight-and-handoff idea carried by objects.
@@ -113,6 +113,6 @@ Open up. Take the exhale. Then stay in the room.
 
 # Production notes
 
-- DRAFT. Nothing in this file is approved. The founder reviews and rules on the essay, carousel, caption, and visual direction before any staging.
+- The founder approved the essay, carousel, caption, and visual direction on 2026-08-09. Publication timing remains a later release decision.
 - No first-person concrete anecdote appears; none may be added except from founder-supplied facts.
 - Voice calibration source: Field Note 2 per the 2026-08-08 founder ruling.

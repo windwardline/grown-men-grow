@@ -1,14 +1,14 @@
 ---
 essay: Call Your Friends Before There’s a Reason
 canonical: https://grownmengrow.com/call-your-friends-before-theres-a-reason/ (live only after launch)
-status: draft-for-founder-review
-approved: none — platform copy requires founder review before any account receives it
+status: founder-approved
+approved: 2026-08-09
 image_rule: per-article (founder-ruled 2026-08-09) — this pack may use only Field Note 2 imagery
 ---
 
-# Field Note 2 — platform adaptations (DRAFT, NOT APPROVED)
+# Field Note 2 — platform adaptations
 
-Native adaptations per the roles in `docs/technical/distribution-plan.md`. Nothing here posts anywhere until the founder approves the exact copy, the canonical Ghost URL is live, and each platform's own gate passes. Ghost remains canonical; Medium is the only full-essay surface.
+Native adaptations per the roles in `docs/technical/distribution-plan.md`. Copy approved 2026-08-09. Nothing posts until the canonical Ghost URL is live and each platform's own gate passes. Ghost remains canonical; Medium is the only full-essay surface.
 
 # Medium
 
