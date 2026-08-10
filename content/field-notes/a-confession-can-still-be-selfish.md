@@ -105,6 +105,16 @@ Repair answers on their timeline, names the behavior, volunteers the cost, and r
 
 Open up. Take the exhale. Then stay in the room.
 
+# Instagram alt text source
+
+- Slide 1: Title A Confession Can Still Be Selfish above a canvas duffel bag set down in a sunlit hallway, with a heavy ink bar under the title.
+- Slide 2: Serif text reading Say the hard thing, feel the pressure drop, with heavy underline bars beneath the key phrases.
+- Slide 3: Sparse italic page reading That is the trap. The exhale feels like completion.
+- Slide 4: One man's hands passing a loaded tool bag into another man's open hands at a front gate, above strips reading I told you about my temper is not the same as managing it.
+- Slide 5: Paper card headed The tells, listing: it arrives on his schedule, detailed about feelings, vague about actions, it asks to be admired.
+- Slide 6: Two porch chairs angled toward each other, one holding a folded sweater, above Repair is disclosure plus everything disclosure lets you skip.
+- Slide 7: Closing page reading Open up. Take the exhale. Then stay in the room, above a heavy ink bar.
+
 # Visual direction
 
 - Family: Recognition; object-detail and weight-led. Must not reuse any prior article's photographs or the FN2 route-line or FN3 signature vocabularies.
