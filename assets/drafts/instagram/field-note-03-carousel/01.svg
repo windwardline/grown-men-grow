@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn3-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn3-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn3-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 03 · 01 / 07</text>
+  <text x="64" y="250" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="84" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="1.2">FRIENDSHIP HAS A</text>
+    <rect x="56" y="292" width="792" height="112" fill="#3A1518" transform="rotate(-0.8 452 348)"/>
+    <text x="84" y="374" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="82" font-weight="900" letter-spacing="1.2" transform="rotate(-0.8 452 348)">MAINTENANCE</text>
+    <text x="64" y="508" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="84" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="1.2">SCHEDULE.</text>
+    <line x1="866" y1="150" x2="863" y2="184" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="877" y1="150" x2="874" y2="184" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="888" y1="150" x2="885" y2="184" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="899" y1="150" x2="896" y2="184" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="858" y1="180" x2="906" y2="156" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="930" y1="150" x2="927" y2="184" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="941" y1="150" x2="938" y2="184" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="952" y1="150" x2="949" y2="184" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="963" y1="150" x2="960" y2="184" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/><line x1="922" y1="180" x2="970" y2="156" stroke="#3A1518" stroke-width="5" stroke-linecap="round"/>
+    <g transform="rotate(-0.8 545 890)">
+    <rect x="108" y="580" width="874" height="654" fill="#60735A"/>
+    <rect x="116" y="566" width="858" height="648" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/garage-doorway-call.png" x="120" y="570" width="850" height="640" preserveAspectRatio="xMidYMin slice" filter="url(#fn3-01-photo)"/>
+  </g>
+    <g transform="rotate(-4 325 571)">
+    <rect x="220" y="548" width="210" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="228" y1="555" x2="420" y2="552" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn3-01-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

@@ -158,6 +158,7 @@ const requiredFiles = [
   'scripts/package-ghost-theme.mjs',
   'scripts/render-editorial-collage-concepts.mjs',
   'scripts/render-field-note-02.mjs',
+  'scripts/render-field-note-03.mjs',
   'scripts/render-ghost-feature-images.mjs',
   'scripts/render-instagram-pinned-intro.mjs',
   'scripts/render-launch-graphics.mjs',
@@ -236,8 +237,9 @@ await validateAssetFamily('assets/drafts/instagram/launch-stories', 5, 1080, 192
 await validateAssetFamily('assets/drafts/instagram/static-post', 1, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/reel', 1, 1080, 1920);
 await validateAssetFamily('assets/drafts/instagram/field-note-02-carousel', 7, 1080, 1350);
+await validateAssetFamily('assets/drafts/instagram/field-note-03-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
-await validateAssetFamily('assets/drafts/ghost/feature-images', 4, 1600, 1000);
+await validateAssetFamily('assets/drafts/ghost/feature-images', 5, 1600, 1000);
 await validateEditorialConcepts();
 await validateNamedPngs('assets/source/editorial', new Map([
   ['friends-in-conversation', { width: 1023, height: 1537 }],
@@ -251,10 +253,14 @@ await validateNamedPngs('assets/source/editorial', new Map([
   ['deck-board-detail', { width: 1024, height: 1536 }],
   ['truck-tailgate-loading', { width: 1024, height: 1536 }],
   ['porch-coffee-pause', { width: 1024, height: 1536 }],
+  ['garage-doorway-call', { width: 1024, height: 1536 }],
+  ['oil-check-detail', { width: 1024, height: 1536 }],
+  ['smoke-detector-battery', { width: 1024, height: 1536 }],
 ]));
 await validateNamedPngs('assets/drafts/review', new Map([
   ['foundational-carousel', { width: 1362, height: 1004 }],
   ['field-note-02-carousel', { width: 1362, height: 1004 }],
+  ['field-note-03-carousel', { width: 1362, height: 1004 }],
   ['ghost-social-cards', { width: 1310, height: 884 }],
   ['pinned-introduction', { width: 1362, height: 1004 }],
   ['recognition-carousel', { width: 1362, height: 1004 }],
@@ -305,4 +311,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 43 launch PNG/SVG pairs, six review sheets, eleven editorial source images, and five editorial concept pairs.`);
+console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 51 launch PNG/SVG pairs, seven review sheets, fourteen editorial source images, and five editorial concept pairs.`);
