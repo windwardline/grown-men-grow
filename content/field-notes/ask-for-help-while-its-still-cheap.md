@@ -112,6 +112,16 @@ Knowing when to ask is part of the skill. Every trade knows it. The amateur move
 
 Ask early. Ask specifically. Ask while it’s still cheap.
 
+# Instagram alt text source
+
+- Slide 1: Title Ask for Help While It's Still Cheap above a photograph of a man asking a question at a hardware-store counter while an older counterman leans in, with a small drawn price tag reading CHEAP.
+- Slide 2: Serif text about the window where asking costs almost nothing, with a small drawn price tag reading PRIDE.
+- Slide 3: Sparse italic page reading We let the window close. Then we pay the crisis rate, with a price tag reading times one hundred.
+- Slide 4: A renovation wall opened to clean studs with wiring paused mid-run, above strips reading The plumbing question becomes a flooring question, budget becomes debt.
+- Slide 5: Serif page reading Knowing when to ask is part of the skill — the electrician calls the inspector, the pilot calls the tower — with a price tag reading SKILL.
+- Slide 6: One man's hand sliding a folder of blank paperwork across a kitchen table to another man's waiting hand, above The cheap question: can you look at this before I make it worse?
+- Slide 7: Closing page reading The window is open right now, on something. You know which one, with a price tag reading TODAY.
+
 # Visual direction
 
 - Family: Field Note; image-led with practical energy. Must not reuse any prior article's photographs or signature vocabularies (FN2 route line, FN3 tally marks and circled day, FN4 weight bars).

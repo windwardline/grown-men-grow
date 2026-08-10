@@ -176,3 +176,22 @@ Generated through the founder's ChatGPT account (GPT image generation, portrait 
 
 - Status: composition study; Field Note 4 carousel repair slide
 - Prompt: two simple wooden chairs angled toward each other on a bright well-kept front porch, one holding only a folded gray sweater, the other empty, small table with two glasses of water; a conversation ready and waiting for its second person; no people; avoid memorial or empty-chair-grief cues, decay, catalog staging.
+
+## Current composition studies — Field Note 5 set (generated 2026-08-09)
+
+Generated through the founder's ChatGPT account (GPT image generation, portrait 2:3, 1024x1536) for "Ask for Help While It's Still Cheap" (founder-approved 2026-08-09) under its approved open-window direction. Each passed the full-resolution believability review; all three are exclusive to Field Note 5 under the per-article image rule.
+
+### `hardware-counter-question.png`
+
+- Status: composition study; Field Note 5 lead (feature image and carousel cover)
+- Prompt: adult man at the worn wooden counter of a small neighborhood hardware store holding a plumbing fitting mid-question while an older counterman leans in with easy expertise; the ordinary act of asking someone who knows; warm shop, orderly bins, storefront daylight; no readable signage or price text; avoid nostalgia-sepia, folksy caricature, stock grins.
+
+### `open-wall-wiring.png`
+
+- Status: composition study; Field Note 5 carousel detail slide
+- Prompt: interior wall opened mid-renovation in bright daylight, clean exposed studs with wiring paused mid-run, coiled cable on a stud, wire strippers on a sawhorse, sun through the studs; work honestly paused, a window of time standing open; no people; avoid demolition mess, hazard drama.
+
+### `paperwork-second-eyes.png`
+
+- Status: composition study; Field Note 5 carousel cheap-question slide
+- Prompt: one man's hand sliding an open folder of blank household paperwork across a warm kitchen table toward another man's waiting hand, two mugs, morning light; asking a trusted friend for another set of eyes before a problem grows; hands and forearms only; papers completely blank; avoid audit-anxiety drama, handshake cues.

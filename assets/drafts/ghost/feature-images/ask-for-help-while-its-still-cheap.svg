@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="fn5-feature-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn5-feature-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn5-feature-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="#F8F3EA"/>
+  <rect x="0" y="0" width="440" height="1000" fill="#EEE6D8"/>
+  <g transform="rotate(-0.7 800 500)">
+    <rect x="388" y="90" width="824" height="854" fill="#60735A"/>
+    <rect x="396" y="76" width="808" height="848" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/hardware-counter-question.png" x="400" y="80" width="800" height="840" preserveAspectRatio="xMidYMid slice" filter="url(#fn5-feature-photo)"/>
+  </g>
+  <g transform="rotate(1.5 1370 500)">
+    <rect x="1178" y="250" width="384" height="534" fill="#3A1518"/>
+    <rect x="1186" y="236" width="368" height="528" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/open-wall-wiring.png" x="1190" y="240" width="360" height="520" preserveAspectRatio="xMidYMid slice" filter="url(#fn5-feature-photo)"/>
+  </g>
+  <g transform="rotate(-4 620 79)">
+    <rect x="510" y="56" width="220" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="518" y1="63" x2="720" y2="60" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g transform="rotate(4 1350 239)">
+    <rect x="1260" y="216" width="180" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="1268" y1="223" x2="1430" y2="220" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g transform="rotate(-6 194 172)">
+    <path d="M138 114 C124 128 130 136 136 140" fill="none" stroke="#60735A" stroke-width="4" stroke-linecap="round"/>
+    <rect x="120" y="140" width="148" height="64" fill="#F8F3EA" stroke="#60735A" stroke-width="4"/>
+    <circle cx="138" cy="154" r="5" fill="none" stroke="#60735A" stroke-width="3"/>
+    <text x="154" y="183" fill="#60735A" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="1.4">CHEAP</text>
+  </g>
+  <g transform="rotate(4 224 352)">
+    <path d="M168 294 C154 308 160 316 166 320" fill="none" stroke="#B14F3F" stroke-width="4" stroke-linecap="round"/>
+    <rect x="150" y="320" width="148" height="64" fill="#F8F3EA" stroke="#B14F3F" stroke-width="4"/>
+    <circle cx="168" cy="334" r="5" fill="none" stroke="#B14F3F" stroke-width="3"/>
+    <text x="184" y="363" fill="#B14F3F" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="1.4">PRIDE</text>
+  </g>
+  <g transform="rotate(-3 184 532)">
+    <path d="M128 474 C114 488 120 496 126 500" fill="none" stroke="#3A1518" stroke-width="4" stroke-linecap="round"/>
+    <rect x="110" y="500" width="148" height="64" fill="#F8F3EA" stroke="#3A1518" stroke-width="4"/>
+    <circle cx="128" cy="514" r="5" fill="none" stroke="#3A1518" stroke-width="3"/>
+    <text x="144" y="543" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="1.4">×100</text>
+  </g>
+  <rect x="96" y="740" width="280" height="170" fill="#60735A" transform="rotate(-1.4 236 825)"/>
+  <rect width="1600" height="1000" filter="url(#fn5-feature-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
