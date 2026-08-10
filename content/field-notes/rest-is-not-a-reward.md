@@ -9,7 +9,7 @@ preview: The tools get put away properly. The man doesn’t.
 status: founder-approved
 approved: 2026-08-09 under the ten-round directive; founder veto on sight
 personal_claims: none included; add only from founder-supplied facts
-artwork_status: in production under the per-article image rule
+artwork_status: complete; founder-approved 2026-08-10 with rounds 7-10
 ---
 
 # Ghost essay source
