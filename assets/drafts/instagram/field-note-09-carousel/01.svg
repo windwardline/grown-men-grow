@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn9-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn9-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn9-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 09 · 01 / 07</text>
+  <text x="64" y="250" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="86" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="1.2">COMPARISON IS</text>
+    <text x="64" y="364" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="86" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="1.2">A BAD MAP.</text>
+    <path d="M830 220 c 91 -67.60000000000001 195 -31.200000000000003 179.4 44.2 c -13 62.400000000000006 -124.80000000000001 75.4 -161.20000000000002 20.8 c -23.400000000000002 -35.1 -7.800000000000001 -49.4 -18.2 -65" fill="none" stroke="#B14F3F" stroke-width="7.800000000000001" stroke-linecap="round" stroke-dasharray="20.8 16.900000000000002"/>
+  <circle cx="830" cy="220" r="10.4" fill="#B14F3F"/>
+    <g transform="rotate(-0.8 550 820)">
+    <rect x="138" y="450" width="824" height="774" fill="#60735A"/>
+    <rect x="146" y="436" width="808" height="768" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/garden-beds-two-heights.png" x="150" y="440" width="800" height="760" preserveAspectRatio="xMidYMid slice" filter="url(#fn9-01-photo)"/>
+  </g>
+    <g transform="rotate(-4 365 439)">
+    <rect x="260" y="416" width="210" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="268" y1="423" x2="460" y2="420" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn9-01-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

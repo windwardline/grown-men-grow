@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn10-07-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn10-07-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn10-07-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 10 · 07 / 07</text>
+  <text x="90" y="480" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="74" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">You’re funding the man</text><text x="90" y="572" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="74" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">who shows up later.</text>
+    <text x="92" y="740" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="italic" text-anchor="start" letter-spacing="-1.6">Open the mail.</text><text x="92" y="824" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="italic" text-anchor="start" letter-spacing="-1.6">It’s addressed to him.</text>
+    <g>
+    <line x1="560" y1="960" x2="630.2" y2="960" stroke="#60735A" stroke-width="6.5" stroke-linecap="round"/>
+    <line x1="653.6" y1="960" x2="723.8" y2="960" stroke="#60735A" stroke-width="6.5" stroke-linecap="round"/>
+    <line x1="595.1" y1="970.4" x2="595.1" y2="1061.4" stroke="#60735A" stroke-width="3.9000000000000004" opacity="0.5"/>
+    <line x1="688.7" y1="970.4" x2="688.7" y2="1061.4" stroke="#60735A" stroke-width="3.9000000000000004" opacity="0.5"/>
+    <line x1="570.4" y1="993.8" x2="619.8000000000001" y2="993.8" stroke="#60735A" stroke-width="5.2" stroke-linecap="round"/><line x1="570.4" y1="1014.5999999999999" x2="619.8000000000001" y2="1014.5999999999999" stroke="#60735A" stroke-width="5.2" stroke-linecap="round"/><line x1="570.4" y1="1035.3999999999999" x2="619.8000000000001" y2="1035.3999999999999" stroke="#60735A" stroke-width="5.2" stroke-linecap="round"/><line x1="570.4" y1="1056.2" x2="619.8000000000001" y2="1056.2" stroke="#60735A" stroke-width="5.2" stroke-linecap="round"/>
+    <line x1="664" y1="993.8" x2="713.4000000000001" y2="993.8" stroke="#60735A" stroke-width="5.2" stroke-linecap="round"/><line x1="664" y1="1014.5999999999999" x2="713.4000000000001" y2="1014.5999999999999" stroke="#60735A" stroke-width="5.2" stroke-linecap="round"/><line x1="664" y1="1035.3999999999999" x2="713.4000000000001" y2="1035.3999999999999" stroke="#60735A" stroke-width="5.2" stroke-linecap="round"/><line x1="664" y1="1056.2" x2="713.4000000000001" y2="1056.2" stroke="#60735A" stroke-width="5.2" stroke-linecap="round"/>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn10-07-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

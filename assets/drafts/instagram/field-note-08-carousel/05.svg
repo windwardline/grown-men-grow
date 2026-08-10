@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn8-05-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn8-05-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn8-05-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 08 · 05 / 07</text>
+  <rect x="88" y="220" width="904" height="820" fill="#EEE6D8" transform="rotate(-0.8 540 630)"/>
+    <g transform="rotate(-4 310 219)">
+    <rect x="200" y="196" width="220" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="208" y1="203" x2="410" y2="200" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="150" y="380" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="74" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">The compass questions:</text>
+    <text x="150" y="510" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">If this works completely —</text><text x="150" y="578" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">what do I have?</text><text x="150" y="646" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6"></text><text x="150" y="714" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">Who set this course?</text><text x="150" y="782" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6"></text><text x="150" y="850" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">What’s the cost-per-mile lately?</text>
+    <g><g fill="none" stroke="#B14F3F" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity="1">
+      <path d="M780 300 q 34 0 62 -46"/>
+      <path d="M827 262.56 l 15 -12.88 l -21 7"/>
+    </g><g fill="none" stroke="#B14F3F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.38">
+      <path d="M780 300 q 34 0 62 46"/>
+      <path d="M827 337.44 l 15 12.88 l -21 -7"/>
+    </g></g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn8-05-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

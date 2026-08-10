@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn7-07-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn7-07-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn7-07-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 07 · 07 / 07</text>
+  <text x="90" y="480" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="80" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">Nobody calls the truck</text><text x="90" y="576" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="80" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">lazy for needing oil.</text>
+    <text x="92" y="720" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="italic" text-anchor="start" letter-spacing="-1.6">Put it on the schedule.</text><text x="92" y="804" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="italic" text-anchor="start" letter-spacing="-1.6">Not after. On.</text>
+    <g>
+    <rect x="560" y="900" width="171.6" height="83.2" rx="13" fill="none" stroke="#60735A" stroke-width="6.5"/>
+    <rect x="736.8" y="926" width="11.700000000000001" height="31.200000000000003" rx="5.2" fill="#60735A"/><rect x="573" y="913" width="28.6" height="57.2" fill="#60735A"/><rect x="612" y="913" width="28.6" height="57.2" fill="#60735A"/><rect x="651" y="913" width="28.6" height="57.2" fill="#60735A"/><rect x="690" y="913" width="28.6" height="57.2" fill="#60735A"/></g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn7-07-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn10-05-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn10-05-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn10-05-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 10 · 05 / 07</text>
+  <rect x="88" y="220" width="904" height="820" fill="#EEE6D8" transform="rotate(-0.8 540 630)"/>
+    <g transform="rotate(-4 310 219)">
+    <rect x="200" y="196" width="220" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="208" y1="203" x2="410" y2="200" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="150" y="400" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="58" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">Somewhere, ignoring the body</text><text x="150" y="476" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="58" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">got misfiled as strength.</text>
+    <text x="150" y="640" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">Actual toughness</text><text x="150" y="720" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">reads its own mail.</text>
+    <g>
+    <line x1="700" y1="900" x2="754" y2="900" stroke="#B14F3F" stroke-width="5" stroke-linecap="round"/>
+    <line x1="772" y1="900" x2="826" y2="900" stroke="#B14F3F" stroke-width="5" stroke-linecap="round"/>
+    <line x1="727" y1="908" x2="727" y2="978" stroke="#B14F3F" stroke-width="3" opacity="0.5"/>
+    <line x1="799" y1="908" x2="799" y2="978" stroke="#B14F3F" stroke-width="3" opacity="0.5"/>
+    <line x1="708" y1="926" x2="746" y2="926" stroke="#B14F3F" stroke-width="4" stroke-linecap="round"/><line x1="708" y1="942" x2="746" y2="942" stroke="#B14F3F" stroke-width="4" stroke-linecap="round"/><line x1="708" y1="958" x2="746" y2="958" stroke="#B14F3F" stroke-width="4" stroke-linecap="round"/>
+    <line x1="780" y1="926" x2="818" y2="926" stroke="#B14F3F" stroke-width="4" stroke-linecap="round"/><line x1="780" y1="942" x2="818" y2="942" stroke="#B14F3F" stroke-width="4" stroke-linecap="round"/><line x1="780" y1="958" x2="818" y2="958" stroke="#B14F3F" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn10-05-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
