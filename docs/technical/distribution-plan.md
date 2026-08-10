@@ -95,6 +95,8 @@ The approved low-cost workflow is:
 
 `Ghost post published -> Zapier Free -> Buffer idea`
 
+**Built and verified 2026-08-10.** The Zap "Ghost post published → Buffer idea (launch distribution stub)" exists in the founder's Zapier account as a tested draft. Implementation detail: the trigger is **RSS by Zapier** watching `https://grownmengrow.com/rss/` rather than the Ghost Zapier app — the same post-published signal with no Admin API key handed through an agent. The action creates a Buffer Idea titled with the post title, containing the title, canonical link, and the campaign note; an end-to-end test created and verified a real Idea in Buffer (then deleted it). The Zap stays **off until launch** because the private site's feed returns the password page; switching it on is a one-click launch-day step recorded in the release checklist. Polling latency is up to 15 minutes on Zapier Free, which is irrelevant for a drafts-only stub.
+
 The Buffer idea is a distribution stub containing the title, canonical URL, and campaign slug. A person or coding agent writes and reviews each channel version before scheduling.
 
 - Buffer Free is reserved for Bluesky and the LinkedIn Page, leaving one of its three free channel slots open.
