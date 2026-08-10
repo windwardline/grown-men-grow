@@ -363,3 +363,9 @@
 - **Status:** Decided by the founder ("I want you to build out that LinkedIn page in full, and set it up for automation. Similarly, set up the Instagram automation now that it is setup. I think we will forego Facebook, like Pinterest and Threads.")
 - **Context:** The founder created the LinkedIn Page (linkedin.com/company/grown-men-grow, vanity URL `grown-men-grow`) during the same session. No Facebook Page had ever been created, so the elimination unwinds no external account state.
 - **Effect:** Facebook sections were removed from all ten platform packs, the pack-completeness gate now requires four platform sections (Medium, Bluesky, LinkedIn, Substack Notes), and the distribution plan, prep register, analytics targets, SEO plan, and founder-decisions checklist no longer carry Facebook. The LinkedIn Page was built out in full — square wordmark logo, a LinkedIn-specific tagline-led cover (new `linkedin-banner` render target whose composition avoids duplicating the logo LinkedIn overlays on the cover; founder-approved in review), tagline, and an About assembled verbatim from approved copy — and connected to Buffer's third channel slot with the founder's OAuth grant. Buffer Free now carries Instagram, Bluesky, and the LinkedIn Page with no open slots. Meta tooling serves Instagram only.
+
+## 2026-08-10 — Leave AI-disclosure fields empty across platforms
+
+- **Status:** Decided by the founder ("I do not want to enter anything in the AI-disclosure fields").
+- **Context:** The field audit surfaced two optional AI-disclosure surfaces: Substack's "How I make this" statement and Instagram's AI-creator profile label. Both are public statements about production process, adjacent to the visual system's visible-human-authorship pillar.
+- **Effect:** Both remain empty/off. Agents do not fill AI-disclosure fields on any platform without a new founder decision. This governs future platform surfaces of the same kind.

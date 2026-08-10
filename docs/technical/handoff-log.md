@@ -392,3 +392,9 @@ The founder correctly called out that "audited" had twice been claimed without w
 **Deliberate skips (reasons recorded):** LinkedIn Featured/Workplace/Commitments/Locations (need posts or physical premises); LinkedIn/Substack phone fields (no public phone); Ghost publication logo (theme's typographic masthead is the intended design — logo would replace it); Buffer posting schedules (set at launch when cadence decisions are made against analytics); Instagram AI-creator label (founder decision, see flags).
 
 **Flagged to founder:** (1) Instagram website link is mobile-app-only — add the UTM URL from the app. (2) Substack "How I make this" AI-transparency statement and the Instagram AI-creator toggle are brand-strategy calls about the image pipeline — drafts on request. (3) Substack public byline still shows the old name from CDN cache (all stored records verified brand: profile, account, team, copyright); re-verify after cache expiry. (4) 2FA on Substack and Bluesky.
+
+## 2026-08-10 — Claude Code: founder rulings close the audit's open items
+
+**Client:** Claude Code (desktop). **Branch:** `docs/founder-rulings-closeout`.
+
+Founder rulings on the audit's flagged items: (1) the Instagram website link is being added by the founder from the mobile app — treated as done; (2) AI-disclosure fields stay empty everywhere, recorded as a standing decision in the decision log; (3) 2FA on Substack and Bluesky declined for now — the recommendation stands open, no nagging; (4) the Ghost Publisher checkout is expected within one to two days, which starts the launch sequence. Still watched: the Substack public byline cache (all stored records verified brand).
