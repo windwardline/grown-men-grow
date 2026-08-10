@@ -2,7 +2,7 @@
 title: Call Your Friends Before There’s a Reason
 slug: call-your-friends-before-theres-a-reason
 dek: Male friendship deserves more than a crisis plan.
-author: Michael Peacock
+byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Call Your Friends Before There’s a Reason
 preview: Doing things together counts. It just cannot carry everything forever.

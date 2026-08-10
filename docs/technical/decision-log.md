@@ -342,6 +342,13 @@
 - **Context:** Meta suspended the Threads account at creation and denied the appeal with no further review available. Because Threads identities ride the Instagram account, a replacement would require abandoning the publication's Instagram identity. Nothing was ever published.
 - **Effect:** Threads sections were removed from all ten platform packs, the pack-completeness gate now requires five platform sections (Medium, Bluesky, LinkedIn, Facebook, Substack Notes), and the distribution plan, prep register, analytics targets, and SEO plan no longer carry Threads. Buffer Free now reserves channels for Bluesky and LinkedIn only, leaving one free slot open. The drafted Threads copy was removed with the sections rather than retained.
 
+## 2026-08-10 — Publication voice: remove the founder's name and face from all public surfaces
+
+- **Status:** Decided by the founder ("I would prefer my name not be attached publicly... you can remove my name and face from public facing aspects of this project"), implemented with the anonymous-editorial-voice convention (the Economist model) so no surface reads as "written by an individual named Grown Men Grow."
+- **Implementation:** The theme (v1.3.0, live) no longer renders bylines or author cards anywhere; essays carry only the publication mark, date, and reading time. The Ghost staff user was renamed to "Grown Men Grow" (slug grown-men-grow) with the founder's profile photo removed, so metadata, structured data, and the vestigial author archive all resolve to the brand. Content frontmatter now records "byline: none — publication voice." The metadata register, AGENTS.md identity contract, and the repository gate were updated: the founder-name exclusion now covers every public surface, not just Instagram.
+- **Also decided (same session):** The Substack user profile was converted to brand identity (Grown Men Grow, brand avatar, brand header) under the founder's "make the cohesive decision" delegation — Notes are a social surface and social surfaces are brand-first. Medium was already brand-bylined.
+- **Effect:** The founder's name and face appear on no public surface of the project. Internal repository records (decision logs, handoff logs, git identity) still name the founder.
+
 ## Current pending decisions
 
 - Ghost Publisher purchase confirmation at the later trial or launch checkpoint; launch itself proceeds on the trial.

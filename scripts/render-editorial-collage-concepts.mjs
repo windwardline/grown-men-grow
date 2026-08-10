@@ -132,7 +132,7 @@ writeSvg(
   ${scribble("M76 594 C184 624 314 584 420 608 C512 630 612 602 694 618")}
   <text x="66" y="684" fill="${OXBLOOD}" font-family="${SERIF}" font-size="30" font-style="italic">A man can look strong and still be hiding.</text>
   <rect x="62" y="836" width="430" height="2" fill="${INK}"/>
-  <text x="62" y="882" fill="${INK}" font-family="${SANS}" font-size="18" font-weight="800" letter-spacing="2.6">MICHAEL PEACOCK</text>
+  <text x="62" y="882" fill="${INK}" font-family="${SANS}" font-size="18" font-weight="800" letter-spacing="2.6">GROWN MEN GROW</text>
   <text x="62" y="915" fill="${SMOKE}" font-family="${SANS}" font-size="16" font-weight="700" letter-spacing="2.2">GROWNMENGROW.COM</text>
   ${grain(1600, 1000, "ghost-collage", 0.24)}
 </svg>`,

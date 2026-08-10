@@ -31,8 +31,8 @@ approved: 2026-08-07 copy; 2026-08-08 theme search-preview directive
 
 # Staff author
 
-- Name: **Michael Peacock**
-- Approved staff bio: **Michael Peacock writes Grown Men Grow, a publication about the unfinished work of being a man.**
+- Staff display name: **Grown Men Grow** (publication voice; the founder ruling of 2026-08-10 removes the founder's name and face from every public surface)
+- Approved staff bio: **Essays on the unfinished work of being a man.**
 - Profile image: none until the founder supplies or approves one
 
 # Search-preview directive

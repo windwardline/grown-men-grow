@@ -2,7 +2,7 @@
 title: Strength Has to Grow Up
 slug: strength-has-to-grow-up
 dek: A man can look strong and still be hiding.
-author: Michael Peacock
+byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Strength Has to Grow Up
 preview: Strength tells us what a man can do. It does not tell us what he serves.

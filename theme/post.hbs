@@ -21,12 +21,6 @@
 
             <div class="article-header__meta">
                 <span class="article-header__brand">{{@site.title}}</span>
-                <span class="article-header__byline">
-                    By
-                    {{#foreach authors}}
-                        <a href="{{url}}">{{name}}</a>{{#unless @last}}, {{/unless}}
-                    {{/foreach}}
-                </span>
                 <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</time>
                 <span>{{reading_time}}</span>
             </div>
@@ -73,22 +67,6 @@
             </section>
         {{/if}}
 
-        <div class="article-authors">
-            {{#foreach authors}}
-                <section class="author-card{{#unless profile_image}} author-card--no-image{{/unless}}">
-                    {{#if profile_image}}
-                        <a href="{{url}}" aria-label="More from {{name}}">
-                            <img src="{{img_url profile_image size="xs"}}" alt="" width="96" height="96" loading="lazy">
-                        </a>
-                    {{/if}}
-                    <div>
-                        <p class="eyebrow">Contributor</p>
-                        <h2><a href="{{url}}">{{name}}</a></h2>
-                        {{#if bio}}<p>{{bio}}</p>{{/if}}
-                    </div>
-                </section>
-            {{/foreach}}
-        </div>
     </footer>
 </article>
 {{/post}}

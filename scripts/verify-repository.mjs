@@ -340,17 +340,11 @@ for (const file of tracked.filter((item) => publicSurface(item) && textExtension
   await checkTextPolicy(path.join(root, file), /gartner/i, 'the public Gartner exclusion');
 }
 
-// Instagram surfaces stay brand-led: the founder's name may not appear in
-// Instagram copy or any Instagram-facing rendered asset. Ghost-surface assets
-// (feature images, social cards) may credit the writer.
-const instagramFacing = (item) =>
-  item.startsWith('content/instagram/')
-  || (item.endsWith('.svg') && item.startsWith('assets/') && (
-    item.includes('instagram')
-    || /(?:^|\/)(?:carousel-spread|story-cover)\.svg$/.test(item)
-  ));
-for (const file of tracked.filter(instagramFacing)) {
-  await checkTextPolicy(path.join(root, file), /peacock/i, 'the Instagram founder-identity rule');
+// Publication voice (founder ruling 2026-08-10): the founder's name appears on
+// no public surface — canonical copy, rendered asset sources, the theme, or
+// renderer copy strings. Internal registers under docs/ stay out of scope.
+for (const file of tracked.filter((item) => publicSurface(item) && textExtensions.has(path.extname(item)))) {
+  await checkTextPolicy(path.join(root, file), /peacock/i, 'the publication-voice founder-identity rule');
 }
 
 // Round-closure rule (founder-ruled 2026-08-09): every piece carries a

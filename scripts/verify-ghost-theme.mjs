@@ -75,7 +75,7 @@ if (!failures.length) {
   }
 
   const postTemplate = await read('post.hbs');
-  for (const token of ['{{#post}}', '{{content}}', '{{> "feature-image"', '{{#foreach authors}}', '{{reading_time}}', '{{comments}}', 'Issue {{date format="YYYY.WW"}}']) {
+  for (const token of ['{{#post}}', '{{content}}', '{{> "feature-image"', '{{reading_time}}', '{{comments}}', 'Issue {{date format="YYYY.WW"}}']) {
     if (!postTemplate.includes(token)) fail(`post.hbs is missing ${token}.`);
   }
 

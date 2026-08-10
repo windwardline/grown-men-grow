@@ -2,7 +2,7 @@
 title: Ask for Help While It’s Still Cheap
 slug: ask-for-help-while-its-still-cheap
 dek: Men treat asking for help like a last resort. That’s the expensive way.
-author: Michael Peacock
+byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Ask for Help While It’s Still Cheap
 preview: The price of help only goes one direction while you wait.

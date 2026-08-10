@@ -20,7 +20,7 @@ Stack exception (owner-approved 2026-08-07): Ghost(Pro), rather than Vercel, hos
 - Avoid formulaic titles and captions, including interchangeable comma-chain constructions. Concrete observations, tension, and earned humor carry the writing.
 - Grown Men Grow is pro-male and responsibility-centered. It rejects grievance, domination, gender-war framing, anti-male shame, forced ideological pandering, and the pursuit of anyone's approval as proof of virtue. Do not use the manosphere, women, or feminism as profile positioning.
 - Do not identify Gartner in public pages, essays, newsletters, metadata, social copy, captions, alt text, or public account fields.
-- Keep Grown Men Grow primary. Michael Peacock may appear as the credited writer on Ghost and Medium; Instagram and the other brand profiles remain brand-led.
+- Keep Grown Men Grow primary. The publication runs in publication voice on every public surface (founder ruling 2026-08-10): the founder's name and face appear nowhere public — no bylines, author cards, staff names, or metadata credits. Internal repository records may still name the founder.
 - Follow `docs/editorial-visual-system.md`: bright, energetic, tactile editorial collage; maintained environments; visible human authorship; varied compositions; and no despair-coded, dilapidated, or visibly synthetic imagery.
 
 ## Distribution boundary
@@ -30,7 +30,7 @@ Stack exception (owner-approved 2026-08-07): Ghost(Pro), rather than Vercel, hos
 - Other platforms receive reviewed native excerpts, visuals, conversation, or links.
 - Never import Ghost members into another service or synchronize subscriber lists.
 - Automation may create drafts and scheduling stubs. It may not publish unreviewed platform copy.
-- Social profiles remain brand-first. Michael Peacock may be credited on Ghost and Medium but must not be introduced as the Instagram identity.
+- Social profiles remain brand-first. Every public identity, including Ghost and Medium, is Grown Men Grow; the founder's name is never attached publicly (founder ruling 2026-08-10).
 
 ## Commands and gates
 

@@ -1,7 +1,7 @@
 {
   "name": "grown-men-grow",
   "description": "The original editorial theme for the Grown Men Grow publication.",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "engines": {
     "ghost": ">=6.0.0"
   },
