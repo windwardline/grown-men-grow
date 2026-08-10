@@ -26,8 +26,10 @@ Shared profile configuration (bio line, avatar, link policy) is already recorded
 ## Per-essay adaptation packs
 
 - Essay 1: `content/distribution/essay-01-launch.md` — founder-approved.
-- Field Note 2: `content/distribution/field-note-02-platforms.md` — drafted, awaiting founder review.
-- Every future piece ships its pack at approval time so distribution never waits on copywriting.
+- Field Note 2: `content/distribution/field-note-02-platforms.md` — founder-approved.
+- Field Note 3: `content/distribution/field-note-03-platforms.md` — founder-approved under the round-closure directive.
+- Field Note 4: `content/distribution/field-note-04-platforms.md` — founder-approved under the round-closure directive.
+- Round-closure rule (founder-ruled 2026-08-09): a content round is complete only when essay, artwork, and cross-platform pack all exist; every future piece ships its pack at approval time.
 
 ## Gates that hold regardless of preparation
 
