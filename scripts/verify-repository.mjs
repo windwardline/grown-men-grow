@@ -298,6 +298,7 @@ await validateNamedPngs('assets/drafts/brand/banners', new Map([
   ['ghost-publication-cover', { width: 2000, height: 840 }],
   ['social-banner-wide', { width: 1584, height: 396 }],
   ['linkedin-banner', { width: 1584, height: 396 }],
+  ['substack-wordmark', { width: 1400, height: 280 }],
 ]));
 await validateNamedPngs('assets/drafts/review', new Map([
   ['foundational-carousel', { width: 1362, height: 1004 }],
@@ -397,4 +398,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 107 launch PNG/SVG pairs, fourteen review sheets, thirty-five editorial source images, four brand banners, and five editorial concept pairs.`);
+console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 107 launch PNG/SVG pairs, fourteen review sheets, thirty-five editorial source images, five brand banners, and five editorial concept pairs.`);

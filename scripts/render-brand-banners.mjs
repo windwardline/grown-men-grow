@@ -57,14 +57,15 @@ function banner({id, width, height, band = height}) {
 </svg>`;
 }
 
-// LinkedIn composes its own square logo over the banner's lower-left corner,
-// so the LinkedIn cover carries no wordmark panel — the tagline is the hero,
-// set right of the avatar overlap zone and inside the ~268px center band that
-// LinkedIn's 1128x191 display crop guarantees visible.
-function linkedinBanner({id, width, height, band}) {
+// LinkedIn and Bluesky both compose the profile's own logo over the banner's
+// lower-left corner, so their covers carry no wordmark panel — the tagline is
+// the hero, set right of the avatar overlap zone. `band` confines content to
+// a centered strip for hosts that crop the display (LinkedIn shows ~1128x191
+// of a 1584x396 upload); Bluesky displays the full 3:1 canvas, so band=height.
+function taglineBanner({id, width, height, band = height, taglineFactor = 0.152, textXFactor = 0.335}) {
   const bandTop = Math.round((height - band) / 2);
-  const textX = Math.round(width * 0.335);
-  const taglineSize = Math.round(band * 0.152);
+  const textX = Math.round(width * textXFactor);
+  const taglineSize = Math.round(band * taglineFactor);
   const urlSize = Math.round(band * 0.066);
   const taglineY = bandTop + Math.round(band * 0.4);
   const sheetX = Math.round(width * 0.295);
@@ -96,8 +97,17 @@ function linkedinBanner({id, width, height, band}) {
 </svg>`;
 }
 
+// A single-line lettering mark for header "wordmark" slots (Substack renders
+// these small, so it carries no tagline, panel, or texture — just the name).
+function wordmarkStrip({id, width, height}) {
+  const size = Math.round(height * 0.46);
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+  ${defs(id)}
+  <text x="${width / 2}" y="${Math.round(height * 0.66)}" fill="${OXBLOOD}" font-family="${SANS}" font-size="${size}" font-weight="900" text-anchor="middle" letter-spacing="6">GROWN MEN GROW</text>
+</svg>`;
+}
+
 const targets = [
-  {name: "bluesky-banner", width: 1500, height: 500},
   {name: "ghost-publication-cover", width: 2000, height: 840},
   {name: "social-banner-wide", width: 1584, height: 396},
 ];
@@ -105,6 +115,11 @@ const targets = [
 for (const target of targets) {
   writeAsset("brand/banners", target.name, banner({id: target.name, width: target.width, height: target.height}));
 }
-writeAsset("brand/banners", "linkedin-banner", linkedinBanner({id: "linkedin-banner", width: 1584, height: 396, band: 268}));
+writeAsset("brand/banners", "linkedin-banner", taglineBanner({id: "linkedin-banner", width: 1584, height: 396, band: 268}));
+// Bluesky's profile header displays the 3:1 upload center-cropped to roughly
+// 4:1 depending on viewport, so content stays inside a ~350px center band.
+writeAsset("brand/banners", "bluesky-banner", taglineBanner({id: "bluesky-banner", width: 1500, height: 500, band: 350, taglineFactor: 0.18, textXFactor: 0.3}));
+// Substack caps wordmark uploads at a 21:4 aspect ratio.
+writeAsset("brand/banners", "substack-wordmark", wordmarkStrip({id: "substack-wordmark", width: 1400, height: 280}));
 
-console.log(`Rendered ${targets.length + 1} brand banner SVG and PNG pairs.`);
+console.log(`Rendered ${targets.length + 3} brand banner SVG and PNG pairs.`);
