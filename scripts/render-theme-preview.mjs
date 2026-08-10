@@ -108,7 +108,7 @@ const post = `<article class="article post">
       <div class="article-header__kicker"><span>Field Note</span><span>Issue 2026.08</span></div>
       <h1>Strength Has to Grow Up</h1>
       <p class="article-header__deck">A man can look strong and still be hiding.</p>
-      <div class="article-header__meta"><span class="article-header__brand">Grown Men Grow</span><span class="article-header__byline">By <a href="#">Michael Peacock</a></span><time datetime="2026-08-07">August 7, 2026</time><span>11 min read</span></div>
+      <div class="article-header__meta"><span class="article-header__brand">Grown Men Grow</span><time datetime="2026-08-07">August 7, 2026</time><span>11 min read</span></div>
     </div>
     <figure class="article-header__figure">${featurePicture("/assets/drafts/ghost/feature-images/strength-has-to-grow-up.png", "A wooden chair mid-repair beside a tidy workbench of hand tools, in a paper collage")}<figcaption>Grown Men Grow / Field Note 01</figcaption></figure>
   </header>
@@ -138,7 +138,6 @@ const post = `<article class="article post">
   <footer class="article-footer">
     <div class="article-tags"><span class="eyebrow">Filed under</span><a href="#">Strength</a><a href="#">Growth</a></div>
     <section class="signup-panel"><p class="eyebrow">Grown Men Grow</p><h2>Grown Men Grow</h2><p>Essays on the unfinished work of being a man.</p><a class="button button--paper" href="#">Subscribe</a></section>
-    <div class="article-authors"><section class="author-card author-card--no-image"><div><p class="eyebrow">Contributor</p><h2><a href="#">Michael Peacock</a></h2></div></section></div>
   </footer>
 </article>`;
 

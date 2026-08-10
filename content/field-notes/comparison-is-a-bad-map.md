@@ -2,7 +2,7 @@
 title: Comparison Is a Bad Map
 slug: comparison-is-a-bad-map
 dek: Other men’s progress is real. It’s just not directions.
-author: Michael Peacock
+byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Comparison Is a Bad Map
 preview: You’re reading someone else’s odometer and calling it a route.

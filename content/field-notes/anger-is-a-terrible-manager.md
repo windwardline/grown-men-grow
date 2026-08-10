@@ -2,7 +2,7 @@
 title: Anger Is a Terrible Manager
 slug: anger-is-a-terrible-manager
 dek: It’s a decent alarm. The mistake is giving it the job.
-author: Michael Peacock
+byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Anger Is a Terrible Manager
 preview: Hear the alarm. Don’t hand it the wheel.

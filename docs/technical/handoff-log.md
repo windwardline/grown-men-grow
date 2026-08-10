@@ -296,3 +296,13 @@ Nothing was published, posted, sent, or purchased. All profile changes are accou
 **Client:** Claude Code (desktop). **Branch:** `feat/threads-exit`.
 
 Following the denied Meta appeal, the founder eliminated Threads entirely ("Eliminate the threads material and plan. We are not going to pursue it. Do the same for Pinterest."). Threads sections and drafted copy removed from all ten packs; pack gate reduced to five sections (Medium, Bluesky, LinkedIn, Facebook, Substack Notes); distribution plan, prep register, analytics, and SEO docs updated; Buffer allocation now Bluesky + LinkedIn with one free slot; decision-log entry added. A Pinterest sweep confirmed the 2026-08-09 elimination was already complete except three stale doc mentions (analytics referral list, SEO plan, a founder-decisions checklist line amended in place), now fixed. No external account state changed this session beyond what the founder already did personally. Verification: full gate suite green before merge.
+
+## 2026-08-10 — Claude Code: publication voice conversion; Substack brand profile; header banners
+
+**Client:** Claude Code (desktop). **Branch:** `feat/publication-voice`.
+
+**External state changed:** Ghost staff user renamed Michael Peacock → "Grown Men Grow" (slug grown-men-grow), founder profile photo removed, bio set to the publication line; theme v1.3.0 uploaded and activated (no bylines or author cards anywhere). Substack user profile converted to brand: name Grown Men Grow, @grownmengrow handle confirmed, bio, brand avatar, and brand header banner set. All changes on the still-private staging site or founder-created accounts; nothing published or sent.
+
+**Repository:** post.hbs byline and author-card blocks removed; author.hbs neutralized to archive framing; theme contract updated to forbid the byline loop; content frontmatter converted to "byline: none — publication voice"; metadata register and AGENTS.md identity contract updated; verify-repository founder-name gate broadened from Instagram-only to every public surface; concept and preview renderers re-rendered without the name; theme bumped to 1.3.0. Full gate suite green including GScan.
+
+**Note:** Threads elimination (PR #28) merged earlier this session. The Zapier→Buffer routing build remains scoped but blocked on a founder-created Buffer account and the live Ghost site.

@@ -2,7 +2,7 @@
 title: Friendship Has a Maintenance Schedule
 slug: friendship-has-a-maintenance-schedule
 dek: The friendships men say matter most get the least scheduled attention.
-author: Michael Peacock
+byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Friendship Has a Maintenance Schedule
 preview: Men maintain everything they value. Almost everything.

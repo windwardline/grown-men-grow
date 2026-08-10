@@ -2,7 +2,7 @@
 title: Rest Is Not a Reward
 slug: rest-is-not-a-reward
 dek: You don’t earn maintenance. You schedule it.
-author: Michael Peacock
+byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Rest Is Not a Reward
 preview: The tools get put away properly. The man doesn’t.

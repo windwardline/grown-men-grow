@@ -2,7 +2,7 @@
 title: A Confession Can Still Be Selfish
 slug: a-confession-can-still-be-selfish
 dek: Opening up is not the same as owning up.
-author: Michael Peacock
+byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: A Confession Can Still Be Selfish
 preview: Disclosure has a feel-better exit. Repair does not.

@@ -2,7 +2,7 @@
 title: You Can’t Outwork a Wrong Direction
 slug: you-cant-outwork-a-wrong-direction
 dek: Effort is the easy part. Aim is the argument.
-author: Michael Peacock
+byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: You Can’t Outwork a Wrong Direction
 preview: More speed, wrong trail, farther from the truck.

@@ -3,7 +3,7 @@
 {{#author}}
 <header class="collection-header collection-header--author">
     <div>
-        <p class="eyebrow">Contributor</p>
+        <p class="eyebrow">Archive</p>
         <h1>{{name}}</h1>
         {{#if bio}}<p class="collection-header__deck">{{bio}}</p>{{/if}}
         <div class="collection-header__meta">
@@ -17,7 +17,7 @@
 </header>
 {{/author}}
 
-<section class="collection-feed" aria-label="Writing by this contributor">
+<section class="collection-feed" aria-label="Writing from this publication">
     {{#foreach posts}}
         {{> "card"}}
     {{/foreach}}

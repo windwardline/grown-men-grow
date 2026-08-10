@@ -2,7 +2,7 @@
 title: Your Body Keeps the Books
 slug: your-body-keeps-the-books
 dek: You can skip the accounting. It doesn’t.
-author: Michael Peacock
+byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Your Body Keeps the Books
 preview: Every ledger gets audited eventually. Pick the auditor.
