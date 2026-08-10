@@ -378,3 +378,17 @@ Founder directive: every platform space becomes a good, full representation of t
 - **Renderer:** `taglineBanner` generalized (band + type-scale params); new `bluesky-banner` band composition; new `wordmarkStrip` target; banner gate now validates five brand banners.
 
 **Recommendations surfaced to founder:** enable Substack 2FA (their authenticator required) and Bluesky email 2FA. **Open items:** confirm the Substack byline cache expires to "Grown Men Grow"; founder visual check of the new Bluesky crop; Medium/Instagram audited as already brand-correct with no banner surfaces to fix.
+
+## 2026-08-10 — Claude Code: field-by-field platform audit (founder-ordered after two premature sign-offs)
+
+**Client:** Claude Code (desktop). **Branch:** `docs/field-audit-closeout`.
+
+The founder correctly called out that "audited" had twice been claimed without walking every field (the empty Medium About being the tell). A complete field-by-field walk of every platform surface followed. Standard applied: each editable field is now filled, deliberately skipped with a recorded reason, or flagged to the founder.
+
+**Filled this pass (live):** Medium About (three short paragraphs; the second and third extend approved copy with identity-contract language — flagged to founder for review). LinkedIn Year founded (2026) and six Specialties (Personal essays; Men's personal growth; Emotional maturity; Friendship and relationships; Health and habits; Weekly newsletter). Instagram bio — found reading "Some assembly still required." with no website link despite prior records claiming the profile configured; replaced with the approved line plus cadence sentence.
+
+**Verified correct:** LinkedIn Buttons (Message on; custom Visit-website button with UTM URL); Ghost publication icon, cover, timezone, navigation, and full newsletter identity (sender Grown Men Grow, reply-to hello@grownmengrow.com, publication-voice byline); Buffer 3/3 channels with the Essay 1 launch stub retained.
+
+**Deliberate skips (reasons recorded):** LinkedIn Featured/Workplace/Commitments/Locations (need posts or physical premises); LinkedIn/Substack phone fields (no public phone); Ghost publication logo (theme's typographic masthead is the intended design — logo would replace it); Buffer posting schedules (set at launch when cadence decisions are made against analytics); Instagram AI-creator label (founder decision, see flags).
+
+**Flagged to founder:** (1) Instagram website link is mobile-app-only — add the UTM URL from the app. (2) Substack "How I make this" AI-transparency statement and the Instagram AI-creator toggle are brand-strategy calls about the image pipeline — drafts on request. (3) Substack public byline still shows the old name from CDN cache (all stored records verified brand: profile, account, team, copyright); re-verify after cache expiry. (4) 2FA on Substack and Bluesky.
