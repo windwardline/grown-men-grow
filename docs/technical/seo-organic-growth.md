@@ -123,8 +123,8 @@ Instagram's professional dashboard is the current source for personalized creati
 - Publish full essays on Medium only through URL import and verify the canonical points to Ghost.
 - Do not publish full duplicate essays on Substack, LinkedIn, Facebook, or another surface without a verified canonical control.
 - Use keyword-complete plain language in titles, captions, alt text, Pin descriptions, and opening lines. Do not hide keywords in inaccessible fields or repeat them mechanically.
-- Use Medium topics, Pinterest descriptions, LinkedIn framing, and short-form platform language to clarify the actual subject of each piece.
-- Treat Ghost Social Web, Pinterest RSS, and later Flipboard RSS as canonical-link distribution, not independent publications.
+- Use Medium topics, LinkedIn framing, and short-form platform language to clarify the actual subject of each piece.
+- Treat Ghost Social Web and later Flipboard RSS as canonical-link distribution, not independent publications.
 - Keep platform adaptations original enough for the surface. Do not repost watermarked or mechanically duplicated content.
 
 ## Measurement

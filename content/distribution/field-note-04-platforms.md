@@ -16,28 +16,6 @@ Native adaptations per the roles in `docs/technical/distribution-plan.md`. Copy 
 - Subtitle: Opening up is not the same as owning up.
 - Tags: Men, Relationships, Honesty, Masculinity, Personal Growth
 
-# Threads
-
-## Post 1
-
-There is a specific look a man gets right after he finally says the hard thing. Relief, mostly. The look of someone setting down a heavy bag.
-
-Sometimes the other person just got handed the bag.
-
-## Post 2
-
-Disclosure comes with a built-in reward: the exhale. It arrives whether or not anything else happens. That is the trap.
-
-## Post 3
-
-"I told you about my temper" is not the same as managing it.
-
-## Post 4 — canonical link
-
-Repair is disclosure plus everything disclosure lets you skip.
-
-New field note: A Confession Can Still Be Selfish. [canonical link]
-
 # Bluesky
 
 ## Post 1

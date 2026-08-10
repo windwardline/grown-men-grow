@@ -29,7 +29,7 @@ Track:
 - Essay views and signup contribution.
 - Newsletter sends, opens, and clicks.
 - Instagram reach, interactions, saves, shares, and follows.
-- Referrals and signups from Medium, Threads, Bluesky, LinkedIn, Pinterest, Facebook, Substack, Ghost Social Web, and search.
+- Referrals and signups from Medium, Bluesky, LinkedIn, Facebook, Substack, Ghost Social Web, and search.
 - Platform-native saves, shares, replies, profile visits, and outbound clicks.
 - Production time required for each platform.
 

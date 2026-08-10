@@ -16,30 +16,6 @@ Native adaptations per the roles in `docs/technical/distribution-plan.md`. Copy 
 - Subtitle: Male friendship deserves more than a crisis plan.
 - Tags: Friendship, Men, Masculinity, Relationships, Personal Growth
 
-# Threads
-
-## Post 1
-
-Doing something together counts. A lot of male trust is built sideways: during a drive, over a project, in the middle of a game.
-
-I would not trade that language away.
-
-## Post 2
-
-The trouble begins when the activity has to carry every subject forever.
-
-## Post 3
-
-Ask better than “You good?”
-
-What has been taking up your head lately? Do you want advice, help, or ten minutes to say the ugly version?
-
-## Post 4 — canonical link
-
-Male friendship deserves more than emergency contact information.
-
-New field note: Call Your Friends Before There’s a Reason. [canonical link]
-
 # Bluesky
 
 ## Post 1

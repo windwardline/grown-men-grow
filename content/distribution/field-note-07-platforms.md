@@ -15,28 +15,6 @@ Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts unti
 - Subtitle: Collapse is not rest. It's running out.
 - Tags: Men, Rest, Burnout, Masculinity, Personal Growth
 
-# Threads
-
-## Post 1
-
-Watch a man close down a job site. Tools wiped, blades retracted, cords coiled the right way — he has opinions about the wrong way.
-
-Then he goes inside and treats himself like the one tool that doesn't need it.
-
-## Post 2
-
-The earning model of rest sounds disciplined. It is actually just debt — rest deferred at interest, the way he'd never defer an oil change.
-
-## Post 3
-
-If a nap works like a fine, it wasn't rest. It was repossession.
-
-## Post 4 — canonical link
-
-Rest is scheduled, not earned. By interval, not by feeling.
-
-New field note: Rest Is Not a Reward. [canonical link]
-
 # Bluesky
 
 ## Post 1

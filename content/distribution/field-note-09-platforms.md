@@ -15,28 +15,6 @@ Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts unti
 - Subtitle: Other men’s progress is real. It’s just not directions.
 - Tags: Men, Comparison, Self Improvement, Masculinity, Personal Growth
 
-# Threads
-
-## Post 1
-
-Two garden beds, side by side, one street. One is a foot taller. A man can stand between them and learn exactly one thing: they are different.
-
-He cannot learn what to do next. There are no instructions in the difference.
-
-## Post 2
-
-Comparison feels like information because it is information. The error is reading someone else's odometer and calling it a route.
-
-## Post 3
-
-A man steering by other men is not going anywhere in particular. He is just staying in formation.
-
-## Post 4 — canonical link
-
-You, against you, over time. Same driver, same roads, honest odometer.
-
-New field note: Comparison Is a Bad Map. [canonical link]
-
 # Bluesky
 
 ## Post 1

@@ -16,28 +16,6 @@ Native adaptations per the roles in `docs/technical/distribution-plan.md`. Copy 
 - Subtitle: The friendships men say matter most get the least scheduled attention.
 - Tags: Friendship, Men, Masculinity, Relationships, Personal Growth
 
-# Threads
-
-## Post 1
-
-Men are good at maintenance. We change oil that has not failed yet. We seal decks against rain that has not fallen.
-
-Then we take the friendships we would run into traffic for and put them on a maintenance schedule of never.
-
-## Post 2
-
-Old friendship runs on history the way a house runs on good bones. It is why the thing stands. It is not why the lights are on.
-
-## Post 3
-
-"We should get together" is not a plan. It is a pleasantry wearing a plan's clothes.
-
-## Post 4 — canonical link
-
-The schedule: a call on a Tuesday. A specific question. One honest sentence back. A plan with a date on it.
-
-New field note: Friendship Has a Maintenance Schedule. [canonical link]
-
 # Bluesky
 
 ## Post 1

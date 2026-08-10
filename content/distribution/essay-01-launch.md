@@ -22,7 +22,6 @@ Instagram keeps its approved bio:
 
 | Platform | Profile URL |
 |---|---|
-| Threads | `https://grownmengrow.com/?utm_source=threads&utm_medium=profile&utm_campaign=launch` |
 | Medium | `https://grownmengrow.com/?utm_source=medium&utm_medium=profile&utm_campaign=launch` |
 | Bluesky | `https://grownmengrow.com/?utm_source=bluesky&utm_medium=profile&utm_campaign=launch` |
 | LinkedIn | `https://grownmengrow.com/?utm_source=linkedin&utm_medium=profile&utm_campaign=launch` |
@@ -38,40 +37,6 @@ Import the public canonical URL through Medium's URL importer. Do not paste the 
 - Suggested topics: **Masculinity**, **Personal Growth**, **Emotional Intelligence**, **Men's Health**, **Relationships**
 - Canonical check: the final Medium story must point to `https://grownmengrow.com/strength-has-to-grow-up/`
 - Timing: publish after the Ghost URL and canonical have passed the public smoke test
-
-# Threads
-
-## Post 1
-
-A man can become excellent at looking all right.
-
-That does not mean he is.
-
-## Post 2
-
-Strength tells us what a man can do.
-
-It does not tell us what he serves.
-
-You find that out when he is ashamed, rejected, frightened, or wrong.
-
-## Post 3
-
-A confession can still be selfish.
-
-The pain may be real. So may the tears. That does not make the arrangement fair.
-
-Disclosure matters. Repair is what comes next.
-
-## Post 4 — canonical link
-
-The first Grown Men Grow field note is live.
-
-**Strength Has to Grow Up** is about the point where strength becomes a hiding place.
-
-`https://grownmengrow.com/strength-has-to-grow-up/?utm_source=threads&utm_medium=social&utm_campaign=strength-has-to-grow-up`
-
-Suggested topic tag: **Emotional maturity**
 
 # Bluesky
 

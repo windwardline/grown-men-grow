@@ -20,7 +20,6 @@ Ghost is the canonical publication, permanent archive, and only master email-sub
 | Ghost | Canonical essays, pages, newsletter, membership | Native publication | Existing approved plan |
 | Instagram | Carousels, Stories, Reels, and profile link | Meta native tools | $0 |
 | Ghost Social Web and Explore | Fediverse and Ghost discovery | Ghost native distribution | $0 |
-| Threads | Short observations, excerpts, questions, and links | Buffer or native scheduling | $0 |
 | Medium | Full essay imported from its live Ghost URL | Manual URL import with canonical verification | $0 |
 | Bluesky | Short posts, discussion, and links | Buffer | $0 |
 | LinkedIn Page | Select work, leadership, identity, and relationship angles | Buffer or native scheduling | $0 |
@@ -50,7 +49,6 @@ Public checks were run on 2026-08-08. A 404 or unresolved handle is only provisi
 |---|---|---|---|
 | Ghost | `grownmengrow.com` | Founder-owned and configured | Verify paid-plan and public-launch state in Ghost Admin |
 | Instagram | `@grownmengrow` | Founder-owned public Creator profile | None |
-| Threads | `@grownmengrow` | Reserved through the Instagram identity; public activation not verified | Activate from the existing Instagram account |
 | Medium | `@grownmengrow` | Public request blocked by Medium | Confirm in signup flow |
 | Substack | `grownmengrow.substack.com` | Public URL returned 404 | Confirm in signup flow |
 | Bluesky | `@grownmengrow.com` | `grownmengrow.bsky.social` did not resolve; domain handle not configured | Create account, then verify the domain handle by DNS |
@@ -71,10 +69,10 @@ No secret belongs in source files, Markdown, chat, commit messages, browser logs
 - A unique password generated and saved by the founder's password manager for each service that does not use OAuth
 - Platform verification codes, CAPTCHA, age/date-of-birth confirmation, or identity steps completed in the provider UI
 - The founder's personal LinkedIn account as the private administrator of the public Grown Men Grow Page
-- The existing Instagram identity for Threads activation and the connected Facebook Page
+- The connected Facebook Page through the existing Instagram identity
 - The founder's Google account for Search Console, YouTube Brand Account administration, and Bing's optional Search Console import authorization
 - Cloudflare DNS authority for the future Bluesky `_atproto` verification record
-- OAuth consent connecting only the approved Threads, Bluesky, and LinkedIn Page accounts to Buffer
+- OAuth consent connecting only the approved Bluesky and LinkedIn Page accounts to Buffer
 - OAuth consent connecting Ghost and Buffer to the single approved Zapier draft-creation workflow
 
 If a platform issues an API key or app password later, store it in the provider secret store or macOS Keychain under a descriptive kebab-case service name. Do not create API credentials merely to automate a task already covered by native scheduling or OAuth.
@@ -88,7 +86,7 @@ If a platform issues an API key or app password later, store it in the provider 
 5. Create platform-specific text and visual variants in the repository.
 6. Review those variants before scheduling.
 7. Import the live URL into Medium and verify the Ghost canonical before publishing.
-8. Schedule native excerpts and links on Threads, Bluesky, LinkedIn, Facebook, and Substack.
+8. Schedule native excerpts and links on Bluesky, LinkedIn, Facebook, and Substack.
 9. Review referral traffic and Ghost signups at day 7 and day 30.
 
 ## Automation boundary
@@ -99,8 +97,7 @@ The approved low-cost workflow is:
 
 The Buffer idea is a distribution stub containing the title, canonical URL, and campaign slug. A person or coding agent writes and reviews each channel version before scheduling.
 
-- Buffer Free is reserved for Threads, Bluesky, and the LinkedIn Page.
-- The current Buffer Free allowance is three connected channels and ten queued posts per channel, so those three channels exhaust the free connection allowance by design.
+- Buffer Free is reserved for Bluesky and the LinkedIn Page, leaving one of its three free channel slots open.
 - The current Zapier Free allowance supports one trigger plus one action and 100 tasks per month. This workflow uses exactly one Ghost `Post Published` trigger and one Buffer `Create Idea` action.
 - Meta Business Suite handles Instagram and Facebook.
 - Medium remains a manual URL import because Medium no longer issues new API tokens.
@@ -145,3 +142,7 @@ Review each active channel after 60 and 90 days. Pause a high-maintenance channe
 ## Pinterest elimination (founder decision, 2026-08-09)
 
 Pinterest was removed from the network before any pin was published: the surface is board-and-visual-led rather than essay-led, and its audience skews away from the publication's readership. The founder closed the account personally the same day. Platform packs, the pack-completeness gate, and the prep register no longer carry Pinterest sections.
+
+## Threads elimination (founder decision, 2026-08-10)
+
+Threads was removed from the network before any post was published: Meta suspended the account at creation, denied the appeal with no further review available, and a replacement would require a different Instagram identity the publication does not want. The founder ruled the surface out entirely. Platform packs, the pack-completeness gate, and the prep register no longer carry Threads sections; the drafted Threads copy was removed with them.
