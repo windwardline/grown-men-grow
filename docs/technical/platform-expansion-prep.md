@@ -14,7 +14,6 @@ Account creation, identity verification, CAPTCHA, MFA, and payment steps are fou
 | Medium | grownmengrow (publication name Grown Men Grow) | After canonical URLs are live |
 | Bluesky | @grownmengrow.bsky.social (custom domain later optional) | Any time; posting waits for launch |
 | LinkedIn Page | Grown Men Grow (company page) | Any time; posting waits for launch |
-| Pinterest Business | grownmengrow | Any time; pins wait for launch |
 | Facebook Page | Grown Men Grow | Any time; posting waits for launch |
 | Substack (Notes only) | grownmengrow — no newsletter import, no list sync, Notes only | After launch |
 | YouTube / TikTok / X | @grownmengrow — reserve only; inactive until original motion work (X stays inactive) | Founder convenience |

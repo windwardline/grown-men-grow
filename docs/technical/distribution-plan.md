@@ -24,7 +24,6 @@ Ghost is the canonical publication, permanent archive, and only master email-sub
 | Medium | Full essay imported from its live Ghost URL | Manual URL import with canonical verification | $0 |
 | Bluesky | Short posts, discussion, and links | Buffer | $0 |
 | LinkedIn Page | Select work, leadership, identity, and relationship angles | Buffer or native scheduling | $0 |
-| Pinterest Business | Editorial images and evergreen links | Claimed-domain RSS plus selected manual Pins | $0 |
 | Facebook Page | Adapted Instagram assets and direct links | Meta Business Suite | $0 |
 | Substack | Notes, excerpts, and Ghost links | Native scheduling | No paid feature approved |
 | Google and Bing | Search, Discover, News, image search, and Copilot discovery | Ghost sitemap and webmaster tools | $0 |
@@ -56,7 +55,6 @@ Public checks were run on 2026-08-08. A 404 or unresolved handle is only provisi
 | Substack | `grownmengrow.substack.com` | Public URL returned 404 | Confirm in signup flow |
 | Bluesky | `@grownmengrow.com` | `grownmengrow.bsky.social` did not resolve; domain handle not configured | Create account, then verify the domain handle by DNS |
 | LinkedIn | `/company/grown-men-grow` | Public URL returned 404 | Confirm while creating the Page |
-| Pinterest | `@grownmengrow` | Public response was inconclusive | Confirm in signup flow |
 | Facebook | `/grownmengrow` | Public response was inconclusive | Confirm while creating the Page |
 | YouTube | `@grownmengrow` | Public URL returned 404 | Reserve in YouTube Studio |
 | TikTok | `@grownmengrow` | Public page reported that it could not find the account | Confirm in signup flow |
@@ -90,7 +88,7 @@ If a platform issues an API key or app password later, store it in the provider 
 5. Create platform-specific text and visual variants in the repository.
 6. Review those variants before scheduling.
 7. Import the live URL into Medium and verify the Ghost canonical before publishing.
-8. Schedule native excerpts and links on Threads, Bluesky, LinkedIn, Facebook, Pinterest, and Substack.
+8. Schedule native excerpts and links on Threads, Bluesky, LinkedIn, Facebook, and Substack.
 9. Review referral traffic and Ghost signups at day 7 and day 30.
 
 ## Automation boundary
@@ -105,7 +103,6 @@ The Buffer idea is a distribution stub containing the title, canonical URL, and 
 - The current Buffer Free allowance is three connected channels and ten queued posts per channel, so those three channels exhaust the free connection allowance by design.
 - The current Zapier Free allowance supports one trigger plus one action and 100 tasks per month. This workflow uses exactly one Ghost `Post Published` trigger and one Buffer `Create Idea` action.
 - Meta Business Suite handles Instagram and Facebook.
-- Pinterest uses the claimed Ghost RSS feed plus selected manual Pins. Its auto-publish control appears only after the site is claimed, and the feed must be RSS 1.x or 2.x rather than Atom.
 - Medium remains a manual URL import because Medium no longer issues new API tokens.
 - Substack Notes, YouTube, and TikTok use native tools.
 - Do not build a custom cross-posting service while the free workflow meets the publishing cadence.
@@ -144,3 +141,7 @@ Review each active channel after 60 and 90 days. Pause a high-maintenance channe
 - Revisit Apple News after the publication has an established editorial archive.
 - Use Reddit and Quora only through sincere manual participation. Never automate promotion there.
 - Do not add Beehiiv, Kit, Patreon, Discord, Circle, another newsletter CMS, paid SEO software, ads, or another analytics stack at launch.
+
+## Pinterest elimination (founder decision, 2026-08-09)
+
+Pinterest was removed from the network before any pin was published: the surface is board-and-visual-led rather than essay-led, and its audience skews away from the publication's readership. The founder closed the account personally the same day. Platform packs, the pack-completeness gate, and the prep register no longer carry Pinterest sections.

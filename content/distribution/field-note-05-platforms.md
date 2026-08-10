@@ -81,19 +81,3 @@ Every man you ask learns that he is allowed to ask you. The question is an invit
 ## Note 3 — canonical link
 
 Ask early. Ask specifically. Ask while it’s still cheap. [canonical link]
-
-# Pinterest
-
-## Pin 1
-
-- Image: Field Note 5 carousel slide 1 (cover)
-- Title: Ask for Help While It’s Still Cheap
-- Description: Help has a price curve, and it only goes up. A field note on asking early, asking specifically, and the window every man lets close. From Grown Men Grow.
-- Link: [canonical link]
-
-## Pin 2
-
-- Image: Field Note 5 carousel slide 6 (the cheap question)
-- Title: The Cheap Question
-- Description: "Can you look at this before I make it worse?" Costs a little pride. Buys the problem while it's small. From Grown Men Grow, essays on the unfinished work of being a man.
-- Link: [canonical link]

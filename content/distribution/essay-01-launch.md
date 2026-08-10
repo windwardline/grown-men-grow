@@ -26,7 +26,6 @@ Instagram keeps its approved bio:
 | Medium | `https://grownmengrow.com/?utm_source=medium&utm_medium=profile&utm_campaign=launch` |
 | Bluesky | `https://grownmengrow.com/?utm_source=bluesky&utm_medium=profile&utm_campaign=launch` |
 | LinkedIn | `https://grownmengrow.com/?utm_source=linkedin&utm_medium=profile&utm_campaign=launch` |
-| Pinterest | `https://grownmengrow.com/?utm_source=pinterest&utm_medium=profile&utm_campaign=launch` |
 | Facebook | `https://grownmengrow.com/?utm_source=facebook&utm_medium=profile&utm_campaign=launch` |
 | Substack | `https://grownmengrow.com/?utm_source=substack&utm_medium=profile&utm_campaign=launch` |
 
@@ -147,32 +146,6 @@ Sometimes growth gives a man no restored past. It gives him a future he is less 
 The first Grown Men Grow field note is live:
 
 `https://grownmengrow.com/strength-has-to-grow-up/?utm_source=substack&utm_medium=social&utm_campaign=strength-has-to-grow-up`
-
-# Pinterest
-
-## Pin 1
-
-- Asset: `assets/drafts/instagram/foundational-carousel/01.png`
-- Title: **When Strength Becomes a Hiding Place**
-- Description: **What does emotional maturity look like when competence, calm, and self-reliance have become ways to hide? Read Strength Has to Grow Up, the first Grown Men Grow field note.**
-- Link: `https://grownmengrow.com/strength-has-to-grow-up/?utm_source=pinterest&utm_medium=social&utm_campaign=strength-has-to-grow-up`
-- Alt text: **Hands repairing a wooden chair in daylight with the words “I still believe in strength.”**
-
-## Pin 2
-
-- Asset: `assets/drafts/instagram/recognition-carousel/01.png`
-- Title: **Disclosure Is Not the Same Thing as Repair**
-- Description: **Opening up matters, but a confession can still leave everyone else carrying its meaning. An essay on vulnerability, accountability, and what repair asks of men.**
-- Link: `https://grownmengrow.com/strength-has-to-grow-up/?utm_source=pinterest&utm_medium=social&utm_campaign=strength-has-to-grow-up`
-- Alt text: **Bright writing-table collage with the words “A confession can still be selfish.”**
-
-## Pin 3
-
-- Asset: `assets/drafts/instagram/static-post/fear-with-good-posture.png`
-- Title: **Fear With Good Posture**
-- Description: **Some forms of masculine strength began as protection. Growth means noticing when the old protection has become a prison.**
-- Link: `https://grownmengrow.com/strength-has-to-grow-up/?utm_source=pinterest&utm_medium=social&utm_campaign=strength-has-to-grow-up`
-- Alt text: **Bright writing-table collage reading “Some of what we called strength was fear with good posture.”**
 
 # Ghost Social Web
 
