@@ -23,6 +23,7 @@ Protect a serious adult conversation without sanitizing disagreement or using co
 
 - Write in the same restrained, adult voice as the publication.
 - Answer the actual point. Do not perform warmth or authority.
+- Apply `docs/editorial-underpinning.md` in replies, where it bites hardest: take the person's pain seriously rather than smoothing it over, and do not tell a stranger what to do with his life. Reader replies are also evidence about how the writing lands — carry recurring objections and questions back to the founder rather than answering them one at a time forever.
 - Do not thank someone for abuse, manufacture consensus, or turn every criticism into a lesson.
 - Do not diagnose a commenter, a former partner, a public figure, or a demographic group.
 - Do not expose private messages or use a reader's disclosure as content without explicit informed permission.

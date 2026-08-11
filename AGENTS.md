@@ -21,6 +21,7 @@ Stack exception (owner-approved 2026-08-07): Ghost(Pro), rather than Vercel, hos
 - Grown Men Grow is pro-male and responsibility-centered. It rejects grievance, domination, gender-war framing, anti-male shame, forced ideological pandering, and the pursuit of anyone's approval as proof of virtue. Do not use the manosphere, women, or feminism as profile positioning.
 - Do not identify Gartner in public pages, essays, newsletters, metadata, social copy, captions, alt text, or public account fields.
 - Keep Grown Men Grow primary. The publication runs in publication voice on every public surface (founder ruling 2026-08-10): the founder's name and face appear nowhere public — no bylines, author cards, staff names, or metadata credits. Internal repository records may still name the founder.
+- Follow `docs/editorial-underpinning.md` (founder-approved 2026-08-11): take the reader's pain seriously, create space rather than prescribe, never let care become control, and never use shame as a lever. Run every new draft against its six tests before the founder sees it. That document governs reasoning only — its source tradition's names and terms never appear in public copy.
 - Follow `docs/editorial-visual-system.md`: bright, energetic, tactile editorial collage; maintained environments; visible human authorship; varied compositions; and no despair-coded, dilapidated, or visibly synthetic imagery.
 
 ## Distribution boundary
