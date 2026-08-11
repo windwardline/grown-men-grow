@@ -40,15 +40,21 @@ Protect a serious adult conversation without sanitizing disagreement or using co
 
 ## Boundary replies
 
-Use these as starting points, not mandatory canned language.
+Use these as starting points, not mandatory canned language. These are the only words this publication ever says to one named man, usually one who has just told the truth about something. They get held to the same standard as an essay, with none of an essay's room to earn it — see `../editorial-underpinning.md`, where tests 1 and 7 bite hardest here.
+
+Two rules govern all three. Acknowledge the thing he said, not the receipt of his message — "I read this" tells him the mail arrived, which is not the same as being taken seriously. And state a limit as a limit of what you can do, never as a policy being applied to him; a policy makes him a case, and the boundary is honest without that.
 
 **Private-advice boundary**
 
-> I read this. I cannot offer private clinical, legal, or crisis advice. Please take it to someone qualified to help where you are.
+> I read it. This is past what I can help with — not a rule I'm applying, just the edge of what I'm able to do. Someone qualified where you are can.
+
+Where you can name what he raised without diagnosing him, do. "I read it" alone is thinner than the moment deserves.
 
 **Conversation boundary**
 
-> I understand your point. We are repeating ourselves, so I am going to leave it there.
+> We're repeating ourselves. I'll leave it there.
+
+Dropping the preamble is deliberate. "I understand your point" performs an agreement that may not exist, and the reply standard above already forbids performing warmth.
 
 **Correction**
 
