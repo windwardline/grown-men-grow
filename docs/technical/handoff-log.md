@@ -537,3 +537,19 @@ Three defects in the Ghost Admin access path, identified after this morning's Tu
 **Boundary held:** the primary checkout carried eight uncommitted files and one untracked document from a concurrent session throughout. All work was done in a worktree off `origin/main`; none of those files was read into this change set, committed, stashed, or reverted.
 
 **Open:** unchanged. Next automated fire is the Wednesday 10:00 draft task, then Thursday 06:45 for the Medium import. Field Note 2 publishes Aug 18.
+
+## 2026-08-11 — Claude Code: Ghost Admin follow-through — API version, branch resilience, doc index
+
+**Client:** Claude Code (desktop). **Branch:** `fix/ghost-admin-api-version`. Closes the three items the preceding entry left open.
+
+**API version pinned forward, not back.** The helper sent `Accept-Version: v5.0` against a live instance reporting Ghost 6.57 — the version this repair was specified against, and one that works only through Ghost's support window for the current major and the one before it. A v5 pin would have failed on the next platform upgrade with nothing local to explain it. Before changing it, both versions were run against every endpoint the six tasks touch — `site/`, `posts/`, `members/`, `newsletters/`, `tiers/`, `settings/`, `users/` — comparing status and response shape: identical on all seven, with the server answering `Content-Version: v6.57` either way. Now pinned to `v6.0`, with the re-pin trigger recorded in `api-access.md`: the `Content-Version` header carries the server's version on every call.
+
+**Branch resilience.** The six task files live outside the repository and name a path inside it, so any feature branch cut before the helper landed leaves them pointing at a file the working tree does not have — which is exactly where the primary checkout sat this afternoon. Rather than depend on which branch happens to be checked out at 06:45 on a Thursday, each of the six now carries a one-clause fallback: a missing path means a feature branch is checked out, so read the file from `main`. This removes the class of failure, not just today's instance.
+
+**Doc index completed.** `docs/README.md` calls itself the current operating set and was missing three live documents: `technical/api-access.md` (the pointer to the helper, deferred from the last entry because the file was uncommitted elsewhere at the time), `technical/publish-timing.md` (the schedule of record, read by three tasks every run), and `technical/platform-expansion-prep.md`. All three are now indexed.
+
+**Worked in concert, not around.** A second session — "Pipeline Work", running in this repository all afternoon at `xhigh` — was rewriting the same task files, and reverted the helper citation in `gmg-friday-analytics` twice and `gmg-monday-staging` once, each time restoring the old JWT-flow reference while adding its own genuine improvements. Rather than keep re-applying, that session was messaged directly through the session channel with the merged state, the three measured API facts, and a request to preserve the citation; its additions — the corpus-balance check, the comment-backstop note, the nine-test expansion — were preserved intact in every re-application. Its PR #53 merged during this work and was picked up cleanly.
+
+**Verification:** the helper re-exercised live at `v6.0` — probe, `site/`, `latestPublishedPost()`, the scheduled post with its newsletter binding, and `members/stats/count/`. Gates: `verify-repository`, `verify-svg-xml`, `git diff --check`, plus the theme chain. Statuses only; no key or token printed.
+
+**Open:** none from this thread. Next automated fire is the Wednesday 10:00 draft task, then Thursday 06:45 for the Medium import. Field Note 2 publishes Aug 18.

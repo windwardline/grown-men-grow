@@ -7,9 +7,12 @@ Use these files as the current operating set:
 - `technical/founder-decisions.md` — founder rulings and unresolved gates.
 - `technical/release-checklist.md` — launch acceptance checklist.
 - `technical/ghost-setup.md` — Ghost configuration and release runbook.
+- `technical/api-access.md` — Keychain map, the shared Ghost Admin helper, and the host trap behind it.
 - `technical/analytics.md` — measurement plan.
 - `technical/seo-organic-growth.md` — search and social organic-discovery standard.
 - `technical/distribution-plan.md` — approved platform roles, syndication rules, automation boundary, and attribution model.
+- `technical/platform-expansion-prep.md` — working checklist for standing the approved network up.
+- `technical/publish-timing.md` — per-platform schedule of record and the protocol that revises it.
 - `technical/community-moderation.md` — cross-platform comment, message, safety, and escalation standard.
 - `technical/email-identity.md` — outbound identity for hello@grownmengrow.com and why the personal address must never appear.
 - `technical/operating-cadence.md` — publication and production cadences, the weekly task roster, and what stays with the founder.

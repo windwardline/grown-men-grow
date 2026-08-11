@@ -9,7 +9,13 @@ import {execFileSync} from "node:child_process";
 // request arrives unauthenticated and comes back 403 NoPermissionError. The host
 // is fixed rather than configurable so the wrong one cannot be guessed.
 export const GHOST_ADMIN_HOST = "https://grown-men-grow.ghost.io";
-export const GHOST_API_VERSION = "v5.0";
+
+// Pinned to the live instance's major (Ghost 6.57 as of 2026-08-11), not a
+// version behind it: Ghost supports only the current major and the one before,
+// so a v5 pin would break on the next platform upgrade with nothing local to
+// explain it. Verified shape-identical to v5.0 on every endpoint these tasks
+// touch — site, posts, members, newsletters, tiers, settings, users.
+export const GHOST_API_VERSION = "v6.0";
 
 // The credential policy stores each secret under the operator's own login
 // account, so the account is derived rather than written out — this path is
