@@ -18,9 +18,9 @@ No production setting is changed without explicit founder approval.
 - Public support address: `hello@grownmengrow.com`.
 - Newsletter reply-to: `hello@grownmengrow.com`; verified and displayed by Ghost.
 
-The canonical hostname is apex `grownmengrow.com`, with `www` redirected to apex. Ghost credits **Michael Peacock** as the writer while **Grown Men Grow** remains the primary publication identity. Instagram remains brand-only. The approved site description, homepage metadata, and homepage/per-page social images are staged. Do not reuse the Instagram bio as site metadata.
+The canonical hostname is apex `grownmengrow.com`, with `www` redirected to apex. **Grown Men Grow is the only public identity.** The founder's name and face appear nowhere public — no byline, author card, staff name, or metadata credit (founder ruling 2026-08-10, superseding this runbook's earlier writer-credit instruction). Instagram remains brand-only. The approved site description, homepage metadata, and homepage/per-page social images are staged. Do not reuse the Instagram bio as site metadata.
 
-Approved concise staff bio: **Michael Peacock writes Grown Men Grow, a publication about the unfinished work of being a man.** Use no staff profile photograph until the founder supplies or approves one; the theme supports the text-only author card.
+No public staff bio and no staff profile photograph. The Ghost staff record exists for administrative access only; nothing from it may render publicly. The earlier approved bio naming the founder was retired by the 2026-08-10 publication-voice ruling.
 
 ## Publication
 
@@ -63,7 +63,7 @@ Approved concise staff bio: **Michael Peacock writes Grown Men Grow, a publicati
 ## Essay 1
 
 - [x] Transfer approved copy without rewriting.
-- [x] Confirm title, dek, slug, Michael Peacock byline, excerpt, public access level, metadata, and current social cards.
+- [x] Confirm title, dek, slug, excerpt, public access level, metadata, and current social cards. Confirm no byline, author card, or staff name renders publicly.
 - [x] Approve the title-free collage feature image.
 - [ ] Attach the approved title-free collage feature image and accurate alt text.
 - [x] Review web desktop, web phone, email, and social previews.

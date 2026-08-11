@@ -10,10 +10,11 @@ The founder makes every final decision. Codex prepares recommendations, verifies
 - [x] Final domain: `grownmengrow.com`
 - [x] Canonical hostname: apex `grownmengrow.com`, with `www` redirecting to apex
 - [x] Instagram username: `@grownmengrow`
-- [x] Ghost author byline: Michael Peacock, secondary to the Grown Men Grow publication brand
-- [x] Ghost staff bio: “Michael Peacock writes Grown Men Grow, a publication about the unfinished work of being a man.”
+- [x] Ghost author byline: none — superseded 2026-08-10 by the publication-voice ruling; no byline, author card, or staff name renders publicly
+- [x] Ghost staff bio: none public — superseded 2026-08-10 by the same ruling; the staff record exists for administrative access only
 - [x] Instagram public identity: Grown Men Grow; do not display Michael Peacock's name
 - [x] Approved Instagram bio: “Some assembly still required.”
+- [x] Editorial underpinning approved as written on 2026-08-11: `docs/editorial-underpinning.md` governs how the writing reasons about its reader — seven principles, six draft tests. Its source tradition stays internal and never appears in public copy. Approved copy already under `content/` is not retroactively revised.
 
 ## Gate 2 — Brand presentation
 

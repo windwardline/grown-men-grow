@@ -1,6 +1,6 @@
 # Editorial Underpinning
 
-Status: submitted for founder approval 2026-08-11. Source material supplied by the founder as "a fantastic encapsulation of what I am trying to convey through this work," to serve as "a general underpinning to how Grown Men Grow thinks and communicates."
+Status: approved as written by the founder on 2026-08-11. Source material supplied by the founder as "a fantastic encapsulation of what I am trying to convey through this work," to serve as "a general underpinning to how Grown Men Grow thinks and communicates."
 
 This document governs reasoning, not vocabulary. `editorial-visual-system.md` sets how the publication looks. `AGENTS.md` sets what it refuses. This sets how it thinks about the man reading it.
 
