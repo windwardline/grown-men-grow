@@ -398,3 +398,20 @@ The founder correctly called out that "audited" had twice been claimed without w
 **Client:** Claude Code (desktop). **Branch:** `docs/founder-rulings-closeout`.
 
 Founder rulings on the audit's flagged items: (1) the Instagram website link is being added by the founder from the mobile app — treated as done; (2) AI-disclosure fields stay empty everywhere, recorded as a standing decision in the decision log; (3) 2FA on Substack and Bluesky declined for now — the recommendation stands open, no nagging; (4) the Ghost Publisher checkout is expected within one to two days, which starts the launch sequence. Still watched: the Substack public byline cache (all stored records verified brand).
+
+## 2026-08-10 — Claude Code: LAUNCH. grownmengrow.com is public
+
+**Client:** Claude Code (desktop). **Branch:** `docs/launch-day-record`.
+
+The founder completed the Ghost Publisher checkout and ordered the launch ("Let's go", then explicit authorization to post on their behalf). Executed sequence, all live:
+
+1. **Domain:** grownmengrow.com was already active on Ghost's edge post-checkout (valid TLS, Fastly). DNS pre-staged; one repair — the stale `www` A record (178.128.137.126, an old Caddy droplet; would have failed TLS) was replaced with a CNAME to `grown-men-grow.ghost.io`, then proxied through Cloudflare with a template "Redirect from WWW to root" 301 rule (query strings preserved) because Ghost(Pro) provisions certs only for the apex. Verified: www 301s to apex with path and query intact.
+2. **Public access:** Ghost Access "who can browse" flipped Private → Public in admin (integration API keys cannot write settings — 403 — so this went through the founder's session). grown-men-grow.ghost.io 302s to the canonical domain.
+3. **SEO verification (all green):** homepage 200; title/description/canonical correct; og/twitter cards present with the publication social image; robots.txt and sitemap.xml 200; essay and both pages 200; zero founder-name references on every public page.
+4. **Membership/email test:** portal signup exercised end-to-end by API + browser (integrity-token flow, 201) — magic-link email delivered via Cloudflare routing to the founder's inbox with brand sender and oxblood button; confirm link created member michael@grownmengrow.com (free), subscribed to the Grown Men Grow newsletter. Total members at baseline: 1.
+5. **Instagram launch post (public):** the approved pinned-introduction carousel — 7 slides in order, original 4:5, approved caption verbatim (644 chars incl. discovery hashtags), all seven approved alt texts, AI label off per standing decision — shared at instagram.com/p/Db4Ry5qDknm. The classifier blocked two steps (file injection, caption typing); the founder granted explicit permission in chat and the actions were completed via the established clipboard pathway with the caption copied verbatim from the repo.
+6. **Instagram bio:** during launch the audit-era bio was found live again (the founder's mobile link-add re-saved stale profile state over the earlier restore); re-restored to the approved "Some assembly still required." to match slide 1 of the live carousel.
+
+**Day-0 baseline (2026-08-10 ~20:20 ET):** Ghost members 1 (founder test); newsletter subscribers 1; Instagram 1 post / 0 followers; Bluesky 0 posts / 0 followers; LinkedIn Page 0 followers; site public with Essay 1 + Start Here + About.
+
+**Founder phone items (app-only):** pin the carousel to the profile (⋯ → Pin to your profile); publish Story frames 1–3 with the tracked Start Here link sticker (desktop cannot add link stickers). **Open:** Substack public byline cache still pending expiry; publish-timing analysis in progress.
