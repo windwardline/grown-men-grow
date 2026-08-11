@@ -9,11 +9,11 @@ preview: Doing things together counts. It just cannot carry everything forever.
 status: founder-approved
 approved: 2026-08-08
 personal_claims_verified: true
-publication_authorized: false
+publication_authorized: true — founder authorized the 2026-08-18 08:00 ET slot in the week-one plan (2026-08-10)
 social_copy_status: founder-approved
 ghost_and_instagram_direction_status: founder-approved
 visual_direction_status: founder-approved
-artwork_status: rendered 2026-08-09 for founder review; publication timing remains gated
+artwork_status: complete; founder-approved 2026-08-10 with rounds 7-10
 ---
 
 # Ghost essay source
