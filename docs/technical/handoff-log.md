@@ -465,3 +465,19 @@ Founder actions, reported directly (~01:44 ET): created the portfolio's ad accou
 **Resulting topology (the simplest possible):** business portfolio 1530378424989411 runs entirely on the brand Instagram identity — one person, one login, no personal Facebook surface anywhere. This also retires the two-people-same-name confusion, which was structural (Meta lists each login as a separate person).
 
 **Watch items for first campaigns:** a brand-new ad account with no spend history gets slower ad review on early campaigns — normal, not a flag. If any Ads Manager corner ever demands a Facebook login, a fresh account can be created then (with the business email); nothing depends on one today. Ad account details (ID, payment method, currency/timezone) not yet verified in-browser — record them at first campaign setup. Any ad spend remains a founder decision.
+
+## 2026-08-11 — Claude Code: Substack Note 1 posted; Ghost Admin API host quirk
+
+**Client:** Claude Code (scheduled task `gmg-tuesday-note`, 11:45 ET). **Branch:** `docs/substack-note-1-posted`.
+
+The Tuesday task fired on schedule. Ghost Admin API reported one published post — `strength-has-to-grow-up` (2026-08-09) — so the week's pack was `content/distribution/essay-01-launch.md`, and Note 1 was served verbatim with the four posting steps.
+
+**External state changed:** the founder posted Substack Note 1 and confirmed at 14:39 ET. This is the publication's first Substack Note. Note 2 follows at the Saturday 09:15 slot.
+
+**Ghost Admin API — host quirk worth knowing:** a valid Admin JWT returns `403 NoPermissionError` ("Unable to determine the authenticated user or integration") against the custom apex `https://grownmengrow.com/ghost/api/admin/…`, and `200` against `https://grown-men-grow.ghost.io/ghost/api/admin/…` for the identical request. The custom-domain edge does not carry integration auth through. Admin API calls should target the `*.ghost.io` host; a 403 there means the key, a 403 on the apex means the host. `docs/technical/api-access.md` already cites `/ghost/api/admin/site/` as the verification probe without naming a host — future agents should read the host as `*.ghost.io`.
+
+**Repository:** this entry only. The change was made in a scratchpad worktree off `origin/main` because a concurrent session held uncommitted editorial-underpinning follow-on edits in the primary checkout; those were left untouched.
+
+**Verification:** `node scripts/verify-repository.mjs`, `bash scripts/verify-svg-xml.sh`, and `git diff --check` in the worktree. The theme gates were not run — this change set touches no theme file — and CI repeats all of them.
+
+**Open:** unchanged from the prior entry. Next automated fire is the Friday 09:00 analytics digest, then Saturday 09:15 for Note 2. Field Note 2 publishes Aug 18.
