@@ -18,12 +18,19 @@ US-skewed, adult men, Eastern Time as the anchor (site timezone is already Ameri
 
 ## Schedule of record (until owned data overrides)
 
-| Slot | What | When (ET) | Basis |
+Each platform gets its own slot, staggered so every surface has its own moment and the canonical page is always indexed first.
+
+| When (ET) | Platform | What | Basis |
 | --- | --- | --- | --- |
-| Essay A | Weekly field note: Ghost publish + email | **Tuesday 8:00 AM** | Strongest email day × newsletter-morning window × Substack article window |
-| Essay B (when the second weekly slot activates) | Ghost publish + email | **Sunday 9:00 AM** | The personal-essay weekend counter-signal; avoids cannibalizing the Tuesday send; contested — first A/B target |
-| Instagram carousel for each essay | Buffer schedule | **Thursday 9:00 AM** (essay A's), **Wednesday 12:00 PM** (essay B's) | Buffer/Sprout midweek peaks; deliberately offset from the email so each surface gets its own moment |
-| Bluesky + LinkedIn + Substack Notes fragments | Buffer/native | Staggered Tuesday–Thursday, 9 AM–1 PM | Weekday-worktime consensus; no strong platform-specific evidence |
+| **Tuesday 8:00 AM** | Ghost | Weekly field note: publish + email send | Strongest email day × 8–10 AM newsletter window × essay-platform 7–9 AM article window |
+| **Tuesday 12:00 PM** | Bluesky + Substack Notes | First short fragment from the fresh essay | Rides day-of momentum; weekday-midday conversation window; feeds first-hours algorithmic signals |
+| **Wednesday 10:00 AM** | LinkedIn Page | The pack's LinkedIn adaptation | LinkedIn's Tue–Wed mid-morning worktime peak (Sprout); one clear day after the email |
+| **Thursday 7:00 AM** | Medium | URL import of the essay, canonical verified | ~48h after publish so search indexes the canonical first; Medium weekday-morning readership; import timing is low-stakes — recirculation is algorithmic |
+| **Thursday 9:00 AM** | Instagram | The essay's carousel | Buffer's 9.6M-post peak slot (Thu 9 AM); Sprout midweek convergence |
+| **Saturday 9:30 AM** | Substack Notes + Bluesky | Second fragment or canonical-link post | Weekend Notes engagement-per-post peak (Writing Edge analyses); low-competition leisure window |
+| **Sunday 9:00 AM** | Ghost | Essay B, when the second weekly slot activates | Personal-essay weekend counter-signal; contested — first A/B target |
+
+Essay B's cross-platform posts mirror the same pattern shifted: fragments Sunday midday, LinkedIn Monday 10:00 AM, Medium import Tuesday 7:00 AM, carousel Wednesday 12:00 PM (Buffer's second peak).
 
 Essay B's Sunday slot is the one genuinely contested call: email aggregates say weekends underperform, essay-niche data says the opposite. It is scheduled first for A/B resolution rather than assumed correct.
 
