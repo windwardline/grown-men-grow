@@ -174,6 +174,7 @@ const requiredFiles = [
   'scripts/render-review-contact-sheets.mjs',
   'scripts/render-theme-preview.mjs',
   'scripts/lib/editorial-collage.mjs',
+  'scripts/lib/ghost-admin.mjs',
   'theme/package.json',
   'theme/pnpm-lock.yaml',
   'theme/default.hbs',
