@@ -455,3 +455,13 @@ The previous entry recorded the Business Suite invitation as accepted through th
 **What actually completed it:** the founder accepted the invitation from a different browser holding only the Facebook profile session, and separately confirmed the portfolio's business email through Meta's emailed link. Verified afterward in Settings → People: both identities now show **Active** with Full access — the Facebook profile (michaellynnpeacock@gmail.com) and the Instagram identity (michael@grownmengrow.com). The privacy-lockdown record in the previous entry stands unchanged.
 
 **Still true:** no ad account exists in the portfolio; creating one and any ad spend remain future founder decisions.
+
+## 2026-08-11 — Claude Code: founder simplifies Meta ads topology to Instagram-only
+
+**Client:** Claude Code (desktop). **Branch:** `docs/ads-account-ig-only`.
+
+Founder actions, reported directly (~01:44 ET): created the portfolio's ad account under the Instagram identity (michael@grownmengrow.com), then removed the Facebook profile from the business portfolio and deleted the Facebook account entirely. The two prior entries' Facebook lockdown and connection work is now historical — the profile no longer exists (Meta holds deleted accounts in a ~30-day grace period; no action needed or wanted).
+
+**Resulting topology (the simplest possible):** business portfolio 1530378424989411 runs entirely on the brand Instagram identity — one person, one login, no personal Facebook surface anywhere. This also retires the two-people-same-name confusion, which was structural (Meta lists each login as a separate person).
+
+**Watch items for first campaigns:** a brand-new ad account with no spend history gets slower ad review on early campaigns — normal, not a flag. If any Ads Manager corner ever demands a Facebook login, a fresh account can be created then (with the business email); nothing depends on one today. Ad account details (ID, payment method, currency/timezone) not yet verified in-browser — record them at first campaign setup. Any ad spend remains a founder decision.
