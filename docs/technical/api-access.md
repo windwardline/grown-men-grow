@@ -17,6 +17,8 @@ The Cloudflare entry predates this publication; its token was scope-extended to 
 
 Every Admin call goes through `scripts/lib/ghost-admin.mjs`, which signs the token and issues the request. It reads the Keychain at call time, pins the `grown-men-grow.ghost.io` host, and never returns or prints the key or the token. Do not re-derive the signing at a call site.
 
+`Accept-Version` tracks the live instance's major — `v6.0` against Ghost 6.57. Ghost supports the current major and the one before it, so a pin left a major behind breaks on the next platform upgrade with nothing local to explain it. Re-pin when Ghost(Pro) upgrades: the response's `Content-Version` header carries the server's version on every call.
+
 The host is not interchangeable with the public domain: the apex 302-redirects every admin path to `grown-men-grow.ghost.io`, the cross-origin hop strips the `Authorization` header, and the unauthenticated replay returns `403 NoPermissionError`.
 
 Diagnose a 403 by its message, never by the URL in the error — the redirect makes an apex failure surface as `grown-men-grow.ghost.io`. `Unable to determine the authenticated user or integration` is an auth failure: issued to the apex it is the host, issued to `grown-men-grow.ghost.io` it is the key, its permissions, or a token signed against the un-decoded hex secret. `API tokens do not have permission to access this endpoint` means the key is sound and the endpoint is closed to integrations — `emails/`, `links/`, and `stats/*` answer that way, so email click counts and Ghost's own stats routes are unreachable with this key.
