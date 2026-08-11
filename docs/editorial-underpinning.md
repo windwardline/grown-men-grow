@@ -39,16 +39,29 @@ Moral seriousness here starts from relationships, responsibility, and the avoida
 
 ## Tests for a draft
 
-Read the draft against these before it goes to the founder:
+Read the draft against all nine before it goes to the founder. Every principle has at least one test; a principle with no test cannot be failed, and a clean result against it means nothing.
 
-- Does it tell the reader what to do, or show him something and trust him with it?
-- Would a man in real pain feel taken seriously, or managed?
-- Is any sentence doing its work through shame?
-- Does it prescribe a universal where the honest answer is "depends on the man"?
-- Does it presume a destination — who he ought to become — rather than leaving that his?
-- Does the care in it survive the reader disagreeing with it?
+| # | Test | Principle |
+|---|---|---|
+| 1 | Would a man in real pain feel taken seriously, or managed? | 1 |
+| 2 | Does it pull its punch — smooth the hard thing over, dodge the honest disagreement, reassure where it should be straight? | 1 |
+| 3 | Does it tell the reader what to do, or show him something and trust him with it? | 2 |
+| 4 | Does any passage decide for him — arrange his life, settle a question that is his to settle? | 3 |
+| 5 | Does the care in it survive the reader disagreeing with it? | 3 |
+| 6 | Does it prescribe a universal where the honest answer is "depends on the man"? | 4 |
+| 7 | Who does this land badly on, and did the writing account for him? | 5 |
+| 8 | Is any sentence doing its work through shame, and does it presume who he ought to become? | 6 |
+| 9 | Does it add to his ledger of duties without ever showing a man being held? | 7 |
+
+Tests 2 and 7 are the ones a careless reading skips. Test 2 catches the opposite failure from all the others — not prescription but cowardice, the paragraph that goes soft exactly where the argument got expensive. Test 7 asks the writer to name the specific man this piece is worst for, then check whether the draft has anything honest to say to him.
 
 A draft that fails one of these is not softened. It is rewritten from the point where the reasoning went wrong.
+
+## The corpus test
+
+Test 9 is real but weak on its own, because a single essay can honorably ask a man to do something. The seventh principle is a question about the whole body of work, and no per-piece reading can answer it: across everything published, is the reader ever the one being held, or is he always the one doing the holding?
+
+Every quarter, and whenever the bank crosses another ten pieces, count it. For each published piece, mark whether it puts the reader in the position of giving care, receiving it, or neither. A corpus that is all obligation has quietly become the thing this publication exists to argue against — a man whose whole worth is his usefulness. Record the count and the judgment in the decision log, not just the number.
 
 ## Boundaries
 

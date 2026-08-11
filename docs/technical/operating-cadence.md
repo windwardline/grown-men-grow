@@ -23,7 +23,7 @@ One field note per week, Tuesday, with the newsletter. Everything else in the we
 
 Two new drafts per week, Wednesday and Saturday, written to `drafts/` and delivered inline for the founder to read without opening anything. The two drafts of a week must not be siblings — if Wednesday's is interior and reflective, Saturday's goes concrete and external.
 
-Every draft runs against the six tests in `../editorial-underpinning.md` before delivery, and the report names anything that came close to failing. Drafts are never quietly sanded down to pass. Only the founder moves work from `drafts/` into `content/`.
+Every draft runs against the nine tests in `../editorial-underpinning.md` before delivery, and the report names anything that came close to failing. Drafts are never quietly sanded down to pass. Only the founder moves work from `drafts/` into `content/`.
 
 ## Weekly task roster
 
