@@ -11,6 +11,7 @@ Use these files as the current operating set:
 - `technical/seo-organic-growth.md` — search and social organic-discovery standard.
 - `technical/distribution-plan.md` — approved platform roles, syndication rules, automation boundary, and attribution model.
 - `technical/community-moderation.md` — cross-platform comment, message, safety, and escalation standard.
+- `technical/email-identity.md` — outbound identity for hello@grownmengrow.com and why the personal address must never appear.
 - `technical/operating-cadence.md` — publication and production cadences, the weekly task roster, and what stays with the founder.
 - `technical/handoff-log.md` — append-only cross-client operational history.
 - `technical/decision-log.md` — durable decision history.
