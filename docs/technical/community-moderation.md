@@ -1,6 +1,14 @@
 # Community Moderation Playbook
 
-Status: launch operating standard. Applies to Instagram and every approved public distribution surface.
+Status: launch operating standard. Applies to Instagram and every approved public distribution surface, including the two owned surfaces below.
+
+## Owned surfaces
+
+The decision table's judgments apply everywhere. Its remedies are written in Instagram's controls, so the equivalents on surfaces the publication owns are named here.
+
+**Ghost comments.** Live on every post as of launch, set to `all` — any member, free or paid, can comment. Remedies are in Ghost admin under each post's comments: hide a comment, delete it, or delete-and-block the member. Hiding is reversible and is the right first move when a call is close. There is no restrict equivalent; blocking removes the member's ability to comment without removing their subscription. A weekly check runs with the Friday readout, which means a comment can sit for up to six days — if the volume ever makes that gap feel long, the cadence tightens before the surface stays open.
+
+**Replies to the newsletter and support address.** `hello@grownmengrow.com` routes inbound to the founder's inbox. Do not reply from a personal address: the route has no verified outbound identity, and sending from the founder's own Gmail would expose the name the 2026-08-10 ruling keeps off every public surface. Until outbound is configured, a reply that must go out is composed for the founder and sent by them from an identity that carries the publication's name, not theirs.
 
 ## Purpose
 
