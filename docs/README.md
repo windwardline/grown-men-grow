@@ -2,6 +2,7 @@
 
 Use these files as the current operating set:
 
+- `editorial-underpinning.md` — how the publication reasons about care, growth, and responsibility; tests every draft must pass.
 - `editorial-visual-system.md` — approved cross-surface standard, current collage direction, and production controls.
 - `technical/founder-decisions.md` — founder rulings and unresolved gates.
 - `technical/release-checklist.md` — launch acceptance checklist.

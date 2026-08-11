@@ -369,3 +369,9 @@
 - **Status:** Decided by the founder ("I do not want to enter anything in the AI-disclosure fields").
 - **Context:** The field audit surfaced two optional AI-disclosure surfaces: Substack's "How I make this" statement and Instagram's AI-creator profile label. Both are public statements about production process, adjacent to the visual system's visible-human-authorship pillar.
 - **Effect:** Both remain empty/off. Agents do not fill AI-disclosure fields on any platform without a new founder decision. This governs future platform surfaces of the same kind.
+
+## 2026-08-11 — Ethics-of-care reasoning adopted as the editorial underpinning
+
+- **Status:** Submitted for founder approval. The founder supplied a ten-part public essay-carousel on why the care in *Ted Lasso* reads as substantive rather than as toxic positivity — grounded in Gilligan (1982), Noddings (1984), and Tronto (1993) — calling it "a fantastic encapsulation of what I am trying to convey through this work" and directing that it become "a general underpinning to how Grown Men Grow thinks and communicates."
+- **Context:** The repository governed visual standards (`editorial-visual-system.md`) and editorial refusals (`AGENTS.md`) but had no positive statement of how the writing reasons about its reader. The source material supplies one: care that takes pain seriously, creates space rather than prescribing, and never becomes control.
+- **Effect:** New `docs/editorial-underpinning.md` distills seven principles and six draft tests, indexed in `docs/README.md`. It governs reasoning, not vocabulary — the tradition's names and terms stay internal, because the identity contract forbids feminism as positioning and a publication built on a television show inherits that show's shelf life. Approved copy under `content/` is unaffected; this governs new work and future revisions.
