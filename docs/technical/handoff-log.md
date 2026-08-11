@@ -415,3 +415,17 @@ The founder completed the Ghost Publisher checkout and ordered the launch ("Let'
 **Day-0 baseline (2026-08-10 ~20:20 ET):** Ghost members 1 (founder test); newsletter subscribers 1; Instagram 1 post / 0 followers; Bluesky 0 posts / 0 followers; LinkedIn Page 0 followers; site public with Essay 1 + Start Here + About.
 
 **Founder phone items (app-only):** pin the carousel to the profile (⋯ → Pin to your profile); publish Story frames 1–3 with the tracked Start Here link sticker (desktop cannot add link stickers). **Open:** Substack public byline cache still pending expiry; publish-timing analysis in progress.
+
+## 2026-08-10 — Claude Code: week-one bridge staged; production cadence approved
+
+**Client:** Claude Code (desktop). **Branch:** `docs/week-one-staging`.
+
+Founder decisions this session: hold the one-essay-per-week public cadence (two-per-week remains the production cadence — distinction now explicit); the week-one bridge plan approved and executed on the founder's "Go"; the production rhythm approved as new drafts delivered for review Wednesday and Saturday.
+
+**External state changed (all founder-authorized):**
+- **Ghost:** Field Note 2 ("Call Your Friends Before There's a Reason") created from the approved repo source (HTML conversion, feature image uploaded, approved meta title/description, custom excerpt) and **scheduled for Tuesday 2026-08-18 08:00 ET with the default newsletter bound (email_segment: all)** — the newsletter binds only on the draft→scheduled transition, which required one unschedule/reschedule cycle; verified bound.
+- **Buffer (six scheduled auto-publishing posts, approved copy and alt text verbatim, ET):** Bluesky Post 1 Tue 12:00 · Instagram foundational carousel (7 slides + alt text) Tue 1:00 · LinkedIn pack post Wed 10:00 · Instagram recognition carousel (7 slides + alt text) Thu 9:00 · Bluesky canonical-link post Sat 9:30 (the pack's own scheduling note ranks the canonical link ahead of the remaining fragment; Post 2 stays in reserve) · Instagram static post Sat 10:00. Carousel images served from Ghost's public image storage (Buffer's API takes URLs). Verified via the posts query: six scheduled, correct channels, asset counts, and times. AI-label metadata false per the standing decision.
+- **Scheduled tasks:** three one-time tasks — Tue 11:45 founder reminder (Substack Note 1 copy served verbatim), Thu 06:45 Medium import execution (canonical-first verification built in), Sat 09:15 founder reminder (Note 2). The recurring Monday staging task now also builds each week's iCloud phone kit following the `Week 01 — Strength Has to Grow Up` convention created tonight (numbered action folders, action-stating filenames, READ ME with links and copy).
+- **iCloud:** Week 01 phone kit delivered (stories with link-sticker instructions, optional poll/question frames, reel cover, backup copies of everything Buffer auto-posts). The founder pinned the intro carousel; Story frames were handed off via the kit.
+
+**Repository:** FN2 frontmatter publication authorization updated to record the founder's ruling. **Open:** founder posts Stories 1–3 tonight and the two Substack Notes at their slots; Reel held for review (Day 7). Field Note 3 staging lands with next Monday's pre-flight.
