@@ -429,3 +429,19 @@ Founder decisions this session: hold the one-essay-per-week public cadence (two-
 - **iCloud:** Week 01 phone kit delivered (stories with link-sticker instructions, optional poll/question frames, reel cover, backup copies of everything Buffer auto-posts). The founder pinned the intro carousel; Story frames were handed off via the kit.
 
 **Repository:** FN2 frontmatter publication authorization updated to record the founder's ruling. **Open:** founder posts Stories 1–3 tonight and the two Substack Notes at their slots; Reel held for review (Day 7). Field Note 3 staging lands with next Monday's pre-flight.
+
+## 2026-08-11 — Claude Code: Meta ads access, task automation hardening, iCloud naming standard
+
+**Client:** Claude Code (desktop). **Branch:** `docs/meta-ads-access-record`.
+
+Founder directives this session: convert every scheduled task to full weekly automation ("full automation every week for everything, wherever possible"); add three-letter ALL-CAPS day codes to the iCloud kit's numbered folders as the standing naming convention; lock down a new personal Facebook profile "as private as possible" and connect it to the Meta Business Suite portfolio for Ads Manager access.
+
+**External state changed:**
+- **Facebook profile (founder's personal email; Ads Manager access only) — full privacy lockdown, every setting verified on screen:** search-engine indexing OFF; friends list Only me; email and phone lookup No one; friend requests Friends of friends; profile tag review and post tag review ON; tagged-posts visibility Only me; default audiences set Custom — future posts Only me, stories Friends, reels Friends, story/reel share toggles OFF, comments Friends, public-profile info Friends, follows Only me. Facebook confirmed "Default audience updated." The profile carries no photo, bio, or public content.
+- **Meta Business Suite (portfolio 1530378424989411):** the Facebook profile was invited (Full access, zero assets pre-assigned) and the invitation accepted through the emailed link with the profile's own session. The invitation wizard looped on its final step twice before landing; verified in Settings → People, where the profile (user 61592688195982) now appears with Full access alongside the Instagram identity. The founder was completing the portfolio's internal contact-info prompt (not customer-visible) at session end. This grants Ads Manager access without any public Facebook surface.
+- **Scheduled tasks — all six now recur weekly (ET):** Monday staging Mon 9:30 · publish-check Tue 8:30 · Substack Note reminder Tue 11:45 · Medium import Thu 6:45 · analytics digest Fri 9:00 · Substack Note reminder Sat 9:15. The three former one-time tasks (Tuesday note, Thursday Medium, Saturday note) were rebuilt as recurring; every task either executes the work itself or serves complete step-by-step instructions with exact copy each time it fires.
+- **iCloud phone kit:** Week 01 numbered folders renamed to carry the day code — `1 — MON — Stories — post tonight`, `2 — WED — Optional sticker stories`, `3 — MON — Reel — after review (next Mon, Day 7)`, `9 — Backup — Buffer auto-posts these (no action)`. The `N — DAY — action` pattern is the standing convention; the Monday staging task builds future weeks to it.
+
+**Boundaries held:** no Facebook friends, follows, posts, or public fields; the profile exists solely as an Ads Manager credential. No ad account exists yet — creating one and any ad spend are future founder decisions.
+
+**Open:** founder finishes the contact-info prompt in Business Suite; Substack public byline cache still pending re-verification; week-one rhythm proceeds per the staged schedule (next automated fire: Tuesday 8:30 publish-check, which will correctly report no essay this bridge week — FN2 is Aug 18).
