@@ -61,7 +61,27 @@ A draft that fails one of these is not softened. It is rewritten from the point 
 
 Test 9 is real but weak on its own, because a single essay can honorably ask a man to do something. The seventh principle is a question about the whole body of work, and no per-piece reading can answer it: across everything published, is the reader ever the one being held, or is he always the one doing the holding?
 
-Every quarter, and whenever the bank crosses another ten pieces, count it. For each published piece, mark whether it puts the reader in the position of giving care, receiving it, or neither. A corpus that is all obligation has quietly become the thing this publication exists to argue against — a man whose whole worth is his usefulness. Record the count and the judgment in the decision log, not just the number.
+Measure it whenever the bank crosses another ten pieces — at the bank, not on the calendar. Mark each published piece for stance, and mark one more thing, because stance alone misses the tell: **do the last hundred words address him?** That is where the assignment actually lives. As of 2026-08-11 the answer is yes in nine of ten pieces, with "Anger Is a Terrible Manager" the only exception. Record the count and the judgment in the decision log, not just the number.
+
+## Stance
+
+Most pieces put the reader in the position of a man with a move to make, and that is correct. Meeting him as someone who can act is the entry fee for this readership, and principles 2 and 3 keep the writing honest about what is actually his to decide. Three quarters of the work stays exactly as it is. What follows adds a fourth column, not a repositioning.
+
+Every draft carries an internal `stance` field — `assignment` or `witness`. It never appears publicly and it is not a series, a section, or a label a reader could track.
+
+**The subject test decides which.** A witness piece turns on an event the man neither caused nor can fix: being forgiven, being driven, being kept on when he was the problem. If he has a move, it is an ordinary field note and gets written the ordinary way. This is why "Ask for Help While It's Still Cheap" never counted — asking is an action with a correct execution, so receiving became one more thing to do well.
+
+**A witness draft clears three gates.**
+
+1. No imperative aimed at the reader and no closing question. The piece ends on the last fact and stops. Nine of the ten banked pieces turn to him in the final line, and that turn is the assignment.
+2. Nothing liftable in the shape "so a man should ___." If such a sentence can be extracted, it is an assignment piece wearing different clothes.
+3. The man being cared for is the grammatical object throughout. The giver's verbs carry it. First person is available — the publication already speaks as an unbylined "I" — but as the one being done to, never as the one learning a skill. "He drove four hours and I spent the first hour telling him he didn't need to," not "I learned to accept help."
+
+The piece never certifies that the care landed well. Include the deflections and the parts the giver got wrong. A witness piece that grades the technique has only moved the assignment to a different reader.
+
+**What does not change.** Keep the machinery — the smoke detector, the oil interval, the price curve. The dryness and the jokes live inside those metaphors, and a piece stripped of them goes warm, which is a worse failure than the one being fixed.
+
+**How it fails.** Humility theater: the writer in print being carried, arranged to look good about it. Essay 1 already diagnoses that move by name, so the work will be judged against it without mercy. The guard is gate 3 plus the no-certification rule. This is also why the writer's own story does not go first. A witness draft that goes soft is discarded, not repaired.
 
 ## Boundaries
 

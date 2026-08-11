@@ -4,6 +4,8 @@ Nothing in this directory is approved for publication, newsletter delivery, meta
 
 Every draft runs against the nine tests in `docs/editorial-underpinning.md` before the founder sees it. Report which tests the draft was checked against and anything that came close to failing; do not quietly sand a draft down until it passes.
 
+Every draft also carries an internal `stance` field in its frontmatter — `assignment` or `witness` — decided by the subject test in that document. The field is internal and never renders publicly. A `witness` draft must clear the three gates there before delivery; the report says which gate came closest to failing.
+
 Drafts may propose first-person language. The founder must confirm every personal statement before approval. Move approved copy into `content/` through a later reviewed change; do not silently revise the canonical launch files.
 
 Field Note 2 moved to `content/field-notes/` after founder approval and factual confirmation on 2026-08-08. This directory currently contains no active editorial draft.
