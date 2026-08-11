@@ -14,7 +14,7 @@ The founder makes every final decision. Codex prepares recommendations, verifies
 - [x] Ghost staff bio: none public — superseded 2026-08-10 by the same ruling; the staff record exists for administrative access only
 - [x] Instagram public identity: Grown Men Grow; do not display Michael Peacock's name
 - [x] Approved Instagram bio: “Some assembly still required.”
-- [x] Editorial underpinning approved as written on 2026-08-11: `docs/editorial-underpinning.md` governs how the writing reasons about its reader — seven principles, six draft tests. Its source tradition stays internal and never appears in public copy. Approved copy already under `content/` is not retroactively revised.
+- [x] Editorial underpinning approved as written on 2026-08-11: `docs/editorial-underpinning.md` governs how the writing reasons about its reader — seven principles, nine draft tests, and a quarterly corpus check (tests expanded from six to nine on 2026-08-11 at the founder's direction: “Expand as necessary. I want full coverage, now and in the future.”). Its source tradition stays internal and never appears in public copy. Approved copy already under `content/` is not retroactively revised.
 
 ## Gate 2 — Brand presentation
 
