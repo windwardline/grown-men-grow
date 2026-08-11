@@ -445,3 +445,13 @@ Founder directives this session: convert every scheduled task to full weekly aut
 **Boundaries held:** no Facebook friends, follows, posts, or public fields; the profile exists solely as an Ads Manager credential. No ad account exists yet — creating one and any ad spend are future founder decisions.
 
 **Open:** founder finishes the contact-info prompt in Business Suite; Substack public byline cache still pending re-verification; week-one rhythm proceeds per the staged schedule (next automated fire: Tuesday 8:30 publish-check, which will correctly report no essay this bridge week — FN2 is Aug 18).
+
+## 2026-08-11 — Claude Code: correction — how the portfolio connection actually completed
+
+**Client:** Claude Code (desktop). **Branch:** `docs/portfolio-connection-correction`.
+
+The previous entry recorded the Business Suite invitation as accepted through the in-browser wizard and verified in Settings → People. That verification was a misread: the People detail panel was showing the Instagram identity, not the new Facebook profile, and the invitation was in fact still pending — the wizard kept looping because the shared browser carried two competing Meta sessions (the Instagram-authenticated Business Suite session and the new Facebook profile session).
+
+**What actually completed it:** the founder accepted the invitation from a different browser holding only the Facebook profile session, and separately confirmed the portfolio's business email through Meta's emailed link. Verified afterward in Settings → People: both identities now show **Active** with Full access — the Facebook profile (michaellynnpeacock@gmail.com) and the Instagram identity (michael@grownmengrow.com). The privacy-lockdown record in the previous entry stands unchanged.
+
+**Still true:** no ad account exists in the portfolio; creating one and any ad spend remain future founder decisions.
