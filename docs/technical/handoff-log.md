@@ -576,6 +576,39 @@ The founder ruled on the four items the underpinning audit left open, then direc
 
 **Cleanup:** all PRs merged, eighteen stale local branches and one stray remote branch removed, working tree clean, gates green at 401 tracked files and 118 SVGs. The worktree at `.claude/worktrees/jovial-feynman-4bc181` belongs to the parallel session and was left untouched.
 
+## 2026-08-12 — Claude Code: Field Note 11 drafted; the first witness piece
+
+**Client:** Claude Code (scheduled task `gmg-wednesday-draft`, unattended). **Branch:** `content/field-note-11-witness-draft`. **Scope:** one new field-note draft for founder review. Nothing published, sent, posted, or moved into `content/`.
+
+**Draft:** `drafts/field-note-11-the-lights-never-flickered.md` — "The Lights Never Flickered." A man sets anchor bolts an inch and a half off, the base plates do not fit, and the tear-out costs twenty-two thousand four hundred. He drives in expecting to be fired and is told to go finish the punch list on the other job. He learns eleven years later what it cost the man who ate it.
+
+**Stance: `witness`, and it is the first one.** The 2026-08-11 ruling opened the fourth column, chose the first witness piece, and ruled that the founder's own story does not go first; no witness piece had been written yet. The subject clears the test — being kept on when he was the problem is an event the man neither caused nor can fix. All three gates hold: no imperative and no closing question, nothing liftable as "so a man should ___," and the man cared for is the grammatical object throughout while the owner's and the daughter's verbs carry the piece. The care is never certified as landing well: the eleven days of silence, the December story told for a laugh with his name in it, and his resentment at having repayment refused all stay in.
+
+**Machinery kept, per the same ruling.** The spine is a building's transfer switch — the power drops, the load lands somewhere else, one tube stutters, the desks keep typing. No prior vocabulary is reused (route line, tally marks, weight bars, price tags, dashed path, battery gauge, diverging arrows, ledger mark), and the proposed signature mark is a two-position switch lever.
+
+**Nine tests run; two came close and are named rather than sanded.** Test 4: the passage adjudicating the man's invented reason as worse than the true one decides something about the character, not about the reader. Test 8: "calls it self-reliance ... the alternative is looking directly at how alone he has been" edges toward naming a man's self-account as self-deception; it names isolation, not fault, and pulls no shame lever. Test 2's expensive paragraph — that keeping him may simply have been cheaper — was left unresolved on purpose. Test 7's worst-landing man, the one who was fired for less or never covered for by anyone, has his own section; the second such man, currently absorbing other people's costs with nobody behind him, is not addressed and is a gap this piece does not close.
+
+**Founder question left open, not assumed:** the piece is one specific case with a specific number rather than the generic "a man" construction used elsewhere in the bank. It names no one and uses no founder-supplied fact. Whether the publication runs a specific unattributed account of this kind, or recasts it as a composite, is the founder's call. Length also ran over the task's guide — 1,900 words in the file against a 1,100–1,400 target, with a 900-word essay body against a ~600-word bank median. The sections carrying tests 2 and 7 were not cut to make the number.
+
+**Verification:** `node scripts/verify-repository.mjs` (401 tracked files), `bash scripts/verify-svg-xml.sh` (118 SVGs), `git diff --check`. No theme, script, or asset was touched.
+
+**External state changed:** none. No Ghost, Buffer, Instagram, Medium, Bluesky, Substack, or email action of any kind.
+
+**Open:** the founder reviews the draft and rules on the specific-case question. Nothing blocks. Next automated fire is Thursday 06:45 for the Medium import, then Saturday's draft. Field Note 2 publishes Aug 18.
+
+## 2026-08-12 — Claude Code: correction — the Field Note 11 merge is blocked by a required check
+
+Correcting the preceding entry, which stated that nothing blocks. The draft PR (#69) has auto-merge armed and cannot merge: the required check `Dependency scan / osv-scan` fails, and it fails for a reason unrelated to this change set, which adds one markdown file and this log.
+
+**What fails.** GHSA-jmr9-qjv8-65gv / CVE-2026-56876 — `extract-zip` 2.0.1 does not validate symlink targets when extracting a zip, so a crafted archive can write outside the extraction directory. High, 8.6. **No patched version exists.** The scanner reports "0 vulnerabilities can be fixed."
+
+**Where it enters.** `theme/pnpm-lock.yaml` only, as a devDependency chain: `gscan@6.4.2` → `@tryghost/zip@3.5.0` → `extract-zip@2.0.1`. It runs only when the theme is validated locally and in CI, against a zip this repository builds itself from its own files. No published surface consumes it.
+
+**Why it started today.** The advisory was published 2026-06-26 and reviewed into the GitHub Advisory Database on 2026-08-12. `main` passed the same job at 22:58 UTC yesterday on 758b865. Every pull request in this repository will now fail this gate until it is addressed.
+
+**Not addressed here, deliberately.** The gate was not bypassed, the ruleset was not touched, and `security.yml` was not edited from an unattended draft task. There is no `osv-scanner.toml` in the repository, so no established ignore pathway exists to follow — creating one is a security-policy decision with the founder's name on it, not a mechanical fix. The options are: wait for an upstream fix in `extract-zip` or a `gscan`/`@tryghost/zip` release that drops it; add a documented, expiring ignore for this advisory with the devDependency-only rationale recorded; or narrow what the job scans. All three are the founder's call.
+
+**Open:** PR #69 stays open with auto-merge armed and merges by itself the moment the gate goes green. The draft is complete and readable on the branch; the founder's review does not depend on the merge. The osv gate blocks every other pull request in the meantime.
 ## 2026-08-12 — Claude Code: the dependency gate blocked every PR; the risk is now recorded, not routed around
 
 **Client:** Claude Code (desktop, worktree `.claude/worktrees/jovial-feynman-4bc181`). **Branch:** `fix/osv-extract-zip-accepted-risk`, cut from `origin/main` at 758b865.
