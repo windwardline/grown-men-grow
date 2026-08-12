@@ -648,3 +648,27 @@ Two corrections to the preceding entries, plus the close-out they were waiting o
 **External state changed:** none. Nothing published, sent, posted, purchased, or deployed.
 
 **Open:** the founder's review of Field Note 11 and the specific-case question it raises, both carried forward from that draft's own entry. On 2026-11-09 the osv entry expires and the gate fails by design — re-decide then, and check first whether gscan or `@tryghost/zip` has moved off extract-zip.
+
+## 2026-08-12 — Claude Code: Field Note 11 rewritten in the generic present; the invention rule moved into the contract
+
+**Client:** Claude Code (desktop, founder-directed). **Branch:** `content/field-note-11-register`. Follows the founder's ruling recorded in the decision log the same day.
+
+**What was wrong.** The merged draft asserted one specific event in the past tense — an exact figure, a named month, a scene at a retirement lunch — and the task that wrote it escalated the question as "run the specific account, or recast it as a composite." The record had already answered it. The 2026-08-08 ruling says no event may be invented for narrative force, scoped to events rather than to first person, so third person never exempted the draft; it only removed the tell. A composite fails the same rule and hides the invention better.
+
+**The recommendation that was also wrong, and is corrected here.** Holding the draft for a founder-supplied account was offered as the primary path. The founder's constraint — they guide tone, instruct on edits, and approve, and do not add to the writing substantively — retires it permanently. A witness piece cannot wait on facts that are never coming.
+
+**What the rewrite does.** Same argument, same transfer-switch spine, same section architecture, shifted into the generic present the approved bank already uses: it claims that this happens, never that a particular instance happened. One line makes the register explicit instead of hiding it — *Anyone who has worked a trade has heard a version of this, details swapped. The number changes. The eleven days do not.* That line is phrased for recognizability rather than frequency, so it does not contradict the later section arguing that most men are never carried at all. The exact figure is gone; a five-figure number does the same work without asserting a measurement nobody took. A new internal `register` field records the mode.
+
+**Nothing hard was smoothed.** The underpinning says a witness draft that goes soft is discarded, not repaired, so the check matters: the eleven days of silence, the December story told for a laugh, his resentment at having repayment refused, the unresolved possibility that keeping him was simply cheaper, and the section for the man who got the other version all survive the register change intact. What the piece lost is vividness and the authority of a report, not discomfort.
+
+**One craft note worth keeping.** The bank's usual illustrative device is an imperative aimed at the reader — "Watch a man close down a job site," "Ask a man what he would grab" — which the witness stance's first gate forbids. Witness drafts use the declarative form of the same register, as in "There is a specific look a man gets right after he finally says the hard thing."
+
+**Mechanized, not merely stated.** The 2026-08-08 ruling lived only in the decision record, which is exactly why an unattended draft task reached for an invented event without crossing it. It now sits in `AGENTS.md` under the editorial contract, where every agent reads it before writing.
+
+**Files changed:** `drafts/field-note-11-the-lights-never-flickered.md` (rewritten), `AGENTS.md` (one editorial-contract bullet), `docs/technical/decision-log.md`, this log.
+
+**Verification:** `node scripts/verify-repository.mjs` (403 tracked files), `bash scripts/verify-svg-xml.sh` (118 SVGs), `git diff --check`.
+
+**External state changed:** none. Nothing published, sent, posted, or deployed.
+
+**Open:** the founder's review of the revised draft. No decision is pending on the register question.
