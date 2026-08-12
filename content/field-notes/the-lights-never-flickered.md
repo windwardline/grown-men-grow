@@ -6,13 +6,15 @@ byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: The Lights Never Flickered
 preview: The load lands somewhere. Nobody tells him where.
-status: draft — NOT founder-approved
-publication_authorization: none — not authorized for publication, newsletter delivery, metadata, or social posting
-stance: witness — first witness piece under the 2026-08-11 stance ruling
+status: founder-approved
+approved: 2026-08-12 — approved as written, after the register correction rather than before it
+stance: witness — the first witness piece under the 2026-08-11 stance ruling
 register: generic present — asserts that this happens, never that a particular instance happened
-approved: none
 personal_claims: none — no event is asserted as reportage, per the 2026-08-08 ruling that no event may be invented for narrative force
-artwork_status: none — visual direction proposed only
+publication_authorized: false — no publication, newsletter, or posting slot authorized
+social_copy_status: founder-approved as written 2026-08-12; posting remains separately gated
+visual_direction_status: founder-approved as written 2026-08-12
+artwork_status: not started — no assets rendered; the per-article image rule and the believability gate apply
 origin: written 2026-08-12 by the Wednesday draft task; revised the same day when the register was corrected
 ---
 
@@ -146,7 +148,7 @@ Anyone who has worked a trade has heard a version of this, details swapped. The 
 
 # Production notes
 
-- Not founder-approved. Not authorized for publication, newsletter delivery, metadata, or social posting.
+- Founder-approved as written on 2026-08-12. Publication, newsletter delivery, and social posting remain separately gated; no slot is authorized and no artwork exists yet.
 - **Register, corrected 2026-08-12.** The first version of this draft asserted one specific event in the past tense, with an exact figure. That violates the 2026-08-08 ruling — no event may be invented for narrative force — and the founder does not supply source facts. Rewritten in the generic present the approved bank already uses, which claims that this happens without claiming that a particular instance happened. One line makes the register explicit rather than hiding it: *Anyone who has worked a trade has heard a version of this, details swapped. The number changes. The eleven days do not.* The exact figure is gone; a five-figure number carries the same weight without asserting a measurement nobody took.
 - Stance is `witness` under the 2026-08-11 ruling, and it is the first one. Subject test: being kept on when he was the problem — an event he neither caused nor can fix. Gate 1 holds: no imperative, no closing question, it ends on the last fact. Gate 2 holds: nothing lifts as "so a man should ___." Gate 3 holds: he is the object throughout, and the owner's and the daughter's verbs carry it. The care is never certified as landing well — the eleven days, the December story, and his resentment of the refused repayment all stay in.
 - The bank's usual illustrative device is an imperative — "Watch a man," "Ask a man" — which gate 1 forbids. This draft uses the declarative form the bank also uses, as in "There is a specific look a man gets right after he finally says the hard thing."
