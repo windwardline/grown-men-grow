@@ -672,3 +672,21 @@ Two corrections to the preceding entries, plus the close-out they were waiting o
 **External state changed:** none. Nothing published, sent, posted, or deployed.
 
 **Open:** the founder's review of the revised draft. No decision is pending on the register question.
+
+## 2026-08-12 — Claude Code: Field Note 11 approved and promoted to content/
+
+**Client:** Claude Code (desktop, founder-directed). **Branch:** `content/approve-field-note-11`. The founder approved the revised draft as written.
+
+**Promotion.** `drafts/field-note-11-the-lights-never-flickered.md` moved to `content/field-notes/the-lights-never-flickered.md` with `git mv`, following the procedure `drafts/README.md` sets and Field Note 2 established on 2026-08-08. Frontmatter now reads `status: founder-approved`, `approved: 2026-08-12`, and carries explicit gates: `publication_authorized: false`, social copy approved as written but posting separately gated, visual direction approved as written, artwork not started. The internal `stance` and `register` fields travel with the piece. The production note that declared it unapproved was rewritten rather than deleted, so the file states what is and is not authorized.
+
+**Scope of the approval, as read.** "It is approved" was applied to the file as presented, which includes the carousel, caption, alt text, and visual direction alongside the essay. That reading is recorded in the frontmatter so it can be corrected in one line if the founder meant the prose only. Nothing in the approval authorizes publishing, sending, or posting, and none of those happened.
+
+**The corpus count moved for the first time.** `editorial-underpinning.md` carried a 2026-08-11 baseline of nine of ten pieces addressing the reader in their last hundred words. It now reads nine of eleven, naming both exceptions. The document asks for the judgment and not just the number, so the decision log records it: the ratio moved because a piece was written to a different stance, not because an assignment piece went quiet.
+
+**Files changed:** the piece (moved and reframed), `docs/editorial-underpinning.md` (corpus line), `drafts/README.md` (the move recorded beside Field Note 2's), `docs/technical/decision-log.md`, this log.
+
+**Verification:** `node scripts/verify-repository.mjs`, `bash scripts/verify-svg-xml.sh`, `git diff --check`, plus the theme chain. The repository check's guard against an approved Field Note 2 sitting in `drafts/` is the model for this move; the bank now holds ten field notes and the launch essay.
+
+**External state changed:** none. Nothing published, sent, posted, or deployed.
+
+**Open, and outside this approval:** platform adaptations for Field Note 11 (`content/distribution/field-note-11-platforms.md`), a render script, artwork under the per-article image rule and the believability gate, and a publication slot — each a separate step, the slot a founder decision. Next automated fire is Saturday's draft task.

@@ -61,7 +61,7 @@ A draft that fails one of these is not softened. It is rewritten from the point 
 
 Test 9 is real but weak on its own, because a single essay can honorably ask a man to do something. The seventh principle is a question about the whole body of work, and no per-piece reading can answer it: across everything published, is the reader ever the one being held, or is he always the one doing the holding?
 
-Measure it whenever the bank crosses another ten pieces — at the bank, not on the calendar. Mark each published piece for stance, and mark one more thing, because stance alone misses the tell: **do the last hundred words address him?** That is where the assignment actually lives. As of 2026-08-11 the answer is yes in nine of ten pieces, with "Anger Is a Terrible Manager" the only exception. Record the count and the judgment in the decision log, not just the number.
+Measure it whenever the bank crosses another ten pieces — at the bank, not on the calendar. Mark each published piece for stance, and mark one more thing, because stance alone misses the tell: **do the last hundred words address him?** That is where the assignment actually lives. As of 2026-08-12 the answer is yes in nine of eleven pieces. "Anger Is a Terrible Manager" ends on signal rather than an assignment, and "The Lights Never Flickered" — approved 2026-08-12, the first `witness` piece — ends on the last fact and turns to him nowhere. Record the count and the judgment in the decision log, not just the number.
 
 ## Stance
 
