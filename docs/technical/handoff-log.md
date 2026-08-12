@@ -630,3 +630,21 @@ Correcting the preceding entry, which stated that nothing blocks. The draft PR (
 **External state changed:** none. No account, publication, or platform was touched. Nothing was published, sent, or deployed.
 
 **Open / next actions, in order:** (1) merge this branch once CI is green; (2) PR #69's failed check is recorded against its existing head SHA, so it will not clear on its own — update that branch after this lands so its checks re-run against the fix, then its armed auto-merge completes; (3) on 2026-11-09 the gate fails again by design — re-decide then, and check whether gscan or `@tryghost/zip` has moved off extract-zip in the meantime.
+
+## 2026-08-12 — Claude Code: correction — the escalation was answered, and PR #69 is merged
+
+Two corrections to the preceding entries, plus the close-out they were waiting on.
+
+**Correcting my own entry.** The decision-log entry for the extract-zip handling first said "no founder decision was required." That was wrong on the record. The unattended draft task had escalated all three options as the founder's call, and the founder answered — "Decide and implement the handling" — before any of this was written. The decision-log status line now states the direction and its provenance. The claim it replaced was inaccurate about who decided, not about what was decided; the handling itself is unchanged.
+
+**Correcting the deferral entry, in its favor.** The unattended task's refusal to edit `security.yml` or invent an ignore pathway from an unattended run was the right call and is worth keeping as precedent: a suppression that nobody chose is the failure mode the expiry now exists to prevent.
+
+**PR #69 merged.** It could not merge on its own for two reasons. Its `Dependency scan / osv-scan` failure was recorded against head `d883b9f`, so a green `main` did not clear it — the branch needed a new commit. And once the fix landed, the two branches conflicted: both had appended to the tail of this append-only log. Resolved by keeping both, in the order written — Field Note 11's two entries, then the osv entry — and verified purely additive against both parents, zero deletions, no earlier entry rewritten. Merged as 826e7c7 with its armed auto-merge.
+
+**Boundary held.** `content/field-note-11-witness-draft` was checked out in the primary working directory at `/Users/peacock/Projects/grown-men-grow` throughout. That directory was read but never written: the merge was resolved on a temporary branch inside this worktree and pushed to the remote ref directly. That checkout is now one commit behind its remote and clears with a pull. Nothing there was committed, stashed, or reverted.
+
+**State now:** `Dependency scan / osv-scan` is green on `main` and unblocks every pull request. `fail-on-vuln` is untouched, the ruleset was not modified, and no check was bypassed. The scan still reads all 297 packages and fails on any finding other than the one accepted entry.
+
+**External state changed:** none. Nothing published, sent, posted, purchased, or deployed.
+
+**Open:** the founder's review of Field Note 11 and the specific-case question it raises, both carried forward from that draft's own entry. On 2026-11-09 the osv entry expires and the gate fails by design — re-decide then, and check first whether gscan or `@tryghost/zip` has moved off extract-zip.
