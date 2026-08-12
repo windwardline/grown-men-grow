@@ -575,3 +575,25 @@ The founder ruled on the four items the underpinning audit left open, then direc
 **Coordination:** a parallel session shipped `scripts/lib/ghost-admin.mjs` in PR #52/#54 while this one was rewriting the same task files; both sides re-applied cleanly and all six Ghost-touching tasks now cite the helper with no stale references. Its measured correction is recorded: the apex returns 302, not 403 — the cross-origin hop strips the Authorization header and the unauthenticated replay answers 403.
 
 **Cleanup:** all PRs merged, eighteen stale local branches and one stray remote branch removed, working tree clean, gates green at 401 tracked files and 118 SVGs. The worktree at `.claude/worktrees/jovial-feynman-4bc181` belongs to the parallel session and was left untouched.
+
+## 2026-08-12 — Claude Code: the dependency gate blocked every PR; the risk is now recorded, not routed around
+
+**Client:** Claude Code (desktop, worktree `.claude/worktrees/jovial-feynman-4bc181`). **Branch:** `fix/osv-extract-zip-accepted-risk`, cut from `origin/main` at 758b865.
+
+**What broke.** The required `Dependency scan / osv-scan` check started failing on 2026-08-12 and blocked every pull request, PR #69 included. One finding: GHSA-jmr9-qjv8-65gv / CVE-2026-56876, extract-zip 2.0.1, High 8.6 — unvalidated symlink targets during extraction. It enters as `gscan@6.4.2 → @tryghost/zip@3.5.0 → extract-zip@2.0.1`, a devDependency chain exercised only by theme validation.
+
+**There was nothing to upgrade to, and it was checked against the registry rather than assumed.** extract-zip's published versions stop at 2.0.1. gscan 6.4.2 is current and pins `@tryghost/zip` 3.5.0 exactly; that package's latest, 3.5.6, still pins extract-zip 2.0.1 exactly. Three exact pins in a row, so no lockfile refresh moves any of it.
+
+**Narrowing the scan was considered and rejected.** `theme/pnpm-lock.yaml` is the only lockfile here, so scoping around the finding would leave a required check that passes having examined nothing. The gate keeps `fail-on-vuln: true` and still reads all 297 packages.
+
+**Files changed:** new root `osv-scanner.toml` (one `IgnoredVulns` entry, full rationale in comments, `ignoreUntil = 2026-11-09`); `.github/workflows/security.yml` (`--config=osv-scanner.toml` added to scan-args, with a comment for why it is explicit); `AGENTS.md` (the gates paragraph named Semgrep and secret scanning but not the dependency scan at all — it now names it and points at the accepted-risk register and its expiry); `docs/technical/decision-log.md`; this log.
+
+**The config sits at the repository root on purpose.** OSV-Scanner reads `osv-scanner.toml` from the scanned file's own directory and does not walk up, which would place it at `theme/osv-scanner.toml` — and `scripts/package-ghost-theme.mjs` packages every tracked file under `theme/` into the zip uploaded to Ghost(Pro). Left to default discovery, a CI suppression file would have shipped inside the published theme. Confirmed absent from `dist/grown-men-grow.zip` after the change.
+
+**The expiry is the control.** 2026-11-09 is a Monday, so the workflow's own weekly scheduled scan is what raises it again; nobody has to remember. On that date the gate fails and the risk is re-accepted on that day's facts or the entry comes out.
+
+**Verification.** osv-scanner 2.5.0 locally, against the same lockfile CI scans: with the config, pass, 297 packages read; with the date moved into the past, fail on the same finding; with a different vulnerability ID in the entry, fail — so the suppression is one ID wide, not a blanket. The single GHSA entry filters the CVE alias with it. Repository gates all green: `verify-ghost-theme` (17 files), `pnpm --dir theme install --frozen-lockfile`, `pnpm --dir theme test`, `pnpm --dir theme zip` plus `gscan -z --fatal --verbose` (no fatal issues, Ghost 6.x), `verify-repository` (401 tracked files), `verify-svg-xml` (118 SVGs), `git diff --check`.
+
+**External state changed:** none. No account, publication, or platform was touched. Nothing was published, sent, or deployed.
+
+**Open / next actions, in order:** (1) merge this branch once CI is green; (2) PR #69's failed check is recorded against its existing head SHA, so it will not clear on its own — update that branch after this lands so its checks re-run against the fix, then its armed auto-merge completes; (3) on 2026-11-09 the gate fails again by design — re-decide then, and check whether gscan or `@tryghost/zip` has moved off extract-zip in the meantime.
