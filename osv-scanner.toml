@@ -1,0 +1,39 @@
+# OSV-Scanner policy for the dependency-scan gate in
+# .github/workflows/security.yml.
+#
+# This file sits at the repository root rather than beside the lockfile it
+# governs. OSV-Scanner's default discovery reads osv-scanner.toml from the
+# scanned file's own directory and does not walk up, which would place it at
+# theme/osv-scanner.toml -- and scripts/package-ghost-theme.mjs packages every
+# tracked file under theme/ into the distributed Ghost theme. A CI suppression
+# file has no business inside a published theme, so the workflow passes
+# --config to point here explicitly.
+#
+# An entry here suppresses a finding; it does not fix one. Every entry states
+# why the risk is accepted and carries an expiry, because an accepted risk that
+# cannot expire is an unreviewed one. When ignoreUntil passes, the gate fails
+# again and the decision has to be made a second time on that day's facts.
+
+# extract-zip 2.0.1 -- symlink targets are not validated during extraction, so
+# a crafted archive can write outside the extraction directory.
+# https://osv.dev/GHSA-jmr9-qjv8-65gv (CVE-2026-56876, High 8.6)
+#
+# There is nothing to upgrade to. extract-zip has published no version above
+# 2.0.1; gscan 6.4.2 is the current release and pins @tryghost/zip 3.5.0
+# exactly; @tryghost/zip's own latest, 3.5.6, still pins extract-zip 2.0.1
+# exactly. The scanner agrees: "0 vulnerabilities can be fixed."
+#
+# It is a devDependency and reaches no published surface. gscan validates the
+# Ghost theme locally and in CI; the only archive it ever extracts is the zip
+# this repository builds moments earlier from its own tracked theme files
+# (scripts/package-ghost-theme.mjs). No untrusted archive enters that path.
+# The theme zip uploaded to Ghost(Pro) contains theme files only -- gscan and
+# its dependency tree are never shipped or executed by the publication.
+#
+# Reconsider before the expiry if any of these change: gscan begins extracting
+# an archive from outside this repository, a patched extract-zip ships, or
+# @tryghost/zip moves off it.
+[[IgnoredVulns]]
+id = "GHSA-jmr9-qjv8-65gv"
+ignoreUntil = 2026-11-09
+reason = "extract-zip 2.0.1 has no patched release and no upstream path off it (gscan 6.4.2 pins @tryghost/zip 3.5.0; its latest 3.5.6 still pins extract-zip 2.0.1). devDependency only: the sole extraction is GScan theme validation of a zip this repository builds from its own tracked files. Expires 2026-11-09 for re-decision."
