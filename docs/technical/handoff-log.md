@@ -595,3 +595,17 @@ The founder ruled on the four items the underpinning audit left open, then direc
 **External state changed:** none. No Ghost, Buffer, Instagram, Medium, Bluesky, Substack, or email action of any kind.
 
 **Open:** the founder reviews the draft and rules on the specific-case question. Nothing blocks. Next automated fire is Thursday 06:45 for the Medium import, then Saturday's draft. Field Note 2 publishes Aug 18.
+
+## 2026-08-12 — Claude Code: correction — the Field Note 11 merge is blocked by a required check
+
+Correcting the preceding entry, which stated that nothing blocks. The draft PR (#69) has auto-merge armed and cannot merge: the required check `Dependency scan / osv-scan` fails, and it fails for a reason unrelated to this change set, which adds one markdown file and this log.
+
+**What fails.** GHSA-jmr9-qjv8-65gv / CVE-2026-56876 — `extract-zip` 2.0.1 does not validate symlink targets when extracting a zip, so a crafted archive can write outside the extraction directory. High, 8.6. **No patched version exists.** The scanner reports "0 vulnerabilities can be fixed."
+
+**Where it enters.** `theme/pnpm-lock.yaml` only, as a devDependency chain: `gscan@6.4.2` → `@tryghost/zip@3.5.0` → `extract-zip@2.0.1`. It runs only when the theme is validated locally and in CI, against a zip this repository builds itself from its own files. No published surface consumes it.
+
+**Why it started today.** The advisory was published 2026-06-26 and reviewed into the GitHub Advisory Database on 2026-08-12. `main` passed the same job at 22:58 UTC yesterday on 758b865. Every pull request in this repository will now fail this gate until it is addressed.
+
+**Not addressed here, deliberately.** The gate was not bypassed, the ruleset was not touched, and `security.yml` was not edited from an unattended draft task. There is no `osv-scanner.toml` in the repository, so no established ignore pathway exists to follow — creating one is a security-policy decision with the founder's name on it, not a mechanical fix. The options are: wait for an upstream fix in `extract-zip` or a `gscan`/`@tryghost/zip` release that drops it; add a documented, expiring ignore for this advisory with the devDependency-only rationale recorded; or narrow what the job scans. All three are the founder's call.
+
+**Open:** PR #69 stays open with auto-merge armed and merges by itself the moment the gate goes green. The draft is complete and readable on the branch; the founder's review does not depend on the merge. The osv gate blocks every other pull request in the meantime.
