@@ -55,7 +55,12 @@ jobs:
     name: Dependency scan
     uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@9a498708959aeaef5ef730655706c5a1df1edbc2 # v2.3.8
     with:
+      # --config is explicit because the scanner would otherwise look for
+      # osv-scanner.toml beside the lockfile, in theme/ -- and every tracked
+      # file under theme/ ships inside the published Ghost theme zip. The
+      # accepted risks and their expiry dates are recorded in that file.
       scan-args: |-
+        --config=osv-scanner.toml
         --lockfile=theme/pnpm-lock.yaml
       fail-on-vuln: true
       upload-sarif: false
