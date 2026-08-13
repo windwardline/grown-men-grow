@@ -690,3 +690,25 @@ Two corrections to the preceding entries, plus the close-out they were waiting o
 **External state changed:** none. Nothing published, sent, posted, or deployed.
 
 **Open, and outside this approval:** platform adaptations for Field Note 11 (`content/distribution/field-note-11-platforms.md`), a render script, artwork under the per-article image rule and the believability gate, and a publication slot — each a separate step, the slot a founder decision. Next automated fire is Saturday's draft task.
+
+## 2026-08-13 — Claude Code: the Thursday Medium slot is blocked on the browser, not on the content
+
+**Client:** Claude Code (scheduled task `gmg-thursday-medium`, unattended). **Branch:** `ops/thursday-medium-slot-blocked-2026-08-13`. **Scope:** the weekly 7:00 AM Medium import. It did not run. Nothing was imported, published, or posted anywhere.
+
+**Every content precondition passed.** The Ghost Admin API returns "Strength Has to Grow Up" (`strength-has-to-grow-up`) as the most recent published post, published 2026-08-09T22:32:35Z — about 92 hours before this run, well clear of the 40-hour canonical-first threshold. `https://grownmengrow.com/strength-has-to-grow-up/` returns 200. The Medium profile feed at `medium.com/feed/@grownmengrow` is empty, so nothing has ever been published on that account and there is no double-import risk.
+
+**What stopped it.** Claude in Chrome is not connected. `list_connected_browsers` returns an empty list on two attempts and `tabs_context_mcp` reports the extension unreachable — not a transient failure. Medium's URL importer requires the founder's signed-in session as @grownmengrow, and there is no path to it from here.
+
+**Not improvised around, per the task's own instruction.** The in-app browser pane was available and was not used: it carries no Medium session, and signing into one is outside any authority this task holds. The alternative to a missed slot is not a session created by an agent.
+
+**Note the feed's blind spot.** `medium.com/feed/@grownmengrow` lists published stories only. An import draft left sitting from an earlier attempt would not appear in it, so the founder's first step is Stories → Drafts, not the importer.
+
+**Founder instructions were served in full** — the importer URL, the canonical to paste, the approved title, subtitle, and five topics from `content/distribution/essay-01-launch.md`, the canonical verification to make in story settings before publishing, and the page-source check afterward. The slot is deferred, not silently missed.
+
+**Files changed:** this log only.
+
+**Verification:** `node scripts/verify-repository.mjs`, `bash scripts/verify-svg-xml.sh`, `git diff --check`. No theme, script, content, or asset was touched.
+
+**External state changed:** none. No Ghost, Medium, Buffer, Instagram, Bluesky, Substack, or email action of any kind.
+
+**Open, in order:** (1) the founder runs the import by hand, or reconnects the Chrome extension so a rerun can; (2) if the extension is reconnected before next Thursday, the same slot picks this essay up automatically — it stays the most recent published post until Field Note 2 publishes Aug 18; (3) after Aug 18 the slot targets Field Note 2 and this essay stops being the default, so an unimported launch essay would need a deliberate catch-up rather than the weekly slot. Carried forward from prior entries: Field Note 11's platform pack, render script, artwork, and publication slot.
