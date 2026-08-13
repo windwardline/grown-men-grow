@@ -1,7 +1,8 @@
 ---
 essay: The Lights Never Flickered
 canonical: https://grownmengrow.com/the-lights-never-flickered/ (live only after publication)
-status: drafted — not founder-approved
+status: founder-approved
+approved: 2026-08-13 — approved as written, artwork and platform copy together
 stance: witness — the pack holds the essay's stance; no imperative addressed to the reader on any surface
 image_rule: per-article — this pack may use only Field Note 11 imagery
 ---
