@@ -15,6 +15,7 @@ Use these files as the current operating set:
 - `technical/publish-timing.md` — per-platform schedule of record and the protocol that revises it.
 - `technical/community-moderation.md` — cross-platform comment, message, safety, and escalation standard.
 - `technical/email-identity.md` — outbound identity for hello@grownmengrow.com and why the personal address must never appear.
+- `technical/content-pipeline.md` — what a complete field note contains, how its imagery is made, and how it is delivered for approval.
 - `technical/operating-cadence.md` — publication and production cadences, the weekly task roster, and what stays with the founder.
 - `technical/handoff-log.md` — append-only cross-client operational history.
 - `technical/decision-log.md` — durable decision history.
