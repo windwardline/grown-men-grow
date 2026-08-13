@@ -14,7 +14,7 @@ personal_claims: none — no event is asserted as reportage, per the 2026-08-08 
 publication_authorized: false — no publication, newsletter, or posting slot authorized
 social_copy_status: founder-approved as written 2026-08-12; posting remains separately gated
 visual_direction_status: founder-approved as written 2026-08-12
-artwork_status: not started — no assets rendered; the per-article image rule and the believability gate apply
+artwork_status: rendered 2026-08-13 — four source photographs generated, seven carousel slides, feature image, and review sheet; awaiting founder review
 origin: written 2026-08-12 by the Wednesday draft task; revised the same day when the register was corrected
 ---
 
@@ -154,3 +154,14 @@ Anyone who has worked a trade has heard a version of this, details swapped. The 
 - The bank's usual illustrative device is an imperative — "Watch a man," "Ask a man" — which gate 1 forbids. This draft uses the declarative form the bank also uses, as in "There is a specific look a man gets right after he finally says the hard thing."
 - No metadata block is proposed; meta title, description, and internal links belong to the approval pass.
 - Voice calibration source: Field Note 2 per the 2026-08-08 founder ruling.
+
+## Imagery, generated 2026-08-13
+
+Four source photographs, all 1024×1536, generated in the founder's ChatGPT project "Grown Men Grow" through Chrome and reviewed at full resolution against the visual system's quality gate. Unique to this article per the per-article rule; the render script fails mechanically if any prior article's photograph appears in these compositions.
+
+- `assets/source/editorial/base-plates-anchor-bolts.png` — steel column base plates and protruding threaded anchor bolts on a cured slab in clear morning light, the plates set down beside the bolts rather than over them, chalk layout lines visible, survey tripod and stacked material out of focus, no people. Avoid list: rust, abandonment, rubble, danger staging, dust haze, night contrast, lone silhouette, heroic construction-worker cliches, luxury signaling.
+- `assets/source/editorial/punch-list-tailgate.png` — a marked-up punch list on a metal clipboard on an open truck tailgate in flat afternoon daylight, handwritten ticks, a pen across it, tape measure and work gloves aside, no people. Avoid list: legible words, rust, grime, dented neglect, dramatic shadow, macho truck styling, luxury signaling, catalog staging.
+- `assets/source/editorial/transfer-switch-cabinet.png` — an open grey electrical cabinet photographed straight on in even working light, a two-position transfer switch with a heavy lever, tidy labeled wiring runs, conduit entering from above, no people. Avoid list: sparks, hazard drama, exposed live conductors, grime, rust, flickering or emergency-red lighting, horror-basement staging, tangled wiring.
+- `assets/source/editorial/restaurant-table-after-lunch.png` — a long restaurant table after a group lunch, plates cleared and stacked, glasses and crumpled napkins in place, chairs pushed back at angles, warm afternoon light, no people. Avoid list: grime, wilted flowers, spilled wine drama, melancholy emptiness, candlelit romance staging, luxury fine-dining signaling, harsh overhead light.
+
+Signature vocabulary in `scripts/render-field-note-11.mjs`: a drawn two-position transfer switch. The lever rests on the first contact through slides 1–3, catches mid-throw on slide 6 where the essay turns, and is settled on the second contact by slide 7. The mark carries the argument across the sequence rather than decorating it, and it appears in no other note.
