@@ -12,9 +12,9 @@ stance: witness — the first witness piece under the 2026-08-11 stance ruling
 register: generic present — asserts that this happens, never that a particular instance happened
 personal_claims: none — no event is asserted as reportage, per the 2026-08-08 ruling that no event may be invented for narrative force
 publication_authorized: false — no publication, newsletter, or posting slot authorized
-social_copy_status: founder-approved as written 2026-08-12; posting remains separately gated
+social_copy_status: founder-approved as written 2026-08-12; platform pack approved 2026-08-13; posting remains separately gated
 visual_direction_status: founder-approved as written 2026-08-12
-artwork_status: rendered 2026-08-13 — four source photographs generated, seven carousel slides, feature image, and review sheet; awaiting founder review
+artwork_status: founder-approved 2026-08-13 — four source photographs, seven carousel slides, feature image, and review sheet approved as written
 origin: written 2026-08-12 by the Wednesday draft task; revised the same day when the register was corrected
 ---
 

@@ -534,3 +534,10 @@
 - **The pack holds the stance.** This is the first witness piece, and compression is where a stance dies — a caption that turns it into advice has undone the piece. The pack carries no imperative aimed at the reader on any surface, and its header says so explicitly for whoever schedules it, including the instruction that a slot wanting a call to action does not get one. This is the failure the 2026-08-11 audit named, applied before it could happen rather than after.
 - **Gate entries added in the same change set,** per the pipeline standard: the render script in the required list, a `validateAssetFamily` line for the carousel, the review-sheet dimensions, and three counts that had to move — editorial sources to thirty-nine, feature images to thirteen, review sheets to fifteen. The gate caught every one of these on first run, which is it working.
 - **Not authorized:** publication, newsletter, and posting remain separately gated. The pack is drafted, not founder-approved.
+
+## 2026-08-13 — Field Note 11 approved in full
+
+- **Status:** Approved by the founder on 2026-08-13 — essay, artwork, and platform copy together, in one review pass.
+- **What that confirms beyond this one note:** the delivery format works. Everything went into chat at once — the full carousel copy, every platform's text, the review sheet, and the feature image — and the founder approved from that alone without opening a file. This is the standard `content-pipeline.md` now requires of both draft routines, validated on its first real unit rather than assumed.
+- **Effect:** the platform pack and artwork are marked founder-approved. Field Note 11 is the first complete unit produced end to end under the corrected pipeline, and the first witness piece with its collateral intact.
+- **Still gated:** publication, newsletter delivery, and posting. No slot is authorized. Approval of the copy and artwork is not authorization to publish.
