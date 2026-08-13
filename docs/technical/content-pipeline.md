@@ -33,6 +33,8 @@ Every prompt in the project follows one shape. Hold to it — the consistency is
 
 The `Avoid:` list is written fresh per image against what that particular subject would plausibly get wrong — decay and wilted plants for a balcony, grime and rust and macho workshop cliches for a workbench. A generic avoid list produces generic failures.
 
+**This shape and `../editorial-visual-system.md` are the whole specification** (founder ruling, 2026-08-13). Older threads in the project are not a reference — do not mine them for conventions, and do not treat an earlier phrasing as authority over what is written here. When the house prompt needs to change, it changes in this document.
+
 ### The procedure
 
 1. Open Chrome and confirm the extension responds. If it does not, stop image work, say so plainly at the top of the report, and deliver everything else — never quietly skip the images.
