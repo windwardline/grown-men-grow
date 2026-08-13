@@ -1,6 +1,6 @@
 # Email Identity
 
-Status: plan approved in principle by the founder on 2026-08-11 ("My personal email should not be visible at all... Fix it, without adding spend, so that hello@grownmengrow.com is seen"). Awaiting the three founder steps below; DNS and verification are automated.
+Status: built and confirmed working 2026-08-13. SMTP2GO account created, `grownmengrow.com` verified, the three CNAMEs live in Cloudflare, an SMTP user created with open and click tracking disabled, and both send-as aliases confirmed by SMTP2GO and Gmail. Header acceptance is the last open step; see Acceptance below.
 
 ## The problem
 
@@ -41,6 +41,20 @@ Store the SMTP password in the macOS Keychain as `smtp2go-grownmengrow` (account
 **Founder — 5.** In Gmail, Settings → Accounts and Import → "When replying to a message" → select **Reply from the same address the message was sent to**. Without this, a reply to a member still defaults to the personal address and the whole exercise fails silently.
 
 **Agent — 6.** Add a DMARC record (`_dmarc.grownmengrow.com`, `v=DMARC1; p=none; rua=mailto:hello@grownmengrow.com`) once sending is aligned, then verify a live send: reply to a test member email and confirm the received message shows `hello@grownmengrow.com` in From, a `grownmengrow.com` DKIM signature, no `gmail.com` return path, and no "on behalf of" in a second client.
+
+## Two addresses, on purpose
+
+Both `hello@grownmengrow.com` and `michael@grownmengrow.com` are configured as Gmail send-as aliases through SMTP2GO, and both are confirmed.
+
+`hello@` remains the public funnel — it is what the site, the Ghost Portal, and the newsletter reply-to expose. `michael@` is what a reader sees when they get an answer. The founder's reasoning, 2026-08-13: "If someone actually uses hello@grownmengrow.com, I want it to appear as though a real human is behind it. Nobody responds from a 'hello' email address. They are used as a funnel." That is the responsiveness principle applied to the reply surface — a man who writes in is answered by a person, not by a queue.
+
+This supersedes the 2026-08-10 record that designated `michael@` for private account ownership and recovery only. A first name now appears on a semi-public surface. That is a deliberate, founder-made trade and is not to be "corrected" back: the 2026-08-10 publication-voice ruling governs bylines, author cards, staff names, and metadata credits on public pages, none of which this touches, and the exposure is a first name inside a private one-to-one exchange.
+
+**Gmail reply behavior.** Keep "When replying to a message" set to *Reply from the same address the message was sent to*, and select `michael@` by hand when answering a reader. With both aliases configured this setting is a safety net rather than a hazard: if Gmail ever falls back it lands on `hello@`, a brand address, not the founder's personal Gmail. The remaining failure mode is cosmetic — a reply from the funnel address instead of the human one — and nothing leaks.
+
+Making `michael@` the Gmail default with "always reply from default address" would automate the choice, and is rejected: it would stamp `michael@grownmengrow.com` onto the founder's ordinary personal correspondence, which shares the same mailbox.
+
+**Tracking is off.** Open and click tracking are disabled on the SMTP user. Click tracking rewrites every link through `link.grownmengrow.com`, which on a private reply to a man who has just disclosed something would log his click and show him a URL other than the one that was sent. The tracking CNAME exists because domain verification requires all three; it is not used.
 
 ## Acceptance
 
