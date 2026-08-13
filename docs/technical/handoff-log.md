@@ -718,3 +718,27 @@ Two corrections to the preceding entries, plus the close-out they were waiting o
 **External state changed:** one Medium story published on the Grown Men Grow profile, as authorized. Nothing on Ghost, Buffer, Instagram, Bluesky, Substack, or email.
 
 **Open, in order:** (1) the founder rules on the apostrophe topic — either amend the pack to **Mens Health** or accept the per-import substitution as standing, since every future pack will hit it; (2) the Ghost `<title>` suffix will recur on every import, so the title trim is now a standing step of this slot rather than a one-off; (3) after Field Note 2 publishes Aug 18 the slot targets it automatically. Carried forward: Field Note 11's platform pack, render script, artwork, and publication slot.
+
+## 2026-08-13 — Claude Code: the Medium slot's two recurring defects closed in code and procedure
+
+**Client:** Claude Code (desktop, founder-directed follow-up to the same day's import). **Branch:** `ops/medium-import-durable-fixes`. **Scope:** durable fixes for the two items the import left open. Nothing published, sent, or posted.
+
+**The tag rule is now a gate, not a memory.** `scripts/verify-repository.mjs` parses each pack's `# Medium` section and validates its tag line against what Medium actually enforces: letters, numbers, spaces, and dashes only, 25 characters per tag, five tags maximum, and a tag line must exist at all. `content/distribution/essay-01-launch.md` is corrected from **Men's Health** to **Mens Health**, the only occurrence in the repository.
+
+**The gate was proved against the defect before the defect was fixed.** Run against the unmodified pack it failed with the exact tag named; after the correction it passes. All four branches were then exercised against temporary fixtures on Field Note 2's pack — six tags, a 26-character tag, and a deleted tag line each failed with their own message, and the fixture restored clean (`git diff --stat` empty).
+
+**Field Note 11's pack was outside the gate entirely.** It has carried all four sections since earlier today but was never added to the `packs` map, so the section check and the new tag check both skipped it. Added; it passes as written (Men, Work, Masculinity, Personal Growth, Essays). Worth stating plainly because a gate that silently omits a file reports a pass it did not earn.
+
+**The title defect is larger than the suffix reported this morning.** Ghost's `meta_title` is a distinct SEO field and Medium's importer reads the page `<title>`, so the importer takes `meta_title` rather than the title. Essay 1's differs only by a `| Grown Men Grow` suffix. Field Note 2's, which imports next Thursday, is **"Male Friendship Before Crisis | Grown Men Grow"** against a real title of "Call Your Friends Before There's a Reason" — a different headline. Left alone, next week's import would have published the piece on Medium under a name the founder never chose. Both posts were checked through the Admin API; those are the only two that exist.
+
+**Fixed at the procedure, not at the site.** Dropping the suffix from Ghost's SEO titles would also fix the import, but it changes public search metadata on every page to accommodate one platform's importer, and it would not fix Field Note 2, whose `meta_title` is a different headline rather than a decorated one. The weekly task now takes the Medium title from the Ghost post's `title` field and never accepts the imported one. `theme/default.hbs` emits a bare `{{meta_title}}` and was not touched.
+
+**Outside the repository:** `~/.claude/scheduled-tasks/gmg-thursday-medium/SKILL.md` rewritten. Same schedule, same scope, same authorization. It now names the title rule, requires checking Stories → Drafts as well as the profile feed (the feed lists published stories only), lists the three importer defects observed live — the stray `N min read` line, the empty preview image, and tags needing one tool call each — records that the canonical field's placeholder reads `Type the canonical URL...` so a greyed value there is real, forbids the post-publish share buttons, and requires the canonical verification to run in the browser because `curl` gets HTTP 403 from Medium.
+
+**Files changed:** `scripts/verify-repository.mjs`, `content/distribution/essay-01-launch.md`, `docs/technical/decision-log.md`, this log.
+
+**Verification:** `node scripts/verify-repository.mjs` (427 tracked files), `bash scripts/verify-svg-xml.sh` (126 SVGs), `pnpm --dir theme install --frozen-lockfile`, `pnpm --dir theme test`, `pnpm --dir theme zip` plus `gscan -z --fatal --verbose`, `node scripts/verify-ghost-theme.mjs`, `git diff --check`.
+
+**External state changed:** none. The Medium story published earlier today was not modified, and no Ghost, Buffer, Instagram, Bluesky, Substack, or email action was taken.
+
+**Open:** nothing from this thread. The apostrophe question the morning entry left for the founder is answered by the correction and the gate. Carried forward: Field Note 11's render script and publication slot. Next automated fire is Saturday's draft task; Field Note 2 publishes Aug 18 and imports Aug 20 under its real title.
