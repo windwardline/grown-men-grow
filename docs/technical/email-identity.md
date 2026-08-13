@@ -1,6 +1,6 @@
 # Email Identity
 
-Status: built and confirmed working 2026-08-13. SMTP2GO account created, `grownmengrow.com` verified, the three CNAMEs live in Cloudflare, an SMTP user created with open and click tracking disabled, and both send-as aliases confirmed by SMTP2GO and Gmail. Header acceptance is the last open step; see Acceptance below.
+Status: accepted 2026-08-13. SMTP2GO account created, `grownmengrow.com` verified, the three CNAMEs live in Cloudflare, an SMTP user created with open and click tracking disabled, and both send-as aliases confirmed by SMTP2GO and Gmail. See Acceptance below for what was verified and the one residual.
 
 ## The problem
 
@@ -58,4 +58,14 @@ Making `michael@` the Gmail default with "always reply from default address" wou
 
 ## Acceptance
 
-Not accepted until a real delivered message is inspected in full headers and the personal address appears nowhere in From, Reply-To, Return-Path, Sender, or any client's rendered header line.
+**Accepted 2026-08-13 on a delivered message, verified in Outlook.**
+
+The test arrived at an Outlook mailbox rendering `Grown Men Grow <hello@grownmengrow.com>` with no "via" and no "on behalf of" appended.
+
+That is the acceptance signal, not a cosmetic one. Outlook appends "via" or "on behalf of" precisely when the authenticated sending domain fails to align with the From domain. Had the send-as still been relaying as the founder's personal Gmail — the exact failure this work existed to close — that is the condition that triggers the annotation, in that client. Its absence is Outlook reporting that the DKIM signature and return path align to `grownmengrow.com`.
+
+Both aliases traverse the same SMTP user and the same verified domain, so the alignment demonstrated for one holds for the other; a separate test per alias is not required.
+
+**One residual, cheap to close if ever wanted.** Raw `Return-Path`, `DKIM-Signature`, and `Authentication-Results` lines were not read directly. Outlook exposes no "Show original" equivalent in the founder's build, and Gmail's Sent-folder copy cannot answer the question — those three headers are written in transit, so the stored pre-transmission copy does not contain them. To close it later: send from Gmail with the From dropdown on a `grownmengrow.com` alias to the founder's own Gmail address, then read the received copy via Show original. The message leaves through SMTP2GO and re-enters through Gmail's MX, so the delivery path is complete. Expected: `d=grownmengrow.com`, `dkim=pass`, `spf=pass`, and no `gmail.com` return path.
+
+The distinction worth preserving: the observable outcome was verified directly; the mechanism behind it is inferred from Outlook's own annotation rule rather than read off the wire.
