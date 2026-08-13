@@ -33,7 +33,7 @@ Import the public canonical URL through Medium's URL importer. Do not paste the 
 
 - Title: **Strength Has to Grow Up**
 - Subtitle: **A man can look strong and still be hiding.**
-- Suggested topics: **Masculinity**, **Personal Growth**, **Emotional Intelligence**, **Men's Health**, **Relationships**
+- Suggested topics: **Masculinity**, **Personal Growth**, **Emotional Intelligence**, **Mens Health**, **Relationships**
 - Canonical check: the final Medium story must point to `https://grownmengrow.com/strength-has-to-grow-up/`
 - Timing: publish after the Ghost URL and canonical have passed the public smoke test
 

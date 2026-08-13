@@ -373,12 +373,48 @@ const packs = new Map([
   ['Field Note 8', 'content/distribution/field-note-08-platforms.md'],
   ['Field Note 9', 'content/distribution/field-note-09-platforms.md'],
   ['Field Note 10', 'content/distribution/field-note-10-platforms.md'],
+  ['Field Note 11', 'content/distribution/field-note-11-platforms.md'],
 ]);
+// Medium refuses a tag containing anything but letters, numbers, spaces, and
+// dashes, and caps one at 25 characters. Observed live on 2026-08-13 while
+// importing Essay 1: "Men's Health" was rejected at the publish dialog with
+// "Tags only support letters, numbers, spaces and dashes." A pack that ships an
+// unenterable tag is a defect nobody sees until the weekly import is already
+// running, so it is caught here instead.
+const mediumTagLabel = /^-\s*(?:Tags|Suggested topics):\s*/i;
+const mediumTag = /^[A-Za-z0-9][A-Za-z0-9 -]*$/;
 for (const [label, file] of packs) {
   const text = await readFile(path.join(root, file), 'utf8');
+  const lines = text.split('\n');
   for (const section of packSections) {
-    if (!text.split('\n').some((line) => line.startsWith(section))) {
+    if (!lines.some((line) => line.startsWith(section))) {
       fail(`${file} is missing the ${section.slice(2)} section of ${label}'s platform pack.`);
+    }
+  }
+
+  const mediumStart = lines.findIndex((line) => line.startsWith('# Medium'));
+  if (mediumStart === -1) continue;
+  const nextSection = lines.findIndex((line, index) => index > mediumStart && line.startsWith('# '));
+  const mediumLines = lines.slice(mediumStart, nextSection === -1 ? lines.length : nextSection);
+  const tagLine = mediumLines.find((line) => mediumTagLabel.test(line));
+  if (!tagLine) {
+    fail(`${file} does not list Medium tags for ${label}; the import slot has nothing to enter.`);
+    continue;
+  }
+  const tags = tagLine
+    .replace(mediumTagLabel, '')
+    .split(',')
+    .map((tag) => tag.replaceAll('**', '').trim())
+    .filter(Boolean);
+  if (tags.length > 5) {
+    fail(`${file} lists ${tags.length} Medium tags for ${label}; Medium accepts five.`);
+  }
+  for (const tag of tags) {
+    if (!mediumTag.test(tag)) {
+      fail(`${file} lists the Medium tag "${tag}" for ${label}, which Medium refuses — tags accept only letters, numbers, spaces, and dashes.`);
+    }
+    if (tag.length > 25) {
+      fail(`${file} lists the Medium tag "${tag}" for ${label} at ${tag.length} characters; Medium caps a tag at 25.`);
     }
   }
 }
