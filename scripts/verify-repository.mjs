@@ -293,6 +293,10 @@ await validateNamedPngs('assets/source/editorial', new Map([
   ['bp-cuff-notebook', { width: 1024, height: 1536 }],
   ['running-shoes-alarm', { width: 1024, height: 1536 }],
   ['cutting-board-vegetables', { width: 1024, height: 1536 }],
+  ['base-plates-anchor-bolts', { width: 1024, height: 1536 }],
+  ['punch-list-tailgate', { width: 1024, height: 1536 }],
+  ['transfer-switch-cabinet', { width: 1024, height: 1536 }],
+  ['restaurant-table-after-lunch', { width: 1024, height: 1536 }],
 ]));
 await validateNamedPngs('assets/drafts/brand/banners', new Map([
   ['bluesky-banner', { width: 1500, height: 500 }],
@@ -399,4 +403,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 107 launch PNG/SVG pairs, fourteen review sheets, thirty-five editorial source images, five brand banners, and five editorial concept pairs.`);
+console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 107 launch PNG/SVG pairs, fourteen review sheets, thirty-nine editorial source images, five brand banners, and five editorial concept pairs.`);
