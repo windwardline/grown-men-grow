@@ -166,6 +166,7 @@ const requiredFiles = [
   'scripts/render-field-note-08.mjs',
   'scripts/render-field-note-09.mjs',
   'scripts/render-field-note-10.mjs',
+  'scripts/render-field-note-11.mjs',
   'scripts/render-brand-banners.mjs',
   'scripts/render-ghost-feature-images.mjs',
   'scripts/render-instagram-pinned-intro.mjs',
@@ -254,8 +255,9 @@ await validateAssetFamily('assets/drafts/instagram/field-note-07-carousel', 7, 1
 await validateAssetFamily('assets/drafts/instagram/field-note-08-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-09-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-10-carousel', 7, 1080, 1350);
+await validateAssetFamily('assets/drafts/instagram/field-note-11-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
-await validateAssetFamily('assets/drafts/ghost/feature-images', 12, 1600, 1000);
+await validateAssetFamily('assets/drafts/ghost/feature-images', 13, 1600, 1000);
 await validateEditorialConcepts();
 await validateNamedPngs('assets/source/editorial', new Map([
   ['friends-in-conversation', { width: 1023, height: 1537 }],
@@ -316,6 +318,7 @@ await validateNamedPngs('assets/drafts/review', new Map([
   ['field-note-08-carousel', { width: 1362, height: 1004 }],
   ['field-note-09-carousel', { width: 1362, height: 1004 }],
   ['field-note-10-carousel', { width: 1362, height: 1004 }],
+  ['field-note-11-carousel', { width: 1362, height: 1004 }],
   ['ghost-social-cards', { width: 1310, height: 884 }],
   ['pinned-introduction', { width: 1362, height: 1004 }],
   ['recognition-carousel', { width: 1362, height: 1004 }],
@@ -403,4 +406,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 107 launch PNG/SVG pairs, fourteen review sheets, thirty-nine editorial source images, five brand banners, and five editorial concept pairs.`);
+console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 107 launch PNG/SVG pairs, fifteen review sheets, thirty-nine editorial source images, five brand banners, and five editorial concept pairs.`);

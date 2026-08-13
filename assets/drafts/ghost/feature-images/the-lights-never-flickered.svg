@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="fn11-feature-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn11-feature-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn11-feature-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="#F8F3EA"/>
+  <rect x="1160" y="0" width="440" height="1000" fill="#EEE6D8"/>
+  <g transform="rotate(-0.7 495 500)">
+    <rect x="118" y="100" width="754" height="834" fill="#3A1518"/>
+    <rect x="126" y="86" width="738" height="828" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/base-plates-anchor-bolts.png" x="130" y="90" width="730" height="820" preserveAspectRatio="xMidYMid slice" filter="url(#fn11-feature-photo)"/>
+  </g>
+  <g transform="rotate(1.4 1140 530)">
+    <rect x="878" y="220" width="524" height="654" fill="#60735A"/>
+    <rect x="886" y="206" width="508" height="648" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/transfer-switch-cabinet.png" x="890" y="210" width="500" height="640" preserveAspectRatio="xMidYMid slice" filter="url(#fn11-feature-photo)"/>
+  </g>
+  <g transform="rotate(-4 350 89)">
+    <rect x="240" y="66" width="220" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="248" y1="73" x2="450" y2="70" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g transform="rotate(4 1085 209)">
+    <rect x="990" y="186" width="190" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="998" y1="193" x2="1170" y2="190" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g>
+    <line x1="1396" y1="150" x2="1516" y2="150" stroke="#B14F3F" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+    <circle cx="1396" cy="150" r="11.25" fill="none" stroke="#B14F3F" stroke-width="5"/>
+    <circle cx="1516" cy="150" r="11.25" fill="none" stroke="#B14F3F" stroke-width="5"/>
+    <circle cx="1396" cy="150" r="7.5" fill="#B14F3F"/>
+    <line x1="1456" y1="222.5" x2="1396.6315556582792" y2="172.6839602492932" stroke="#B14F3F" stroke-width="7.5" stroke-linecap="round"/>
+    <circle cx="1456" cy="222.5" r="7.5" fill="#B14F3F"/>
+  </g>
+  <g>
+    <line x1="1396" y1="830" x2="1501.6" y2="830" stroke="#60735A" stroke-width="4.4" stroke-linecap="round" opacity="0.55"/>
+    <circle cx="1396" cy="830" r="9.9" fill="none" stroke="#60735A" stroke-width="4.4"/>
+    <circle cx="1501.6" cy="830" r="9.9" fill="none" stroke="#60735A" stroke-width="4.4"/>
+    <circle cx="1501.6" cy="830" r="6.6" fill="#60735A"/>
+    <line x1="1448.8" y1="893.8" x2="1501.0442310207143" y2="849.961885019378" stroke="#60735A" stroke-width="6.6000000000000005" stroke-linecap="round"/>
+    <circle cx="1448.8" cy="893.8" r="6.6000000000000005" fill="#60735A"/>
+  </g>
+  <rect width="1600" height="1000" filter="url(#fn11-feature-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
