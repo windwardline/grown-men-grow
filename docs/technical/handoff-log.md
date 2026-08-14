@@ -742,3 +742,47 @@ Two corrections to the preceding entries, plus the close-out they were waiting o
 **External state changed:** none. The Medium story published earlier today was not modified, and no Ghost, Buffer, Instagram, Bluesky, Substack, or email action was taken.
 
 **Open:** nothing from this thread. The apostrophe question the morning entry left for the founder is answered by the correction and the gate. Carried forward: Field Note 11's render script and publication slot. Next automated fire is Saturday's draft task; Field Note 2 publishes Aug 18 and imports Aug 20 under its real title.
+
+## 2026-08-14 — Claude Code: first Friday readout — week one measured, and the primary metric does not exist yet
+
+**Client:** Claude Code (scheduled task `gmg-friday-analytics`, unattended). **Branch:** `ops/friday-analytics-2026-08-14`. **Scope:** verification only. Nothing published, sent, posted, or replied to.
+
+**Moderation sweep: nothing to escalate.** Ghost comments zero across both posts (Admin `comments/`, total 0). Instagram comments zero on all four feed posts and zero replies on the three story frames (Buffer per-post metrics). Bluesky zero replies on the single post, confirmed against the public thread. LinkedIn zero comments on the one post. No escalation-row item on any surface.
+
+**Ghost.** Two posts exist: "Strength Has to Grow Up" published 2026-08-09, and Field Note 2 scheduled 2026-08-18 08:00 ET. Members 1 — the founder's own test account from launch night, unchanged since. Week-over-week delta on every Ghost number is zero.
+
+**The launch essay was published with no email attached.** `posts/?include=email` returns `email: null` for it. That is correct for the night it went out — there was no list to send to — but it means the newsletter has never sent, and the validation protocol's primary metric has produced no data at all. Field Note 2 on Aug 18 is the first send.
+
+**Buffer, week one.** Six week-one posts were staged; four have fired on time and two are queued for tomorrow.
+
+| Sent (ET) | Surface | Result |
+| --- | --- | --- |
+| Mon Aug 10, 8:15 PM | Instagram, pinned intro carousel | reach 2, views 4, reactions 2, saves 0, shares 0, follows 0 |
+| Mon Aug 10, 9:47–9:50 PM | Instagram, three story frames | views 1 each, replies 0 |
+| Tue Aug 11, 12:01 PM | Bluesky, fragment | likes 2, reposts 0, replies 0 |
+| Tue Aug 11, 1:01 PM | Instagram, foundational carousel | reach 0, views 0, reactions 1 |
+| Wed Aug 12, 10:01 AM | LinkedIn, pack adaptation | impressions 7, reach 3, reactions 0 |
+| Thu Aug 13, 9:06 AM | Instagram, recognition carousel | reach 0, views 0, reactions 0 |
+| Sat Aug 15, 9:30 / 10:00 AM | Bluesky, Instagram | scheduled, not yet fired |
+
+Bluesky's own numbers agree with Buffer's and add the profile state: 0 followers, 1 post, 2 likes. Medium's import landed Thursday as recorded in the preceding entry.
+
+**Against the schedule of record.** Every slot that fired, fired within six minutes of its time. Ghost's Tuesday 8:00 AM slot was correctly empty — this was the bridge week. Nothing in the numbers argues for a timing change, and under the protocol nothing could: weeks 1–4 hold steady by design, and no arm has run.
+
+**What could not be measured, and why.** Claude in Chrome was not connected (`list_connected_browsers` empty), so Meta Business Suite was unreachable. Unmeasured this week: Instagram account-level reach, profile visits, and follower change; the Instagram DM and message-request inbox; LinkedIn Page followers and any page-level comment or message outside the one post. Buffer covers per-post Instagram comments, saves, shares, and follows, so the feed itself is swept; the inbox is the gap. Ghost's `stats/*` endpoints stay closed to integration tokens, so 48-hour pageviews are not available from here either — that number needs the founder's admin session.
+
+**Qualitative pass: nobody has said anything back.** Zero comments, zero replies, zero measured DMs, across every surface, for the whole week. Five reactions and two likes in total. There is no recurring question, no objection, and no reader disclosure to carry to the founder, because there is no reader response of any kind yet. Nothing here is evidence about how the writing lands; it is evidence about how many people have seen it, which is roughly a dozen.
+
+**Corpus balance check: skipped, correctly.** The bank stands at eleven — ten field notes and the launch essay — against the last recorded count of eleven on 2026-08-12. The check triggers at twenty-one. Zero of ten toward the next run.
+
+**Founder decision flagged, not due today.** The weeks 5–8 A/B resolves the contested Sunday slot on open rate, four sends per arm minimum. At a list of one, open rate is a coin flip on the founder's own inbox and the protocol cannot conclude anything. Two clean options when week five arrives: hold the A/B until the list can carry it, or run the contested slot against 48-hour pageviews instead and say so in the protocol. Raising it now because it is cheaper to decide before the arms start than after four sends have produced an uninterpretable number.
+
+**Files changed:** this log only. No protocol decision was due, so `publish-timing.md` is untouched.
+
+**Verification:** `node scripts/verify-repository.mjs`, `bash scripts/verify-svg-xml.sh`, `git diff --check`. No theme, script, content, or asset was touched.
+
+**External state changed:** none.
+
+**One carried-forward item is already closed.** The two preceding entries carry "Field Note 11's render script and publication slot" forward. The render script landed with the collateral on 2026-08-13 — `scripts/render-field-note-11.mjs` exists and `verify-repository.mjs` gates it. Only the publication slot is still open.
+
+**Open:** the list-size question above, and Field Note 11's publication slot, which is a founder decision. Next automated fire is Saturday's draft task; Field Note 2 publishes Aug 18.
