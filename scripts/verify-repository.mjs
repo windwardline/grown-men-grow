@@ -121,6 +121,89 @@ async function validateNamedPngs(directory, expected) {
   }
 }
 
+// Feed-tile distinctness (added 2026-08-16 after a live repeat).
+//
+// The per-article image rule permits one article's photographs to travel across
+// that article's own surfaces, and the founder approved exactly that for the
+// Essay 1 launch set. What it does not permit is two posts landing in the grid
+// as the same picture. The visual system states it directly: "No two
+// consecutive feed covers should share the same skeleton."
+//
+// Only the first slide of a carousel becomes a grid tile, so that is what is
+// compared, alongside every standalone feed asset. Stories are excluded — they
+// never enter the grid. Two tiles collide when they place the SAME source
+// photograph in effectively the SAME rectangle; the measure is intersection
+// over union of the two placements, which is why a few pixels of difference
+// cannot launder a repeat. Text and colour are deliberately not compared: the
+// grid is read at thumbnail size, where the photograph is the whole signal.
+const TILE_IOU_LIMIT = 0.75;
+
+// One pair is recorded rather than failed. Both assets are Essay 1 launch-set
+// artwork the founder approved on 2026-08-08, and the second of them posted to
+// Instagram on 2026-08-15 before this gate existed — a repeat that cannot be
+// unposted and must not be silently re-rendered, because the artwork is the
+// founder's to change. The entry is one pair wide: any other collision fails.
+const KNOWN_TILE_REPEATS = new Set([
+  'instagram/recognition-carousel/01.svg::instagram/static-post/fear-with-good-posture.svg',
+]);
+
+function tilePlacements(text) {
+  return [...text.matchAll(
+    /<image href="\/assets\/source\/([^"]+)" x="([-\d.]+)" y="([-\d.]+)" width="([\d.]+)" height="([\d.]+)"/g,
+  )].map((match) => ({
+    photo: match[1],
+    x: Number(match[2]),
+    y: Number(match[3]),
+    width: Number(match[4]),
+    height: Number(match[5]),
+  }));
+}
+
+function placementOverlap(a, b) {
+  const overlapWidth = Math.max(0, Math.min(a.x + a.width, b.x + b.width) - Math.max(a.x, b.x));
+  const overlapHeight = Math.max(0, Math.min(a.y + a.height, b.y + b.height) - Math.max(a.y, b.y));
+  const intersection = overlapWidth * overlapHeight;
+  const union = a.width * a.height + b.width * b.height - intersection;
+  return union === 0 ? 0 : intersection / union;
+}
+
+async function validateFeedTileDistinctness(directory) {
+  const entries = await readdir(path.join(root, directory), { withFileTypes: true });
+  const tiles = [];
+  for (const entry of entries.filter((item) => item.isDirectory()).sort((a, b) => a.name.localeCompare(b.name))) {
+    if (entry.name === 'launch-stories') continue;
+    const svgs = await filesUnder(`${directory}/${entry.name}`, '.svg');
+    if (!svgs.length) continue;
+    // A carousel contributes only its cover; a standalone family contributes all of it.
+    for (const file of svgs.length === 1 ? svgs : [svgs[0]]) {
+      tiles.push({ name: relative(file), placements: tilePlacements(await readFile(file, 'utf8')) });
+    }
+  }
+
+  if (tiles.length < 2) {
+    fail(`${directory} produced ${tiles.length} feed tiles; the distinctness check examined nothing.`);
+    return;
+  }
+
+  for (let i = 0; i < tiles.length; i += 1) {
+    for (let j = i + 1; j < tiles.length; j += 1) {
+      for (const a of tiles[i].placements) {
+        for (const b of tiles[j].placements) {
+          if (a.photo !== b.photo) continue;
+          const overlap = placementOverlap(a, b);
+          if (overlap < TILE_IOU_LIMIT) continue;
+          const key = `${tiles[i].name.replace('assets/drafts/', '')}::${tiles[j].name.replace('assets/drafts/', '')}`;
+          if (KNOWN_TILE_REPEATS.has(key)) continue;
+          fail(
+            `${tiles[i].name} and ${tiles[j].name} place ${a.photo} in the same frame `
+            + `(overlap ${overlap.toFixed(2)} against a limit of ${TILE_IOU_LIMIT}); two feed tiles would read as one repeated image.`,
+          );
+        }
+      }
+    }
+  }
+}
+
 function stripEmbeddedRaster(text) {
   return text.replace(/data:image\/png;base64,[^"]+/g, '');
 }
@@ -256,6 +339,7 @@ await validateAssetFamily('assets/drafts/instagram/field-note-08-carousel', 7, 1
 await validateAssetFamily('assets/drafts/instagram/field-note-09-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-10-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-11-carousel', 7, 1080, 1350);
+await validateFeedTileDistinctness('assets/drafts/instagram');
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
 await validateAssetFamily('assets/drafts/ghost/feature-images', 13, 1600, 1000);
 await validateEditorialConcepts();
