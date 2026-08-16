@@ -840,3 +840,25 @@ Bluesky's own numbers agree with Buffer's and add the profile state: 0 followers
 **External state changed:** none. Buffer, Ghost, Instagram, Medium, Bluesky, Substack, and LinkedIn were read only. Nothing published, sent, posted, deleted, or scheduled. The ChatGPT share dialog's X, LinkedIn, and Reddit buttons were not touched.
 
 **Open, in order:** (1) the founder rules on whether the already-posted repeat needs anything beyond the gate, and on the 0.62 Reel/foundational near-miss; (2) Field Note 12's four source photographs, and with them the carousel, feature image, review sheet, and the recorded gate entries — the download path needs to work or the founder needs to save the images manually; (3) founder review of the Field Note 12 draft and pack; (4) Field Note 11's publication slot. Field Note 2 publishes Aug 18.
+
+## 2026-08-16 — Claude Code: the repeated Instagram tile is replaced on the live grid
+
+**Client:** Claude Code (desktop, founder-directed, same session as the Saturday draft run). **Branch:** `ops/static-post-repost-2026-08-16`. Follows the founder's authorisation: "You are authorized to delete the last instagram post and repost, albeit late, with the fix in place."
+
+**Division of the work, as it actually happened.** The founder deleted the original post themselves. Deleting published Instagram media is not available to this repository's agents — Meta's API exposes no endpoint for it and Buffer can only remove its own queue records — and it is an irreversible removal of published content along with its engagement history. The repost was carried out here, after the deletion, so the grid never held both versions at once.
+
+**Published:** the recomposed launch static post, Buffer post `6a82207703072d99af66bf02`, Instagram channel `grownmengrow`, fired 2026-08-16 16:44 ET. Caption verbatim from `content/instagram/launch-package.md` § 4 — not edited, not regenerated. Alt text is the corrected description matching the new composition.
+
+**Verified on the live profile, not on the handoff status.** Buffer reporting `sent` only means it handed off to Meta, so the profile grid was checked directly: four posts, the new static tile present, no duplicate, and the original gone. The new tile and the Recognition cover now sit adjacent in the grid and read as plainly different pictures — a different photograph and an inverted layout — which is the outcome the whole thread was about.
+
+**Artwork provenance.** The image posted is `assets/drafts/instagram/static-post/fear-with-good-posture.png` as recomposed in PR #91, uploaded to Ghost storage for a public URL per the established Buffer pattern. Two upload attempts were made before the Buffer mutation shape was correct, so `fear-with-good-posture-v2.png` and `-v2-1.png` both exist in Ghost storage; the post references `-v2` and the `-v2-1` copy is an unreferenced orphan worth deleting on the next Ghost admin pass.
+
+**Two Buffer API corrections worth keeping.** `createPost` returns a `PostActionPayload` union — the success member is `PostActionSuccess`, not `PostSuccess`. And `CreatePostInput` takes no `organizationId`; the channel alone scopes it. The `organizationId` belongs on the `posts` and `channels` queries only. The project memory `publishing-api-quirks` records the input shape but not either of these.
+
+**Files changed:** this log only. No theme, script, content, or asset was touched in this entry's branch.
+
+**Verification:** `node scripts/verify-repository.mjs`, `bash scripts/verify-svg-xml.sh`, `git diff --check`.
+
+**External state changed:** one Instagram post published to the Grown Men Grow profile, as authorised. One image uploaded to Ghost storage (plus one orphan). Nothing on Ghost posts, Medium, Bluesky, Substack, LinkedIn, or email.
+
+**Open:** Field Note 12's four photographs still cannot be written to disk from the browser and need saving by hand; the Reel-cover near-miss at overlap 0.62 is a founder call; Field Note 12's draft and pack remain unapproved. Field Note 2 publishes Aug 18.
