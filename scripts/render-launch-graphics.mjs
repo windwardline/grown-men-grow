@@ -292,15 +292,27 @@ const stories = [
   }),
 ];
 
+// Rebuilt type-led 2026-08-16 under the founder's forward visual ruling.
+//
+// This cover carried `repairing-wooden-chair.png`, which is in four already
+// posted assets. The ruling grandfathers what is already public and binds
+// everything from here on, so an unposted asset carrying a fourth-hand
+// photograph cannot ship. Essay 1 has no unused photograph to swap in — all
+// three are spent — so the cover goes type-led, which the visual system already
+// allows and which reads cleanly at both the profile-grid crop and full Reels
+// size. Approved copy is untouched; only the art direction moved.
 const reelCover = storyCanvas({
   id: "reel-cover",
-  body: `${photo({name: CHAIR, x: 38, y: 130, width: 1004, height: 1050, rotation: -0.7, position: "xMidYMid", backing: GREEN, id: "reel-cover"})}
-  ${tape(108, 112, 216, -4)}
-  ${strip({x: 48, y: 1138, width: 820, height: 142, fill: PAPER_LIGHT, text: "A MAN CAN", color: INK, size: 105, family: SERIF, rotation: -1})}
-  ${strip({x: 188, y: 1274, width: 842, height: 148, fill: OXBLOOD, text: "LOOK STRONG", color: PAPER_LIGHT, size: 100, rotation: 1})}
-  ${strip({x: 48, y: 1416, width: 754, height: 138, fill: PAPER, text: "AND STILL", color: INK, size: 100, family: SERIF, rotation: -0.8})}
-  ${strip({x: 352, y: 1548, width: 678, height: 146, fill: RUST, text: "BE HIDING.", color: PAPER_LIGHT, size: 92, rotation: 1})}
-  ${scribble("M80 1746 C248 1710 414 1766 584 1726 C742 1690 876 1738 1006 1714", OXBLOOD, 9)}`,
+  background: PAPER,
+  body: `<rect x="0" y="1180" width="1080" height="740" fill="${OXBLOOD}"/>
+  <rect x="72" y="286" width="620" height="336" fill="url(#reel-cover-dots)"/>
+  <text x="64" y="392" fill="none" stroke="${OXBLOOD}" stroke-opacity="0.15" stroke-width="4" font-family="${SERIF}" font-size="400">“</text>
+  ${strip({x: 56, y: 742, width: 726, height: 152, fill: PAPER_LIGHT, text: "A MAN CAN", color: INK, size: 100, family: SERIF, rotation: -1.1})}
+  ${strip({x: 180, y: 910, width: 856, height: 146, fill: INK, text: "LOOK STRONG", color: PAPER_LIGHT, size: 96, rotation: 0.9})}
+  ${scribble("M80 1110 C248 1074 414 1130 584 1090 C742 1054 876 1102 1006 1078", RUST, 9)}
+  ${strip({x: 58, y: 1268, width: 640, height: 150, fill: PAPER_LIGHT, text: "AND STILL", color: OXBLOOD, size: 100, family: SERIF, rotation: -0.8})}
+  ${strip({x: 300, y: 1436, width: 720, height: 156, fill: RUST, text: "BE HIDING.", color: PAPER_LIGHT, size: 96, rotation: 1.1})}
+  <text x="1016" y="1752" text-anchor="end" fill="${PAPER}" font-family="${SANS}" font-size="20" font-weight="900" letter-spacing="3.4">THE UNFINISHED WORK</text>`,
 });
 
 function socialCanvas(id, body) {

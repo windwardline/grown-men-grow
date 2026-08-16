@@ -101,3 +101,10 @@ Credentials remain in authenticated sessions, a password manager, macOS Keychain
 - [x] Project agents may test, verify, commit, push, open or update pull requests, merge after required gates pass, and clean merged branches or temporary worktrees without separate per-step approval
 - [x] Repository authority does not authorize Ghost billing, privacy removal, publication, newsletter delivery, Instagram posting, or another launch action
 - [ ] Public GitHub visibility — separate founder authorization required
+
+## Gate 8 — Visual exclusivity (founder-ruled 2026-08-16)
+
+- [x] Everything already public stands as-is. The posted Essay 1 launch set is not to be re-cut, re-posted, or otherwise churned.
+- [x] From this point forward, every separately published public asset must be visually its own: **a photograph belongs to at most one published asset.** Repeats within a single asset remain fine — a carousel is one narrative unit and may use its article's photography across its own slides.
+- [x] Prior visual approvals are **revoked for anything not yet public.** Approval of copy is unaffected; this covers art direction only. An unpublished asset that shares a photograph with any other asset must be corrected before it can post, including where the other asset is grandfathered.
+- [x] Agents are authorized to generate whatever new photography, compositions, or type-led replacements are required to satisfy this, under the existing house prompt and quality gate.

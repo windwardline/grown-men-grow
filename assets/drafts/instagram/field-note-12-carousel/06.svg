@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn12-06-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn12-06-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn12-06-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#EEE6D8"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 12 · 06 / 07</text>
+  <rect x="82" y="252" width="916" height="762" fill="#F8F3EA" transform="rotate(0.7 540 633)"/>
+    <g transform="rotate(4 327 251)">
+    <rect x="214" y="228" width="226" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="222" y1="235" x2="430" y2="232" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="144" y="452" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">The plan was to hold</text><text x="144" y="534" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">this pace until spring.</text>
+    <text x="144" y="706" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">It is a different</text><text x="144" y="788" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">spring now.</text>
+    <g>
+    <circle cx="792.6" cy="862" r="7.700000000000001" fill="#B14F3F"/>
+    <path d="M 792.6 862 L 742 943.4" fill="none" stroke="#B14F3F" stroke-width="5.5" stroke-linecap="round"/>
+    <path d="M 792.6 862 L 843.2 943.4" fill="none" stroke="#B14F3F" stroke-width="5.5" stroke-linecap="round"/>
+    <line x1="742" y1="943.4" x2="843.2" y2="943.4" stroke="#B14F3F" stroke-width="7.700000000000001" stroke-linecap="round"/>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn12-06-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

@@ -17,34 +17,29 @@
       <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
     </pattern>
   </defs>
-  <rect width="1080" height="1920" fill="#F8F3EA"/>
+  <rect width="1080" height="1920" fill="#EEE6D8"/>
   <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="900" letter-spacing="4.2">GROWN MEN GROW</text>
-  <g transform="rotate(-0.7 540 655)">
-    <rect x="26" y="140" width="1028" height="1064" fill="#60735A"/>
-    <rect x="34" y="126" width="1012" height="1058" fill="#F8F3EA"/>
-    <image href="/assets/source/editorial/repairing-wooden-chair.png" x="38" y="130" width="1004" height="1050" preserveAspectRatio="xMidYMid slice" filter="url(#reel-cover-photo)"/>
+  <rect x="0" y="1180" width="1080" height="740" fill="#3A1518"/>
+  <rect x="72" y="286" width="620" height="336" fill="url(#reel-cover-dots)"/>
+  <text x="64" y="392" fill="none" stroke="#3A1518" stroke-opacity="0.15" stroke-width="4" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="400">“</text>
+  <g transform="rotate(-1.1 419 818)">
+    <rect x="56" y="742" width="726" height="152" fill="#F8F3EA"/>
+    <text x="80" y="857.52" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="100" font-weight="900" letter-spacing="-2.5">A MAN CAN</text>
   </g>
-  <g transform="rotate(-4 216 135)">
-    <rect x="108" y="112" width="216" height="46" fill="#D9CBAF" opacity="0.74"/>
-    <line x1="116" y1="119" x2="314" y2="116" stroke="#fff" stroke-opacity="0.38"/>
+  <g transform="rotate(0.9 608 983)">
+    <rect x="180" y="910" width="856" height="146" fill="#121416"/>
+    <text x="204" y="1020.96" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="96" font-weight="900" letter-spacing="-2.5">LOOK STRONG</text>
   </g>
-  <g transform="rotate(-1 458 1209)">
-    <rect x="48" y="1138" width="820" height="142" fill="#F8F3EA"/>
-    <text x="72" y="1245.92" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="105" font-weight="900" letter-spacing="-2.5">A MAN CAN</text>
+  <path d="M80 1110 C248 1074 414 1130 584 1090 C742 1054 876 1102 1006 1078" fill="none" stroke="#B14F3F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="rotate(-0.8 378 1343)">
+    <rect x="58" y="1268" width="640" height="150" fill="#F8F3EA"/>
+    <text x="82" y="1382" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="100" font-weight="900" letter-spacing="-2.5">AND STILL</text>
   </g>
-  <g transform="rotate(1 609 1348)">
-    <rect x="188" y="1274" width="842" height="148" fill="#3A1518"/>
-    <text x="212" y="1386.48" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="100" font-weight="900" letter-spacing="-2.5">LOOK STRONG</text>
+  <g transform="rotate(1.1 660 1514)">
+    <rect x="300" y="1436" width="720" height="156" fill="#B14F3F"/>
+    <text x="324" y="1554.56" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="96" font-weight="900" letter-spacing="-2.5">BE HIDING.</text>
   </g>
-  <g transform="rotate(-0.8 425 1485)">
-    <rect x="48" y="1416" width="754" height="138" fill="#EEE6D8"/>
-    <text x="72" y="1520.88" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="100" font-weight="900" letter-spacing="-2.5">AND STILL</text>
-  </g>
-  <g transform="rotate(1 691 1621)">
-    <rect x="352" y="1548" width="678" height="146" fill="#B14F3F"/>
-    <text x="376" y="1658.96" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="92" font-weight="900" letter-spacing="-2.5">BE HIDING.</text>
-  </g>
-  <path d="M80 1746 C248 1710 414 1766 584 1726 C742 1690 876 1738 1006 1714" fill="none" stroke="#3A1518" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1016" y="1752" text-anchor="end" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="900" letter-spacing="3.4">THE UNFINISHED WORK</text>
   <text x="58" y="1868" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="2.6">@GROWNMENGROW</text>
   <rect width="1080" height="1920" filter="url(#reel-cover-paper)" opacity="0.22" pointer-events="none"/>
 </svg>

@@ -14,7 +14,7 @@ register: generic present — asserts that this happens, never that a particular
 personal_claims: none — no event is asserted as reportage, per the 2026-08-08 ruling reaffirmed 2026-08-12
 social_copy_status: draft — not approved, not scheduled
 visual_direction_status: draft — not approved
-artwork_status: all four source photographs generated and passed review inside ChatGPT; none could be written to disk this run; see Imagery below
+artwork_status: complete and rendered for review — four source photographs, seven carousel slides, feature image, review sheet, gate entries; NOT founder-approved
 origin: written 2026-08-16 by the Saturday draft task
 ---
 
@@ -167,33 +167,19 @@ The part worth sitting with: under load he does not get to choose what fails. Wh
 - Voice calibration source: Field Note 2 per the 2026-08-08 founder ruling.
 - No metadata block is proposed; meta title, description, and internal links belong to the approval pass.
 
-## Imagery — all four generated, none landed, 2026-08-16
+## Imagery — complete 2026-08-16
 
-Chrome and the extension both responded, the founder's ChatGPT project opened, and the most recent *Editorial Photography Request* thread was continued as the pipeline requires. **All four source photographs now exist in that thread and all four passed full-resolution review against the visual system's quality gate.** What did not work, at any point and after a full Chrome relaunch, is moving a generated image out of the browser and onto disk.
+Four source photographs, all 1024×1536, generated in the founder's ChatGPT project "Grown Men Grow" through Chrome and reviewed at full resolution against the visual system's quality gate. Unique to this article; the render script fails mechanically if any prior article's photograph appears, and the repository check now also fails if any of these four turns up in a second published asset.
 
-Three routes, all closed:
+- `assets/source/editorial/sling-capacity-tag.png` — a coiled synthetic round sling on a clean plywood workbench, its stitched capacity tag folded so only the blank reverse faces the camera, bright side daylight, a pegboard of slings and squared-away gear softly out of focus, no people. Avoid list: fraying, cuts, rot, grime, rust, oil staining, danger staging, dim warehouse gloom, macho industrial cliches, luxury signaling — plus, after two rejections, any legible word, number, or unit.
+- `assets/source/editorial/rigging-shackles-bench.png` — galvanized bow shackles, a lifting hook, and turnbuckles in neat rows on plywood, sorted by size, sawhorses and a swept floor out of focus, flat daylight, no people. Avoid list: rust, pitting, grease, grime, chaotic piles, weapon-like arrangement, stamped or engraved lettering, dark moody workshop staging, macho tool-porn styling, luxury signaling.
+- `assets/source/editorial/wall-calendar-kitchen.png` — a paper wall calendar in a bright tidy kitchen, every square dense with illegible handwriting, a pen on a string beside it, morning light across the wall, plants and a clean counter out of focus, no people. Avoid list: legible words, numbers or dates, clutter, grime, peeling paint, gloom, anxiety staging, corporate office styling, luxury kitchen signaling.
+- `assets/source/editorial/driveway-hoop-late-afternoon.png` — a driveway basketball hoop with the ball resting at the foot of the pole, long late-afternoon light across the concrete, intact net, trimmed hedge and maintained garage door out of focus, no people. Avoid list: bent rim, torn or missing net, cracked concrete, weeds, abandonment, melancholy emptiness, dusk gloom, silhouettes, sports-commercial staging, luxury home signaling.
 
-1. The image's share control → **Download**. The dialog accepts the click and dismisses; no file appears anywhere under the home directory and no partial `.crdownload`. Chrome's own preferences were checked and are default — `prompt_for_download` unset, no custom directory — so this is not a save-location prompt waiting offscreen. ChatGPT's download is a script-driven blob, and a script-driven download is inert inside the extension's sandbox. A browser restart cannot change that.
-2. Reading the image's signed `src` to fetch it from the shell. The extension returns `[BLOCKED: Cookie/query string data]` for any URL carrying a query string.
-3. Base64 of the bytes, and then base64 of the URL string, through the JavaScript tool. Both return `[BLOCKED: Base64 encoded data]`.
+**The lead image cost three attempts and the two failures are worth keeping.** Attempt 1 rendered the capacity tag with fully legible text, which the house prompt forbids and which also invites arithmetic that is not the essay's. Attempt 2 asked for the tag creased and out of focus, and removed the tag from the frame entirely, losing the subject. Attempt 3 works because the correction is physical rather than optical: *a stiff white label stitched to the webbing, folded over on itself so that only its blank reverse side faces the camera — blank because it is folded, not because it is blurred; keep it sharp and in focus.*
 
-Route 3 is a deliberate exfiltration guard. It was not worked around, and it should not be — the same judgment the 2026-08-16 log entry records about the denied keystroke injection.
+**Getting the files onto disk was the hard part and did not work from the browser.** Generation succeeded; every download route failed. The share dialog's Download accepted the click and wrote nothing (ChatGPT's download is a script-driven blob, inert in the extension's sandbox, and Chrome's own preferences were verified default). Reading the signed `src` returns `[BLOCKED: Cookie/query string data]`. Base64 of the bytes or the URL returns `[BLOCKED: Base64 encoded data]` — a deliberate exfiltration guard, not worked around. The founder saved the four files by hand. Any future run should expect to hand the download step to the founder rather than budget time for it.
 
-**The four photographs, in thread order, with what each cost.**
+Signature vocabulary in `scripts/render-field-note-12.mjs`: a drawn two-leg sling — a hook point above, two legs down to a load bar. The included angle is narrow through slides 1–3, splays wide at slides 5–6 where the tension multiplies, and returns narrow at the close. Same load, different tension, purely from geometry nobody looked at. It appears in no other note.
 
-- `sling-capacity-tag.png` — a coiled synthetic round sling on a clean plywood workbench, its stitched capacity tag folded so only the blank reverse faces the camera, bright side daylight, pegboard of slings softly out of focus, no people. **Three attempts.** Attempt 1 rendered the tag with fully legible text, which the house prompt forbids and which also invites arithmetic that is not the essay's. Attempt 2 asked for the tag creased and out of focus, and removed the tag from the frame entirely, losing the subject. Attempt 3 works because the correction is physical rather than optical: *a stiff white label stitched to the webbing, folded over on itself so that only its blank reverse side faces the camera — blank because it is folded, not because it is blurred; keep it sharp and in focus.* Keep that phrasing; it is the reusable part.
-- `rigging-shackles-bench.png` — galvanized bow shackles, a lifting hook, and turnbuckles in neat rows on plywood, sorted by size, sawhorses and a swept floor out of focus, flat daylight, no people. One attempt. The avoid list carried `stamped or engraved lettering`, which is why no hardware in the frame reads.
-- `wall-calendar-kitchen.png` — a paper wall calendar in a bright tidy kitchen, every square dense with illegible handwriting, a pen on a string beside it, morning light across the wall, plants and clean counter out of focus, no people. One attempt.
-- `driveway-hoop-late-afternoon.png` — a driveway basketball hoop with the ball resting at the foot of the pole, long late-afternoon light across the concrete, intact net, trimmed hedge and maintained garage door out of focus, no people. One attempt.
-
-**What is needed to finish the unit:** the four images saved into `assets/source/editorial/` under those exact names, at 1024×1536. Everything downstream is then mechanical — the render script is written and its cross-article guard is in place.
-
-**Gate entries are deliberately not in this change set.** Every line references an asset that does not yet exist, and adding them would fail `verify-repository.mjs` and block every pull request in the repository. When the four photographs land, the same change set adds:
-
-- `'scripts/render-field-note-12.mjs'` to `requiredFiles`
-- `validateAssetFamily('assets/drafts/instagram/field-note-12-carousel', 7, 1080, 1350)`
-- feature images `13` → `14`
-- the four source PNGs at 1024×1536 in `validateNamedPngs('assets/source/editorial', …)`, count `thirty-nine` → `forty-three`
-- `['field-note-12-carousel', { width: 1362, height: 1004 }]` in the review sheets, count `fifteen` → `sixteen`
-- a `field-note-12-carousel` sheet entry in `scripts/render-review-contact-sheets.mjs`
-- `['Field Note 12', 'content/distribution/field-note-12-platforms.md']` to the `packs` map, once the founder approves the pack and it moves out of `drafts/`
+Gate entries landed in the same change set as the artwork: the render script in `requiredFiles`, a `validateAssetFamily` line for the carousel, the four source PNGs in `validateNamedPngs` (thirty-nine → forty-three), feature images thirteen → fourteen, the review sheet (fifteen → sixteen), and a sheet entry in `scripts/render-review-contact-sheets.mjs`. The platform pack stays in `drafts/` and joins the `packs` map when the founder approves it.
