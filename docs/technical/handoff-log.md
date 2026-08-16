@@ -890,3 +890,29 @@ Bluesky's own numbers agree with Buffer's and add the profile state: 0 followers
 **External state changed:** none in this entry. Nothing published, sent, posted, deleted, or scheduled since the 16:44 repost recorded above.
 
 **Open:** founder review of the Field Note 12 draft and pack, which remain unapproved and unscheduled in `drafts/`; the pack joins the `packs` map when it moves to `content/distribution/`. Field Note 11's publication slot. The orphaned Ghost storage upload `fear-with-good-posture-v2-1.png`. Field Note 2 publishes 2026-08-18 and imports to Medium 2026-08-20 under its real title.
+
+## 2026-08-16 — Claude Code: Field Note 12 approved into content/, and the day's gates consolidated
+
+**Client:** Claude Code (desktop, founder-directed close-out). **Branches:** `content/approve-field-note-12` (#97), this entry. Final entry for the day.
+
+**Founder approval, unqualified:** "All approvals are in. You are good to go."
+
+**Field Note 12 promoted.** The essay moved to `content/field-notes/nobody-rigs-to-the-breaking-strength.md` and the pack to `content/distribution/field-note-12-platforms.md` with `git mv`, following `drafts/README.md` and the precedent of Field Notes 2 and 11. Frontmatter records the essay, platform pack, and artwork approved together, and states explicitly that **approval covers the work and not a slot** — publication, newsletter delivery, and posting remain separately gated, and none was performed. `drafts/` now holds only its README. Three gate additions landed with it and each was proved firing before acceptance: the pack in the `packs` map (confirmed by the Medium tag check catching a deliberate sixth tag), the note in the alt-text list, and a guard that fails the build if either file reappears under `drafts/`.
+
+**Three gates became one, and the deletion was proved rather than assumed.** Over the day three checks were added — feed-tile rectangle overlap, a single-image-post rule, and photograph exclusivity. The third subsumes the other two: if two assets share a photograph, exclusivity fails regardless of where the picture sits, and a single-image post is the two-asset case with one slide. The rectangle check had additionally become unfireable, since no two covers share a photograph and one cover per family makes same-family collision impossible. A gate that cannot fire implies coverage it does not have, so both were removed and all four original defects were reinstated against the single rule to confirm each still fails by name. `tilePlacements` was reduced to returning the photograph alone, since placement no longer matters to any rule.
+
+**Orphaned Ghost storage uploads cannot be removed programmatically, and this was tested rather than asserted.** `DELETE /ghost/api/admin/images/<path>/` returns **405 Method Not Allowed** and the collection route returns endpoint-not-found. Ghost's Admin API exposes upload but not deletion. Two unreferenced files remain in Ghost storage from the repost handoff — `fear-with-good-posture-v2.png` and `-v2-1.png`. Both are unreferenced: Instagram hosts its own copy of a published image, so neither is load-bearing. They are harmless and invisible on any page, and removing them is a founder action in the Ghost admin UI whenever convenient. Recorded here so the next agent does not retry the API.
+
+**One earlier claim in this log is corrected.** The preceding entry called `-v2-1` the orphan; both copies are orphans for the same reason.
+
+**The live feed and the repository still differ for one asset, by ruling.** The static post on Instagram is the photographic version published at 16:44 ET; the repository asset is type-only. Under the founder's ruling that posted material stands as-is, it was not re-posted again. The difference is intentional and is recorded in both this log and the decision log.
+
+**Files changed:** `content/field-notes/nobody-rigs-to-the-breaking-strength.md` and `content/distribution/field-note-12-platforms.md` (both moved from `drafts/`), `drafts/README.md`, `scripts/verify-repository.mjs`, `AGENTS.md`, `docs/technical/decision-log.md`, this log.
+
+**Verification, from a clean `main` after merge:** `node scripts/verify-ghost-theme.mjs` (17 files), `pnpm --dir theme install --frozen-lockfile`, `pnpm --dir theme test`, `pnpm --dir theme zip` plus `gscan -z --fatal --verbose` (no fatal issues, Ghost 6.x), `node scripts/verify-repository.mjs` (451 tracked files, 16 review sheets, 43 editorial source images), `bash scripts/verify-svg-xml.sh` (134 SVGs), `git diff --check`. Full CI green on every pull request before merge.
+
+**External state changed:** none in this entry. Nothing published, sent, posted, scheduled, or deleted since the 16:44 repost.
+
+**Cleanup completed:** every working branch from the day deleted locally and remotely, no worktrees, no open pull requests, working tree clean, scratch and temporary files removed, the local diagnostic server shut down and its port confirmed closed, and the founder's `~/Downloads` clear of the four ChatGPT images now tracked under `assets/source/editorial/`.
+
+**Open, carried into next week:** Field Note 11's publication slot and Field Note 12's publication slot, both founder decisions; the two unreferenced Ghost storage uploads above; and the standing note that the ChatGPT-to-disk step is a founder action, so draft runs should hand it over rather than budget time for it. Field Note 2 publishes 2026-08-18 08:00 ET and imports to Medium 2026-08-20 under its real title.
