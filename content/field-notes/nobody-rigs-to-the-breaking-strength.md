@@ -6,15 +6,15 @@ byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Nobody Rigs to the Breaking Strength
 preview: He books his life at a figure he hit once, in a good season, with nothing else going on.
-status: draft — NOT founder-approved
-approved: no
-publication_authorized: false — no publication, newsletter, or posting slot authorized
+status: founder-approved
+approved: 2026-08-16 — essay, platform pack, and artwork approved together
+publication_authorized: false — approval covers the work, not a slot; publication, newsletter delivery, and posting remain separately gated
 stance: assignment — the subject test fails for witness; overcommitment is a thing he has a move on
 register: generic present — asserts that this happens, never that a particular instance happened
 personal_claims: none — no event is asserted as reportage, per the 2026-08-08 ruling reaffirmed 2026-08-12
-social_copy_status: draft — not approved, not scheduled
-visual_direction_status: draft — not approved
-artwork_status: complete and rendered for review — four source photographs, seven carousel slides, feature image, review sheet, gate entries; NOT founder-approved
+social_copy_status: founder-approved as written 2026-08-16; posting remains separately gated
+visual_direction_status: founder-approved as written 2026-08-16
+artwork_status: founder-approved 2026-08-16 — four source photographs, seven carousel slides, feature image, review sheet, and gate entries
 origin: written 2026-08-16 by the Saturday draft task
 ---
 
@@ -158,7 +158,8 @@ The part worth sitting with: under load he does not get to choose what fails. Wh
 
 # Production notes
 
-- **Not founder-approved. Not authorized for publication, newsletter delivery, or posting on any surface.** Nothing here is scheduled and no slot is proposed.
+- **Founder-approved as written on 2026-08-16** — essay, platform pack, and artwork together. Publication, newsletter delivery, and posting remain separately gated; no slot is authorized and none is proposed.
+- Subject to the photograph-exclusivity ruling of the same day (Gate 8): this note's four photographs belong to it alone, and `verify-repository.mjs` fails if any of them appears in a second published asset.
 - Stance is `assignment` under the 2026-08-11 ruling. Subject test: overcommitment is a condition a man has a move on, so witness does not apply — and Field Note 11, this week's Wednesday piece, was the first witness piece. A second one three days later would make it the labeled series the ruling forbids.
 - Register is the generic present throughout. No event is asserted as having happened, no figure is asserted as a measurement, and no first-person claim appears. The rigging facts are general engineering practice — design factors around five to one for synthetic slings — not a report of a particular lift.
 - The corpus duty was checked before the subject was chosen. The bank stands at eleven with the reader addressed in the last hundred words of nine. Field Note 11 corrected the tilt three days ago; this piece does address him at the close, which is correct for an assignment piece and keeps the witness stance from hardening into a series.

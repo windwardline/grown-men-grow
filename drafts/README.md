@@ -8,4 +8,4 @@ Every draft also carries an internal `stance` field in its frontmatter — `assi
 
 Drafts may propose first-person language. The founder must confirm every personal statement before approval. Move approved copy into `content/` through a later reviewed change; do not silently revise the canonical launch files.
 
-Field Note 2 moved to `content/field-notes/` after founder approval and factual confirmation on 2026-08-08. Field Note 11, "The Lights Never Flickered," moved the same way after founder approval on 2026-08-12. This directory currently contains no active editorial draft.
+Field Note 2 moved to `content/field-notes/` after founder approval and factual confirmation on 2026-08-08. Field Note 11, "The Lights Never Flickered," moved the same way after founder approval on 2026-08-12. Field Note 12, "Nobody Rigs to the Breaking Strength," moved on 2026-08-16 with its platform pack, which went to `content/distribution/` in the same change set. This directory currently contains no active editorial draft.

@@ -121,61 +121,15 @@ async function validateNamedPngs(directory, expected) {
   }
 }
 
-// Feed-tile distinctness (added 2026-08-16 after a live repeat).
-//
-// The per-article image rule permits one article's photographs to travel across
-// that article's own surfaces, and the founder approved exactly that for the
-// Essay 1 launch set. What it does not permit is two posts landing in the grid
-// as the same picture. The visual system states it directly: "No two
-// consecutive feed covers should share the same skeleton."
-//
-// Only the first slide of a carousel becomes a grid tile, so that is what is
-// compared, alongside every standalone feed asset. Stories are excluded — they
-// never enter the grid. Two tiles collide when they place the SAME source
-// photograph in effectively the SAME rectangle; the measure is intersection
-// over union of the two placements, which is why a few pixels of difference
-// cannot launder a repeat. Text and colour are deliberately not compared: the
-// grid is read at thumbnail size, where the photograph is the whole signal.
-const TILE_IOU_LIMIT = 0.75;
 
-// Empty, and it should stay that way. One entry lived here on 2026-08-16 for the
-// Recognition cover and the launch static post, which shared a photograph at
-// overlap 0.88 and both reached the grid. The founder authorised recomposing the
-// static post, so the repeat was removed rather than permanently excepted: that
-// post now carries a different photograph and an inverted skeleton. An entry
-// here is a repeat somebody decided to live with, not a repeat somebody fixed.
-const KNOWN_TILE_REPEATS = new Set([]);
-
+// Every source photograph referenced by a rendered asset. Only the photograph
+// matters now: the rule is about which asset a picture belongs to, not where it
+// sits in the frame.
 function tilePlacements(text) {
-  return [...text.matchAll(
-    /<image href="\/assets\/source\/([^"]+)" x="([-\d.]+)" y="([-\d.]+)" width="([\d.]+)" height="([\d.]+)"/g,
-  )].map((match) => ({
-    photo: match[1],
-    x: Number(match[2]),
-    y: Number(match[3]),
-    width: Number(match[4]),
-    height: Number(match[5]),
-  }));
+  return [...text.matchAll(/<image href="\/assets\/source\/([^"]+)"/g)]
+    .map((match) => ({ photo: match[1] }));
 }
 
-function placementOverlap(a, b) {
-  const overlapWidth = Math.max(0, Math.min(a.x + a.width, b.x + b.width) - Math.max(a.x, b.x));
-  const overlapHeight = Math.max(0, Math.min(a.y + a.height, b.y + b.height) - Math.max(a.y, b.y));
-  const intersection = overlapWidth * overlapHeight;
-  const union = a.width * a.height + b.width * b.height - intersection;
-  return union === 0 ? 0 : intersection / union;
-}
-
-// A single-asset feed post is one photograph, full stop — there is no sequence to
-// carry it, so if that photograph is already anywhere else on the feed the whole
-// post reads as a repeat. This is the defect that reached the grid twice on
-// 2026-08-16: first with the Recognition cover's photograph, then with one that
-// no other COVER used but that was already inside three posted carousels.
-//
-// Carousels are deliberately exempt. A carousel is one narrative unit and may
-// reuse its own article's photography across its slides; the launch set does so
-// by founder approval. Stories and Reel covers are exempt too — different
-// surface, different crop discipline. The rule is 1080x1350 single-asset only.
 // Forward visual rule (founder-ruled 2026-08-16): every separately published
 // public asset must be visually its own. A photograph belongs to at most ONE
 // Instagram asset. Repeats WITHIN an asset stay fine — a carousel is one
@@ -223,76 +177,6 @@ async function validatePhotographExclusivity(directory) {
       + `(founder ruling 2026-08-16); ${outside.sort().join(', ')} ${outside.length === 1 ? 'is' : 'are'} not covered by the `
       + 'grandfathered Essay 1 launch set. Give the asset photography of its own or make it type-led.',
     );
-  }
-}
-
-async function validateSingleAssetFeedPosts(directory) {
-  const entries = await readdir(path.join(root, directory), { withFileTypes: true });
-  const families = [];
-  for (const entry of entries.filter((item) => item.isDirectory()).sort((a, b) => a.name.localeCompare(b.name))) {
-    const svgs = await filesUnder(`${directory}/${entry.name}`, '.svg');
-    if (!svgs.length) continue;
-    const photos = [];
-    for (const file of svgs) {
-      for (const placement of tilePlacements(await readFile(file, 'utf8'))) photos.push(placement.photo);
-    }
-    families.push({ name: entry.name, count: svgs.length, photos, files: svgs });
-  }
-
-  for (const family of families) {
-    if (family.count !== 1) continue;
-    const png = (await filesUnder(`${directory}/${family.name}`, '.png'))[0];
-    const size = png ? await pngDimensions(png) : null;
-    if (!size || size.width !== 1080 || size.height !== 1350) continue;
-    for (const photo of family.photos) {
-      const alsoIn = families
-        .filter((other) => other.name !== family.name && other.photos.includes(photo))
-        .map((other) => other.name);
-      if (alsoIn.length) {
-        fail(
-          `${directory}/${family.name} is a single-image feed post carrying ${photo}, which already appears in ${alsoIn.join(', ')}. `
-          + 'A one-image post has no sequence to carry it, so a photograph used elsewhere makes the whole post a repeat — '
-          + 'give it a photograph of its own or make it type-only.',
-        );
-      }
-    }
-  }
-}
-
-async function validateFeedTileDistinctness(directory) {
-  const entries = await readdir(path.join(root, directory), { withFileTypes: true });
-  const tiles = [];
-  for (const entry of entries.filter((item) => item.isDirectory()).sort((a, b) => a.name.localeCompare(b.name))) {
-    if (entry.name === 'launch-stories') continue;
-    const svgs = await filesUnder(`${directory}/${entry.name}`, '.svg');
-    if (!svgs.length) continue;
-    // A carousel contributes only its cover; a standalone family contributes all of it.
-    for (const file of svgs.length === 1 ? svgs : [svgs[0]]) {
-      tiles.push({ name: relative(file), placements: tilePlacements(await readFile(file, 'utf8')) });
-    }
-  }
-
-  if (tiles.length < 2) {
-    fail(`${directory} produced ${tiles.length} feed tiles; the distinctness check examined nothing.`);
-    return;
-  }
-
-  for (let i = 0; i < tiles.length; i += 1) {
-    for (let j = i + 1; j < tiles.length; j += 1) {
-      for (const a of tiles[i].placements) {
-        for (const b of tiles[j].placements) {
-          if (a.photo !== b.photo) continue;
-          const overlap = placementOverlap(a, b);
-          if (overlap < TILE_IOU_LIMIT) continue;
-          const key = `${tiles[i].name.replace('assets/drafts/', '')}::${tiles[j].name.replace('assets/drafts/', '')}`;
-          if (KNOWN_TILE_REPEATS.has(key)) continue;
-          fail(
-            `${tiles[i].name} and ${tiles[j].name} place ${a.photo} in the same frame `
-            + `(overlap ${overlap.toFixed(2)} against a limit of ${TILE_IOU_LIMIT}); two feed tiles would read as one repeated image.`,
-          );
-        }
-      }
-    }
   }
 }
 
@@ -380,6 +264,10 @@ if (tracked.some((file) => file.startsWith('assets/concepts/editorial-v1/') || f
 if (tracked.includes('drafts/field-note-02-call-your-friends-before-theres-a-reason.md')) {
   fail('Approved Field Note 2 must live under content/, not drafts/.');
 }
+if (tracked.includes('drafts/field-note-12-nobody-rigs-to-the-breaking-strength.md')
+  || tracked.includes('drafts/field-note-12-platforms.md')) {
+  fail('Approved Field Note 12 and its platform pack must live under content/, not drafts/.');
+}
 
 const launchPackage = await readFile(path.join(root, 'content/instagram/launch-package.md'), 'utf8');
 const captionSource = launchPackage.split('\n## 8. Approved discovery classifications')[0];
@@ -433,8 +321,6 @@ await validateAssetFamily('assets/drafts/instagram/field-note-09-carousel', 7, 1
 await validateAssetFamily('assets/drafts/instagram/field-note-10-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-11-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-12-carousel', 7, 1080, 1350);
-await validateFeedTileDistinctness('assets/drafts/instagram');
-await validateSingleAssetFeedPosts('assets/drafts/instagram');
 await validatePhotographExclusivity('assets/drafts/instagram');
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
 await validateAssetFamily('assets/drafts/ghost/feature-images', 14, 1600, 1000);
@@ -559,6 +445,7 @@ const packs = new Map([
   ['Field Note 9', 'content/distribution/field-note-09-platforms.md'],
   ['Field Note 10', 'content/distribution/field-note-10-platforms.md'],
   ['Field Note 11', 'content/distribution/field-note-11-platforms.md'],
+  ['Field Note 12', 'content/distribution/field-note-12-platforms.md'],
 ]);
 // Medium refuses a tag containing anything but letters, numbers, spaces, and
 // dashes, and caps one at 25 characters. Observed live on 2026-08-13 while
@@ -614,6 +501,7 @@ const altTexted = [
   'content/field-notes/you-cant-outwork-a-wrong-direction.md',
   'content/field-notes/comparison-is-a-bad-map.md',
   'content/field-notes/your-body-keeps-the-books.md',
+  'content/field-notes/nobody-rigs-to-the-breaking-strength.md',
 ];
 for (const file of altTexted) {
   const text = await readFile(path.join(root, file), 'utf8');
