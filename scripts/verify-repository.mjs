@@ -166,6 +166,49 @@ function placementOverlap(a, b) {
   return union === 0 ? 0 : intersection / union;
 }
 
+// A single-asset feed post is one photograph, full stop — there is no sequence to
+// carry it, so if that photograph is already anywhere else on the feed the whole
+// post reads as a repeat. This is the defect that reached the grid twice on
+// 2026-08-16: first with the Recognition cover's photograph, then with one that
+// no other COVER used but that was already inside three posted carousels.
+//
+// Carousels are deliberately exempt. A carousel is one narrative unit and may
+// reuse its own article's photography across its slides; the launch set does so
+// by founder approval. Stories and Reel covers are exempt too — different
+// surface, different crop discipline. The rule is 1080x1350 single-asset only.
+async function validateSingleAssetFeedPosts(directory) {
+  const entries = await readdir(path.join(root, directory), { withFileTypes: true });
+  const families = [];
+  for (const entry of entries.filter((item) => item.isDirectory()).sort((a, b) => a.name.localeCompare(b.name))) {
+    const svgs = await filesUnder(`${directory}/${entry.name}`, '.svg');
+    if (!svgs.length) continue;
+    const photos = [];
+    for (const file of svgs) {
+      for (const placement of tilePlacements(await readFile(file, 'utf8'))) photos.push(placement.photo);
+    }
+    families.push({ name: entry.name, count: svgs.length, photos, files: svgs });
+  }
+
+  for (const family of families) {
+    if (family.count !== 1) continue;
+    const png = (await filesUnder(`${directory}/${family.name}`, '.png'))[0];
+    const size = png ? await pngDimensions(png) : null;
+    if (!size || size.width !== 1080 || size.height !== 1350) continue;
+    for (const photo of family.photos) {
+      const alsoIn = families
+        .filter((other) => other.name !== family.name && other.photos.includes(photo))
+        .map((other) => other.name);
+      if (alsoIn.length) {
+        fail(
+          `${directory}/${family.name} is a single-image feed post carrying ${photo}, which already appears in ${alsoIn.join(', ')}. `
+          + 'A one-image post has no sequence to carry it, so a photograph used elsewhere makes the whole post a repeat — '
+          + 'give it a photograph of its own or make it type-only.',
+        );
+      }
+    }
+  }
+}
+
 async function validateFeedTileDistinctness(directory) {
   const entries = await readdir(path.join(root, directory), { withFileTypes: true });
   const tiles = [];
@@ -339,6 +382,7 @@ await validateAssetFamily('assets/drafts/instagram/field-note-09-carousel', 7, 1
 await validateAssetFamily('assets/drafts/instagram/field-note-10-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-11-carousel', 7, 1080, 1350);
 await validateFeedTileDistinctness('assets/drafts/instagram');
+await validateSingleAssetFeedPosts('assets/drafts/instagram');
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
 await validateAssetFamily('assets/drafts/ghost/feature-images', 13, 1600, 1000);
 await validateEditorialConcepts();

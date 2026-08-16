@@ -196,27 +196,39 @@ const recognition = [
   }),
 ];
 
-// Recomposed 2026-08-16 after the founder reported a repeated image in the
-// feed. As first built, this post placed `sunlit-writing-table.png` in a wide
-// band across the top — the same photograph in nearly the same rectangle as the
-// Recognition carousel's cover, which had posted two days earlier. At thumbnail
-// size the grid showed one picture twice.
+// Rebuilt type-only on 2026-08-16, second correction.
 //
-// The fix is structural rather than cosmetic. The photograph changes to
-// `friends-in-conversation.png`, which no other grid tile uses, and the skeleton
-// inverts: type on top, a single image block anchored low. Approved copy is
-// untouched — only the art direction moved.
+// The first version placed `sunlit-writing-table.png` in a wide top band — the
+// Recognition cover's photograph in nearly its rectangle. The second version
+// swapped to `friends-in-conversation.png` because no other grid COVER used it.
+// That reasoning was too narrow and the founder caught it: a reader sees every
+// slide, not just the tile, and `friends-in-conversation.png` was already on the
+// feed four times inside the pinned introduction and the two carousels.
+//
+// There was no photograph that would have worked. Essay 1 has exactly three, and
+// the per-article rule confines everything derived from Essay 1 to those three.
+// Across the four posted assets each of the three already appears five times, so
+// a single-image post carved out of that set repeats by construction.
+//
+// So this post carries no photograph at all. That is the Marginalia treatment
+// the visual system already defines — "typographic, spare, abrupt scale shifts,
+// no required photograph" — and three of the launch set's posted slides are
+// already type-only, so it is an established register rather than a retreat.
+// Approved copy is untouched.
 const staticPost = portraitCanvas({
   id: "static-post",
   number: 1,
   total: 1,
-  body: `${strip({x: 46, y: 178, width: 860, height: 128, fill: PAPER_LIGHT, text: "SOME OF WHAT", color: INK, size: 92, family: SERIF, rotation: -1})}
-  ${strip({x: 174, y: 300, width: 854, height: 136, fill: OXBLOOD, text: "WE CALLED STRENGTH", color: PAPER_LIGHT, size: 72, rotation: 1})}
-  ${strip({x: 50, y: 430, width: 668, height: 128, fill: PAPER, text: "WAS FEAR", color: INK, size: 92, family: SERIF, rotation: -0.7})}
-  ${strip({x: 290, y: 552, width: 738, height: 138, fill: RUST, text: "WITH GOOD POSTURE.", color: PAPER_LIGHT, size: 67, rotation: 1})}
-  ${scribble("M78 726 C238 694 402 742 566 710 C728 678 866 720 1004 700", OXBLOOD, 8)}
-  ${photo({name: FRIENDS, x: 148, y: 790, width: 852, height: 452, rotation: 1.1, position: "xMidYMid", backing: OXBLOOD, id: "static-post"})}
-  ${tape(214, 768, 196, -3)}`,
+  background: PAPER,
+  body: `<rect x="742" y="96" width="338" height="1254" fill="${OXBLOOD}"/>
+  <rect x="64" y="936" width="512" height="286" fill="url(#static-post-dots)"/>
+  <text x="70" y="332" fill="none" stroke="${OXBLOOD}" stroke-opacity="0.16" stroke-width="3" font-family="${SERIF}" font-size="330">“</text>
+  ${strip({x: 58, y: 296, width: 606, height: 150, fill: PAPER_LIGHT, text: "SOME OF WHAT", color: INK, size: 78, family: SERIF, rotation: -1.2})}
+  ${strip({x: 128, y: 462, width: 872, height: 122, fill: INK, text: "WE CALLED STRENGTH", color: PAPER_LIGHT, size: 68, rotation: 0.9})}
+  ${strip({x: 62, y: 604, width: 430, height: 188, fill: PAPER_LIGHT, text: "WAS FEAR", color: OXBLOOD, size: 104, family: SERIF, rotation: -0.7})}
+  ${scribble("M84 838 C244 806 404 856 566 822 C712 792 850 838 996 812", RUST, 9)}
+  ${strip({x: 210, y: 870, width: 828, height: 132, fill: RUST, text: "WITH GOOD POSTURE.", color: PAPER_LIGHT, size: 74, rotation: 1.1})}
+  <text x="1014" y="1204" text-anchor="end" fill="${PAPER}" font-family="${SANS}" font-size="19" font-weight="900" letter-spacing="3.2">THE UNFINISHED WORK</text>`,
 });
 
 const stories = [
