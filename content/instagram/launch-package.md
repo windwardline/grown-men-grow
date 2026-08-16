@@ -325,7 +325,7 @@ Enter alt text per carousel image where Instagram exposes the control. Preserve 
 
 ### Static post
 
-**Bright writing-table collage with layered text reading: “Some of what we called strength was fear with good posture.”**
+**Layered cream, oxblood, and rust type stack reading “Some of what we called strength was fear with good posture,” above a taped photograph of two adult male friends talking on sunlit front steps.**
 
 ### Reel cover
 

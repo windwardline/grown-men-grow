@@ -196,17 +196,27 @@ const recognition = [
   }),
 ];
 
+// Recomposed 2026-08-16 after the founder reported a repeated image in the
+// feed. As first built, this post placed `sunlit-writing-table.png` in a wide
+// band across the top — the same photograph in nearly the same rectangle as the
+// Recognition carousel's cover, which had posted two days earlier. At thumbnail
+// size the grid showed one picture twice.
+//
+// The fix is structural rather than cosmetic. The photograph changes to
+// `friends-in-conversation.png`, which no other grid tile uses, and the skeleton
+// inverts: type on top, a single image block anchored low. Approved copy is
+// untouched — only the art direction moved.
 const staticPost = portraitCanvas({
   id: "static-post",
   number: 1,
   total: 1,
-  body: `${photo({name: TABLE, x: 38, y: 140, width: 1004, height: 580, rotation: -0.8, position: "xMidYMid", backing: GREEN, id: "static-post"})}
-  ${tape(790, 122, 180, 4)}
-  ${strip({x: 46, y: 676, width: 860, height: 128, fill: PAPER_LIGHT, text: "SOME OF WHAT", color: INK, size: 92, family: SERIF, rotation: -1})}
-  ${strip({x: 174, y: 798, width: 854, height: 136, fill: OXBLOOD, text: "WE CALLED STRENGTH", color: PAPER_LIGHT, size: 72, rotation: 1})}
-  ${strip({x: 50, y: 928, width: 668, height: 128, fill: PAPER, text: "WAS FEAR", color: INK, size: 92, family: SERIF, rotation: -0.7})}
-  ${strip({x: 290, y: 1050, width: 738, height: 138, fill: RUST, text: "WITH GOOD POSTURE.", color: PAPER_LIGHT, size: 67, rotation: 1})}
-  ${scribble("M78 1224 C238 1192 402 1240 566 1208 C728 1176 866 1218 1004 1198", OXBLOOD, 8)}`,
+  body: `${strip({x: 46, y: 178, width: 860, height: 128, fill: PAPER_LIGHT, text: "SOME OF WHAT", color: INK, size: 92, family: SERIF, rotation: -1})}
+  ${strip({x: 174, y: 300, width: 854, height: 136, fill: OXBLOOD, text: "WE CALLED STRENGTH", color: PAPER_LIGHT, size: 72, rotation: 1})}
+  ${strip({x: 50, y: 430, width: 668, height: 128, fill: PAPER, text: "WAS FEAR", color: INK, size: 92, family: SERIF, rotation: -0.7})}
+  ${strip({x: 290, y: 552, width: 738, height: 138, fill: RUST, text: "WITH GOOD POSTURE.", color: PAPER_LIGHT, size: 67, rotation: 1})}
+  ${scribble("M78 726 C238 694 402 742 566 710 C728 678 866 720 1004 700", OXBLOOD, 8)}
+  ${photo({name: FRIENDS, x: 148, y: 790, width: 852, height: 452, rotation: 1.1, position: "xMidYMid", backing: OXBLOOD, id: "static-post"})}
+  ${tape(214, 768, 196, -3)}`,
 });
 
 const stories = [

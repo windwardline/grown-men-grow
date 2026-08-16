@@ -138,14 +138,13 @@ async function validateNamedPngs(directory, expected) {
 // grid is read at thumbnail size, where the photograph is the whole signal.
 const TILE_IOU_LIMIT = 0.75;
 
-// One pair is recorded rather than failed. Both assets are Essay 1 launch-set
-// artwork the founder approved on 2026-08-08, and the second of them posted to
-// Instagram on 2026-08-15 before this gate existed — a repeat that cannot be
-// unposted and must not be silently re-rendered, because the artwork is the
-// founder's to change. The entry is one pair wide: any other collision fails.
-const KNOWN_TILE_REPEATS = new Set([
-  'instagram/recognition-carousel/01.svg::instagram/static-post/fear-with-good-posture.svg',
-]);
+// Empty, and it should stay that way. One entry lived here on 2026-08-16 for the
+// Recognition cover and the launch static post, which shared a photograph at
+// overlap 0.88 and both reached the grid. The founder authorised recomposing the
+// static post, so the repeat was removed rather than permanently excepted: that
+// post now carries a different photograph and an inverted skeleton. An entry
+// here is a repeat somebody decided to live with, not a repeat somebody fixed.
+const KNOWN_TILE_REPEATS = new Set([]);
 
 function tilePlacements(text) {
   return [...text.matchAll(
