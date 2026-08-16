@@ -89,9 +89,21 @@ The system must not become one template with new words.
 
 In a representative twelve-post run, aim for four image-led features, three typographic pieces, three documentary or detail-led carousels, and two motion or portrait-led posts. This is a variation check, not a publishing quota.
 
-## Image uniqueness (founder-ruled 2026-08-09; refined by the founder later the same day)
+## Image uniqueness (founder-ruled 2026-08-09; refined the same day; superseded forward on 2026-08-16)
 
 Imagery is unique **per article**: each essay or field note gets photography created for it, and that photography may then travel with the piece — its feature image, inline body images, and every social post derived from that piece on any platform may share the article's visuals. What never happens is reuse **across articles**: one piece's photograph never appears in another piece's composition, and the source library only grows. The staged Essay 1 launch set (site surfaces plus its Instagram sequence sharing the original three photographs) is founder-approved under exactly this rule. Compositions stay collage-rich — the fix for repetition is generating new source photography under the recorded house prompts, not thinning the collages. The renderers enforce the cross-article boundary mechanically and fail if a photograph strays outside its article's family.
+
+### Photograph exclusivity (founder-ruled 2026-08-16, binding forward)
+
+The per-article rule above was necessary and not sufficient. It stopped one article's photograph appearing in another article's work, but it permitted one article's three photographs to be spread across five of that article's own posts — which is exactly what happened to the Essay 1 launch set, and it put the same picture on the feed twice.
+
+**A photograph belongs to at most one published asset.** Repeats inside a single asset stay fine: a carousel is one narrative unit and may use its article's photography across its own slides. Two separately published posts may not share a photograph.
+
+Where an article does not have enough photography to give each of its posts something of its own, the answer is either new photography under the house prompt — the source library only grows — or a type-led composition. It is never a re-crop of a picture that is already out there. `Marginalia` exists precisely for this: typographic, spare, no required photograph.
+
+**What is already public stands.** The founder ruled the posted launch set is not to be re-cut or re-posted. `verify-repository.mjs` grandfathers those four families against each other and only against each other; any unpublished asset sharing a photograph with anything else fails the check.
+
+**Prior visual approvals are revoked for anything not yet public.** Copy approvals are unaffected — this is art direction only.
 
 ## Surface rules
 
@@ -148,7 +160,7 @@ The current concept package is under `assets/concepts/editorial-collage-v1/`:
 - Story cover
 - Social-sharing card
 
-The complete replacement set is under `assets/drafts/`, with five contact sheets under `assets/drafts/review/`. Title-free Ghost feature images are under `assets/drafts/ghost/feature-images/`. The package uses only approved launch copy and was approved for staging and launch on 2026-08-08. Live rendering still must pass the release checklist.
+**Visual approval for the unpublished members of this set was revoked on 2026-08-16** under the photograph-exclusivity ruling; the posted members stand as-is. The static post and the Reel cover were rebuilt type-led because Essay 1's three photographs were already spent across the posted assets. The complete replacement set is under `assets/drafts/`, with contact sheets under `assets/drafts/review/`. Title-free Ghost feature images are under `assets/drafts/ghost/feature-images/`. The package uses only approved launch copy and was approved for staging and launch on 2026-08-08. Live rendering still must pass the release checklist.
 
 ## Implementation status
 

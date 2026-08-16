@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="fn12-feature-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn12-feature-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn12-feature-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="#F8F3EA"/>
+  <rect x="0" y="0" width="404" height="1000" fill="#EEE6D8"/>
+  <g transform="rotate(0.8 809 502)">
+    <rect x="440" y="106" width="738" height="826" fill="#3A1518"/>
+    <rect x="448" y="92" width="722" height="820" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/sling-capacity-tag.png" x="452" y="96" width="714" height="812" preserveAspectRatio="xMidYMid slice" filter="url(#fn12-feature-photo)"/>
+  </g>
+  <g transform="rotate(-1.5 1347 529)">
+    <rect x="1182" y="234" width="330" height="624" fill="#60735A"/>
+    <rect x="1190" y="220" width="314" height="618" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/wall-calendar-kitchen.png" x="1194" y="224" width="306" height="610" preserveAspectRatio="xMidYMid slice" filter="url(#fn12-feature-photo)"/>
+  </g>
+  <g transform="rotate(3 672 95)">
+    <rect x="560" y="72" width="224" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="568" y1="79" x2="774" y2="76" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g transform="rotate(-4 1351 223)">
+    <rect x="1258" y="200" width="186" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="1266" y1="207" x2="1434" y2="204" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g>
+    <circle cx="209.8" cy="172" r="9.1" fill="#B14F3F"/>
+    <path d="M 209.8 172 L 196.8 268.2" fill="none" stroke="#B14F3F" stroke-width="6.5" stroke-linecap="round"/>
+    <path d="M 209.8 172 L 222.8 268.2" fill="none" stroke="#B14F3F" stroke-width="6.5" stroke-linecap="round"/>
+    <line x1="150" y1="268.2" x2="269.6" y2="268.2" stroke="#B14F3F" stroke-width="9.1" stroke-linecap="round"/>
+  </g>
+  <g>
+    <circle cx="202.9" cy="742" r="8.049999999999999" fill="#60735A"/>
+    <path d="M 202.9 742 L 150 827.1" fill="none" stroke="#60735A" stroke-width="5.75" stroke-linecap="round"/>
+    <path d="M 202.9 742 L 255.8 827.1" fill="none" stroke="#60735A" stroke-width="5.75" stroke-linecap="round"/>
+    <line x1="150" y1="827.1" x2="255.8" y2="827.1" stroke="#60735A" stroke-width="8.049999999999999" stroke-linecap="round"/>
+  </g>
+  <rect width="1600" height="1000" filter="url(#fn12-feature-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

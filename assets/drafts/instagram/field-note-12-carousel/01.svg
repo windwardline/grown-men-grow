@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn12-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn12-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn12-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 12 · 01 / 07</text>
+  <text x="64" y="250" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="78" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="1.2">NOBODY RIGS TO</text>
+    <text x="64" y="360" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="62" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="1.2">THE BREAKING STRENGTH.</text>
+    <g>
+    <circle cx="927.2" cy="206" r="8.4" fill="#B14F3F"/>
+    <path d="M 927.2 206 L 915.2 294.8" fill="none" stroke="#B14F3F" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 927.2 206 L 939.2 294.8" fill="none" stroke="#B14F3F" stroke-width="6" stroke-linecap="round"/>
+    <line x1="872" y1="294.8" x2="982.4000000000001" y2="294.8" stroke="#B14F3F" stroke-width="8.4" stroke-linecap="round"/>
+  </g>
+    <g transform="rotate(0.9 540 826)">
+    <rect x="116" y="462" width="848" height="762" fill="#60735A"/>
+    <rect x="124" y="448" width="832" height="756" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/sling-capacity-tag.png" x="128" y="452" width="824" height="748" preserveAspectRatio="xMidYMid slice" filter="url(#fn12-01-photo)"/>
+  </g>
+    <g transform="rotate(4 393 451)">
+    <rect x="286" y="428" width="214" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="294" y1="435" x2="490" y2="432" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn12-01-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

@@ -176,6 +176,56 @@ function placementOverlap(a, b) {
 // reuse its own article's photography across its slides; the launch set does so
 // by founder approval. Stories and Reel covers are exempt too — different
 // surface, different crop discipline. The rule is 1080x1350 single-asset only.
+// Forward visual rule (founder-ruled 2026-08-16): every separately published
+// public asset must be visually its own. A photograph belongs to at most ONE
+// Instagram asset. Repeats WITHIN an asset stay fine — a carousel is one
+// narrative unit and may use its article's photography across its own slides.
+//
+// The founder ruled that what is already public stands as-is, so the four posted
+// Essay 1 launch families are grandfathered against each other and only against
+// each other. Essay 1 has three photographs and five Instagram assets were cut
+// from them, which is the arithmetic that produced two live repeats; the ruling
+// stops that recurring rather than rewriting what already shipped.
+//
+// An unposted asset sharing a photograph with ANY other asset fails, including
+// with a grandfathered one. That is the whole point of the ruling being forward.
+const GRANDFATHERED_LAUNCH_FAMILIES = new Set([
+  'pinned-introduction',
+  'foundational-carousel',
+  'recognition-carousel',
+  'launch-stories',
+]);
+
+async function validatePhotographExclusivity(directory) {
+  const entries = await readdir(path.join(root, directory), { withFileTypes: true });
+  const owners = new Map();
+  for (const entry of entries.filter((item) => item.isDirectory()).sort((a, b) => a.name.localeCompare(b.name))) {
+    const svgs = await filesUnder(`${directory}/${entry.name}`, '.svg');
+    for (const file of svgs) {
+      for (const placement of tilePlacements(await readFile(file, 'utf8'))) {
+        if (!owners.has(placement.photo)) owners.set(placement.photo, new Set());
+        owners.get(placement.photo).add(entry.name);
+      }
+    }
+  }
+
+  if (!owners.size) {
+    fail(`${directory} yielded no photographs; the exclusivity check examined nothing.`);
+    return;
+  }
+
+  for (const [photo, families] of owners) {
+    if (families.size < 2) continue;
+    const outside = [...families].filter((name) => !GRANDFATHERED_LAUNCH_FAMILIES.has(name));
+    if (!outside.length) continue;
+    fail(
+      `${photo} appears in ${[...families].sort().join(', ')}. A photograph belongs to one published asset only `
+      + `(founder ruling 2026-08-16); ${outside.sort().join(', ')} ${outside.length === 1 ? 'is' : 'are'} not covered by the `
+      + 'grandfathered Essay 1 launch set. Give the asset photography of its own or make it type-led.',
+    );
+  }
+}
+
 async function validateSingleAssetFeedPosts(directory) {
   const entries = await readdir(path.join(root, directory), { withFileTypes: true });
   const families = [];
@@ -292,6 +342,7 @@ const requiredFiles = [
   'scripts/render-field-note-09.mjs',
   'scripts/render-field-note-10.mjs',
   'scripts/render-field-note-11.mjs',
+  'scripts/render-field-note-12.mjs',
   'scripts/render-brand-banners.mjs',
   'scripts/render-ghost-feature-images.mjs',
   'scripts/render-instagram-pinned-intro.mjs',
@@ -381,10 +432,12 @@ await validateAssetFamily('assets/drafts/instagram/field-note-08-carousel', 7, 1
 await validateAssetFamily('assets/drafts/instagram/field-note-09-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-10-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-11-carousel', 7, 1080, 1350);
+await validateAssetFamily('assets/drafts/instagram/field-note-12-carousel', 7, 1080, 1350);
 await validateFeedTileDistinctness('assets/drafts/instagram');
 await validateSingleAssetFeedPosts('assets/drafts/instagram');
+await validatePhotographExclusivity('assets/drafts/instagram');
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
-await validateAssetFamily('assets/drafts/ghost/feature-images', 13, 1600, 1000);
+await validateAssetFamily('assets/drafts/ghost/feature-images', 14, 1600, 1000);
 await validateEditorialConcepts();
 await validateNamedPngs('assets/source/editorial', new Map([
   ['friends-in-conversation', { width: 1023, height: 1537 }],
@@ -426,6 +479,10 @@ await validateNamedPngs('assets/source/editorial', new Map([
   ['punch-list-tailgate', { width: 1024, height: 1536 }],
   ['transfer-switch-cabinet', { width: 1024, height: 1536 }],
   ['restaurant-table-after-lunch', { width: 1024, height: 1536 }],
+  ['sling-capacity-tag', { width: 1024, height: 1536 }],
+  ['rigging-shackles-bench', { width: 1024, height: 1536 }],
+  ['wall-calendar-kitchen', { width: 1024, height: 1536 }],
+  ['driveway-hoop-late-afternoon', { width: 1024, height: 1536 }],
 ]));
 await validateNamedPngs('assets/drafts/brand/banners', new Map([
   ['bluesky-banner', { width: 1500, height: 500 }],
@@ -446,6 +503,7 @@ await validateNamedPngs('assets/drafts/review', new Map([
   ['field-note-09-carousel', { width: 1362, height: 1004 }],
   ['field-note-10-carousel', { width: 1362, height: 1004 }],
   ['field-note-11-carousel', { width: 1362, height: 1004 }],
+  ['field-note-12-carousel', { width: 1362, height: 1004 }],
   ['ghost-social-cards', { width: 1310, height: 884 }],
   ['pinned-introduction', { width: 1362, height: 1004 }],
   ['recognition-carousel', { width: 1362, height: 1004 }],
@@ -569,4 +627,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 107 launch PNG/SVG pairs, fifteen review sheets, thirty-nine editorial source images, five brand banners, and five editorial concept pairs.`);
+console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 107 launch PNG/SVG pairs, sixteen review sheets, forty-three editorial source images, five brand banners, and five editorial concept pairs.`);
