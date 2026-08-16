@@ -325,7 +325,7 @@ Enter alt text per carousel image where Instagram exposes the control. Preserve 
 
 ### Static post
 
-**Layered cream, oxblood, and rust type stack reading “Some of what we called strength was fear with good posture,” above a taped photograph of two adult male friends talking on sunlit front steps.**
+**Typographic card with no photograph: an oxblood panel down the right edge, a large outlined quotation mark, and four layered cream, ink, and rust type blocks reading “Some of what we called strength was fear with good posture.”**
 
 ### Reel cover
 

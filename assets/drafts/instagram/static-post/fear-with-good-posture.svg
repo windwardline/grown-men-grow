@@ -17,35 +17,30 @@
       <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
     </pattern>
   </defs>
-  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <rect width="1080" height="1350" fill="#EEE6D8"/>
   <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
   <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 01 · 01 / 01</text>
-  <g transform="rotate(-1 476 242)">
-    <rect x="46" y="178" width="860" height="128" fill="#F8F3EA"/>
-    <text x="70" y="275.28" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="92" font-weight="900" letter-spacing="-2.5">SOME OF WHAT</text>
+  <rect x="742" y="96" width="338" height="1254" fill="#3A1518"/>
+  <rect x="64" y="936" width="512" height="286" fill="url(#static-post-dots)"/>
+  <text x="70" y="332" fill="none" stroke="#3A1518" stroke-opacity="0.16" stroke-width="3" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="330">“</text>
+  <g transform="rotate(-1.2 361 371)">
+    <rect x="58" y="296" width="606" height="150" fill="#F8F3EA"/>
+    <text x="82" y="410" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="78" font-weight="900" letter-spacing="-2.5">SOME OF WHAT</text>
   </g>
-  <g transform="rotate(1 601 368)">
-    <rect x="174" y="300" width="854" height="136" fill="#3A1518"/>
-    <text x="198" y="403.36" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="72" font-weight="900" letter-spacing="-2.5">WE CALLED STRENGTH</text>
+  <g transform="rotate(0.9 564 523)">
+    <rect x="128" y="462" width="872" height="122" fill="#121416"/>
+    <text x="152" y="554.72" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="68" font-weight="900" letter-spacing="-2.5">WE CALLED STRENGTH</text>
   </g>
-  <g transform="rotate(-0.7 384 494)">
-    <rect x="50" y="430" width="668" height="128" fill="#EEE6D8"/>
-    <text x="74" y="527.28" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="92" font-weight="900" letter-spacing="-2.5">WAS FEAR</text>
+  <g transform="rotate(-0.7 277 698)">
+    <rect x="62" y="604" width="430" height="188" fill="#F8F3EA"/>
+    <text x="86" y="746.88" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="104" font-weight="900" letter-spacing="-2.5">WAS FEAR</text>
   </g>
-  <g transform="rotate(1 659 621)">
-    <rect x="290" y="552" width="738" height="138" fill="#B14F3F"/>
-    <text x="314" y="656.88" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="67" font-weight="900" letter-spacing="-2.5">WITH GOOD POSTURE.</text>
+  <path d="M84 838 C244 806 404 856 566 822 C712 792 850 838 996 812" fill="none" stroke="#B14F3F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="rotate(1.1 624 936)">
+    <rect x="210" y="870" width="828" height="132" fill="#B14F3F"/>
+    <text x="234" y="970.32" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="74" font-weight="900" letter-spacing="-2.5">WITH GOOD POSTURE.</text>
   </g>
-  <path d="M78 726 C238 694 402 742 566 710 C728 678 866 720 1004 700" fill="none" stroke="#3A1518" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-  <g transform="rotate(1.1 574 1016)">
-    <rect x="136" y="800" width="876" height="466" fill="#3A1518"/>
-    <rect x="144" y="786" width="860" height="460" fill="#F8F3EA"/>
-    <image href="/assets/source/editorial/friends-in-conversation.png" x="148" y="790" width="852" height="452" preserveAspectRatio="xMidYMid slice" filter="url(#static-post-photo)"/>
-  </g>
-  <g transform="rotate(-3 312 791)">
-    <rect x="214" y="768" width="196" height="46" fill="#D9CBAF" opacity="0.74"/>
-    <line x1="222" y1="775" x2="400" y2="772" stroke="#fff" stroke-opacity="0.38"/>
-  </g>
+  <text x="1014" y="1204" text-anchor="end" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="900" letter-spacing="3.2">THE UNFINISHED WORK</text>
   <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
   <rect width="1080" height="1350" filter="url(#static-post-paper)" opacity="0.22" pointer-events="none"/>
 </svg>
