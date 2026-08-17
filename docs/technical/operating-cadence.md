@@ -12,12 +12,12 @@ One field note per week, Tuesday, with the newsletter. Everything else in the we
 |---|---|---|---|
 | Tuesday | 8:00 AM | Ghost essay publishes and emails | Automated |
 | Tuesday | 12:00 PM | Bluesky fragment | Buffer |
-| Tuesday | 12:00 PM | Substack Note 1 | Founder (no API) |
+| Tuesday | 12:00 PM | Substack Note 1 | Automated (browser) |
 | Wednesday | 10:00 AM | LinkedIn post | Buffer |
 | Thursday | 7:00 AM | Medium import, canonical-first | Automated |
 | Thursday | 9:00 AM | Instagram carousel | Buffer |
 | Saturday | 9:30 AM | Bluesky weekend fragment | Buffer |
-| Saturday | 9:30 AM | Substack Note 2 | Founder (no API) |
+| Saturday | 9:30 AM | Substack Note 2 | Automated (browser) |
 
 ## Production cadence
 
@@ -33,18 +33,24 @@ Eight recurring tasks. Every one of them either does the work or hands the found
 |---|---|---|
 | `gmg-monday-staging` | Mon 9:30 AM | Verifies Tuesday's post is scheduled with the newsletter bound; stages it if missing; queues the week's Buffer posts; builds the iCloud phone kit |
 | `gmg-tuesday-publish-check` | Tue 8:30 AM | Confirms the essay published, emailed, and fed the pipeline |
-| `gmg-tuesday-note` | Tue 11:45 AM | Serves Note 1 copy verbatim with posting steps |
+| `gmg-tuesday-note` | Tue 11:45 AM | Posts Note 1 verbatim to the Substack profile and verifies it live |
 | `gmg-wednesday-draft` | Wed 10:00 AM | Writes and delivers the week's first new draft |
 | `gmg-thursday-medium` | Thu 6:45 AM | Runs the Medium URL import with canonical verification |
 | `gmg-friday-analytics` | Fri 9:00 AM | Numbers against the validation protocol, plus what readers actually said back |
-| `gmg-saturday-note` | Sat 9:15 AM | Serves Note 2 copy verbatim with posting steps |
+| `gmg-saturday-note` | Sat 9:15 AM | Posts Note 2 verbatim to the Substack profile and verifies it live |
 | `gmg-saturday-draft` | Sat 10:30 AM | Writes and delivers the week's second new draft |
 
 Tasks fire while the desktop app is open; a task due while it is closed runs at next launch.
 
 ## What stays with the founder
 
-Only what no API can reach: the two Substack Notes, and Instagram's app-only features — link stickers, pinning, native-audio reels. Each arrives as steps with the copy already written. Everything else is automated, and anything that lands on the founder without instructions is a bug in the task, not a chore for the founder.
+Instagram's app-only features — link stickers, pinning, native-audio reels. Each arrives as steps with the copy already written. Everything else is automated, and anything that lands on the founder without instructions is a bug in the task, not a chore for the founder.
+
+**The two Substack Notes moved to the agents on 2026-08-17** (founder ruling). Substack still has no API; the path is keystroke injection into its contenteditable composer through the founder's logged-in Chrome, which became possible when the permission that blocked it on 2026-08-16 was granted. The tasks post verbatim pack copy and verify on the live profile rather than on the click.
+
+**Autonomy changed what a missed schedule costs, so both note tasks carry a lateness guard.** These tasks fire while the desktop app is open and otherwise at next launch — on 2026-08-16 `gmg-saturday-note` ran at 3:39 PM against a 9:15 AM schedule because the app was closed. Handing over copy six hours late cost nothing. Posting six hours late misses a researched window and pollutes the timing data the Friday task reads. So a note task firing more than an hour past its slot does not post: it hands the founder the copy and the decision. Each task also refuses to post when the week's essay did not publish, when the note is already the top note on the profile, or when the week is held.
+
+Every failure degrades to the old behaviour — the founder gets the copy and the steps. Nothing about this makes a missed note worse than it was.
 
 ## The iCloud phone kit
 
