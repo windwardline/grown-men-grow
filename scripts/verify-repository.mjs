@@ -130,6 +130,71 @@ function tilePlacements(text) {
     .map((match) => ({ photo: match[1] }));
 }
 
+// Publication order (established 2026-08-16). Three approved notes reference each
+// other in published copy, so the running order is constrained rather than
+// preferred: shipping them out of sequence prints sentences that are false to a
+// reader. The constraints were latent until they were read out of the bank, and
+// nothing recorded them, so they are enforced here rather than remembered.
+//
+//   "The maintenance model is unromantic, WHICH BY NOW IS A FAMILY TRAIT"
+//       -> friendship-has-a-maintenance-schedule before rest-is-not-a-reward
+//   "the same calendar that holds the oil change and now, IF THE LAST FIELD NOTE
+//    LANDED, the rest"
+//       -> rest-is-not-a-reward IMMEDIATELY before you-cant-outwork
+//   "booked by the calendar and not by crisis. YOU KNOW THIS ARGUMENT BY NOW"
+//       -> rest-is-not-a-reward before your-body-keeps-the-books
+const ORDER_BEFORE = [
+  ['friendship-has-a-maintenance-schedule', 'rest-is-not-a-reward'],
+  ['rest-is-not-a-reward', 'your-body-keeps-the-books'],
+];
+const ORDER_ADJACENT = [
+  ['rest-is-not-a-reward', 'you-cant-outwork-a-wrong-direction'],
+];
+
+async function validatePublicationOrder() {
+  const text = await readFile(path.join(root, 'docs/technical/publication-order.md'), 'utf8');
+  const order = [...text.matchAll(/^\|\s*(\d+)\s*\|\s*`([a-z0-9-]+)`/gm)]
+    .map((match) => ({ position: Number(match[1]), slug: match[2] }))
+    .sort((a, b) => a.position - b.position);
+
+  if (order.length < 2) {
+    fail('docs/technical/publication-order.md lists fewer than two notes; the order check examined nothing.');
+    return;
+  }
+
+  const positions = new Map(order.map((entry, index) => [entry.slug, index]));
+  if (positions.size !== order.length) fail('docs/technical/publication-order.md lists a note more than once.');
+  for (const [index, entry] of order.entries()) {
+    if (entry.position !== index + 1) {
+      fail(`docs/technical/publication-order.md numbering is not contiguous at ${entry.slug} (reads ${entry.position}, expected ${index + 1}).`);
+    }
+  }
+
+  const notes = (await filesUnder('content/field-notes', '.md')).map((file) => path.basename(file, '.md'));
+  for (const slug of notes) {
+    if (!positions.has(slug)) fail(`content/field-notes/${slug}.md is approved but holds no slot in docs/technical/publication-order.md.`);
+  }
+  for (const slug of positions.keys()) {
+    if (!notes.includes(slug)) fail(`docs/technical/publication-order.md gives a slot to ${slug}, which is not an approved field note.`);
+  }
+
+  for (const [first, second] of ORDER_BEFORE) {
+    if (!positions.has(first) || !positions.has(second)) continue;
+    if (positions.get(first) >= positions.get(second)) {
+      fail(`${first} must publish before ${second}; ${second} calls back to it in approved copy.`);
+    }
+  }
+  for (const [first, second] of ORDER_ADJACENT) {
+    if (!positions.has(first) || !positions.has(second)) continue;
+    if (positions.get(second) - positions.get(first) !== 1) {
+      fail(
+        `${first} must publish IMMEDIATELY before ${second}. ${second} says "if the last field note landed, the rest", `
+        + 'which names the note directly before it — anything else prints a sentence that is false to the reader.',
+      );
+    }
+  }
+}
+
 // Forward visual rule (founder-ruled 2026-08-16): every separately published
 // public asset must be visually its own. A photograph belongs to at most ONE
 // Instagram asset. Repeats WITHIN an asset stay fine — a carousel is one
@@ -227,6 +292,7 @@ const requiredFiles = [
   'scripts/render-field-note-10.mjs',
   'scripts/render-field-note-11.mjs',
   'scripts/render-field-note-12.mjs',
+  'scripts/stage-next-field-note.mjs',
   'scripts/render-brand-banners.mjs',
   'scripts/render-ghost-feature-images.mjs',
   'scripts/render-instagram-pinned-intro.mjs',
@@ -243,6 +309,7 @@ const requiredFiles = [
   'theme/post.hbs',
   'docs/editorial-visual-system.md',
   'docs/technical/distribution-plan.md',
+  'docs/technical/publication-order.md',
   'docs/technical/community-moderation.md',
   'assets/concepts/editorial-collage-v1/README.md',
   'assets/source/editorial/README.md',
@@ -322,6 +389,7 @@ await validateAssetFamily('assets/drafts/instagram/field-note-10-carousel', 7, 1
 await validateAssetFamily('assets/drafts/instagram/field-note-11-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-12-carousel', 7, 1080, 1350);
 await validatePhotographExclusivity('assets/drafts/instagram');
+await validatePublicationOrder();
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
 await validateAssetFamily('assets/drafts/ghost/feature-images', 14, 1600, 1000);
 await validateEditorialConcepts();
