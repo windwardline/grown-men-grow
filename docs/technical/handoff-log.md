@@ -944,3 +944,45 @@ Bluesky's own numbers agree with Buffer's and add the profile state: 0 followers
 **External state changed:** one Ghost post scheduled — `a-confession-can-still-be-selfish`, 2026-08-25 08:00 ET, newsletter bound. One feature image uploaded to Ghost storage. Nothing published, sent, or posted; nothing on Instagram, Medium, Bluesky, Substack, or LinkedIn.
 
 **Open:** nothing carried. The next scheduled work is the Monday staging task on 2026-08-24, which will find 2026-08-25 already staged and verify it, then stage `friendship-has-a-maintenance-schedule` for 2026-09-01 from the register. Field Note 2 publishes 2026-08-18 08:00 ET and imports to Medium 2026-08-20.
+
+## 2026-08-17 — Claude Code: the week is staged, and one asset is held on a caption that would have lied
+
+**Client:** Claude Code (scheduled task `gmg-monday-staging`, unattended). **Branch:** `ops/monday-staging-2026-08-17`.
+
+**No week-level hold. One asset held.** The Ghost essay, the newsletter, and three of the four Buffer posts are staged and correct. Thursday's Instagram carousel was not queued.
+
+**Why it was held.** Field Note 2's approved Instagram caption closes: *"The next field note is about the friendships men say matter and the maintenance we keep pretending they do not require."* That names the note in the slot immediately after this one. `publication-order.md` puts `a-confession-can-still-be-selfish` at position 2, and it has been scheduled on Ghost for 2026-08-25 since yesterday. Posted Thursday, that sentence tells readers something that is not true — a factual error in queued copy, which is a hold trigger on its own terms.
+
+**The root defect is in the register, not the caption.** Yesterday's constraint scan read essay bodies and stopped there. Captions and platform packs were never read, and one of them carries a cross-reference of exactly the kind the scan was built to find. Four such references exist across the approved bank; the register records three. Recorded in `publication-order.md` as a fourth constraint with the conflict stated plainly.
+
+**The constraint was deliberately not added to the checker.** The order violates it right now, so enforcing it would fail `verify-repository.mjs` on every pull request until the founder rules. It lands in the checker in the change set that resolves the conflict, and the scan widens to captions and packs at that point. Following the same judgment recorded here yesterday about gate entries for assets that do not yet exist.
+
+**Held rather than fixed, because both exits are the founder's.** Move `friendship-has-a-maintenance-schedule` to 2026-08-25 — which satisfies the caption and all three existing constraints, costs the back-to-back-friendship preference, and requires un-scheduling the confession note — or amend the caption's closing line. Editing approved copy and reordering the register are both founder decisions, and the register itself forbids reordering for a week's convenience. Nothing was chosen here.
+
+**The essay body is clean and was checked, not assumed.** The scheduled post's plaintext was read through the Admin API: 1,409 words, no forward reference, closing on *"Which friend have you been waiting for a reason to call?"* Tuesday's publish and send carry no defect.
+
+**Tomorrow's post verified.** `call-your-friends-before-theres-a-reason`, scheduled 2026-08-18 12:00Z (08:00 ET), feature image present, custom excerpt, meta title and description set, newsletter bound to `default-newsletter` with `email_segment: all` and the subject line set. Nothing needed re-cycling.
+
+**A verification trap worth recording, because it nearly caused a needless draft→scheduled cycle.** Passing both `fields` and `include` to the Ghost posts endpoint returns `newsletter: NONE` on a correctly bound post — `fields` is applied last and drops the relation `include` fetched. The first query this run reported both scheduled posts unbound. Verify relations with `include` and no `fields`.
+
+**Feed-tile check passed on evidence, not inference.** `verify-repository.mjs` clean, then Buffer's sent queue read directly: the most recent Instagram post is the 2026-08-16 static repost on `fear-with-good-posture-v2.png`, built on `friends-in-conversation.png`. This week's tile is carousel slide 1 on `walking-after-the-work.png`, which `render-field-note-02.mjs` holds exclusively. Different photographs, no collision.
+
+**Queued, verbatim, verified by re-query:** Bluesky `6a830f6b9011eab36c6e6b8f` Tue 12:00 PM ET; LinkedIn `6a830f6c2ab9311e03e13d22` Wed 10:00 AM ET; Bluesky canonical-link `6a830f6cc354a3f200119698` Sat 9:30 AM ET. All `customScheduled`/`automatic`. Copy was extracted from the approved sources by script rather than retyped, so the only edit is the pack's own `[canonical link]` placeholder resolved to the canonical URL with the Essay 1 UTM shape; the extractor throws if that placeholder is absent. Buffer's queue was empty before this run.
+
+**Two Buffer API corrections.** `PostsInput` takes no `limit` — pagination is not exposed on that field, and the filter shape is `PostsFiltersInput`. `sort` is a **list** of `PostSortInput`, not a single object. The project memory records neither.
+
+**Phone kit built** at `Week 02 — Call Your Friends Before There's a Reason`: Substack Note 1 (Tue), the held carousel with both exits spelled out and its seven PNGs for manual posting, Substack Note 2 (Sat), and a backup folder carrying the three auto-posted texts. The READ ME opens on the held asset so it is the first thing read from a phone. Field Note 2 has no story or reel assets, so there are no link-sticker actions this week.
+
+**No new reader-facing prose was written.** Every piece of editorial copy in the kit and the queue is verbatim from `content/`. The nine tests in `editorial-underpinning.md` had nothing to run against; the kit's own text is operational instruction to the founder, not copy addressed to a reader.
+
+**Files changed:** `docs/technical/publication-order.md`, this log. Outside the repository: the Week 02 iCloud kit (12 files).
+
+**Verification:** `node scripts/verify-ghost-theme.mjs`, `pnpm --dir theme install --frozen-lockfile`, `pnpm --dir theme test`, `pnpm --dir theme zip` plus `gscan -z --fatal --verbose`, `node scripts/verify-repository.mjs`, `bash scripts/verify-svg-xml.sh`, `git diff --check`.
+
+**External state changed:** three Buffer posts scheduled. Nothing published, sent, or posted. No Ghost post was modified — tomorrow's was already correct. No image was uploaded, because the carousel upload happens only on the queueing path that was held.
+
+**Coverage this run could not reach, stated rather than implied.** Reader replies on Bluesky, LinkedIn, and Instagram are not readable through Buffer's API — it exposes metrics and posts, no engagement or comments query — so the replies-escalation limb of the hold check was satisfied only for Ghost, which has one member and zero comments. A founder-life crisis is not observable from here at all. Both remain the founder's to call.
+
+**The public-event limb, and the judgment made on it.** Scanned: record flooding in Indiana with six deaths and ~130,000 customers still without power, a tropical storm across Hawaii's Big Island with one death, and Tommy John's death at 83. Judged not a hold. The essay lists *"a flooded basement"* among the emergencies men show up for, which against this week's news reads as sympathetic rather than oblivious — men arriving with the wrong food and the right tool is the passage's point. Named here because it is a close call and the founder may weigh it differently; the essay is stoppable until 08:00 ET.
+
+**Open:** the caption-versus-order conflict, which needs a founder ruling before Thursday 09:00 ET for the carousel to make its slot. If the ruling comes by Wednesday night the queueing is a single step. Nothing else carried.
