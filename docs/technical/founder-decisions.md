@@ -108,3 +108,10 @@ Credentials remain in authenticated sessions, a password manager, macOS Keychain
 - [x] From this point forward, every separately published public asset must be visually its own: **a photograph belongs to at most one published asset.** Repeats within a single asset remain fine — a carousel is one narrative unit and may use its article's photography across its own slides.
 - [x] Prior visual approvals are **revoked for anything not yet public.** Approval of copy is unaffected; this covers art direction only. An unpublished asset that shares a photograph with any other asset must be corrected before it can post, including where the other asset is grandfathered.
 - [x] Agents are authorized to generate whatever new photography, compositions, or type-led replacements are required to satisfy this, under the existing house prompt and quality gate.
+
+## Field Note 2 caption amendment (founder-ruled 2026-08-17)
+
+- [x] The Instagram caption's closing line — "The next field note is about the friendships men say matter and the maintenance we keep pretending they do not require" — is **cut**. It named the note in the slot immediately after Field Note 2, which the publication order does not hold.
+- [x] Cut rather than rewritten. Any rewrite naming the next piece rebuilds the same coupling.
+- [x] The publication order is **unchanged**. No slot moved, and `a-confession-can-still-be-selfish` keeps 2026-08-25.
+- [x] Approval covers this one line in this one caption. Every other word of Field Note 2's approved copy stands as approved on 2026-08-08.

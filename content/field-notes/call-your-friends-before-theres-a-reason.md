@@ -206,8 +206,6 @@ But the activity cannot carry every subject forever.
 
 A friendship needs practice before it can hold a crisis. That practice is usually ordinary: ask a specific question, remember the answer, call when nothing is wrong, and let the other man know you too.
 
-The next field note is about the friendships men say matter and the maintenance we keep pretending they do not require.
-
 # Instagram alt text source
 
 - Slide 1: Two friends walking a bright neighborhood sidewalk carrying a canvas tool bag, in a paper collage with the title running up the left edge and a hand-drawn route line.
@@ -232,6 +230,7 @@ The next field note is about the friendships men say matter and the maintenance 
 # Production notes
 
 - The founder approved the title, thesis, Ghost essay, carousel, caption, and existing first-person paragraph on 2026-08-08.
+- The Instagram caption's closing line — "The next field note is about the friendships men say matter and the maintenance we keep pretending they do not require" — was cut on 2026-08-17 by founder ruling. It named the note in the slot immediately after this one, which the publication order does not hold, so it would have been false to a reader on the day it posted. The line was promotional rather than structural and the caption now closes on "and let the other man know you too." Cut rather than rewritten: any rewrite naming the next piece would rebuild the same coupling.
 - The piece remains as written. Do not invent a concrete friendship scene for narrative force. Add one only from founder-supplied facts and only if it materially improves the opening.
 - `assets/source/editorial/friends-in-conversation.png` is a composition study, not documentary evidence of the essay's events. It may be used only under the repository's visible-collage and full-resolution review controls.
 - Publication timing and final artwork require a later release decision.

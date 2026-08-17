@@ -151,6 +151,76 @@ const ORDER_ADJACENT = [
   ['rest-is-not-a-reward', 'you-cant-outwork-a-wrong-direction'],
 ];
 
+// A hardcoded constraint list inherits the blind spots of the scan that built
+// it. The three above were read out of essay bodies on 2026-08-16; captions and
+// packs were never read, and on 2026-08-17 the Monday staging task found a
+// fourth reference in Field Note 2's Instagram caption promising that the next
+// note was the maintenance piece. The order does not hold that, so the sentence
+// would have been false on the day it posted. The founder cut the line.
+//
+// So the list is no longer the only defence. Every approved field note and
+// platform pack is scanned for EXPLICIT relative references to another note;
+// each hit must be registered below, and an unregistered one fails the build.
+// A sentence like this added to any caption now either registers as a
+// constraint or does not ship.
+//
+// What this does NOT catch, stated so the gate does not imply coverage it
+// lacks: implicit callbacks carrying no findable phrase. "which by now is a
+// family trait" (rest-is-not-a-reward) and "you know this argument by now"
+// (your-body-keeps-the-books) are registered by hand above, and a future
+// callback written that way still needs a human to read for it.
+const RELATIVE_REFERENCE = /\bthe (?:next|last|previous|preceding|following|earlier) field note\b/gi;
+
+// file basename -> the phrases it is allowed to contain, each with the
+// constraint that makes it true. A hit not listed here is a build failure.
+const REGISTERED_REFERENCES = new Map([
+  ['you-cant-outwork-a-wrong-direction', new Set(['the last field note'])],
+]);
+
+// Internal sections are stripped before scanning. They never reach a reader, and
+// they legitimately quote removed copy as provenance — Field Note 2's production
+// notes quote the very line the founder cut on 2026-08-17, which the scan would
+// otherwise report as the defect it is recording. Only reader-facing sections
+// are read: the essay source, the carousel slides, the caption, the alt text.
+const INTERNAL_SECTIONS = ['Visual direction', 'Production notes'];
+
+function readerFacingCopy(text) {
+  let copy = text;
+  for (const heading of INTERNAL_SECTIONS) {
+    copy = copy.replace(
+      new RegExp(`^# ${heading}\\s*$[\\s\\S]*?(?=^# |(?![\\s\\S]))`, 'gm'),
+      '',
+    );
+  }
+  return copy;
+}
+
+async function validateCrossReferences() {
+  const sources = [
+    ...(await filesUnder('content/field-notes', '.md')),
+    ...(await filesUnder('content/distribution', '.md')),
+  ];
+  if (sources.length === 0) {
+    fail('The cross-reference scan found no approved copy to read; it examined nothing.');
+    return;
+  }
+
+  for (const file of sources) {
+    const slug = path.basename(file, '.md');
+    const text = readerFacingCopy(await readFile(file, 'utf8'));
+    const allowed = REGISTERED_REFERENCES.get(slug) ?? new Set();
+    for (const match of text.matchAll(RELATIVE_REFERENCE)) {
+      const phrase = match[0].toLowerCase();
+      if (allowed.has(phrase)) continue;
+      fail(
+        `${path.relative(root, file)} says "${match[0]}", an unregistered reference to another note's slot. `
+        + 'Either register it in REGISTERED_REFERENCES with a constraint in publication-order.md that makes it '
+        + 'true, or remove it — a note whose copy names its neighbour cannot be reordered freely.',
+      );
+    }
+  }
+}
+
 async function validatePublicationOrder() {
   const text = await readFile(path.join(root, 'docs/technical/publication-order.md'), 'utf8');
   const order = [...text.matchAll(/^\|\s*(\d+)\s*\|\s*`([a-z0-9-]+)`/gm)]
@@ -390,6 +460,7 @@ await validateAssetFamily('assets/drafts/instagram/field-note-11-carousel', 7, 1
 await validateAssetFamily('assets/drafts/instagram/field-note-12-carousel', 7, 1080, 1350);
 await validatePhotographExclusivity('assets/drafts/instagram');
 await validatePublicationOrder();
+await validateCrossReferences();
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
 await validateAssetFamily('assets/drafts/ghost/feature-images', 14, 1600, 1000);
 await validateEditorialConcepts();

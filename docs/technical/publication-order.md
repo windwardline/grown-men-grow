@@ -16,17 +16,23 @@ This is the part that matters. **Three of the approved notes reference each othe
 
 These were found by reading the bank, not by preference, and they were latent: nothing in the repository recorded them and any arbitrary running order would have broken at least one. `verify-repository.mjs` now fails if the order below violates any of them.
 
-### A fourth constraint, found 2026-08-17, and the order currently violates it
+### A fourth reference was found in a caption, and the caption gave way
 
-The scan that produced the three constraints above read **essay bodies only**. It did not read the Instagram captions or the platform packs, and one of them carries a cross-reference of exactly the same kind.
+The scan that produced the three constraints above read **essay bodies only**. It did not read the Instagram captions or the platform packs, and one of them carried a cross-reference of exactly the same kind — found 2026-08-17 by the Monday staging task, which held the carousel rather than posting it.
 
-Field Note 2's approved Instagram caption closes: *"The next field note is about the friendships men say matter and the maintenance we keep pretending they do not require."* That sentence names the note in the slot **immediately after** Field Note 2 — so it requires `friendship-has-a-maintenance-schedule` at position 2, where the order below has `a-confession-can-still-be-selfish`.
+Field Note 2's caption closed: *"The next field note is about the friendships men say matter and the maintenance we keep pretending they do not require."* That named the note in the slot immediately after Field Note 2, which the order does not hold — `a-confession-can-still-be-selfish` sits there and was already scheduled on Ghost for 2026-08-25.
 
-The caption is founder-approved copy from 2026-08-09 and the confession note is already scheduled on Ghost for 2026-08-25, so this is a conflict between two approved artifacts and its resolution is a founder decision, recorded here when it is made. Two clean resolutions exist: move the maintenance note to position 2 (which satisfies the caption and every constraint above, at the cost of the back-to-back-friendship preference), or amend the caption's closing line.
+**Founder ruling, 2026-08-17: the line was cut and the order stands.** Moving `friendship-has-a-maintenance-schedule` up to position 2 would also have made the sentence true, and satisfied every constraint above, but it would have meant reordering the register to accommodate one promotional sentence — the thing this document explicitly forbids — while un-scheduling a staged post and running two friendship pieces back to back. The line was cut rather than rewritten because any rewrite that named the next piece would rebuild the same coupling.
 
-**This constraint is deliberately not enforced by the checker yet.** Adding it while the order violates it would fail `verify-repository.mjs` on every pull request in the repository until the founder rules — a gate that blocks unrelated work is worse than a documented conflict. It goes into the checker in the same change set that resolves the conflict, and the checker's scan is widened to captions and packs at that point so this class of reference cannot hide again.
+**The order below is unchanged by this.** No slot moved.
 
-Until then the Monday staging task holds the Field Note 2 carousel rather than queueing it; the essay body carries no such reference, so the Ghost publish and newsletter are unaffected.
+### Why a fourth one could hide, and what now catches the fifth
+
+The three constraints above were found by reading and then hardcoded. A hardcoded list inherits the blind spots of the scan that produced it, which is precisely how a caption went unread.
+
+`verify-repository.mjs` now scans **every approved field note and platform pack** — essay bodies, Instagram captions, alt text, and packs alike — for explicit relative references to another note ("the next field note", "the last field note", and the like). Every hit must be registered against a constraint; an unregistered one fails the build. Adding such a sentence to any caption from now on either registers as a constraint or does not ship.
+
+Stated plainly because the alternative is a gate implying coverage it does not have: this catches **explicit** relative references only. The `rest-is-not-a-reward` and `your-body-keeps-the-books` callbacks — *"which by now is a family trait"*, *"you know this argument by now"* — carry no phrase a regex can find. They are registered by hand, and a future callback written that way will still need a human to read for it.
 
 ## The order
 
