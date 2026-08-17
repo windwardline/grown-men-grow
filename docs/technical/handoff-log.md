@@ -986,3 +986,35 @@ Bluesky's own numbers agree with Buffer's and add the profile state: 0 followers
 **The public-event limb, and the judgment made on it.** Scanned: record flooding in Indiana with six deaths and ~130,000 customers still without power, a tropical storm across Hawaii's Big Island with one death, and Tommy John's death at 83. Judged not a hold. The essay lists *"a flooded basement"* among the emergencies men show up for, which against this week's news reads as sympathetic rather than oblivious — men arriving with the wrong food and the right tool is the passage's point. Named here because it is a close call and the founder may weigh it differently; the essay is stoppable until 08:00 ET.
 
 **Open:** the caption-versus-order conflict, which needs a founder ruling before Thursday 09:00 ET for the carousel to make its slot. If the ruling comes by Wednesday night the queueing is a single step. Nothing else carried.
+
+## 2026-08-17 — Claude Code: the founder cut the line, the carousel shipped, and the scan that missed it was widened
+
+**Client:** Claude Code (desktop, founder-directed, continuing the `gmg-monday-staging` run above). **Branch:** `ops/caption-amendment-2026-08-17`.
+
+**Founder ruling on the held asset:** cut Field Note 2's caption closing line, keep the publication order. Given as "Proceed as recommended" against a stated recommendation of that option over reordering the register.
+
+**Why this option and not the other, since both made the sentence true.** Moving `friendship-has-a-maintenance-schedule` to 2026-08-25 satisfies the caption and every recorded constraint. It was rejected because it reorders the register to accommodate one promotional sentence — the thing `publication-order.md` forbids in its own text — while un-scheduling a staged Ghost post and running two friendship pieces back to back. Cutting one line that sits outside the caption's argument was the smaller change by every measure.
+
+**Cut, not rewritten.** Any rewrite that still named the next piece would rebuild the same coupling and return the next time a slot moves. The caption closes on *"and let the other man know you too."*
+
+**The carousel is queued.** Buffer `6a8355d987edd9b4df329762`, Instagram, Thursday 2026-08-20 09:00 ET, `customScheduled`/`automatic`, seven slides at 1080×1350 with per-slide alt text verified present on all seven after creation. Slides uploaded to Ghost storage as `fn2-c1.png` through `fn2-c7.png`. The caption was re-extracted from the amended source rather than edited in flight, so what is queued is what the repository holds. The week's queue is now four posts: Bluesky Tue 12:00, LinkedIn Wed 10:00, Instagram Thu 09:00, Bluesky Sat 09:30.
+
+**The gate that should have caught this now exists.** `verify-repository.mjs` scans every approved field note and platform pack for explicit relative references to another note. Every hit must be registered against a constraint; an unregistered one fails the build. This replaces reliance on a hardcoded list that inherited the blind spots of the scan that produced it — the 2026-08-16 scan read essay bodies and never opened a caption.
+
+**Proved on four branches before acceptance,** each restored clean: passes as written; fails naming Field Note 2 when the line is reinstated in the caption; fails naming the pack when a reference is planted in `field-note-05-platforms.md`, which is the widened scope actually working; and still passes the registered `you-cant-outwork-a-wrong-direction` hit rather than failing everything containing the phrase.
+
+**One real finding from writing the gate, recorded because it nearly shipped as a false gate.** The first version failed on the unmodified tree — correctly, on the provenance note that quotes the cut line inside `# Production notes`. Internal sections never reach a reader and legitimately quote removed copy, so `# Visual direction` and `# Production notes` are stripped before scanning. An unscoped version reports the record of the defect as the defect.
+
+**What the gate deliberately does not do.** It catches explicit relative references only. The `rest-is-not-a-reward` and `your-body-keeps-the-books` callbacks carry no phrase a regex can find and stay hand-registered. Stated in the code, the register, and the decision log rather than left for someone to discover by trusting it too far.
+
+**Two more Buffer API shapes.** `Query.post` takes `input:{id}` (a `PostInput!`), not a bare `id` argument. Alt text reads back at `assets { ... on ImageAsset { image { altText } } }` — the field is `image`, of type `ImageMetadata`, not `metadata`.
+
+**Phone kit rebuilt** for the resolved week: two founder actions, both Substack, renumbered `1 — TUE` and `2 — SAT`. The carousel moved into the backup folder with its seven slides, its alt text, and a caption file re-derived from the amended source, so a manual fallback cannot post the withdrawn line. The READ ME states plainly that the hold is over and nothing further is owed on it.
+
+**Files changed:** `content/field-notes/call-your-friends-before-theres-a-reason.md`, `scripts/verify-repository.mjs`, `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `docs/technical/founder-decisions.md`, this log. Outside the repository: the Week 02 iCloud kit, restructured.
+
+**Verification:** `node scripts/verify-ghost-theme.mjs`, `pnpm --dir theme install --frozen-lockfile`, `pnpm --dir theme test`, `pnpm --dir theme zip` plus `gscan -z --fatal --verbose`, `node scripts/verify-repository.mjs`, `bash scripts/verify-svg-xml.sh`, `git diff --check`.
+
+**External state changed:** one Buffer post scheduled (the carousel). Seven images uploaded to Ghost storage. No Ghost post was created, modified, published, or sent; nothing posted to any platform.
+
+**Open:** whether Substack Note 1 is posted by the founder or by an agent at tomorrow's 12:00 ET slot. The keyboard-input permission that blocked this on 2026-08-16 is in place and verified, so it is now possible from here; it was offered and not answered, and posting public content is not assumed from silence. The kit currently instructs the founder to post it, which is safe either way.
