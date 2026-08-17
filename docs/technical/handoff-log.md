@@ -916,3 +916,31 @@ Bluesky's own numbers agree with Buffer's and add the profile state: 0 followers
 **Cleanup completed:** every working branch from the day deleted locally and remotely, no worktrees, no open pull requests, working tree clean, scratch and temporary files removed, the local diagnostic server shut down and its port confirmed closed, and the founder's `~/Downloads` clear of the four ChatGPT images now tracked under `assets/source/editorial/`.
 
 **Open, carried into next week:** Field Note 11's publication slot and Field Note 12's publication slot, both founder decisions; the two unreferenced Ghost storage uploads above; and the standing note that the ChatGPT-to-disk step is a founder action, so draft runs should hand it over rather than budget time for it. Field Note 2 publishes 2026-08-18 08:00 ET and imports to Medium 2026-08-20 under its real title.
+
+## 2026-08-16 — Claude Code: every carried item closed; the weekly slot question is answered permanently
+
+**Client:** Claude Code (desktop, founder-directed). **Branches:** `ops/publication-order` (#99), `ops/close-open-items`. Written in response to the founder's instruction not to carry anything into next week.
+
+**The publication order is decided, recorded, and enforced.** `docs/technical/publication-order.md` is the register of record. `publish-timing.md` had always set *when* a slot happens; nothing set *which note fills it*, which is why the question returned to the founder weekly and why the staging task had nothing to read.
+
+**The order turned out to be constrained rather than preferred, and this was a latent defect.** Three approved notes reference each other in published copy. `you-cant-outwork-a-wrong-direction` contains *"if the last field note landed, the rest"* — "the last field note" names the note immediately prior, so `rest-is-not-a-reward` must occupy the slot directly before it. `rest-is-not-a-reward` calls the maintenance framing *"by now a family trait"*, requiring `friendship-has-a-maintenance-schedule` first. `your-body-keeps-the-books` says *"you know this argument by now: by interval, not by feeling"*, which is Rest's phrasing. Any arbitrary running order would have broken at least one and printed a sentence false to the reader. Nothing recorded them; they were read out of the bank.
+
+**Enforced rather than remembered.** `verify-repository.mjs` fails on a violated constraint, non-contiguous numbering, an approved note with no slot, or a slot naming a note that does not exist. Each of the four was proved by breaking the register, confirming the named failure, and restoring.
+
+**The next slot is staged, not merely planned.** `a-confession-can-still-be-selfish` is scheduled for 2026-08-25 08:00 ET with the newsletter bound (`default-newsletter`, segment `all`), the feature image uploaded to Ghost storage, and all twenty of its source blocks verified present in the rendered post with the closing line intact. **One week only, deliberately** — the staging task's hold check governs each week and scheduling further ahead would bypass a check that exists to pull a week when the founder's life or the news requires it.
+
+**The staging procedure is a script now.** `scripts/stage-next-field-note.mjs` uploads the feature image, builds the post from the approved source, and performs the draft→scheduled transition that binds the newsletter, then prints a verification block. It exists because that binding is silently lost if set on an already-scheduled post, and the failure mode is a post that publishes without sending. A run reporting `newsletter: NONE` is a failure, not a warning.
+
+**The Monday staging task now reads the register** and is told explicitly not to put the slot question to the founder.
+
+**The Ghost storage orphans are closed as not-actionable, verified rather than assumed.** `DELETE` on the images endpoint returns 405 and the collection route does not exist; Ghost ships no media library, and the documented remedies require filesystem access that Ghost(Pro) does not provide. Nobody can remove those two files short of a Ghost support request. They are unreferenced, invisible on every public surface, and cost nothing. Recorded in the decision log so a future agent stops there instead of retrying the API.
+
+**Correcting my own earlier close-out.** The preceding entry listed both publication slots and the storage orphans as carried items. None of them needed to be carried: two were a missing decision that had never been written down, and the third was never actionable in the first place.
+
+**Files changed:** `docs/technical/publication-order.md` (new), `scripts/stage-next-field-note.mjs` (new), `scripts/verify-repository.mjs`, `docs/technical/decision-log.md`, this log. Outside the repository: `~/.claude/scheduled-tasks/gmg-monday-staging/SKILL.md`.
+
+**Verification:** `node scripts/verify-repository.mjs` (453 tracked files, 25 JavaScript files), `bash scripts/verify-svg-xml.sh` (134 SVGs), `node scripts/verify-ghost-theme.mjs` (17 files), `pnpm --dir theme install --frozen-lockfile`, `pnpm --dir theme test`, `pnpm --dir theme zip` plus `gscan -z --fatal --verbose` (no fatal issues, Ghost 6.x), `git diff --check`. Full CI green on every pull request before merge.
+
+**External state changed:** one Ghost post scheduled — `a-confession-can-still-be-selfish`, 2026-08-25 08:00 ET, newsletter bound. One feature image uploaded to Ghost storage. Nothing published, sent, or posted; nothing on Instagram, Medium, Bluesky, Substack, or LinkedIn.
+
+**Open:** nothing carried. The next scheduled work is the Monday staging task on 2026-08-24, which will find 2026-08-25 already staged and verify it, then stage `friendship-has-a-maintenance-schedule` for 2026-09-01 from the register. Field Note 2 publishes 2026-08-18 08:00 ET and imports to Medium 2026-08-20.
