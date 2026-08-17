@@ -115,3 +115,11 @@ Credentials remain in authenticated sessions, a password manager, macOS Keychain
 - [x] Cut rather than rewritten. Any rewrite naming the next piece rebuilds the same coupling.
 - [x] The publication order is **unchanged**. No slot moved, and `a-confession-can-still-be-selfish` keeps 2026-08-25.
 - [x] Approval covers this one line in this one caption. Every other word of Field Note 2's approved copy stands as approved on 2026-08-08.
+
+## Substack Notes posting authority (founder-ruled 2026-08-17)
+
+- [x] Agents may post the weekly Substack Notes directly to the Grown Men Grow profile. Both notes move off the founder's list.
+- [x] Copy is posted **verbatim** from the approved pack. This authorizes the posting action only; it does not authorize writing, editing, or improvising note copy.
+- [x] The path is keystroke injection into Substack's contenteditable composer through the founder's logged-in Chrome. It became possible when the permission that blocked it on 2026-08-16 was granted; there is still no Substack API.
+- [x] Authority is limited to the two scheduled notes at their scheduled slots. Note 3, the canonical-link note, remains unposted. Replies, direct messages, restacks, and profile changes are not covered.
+- [ ] Instagram app-only features — link stickers, pinning, native-audio reels — remain founder actions. No API or browser path exists.

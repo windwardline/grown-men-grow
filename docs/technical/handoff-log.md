@@ -1018,3 +1018,35 @@ Bluesky's own numbers agree with Buffer's and add the profile state: 0 followers
 **External state changed:** one Buffer post scheduled (the carousel). Seven images uploaded to Ghost storage. No Ghost post was created, modified, published, or sent; nothing posted to any platform.
 
 **Open:** whether Substack Note 1 is posted by the founder or by an agent at tomorrow's 12:00 ET slot. The keyboard-input permission that blocked this on 2026-08-16 is in place and verified, so it is now possible from here; it was offered and not answered, and posting public content is not assumed from silence. The kit currently instructs the founder to post it, which is safe either way.
+
+## 2026-08-17 — Claude Code: the Substack Notes move to the agents, and autonomy buys a lateness guard
+
+**Client:** Claude Code (desktop, founder-directed, third entry of the day). **Branch:** `ops/substack-notes-authority-2026-08-17`.
+
+**Founder ruling:** agents may post the weekly Substack Notes directly. Given as "You can do that" against an offer to take both notes off the founder's list. Week 2 now has no founder action at all.
+
+**Nothing was posted today, and the reason is timing rather than caution.** Note 1's slot is Tuesday 12:00 PM ET, after the essay lands at 08:00; Note 2's is Saturday 09:30. It was 14:49 Monday. Posting on receipt of the authorization would have put a fragment of an unpublished essay on the profile twenty-one hours early.
+
+**The pre-flight was run instead, and it passes.** `substack.com/@grownmengrow/notes` loads in the founder's Chrome under the publication identity — "Edit profile" present, composer reachable, Note 2 from 2026-08-16 15:47 and Note 1 from 2026-08-11 14:39 both live. The page was read, not touched. A dead session discovered at 11:59 tomorrow would have cost the slot.
+
+**Both tasks rewritten to post rather than hand off.** `gmg-tuesday-note` and `gmg-saturday-note` now extract the pack section programmatically, post verbatim through the contenteditable composer, and **verify on the reloaded profile rather than on the click**.
+
+**The substantive change is a lateness guard, and it exists because autonomy changed what a missed schedule costs.** These tasks fire while the desktop app is open and otherwise at next launch. On 2026-08-16 `gmg-saturday-note` ran at 15:39 against a 09:15 schedule. That was diagnosed rather than guessed: the cron is correct (`15 9 * * 6`, next run 09:20 ET), and `gmg-saturday-draft` carries the identical 19:39:02Z timestamp, which is the signature of both firing on app launch. **This closes the open item left by that entry, which recorded the late fire and said the task's timing had not been examined.**
+
+Handing over copy six hours late cost nothing. Posting six hours late misses a researched window and feeds bad data to `gmg-friday-analytics`, whose whole purpose is validating those slots. So a note task more than an hour past its slot does not post — it hands the founder the copy and the decision.
+
+**Three further refusals, each with a reason rather than a rule.** The week's essay did not publish: Note 1 is a fragment of a fresh essay and means nothing without it. The note is already the top note: a re-run must never double-post. The week is held: the hold governs everything.
+
+**Every failure degrades to the previous behaviour.** Logged-out session, denied permission, changed composer, any precondition — all end with the founder holding the copy and the steps. The tasks are explicitly told not to attempt a login and not to route around a denied permission, following the judgment this log recorded on 2026-08-16 about the denied keystroke injection and the blocked image download.
+
+**The known fragility, stated so a reversion is not misread as a new defect.** Tool approvals are stored per scheduled task, and the grant that unblocked keystroke injection lives in machine-local `.claude/settings.local.json`. It may not carry to an unattended run. If it does not, tomorrow's task hands over copy exactly as it did last week. It cannot be rehearsed safely: a "Run now" today stops at the essay-published precondition before reaching the composer, so the only real proof is tomorrow's live run.
+
+**Phone kit rebuilt again.** The two note folders became reference copies, the READ ME opens on "nothing this week needs you", and it explains the one way a note comes back to the founder — Chrome closed, permission missing, or the task running late — so that outcome reads as designed rather than broken.
+
+**Files changed:** `docs/technical/operating-cadence.md`, `docs/technical/decision-log.md`, `docs/technical/founder-decisions.md`, this log. Outside the repository: `~/.claude/scheduled-tasks/gmg-tuesday-note/SKILL.md`, `~/.claude/scheduled-tasks/gmg-saturday-note/SKILL.md`, and the Week 02 iCloud kit.
+
+**Verification:** `node scripts/verify-ghost-theme.mjs`, `pnpm --dir theme install --frozen-lockfile`, `pnpm --dir theme test`, `pnpm --dir theme zip` plus `gscan -z --fatal --verbose`, `node scripts/verify-repository.mjs`, `bash scripts/verify-svg-xml.sh`, `git diff --check`.
+
+**External state changed:** none. The Substack profile was read only — nothing posted, liked, restacked, or edited. No Ghost or Buffer state changed in this entry; the week's four Buffer posts and the scheduled Ghost essay stand as recorded above.
+
+**Open:** whether the stored tool approval carries to tomorrow's unattended run, which is answered by the run itself. Instagram's app-only features remain founder actions with no path from here.
