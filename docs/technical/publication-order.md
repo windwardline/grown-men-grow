@@ -16,6 +16,18 @@ This is the part that matters. **Three of the approved notes reference each othe
 
 These were found by reading the bank, not by preference, and they were latent: nothing in the repository recorded them and any arbitrary running order would have broken at least one. `verify-repository.mjs` now fails if the order below violates any of them.
 
+### A fourth constraint, found 2026-08-17, and the order currently violates it
+
+The scan that produced the three constraints above read **essay bodies only**. It did not read the Instagram captions or the platform packs, and one of them carries a cross-reference of exactly the same kind.
+
+Field Note 2's approved Instagram caption closes: *"The next field note is about the friendships men say matter and the maintenance we keep pretending they do not require."* That sentence names the note in the slot **immediately after** Field Note 2 — so it requires `friendship-has-a-maintenance-schedule` at position 2, where the order below has `a-confession-can-still-be-selfish`.
+
+The caption is founder-approved copy from 2026-08-09 and the confession note is already scheduled on Ghost for 2026-08-25, so this is a conflict between two approved artifacts and its resolution is a founder decision, recorded here when it is made. Two clean resolutions exist: move the maintenance note to position 2 (which satisfies the caption and every constraint above, at the cost of the back-to-back-friendship preference), or amend the caption's closing line.
+
+**This constraint is deliberately not enforced by the checker yet.** Adding it while the order violates it would fail `verify-repository.mjs` on every pull request in the repository until the founder rules — a gate that blocks unrelated work is worse than a documented conflict. It goes into the checker in the same change set that resolves the conflict, and the checker's scan is widened to captions and packs at that point so this class of reference cannot hide again.
+
+Until then the Monday staging task holds the Field Note 2 carousel rather than queueing it; the essay body carries no such reference, so the Ghost publish and newsletter are unaffected.
+
 ## The order
 
 Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot and shift by a week whenever the staging task's hold fires.
