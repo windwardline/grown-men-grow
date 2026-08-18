@@ -1116,3 +1116,25 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** one Buffer personal access key created and one deleted, both by the founder in Buffer's dashboard. Nothing published, sent, posted, scheduled, or removed from any queue. Buffer was read only.
 
 **Open:** none. The Friday analytics run is the first unattended use of the helper, and it is the thing that proves the key survives a run nobody is watching.
+
+## 2026-08-18 — Claude Code: the secret scan could not pass on a Dependabot PR, so no dependency update could merge
+
+**Client:** Claude Code (desktop, founder-directed). **Branch:** `fix/secret-scan-dependabot-token`.
+
+**The defect.** `Secret scan` is a required status check in `main-requires-green-ci`. On a Dependabot-triggered run it failed with `403 Resource not accessible by integration`: gitleaks reads the PR's commit list through `GET /pulls/{n}/commits`, and on a **private** repo a Dependabot-scoped `GITHUB_TOKEN` cannot. So a required check could never go green on a Dependabot PR, and no dependency update could merge. PR #101 (osv-scanner-action 2.3.8 → 2.5.0) had been open since 2026-08-17 on exactly this.
+
+**Why a rebase was not the answer, checked rather than assumed.** The obvious read was that #101 predated the 2026-08-17 lane fix (#105, merged 16:07, two and a half hours after #101's runs). But `security.yml`'s secret-scan job is byte-identical on main and on that branch — the only drift between them is the osv pin the PR itself is bumping. The job was going to fail again on the same commit.
+
+**The fix is the one #105 already established.** The job mints a fleet App installation token and hands that to gitleaks, falling back to `GITHUB_TOKEN` when the App secrets are absent. `FLEET_AUTOMERGE_APP_ID` and `FLEET_AUTOMERGE_PRIVATE_KEY` live in the **Dependabot** secret store, so the mint runs on Dependabot events and is skipped everywhere else — human PRs, pushes, and the weekly schedule keep the behaviour they have always had, on the same token they have always used.
+
+**The exit that was rejected.** Guarding the job with `github.actor != 'dependabot[bot]'` is one line and would have turned the checks green today. GitHub counts a skipped required check as satisfied, so the gate would report a clean secret scan having scanned nothing — and `fleet-conformance.sh` fails that pattern by name, having caught Semgrep CE doing it on mimic#35.
+
+**Scope, stated because it looks fleet-wide and is not.** Public repos never hit this; a read-only token can list commits on a public repo. This is a private-by-design defect, and grown-men-grow is currently the fleet's private repo. `security.yml` is checked by the conformance script for presence and two properties, not byte-identity — only `dependabot-auto-merge.yml` is compared blob-for-blob — so this change creates no fleet drift.
+
+**Verified before merge:** `actionlint` clean on the edited workflow; the new `actions/create-github-app-token` pin is the same SHA and tag comment the auto-merge lane already carries, and the fleet pin sweep classified all 141 third-party refs as correct. Repository gates green — `verify-repository.mjs`, `verify-svg-xml.sh`, `verify-ghost-theme.mjs`, theme tests, `git diff --check`.
+
+**Verified after merge, which is the only verification that counts here:** #101 rebased onto the fixed workflow and its checks re-run. Recorded in the following entry.
+
+**Files changed:** `.github/workflows/security.yml`, this log.
+
+**External state changed:** none at merge time. No secret was created, read, or moved; both App secrets were already in the Dependabot store from 2026-08-11.
