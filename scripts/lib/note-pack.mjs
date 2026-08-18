@@ -71,7 +71,10 @@ export function extractNote(markdown, note) {
     if (!inSection) continue;
     if (/^##\s+/.test(line)) {
       if (inNote) break;
-      inNote = new RegExp(`^##\\s+Note ${note}(?:\\s|$)`).test(line);
+      // No dynamic RegExp: `note` is a validated integer, and a plain
+      // heading match avoids the ReDoS-shaped construct entirely.
+      const heading = line.replace(/^##\s+/, '');
+      inNote = heading === `Note ${note}` || heading.startsWith(`Note ${note} `);
       continue;
     }
     if (inNote) body.push(line);
