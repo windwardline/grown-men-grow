@@ -8,13 +8,14 @@ All programmatic access to the publication's platforms follows the machine-wide 
 | --- | --- | --- | --- |
 | `ghost-admin-key` | Ghost(Pro) Admin API on `https://grown-men-grow.ghost.io` (custom integration `ghost-admin-api`) | Content operations; member, tier, and settings reads (settings writes return 403) | HTTP 200 on `/ghost/api/admin/posts/?limit=1` |
 | `bluesky-app-password` | Bluesky app password (DM access excluded) | Direct AT Protocol operations (profile, posts) | HTTP 200 `createSession` as `grownmengrow.com` |
+| `buffer-api-token` | Buffer personal access key on `https://api.buffer.com` (GraphQL) | Reading and scheduling the week's Bluesky, LinkedIn, and Instagram posts | `node scripts/check-buffer-access.mjs` returning the pinned organization |
 | `cloudflare-dns-edit` | Cloudflare API token (Zone.DNS edit) | DNS for `windwardline.com` and `grownmengrow.com` via the `cf-dns` helper | Zone lookup returned `grownmengrow.com` |
 
 The Cloudflare entry predates this publication; its token was scope-extended to include the `grownmengrow.com` zone on 2026-08-10 (same secret, no new key).
 
 Two rows were renamed on 2026-08-17 to satisfy the `provider-purpose` convention: `ghost-admin-api` became `ghost-admin-key` (the old name read as a provider named "ghost-admin"), and `bluesky-claude-code` became `bluesky-app-password` (a credential is named for what it is, never for the client that happens to use it). The Ghost integration keeps its original dashboard name because renaming it there would re-issue the key. **This table is the operating instruction** — no script reads the Bluesky credential, so an agent following a stale name here runs a Keychain lookup that fails with nothing to explain why. `ops/credentials-check.sh` asserts the names still resolve.
 
-`buffer-api-token` was removed on 2026-08-17: the key had been dead since before the audit (Buffer returned 401), and it had no executing consumer — only this table. **Buffer itself is untouched and still automated.** The live Zap `Ghost post published → Buffer idea` runs on Zapier's own Buffer connection, which holds a separate credential this repo never had. Deleting a dead local key is not the same as removing a provider, and the two were briefly conflated here.
+`buffer-api-token` was removed on 2026-08-17 and re-issued on 2026-08-18. The removal reasoning was that the key was dead (Buffer returned 401) and had no executing consumer — only this table. The second half was true and is now fixed: `scripts/lib/buffer-api.mjs` is the executing consumer, so the credential is exercised by code rather than described by prose. **The first half does not survive its own timeline.** The same key scheduled four posts through this API on 2026-08-17, each verified by re-query, hours before it was called dead. A 401 was read as expiry without asking which host answered it — Buffer's older REST surface at `api.bufferapp.com` rejects a personal access key exactly that way, and so does the GraphQL host if the `Bearer` prefix is dropped. The key could not be recovered either way (Buffer shows a personal key once), so the fix was a new key, not an argument about the old one. The helper pins the host and names the 401 ambiguity in the error text so the next reading of it starts from the right question.
 
 ## Ghost Admin API
 
@@ -28,10 +29,24 @@ Diagnose a 403 by its message, never by the URL in the error — the redirect ma
 
 `/ghost/api/admin/site/` returns 200 on `grown-men-grow.ghost.io` with no `Authorization` header at all. It proves reachability and nothing about the key; probe with a path that requires auth.
 
+## Buffer GraphQL API
+
+Every Buffer call goes through `scripts/lib/buffer-api.mjs`. It reads the Keychain at call time, pins `https://api.buffer.com`, sends the key as a `Bearer` token, and never returns or prints it. `node scripts/check-buffer-access.mjs` is the status-only probe; it exits non-zero on any failure, so a refusal cannot be read as a pass.
+
+The key is created at `https://publish.buffer.com/settings/api` under **Personal Access**, and it is named `buffer-api-token` there as well as in the Keychain — the credential policy makes a differently-named provider key an orphan, and Buffer's own key list is the only place the name is visible. Creating one requires organization ownership and a verified account email.
+
+The probe does not stop at a 200. A valid key issued from a different Buffer account authenticates cleanly and then reads an empty queue, which reports as "nothing scheduled" rather than as a failure, so the probe also asserts the pinned organization id is among the ones the key can see.
+
+A GraphQL server answers errors with HTTP 200 and an `errors` array. The helper throws on that array rather than returning the partial `data` beside it.
+
+Query shapes are measured, not remembered: `introspectType()` reads the live schema for a type before any new query is written against it. Three scheduled-task files had each re-derived the `posts` shape from error messages, which is how `PostsInput` acquired a `limit` argument it has never had.
+
+Buffer has no API that enumerates personal keys, so the provider side of the credential rule — is there a key at Buffer with no Keychain counterpart? — is a manual look at the Personal Access tab. It belongs in `ops/credentials-provider-check.sh`'s console-only list, with the date it was last checked by eye.
+
 ## Deliberately keyless
 
 - **Zapier** — the client OAuth session self-manages and is exempt under the credential policy. The Ghost Admin key inside the Zap's connection is Zapier-held, not local.
-- **LinkedIn and Instagram** — no practical direct API for this use (organization posting requires platform app review). Buffer is their API layer, reached two ways: the live Zapier Zap (Zapier-held credential) and the browser. What ended on 2026-08-17 was *direct* API access from this machine, not Buffer automation.
+- **LinkedIn and Instagram** — no practical direct API for this use (organization posting requires platform app review). Buffer is their API layer, reached three ways: this machine's `buffer-api-token`, the live Zapier Zap (Zapier-held OAuth connection, exempt from the one-key rule as a client session), and the browser.
 - **Medium** — issues no new API tokens; syndication remains manual URL import.
 - **Substack** — no public API; Notes remain native.
 
