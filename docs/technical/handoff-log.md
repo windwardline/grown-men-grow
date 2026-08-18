@@ -1070,3 +1070,49 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **Verification:** `node scripts/verify-ghost-theme.mjs`, `node scripts/verify-repository.mjs`, `bash scripts/verify-svg-xml.sh`, `git diff --check`, plus a live `probeGhostAdmin()` returning 200 against the renamed key and a live Bluesky `createSession` returning 200 as `grownmengrow.com`.
 
 **Open:** none from this entry. Buffer is a browser-only surface again; nothing automated depended on the retired key.
+
+## 2026-08-18 — Claude Code: the Tuesday check, and Buffer gets a key with an executing consumer
+
+**Client:** Claude Code (desktop; scheduled task `gmg-tuesday-publish-check`, then founder-directed). **Branch:** `ops/buffer-key-restore`.
+
+**The publish fired clean.** *Call Your Friends Before There's a Reason* published 2026-08-18 12:00:00Z — 08:00:00 ET, on the minute — with the newsletter bound to `default-newsletter`, segment `all`, email submitted 12:00:15Z: sent 1, delivered 1, opened 1, failed 0. Members 1 total (1 free, 0 paid), unchanged since 2026-08-11. Ghost comments 0. The public page answers 200 with self-canonical, `og:type` article, `og:image` 1200×750, and `twitter:data1` reading "Grown Men Grow" — publication voice intact. The post is first in `sitemap-posts.xml`, present in `/rss/`, and linked from the homepage. Next scheduled: `a-confession-can-still-be-selfish`, 2026-08-25 12:00Z.
+
+**Step 3 of that task could not run, and the reason was the task itself.** It instructs an agent to read Buffer through Keychain `buffer-api-token`, which was deleted on 2026-08-17. Chrome was not connected (`list_connected_browsers` empty) and the Zapier MCP has only Resend enabled, so the queue could not be read any other way. This week's four Buffer posts are reported from yesterday's record, not from a live read.
+
+**The deletion rested on a false negative, and the timeline says so.** The key was called dead because Buffer returned 401. That same key scheduled four posts through the same API on 2026-08-17, each verified by re-query, hours earlier. A 401 was read as expiry without asking which host answered it: Buffer's older REST surface at `api.bufferapp.com` rejects a personal access key exactly that way, and so does the GraphQL host with the `Bearer` prefix dropped. Nothing recovers the old key — Buffer shows a personal key once — so the correction is a new key, not an argument about the old one.
+
+**The second half of that reasoning was right, and is now fixed.** The key genuinely had no executing consumer; three scheduled-task files described it in prose. `scripts/lib/buffer-api.mjs` is now the consumer, mirroring `ghost-admin.mjs`: Keychain read at call time, never module state, never printed, host pinned, and a `Bearer` header the caller cannot get wrong. All three task files now point at it, and `gmg-friday-analytics`'s stale `ghost-admin-api` reference was corrected to `ghost-admin-key` in the same pass.
+
+**Three things the helper does that the prose could not.** It throws on a GraphQL `errors` array returned beside HTTP 200, so a rejected query cannot read as an empty queue. Its probe asserts the pinned organization id is among those the key can see, because a key issued from a different Buffer account authenticates cleanly and then reads an empty queue — a wrong-account failure that otherwise reports as "nothing scheduled". And `introspectType()` measures a query shape against the live schema, which is the answer to three task files having each re-derived `PostsInput` from error messages until it acquired a `limit` argument it never had.
+
+**No query beyond the probe was written.** The `posts` shape is unverified without a key, and guessing it is how the wrong shapes got into circulation in the first place. It gets measured on the first live run and written down then.
+
+**Verified so far:** the no-key path end to end — `node scripts/check-buffer-access.mjs` refuses with the creation URL, the exact `security add-generic-password` command, and exit 1. Repository gates all green: theme verify, `pnpm --dir theme install --frozen-lockfile`, `pnpm --dir theme test`, `pnpm --dir theme zip` plus `gscan -z --fatal --verbose`, `verify-repository.mjs`, `verify-svg-xml.sh`, `git diff --check`.
+
+**Files changed:** `scripts/lib/buffer-api.mjs` (new), `scripts/check-buffer-access.mjs` (new), `docs/technical/api-access.md`, this log. Outside the repository: the three `gmg-*` scheduled-task files.
+
+**External state changed:** none. Nothing published, sent, posted, scheduled, or deleted. No key was created, read, or stored by this session.
+
+**Open, and deliberately not merged.** The founder creates the key at `publish.buffer.com/settings/api`, names it `buffer-api-token` at Buffer as well as in the Keychain, revokes any other Buffer personal key, and stores it with `security add-generic-password -w`. This branch merges when `check-buffer-access.mjs` returns 200 against the pinned organization and not before — a documented probe that has never been run against a live key is a claim, not a check. `ops/credentials.tsv` gains its row and `ops/credentials-provider-check.sh` its console-only line in the same follow-up, since `credentials-check.sh` asserts the manifest against the live Keychain in both directions and would fail on a row for a key that does not exist yet.
+
+## 2026-08-18 — Claude Code: the Buffer key comes back, and the provider had been holding a live one all along
+
+**Client:** Claude Code (desktop, founder-directed, continuing the entry above). **Branch:** `ops/buffer-key-restore` (this repo) and the same name in `windwardline/ops`.
+
+**The key is live.** The founder created a personal access key at `publish.buffer.com/settings/api`, named `buffer-api-token` at Buffer and in the Keychain, and stored it with a prompting `security add-generic-password -w` so no value touched a command line. `node scripts/check-buffer-access.mjs` returns 200 against the pinned organization. No secret was read, printed, or handled by this session.
+
+**The 2026-08-17 deletion was a misread, and the founder's own eyes closed the question.** Asked what Buffer showed, they answered that the old key was still there — and deleted it. So a live, publishing-capable key sat at the provider with no Keychain counterpart for a day, while this machine's records said it was dead. That is the exact state `ops/credentials-provider-check.sh` exists to surface and the one it cannot reach: Buffer publishes no key-enumeration API. It is now on that script's console-only list carrying the incident rather than a bare date, because a line that says what went wrong is what makes someone open the tab.
+
+**Shapes are now measured rather than recalled.** Against the live schema: `posts` returns `PostsResults { edges { cursor node } }` and takes `first`/`after` as **siblings** of `input` — pagination exists and simply is not on `PostsInput`, so the "no limit" folklore was half right for the wrong reason. `PostStatus` is `draft | needs_approval | scheduled | sending | sent | error`. Both sort enums are lowercase. `Idea.createdAt` is epoch seconds while `Post` carries `DateTime` strings, which sorts wrongly and quietly if compared as text.
+
+**The helper caught its own class of bug on first use.** An ideas query asked for `tags` without subfields; Buffer answered HTTP 200 with an `errors` array. The helper threw instead of returning the `data` beside it — which, in the shape these tasks use, would have reported an empty board as a clean read.
+
+**Today's stalled check now answers.** The Ghost → Zapier → Buffer Idea for *Call Your Friends Before There's a Reason* arrived **08:00 AM ET**, at publish, with the canonical URL. The board holds two ideas, one per published essay, and nothing stale. The week's queue is four scheduled posts, no drafts, nothing in `needs_approval` or `error`: Bluesky today 12:00 PM, LinkedIn Wed 10:00 AM, **Instagram carousel Thu 9:00 AM**, Bluesky Sat 9:30 AM — all `automatic`/custom-scheduled, matching what was queued on 2026-08-17. No founder action outstanding on distribution.
+
+**Files changed:** `scripts/lib/buffer-api.mjs` (measured queue and ideas queries), `docs/technical/api-access.md`, this log. In `windwardline/ops` (PR #59, merged): `credentials.tsv` gains the `buffer-api-token` row with four consumers, and `credentials-provider-check.sh` gains the Buffer line. Project memory `publishing-api-quirks` updated.
+
+**Verification:** `node scripts/check-buffer-access.mjs` 200 against the pinned organization; live reads of the scheduled, draft, sent, and ideas surfaces; `./credentials-check.sh` 26 items matching the live Keychain both ways; `bash -n` on the edited ops script. Repository gates all green — theme verify, frozen-lockfile install, theme test, zip plus `gscan -z --fatal --verbose`, `verify-repository.mjs`, `verify-svg-xml.sh`, `git diff --check`.
+
+**External state changed:** one Buffer personal access key created and one deleted, both by the founder in Buffer's dashboard. Nothing published, sent, posted, scheduled, or removed from any queue. Buffer was read only.
+
+**Open:** none. The Friday analytics run is the first unattended use of the helper, and it is the thing that proves the key survives a run nobody is watching.
