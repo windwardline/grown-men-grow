@@ -39,7 +39,7 @@ The probe does not stop at a 200. A valid key issued from a different Buffer acc
 
 A GraphQL server answers errors with HTTP 200 and an `errors` array. The helper throws on that array rather than returning the partial `data` beside it.
 
-Query shapes are measured, not remembered: `introspectType()` reads the live schema for a type before any new query is written against it. Three scheduled-task files had each re-derived the `posts` shape from error messages, which is how `PostsInput` acquired a `limit` argument it has never had.
+Query shapes are measured, not remembered: `introspectType()` reads the live schema for a type before any new query is written against it. Three scheduled-task files had each re-derived the `posts` shape from error messages, which is how `PostsInput` acquired a `limit` argument it has never had. Measured 2026-08-18: `posts` returns `PostsResults { edges { cursor node } }` and takes `first` and `after` as siblings of `input`, so pagination exists and simply is not on `PostsInput` — the folklore was half right for the wrong reason. `PostStatus` is `draft | needs_approval | scheduled | sending | sent | error`, and both sort enums are lowercase (`dueAt|createdAt`, `asc|desc`). `Idea.createdAt` is epoch seconds, not the `DateTime` string `Post` carries; compared as text it sorts wrongly and quietly.
 
 Buffer has no API that enumerates personal keys, so the provider side of the credential rule — is there a key at Buffer with no Keychain counterpart? — is a manual look at the Personal Access tab. It belongs in `ops/credentials-provider-check.sh`'s console-only list, with the date it was last checked by eye.
 

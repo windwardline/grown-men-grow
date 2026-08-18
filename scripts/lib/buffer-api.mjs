@@ -141,3 +141,64 @@ export async function introspectType(typeName) {
   );
   return data?.__type ?? null;
 }
+
+// Measured against the live schema on 2026-08-18, not recalled. `posts` returns
+// PostsResults { edges { cursor node } } and takes `first`/`after` as siblings of
+// `input` — pagination exists, it is simply not on PostsInput, which is the whole
+// of the "PostsInput takes no limit" folklore. PostSortableKey is dueAt|createdAt
+// and SortDirection is asc|desc, both lowercase.
+const POST_FIELDS = `
+  id
+  status
+  dueAt
+  sentAt
+  text
+  channelId
+  channelService
+  isCustomScheduled
+  schedulingType
+`;
+
+/**
+ * Posts in the given states. `statuses` are PostStatus values:
+ * draft | needs_approval | scheduled | sending | sent | error.
+ */
+export async function bufferPosts(statuses, {
+  direction = "asc",
+  field = "dueAt",
+  first = 50,
+  organizationId = BUFFER_ORGANIZATION_ID,
+} = {}) {
+  const data = await bufferGraphql(
+    `query Posts($input: PostsInput!, $first: Int) {
+      posts(input: $input, first: $first) { edges { node { ${POST_FIELDS} } } }
+    }`,
+    {input: {organizationId, filter: {status: statuses}, sort: [{field, direction}]}, first},
+  );
+  return (data?.posts?.edges ?? []).map((edge) => edge.node);
+}
+
+export function scheduledPosts(options) {
+  return bufferPosts(["scheduled"], options);
+}
+
+export function sentPosts(options) {
+  return bufferPosts(["sent"], {direction: "desc", ...options});
+}
+
+/**
+ * Ideas on the Buffer board — the landing point of the Ghost → Zapier → Buffer
+ * pipeline. `Idea.createdAt` is epoch SECONDS (Int), not the DateTime string
+ * `Post` uses; compare it as a number or it silently sorts as text.
+ */
+export async function bufferIdeas({first = 20, organizationId = BUFFER_ORGANIZATION_ID} = {}) {
+  const data = await bufferGraphql(
+    `query Ideas($input: IdeasInput!, $first: Int) {
+      ideas(input: $input, first: $first) {
+        edges { node { id createdAt updatedAt content { title text services } } }
+      }
+    }`,
+    {input: {organizationId}, first},
+  );
+  return (data?.ideas?.edges ?? []).map((edge) => edge.node);
+}
