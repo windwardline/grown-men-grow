@@ -1138,3 +1138,23 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **Files changed:** `.github/workflows/security.yml`, this log.
 
 **External state changed:** none at merge time. No secret was created, read, or moved; both App secrets were already in the Dependabot store from 2026-08-11.
+
+## 2026-08-18 — Claude Code: the Dependabot lane proved itself on a live PR, and the first dependency update in two days merged
+
+**Client:** Claude Code (desktop, founder-directed). **Branch:** `docs/secret-scan-verification`. This is the post-merge verification the preceding entry said would be recorded here.
+
+**The fix works on the path that was broken.** With the token fix on main, PR #101 was rebased at the founder's approval (`@dependabot rebase`, head `3972fae` → `2d5ac6d`) and its checks re-ran on a genuinely Dependabot-triggered event. **Secret scan: success.** It has failed on every Dependabot PR this repository has ever received.
+
+**Two untested fixes were tested at once, and both hold.** The `dependabot-auto-merge` lane from #105 also ran for the first time against a live Dependabot PR — it had merged two and a half hours after the only PR that could exercise it — and it completed successfully, armed auto-merge, and left the ruleset to decide. `Semgrep CE`, `Repository verification`, and `Dependency scan` all green.
+
+**PR #101 merged 13:19:04Z**, squashed and branch-deleted by the lane, gated on green required checks with no bypass. It bumps `osv-scanner-action` 2.3.8 → 2.5.0 — the dependency update that had been blocked, now landed by the mechanism that was supposed to land it.
+
+**What this closes.** Every Dependabot PR this repository receives from here can reach a merge on its own. Before today none could, and the failure was silent in the way that matters: the checks looked like ordinary red CI on one stale PR rather than a gate that could never go green.
+
+**Verified:** `Secret scan` success on run against head `2d5ac6d`; `dependabot-auto-merge` success on the same head; PR #101 state MERGED at 13:19:04Z; `main` at `ced2c40`; no open pull requests; no stale local or remote branches in this repository or in `windwardline/ops`.
+
+**Files changed:** this log.
+
+**External state changed:** one comment posted on PR #101 (`@dependabot rebase`), and the merge that followed it. Nothing published, sent, or posted on any publication surface.
+
+**Open:** none. The Buffer key's first unattended use is Friday's analytics run, which is the only item this day leaves in front of anyone.
