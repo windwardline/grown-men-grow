@@ -3,6 +3,8 @@
 import { createHash } from 'node:crypto';
 import { lstat, readFile, readdir } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
+
+import { parseHold } from './lib/hold-state.mjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -372,6 +374,15 @@ const requiredFiles = [
   'scripts/render-theme-preview.mjs',
   'scripts/lib/editorial-collage.mjs',
   'scripts/lib/ghost-admin.mjs',
+  'scripts/lib/note-slot.mjs',
+  'scripts/lib/note-pack.mjs',
+  'scripts/lib/task-lock.mjs',
+  'scripts/lib/hold-state.mjs',
+  'scripts/note-task-preflight.mjs',
+  'scripts/test/note-slot.test.mjs',
+  'scripts/test/note-pack.test.mjs',
+  'scripts/test/task-lock.test.mjs',
+  'scripts/test/hold-state.test.mjs',
   'theme/package.json',
   'theme/pnpm-lock.yaml',
   'theme/default.hbs',
@@ -645,6 +656,16 @@ const altTexted = [
 for (const file of altTexted) {
   const text = await readFile(path.join(root, file), 'utf8');
   if (!/alt text/i.test(text)) fail(`${file} is missing its Instagram alt text section.`);
+}
+
+// The weekly hold is the brake on an automation that otherwise publishes with
+// nobody in the loop, and note-task-preflight.mjs reads it from one marker
+// line. Assert the marker here too: a fix that cannot notice its own premise
+// going missing is the failure mode this repository keeps rediscovering.
+try {
+  parseHold(await readFile(path.join(root, 'docs/technical/operating-cadence.md'), 'utf8'));
+} catch (error) {
+  fail(`docs/technical/operating-cadence.md: ${error.message}`);
 }
 
 if (failures.length) {

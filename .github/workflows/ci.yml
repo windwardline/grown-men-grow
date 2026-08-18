@@ -39,6 +39,8 @@ jobs:
         run: |
           pnpm --dir theme zip
           theme/node_modules/.bin/gscan -z --fatal --verbose dist/grown-men-grow.zip
+      - name: Run script unit tests
+        run: node --test 'scripts/test/**/*.test.mjs'
       - name: Verify repository contracts and assets
         run: node scripts/verify-repository.mjs
       - name: Install XML validator

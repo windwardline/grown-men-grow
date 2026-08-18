@@ -52,11 +52,19 @@ Instagram's app-only features — link stickers, pinning, native-audio reels. Ea
 
 Every failure degrades to the old behaviour — the founder gets the copy and the steps. Nothing about this makes a missed note worse than it was.
 
+**Hardened 2026-08-18, after both guards were tested by the same morning.** The lateness guard had no early counterpart, and a run fired at 10:53 against the 12:00 slot; a literal reading permitted posting 67 minutes early, which costs the Friday baseline exactly what an hour late costs. Worse, that run and the 11:45 scheduled run were live at the same moment, sharing this working tree and pointed at one public profile — nothing made either aware of the other, and only a re-read of the profile stopped a double post. Both are now mechanical. `scripts/note-task-preflight.mjs` answers one question with an exit code: post now, wait, or stand down. It takes a cross-process lock first, so a second run refuses and names the holder. The window is symmetric — early waits, more than an hour late stands down. The hold moved from prose an agent had to judge into the `**Active hold:**` marker above, and `verify-repository.mjs` fails if that marker goes missing, because a brake that can be deleted silently is not a brake.
+
+**What is still not automated, and why.** The keystroke path into Substack composer is refused by the Claude Code auto-mode classifier. Tested 2026-08-18: the permission is present and has been since 2026-08-16, and the same `type` call is refused on a plain search box — so it is a blanket block on the action, not a judgement about publishing. No agent may route around it. Until the founder decides otherwise, the notes degrade to a handoff: the preflight assembles everything and the founder pastes and posts.
+
 ## The iCloud phone kit
 
 Each week's kit lives at `~/Library/Mobile Documents/com~apple~CloudDocs/Grown Men Grow/Instagram/Week NN — <Essay Title>/`. Action subfolders are named `<n> — <DAY> — <action>`, where `<DAY>` is the three-letter all-caps day the action happens (founder ruling, 2026-08-11). The no-action folder is `9 — Backup — Buffer auto-posts these (no action)`. A `READ ME — links and copy.txt` at the week root carries every founder action with its day, time, steps, and paste-ready copy.
 
 ## The hold
+
+**Active hold:** none
+
+That line is the brake, and it is read by machine — `scripts/note-task-preflight.mjs` refuses to post when it says anything but `none`. Holding is an edit to it: replace `none` with the date and the reason. Resuming is the founder restoring `none`, and only the founder. The preflight errors rather than proceeding if the line is missing or appears twice, so removing it stops the tasks instead of silently unblocking them.
 
 Every week this publication auto-fires: Ghost publishes and emails Tuesday at 8:00, and Buffer posts four more times without a human in the loop. That is the point of it. It also means the machine will publish cheerfully into a week that has stopped being ordinary unless someone stops it.
 
