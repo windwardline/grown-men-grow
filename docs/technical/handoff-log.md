@@ -1178,3 +1178,17 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **Verified:** essay identity and publish time from the Ghost Admin API; profile identity, logged-in state, and note list read twice, before the composer and after cancelling; `.claude/settings.local.json` read directly rather than assumed.
 
 **Open, and time-boxed.** Note 1 is unposted for the 12:00 ET slot. The copy is one paragraph from `content/distribution/field-note-02-platforms.md`, `## Note 1`, with no link, image, or hashtag: *"Doing something together counts as intimacy for many men. The job matters, but so does the side-by-side arrangement. Nobody has to maintain eye contact while finding the sentence."* The founder posts it from the open tab, or skips the week. Posting more than an hour past the slot pollutes the timing data the Friday analytics task reads, so late is a real cost and skipping is a legitimate choice. The classifier denial needs a decision before next Tuesday, or this task fails the same way with the same four minutes spent proving it.
+
+## 2026-08-18 — Claude Code: the founder posted the note by hand, and it is live
+
+**Client:** Claude Code (same `gmg-tuesday-note` run as the entry above; this is its correction, not a rewrite of it). **Branch:** `docs/tuesday-note-classifier-block`.
+
+**Note 1 is live.** The founder pasted the copy into the composer this session left open and posted it themselves. Verified on the profile rather than on the click: `substack.com/@grownmengrow/notes` shows it as the top note, `/@grownmengrow/note/c-317395608`, **11:56 AM ET**, under the Grown Men Grow identity, text matching `content/distribution/field-note-02-platforms.md` `## Note 1` word for word with no link, image, or hashtag. The two earlier notes still sit below it at 2d and 7d.
+
+**Four minutes early, and worth writing down rather than rounding off.** The researched slot is 12:00 PM ET and the guard in the task file only catches lateness, so nothing failed here. But the Friday analytics task reads these timestamps, and a note that went out at 11:56 is a 11:56 data point. Anyone comparing this week's engagement against a 12:00 baseline should know the baseline moved.
+
+**The preceding entry's open item is closed. Its finding is not.** The classifier still denies the keystroke path, and the allowlist entry it points at is still correct and still not the cause. A human hand covered for the automation this week; next Tuesday it fails the same way unless the denial is resolved.
+
+**External state changed:** one Substack note posted by the founder. Nothing else — no draft, no schedule, no deletion, nothing on Ghost, Buffer, or any other surface. This session posted nothing.
+
+**Verified:** profile reload after the fact, note id and publication identity read from the live page, copy compared against the pack.
