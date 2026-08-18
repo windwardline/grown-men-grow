@@ -14,7 +14,7 @@ The Cloudflare entry predates this publication; its token was scope-extended to 
 
 Two rows were renamed on 2026-08-17 to satisfy the `provider-purpose` convention: `ghost-admin-api` became `ghost-admin-key` (the old name read as a provider named "ghost-admin"), and `bluesky-claude-code` became `bluesky-app-password` (a credential is named for what it is, never for the client that happens to use it). The Ghost integration keeps its original dashboard name because renaming it there would re-issue the key. **This table is the operating instruction** — no script reads the Bluesky credential, so an agent following a stale name here runs a Keychain lookup that fails with nothing to explain why. `ops/credentials-check.sh` asserts the names still resolve.
 
-`buffer-api-token` was removed on 2026-08-17: the key had been dead since before the audit (Buffer returned 401), and it had no executing consumer — only this table. Buffer itself is unchanged as a manual surface.
+`buffer-api-token` was removed on 2026-08-17: the key had been dead since before the audit (Buffer returned 401), and it had no executing consumer — only this table. **Buffer itself is untouched and still automated.** The live Zap `Ghost post published → Buffer idea` runs on Zapier's own Buffer connection, which holds a separate credential this repo never had. Deleting a dead local key is not the same as removing a provider, and the two were briefly conflated here.
 
 ## Ghost Admin API
 
@@ -31,7 +31,7 @@ Diagnose a 403 by its message, never by the URL in the error — the redirect ma
 ## Deliberately keyless
 
 - **Zapier** — the client OAuth session self-manages and is exempt under the credential policy. The Ghost Admin key inside the Zap's connection is Zapier-held, not local.
-- **LinkedIn and Instagram** — no practical direct API for this use (organization posting requires platform app review). Buffer is their API layer, and it is browser-only again since `buffer-api-token` was retired on 2026-08-17.
+- **LinkedIn and Instagram** — no practical direct API for this use (organization posting requires platform app review). Buffer is their API layer, reached two ways: the live Zapier Zap (Zapier-held credential) and the browser. What ended on 2026-08-17 was *direct* API access from this machine, not Buffer automation.
 - **Medium** — issues no new API tokens; syndication remains manual URL import.
 - **Substack** — no public API; Notes remain native.
 
