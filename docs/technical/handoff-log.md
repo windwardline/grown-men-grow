@@ -1158,3 +1158,37 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** one comment posted on PR #101 (`@dependabot rebase`), and the merge that followed it. Nothing published, sent, or posted on any publication surface.
 
 **Open:** none. The Buffer key's first unattended use is Friday's analytics run, which is the only item this day leaves in front of anyone.
+
+## 2026-08-18 — Claude Code: the Tuesday note did not post, and the reason is not the one the runbook predicted
+
+**Client:** Claude Code (scheduled task `gmg-tuesday-note`, unattended). **Branch:** `docs/tuesday-note-classifier-block`.
+
+**All four preconditions passed.** The essay published today — *Call Your Friends Before There's a Reason*, `published_at` 2026-08-18T12:00:00Z, 08:00 AM ET — read through `latestPublishedPost()`. The run was early, not late: the composer stood open at 11:55 ET against a 12:00 ET slot. The profile's top note was seven days old at the check and two days old on the reload, so this week's Note 1 had not been posted. No hold is recorded; the last mention of one in this log says it is over.
+
+**Chrome was not running, and that is a precondition nobody had written down.** `list_connected_browsers` returned an empty array and no `Google Chrome` process existed. The extension is installed in the Default profile — the browser simply was not up. Launching it and waiting for the extension to register cleared the failure and cost about four minutes. A task that depends on the founder's logged-in session depends on their browser being open, and until today the runbook treated that as given.
+
+**The composer opened under the publication identity.** `substack.com/@grownmengrow/notes` showed Grown Men Grow, `@grownmengrow`, and an `Edit profile` control; the modal carried the Grown Men Grow avatar and name. Identity was never in doubt.
+
+**The typing step was denied, and the runbook's explanation for that is wrong.** The `type` action returned `Blocked by classifier` from the Claude Code auto-mode classifier. The task file anticipates this denial and attributes it to a lapsed permission — but `mcp__claude-in-chrome__computer` **is** present in `.claude/settings.local.json`, added 2026-08-16 and never removed. The allowlist did not lapse. The classifier denied a tool the settings permit, which is a different failure with a different fix, and the task file should stop telling its next reader to look at a file that is already correct.
+
+**Nothing was routed around.** `form_input` cannot set a contenteditable and the task file rules out working the denial from another angle; injecting the text through `javascript_tool` would have been exactly that. The composer was cancelled with nothing typed into it. The profile reload afterwards shows the same two notes, 2d and 7d, and no draft.
+
+**External state changed:** none on Substack — nothing posted, drafted, scheduled, or deleted. Locally, Google Chrome was launched and left running with the Grown Men Grow notes page open, so the founder can post without re-navigating.
+
+**Verified:** essay identity and publish time from the Ghost Admin API; profile identity, logged-in state, and note list read twice, before the composer and after cancelling; `.claude/settings.local.json` read directly rather than assumed.
+
+**Open, and time-boxed.** Note 1 is unposted for the 12:00 ET slot. The copy is one paragraph from `content/distribution/field-note-02-platforms.md`, `## Note 1`, with no link, image, or hashtag: *"Doing something together counts as intimacy for many men. The job matters, but so does the side-by-side arrangement. Nobody has to maintain eye contact while finding the sentence."* The founder posts it from the open tab, or skips the week. Posting more than an hour past the slot pollutes the timing data the Friday analytics task reads, so late is a real cost and skipping is a legitimate choice. The classifier denial needs a decision before next Tuesday, or this task fails the same way with the same four minutes spent proving it.
+
+## 2026-08-18 — Claude Code: the founder posted the note by hand, and it is live
+
+**Client:** Claude Code (same `gmg-tuesday-note` run as the entry above; this is its correction, not a rewrite of it). **Branch:** `docs/tuesday-note-classifier-block`.
+
+**Note 1 is live.** The founder pasted the copy into the composer this session left open and posted it themselves. Verified on the profile rather than on the click: `substack.com/@grownmengrow/notes` shows it as the top note, `/@grownmengrow/note/c-317395608`, **11:56 AM ET**, under the Grown Men Grow identity, text matching `content/distribution/field-note-02-platforms.md` `## Note 1` word for word with no link, image, or hashtag. The two earlier notes still sit below it at 2d and 7d.
+
+**Four minutes early, and worth writing down rather than rounding off.** The researched slot is 12:00 PM ET and the guard in the task file only catches lateness, so nothing failed here. But the Friday analytics task reads these timestamps, and a note that went out at 11:56 is a 11:56 data point. Anyone comparing this week's engagement against a 12:00 baseline should know the baseline moved.
+
+**The preceding entry's open item is closed. Its finding is not.** The classifier still denies the keystroke path, and the allowlist entry it points at is still correct and still not the cause. A human hand covered for the automation this week; next Tuesday it fails the same way unless the denial is resolved.
+
+**External state changed:** one Substack note posted by the founder. Nothing else — no draft, no schedule, no deletion, nothing on Ghost, Buffer, or any other surface. This session posted nothing.
+
+**Verified:** profile reload after the fact, note id and publication identity read from the live page, copy compared against the pack.
