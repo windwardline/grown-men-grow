@@ -6,12 +6,15 @@ All programmatic access to the publication's platforms follows the machine-wide 
 
 | Service name | Provider surface | Purpose | Verified by |
 | --- | --- | --- | --- |
-| `ghost-admin-api` | Ghost(Pro) Admin API on `https://grown-men-grow.ghost.io` (custom integration `ghost-admin-api`) | Content operations; member, tier, and settings reads (settings writes return 403) | HTTP 200 on `/ghost/api/admin/posts/?limit=1` |
-| `buffer-api-token` | Buffer GraphQL API (`https://api.buffer.com`, Personal Access key) | Staging channel drafts and Ideas without the browser | HTTP 200 on account/organizations query |
-| `bluesky-claude-code` | Bluesky app password (DM access excluded) | Direct AT Protocol operations (profile, posts) | HTTP 200 `createSession` as `grownmengrow.com` |
+| `ghost-admin-key` | Ghost(Pro) Admin API on `https://grown-men-grow.ghost.io` (custom integration `ghost-admin-api`) | Content operations; member, tier, and settings reads (settings writes return 403) | HTTP 200 on `/ghost/api/admin/posts/?limit=1` |
+| `bluesky-app-password` | Bluesky app password (DM access excluded) | Direct AT Protocol operations (profile, posts) | HTTP 200 `createSession` as `grownmengrow.com` |
 | `cloudflare-dns-edit` | Cloudflare API token (Zone.DNS edit) | DNS for `windwardline.com` and `grownmengrow.com` via the `cf-dns` helper | Zone lookup returned `grownmengrow.com` |
 
 The Cloudflare entry predates this publication; its token was scope-extended to include the `grownmengrow.com` zone on 2026-08-10 (same secret, no new key).
+
+Two rows were renamed on 2026-08-17 to satisfy the `provider-purpose` convention: `ghost-admin-api` became `ghost-admin-key` (the old name read as a provider named "ghost-admin"), and `bluesky-claude-code` became `bluesky-app-password` (a credential is named for what it is, never for the client that happens to use it). The Ghost integration keeps its original dashboard name because renaming it there would re-issue the key. **This table is the operating instruction** — no script reads the Bluesky credential, so an agent following a stale name here runs a Keychain lookup that fails with nothing to explain why. `ops/credentials-check.sh` asserts the names still resolve.
+
+`buffer-api-token` was removed on 2026-08-17: the key had been dead since before the audit (Buffer returned 401), and it had no executing consumer — only this table. Buffer itself is unchanged as a manual surface.
 
 ## Ghost Admin API
 
@@ -28,7 +31,7 @@ Diagnose a 403 by its message, never by the URL in the error — the redirect ma
 ## Deliberately keyless
 
 - **Zapier** — the client OAuth session self-manages and is exempt under the credential policy. The Ghost Admin key inside the Zap's connection is Zapier-held, not local.
-- **LinkedIn and Instagram** — no practical direct API for this use (organization posting requires platform app review). Buffer is their API layer; `buffer-api-token` covers both.
+- **LinkedIn and Instagram** — no practical direct API for this use (organization posting requires platform app review). Buffer is their API layer, and it is browser-only again since `buffer-api-token` was retired on 2026-08-17.
 - **Medium** — issues no new API tokens; syndication remains manual URL import.
 - **Substack** — no public API; Notes remain native.
 

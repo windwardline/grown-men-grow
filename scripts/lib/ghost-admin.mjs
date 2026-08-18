@@ -20,7 +20,7 @@ export const GHOST_API_VERSION = "v6.0";
 // The credential policy stores each secret under the operator's own login
 // account, so the account is derived rather than written out — this path is
 // covered by the publication-voice rule that keeps the founder's name out of it.
-const KEYCHAIN_SERVICE = "ghost-admin-api";
+const KEYCHAIN_SERVICE = "ghost-admin-key";
 const KEYCHAIN_ACCOUNT = os.userInfo().username;
 const TOKEN_TTL_SECONDS = 300;
 const KEY_SHAPE = /^[^:]{24}:[0-9a-f]{64}$/i;

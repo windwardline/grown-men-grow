@@ -1050,3 +1050,23 @@ Handing over copy six hours late cost nothing. Posting six hours late misses a r
 **External state changed:** none. The Substack profile was read only — nothing posted, liked, restacked, or edited. No Ghost or Buffer state changed in this entry; the week's four Buffer posts and the scheduled Ghost essay stand as recorded above.
 
 **Open:** whether the stored tool approval carries to tomorrow's unattended run, which is answered by the run itself. Instagram's app-only features remain founder actions with no path from here.
+
+## 2026-08-17 — Keychain rename fallout: the doc was the consumer
+
+**Client:** Claude Code (desktop). **Branch:** `fix/credential-name-drift`. **Scope:** correcting two stale credential names and one dead credential in `docs/technical/api-access.md`, and repointing `scripts/lib/ghost-admin.mjs` at the renamed Ghost key.
+
+Two Keychain items were renamed during a machine-wide credential audit: `ghost-admin-api` → `ghost-admin-key` (the old name parses as a provider called "ghost-admin"), and `bluesky-claude-code` → `bluesky-app-password` (a credential is named for what it is, not for the client that happens to read it). `buffer-api-token` was deleted — Buffer had been returning 401 since before the audit.
+
+**The failure worth recording is what "consumer" means.** The Ghost rename was safe because `scripts/lib/ghost-admin.mjs` executes, so updating the code updated the behaviour. Bluesky has no executing consumer at all — the Keychain map in `api-access.md` *is* the operating instruction. An independent verification pass caught that the map still said `bluesky-claude-code`, which would have sent the next agent into a Keychain lookup that fails with nothing to explain why. A rename sweep that greps for code references and finds none will report a documentation-only credential as safely unreferenced. It is the opposite: it is the case where the documentation is load-bearing.
+
+**Ghost's dashboard integration keeps its original name** (`ghost-admin-api`). Renaming it there re-issues the key, which would trade a naming inconsistency for an outage. The table now says so rather than leaving the mismatch to look like drift.
+
+`handoff-log.md` was deliberately **not** edited. The 2026-08-10 entry names the credentials as they were on that date, and this log is append-only — rewriting it would make a past entry describe a present it did not live in. The verification pass recommended changing it; this repo's own contract outranks that recommendation.
+
+**Files changed:** `docs/technical/api-access.md`, `scripts/lib/ghost-admin.mjs`, this log.
+
+**External state changed:** none in this repo's surfaces. Machine-side, the three Keychain items were renamed or deleted before this entry; `ops/credentials.tsv` and `ops/credentials-check.sh` record and enforce the resulting set.
+
+**Verification:** `node scripts/verify-ghost-theme.mjs`, `node scripts/verify-repository.mjs`, `bash scripts/verify-svg-xml.sh`, `git diff --check`, plus a live `probeGhostAdmin()` returning 200 against the renamed key and a live Bluesky `createSession` returning 200 as `grownmengrow.com`.
+
+**Open:** none from this entry. Buffer is a browser-only surface again; nothing automated depended on the retired key.
