@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn13-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn13-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn13-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 13 · 01 / 07</text>
+  <rect x="0" y="806" width="1080" height="544" fill="#3A1518"/>
+    <rect x="640" y="196" width="392" height="392" fill="url(#fn13-01-dots)"/>
+    <text x="62" y="372" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="74" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="1.2">YOU CAN WALK ON IT</text>
+    <text x="62" y="478" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="74" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="1.2">TOMORROW.</text>
+    <text x="64" y="636" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="44" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">Set is not the same as cured.</text>
+    <g>
+    <line x1="88" y1="1117.4" x2="365.2" y2="1117.4" stroke="#EEE6D8" stroke-width="7.3500000000000005" stroke-linecap="round" opacity="0.5"/>
+    <polyline points="88.0 1117.4 88.7 1115.9 89.5 1114.5 90.2 1113.1 91.0 1111.7 91.7 1110.3 92.4 1108.9 93.2 1107.5 93.9 1106.2 94.7 1104.8 95.4 1103.5 96.1 1102.1 96.9 1100.8 97.6 1099.5 98.3 1098.2 99.1 1097.0 99.8 1095.7 100.6 1094.4 101.3 1093.2 102.0 1092.0 102.8 1090.7 103.5 1089.5 104.3 1088.3 105.0 1087.1 105.7 1086.0 106.5 1084.8 107.2 1083.6 108.0 1082.5 108.7 1081.4 109.4 1080.2 110.2 1079.1" fill="none" stroke="#EEE6D8" stroke-width="10.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="110.176" y1="1100.1144377694582" x2="110.176" y2="1058.1144377694582" stroke="#EEE6D8" stroke-width="8.4" stroke-linecap="round"/>
+  </g>
+    <text x="660" y="1074" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="34" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="3">TWO DAYS</text>
+    <text x="660" y="1128" fill="#B14F3F" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="34" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="3">TWENTY-EIGHT</text>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn13-01-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

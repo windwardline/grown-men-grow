@@ -53,7 +53,10 @@ async function pngDimensions(file) {
   return { width: buffer.readUInt32BE(16), height: buffer.readUInt32BE(20) };
 }
 
+let validatedPairs = 0;
+
 async function validateAssetFamily(directory, count, width, height) {
+  validatedPairs += count;
   const pngs = await filesUnder(directory, '.png');
   const svgs = await filesUnder(directory, '.svg');
   if (pngs.length !== count) fail(`${directory} has ${pngs.length} PNG files; expected ${count}.`);
@@ -364,6 +367,7 @@ const requiredFiles = [
   'scripts/render-field-note-10.mjs',
   'scripts/render-field-note-11.mjs',
   'scripts/render-field-note-12.mjs',
+  'scripts/render-field-note-13.mjs',
   'scripts/stage-next-field-note.mjs',
   'scripts/render-brand-banners.mjs',
   'scripts/render-ghost-feature-images.mjs',
@@ -469,13 +473,14 @@ await validateAssetFamily('assets/drafts/instagram/field-note-09-carousel', 7, 1
 await validateAssetFamily('assets/drafts/instagram/field-note-10-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-11-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-12-carousel', 7, 1080, 1350);
+await validateAssetFamily('assets/drafts/instagram/field-note-13-carousel', 7, 1080, 1350);
 await validatePhotographExclusivity('assets/drafts/instagram');
 await validatePublicationOrder();
 await validateCrossReferences();
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
-await validateAssetFamily('assets/drafts/ghost/feature-images', 14, 1600, 1000);
+await validateAssetFamily('assets/drafts/ghost/feature-images', 15, 1600, 1000);
 await validateEditorialConcepts();
-await validateNamedPngs('assets/source/editorial', new Map([
+const editorialSources = new Map([
   ['friends-in-conversation', { width: 1023, height: 1537 }],
   ['repairing-wooden-chair', { width: 1024, height: 1536 }],
   ['sunlit-writing-table', { width: 1024, height: 1536 }],
@@ -519,7 +524,8 @@ await validateNamedPngs('assets/source/editorial', new Map([
   ['rigging-shackles-bench', { width: 1024, height: 1536 }],
   ['wall-calendar-kitchen', { width: 1024, height: 1536 }],
   ['driveway-hoop-late-afternoon', { width: 1024, height: 1536 }],
-]));
+]);
+await validateNamedPngs('assets/source/editorial', editorialSources);
 await validateNamedPngs('assets/drafts/brand/banners', new Map([
   ['bluesky-banner', { width: 1500, height: 500 }],
   ['ghost-publication-cover', { width: 2000, height: 840 }],
@@ -527,7 +533,7 @@ await validateNamedPngs('assets/drafts/brand/banners', new Map([
   ['linkedin-banner', { width: 1584, height: 396 }],
   ['substack-wordmark', { width: 1400, height: 280 }],
 ]));
-await validateNamedPngs('assets/drafts/review', new Map([
+const reviewSheets = new Map([
   ['foundational-carousel', { width: 1362, height: 1004 }],
   ['field-note-02-carousel', { width: 1362, height: 1004 }],
   ['field-note-03-carousel', { width: 1362, height: 1004 }],
@@ -540,11 +546,13 @@ await validateNamedPngs('assets/drafts/review', new Map([
   ['field-note-10-carousel', { width: 1362, height: 1004 }],
   ['field-note-11-carousel', { width: 1362, height: 1004 }],
   ['field-note-12-carousel', { width: 1362, height: 1004 }],
+  ['field-note-13-carousel', { width: 1362, height: 1004 }],
   ['ghost-social-cards', { width: 1310, height: 884 }],
   ['pinned-introduction', { width: 1362, height: 1004 }],
   ['recognition-carousel', { width: 1362, height: 1004 }],
   ['stories-static-reel', { width: 1242, height: 1214 }],
-]));
+]);
+await validateNamedPngs('assets/drafts/review', reviewSheets);
 
 const approvedAvatarHash = 'b46abba3e8658304ca260b57a2697a4ab8d2b638acdcbfe39f809c6dd61aa4ff';
 const sourceAvatar = await readFile(path.join(root, 'assets/source/grown-men-grow-instagram-avatar.png'));
@@ -596,6 +604,7 @@ const packs = new Map([
   ['Field Note 10', 'content/distribution/field-note-10-platforms.md'],
   ['Field Note 11', 'content/distribution/field-note-11-platforms.md'],
   ['Field Note 12', 'content/distribution/field-note-12-platforms.md'],
+  ['Field Note 13', 'drafts/field-note-13-platforms.md'],
 ]);
 // Medium refuses a tag containing anything but letters, numbers, spaces, and
 // dashes, and caps one at 25 characters. Observed live on 2026-08-13 while
@@ -675,4 +684,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, 107 launch PNG/SVG pairs, sixteen review sheets, forty-three editorial source images, five brand banners, and five editorial concept pairs.`);
+console.log(`Verified ${tracked.length} tracked files, ${scriptFiles.length} JavaScript files, the Ghost theme contract, ${validatedPairs} launch PNG/SVG pairs, ${reviewSheets.size} review sheets, ${editorialSources.size} editorial source images, five brand banners, and five editorial concept pairs.`);

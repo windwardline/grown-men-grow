@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="fn13-feature-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn13-feature-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn13-feature-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="#F8F3EA"/>
+  <rect x="0" y="0" width="470" height="1000" fill="#3A1518"/>
+  <rect x="1102" y="96" width="418" height="418" fill="url(#fn13-feature-dots)"/>
+  <text x="556" y="452" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="104" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">Set is not cured.</text>
+  <text x="558" y="592" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">The surface hardens first,</text><text x="558" y="662" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">and it hardens fast.</text>
+  <line x1="556" y1="682" x2="1444" y2="682" stroke="#B14F3F" stroke-width="4"/>
+  <g>
+    <line x1="96" y1="376.8" x2="386.40000000000003" y2="376.8" stroke="#EEE6D8" stroke-width="7.700000000000001" stroke-linecap="round" opacity="0.5"/>
+    <polyline points="96.0 376.8 96.8 375.3 97.5 373.8 98.3 372.3 99.1 370.8 99.9 369.3 100.6 367.9 101.4 366.4 102.2 365.0 103.0 363.6 103.7 362.2 104.5 360.8 105.3 359.4 106.1 358.1 106.8 356.7 107.6 355.4 108.4 354.1 109.2 352.7 109.9 351.4 110.7 350.1 111.5 348.9 112.3 347.6 113.0 346.3 113.8 345.1 114.6 343.9 115.4 342.6 116.1 341.4 116.9 340.2 117.7 339.0 118.5 337.9 119.2 336.7" fill="none" stroke="#EEE6D8" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="119.232" y1="358.69131575847985" x2="119.232" y2="314.69131575847985" stroke="#EEE6D8" stroke-width="8.8" stroke-linecap="round"/>
+  </g>
+  <g>
+    <line x1="96" y1="802.8" x2="386.40000000000003" y2="802.8" stroke="#B14F3F" stroke-width="7.700000000000001" stroke-linecap="round" opacity="0.5"/>
+    <polyline points="96.0 802.8 105.7 784.8 115.4 768.6 125.0 754.3 134.7 741.4 144.4 729.9 154.1 719.7 163.8 710.6 173.4 702.4 183.1 695.1 192.8 688.6 202.5 682.8 212.2 677.6 221.8 673.0 231.5 668.8 241.2 665.1 250.9 661.9 260.6 658.9 270.2 656.3 279.9 653.9 289.6 651.8 299.3 650.0 309.0 648.3 318.6 646.8 328.3 645.5 338.0 644.3 347.7 643.2 357.4 642.3 367.0 641.4 376.7 640.7 386.4 640.0" fill="none" stroke="#B14F3F" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="119.232" y1="784.6913157584797" x2="119.232" y2="740.6913157584797" stroke="#B14F3F" stroke-width="8.8" stroke-linecap="round"/>
+    <line x1="342.84000000000003" y1="672.339436280083" x2="342.84000000000003" y2="615.1394362800829" stroke="#B14F3F" stroke-width="8.8" stroke-linecap="round"/>
+  </g>
+  <text x="96" y="424" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="30" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="3">TWO DAYS</text>
+  <text x="96" y="850" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="30" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="3">TWENTY-EIGHT DAYS</text>
+  <rect width="1600" height="1000" filter="url(#fn13-feature-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

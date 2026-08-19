@@ -100,11 +100,11 @@ export function header({number, total, label = "FIELD NOTE 01", color = INK, y =
   <text x="1022" y="${y}" fill="${color}" font-family="${SANS}" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">${escapeXml(label)} · ${String(number).padStart(2, "0")} / ${String(total).padStart(2, "0")}</text>`;
 }
 
-export function portraitCanvas({id, body, background = PAPER_LIGHT, number, total = 7, label = "FIELD NOTE 01", footerColor = SMOKE}) {
+export function portraitCanvas({id, body, background = PAPER_LIGHT, number, total = 7, label = "FIELD NOTE 01", footerColor = SMOKE, headerColor = INK}) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
   ${defs(id)}
   <rect width="1080" height="1350" fill="${background}"/>
-  ${header({number, total, label})}
+  ${header({number, total, label, color: headerColor})}
   ${body}
   <text x="58" y="1292" fill="${footerColor}" font-family="${SANS}" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
   ${grain(1080, 1350, id)}
