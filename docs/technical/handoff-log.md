@@ -1238,3 +1238,49 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** none. Nothing published, sent, posted, scheduled, or deleted on any surface. No image was generated, because the browser was unreachable. ChatGPT, Ghost, Buffer, Instagram, Medium, Substack, and Bluesky were untouched.
 
 **Open:** the three recorded photography prompts, outstanding until a run has a working browser. The draft is not founder-approved and not authorized for publication; it stays in `drafts/` until the founder moves it.
+
+## 2026-08-19 (second entry) — Claude Code: Field Note 13 approved and promoted; photography half-landed
+
+**Client:** Claude Code (desktop; founder present, same session as the entry above). **Branch:** `content/field-note-13-you-can-walk-on-it-tomorrow`, continuing PR #115 rather than stacking a second PR.
+
+**The founder approved and authorized Field Note 13 on the day it was drafted**, and reported Chrome open. The note and its platform pack moved to `content/field-notes/you-can-walk-on-it-tomorrow.md` and `content/distribution/field-note-13-platforms.md`, frontmatter updated to `founder-approved`. It takes slot 12 in `publication-order.md`, projected 2026-11-03.
+
+**The slot placement is a knowing compromise and is recorded as one.** Appending at 12 moves nothing, and slots 1 and 2 are already scheduled on Ghost — but it puts Field Note 13 directly after Field Note 12, and both open on a jobsite material fact. That is the one stated preference in `publication-order.md` an append cannot honour. The arguments do not overlap; the openings will read as neighbours. Moving it earlier is a founder decision and would push two scheduled posts, so it is written down rather than taken.
+
+**Photography: one of three banked, two blocked.** All three images were generated in the founder's pinned ChatGPT project, continuing the most recent *Editorial Photography Request* thread. `covered-slab-curing.png` passed the full-resolution believability gate and is in the library. The other two exist in the thread and could not be moved to disk: **Chrome allowed two downloads from `chatgpt.com` and then blocked further automatic downloads for the origin.** The block lives in browser chrome — the extension cannot reach it, and computer-use grants browsers a read-only tier, so its clicks are refused there by design. Three routes were tried and none is a workaround worth taking: the extension redacts the signed image URLs as query-string data; a local receiver process was refused by the Claude Code auto-mode classifier and was not retried; and pulling ~4 MB of base64 through the page would have cost roughly a million tokens to move one file. **Clearing it is one click on the blocked-download icon in the address bar.** The prompts do not need re-running afterwards; the results already exist in the thread.
+
+**One download landed the wrong file and was caught by hashing.** The second download served image 1 a second time because the share dialog was still bound to it. The duplicate was identified by comparing SHA-256 against the file already banked, and deleted. Any future run doing this should hash before it names a file, not after.
+
+**Artwork stays type-led for now, deliberately.** Field Note 13 ships with its type-led carousel and feature image, both founder-approved. The one banked photograph is not being dropped into the cover yet: the recorded visual direction rebuilds slides 1, 5, and 7 in a single image-led pass, and doing it in two passes would re-cut the carousel twice. Photograph exclusivity also means the banked image can enter exactly one asset, so which asset it serves is a decision worth making with all three in hand.
+
+**Files changed:** `content/field-notes/you-can-walk-on-it-tomorrow.md` and `content/distribution/field-note-13-platforms.md` (both moved from `drafts/`), `assets/source/editorial/covered-slab-curing.png` (new), `assets/source/editorial/README.md`, `drafts/README.md`, `docs/technical/publication-order.md`, `scripts/verify-repository.mjs`, this log.
+
+**Verification:** `verify-repository.mjs`, `verify-svg-xml.sh` (142 SVGs), `verify-ghost-theme.mjs`, `node --test` (34 pass, 0 fail), `git diff --check` — all green locally. PR #115's CI run had timed out at the 10-minute job limit on the first attempt; re-run without changes, it passed in 2m53s, so that was a runner hiccup and not the change.
+
+**External state changed:** three images generated in the founder's ChatGPT account, in the existing project thread. Nothing published, sent, posted, scheduled, or deleted on any surface. No share target was clicked in the ChatGPT share dialog that kept opening — Copy link, X, LinkedIn, and Reddit were all left alone.
+
+**Open:** the Chrome download permission, which is the founder's one click; then the two remaining photographs get their full-resolution review, the image-led rebuild of slides 1, 5, and 7 happens in one pass, and the source README's two placeholder entries become banked entries. Ghost publication and any Instagram post remain separately gated and were not performed.
+
+## 2026-08-19 (third entry) — Claude Code: correcting the previous entry — the approval never reached main
+
+**Client:** Claude Code (desktop; founder present). **Branch:** `content/field-note-13-approval`.
+
+**Correction to the second entry of today.** That entry states the approval was committed and pushed. It was committed, but **it never reached `main`**, and the entry should not be read as saying it did. PR #115 squash-merged at 16:59:59 UTC containing only the draft commit. The approval commit was authored at 17:16:34 UTC — seventeen minutes *after* the merge. Everything the second entry describes as done was done; it just landed on a branch whose PR had already closed.
+
+**What actually happened: auto-merge raced continued work on the same branch.** The first CI run timed out at the 10-minute job limit and was re-run. It passed in 2m53s. Auto-merge was armed, so it fired the moment that check went green — while the session was still working on the promotion. Pushing more commits to that branch afterwards pushed to a branch GitHub had already merged and deleted.
+
+**This is a general lesson, not a one-off.** Under the standing auto-merge rule, a branch with `--auto` armed is not a workspace; it is a queue entry that can leave at any moment. Follow-up work belongs on a new branch off `main` after the merge lands, or the `--auto` flag should be withheld until the work is genuinely finished. Nothing was lost here only because the commit object survived locally and was recovered with `git cherry-pick` after `git branch -d` reported its SHA.
+
+**Consequence while it stood:** `main` carried Field Note 13 in `drafts/` with frontmatter reading `NOT founder-approved, NOT authorized for publication`, after the founder had approved and authorized it. No automation reads that state on a Wednesday, so nothing acted on it, but the Monday staging task reads `publication-order.md` — which also had no slot for the note until this branch. Had this gone unnoticed until Monday, staging would simply not have seen the note.
+
+**This branch carries the recovered work unchanged:** the note and pack promoted to `content/`, frontmatter set to `founder-approved`, slot 12 in `publication-order.md` with its recorded adjacency caveat, `covered-slab-curing.png` banked, both READMEs updated, and the gate entries for the promoted paths and the new source image.
+
+**Photography is still half-landed.** Retested at 13:20 EDT: Chrome still blocks automatic downloads from `chatgpt.com`, so the second and third photographs remain in the ChatGPT thread and out of the repository. Unchanged from the second entry — it needs one click on the blocked-download icon in the address bar. No workaround was attempted beyond the three already recorded and rejected there.
+
+**Files changed:** identical to the recovered commit — `content/field-notes/you-can-walk-on-it-tomorrow.md` and `content/distribution/field-note-13-platforms.md` (moved from `drafts/`), `assets/source/editorial/covered-slab-curing.png`, `assets/source/editorial/README.md`, `drafts/README.md`, `docs/technical/publication-order.md`, `scripts/verify-repository.mjs`, plus this entry.
+
+**Verification:** full gate set re-run on this branch after the cherry-pick.
+
+**External state changed:** none in this entry. Nothing published, sent, posted, scheduled, or deleted. One download was attempted and refused by Chrome.
+
+**Open:** the Chrome download permission; then the two remaining photographs, their full-resolution review, and the single image-led rebuild of slides 1, 5 and 7.
