@@ -20,20 +20,21 @@
   <rect width="1080" height="1350" fill="#121416"/>
   <text x="58" y="94" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
   <text x="1022" y="94" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 13 · 06 / 07</text>
-  <rect x="58" y="236" width="964" height="500" fill="#F8F3EA" transform="rotate(0.8 540 486)"/>
-    <g transform="rotate(4 384 235)">
-    <rect x="268" y="212" width="232" height="46" fill="#D9CBAF" opacity="0.74"/>
-    <line x1="276" y1="219" x2="490" y2="216" stroke="#fff" stroke-opacity="0.38"/>
-  </g>
-    <text x="106" y="392" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="58" font-weight="700" transform="rotate(0.8 540 486)">Load it early and it</text>
-    <text x="106" y="466" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="58" font-weight="700" transform="rotate(0.8 540 486)">rarely fails on the spot.</text>
-    <text x="106" y="586" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="44" font-style="italic" transform="rotate(0.8 540 486)">That is what makes it a bad decision</text>
-    <text x="106" y="646" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="44" font-style="italic" transform="rotate(0.8 540 486)">instead of an obvious one.</text>
-    <text x="66" y="872" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="48" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="-1.6">It takes hairline cracks and a</text><text x="66" y="938" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="48" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="-1.6">lower ceiling, and you meet them</text><text x="66" y="1004" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="48" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="-1.6">years later, under something</text><text x="66" y="1070" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="48" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="-1.6">ordinary.</text>
+  <text x="66" y="258" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="58" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">Load it early and it rarely</text><text x="66" y="334" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="58" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">fails on the spot.</text>
+    <text x="68" y="396" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">It takes hairline cracks and a lower ceiling,</text><text x="68" y="450" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">and you meet them years later, under</text><text x="68" y="504" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">something ordinary.</text>
     <g>
-    <line x1="66" y1="1239" x2="264" y2="1239" stroke="#B14F3F" stroke-width="5.25" stroke-linecap="round" opacity="0.5"/>
-    <polyline points="66.0 1239.0 67.5 1236.2 68.9 1233.4 70.4 1230.7 71.8 1228.1 73.3 1225.5 74.7 1223.0 76.2 1220.6 77.6 1218.2 79.1 1215.9 80.5 1213.7 82.0 1211.5 83.4 1209.3 84.9 1207.2 86.3 1205.2 87.8 1203.2 89.2 1201.2 90.7 1199.3 92.1 1197.5 93.6 1195.7 95.0 1193.9 96.5 1192.2 97.9 1190.5 99.4 1188.9 100.8 1187.3 102.3 1185.7 103.8 1184.2 105.2 1182.7 106.7 1181.3 108.1 1179.9 109.6 1178.5" fill="none" stroke="#B14F3F" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="81.84" y1="1226.6531698353272" x2="81.84" y2="1196.6531698353272" stroke="#B14F3F" stroke-width="6" stroke-linecap="round"/>
+    <line x1="852" y1="288" x2="984" y2="288" stroke="#B14F3F" stroke-width="3.5" stroke-linecap="round" opacity="0.5"/>
+    <polyline points="852.0 288.0 853.0 286.1 853.9 284.3 854.9 282.5 855.9 280.7 856.8 279.0 857.8 277.4 858.8 275.7 859.7 274.2 860.7 272.6 861.7 271.1 862.6 269.6 863.6 268.2 864.6 266.8 865.6 265.4 866.5 264.1 867.5 262.8 868.5 261.6 869.4 260.3 870.4 259.1 871.4 257.9 872.3 256.8 873.3 255.7 874.3 254.6 875.2 253.5 876.2 252.5 877.2 251.5 878.1 250.5 879.1 249.5 880.1 248.6 881.0 247.7" fill="none" stroke="#B14F3F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="862.56" y1="279.7687798902181" x2="862.56" y2="259.7687798902181" stroke="#B14F3F" stroke-width="4" stroke-linecap="round"/>
+  </g>
+    <g transform="rotate(-0.6 540 890)">
+    <rect x="62" y="602" width="956" height="610" fill="#B14F3F"/>
+    <rect x="70" y="588" width="940" height="604" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/garage-floor-hairline-crack.png" x="74" y="592" width="932" height="596" preserveAspectRatio="xMidYMid slice" filter="url(#fn13-06-photo)"/>
+  </g>
+    <g transform="rotate(3 380 593)">
+    <rect x="268" y="570" width="224" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="276" y1="577" x2="482" y2="574" stroke="#fff" stroke-opacity="0.38"/>
   </g>
   <text x="58" y="1292" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
   <rect width="1080" height="1350" filter="url(#fn13-06-paper)" opacity="0.22" pointer-events="none"/>

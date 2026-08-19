@@ -529,6 +529,8 @@ const editorialSources = new Map([
   ['wall-calendar-kitchen', { width: 1024, height: 1536 }],
   ['driveway-hoop-late-afternoon', { width: 1024, height: 1536 }],
   ['covered-slab-curing', { width: 1024, height: 1536 }],
+  ['hose-wetting-fresh-pour', { width: 1024, height: 1536 }],
+  ['garage-floor-hairline-crack', { width: 1024, height: 1536 }],
 ]);
 await validateNamedPngs('assets/source/editorial', editorialSources);
 await validateNamedPngs('assets/drafts/brand/banners', new Map([

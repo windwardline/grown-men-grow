@@ -229,26 +229,29 @@ All image-generation conversations now live in a dedicated ChatGPT Project named
 
 Generated through the founder's ChatGPT account in the pinned **Grown Men Grow** project, continuing the most recent *Editorial Photography Request* thread, under the house prompt structure in `docs/technical/content-pipeline.md`. For "You Can Walk on It Tomorrow" (founder-approved 2026-08-19). Exclusive to Field Note 13 under the per-article rule, and each photograph may enter at most one published asset under the 2026-08-16 exclusivity ruling.
 
-**Only one of the three reached disk.** Chrome allowed two downloads from `chatgpt.com` and then blocked further automatic downloads for the origin; the block lives in browser chrome, which neither the extension nor the read-only browser tier of computer-use can click. The two outstanding images are generated and sitting in the thread, reviewed only at on-screen scale. They are not in the repository and no composition uses them. Clearing the block is one click on the blocked-download icon in the address bar, after which the recorded prompts do not need to be re-run — the results already exist.
+**All three are banked as of 2026-08-19.** Getting them to disk took two passes: Chrome allowed two downloads from `chatgpt.com` and then blocked further automatic downloads for the origin, a block that lives in browser chrome and which neither the extension nor the read-only browser tier of computer-use can click. The founder cleared the permission and the remaining images came down. Each passed the full-resolution believability gate before it entered a composition. One earlier download served the first image a second time because the share dialog was stale; it was caught by comparing SHA-256 against the file already banked and deleted. **Hash before naming, not after.**
 
 ### `covered-slab-curing.png`
 
 - Status: banked 2026-08-19; passed the full-resolution believability gate (real form lumber and stakes, plausible sheet drape and creasing, coherent shadow direction, natural gravel texture, no synthetic tell)
-- Consumers: none yet — Field Note 13 ships type-led until its photography is complete, then this becomes the carousel lead
+- Consumers: `scripts/render-field-note-13.mjs` — carousel cover (slide 1) and the feature-image dominant
 - Prompt:
 
   > Now a first, separate image in the same editorial photography style, portrait orientation 2:3, single image. A freshly poured concrete slab kept covered and damp under a light sheet, one corner turned back to show the wet grey surface; the image suggests patience, ongoing work, and something being protected rather than finished. A residential side yard on a bright day, forms still in place, the ground swept and the site tidy and in use. No people. Contemporary editorial photography with the polish of a major men's magazine, natural texture, restrained fine film grain, candid rather than posed. Dynamic off-center composition with clean negative space at the upper left. Broad late-morning daylight, warm, optimistic, grounded. Adult subject, pristine natural anatomy, maintained welcoming setting, no logos, no readable text, no watermark. Avoid: derelict lots, cracked or crumbling concrete, mud and construction squalor, abandoned-site atmosphere, dramatic sky, blue-orange grading.
 
-### `hose-wetting-fresh-pour.png` — generated, not yet downloaded
+### `hose-wetting-fresh-pour.png`
 
-- Status: exists in the thread as "Sunlit Driveway Hose Spray"; blocked by the Chrome download block above. Not reviewed at full resolution. The on-screen frame reads well, but the water spray is exactly the failure mode its own avoid list names, so it gets a full-resolution look before it is banked.
+- Status: banked 2026-08-19; passed the full-resolution believability gate. The spray was the specific risk its own avoid list names, and it holds up — natural droplet dispersion with correct falloff and wetted patches where it lands, not frozen filaments. Hand and forearm anatomy is clean and the nozzle grip is plausible.
+- Review note: the surface reads as an established driveway with control joints rather than a fresh pour, a mild drift from the brief. Accepted, and arguably better for this article — the essay's point is that the thing already looks done.
+- Consumers: `scripts/render-field-note-13.mjs` — carousel slide 5
 - Prompt:
 
   > Now a second, separate image in the same editorial photography style, portrait orientation 2:3, single image. A garden hose wetting down a fresh concrete pour, water darkening the surface in a broad arc, sawhorses and a run of barrier tape at the edge of frame; the image suggests routine care taken on behalf of something that already looks done. A maintained residential driveway on a clear afternoon. Hands and forearms only. Contemporary editorial photography with the polish of a major men's magazine, natural texture, restrained fine film grain, candid rather than posed. Asymmetric composition with clean negative space along the right edge. Bright directional afternoon light, warm, optimistic, grounded. Adult subject, pristine natural anatomy, maintained welcoming setting, no logos, no readable text, no watermark. Avoid: heroic worker posing, grime and rust, macho jobsite cliches, spray frozen into unnatural filaments, waxy skin, excessive bokeh.
 
-### `garage-floor-hairline-crack.png` — generated, not yet downloaded
+### `garage-floor-hairline-crack.png`
 
-- Status: exists in the thread; blocked by the Chrome download block above. Not reviewed at full resolution.
+- Status: banked 2026-08-19; passed the full-resolution believability gate. The crack reads as fine and irregular with natural propagation — not a structural fracture and not ruin porn. Garage is tidy, in use, and daylit.
+- Consumers: `scripts/render-field-note-13.mjs` — carousel slide 6 and the feature-image inset
 - Prompt:
 
   > Now a third, separate image in the same editorial photography style, portrait orientation 2:3, single image. A fine hairline crack running across a finished concrete floor in a well-kept garage, shot close and level so the line reads clearly against the smooth surface; the image suggests a small early fact that matters later, noticed rather than dramatized. A tidy, swept, actively used garage with warm daylight from an open door. No people. Contemporary editorial photography with the polish of a major men's magazine, natural texture, restrained fine film grain, candid rather than posed. Dynamic off-center composition with clean negative space in the lower third. Soft daylight from one side, warm, optimistic, grounded. Adult subject, pristine natural anatomy, maintained welcoming setting, no logos, no readable text, no watermark. Avoid: ruin porn, deep structural fractures, weeds through concrete, dank basements, desaturated grading, symbolic isolation.

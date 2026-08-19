@@ -11,6 +11,7 @@ import {
   defs,
   grain,
   lines,
+  photo,
   portraitCanvas,
   tape,
   writeAsset,
@@ -24,10 +25,16 @@ import {
 // progressively across the sequence, so the second tick does not exist until the
 // line has actually travelled far enough to earn it. No prior vocabularies.
 //
-// This note is type-led. It has no photography of its own, and the
-// photograph-exclusivity ruling of 2026-08-16 forbids borrowing another
-// article's, so the composition carries itself on type, field, and scale —
-// the Marginalia treatment the visual system names for exactly this case.
+// Photography landed 2026-08-19. The three sources are exclusive to this
+// article and travel with it across its feature image and its carousel, which
+// is how every other note in the bank is built: the 2026-08-16 exclusivity
+// ruling governs two separately published FEED posts sharing a picture, which
+// is why verify-repository.mjs scans the Instagram families and not this pair.
+// Slides 2, 3, 4 and the close stay type-led so the sequence keeps mixed weight.
+const SLAB = "editorial/covered-slab-curing.png";
+const HOSE = "editorial/hose-wetting-fresh-pour.png";
+const CRACK = "editorial/garage-floor-hairline-crack.png";
+
 const otherArticles = ["friends-in-conversation", "repairing-wooden-chair", "sunlit-writing-table", "cooking-breakfast-together", "doorway-running-shoes", "balcony-plant-care", "workbench-hand-tools", "walking-after-the-work", "deck-board-detail", "truck-tailgate-loading", "porch-coffee-pause", "garage-doorway-call", "oil-check-detail", "smoke-detector-battery", "hallway-duffel-set-down", "tool-bag-handoff", "porch-two-chairs", "hardware-counter-question", "open-wall-wiring", "paperwork-second-eyes", "detector-test-press", "breaker-panel-check", "kitchen-counter-pause", "hammock-midday-rest", "morning-armchair-mug", "truck-hood-map", "compass-in-hand", "pegboard-end-of-day", "trail-fork-daylight", "garden-beds-two-heights", "car-odometer-daylight", "photos-notebook-spread", "bp-cuff-notebook", "running-shoes-alarm", "cutting-board-vegetables", "base-plates-anchor-bolts", "punch-list-tailgate", "transfer-switch-cabinet", "restaurant-table-after-lunch", "sling-capacity-tag", "rigging-shackles-bench", "wall-calendar-kitchen", "driveway-hoop-late-afternoon"];
 
 // `fill` runs 0 to 1 and is how far along the cure the curve has been drawn.
@@ -66,14 +73,13 @@ const slides = [
     number: 1,
     total: 7,
     label: "FIELD NOTE 13",
-    body: `<rect x="0" y="806" width="1080" height="544" fill="${OXBLOOD}"/>
-    <rect x="640" y="196" width="392" height="392" fill="url(#fn13-01-dots)"/>
-    ${lines(["YOU CAN WALK ON IT"], {x: 62, y: 372, size: 74, leading: 92, family: SANS, weight: 900, tracking: 1.2})}
-    ${lines(["TOMORROW."], {x: 62, y: 478, size: 74, leading: 92, family: SANS, weight: 900, tracking: 1.2, fill: OXBLOOD})}
-    ${lines(["Set is not the same as cured."], {x: 64, y: 636, size: 44, leading: 60, family: SERIF, weight: 400, style: "italic", fill: SMOKE})}
-    ${cureMark(88, 962, 0.08, PAPER, 2.1)}
-    ${lines(["TWO DAYS"], {x: 660, y: 1074, size: 34, leading: 44, family: SANS, weight: 900, tracking: 3, fill: PAPER})}
-    ${lines(["TWENTY-EIGHT"], {x: 660, y: 1128, size: 34, leading: 44, family: SANS, weight: 900, tracking: 3, fill: RUST})}`,
+    body: `<rect x="640" y="150" width="392" height="300" fill="url(#fn13-01-dots)"/>
+    ${lines(["YOU CAN WALK ON IT"], {x: 62, y: 262, size: 66, leading: 84, family: SANS, weight: 900, tracking: 1.2})}
+    ${lines(["TOMORROW."], {x: 62, y: 348, size: 66, leading: 84, family: SANS, weight: 900, tracking: 1.2, fill: OXBLOOD})}
+    ${lines(["Set is not the same as cured."], {x: 64, y: 412, size: 38, leading: 50, family: SERIF, weight: 400, style: "italic", fill: SMOKE})}
+    ${cureMark(858, 212, 0.08, RUST, 1.05)}
+    ${photo({name: SLAB, x: 128, y: 468, width: 824, height: 732, rotation: 0.9, position: "xMidYMid", backing: GREEN, id: "fn13-01"})}
+    ${tape(286, 444, 214, 4)}`,
   }),
   portraitCanvas({
     id: "fn13-02",
@@ -113,15 +119,13 @@ const slides = [
     total: 7,
     label: "FIELD NOTE 13",
     background: PAPER,
-    body: `<rect x="600" y="180" width="432" height="432" fill="url(#fn13-05-dots)"/>
-    ${lines(["It doesn’t dry."], {x: 70, y: 328, size: 66, leading: 86, family: SERIF, weight: 700})}
-    ${lines(["It cures — and the reaction", "needs the water kept in it."], {x: 70, y: 470, size: 50, leading: 68, family: SERIF, weight: 700, fill: OXBLOOD})}
-    <rect x="62" y="712" width="956" height="264" fill="${PAPER_LIGHT}" transform="rotate(-0.6 540 844)"/>
-    ${tape(214, 690, 218, -3)}
-    <text x="98" y="812" fill="${INK}" font-family="${SERIF}" font-size="44" font-style="italic" transform="rotate(-0.6 540 844)">Hardening is what the process</text>
-    <text x="98" y="874" fill="${INK}" font-family="${SERIF}" font-size="44" font-style="italic" transform="rotate(-0.6 540 844)">looks like from outside.</text>
-    <text x="98" y="936" fill="${SMOKE}" font-family="${SERIF}" font-size="44" font-style="italic" transform="rotate(-0.6 540 844)">The work is somewhere else.</text>
-    ${cureMark(700, 1064, 0.34, RUST, 1.7)}`,
+    body: `${photo({name: HOSE, x: 88, y: 158, width: 904, height: 762, rotation: -0.7, position: "xMidYMid", backing: OXBLOOD, id: "fn13-05"})}
+    ${tape(206, 136, 214, 3)}
+    <rect x="66" y="978" width="948" height="236" fill="${PAPER_LIGHT}" transform="rotate(0.6 540 1096)"/>
+    <text x="98" y="1046" fill="${INK}" font-family="${SERIF}" font-size="50" font-weight="700" transform="rotate(0.6 540 1096)">It doesn’t dry. It cures —</text>
+    <text x="98" y="1108" fill="${OXBLOOD}" font-family="${SERIF}" font-size="46" font-style="italic" transform="rotate(0.6 540 1096)">and the reaction needs the water</text>
+    <text x="98" y="1166" fill="${OXBLOOD}" font-family="${SERIF}" font-size="46" font-style="italic" transform="rotate(0.6 540 1096)">kept in it.</text>
+    ${cureMark(834, 1236, 0.34, RUST, 1)}`,
   }),
   portraitCanvas({
     id: "fn13-06",
@@ -131,14 +135,15 @@ const slides = [
     background: INK,
     footerColor: PAPER,
     headerColor: PAPER,
-    body: `<rect x="58" y="236" width="964" height="500" fill="${PAPER_LIGHT}" transform="rotate(0.8 540 486)"/>
-    ${tape(268, 212, 232, 4)}
-    <text x="106" y="392" fill="${INK}" font-family="${SERIF}" font-size="58" font-weight="700" transform="rotate(0.8 540 486)">Load it early and it</text>
-    <text x="106" y="466" fill="${INK}" font-family="${SERIF}" font-size="58" font-weight="700" transform="rotate(0.8 540 486)">rarely fails on the spot.</text>
-    <text x="106" y="586" fill="${OXBLOOD}" font-family="${SERIF}" font-size="44" font-style="italic" transform="rotate(0.8 540 486)">That is what makes it a bad decision</text>
-    <text x="106" y="646" fill="${OXBLOOD}" font-family="${SERIF}" font-size="44" font-style="italic" transform="rotate(0.8 540 486)">instead of an obvious one.</text>
-    ${lines(["It takes hairline cracks and a", "lower ceiling, and you meet them", "years later, under something", "ordinary."], {x: 66, y: 872, size: 48, leading: 66, family: SERIF, weight: 400, fill: PAPER})}
-    ${cureMark(66, 1128, 0.22, RUST, 1.5)}`,
+    // Skeleton inverted against slide 5 on purpose — type above, photograph
+    // below — so two consecutive image-led slides do not share a shape. The
+    // photograph runs large because a hairline crack that cannot be read is
+    // just a grey floor.
+    body: `${lines(["Load it early and it rarely", "fails on the spot."], {x: 66, y: 258, size: 58, leading: 76, family: SERIF, weight: 700, fill: PAPER})}
+    ${lines(["It takes hairline cracks and a lower ceiling,", "and you meet them years later, under", "something ordinary."], {x: 68, y: 396, size: 40, leading: 54, family: SERIF, weight: 400, style: "italic", fill: PAPER_LIGHT})}
+    ${cureMark(852, 214, 0.22, RUST, 1)}
+    ${photo({name: CRACK, x: 74, y: 592, width: 932, height: 596, rotation: -0.6, position: "xMidYMid", backing: RUST, id: "fn13-06"})}
+    ${tape(268, 570, 224, 3)}`,
   }),
   portraitCanvas({
     id: "fn13-07",
@@ -160,15 +165,15 @@ const slides = [
 const feature = `<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
   ${defs("fn13-feature")}
   <rect width="1600" height="1000" fill="${PAPER_LIGHT}"/>
-  <rect x="0" y="0" width="470" height="1000" fill="${OXBLOOD}"/>
-  <rect x="1102" y="96" width="418" height="418" fill="url(#fn13-feature-dots)"/>
-  ${lines(["Set is not cured."], {x: 556, y: 452, size: 104, leading: 124, family: SERIF, weight: 700})}
-  ${lines(["The surface hardens first,", "and it hardens fast."], {x: 558, y: 592, size: 52, leading: 70, family: SERIF, weight: 400, style: "italic", fill: OXBLOOD})}
-  <line x1="556" y1="682" x2="1444" y2="682" stroke="${RUST}" stroke-width="4"/>
-  ${cureMark(96, 214, 0.08, PAPER, 2.2)}
-  ${cureMark(96, 640, 1, RUST, 2.2)}
-  ${lines(["TWO DAYS"], {x: 96, y: 424, size: 30, leading: 40, family: SANS, weight: 900, tracking: 3, fill: PAPER})}
-  ${lines(["TWENTY-EIGHT DAYS"], {x: 96, y: 850, size: 30, leading: 40, family: SANS, weight: 900, tracking: 3, fill: PAPER})}
+  <rect x="0" y="0" width="404" height="1000" fill="${OXBLOOD}"/>
+  ${photo({name: SLAB, x: 452, y: 96, width: 714, height: 812, rotation: 0.8, position: "xMidYMid", backing: GREEN, id: "fn13-feature"})}
+  ${photo({name: CRACK, x: 1194, y: 224, width: 306, height: 610, rotation: -1.5, position: "xMidYMid", backing: OXBLOOD, id: "fn13-feature"})}
+  ${tape(560, 72, 224, 3)}
+  ${tape(1258, 200, 186, -4)}
+  ${cureMark(96, 214, 0.08, PAPER, 1.5)}
+  ${lines(["TWO DAYS"], {x: 96, y: 386, size: 28, leading: 38, family: SANS, weight: 900, tracking: 3, fill: PAPER})}
+  ${cureMark(96, 640, 1, RUST, 1.5)}
+  ${lines(["TWENTY-EIGHT DAYS"], {x: 96, y: 812, size: 28, leading: 38, family: SANS, weight: 900, tracking: 3, fill: PAPER})}
   ${grain(1600, 1000, "fn13-feature", 0.22)}
 </svg>`;
 
@@ -178,12 +183,13 @@ for (const name of otherArticles) {
     throw new Error(`Field Note 13 composes editorial/${name}.png, which belongs to another article.`);
   }
 }
-// Field Note 13 is type-led by design, not by omission. If a photograph is ever
-// added here, it has to be this article's own and the line below has to go with
-// a recorded decision — an unguarded edit would otherwise reintroduce exactly
-// the collision the 2026-08-16 ruling closed.
-if (all.includes("/assets/source/editorial/")) {
-  throw new Error("Field Note 13 is type-led and must compose no editorial photograph.");
+// Every photograph generated for this note must actually appear. A source that
+// is banked, documented, and then silently composed out is the quiet way an
+// article ends up reusing another's imagery later because "there wasn't enough".
+for (const source of [SLAB, HOSE, CRACK]) {
+  if (!all.includes(`/assets/source/${source}`)) {
+    throw new Error(`Field Note 13 banked ${source} but composes it nowhere.`);
+  }
 }
 
 slides.forEach((svg, index) => writeAsset("instagram/field-note-13-carousel", String(index + 1).padStart(2, "0"), svg));
