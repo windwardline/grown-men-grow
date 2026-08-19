@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn13-03-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn13-03-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn13-03-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#3A1518"/>
+  <text x="58" y="94" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 13 · 03 / 07</text>
+  <text x="70" y="420" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="76" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">Six weeks out,</text><text x="70" y="516" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="76" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">he says he’s fine.</text>
+    <text x="72" y="720" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">He isn’t performing.</text><text x="72" y="788" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">The surface really is hard.</text>
+    <g>
+    <line x1="72" y1="1122.4" x2="283.20000000000005" y2="1122.4" stroke="#B14F3F" stroke-width="5.6000000000000005" stroke-linecap="round" opacity="0.5"/>
+    <polyline points="72.0 1122.4 72.8 1120.7 73.7 1119.1 74.5 1117.5 75.4 1115.9 76.2 1114.3 77.1 1112.8 77.9 1111.3 78.8 1109.8 79.6 1108.3 80.4 1106.8 81.3 1105.4 82.1 1104.0 83.0 1102.6 83.8 1101.2 84.7 1099.8 85.5 1098.4 86.4 1097.1 87.2 1095.8 88.1 1094.5 88.9 1093.2 89.7 1092.0 90.6 1090.7 91.4 1089.5 92.3 1088.3 93.1 1087.1 94.0 1085.9 94.8 1084.8 95.7 1083.6 96.5 1082.5 97.3 1081.4" fill="none" stroke="#B14F3F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="88.896" y1="1109.230047824349" x2="88.896" y2="1077.230047824349" stroke="#B14F3F" stroke-width="6.4" stroke-linecap="round"/>
+  </g>
+  <text x="58" y="1292" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn13-03-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

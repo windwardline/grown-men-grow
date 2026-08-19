@@ -1214,3 +1214,27 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** none. Nothing posted, drafted, scheduled, sent, or deleted on any surface. Substack was read only, and the one `type` action attempted in this session went at a DuckDuckGo search box to test the classifier and was refused. Google Chrome was launched locally.
 
 **Open:** the classifier decision, which is the founder's. Until it is made, the weekly notes degrade to a handoff — the preflight assembles the copy, the identity check, and the timing, and the founder pastes and posts.
+
+## 2026-08-19 — Claude Code: Field Note 13 drafted complete, type-led because the browser was down
+
+**Client:** Claude Code (desktop; scheduled task `gmg-wednesday-draft`). **Branch:** `content/field-note-13-you-can-walk-on-it-tomorrow`.
+
+**Backfill first, and it came back empty.** Every one of the eleven approved notes was checked against the complete-unit table in `docs/technical/content-pipeline.md` — pack, render script, carousel, feature image, review sheet, gate entries. All eleven are complete. Nothing needed rebuilding, so the run proceeded to new work.
+
+**Field Note 13, "You Can Walk on It Tomorrow."** 1,195 words, `assignment` stance, generic present, no first person, no asserted event. The argument is the gap between set and cured: concrete is walkable in two days and reaches its design number at twenty-eight, and a man reads the surface because it is the only gauge he has. The second section exists to defend the reader against the lazy reading — he is not performing when he says he is fine, he is reporting accurately off the wrong instrument.
+
+**The adjacency to Field Note 12 was judged, not overlooked.** Both open on a jobsite material fact. Field Note 12 argues about *how much*, from a gap between two ratings; this argues about *how long*, from a gap between appearance and readiness. Field Note 12's hinge line — men understanding it at work and not about themselves — deliberately does not appear here. The call and the reasoning are recorded in the draft's production notes for the founder to overturn if they disagree.
+
+**Test 7 changed the draft.** The man it lands worst on is not the one with no time to spare — he was addressed from the first version — but the bereaved reader, for whom a cure schedule implies an arrival he will not get. The repair is a fact rather than a hedge: cement keeps hydrating for years, and twenty-eight days is a convention the trade agreed on so it could stop waiting and start building. All nine tests were run and reported in chat.
+
+**Artwork is type-led by ruling, not by shortcut.** The Claude in Chrome extension was unreachable on two attempts at the top of the run, so no photography could be generated in the founder's ChatGPT project. Borrowing an existing photograph is forbidden by the 2026-08-16 photograph-exclusivity ruling, and `editorial-visual-system.md` names a type-led composition as the sanctioned alternative — so the carousel, feature image, and review sheet are complete and carry themselves on type, field, and scale. The three house prompts that would have been sent are recorded verbatim in the draft's production notes, along with which slides to rebuild image-led once generation is available.
+
+**Two defects found and fixed while reviewing the render.** `portraitCanvas` could not put a legible header on a dark ground — `header()` already accepted a colour and `portraitCanvas` was not passing one through, so slides 3 and 6 rendered their header in near-invisible ink. The new `headerColor` parameter defaults to the old value; every one of the other eleven notes was re-rendered afterwards and its output is byte-identical. Separately, `verify-repository.mjs` closed with a hand-written summary that had gone stale: it reported 107 launch PNG/SVG pairs when the true figure was already 123 before this run added eight. The review-sheet count was accurate until this change would have made it wrong. That line now derives its pair, review-sheet, and editorial-source counts from the checks that actually ran, so it cannot drift again.
+
+**Files changed:** `drafts/field-note-13-you-can-walk-on-it-tomorrow.md` (new), `drafts/field-note-13-platforms.md` (new), `scripts/render-field-note-13.mjs` (new), `assets/drafts/instagram/field-note-13-carousel/` (7 SVG/PNG pairs, new), `assets/drafts/ghost/feature-images/you-can-walk-on-it-tomorrow.{svg,png}` (new), `assets/drafts/review/field-note-13-carousel.png` (new), `scripts/render-review-contact-sheets.mjs`, `scripts/verify-repository.mjs`, `scripts/lib/editorial-collage.mjs`, this log.
+
+**Verification:** `verify-repository.mjs`, `verify-svg-xml.sh` (142 SVGs), `verify-ghost-theme.mjs`, `node --test` (34 pass, 0 fail), and `git diff --check` all green. The carousel and feature image were reviewed at full resolution before delivery, which is how the header-contrast defect was caught.
+
+**External state changed:** none. Nothing published, sent, posted, scheduled, or deleted on any surface. No image was generated, because the browser was unreachable. ChatGPT, Ghost, Buffer, Instagram, Medium, Substack, and Bluesky were untouched.
+
+**Open:** the three recorded photography prompts, outstanding until a run has a working browser. The draft is not founder-approved and not authorized for publication; it stays in `drafts/` until the founder moves it.

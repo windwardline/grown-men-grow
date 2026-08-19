@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn13-02-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn13-02-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn13-02-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#EEE6D8"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 13 · 02 / 07</text>
+  <text x="72" y="380" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">Concrete sets in two days</text><text x="72" y="464" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">and cures for twenty-eight.</text>
+    <line x1="72" y1="500" x2="1008" y2="500" stroke="#3A1518" stroke-width="3"/>
+    <text x="74" y="636" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="58" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">Set and cured are</text><text x="74" y="714" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="58" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">two different events.</text>
+    <g>
+    <line x1="74" y1="1080.6" x2="324.79999999999995" y2="1080.6" stroke="#3A1518" stroke-width="6.6499999999999995" stroke-linecap="round" opacity="0.5"/>
+    <polyline points="74.0 1080.6 82.4 1065.0 90.7 1051.1 99.1 1038.7 107.4 1027.6 115.8 1017.7 124.2 1008.8 132.5 1000.9 140.9 993.9 149.2 987.6 157.6 982.0 166.0 977.0 174.3 972.5 182.7 968.5 191.0 964.9 199.4 961.7 207.8 958.9 216.1 956.3 224.5 954.1 232.8 952.0 241.2 950.2 249.6 948.6 257.9 947.2 266.3 945.9 274.6 944.7 283.0 943.7 291.4 942.8 299.7 942.0 308.1 941.2 316.4 940.6 324.8 940.0" fill="none" stroke="#3A1518" stroke-width="9.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="94.064" y1="1064.9606817914143" x2="94.064" y2="1026.9606817914143" stroke="#3A1518" stroke-width="7.6" stroke-linecap="round"/>
+    <line x1="287.17999999999995" y1="967.9295131509807" x2="287.17999999999995" y2="918.5295131509806" stroke="#3A1518" stroke-width="7.6" stroke-linecap="round"/>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn13-02-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
