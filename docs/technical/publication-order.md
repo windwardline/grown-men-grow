@@ -52,6 +52,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 9 | `comparison-is-a-bad-map` | 2026-10-13 | |
 | 10 | `the-lights-never-flickered` | 2026-10-20 | |
 | 11 | `nobody-rigs-to-the-breaking-strength` | 2026-10-27 | |
+| 12 | `you-can-walk-on-it-tomorrow` | 2026-11-03 | |
 
 ## Why this order and not another
 
@@ -60,6 +61,8 @@ The constraints above fix positions 3, 5, 6, and 7 relative to each other. The r
 - **Two friendship pieces do not run back to back.** Position 1 and position 3 are both about friendship; position 2 separates them with a piece about repair.
 - **The witness piece runs late.** `the-lights-never-flickered` is the only note where the reader is held rather than asked. It sits at position 10, after the voice is established, so it reads as a deliberate change of stance rather than as the publication's default register. It is not a series and nothing labels it.
 - **Related machinery is spread.** `rest-is-not-a-reward` and `nobody-rigs-to-the-breaking-strength` both argue about capacity and both run on maintenance metaphors; they sit at 5 and 11 rather than adjacent.
+
+`you-can-walk-on-it-tomorrow` was appended at 12 on 2026-08-19 because appending moves nothing, and two slots are already scheduled. **It sits directly after `nobody-rigs-to-the-breaking-strength`, and both open on a jobsite material fact** — which is the one preference above that an append cannot honour. The arguments do not overlap: 11 is about how much load a man books himself at, 12 is about how long a thing takes to become load-bearing. But they will read as neighbours, and a reader who noticed the first opening will notice the second. Moving 12 earlier is a founder decision and would push two scheduled posts; it is recorded here rather than taken.
 
 ## How this is used
 

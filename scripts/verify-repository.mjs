@@ -420,6 +420,10 @@ if (tracked.includes('drafts/field-note-12-nobody-rigs-to-the-breaking-strength.
   || tracked.includes('drafts/field-note-12-platforms.md')) {
   fail('Approved Field Note 12 and its platform pack must live under content/, not drafts/.');
 }
+if (tracked.includes('drafts/field-note-13-you-can-walk-on-it-tomorrow.md')
+  || tracked.includes('drafts/field-note-13-platforms.md')) {
+  fail('Approved Field Note 13 and its platform pack must live under content/, not drafts/.');
+}
 
 const launchPackage = await readFile(path.join(root, 'content/instagram/launch-package.md'), 'utf8');
 const captionSource = launchPackage.split('\n## 8. Approved discovery classifications')[0];
@@ -524,6 +528,7 @@ const editorialSources = new Map([
   ['rigging-shackles-bench', { width: 1024, height: 1536 }],
   ['wall-calendar-kitchen', { width: 1024, height: 1536 }],
   ['driveway-hoop-late-afternoon', { width: 1024, height: 1536 }],
+  ['covered-slab-curing', { width: 1024, height: 1536 }],
 ]);
 await validateNamedPngs('assets/source/editorial', editorialSources);
 await validateNamedPngs('assets/drafts/brand/banners', new Map([
@@ -604,7 +609,7 @@ const packs = new Map([
   ['Field Note 10', 'content/distribution/field-note-10-platforms.md'],
   ['Field Note 11', 'content/distribution/field-note-11-platforms.md'],
   ['Field Note 12', 'content/distribution/field-note-12-platforms.md'],
-  ['Field Note 13', 'drafts/field-note-13-platforms.md'],
+  ['Field Note 13', 'content/distribution/field-note-13-platforms.md'],
 ]);
 // Medium refuses a tag containing anything but letters, numbers, spaces, and
 // dashes, and caps one at 25 characters. Observed live on 2026-08-13 while
