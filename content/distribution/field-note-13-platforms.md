@@ -1,8 +1,8 @@
 ---
 essay: You Can Walk on It Tomorrow
 canonical: https://grownmengrow.com/you-can-walk-on-it-tomorrow/ (live only after publication)
-status: draft — NOT founder-approved
-approved: no
+status: founder-approved
+approved: 2026-08-19
 stance: assignment — the pack may address the reader, as the essay does
 image_rule: per-article — this pack may use only Field Note 13 imagery, which is type-led until photography exists
 ---

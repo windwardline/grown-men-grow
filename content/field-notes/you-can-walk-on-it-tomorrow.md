@@ -6,11 +6,11 @@ byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: You Can Walk on It Tomorrow
 preview: The surface hardens first, and it hardens fast. That is not the same as strength.
-status: draft — NOT founder-approved, NOT authorized for publication
-approved: no
+status: founder-approved
+approved: 2026-08-19; founder approved and authorized for publication in one pass
 stance: assignment — the reader has a move, and the closing hundred words turn to him
 personal_claims: none included; no first person appears, and none may be added except from founder-supplied facts
-artwork_status: type-led carousel and feature image complete; source photography outstanding — see production notes
+artwork_status: type-led carousel and feature image complete and approved; one of three photographs banked, two generated and pending download — see production notes
 ---
 
 # Ghost essay source
