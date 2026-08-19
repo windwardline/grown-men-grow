@@ -20,21 +20,23 @@
   <rect width="1080" height="1350" fill="#EEE6D8"/>
   <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
   <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 13 · 05 / 07</text>
-  <rect x="600" y="180" width="432" height="432" fill="url(#fn13-05-dots)"/>
-    <text x="70" y="328" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">It doesn’t dry.</text>
-    <text x="70" y="470" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">It cures — and the reaction</text><text x="70" y="538" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">needs the water kept in it.</text>
-    <rect x="62" y="712" width="956" height="264" fill="#F8F3EA" transform="rotate(-0.6 540 844)"/>
-    <g transform="rotate(-3 323 713)">
-    <rect x="214" y="690" width="218" height="46" fill="#D9CBAF" opacity="0.74"/>
-    <line x1="222" y1="697" x2="422" y2="694" stroke="#fff" stroke-opacity="0.38"/>
+  <g transform="rotate(-0.7 540 539)">
+    <rect x="76" y="168" width="928" height="776" fill="#3A1518"/>
+    <rect x="84" y="154" width="912" height="770" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/hose-wetting-fresh-pour.png" x="88" y="158" width="904" height="762" preserveAspectRatio="xMidYMid slice" filter="url(#fn13-05-photo)"/>
   </g>
-    <text x="98" y="812" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="44" font-style="italic" transform="rotate(-0.6 540 844)">Hardening is what the process</text>
-    <text x="98" y="874" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="44" font-style="italic" transform="rotate(-0.6 540 844)">looks like from outside.</text>
-    <text x="98" y="936" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="44" font-style="italic" transform="rotate(-0.6 540 844)">The work is somewhere else.</text>
+    <g transform="rotate(3 313 159)">
+    <rect x="206" y="136" width="214" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="214" y1="143" x2="410" y2="140" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <rect x="66" y="978" width="948" height="236" fill="#F8F3EA" transform="rotate(0.6 540 1096)"/>
+    <text x="98" y="1046" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="700" transform="rotate(0.6 540 1096)">It doesn’t dry. It cures —</text>
+    <text x="98" y="1108" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="46" font-style="italic" transform="rotate(0.6 540 1096)">and the reaction needs the water</text>
+    <text x="98" y="1166" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="46" font-style="italic" transform="rotate(0.6 540 1096)">kept in it.</text>
     <g>
-    <line x1="700" y1="1189.8" x2="924.4" y2="1189.8" stroke="#B14F3F" stroke-width="5.95" stroke-linecap="round" opacity="0.5"/>
-    <polyline points="700.0 1189.8 702.5 1184.9 705.1 1180.1 707.6 1175.6 710.2 1171.2 712.7 1167.0 715.3 1162.9 717.8 1159.0 720.3 1155.3 722.9 1151.7 725.4 1148.2 728.0 1144.8 730.5 1141.6 733.1 1138.5 735.6 1135.5 738.1 1132.7 740.7 1129.9 743.2 1127.3 745.8 1124.7 748.3 1122.2 750.9 1119.9 753.4 1117.6 756.0 1115.4 758.5 1113.3 761.0 1111.3 763.6 1109.3 766.1 1107.4 768.7 1105.6 771.2 1103.9 773.8 1102.2 776.3 1100.6" fill="none" stroke="#B14F3F" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="717.952" y1="1175.8069258133708" x2="717.952" y2="1141.8069258133708" stroke="#B14F3F" stroke-width="6.8" stroke-linecap="round"/>
+    <line x1="834" y1="1310" x2="966" y2="1310" stroke="#B14F3F" stroke-width="3.5" stroke-linecap="round" opacity="0.5"/>
+    <polyline points="834.0 1310.0 835.5 1307.1 837.0 1304.3 838.5 1301.6 840.0 1299.1 841.5 1296.6 843.0 1294.2 844.5 1291.9 846.0 1289.7 847.5 1287.6 849.0 1285.5 850.5 1283.6 852.0 1281.7 853.4 1279.8 854.9 1278.1 856.4 1276.4 857.9 1274.8 859.4 1273.2 860.9 1271.7 862.4 1270.3 863.9 1268.9 865.4 1267.5 866.9 1266.2 868.4 1265.0 869.9 1263.8 871.4 1262.7 872.9 1261.6 874.4 1260.5 875.9 1259.5 877.4 1258.5 878.9 1257.5" fill="none" stroke="#B14F3F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="844.56" y1="1301.7687798902182" x2="844.56" y2="1281.7687798902182" stroke="#B14F3F" stroke-width="4" stroke-linecap="round"/>
   </g>
   <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
   <rect width="1080" height="1350" filter="url(#fn13-05-paper)" opacity="0.22" pointer-events="none"/>

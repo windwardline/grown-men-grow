@@ -1284,3 +1284,25 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** none in this entry. Nothing published, sent, posted, scheduled, or deleted. One download was attempted and refused by Chrome.
 
 **Open:** the Chrome download permission; then the two remaining photographs, their full-resolution review, and the single image-led rebuild of slides 1, 5 and 7.
+
+## 2026-08-19 (fourth entry) — Claude Code: Field Note 13 photography complete; artwork rebuilt image-led
+
+**Client:** Claude Code (desktop; founder present). **Branch:** `content/field-note-13-photography`.
+
+**All three photographs are banked and the unit is now image-led.** The founder cleared Chrome's per-origin automatic-download block and the two outstanding images came down. Each passed the full-resolution believability gate before entering a composition: `covered-slab-curing.png`, `hose-wetting-fresh-pour.png`, `garage-floor-hairline-crack.png`.
+
+**The spray held up.** `hose-wetting-fresh-pour` was the one carrying real risk, because frozen filaments are the exact failure its own avoid list names. At full resolution the spray is natural droplet dispersion with correct falloff and wetted patches where it lands, and the hand and nozzle grip are clean. One drift from the brief is recorded rather than ignored: the surface reads as an established driveway with control joints rather than a fresh pour. Accepted, and arguably better here — the essay's point is that the thing already looks done.
+
+**A wrong assumption was corrected before it shaped the artwork.** The plan had been to split the three photographs between the carousel and the feature image, on the reading that those are two published assets under the 2026-08-16 exclusivity ruling. Checking the bank first showed that **all eleven existing notes share their photography between their Ghost feature image and their Instagram carousel** — and that `validatePhotographExclusivity` scans only the Instagram families, deliberately. The ruling governs two separately published *feed* posts sharing a picture; a Ghost feature image is not a feed post. Field Note 13 is therefore built like every other note, and each photograph still appears in exactly one Instagram family.
+
+**A deviation from the note's own recorded visual direction, stated rather than quietly made.** That direction said rebuild slides 1, 5 and 7 image-led. Slide 6 took the third photograph instead of slide 7: the hairline-crack image matches slide 6's copy exactly, and a crack on the closing slide would imply damage is the outcome, when the close is about time and water. Slide 7 stays type-led as the earned close. The note's visual direction and production notes now describe what was actually built.
+
+**Slide 6 was rebuilt twice.** The first image-led version put the crack photograph on the ink ground below its text and the crack did not read at thumbnail scale, which defeats the only reason that photograph exists. The skeleton was inverted — type above, photograph below, run large — which also stops slides 5 and 6 sharing a shape.
+
+**Files changed:** `scripts/render-field-note-13.mjs`, `assets/source/editorial/hose-wetting-fresh-pour.png` and `garage-floor-hairline-crack.png` (new), `assets/source/editorial/README.md`, `content/field-notes/you-can-walk-on-it-tomorrow.md` (alt text, visual direction, production notes, `artwork_status`), `scripts/verify-repository.mjs`, the seven carousel pairs, the feature image pair, the review sheet, this log.
+
+**Verification:** `verify-repository.mjs`, `verify-svg-xml.sh` (142 SVGs), `verify-ghost-theme.mjs`, `node --test` (34 pass, 0 fail), `git diff --check` — all green. Carousel and feature image reviewed at full resolution, which is how the slide 6 legibility problem was caught.
+
+**External state changed:** two images downloaded from the founder's own ChatGPT account. **One misfire to record: a click intended for the share dialog's Download button landed on its Reddit button and opened a Reddit submit page in a new tab.** Nothing was posted — the tab was a logged-out Reddit login wall and it was closed immediately. ChatGPT does mint a public share link when those buttons are used, and one appears in that Reddit URL; the founder may want to revoke it from ChatGPT's shared-links settings. No other share target was touched.
+
+**Open:** the share link above, if the founder wants it revoked. Ghost publication and any Instagram post remain separately gated and were not performed.

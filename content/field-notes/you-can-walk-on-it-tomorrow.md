@@ -10,7 +10,7 @@ status: founder-approved
 approved: 2026-08-19; founder approved and authorized for publication in one pass
 stance: assignment — the reader has a move, and the closing hundred words turn to him
 personal_claims: none included; no first person appears, and none may be added except from founder-supplied facts
-artwork_status: type-led carousel and feature image complete and approved; one of three photographs banked, two generated and pending download — see production notes
+artwork_status: complete; all three photographs banked 2026-08-19 and the carousel and feature image rebuilt image-led
 ---
 
 # Ghost essay source
@@ -127,20 +127,21 @@ Nobody prints your twenty-eight days. There’s no chart. But set is not cured, 
 
 # Instagram alt text source
 
-- Slide 1: Title You Can Walk on It Tomorrow set large in condensed type on a warm paper ground, with a small drawn strength curve rising steeply and then flattening, marked at an early point.
+- Slide 1: Title You Can Walk on It Tomorrow in condensed type above a photograph of a freshly poured concrete slab kept covered under a light sheet in a residential side yard, one corner turned back to show the grey surface, with a small drawn strength curve marked at an early point.
 - Slide 2: Serif page reading Concrete sets in two days and cures for twenty-eight, with the drawn curve marked at both the early set point and the distant cure point.
-- Slide 3: Type-led page on a deep oxblood field reading Six weeks out, he says he’s fine — he isn’t performing, the surface really is hard.
-- Slide 4: Sparse italic page reading He’s running a surface test on a question about depth, with a single hairline rule beneath it.
-- Slide 5: Serif page about curing rather than drying, with the drawn curve flattening early where the water leaves.
-- Slide 6: Torn paper block reading Load it early and it rarely fails on the spot, above smaller type about hairline cracks and a lower ceiling.
+- Slide 3: Type-led page on a deep oxblood field reading Six weeks out, he says he's fine — he isn't performing, the surface really is hard.
+- Slide 4: Sparse italic page reading He's running a surface test on a question about depth, with a single hairline rule beneath it.
+- Slide 5: Photograph of a garden hose wetting down a concrete driveway in afternoon light, a hand and forearm at the nozzle and a sawhorse with barrier tape at the frame edge, above a paper block reading It doesn't dry, it cures, and the reaction needs the water kept in it.
+- Slide 6: Type on a dark ground reading Load it early and it rarely fails on the spot, above a photograph of a fine hairline crack running across the smooth floor of a tidy, daylit garage.
 - Slide 7: Closing page reading Nobody prints your twenty-eight days, with the drawn curve completed to full height.
 
 # Visual direction
 
-- Family: Marginalia for this build — typographic, spare, abrupt scale shifts, no photograph. The visual system names this as the correct treatment when an article has no photography of its own, and photograph exclusivity forbids borrowing any existing image.
-- Signature: a small hand-drawn strength-gain curve — a baseline, a curve rising steeply then flattening toward an asymptote, with a short tick at the early set point and a second at the distant cure point. The curve fills progressively across the sequence. Used by no other note.
-- Intended photography, once generation is available: a covered slab kept damp under daylight (lead); a hose wetting a fresh pour beside sawhorses and tape; a hairline crack in a finished floor under ordinary daylight. Prompts are recorded in the production notes.
-- On generation, rebuild slides 1, 5, and 7 image-led and keep the rest type-led. Do not retrofit photography into all seven; the sequence is paced for mixed weight.
+- Family: Field Note — image-led, with type-led interior slides so the sequence keeps mixed weight. Built type-led on 2026-08-19 while photography was blocked, then rebuilt image-led the same day once the three photographs landed.
+- Signature: a small hand-drawn strength-gain curve — a baseline, a curve rising steeply then flattening toward an asymptote, with a short tick at the early set point and a second at the distant cure point. The curve fills progressively across the sequence, and the cure tick is only drawn once the line has travelled far enough to reach it. Used by no other note.
+- Photography, all exclusive to this article: `covered-slab-curing.png` (lead — carousel cover and feature image dominant), `hose-wetting-fresh-pour.png` (slide 5), `garage-floor-hairline-crack.png` (slide 6 and the feature image inset).
+- Slides 2, 3, 4 and the close stay type-led. Slide 6 inverts slide 5's skeleton — type above, photograph below — so two consecutive image-led slides do not share a shape.
+- The photography travels across this article's feature image and its carousel, which is how every other note in the bank is built. The 2026-08-16 exclusivity ruling governs two separately published feed posts sharing a picture; `verify-repository.mjs` enforces it across the Instagram families.
 
 # Production notes
 
@@ -148,7 +149,8 @@ Nobody prints your twenty-eight days. There’s no chart. But set is not cured, 
 - Stance is `assignment` under the subject test: the reader has a move — which gauge he reads, and what he does about the load and the water — so this is an ordinary field note. The closing hundred words turn to him, per the corpus measure.
 - Register is the generic present throughout. No event is asserted as having happened, no composite appears, and no first person appears. First person may be added only if the founder supplies and confirms the fact.
 - Adjacency flagged rather than smoothed: Field Note 12 also opens on a jobsite material fact. The differentiator is that Field Note 12 argues about *how much* a man books himself at, from a gap between two ratings, while this argues about *how long*, from a gap between appearance and readiness — and this piece's hinge is a perception problem it spends a section defending the reader against, which Field Note 12 never does. The line "men understand this at work and almost not at all about themselves" belongs to Field Note 12 and deliberately does not appear here.
-- Artwork blocker: the Claude in Chrome extension was unreachable on two attempts at the top of this run, so no photography could be generated in the founder's ChatGPT project. Nothing was skipped quietly and no existing photograph was borrowed — the photograph-exclusivity ruling of 2026-08-16 forbids it, and the visual system names a type-led composition as the sanctioned alternative. The carousel, feature image, and review sheet are complete and type-led.
+- Artwork: the Claude in Chrome extension was unreachable at the top of the scheduled run, so the unit was first built type-led — the sanctioned treatment when an article has no photography of its own — rather than borrowing another article's imagery. The founder opened Chrome the same day and all three photographs were generated in the pinned ChatGPT project, continuing the most recent Editorial Photography Request thread. Chrome then blocked repeat automatic downloads from the origin after the first two; the founder cleared the permission and the remaining images came down. The carousel and feature image were rebuilt image-led on 2026-08-19.
+- Deviation from the first recorded direction, stated rather than quietly changed: that direction said rebuild slides 1, 5 and 7 image-led. Slide 6 took the photograph instead of slide 7, because the hairline-crack image matches slide 6's copy exactly and a crack on the closing slide would imply damage is the outcome — the close is about time and water, not damage. Slide 7 stays type-led as the earned close.
 - Recorded house prompts for the next run with browser access, one per image, sent in the pinned Grown Men Grow project:
   1. "Now a first, separate image in the same editorial photography style, portrait orientation 2:3, single image. A freshly poured concrete slab kept covered and damp under a light sheet, one corner turned back to show the wet grey surface; the image suggests patience, ongoing work, and something being protected rather than finished. A residential side yard on a bright day, forms still in place, the ground swept and the site tidy and in use. No people. Contemporary editorial photography with the polish of a major men's magazine, natural texture, restrained fine film grain, candid rather than posed. Dynamic off-center composition with clean negative space at the upper left. Broad late-morning daylight, warm, optimistic, grounded. Adult subject, pristine natural anatomy, maintained welcoming setting, no logos, no readable text, no watermark. Avoid: derelict lots, cracked or crumbling concrete, mud and construction squalor, abandoned-site atmosphere, dramatic sky, blue-orange grading."
   2. "Now a second, separate image in the same editorial photography style, portrait orientation 2:3, single image. A garden hose wetting down a fresh concrete pour, water darkening the surface in a broad arc, sawhorses and a run of barrier tape at the edge of frame; the image suggests routine care taken on behalf of something that already looks done. A maintained residential driveway on a clear afternoon. Hands and forearms only. Contemporary editorial photography with the polish of a major men's magazine, natural texture, restrained fine film grain, candid rather than posed. Asymmetric composition with clean negative space along the right edge. Bright directional afternoon light, warm, optimistic, grounded. Adult subject, pristine natural anatomy, maintained welcoming setting, no logos, no readable text, no watermark. Avoid: heroic worker posing, grime and rust, macho jobsite cliches, spray frozen into unnatural filaments, waxy skin, excessive bokeh."
