@@ -1,6 +1,6 @@
 # Project Agent Rules
 
-All machine-wide engineering and safety standards remain in force. This file adds rules specific to Grown Men Grow.
+All machine-wide engineering and safety standards remain in force. This file adds rules specific to Grown Men Grow. Work here follows the CONVERGE cycle and delivery discipline in `FLEET.md` (windwardline/windwardline) — find → refute → verify yourself → fix → re-rank → test → update → report, and the delivery rules under it.
 
 ## Purpose and stack
 
