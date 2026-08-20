@@ -6,6 +6,10 @@ on:
   push:
     branches: [main]
   schedule:
+    # Daily dependency truth. Semgrep and secret scanning stay on the full
+    # Monday sweep below so this fire runs OSV only.
+    - cron: "17 13 * * *"
+    # Weekly full security sweep.
     - cron: "17 9 * * 1"
   workflow_dispatch:
 
@@ -21,6 +25,7 @@ concurrency:
 
 jobs:
   semgrep:
+    if: github.event_name != 'schedule' || github.event.schedule == '17 9 * * 1'
     name: Semgrep CE
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -34,6 +39,7 @@ jobs:
         run: semgrep scan --config auto --error
 
   secret-scan:
+    if: github.event_name != 'schedule' || github.event.schedule == '17 9 * * 1'
     name: Secret scan
     runs-on: ubuntu-latest
     timeout-minutes: 10

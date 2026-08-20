@@ -351,6 +351,7 @@ const requiredFiles = [
   '.github/workflows/ci.yml',
   '.github/workflows/security.yml',
   '.github/workflows/claude-review.yml',
+  '.github/workflows/dependabot-auto-merge.yml',
   'scripts/verify-svg-xml.sh',
   'scripts/verify-ghost-theme.mjs',
   'scripts/verify-repository.mjs',
