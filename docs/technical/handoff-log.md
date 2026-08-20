@@ -1322,3 +1322,21 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** none. Nothing published, sent, posted, scheduled, or deleted.
 
 **Open:** none in this repo. Fleet-wide, closure condition 4 (seeding `fleet-template`) and the conformance-checker rule that will require this citation remain open in `windwardline/windwardline`.
+
+## 2026-08-20 (second entry) — Claude Code: AGENTS.md names every workflow this repository runs
+
+**Client:** Claude Code (remote session). **Branch:** `claude/converge-citation`.
+
+**Scope.** The "Commands and gates" paragraph now names all four workflow files. Three were absent: `ci.yml`, `security.yml`, and `dependabot-auto-merge.yml` — only `claude-review.yml` was cited by name. The contract described what CI and the security lane *do* without ever saying which files do it, so a reader could not get from a claim to the gate that enforces it, and the auto-merge lane was not mentioned at all. A fleet conformance check now derives the required set from `.github/workflows/` and requires each filename to appear here; matching is anchored, so a near-name does not satisfy it. The enumeration rule is the reason: a count hides the gate nobody ran.
+
+**What was added, from reading each file rather than its name.** `ci.yml` — the trigger, the frozen-lockfile theme install, GScan over both the theme and the packaged zip, and the `libxml2-utils` install the SVG check depends on. `security.yml` — its four triggers including the weekly Monday cron, the fleet `verify-action-pins` step riding the secret-scan job so the pin audit needs no ruleset change, and why that job mints a fleet App token: on a private repository a Dependabot-scoped `GITHUB_TOKEN` cannot list a pull request's commits, and skipping the job instead would report green having scanned nothing, because GitHub counts a skipped required check as satisfied. `dependabot-auto-merge.yml` — that it merges nothing itself but arms GitHub's native auto-merge so the branch ruleset stays the deciding gate, that it refuses to arm where no gate exists (`gh pr merge --auto` would merge immediately), its author/owner/same-repo guard, the five hold conditions and the withdrawal of an already-armed merge, the App-token mint with its `GITHUB_TOKEN` fallback that fires no workflows, and that its check must never become required.
+
+**Nothing existing was reworded away.** Both amended sentences keep their original claims verbatim; the filenames and detail are additions around them.
+
+**Files changed:** `AGENTS.md`, plus this entry.
+
+**Verification:** the derivation was re-run after the edit — every workflow filename under `.github/workflows/` now appears in `AGENTS.md`. Gate 6 (`node scripts/verify-repository.mjs`) run locally and green; it reads `AGENTS.md` directly through `checkTextPolicy` and its `requiredFiles` list. The remaining gates were not re-run locally for a prose change; CI runs all of them. Noted for a later session, not acted on here: that `requiredFiles` list names `ci.yml`, `security.yml`, and `claude-review.yml` but not `dependabot-auto-merge.yml`, so deleting that workflow would not fail Gate 6.
+
+**External state changed:** none. Nothing published, sent, posted, scheduled, or deleted.
+
+**Open:** none in this repo.
