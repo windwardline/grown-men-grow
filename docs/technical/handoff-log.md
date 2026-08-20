@@ -1340,3 +1340,19 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** none. Nothing published, sent, posted, scheduled, or deleted.
 
 **Open:** none in this repo.
+
+## 2026-08-20 (third entry) — Codex: daily dependency truth and the complete workflow contract
+
+**Client:** Codex (desktop). **Branch:** `codex/converge-closure`.
+
+**Scope.** `security.yml` now runs the OSV dependency scan daily at 13:17 UTC while preserving the Monday full sweep and every pull-request, push, and manual path. Semgrep and Secret scan carry an explicit schedule guard, so the new daily fire runs OSV only; the existing Monday cron still runs all three jobs. `AGENTS.md` now says exactly that, identifies the review lane's original-actor eligibility and its fork/missing-credential skips, names the SHA-pinned action-pin audit inside the required Secret scan, records the hold on an unrecognised Dependabot update type, and states the grouped-PR consequence for `github-actions` and the development-only `ghost-theme-tooling` group. The byte-identical auto-merge workflow was read and left unchanged.
+
+**Repository gate.** `scripts/verify-repository.mjs` now requires `.github/workflows/dependabot-auto-merge.yml` immediately after `claude-review.yml`. The operating contract has named that workflow since the preceding entry, but deleting the file did not fail the repository gate; it does now.
+
+**Files changed:** `.github/workflows/security.yml`, `AGENTS.md`, `scripts/verify-repository.mjs`, and this append-only log.
+
+**Verification:** all eight local gates passed: Ghost theme contract; frozen theme install; source-tree theme test; packaged ZIP plus fatal GScan; 34 script unit tests; repository verification over 487 tracked files; XML validation over 142 SVGs; and `git diff --check`. `actionlint` passed every workflow and `shellcheck` passed `scripts/verify-svg-xml.sh`. The complete diff and file list were reviewed before staging.
+
+**External state changed:** GitHub only — this branch and its pull request. No Ghost, Buffer, Instagram, Medium, Bluesky, Substack, LinkedIn, email, DNS, or other publication surface was read or changed. Nothing was published, sent, posted, scheduled, or deleted.
+
+**Open:** none. The pull request merges only after its required checks pass; the byte-identical auto-merge workflow remains untouched.
