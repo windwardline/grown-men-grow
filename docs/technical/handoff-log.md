@@ -1317,7 +1317,7 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 
 **Files changed:** `AGENTS.md`, plus this entry.
 
-**Verification:** CI and Security analysis green on the branch. No code, dependency, service, or hosting artifact touched, so no gate reads the changed file; the local gate set was not re-run for a prose change and CI runs the same checks.
+**Verification:** CI and Security analysis green on the branch. An earlier draft of this entry said "no gate reads the changed file"; that was false and is corrected here before merge. Gate 6 reads both changed files — `scripts/verify-repository.mjs` runs `checkTextPolicy` over every tracked file with a text extension, `.md` included, and `AGENTS.md` sits in its `requiredFiles` list. The `publicSurface` policies lower in that file do exclude `docs/`, which is what made the coverage look narrower than it is. The gate passed on the head commit, so nothing was left unverified — but the claim was wrong, and this is an append-only audit trail a later agent could have relied on to skip a check that does apply. No code, dependency, service, or hosting artifact was touched; the local gate set was not re-run separately for a prose change, and CI runs the same checks.
 
 **External state changed:** none. Nothing published, sent, posted, scheduled, or deleted.
 
