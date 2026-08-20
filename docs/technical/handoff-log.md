@@ -1306,3 +1306,19 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** two images downloaded from the founder's own ChatGPT account. **One misfire to record: a click intended for the share dialog's Download button landed on its Reddit button and opened a Reddit submit page in a new tab.** Nothing was posted — the tab was a logged-out Reddit login wall and it was closed immediately. ChatGPT does mint a public share link when those buttons are used, and one appears in that Reddit URL; the founder may want to revoke it from ChatGPT's shared-links settings. No other share target was touched.
 
 **Open:** the share link above, if the founder wants it revoked. Ghost publication and any Instagram post remain separately gated and were not performed.
+
+## 2026-08-20 — Claude Code: AGENTS.md cites the fleet CONVERGE standard
+
+**Client:** Claude Code (remote session). **Branch:** `claude/converge-citation`. **PR:** #118.
+
+**Scope.** One paragraph added to `AGENTS.md` naming the CONVERGE cycle and its delivery discipline, following `windwardline/windwardline` commit `b9b7be0` — closure condition 3 of that standard. An agent governed by the fleet standard reads *this* repo's `AGENTS.md`, never `FLEET.md`, so a working method living only in the fleet standard may never reach the agent it governs. The citation is what closes that.
+
+**Two review findings acted on before merge.** The review lane caught that this entry was missing — the change amends the operating contract itself, which is closer to the centre of the log's rule than most, and it had no entry. It also caught that the first version left "the delivery rules under it" as a bare pointer, closing only half the gap the change exists to close; the operative rules are now inlined, with `FLEET.md` named as governing where it and the summary differ, so a stale local copy can never outrank the standard.
+
+**Files changed:** `AGENTS.md`, plus this entry.
+
+**Verification:** CI and Security analysis green on the branch. No code, dependency, service, or hosting artifact touched, so no gate reads the changed file; the local gate set was not re-run for a prose change and CI runs the same checks.
+
+**External state changed:** none. Nothing published, sent, posted, scheduled, or deleted.
+
+**Open:** none in this repo. Fleet-wide, closure condition 4 (seeding `fleet-template`) and the conformance-checker rule that will require this citation remain open in `windwardline/windwardline`.
