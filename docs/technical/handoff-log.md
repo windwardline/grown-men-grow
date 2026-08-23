@@ -1488,3 +1488,27 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** none. Nothing published, sent, posted, scheduled, or deleted. No Substack surface was opened at any point this session.
 
 **Open:** the classifier block on the Substack composer, unchanged — `gmg-saturday-note` now reaches the composer and hands the founder the copy instead of standing down at the essay check, but the note still needs a human keystroke. Note 2 for the week of 2026-08-18 was never posted and that slot has passed.
+
+## 2026-08-23 (sixth entry) — Claude Code: the preflight's decision, extracted and tested
+
+**Client:** Claude Code (desktop, founder present). **Branch:** `claude/preflight-decision-tests`. Follows PR #123, merged as `c9226c8a`.
+
+**Acting on the review lane's finding rather than filing it.** The fleet review on #123 passed the fix as correct and contract-clean and raised one thing: all nine new tests targeted `scripts/lib/note-slot.mjs`, and the defect had lived in `note-task-preflight.mjs` step 3 — four lines of wiring, never library code, which is exactly why 34 passing tests said nothing about a task that stood down every week. The predicate was proved; the code that used it was not. A later edit inverting `if (!thisWeeks)` or transposing the two instants would leave all 43 tests green and the Saturday note silently dead again, with the same reason string as a genuinely essay-less week.
+
+**Why it could not simply be tested where it was.** `note-task-preflight.mjs` runs its work at import and calls the Ghost Admin API, which reads a Keychain item, so it cannot be imported under `node --test`. The five-instant table in #123 was real end-to-end proof but it was run by hand; it is not a gate and it did not survive the session.
+
+**What changed.** `scripts/lib/note-decision.mjs` exports `decide({ epochMs, slot, note, post, ... })` — the essay-week check, the pack resolution, the note extraction, and the window verdict, as a pure function of an already-fetched post. The executable keeps what it should: argument parsing, the hold, the lock, the Ghost call, and the exit codes. Ordering between those stays its business, because the lock must be taken before the network call and that is a property of the process, not of the decision.
+
+**The alternative was rejected on the review's own reasoning.** A fixture-injection flag on the preflight would have been less work. A flag that can fake the essay check is a flag that can bypass it, on the script whose whole purpose is refusing to post.
+
+**Nine tests, written before the module existed** — the run failed with `ERR_MODULE_NOT_FOUND`, which is the module being absent rather than a typo. They assert the verdict at the granularity the tasks actually read: Note 2 posting at the Saturday slot from its Tuesday essay, Note 1 at the Tuesday slot, the two notes of one week being different copy, a stale essay standing down at **both** slots, a late run standing down on the window with the essay still valid, an early run waiting thirty minutes, and a missing note number raising rather than yielding an empty post. One test asserts that a stand-down on the essay carries no `pack` — a note from the wrong week must never reach a payload at all. 43 tests became 52.
+
+**The refactor preserves the contract, checked rather than assumed.** All six instants were re-run through the executable after rewiring: exit 0 / 10 / 20 unchanged, and the payload keys byte-identical to what the task files read — `copy`, `essay`, `pack`, `lock.token`, `waitSeconds`, `browser.chromeRunning`. The essay stand-down still carries no lock or copy, and the late stand-down still carries the full payload. No lock leaked on any run.
+
+**Files changed:** `scripts/lib/note-decision.mjs` (new), `scripts/note-task-preflight.mjs`, `scripts/test/note-decision.test.mjs` (new), and this entry.
+
+**Verification:** all eight gates in an isolated worktree cut from merged `main` — theme contract, frozen install, theme test, packaged zip through `gscan --fatal` with no fatal Ghost 6.x issues, 52 script unit tests with 0 failures, repository verification, 142 SVGs, and `git diff --check`.
+
+**External state changed:** none. Read-only Ghost Admin calls made by the preflight during verification. Nothing published, sent, posted, scheduled, or deleted. No Substack surface was opened at any point today.
+
+**Open:** the classifier block on the Substack composer, unchanged — `gmg-saturday-note` reaches the composer and hands the founder the copy, and the note still needs a human keystroke to post. Note 2 for the week of 2026-08-18 was never posted and that slot has passed; the next Saturday slot is 2026-08-29, for the essay publishing 2026-08-25.
