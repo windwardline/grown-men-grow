@@ -53,6 +53,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 10 | `the-lights-never-flickered` | 2026-10-20 | |
 | 11 | `nobody-rigs-to-the-breaking-strength` | 2026-10-27 | |
 | 12 | `you-can-walk-on-it-tomorrow` | 2026-11-03 | |
+| 13 | `somebody-is-up-on-his-ladder` | 2026-11-10 | |
 
 ## Why this order and not another
 
@@ -63,6 +64,12 @@ The constraints above fix positions 3, 5, 6, and 7 relative to each other. The r
 - **Related machinery is spread.** `rest-is-not-a-reward` and `nobody-rigs-to-the-breaking-strength` both argue about capacity and both run on maintenance metaphors; they sit at 5 and 11 rather than adjacent.
 
 `you-can-walk-on-it-tomorrow` was appended at 12 on 2026-08-19 because appending moves nothing, and two slots are already scheduled. **It sits directly after `nobody-rigs-to-the-breaking-strength`, and both open on a jobsite material fact** — which is the one preference above that an append cannot honour. The arguments do not overlap: 11 is about how much load a man books himself at, 12 is about how long a thing takes to become load-bearing. But they will read as neighbours, and a reader who noticed the first opening will notice the second. Moving 12 earlier is a founder decision and would push two scheduled posts; it is recorded here rather than taken.
+
+`somebody-is-up-on-his-ladder` was appended at 13 on 2026-08-23, for the same reason: appending moves nothing and two slots are already scheduled. Two preferences above take strain and are recorded rather than quietly overridden.
+
+**The witness preference holds, and gets a second test.** This is the second `witness` note, and at 13 it runs three slots after `the-lights-never-flickered` at 10. Late is right for the same reason it was right at 10 — a change of stance reads as deliberate only once the default register is established — and three slots apart is far enough that two witness pieces will not read as a series. Nothing labels either one.
+
+**The machinery preference now takes real strain, and this is the third slot in a row to do it.** Positions 11, 12, and 13 all run on building metaphors — rigging, concrete, gutters — and 12 and 13 both open on a physical fact about a house. The arguments do not overlap: 11 is how much load a man books himself at, 12 is how long a thing takes to become load-bearing, 13 is what happens to the part that carries water off everything else. But three construction-adjacent openings in a row is more than the spread-the-machinery preference intends, and a reader who noticed the first two will notice the third. Moving 13 earlier, or interleaving one of positions 8 through 10 between 12 and 13, is a founder decision and would push scheduled posts; it is recorded here rather than taken.
 
 ## How this is used
 

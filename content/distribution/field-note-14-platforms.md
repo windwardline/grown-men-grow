@@ -1,8 +1,8 @@
 ---
 essay: Somebody Is Up on His Ladder
 canonical: https://grownmengrow.com/somebody-is-up-on-his-ladder/ (live only after publication)
-status: draft — NOT founder-approved
-drafted: 2026-08-23
+status: founder-approved
+approved: 2026-08-23 — approved with the essay and the artwork in one pass; posting remains separately gated
 stance: witness — the pack does not address the reader, does not close on a question, and carries no imperative, because the essay does not
 image_rule: per-article — this pack may use only Field Note 14 imagery
 ---
