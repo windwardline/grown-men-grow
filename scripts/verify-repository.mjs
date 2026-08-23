@@ -378,15 +378,18 @@ const requiredFiles = [
   'scripts/render-profile-avatar.mjs',
   'scripts/render-review-contact-sheets.mjs',
   'scripts/render-theme-preview.mjs',
+  'scripts/lib/buffer-api.mjs',
   'scripts/lib/editorial-collage.mjs',
   'scripts/lib/ghost-admin.mjs',
   'scripts/lib/note-slot.mjs',
   'scripts/lib/note-pack.mjs',
+  'scripts/lib/note-decision.mjs',
   'scripts/lib/task-lock.mjs',
   'scripts/lib/hold-state.mjs',
   'scripts/note-task-preflight.mjs',
   'scripts/test/note-slot.test.mjs',
   'scripts/test/note-pack.test.mjs',
+  'scripts/test/note-decision.test.mjs',
   'scripts/test/task-lock.test.mjs',
   'scripts/test/hold-state.test.mjs',
   'theme/package.json',
@@ -411,6 +414,23 @@ const requiredFiles = [
 ];
 for (const file of requiredFiles) {
   if (!tracked.includes(file)) fail(`Required tracked file is missing: ${file}`);
+}
+
+// The list above is enforced in one direction only: everything named must
+// exist. Nothing asserted that everything existing is named, so a new module or
+// test file was unregistered by default and no gate said so — which is exactly
+// how note-decision.test.mjs arrived unheld, in the very commit that added it to
+// stop a silent regression. AGENTS.md inherits "derive populations rather than
+// curating them" from FLEET.md; derive the inverse rather than trusting memory.
+// Scoped to the two directories where an unheld file is a hole in the test
+// surface, not to the whole tree, which would make the manifest noise.
+const mustBeRegistered = tracked.filter(
+  (file) => /^scripts\/lib\/.+\.mjs$/.test(file) || /^scripts\/test\/.+\.test\.mjs$/.test(file),
+);
+for (const file of mustBeRegistered) {
+  if (!requiredFiles.includes(file)) {
+    fail(`Tracked script is not registered in requiredFiles, so deleting it would fail no gate: ${file}`);
+  }
 }
 if (tracked.some((file) => file.startsWith('assets/concepts/editorial-v1/') || file === 'scripts/render-editorial-concepts.mjs')) {
   fail('The superseded dark editorial concept package must not remain in the active tree.');
