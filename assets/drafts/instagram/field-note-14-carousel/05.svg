@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn14-05-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn14-05-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn14-05-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#121416"/>
+  <text x="58" y="94" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 14 · 05 / 07</text>
+  <text x="66" y="254" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">They set the ladder on the</text><text x="66" y="320" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">soft ground and put the</text><text x="66" y="386" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">extension back pointed</text><text x="66" y="452" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="-1.6">at the wall.</text>
+    <text x="68" y="452" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">He taps the window.</text><text x="68" y="506" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="-1.6">Nobody has ever heard a window.</text>
+    <g>
+    <path d="M880 216 L880 285 Q880 300 895 300 L956 300" fill="none" stroke="#B14F3F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+    <line x1="871" y1="216" x2="889" y2="216" stroke="#B14F3F" stroke-width="3.5" stroke-linecap="round" opacity="0.45"/>
+    <line x1="880" y1="216" x2="880" y2="292.4" stroke="#B14F3F" stroke-width="7" stroke-linecap="round"/>
+  </g>
+    <g transform="rotate(-0.6 540 888)">
+    <rect x="62" y="598" width="956" height="614" fill="#B14F3F"/>
+    <rect x="70" y="584" width="940" height="608" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/downspout-extension-turned.png" x="74" y="588" width="932" height="600" preserveAspectRatio="xMidYMid slice" filter="url(#fn14-05-photo)"/>
+  </g>
+    <g transform="rotate(4 382 589)">
+    <rect x="270" y="566" width="224" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="278" y1="573" x2="484" y2="570" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <text x="58" y="1292" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn14-05-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
