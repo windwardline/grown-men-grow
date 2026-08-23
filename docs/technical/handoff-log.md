@@ -1534,3 +1534,25 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** none. Read-only Ghost Admin calls made by the preflight during verification. Nothing published, sent, posted, scheduled, or deleted. No Substack surface was opened at any point today.
 
 **Open:** unchanged — the classifier block on the Substack composer. Note 2 for the week of 2026-08-18 was never posted and that slot has passed; the next Saturday slot is 2026-08-29, for the essay publishing 2026-08-25.
+
+## 2026-08-23 (eighth entry) — Claude Code: the manifest derives its own population, and it found a real gap immediately
+
+**Client:** Claude Code (desktop, founder present). **Branch:** `claude/preflight-decision-tests`, same pull request as the sixth and seventh entries (#125).
+
+**The re-review confirmed all three earlier findings closed and raised the shape behind the first one.** Registering two files in `requiredFiles` closed that day's hole. It did not close the hole's shape: the manifest was enforced in one direction only — everything named must exist, nothing asserted that everything existing is named — so the next module or test file added to this repository was unregistered by default and no gate said so. That is precisely how `note-decision.test.mjs` arrived unheld in the very commit that added it to stop a silent regression. `AGENTS.md` inherits "derive populations rather than curating them" from `FLEET.md`, and this was a curated population sitting inside the file that enforces the rest.
+
+**The inverse is now derived.** Every tracked `scripts/lib/*.mjs` and `scripts/test/*.test.mjs` must appear in `requiredFiles` or the gate fails naming the file. Scoped to those two directories deliberately rather than to the whole tree: those are where an unheld file is a hole in the test surface, and a whole-tree manifest would be noise nobody reads.
+
+**It found a real gap on its first run, which is the argument for it.** `scripts/lib/buffer-api.mjs` has been tracked and unregistered since it shipped. Deleting it would have failed no gate. It is now registered. Nothing else in either directory was missing — the derivation was run against the full tracked list in both directions rather than spot-checked.
+
+**Proved rather than asserted.** A throwaway `scripts/test/zz-scratch.test.mjs` was created and staged; the gate failed naming it. The fixture was removed and the tree confirmed clean of it. Before the check existed, the same file passed.
+
+**One minor finding, also taken.** `scripts/test/note-decision.test.mjs` asserted that a missing note number raises, with a bare `assert.throws` and no matcher — so if the Field Note 2 pack were renamed, `resolvePackForSlug` would throw first and the test would stay green while asserting nothing about note extraction. It now matches `/Note 99/`.
+
+**Files changed:** `scripts/verify-repository.mjs`, `scripts/test/note-decision.test.mjs`, and this entry.
+
+**Verification:** all eight gates in the isolated worktree — theme contract, frozen install, theme test, packaged zip through `gscan --fatal` with no fatal Ghost 6.x issues, 55 script unit tests with 0 failures, repository verification over 489 tracked files, 142 SVGs, and `git diff --check`. The reverse check's own proof is above.
+
+**External state changed:** none. Nothing published, sent, posted, scheduled, or deleted. No Substack surface was opened at any point today.
+
+**Open:** unchanged — the classifier block on the Substack composer. Note 2 for the week of 2026-08-18 was never posted and that slot has passed; the next Saturday slot is 2026-08-29, for the essay publishing 2026-08-25.

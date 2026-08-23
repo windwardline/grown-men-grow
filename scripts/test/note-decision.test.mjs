@@ -81,7 +81,7 @@ test('an early run waits and reports how long', () => {
 });
 
 test('a note number the pack does not carry is an error, not an empty post', () => {
-  assert.throws(() => at('2026-08-22T13:30:00Z', { note: 99 }));
+  assert.throws(() => at('2026-08-22T13:30:00Z', { note: 99 }), /Note 99/);
 });
 
 // `latestPublishedPost()` documents itself as returning null when nothing has
