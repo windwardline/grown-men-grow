@@ -6,14 +6,15 @@ byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Somebody Is Up on His Ladder
 preview: The leaves come down on the same schedule regardless. Nothing about a maple is tracking his year.
-status: NOT founder-approved — drafted by the scheduled Saturday run 2026-08-23
-publication_authorized: false — not authorized for publication, newsletter delivery, metadata, or social posting
+status: founder-approved
+approved: 2026-08-23 — essay, platform pack, and artwork approved together, in one pass, as written
+publication_authorized: false — approval covers the work, not a slot; publication, newsletter delivery, and posting remain separately gated
 stance: witness — the subject test passes; being covered while laid up is an event he neither caused nor can fix, and he has no move in it
 register: generic present — asserts that this happens, never that a particular instance happened
 personal_claims: none — no event is asserted as reportage and no first person appears, per the 2026-08-08 ruling reaffirmed 2026-08-12
-social_copy_status: draft — not approved
-visual_direction_status: draft — not approved
-artwork_status: draft — three source photographs generated 2026-08-23, carousel and feature image rendered; all pending founder review
+social_copy_status: founder-approved as written 2026-08-23; posting remains separately gated
+visual_direction_status: founder-approved as written 2026-08-23
+artwork_status: founder-approved 2026-08-23 — three source photographs, seven carousel slides, feature image, review sheet, and gate entries
 origin: written 2026-08-23 by the Saturday draft task, taking the witness slot under the standing corpus duty
 ---
 
@@ -162,7 +163,7 @@ Nobody has ever climbed a ladder out of concern for a gutter. They go up because
 
 # Production notes
 
-- Drafted 2026-08-23 by the scheduled Saturday run. NOT founder-approved and NOT authorized for publication, newsletter delivery, metadata, or social posting.
+- Drafted 2026-08-23 by the scheduled Saturday run and founder-approved the same day, as written, in one pass. Approval covers the essay, the platform pack, and the artwork; it names no publication slot, so publication, newsletter delivery, and social posting remain separately gated under the launch-authority rule.
 - Stance is `witness` under the 2026-08-11 ruling, taken deliberately under the standing corpus duty: the two notes before this one (Field Note 12 and Field Note 13) are both `assignment`, and the bank stands at one witness piece in thirteen. Subject test: being covered while laid up is an event he neither caused nor can fix, and he has no move in it.
 - Gate 1 holds. No imperative is aimed at the reader and there is no closing question; the piece ends on the last fact, the extension pointed the right way and no record of who turned it. The bank's usual illustrative opener is an imperative — "Watch a man," "Ask a man" — which gate 1 forbids, so this uses the flat declarative the bank also uses.
 - Gate 2 is the one that came closest, and it is worth naming rather than smoothing. The available lift is "so a man should let people help him." The draft defeats it on the facts rather than by hedging: his permission is never sought, the piece says outright that asked he says no, and the arrangement proceeds without requiring anything from him. There is no move in the piece for him to take, so there is nothing to extract.
