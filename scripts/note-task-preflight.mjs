@@ -15,6 +15,7 @@
 //
 // Usage
 //   node scripts/note-task-preflight.mjs --task gmg-tuesday-note --slot 12:00 --note 1
+//   node scripts/note-task-preflight.mjs --task gmg-saturday-note --slot 09:30 --note 2
 //   node scripts/note-task-preflight.mjs --task gmg-tuesday-note --release <token>
 
 import { readFileSync } from 'node:fs';
@@ -24,7 +25,14 @@ import { fileURLToPath } from 'node:url';
 
 import { acquireTaskLock, releaseTaskLock, DEFAULT_LOCK_DIR } from './lib/task-lock.mjs';
 import { parseHold } from './lib/hold-state.mjs';
-import { slotVerdict, zonedDayParts, DEFAULT_GRACE_MINUTES, DEFAULT_TIME_ZONE } from './lib/note-slot.mjs';
+import {
+  slotVerdict,
+  publicationWeekStartMs,
+  publishedThisPublicationWeek,
+  DEFAULT_GRACE_MINUTES,
+  DEFAULT_PUBLISH_WEEKDAY,
+  DEFAULT_TIME_ZONE,
+} from './lib/note-slot.mjs';
 import { resolvePackForSlug, extractNote } from './lib/note-pack.mjs';
 import { latestPublishedPost } from './lib/ghost-admin.mjs';
 
@@ -77,6 +85,7 @@ const slot = args.slot;
 const note = Number(args.note ?? 1);
 const graceMinutes = args['grace-minutes'] === undefined ? DEFAULT_GRACE_MINUTES : Number(args['grace-minutes']);
 const timeZone = args['time-zone'] ?? DEFAULT_TIME_ZONE;
+const publishWeekday = args['publish-weekday'] === undefined ? DEFAULT_PUBLISH_WEEKDAY : Number(args['publish-weekday']);
 const epochMs = args.now ? Date.parse(args.now) : Date.now();
 const holder = args.holder ?? `pid-${process.pid}`;
 
@@ -113,14 +122,21 @@ try {
   }
   held = lock;
 
-  // 3. The essay. A note is a fragment of a fresh essay; without one it means nothing.
+  // 3. The essay. A note is a fragment of this week's essay; without one it means
+  //    nothing. The unit is the publication week, not the day — Note 2's slot is
+  //    the Saturday of the week its Tuesday essay opened.
   const post = await latestPublishedPost();
-  const today = zonedDayParts(epochMs, timeZone);
-  const publishedDay = zonedDayParts(Date.parse(post.published_at), timeZone);
-  const sameDay = today.year === publishedDay.year && today.month === publishedDay.month && today.day === publishedDay.day;
-  if (!sameDay) {
+  const weekStartMs = publicationWeekStartMs({ epochMs, publishWeekday, timeZone });
+  const thisWeeks = publishedThisPublicationWeek({
+    publishedAtMs: Date.parse(post.published_at),
+    epochMs,
+    publishWeekday,
+    timeZone,
+  });
+  if (!thisWeeks) {
     standDown("this week's essay has not published", {
       latestPublished: { slug: post.slug, publishedAt: post.published_at },
+      publicationWeekStart: new Date(weekStartMs).toISOString(),
     });
   }
 
