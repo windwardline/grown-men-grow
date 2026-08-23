@@ -1512,3 +1512,25 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** none. Read-only Ghost Admin calls made by the preflight during verification. Nothing published, sent, posted, scheduled, or deleted. No Substack surface was opened at any point today.
 
 **Open:** the classifier block on the Substack composer, unchanged — `gmg-saturday-note` reaches the composer and hands the founder the copy, and the note still needs a human keystroke to post. Note 2 for the week of 2026-08-18 was never posted and that slot has passed; the next Saturday slot is 2026-08-29, for the essay publishing 2026-08-25.
+
+## 2026-08-23 (seventh entry) — Claude Code: three review findings, all real, all fixed
+
+**Client:** Claude Code (desktop, founder present). **Branch:** `claude/preflight-decision-tests`, same pull request as the sixth entry (#125).
+
+**All three findings from the review lane were confirmed against the code before being acted on, not taken on report.** Each is recorded here because two of them are the same failure this repository keeps rediscovering, one layer down from where it was last found.
+
+**1. The new tests were not held by anything.** `verify-repository.mjs` carries a `requiredFiles` manifest listing all four existing test files. Neither new file was added, so deleting `scripts/test/note-decision.test.mjs` passed the repository gate, passed CI, and passed `node --test` — because `node --test 'scripts/test/**/*.test.mjs'` reports on the tests that exist, not the ones that should. Nine tests written to stop a silent regression were themselves silently removable. Both files are now registered, and the entry was proved: deleting either fails the gate with exit 1, and both restore clean.
+
+**2. The exit code read a duplicate of the verdict, not the verdict.** After the extraction the payload's verdict came from `decide()`, but `emit(payload, timing.verdict === 'wait' ? ...)` still read the separate `slotVerdict` computed for the lock TTL. The two agree today — same arguments, deterministic function — so this was latent rather than live. It was latent in exactly the register this pull request is about: any future change to how `decide` derives its window would make a run report `"verdict": "wait"` in its payload and exit 0, post now, with all twelve tests green. The exit code now reads `decision.verdict`, and the surviving `slotVerdict` call is renamed `lockWindow` so its one remaining purpose cannot be misread as the run's verdict.
+
+**3. A documented `null` was dereferenced, and an unparseable date read as "no essay".** `latestPublishedPost()` documents itself as returning null when nothing has published, and `decide` dereferenced `post.published_at` unguarded — a `TypeError` caught by the outer handler and surfaced as exit 1, "the preflight itself could not decide", when nothing having published is a fully decidable stand-down the contract makes exit 20. Separately, `NaN >= anything` is false, so a malformed `published_at` stood down carrying the byte-identical reason string a genuinely essay-less week reports. Both now handled explicitly: a null post is a stand-down naming its own reason, and a post that cannot be dated raises with the slug and the offending value. Three tests cover them, and they failed first — the null case with the exact `TypeError` the review predicted.
+
+**The second and third are the repository's own standing rules, not stylistic notes.** An operation that could not run must never report the result of one that ran and passed, and a fix that cannot notice its own premise going missing is the failure this repository keeps rediscovering. Finding 1 is that rule applied to test files; finding 3 is it applied to an error path.
+
+**Files changed:** `scripts/lib/note-decision.mjs`, `scripts/note-task-preflight.mjs`, `scripts/test/note-decision.test.mjs`, `scripts/verify-repository.mjs`, and this entry.
+
+**Verification:** all eight gates re-run in the isolated worktree — theme contract, frozen install, theme test, packaged zip through `gscan --fatal` with no fatal Ghost 6.x issues, 55 script unit tests with 0 failures, repository verification over 489 tracked files, 142 SVGs, and `git diff --check`. The six-instant contract check was re-run through the executable after the changes: exit 0 / 10 / 20 unchanged at every instant, no lock leaked.
+
+**External state changed:** none. Read-only Ghost Admin calls made by the preflight during verification. Nothing published, sent, posted, scheduled, or deleted. No Substack surface was opened at any point today.
+
+**Open:** unchanged — the classifier block on the Substack composer. Note 2 for the week of 2026-08-18 was never posted and that slot has passed; the next Saturday slot is 2026-08-29, for the essay publishing 2026-08-25.

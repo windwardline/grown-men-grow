@@ -40,10 +40,26 @@ export function decide({
 }) {
   const timing = slotVerdict({ epochMs, slot, graceMinutes, timeZone });
 
+  // Nothing published at all is a decidable stand-down, and it must not read as
+  // the same thing as a week that skipped: `latestPublishedPost()` returns null
+  // by contract, and dereferencing it here would surface as exit 1, "could not
+  // decide", when the answer was clear.
+  if (!post) {
+    return { verdict: 'stand-down', reason: 'nothing has published on Ghost yet', timing };
+  }
+
+  // A post that exists but cannot be dated is a broken input, not an absent
+  // essay. NaN >= anything is false, so left alone this would stand down with
+  // the exact reason string a genuinely essay-less week reports.
+  const publishedAtMs = Date.parse(post.published_at);
+  if (!Number.isFinite(publishedAtMs)) {
+    throw new Error(`Post ${JSON.stringify(post.slug ?? '(no slug)')} has an unparseable published_at: ${JSON.stringify(post.published_at)}.`);
+  }
+
   // The essay first. A note is a fragment of this week's essay; the unit is the
   // publication week, not the day, because Note 2's slot is the Saturday of the
   // week its Tuesday essay opened.
-  if (!publishedThisPublicationWeek({ publishedAtMs: Date.parse(post.published_at), epochMs, publishWeekday, timeZone })) {
+  if (!publishedThisPublicationWeek({ publishedAtMs, epochMs, publishWeekday, timeZone })) {
     return {
       verdict: 'stand-down',
       reason: "this week's essay has not published",

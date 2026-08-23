@@ -83,3 +83,27 @@ test('an early run waits and reports how long', () => {
 test('a note number the pack does not carry is an error, not an empty post', () => {
   assert.throws(() => at('2026-08-22T13:30:00Z', { note: 99 }));
 });
+
+// `latestPublishedPost()` documents itself as returning null when nothing has
+// published. Nothing having published is a decidable stand-down, not a preflight
+// that could not decide — the exit-code contract makes that 20, never 1.
+test('nothing published yet stands down, and says so distinctly', () => {
+  const d = at('2026-08-22T13:30:00Z', { post: null });
+  assert.equal(d.verdict, 'stand-down');
+  assert.match(d.reason, /nothing has published/);
+  assert.doesNotMatch(d.reason, /this week's essay has not published/);
+});
+
+// NaN >= anything is false, so an unparseable date would otherwise report the
+// exact reason string a genuinely essay-less week reports. A post that exists
+// but cannot be dated is a broken input, and it has to say so.
+test('a post whose date cannot be parsed raises rather than reading as no essay', () => {
+  assert.throws(
+    () => at('2026-08-22T13:30:00Z', { post: { slug: 's', published_at: 'not-a-date' } }),
+    /published_at/,
+  );
+});
+
+test('a post missing published_at entirely raises too', () => {
+  assert.throws(() => at('2026-08-22T13:30:00Z', { post: { slug: 's' } }), /published_at/);
+});

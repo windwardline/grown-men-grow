@@ -98,8 +98,9 @@ try {
   // 2. The lock. Before any network call, so two runs cannot race through it.
   //    TTL runs to the far edge of the posting window plus a margin, so a run
   //    that dies mid-wait frees the task rather than wedging it past its slot.
-  const timing = slotVerdict({ epochMs, slot, graceMinutes, timeZone });
-  const ttlMs = Math.min(4 * 60 * 60_000, Math.max(15 * 60_000, timing.slotEpochMs + graceMinutes * 60_000 + 15 * 60_000 - epochMs));
+  // Only for the lock TTL. The verdict the run acts on comes from decide().
+  const lockWindow = slotVerdict({ epochMs, slot, graceMinutes, timeZone });
+  const ttlMs = Math.min(4 * 60 * 60_000, Math.max(15 * 60_000, lockWindow.slotEpochMs + graceMinutes * 60_000 + 15 * 60_000 - epochMs));
   const lock = acquireTaskLock({ task, dir: lockDir, ttlMs, epochMs, holder });
   if (!lock.acquired) {
     emit(
@@ -148,7 +149,7 @@ try {
   };
 
   if (decision.verdict === 'stand-down') standDown(decision.reason, payload);
-  emit(payload, timing.verdict === 'wait' ? EXIT.wait : EXIT.post);
+  emit(payload, decision.verdict === 'wait' ? EXIT.wait : EXIT.post);
 } catch (error) {
   if (held) releaseTaskLock({ task, dir: lockDir, token: held.token });
   emit({ ok: false, task, error: error.message }, EXIT.error);
