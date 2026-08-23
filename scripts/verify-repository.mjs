@@ -5,6 +5,7 @@ import { lstat, readFile, readdir } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 
 import { parseHold } from './lib/hold-state.mjs';
+import { DEFAULT_PUBLISH_WEEKDAY } from './lib/note-slot.mjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -378,15 +379,18 @@ const requiredFiles = [
   'scripts/render-profile-avatar.mjs',
   'scripts/render-review-contact-sheets.mjs',
   'scripts/render-theme-preview.mjs',
+  'scripts/lib/buffer-api.mjs',
   'scripts/lib/editorial-collage.mjs',
   'scripts/lib/ghost-admin.mjs',
   'scripts/lib/note-slot.mjs',
   'scripts/lib/note-pack.mjs',
+  'scripts/lib/note-decision.mjs',
   'scripts/lib/task-lock.mjs',
   'scripts/lib/hold-state.mjs',
   'scripts/note-task-preflight.mjs',
   'scripts/test/note-slot.test.mjs',
   'scripts/test/note-pack.test.mjs',
+  'scripts/test/note-decision.test.mjs',
   'scripts/test/task-lock.test.mjs',
   'scripts/test/hold-state.test.mjs',
   'theme/package.json',
@@ -411,6 +415,23 @@ const requiredFiles = [
 ];
 for (const file of requiredFiles) {
   if (!tracked.includes(file)) fail(`Required tracked file is missing: ${file}`);
+}
+
+// The list above is enforced in one direction only: everything named must
+// exist. Nothing asserted that everything existing is named, so a new module or
+// test file was unregistered by default and no gate said so — which is exactly
+// how note-decision.test.mjs arrived unheld, in the very commit that added it to
+// stop a silent regression. AGENTS.md inherits "derive populations rather than
+// curating them" from FLEET.md; derive the inverse rather than trusting memory.
+// Scoped to the two directories where an unheld file is a hole in the test
+// surface, not to the whole tree, which would make the manifest noise.
+const mustBeRegistered = tracked.filter(
+  (file) => /^scripts\/lib\/.+\.mjs$/.test(file) || /^scripts\/test\/.+\.test\.mjs$/.test(file),
+);
+for (const file of mustBeRegistered) {
+  if (!requiredFiles.includes(file)) {
+    fail(`Tracked script is not registered in requiredFiles, so deleting it would fail no gate: ${file}`);
+  }
 }
 if (tracked.some((file) => file.startsWith('assets/concepts/editorial-v1/') || file === 'scripts/render-editorial-concepts.mjs')) {
   fail('The superseded dark editorial concept package must not remain in the active tree.');
@@ -689,6 +710,36 @@ try {
   parseHold(await readFile(path.join(root, 'docs/technical/operating-cadence.md'), 'utf8'));
 } catch (error) {
   fail(`docs/technical/operating-cadence.md: ${error.message}`);
+}
+
+// `note-slot.mjs` hardcodes the publish weekday both note tasks measure their
+// publication week from, and `publish-timing.md` is where that day is actually
+// decided — a document whose own validation protocol "takes precedence the
+// moment it produces results". A constant copied out of a document expected to
+// change is a premise that can go stale while every check stays green, which is
+// the failure the hold-marker check directly above exists to prevent, repeated.
+// Derive it rather than trust it.
+{
+  const timing = await readFile(path.join(root, 'docs/technical/publish-timing.md'), 'utf8');
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const row = timing
+    .split('\n')
+    .filter((line) => line.startsWith('|'))
+    .map((line) => line.split('|').map((cell) => cell.replaceAll('*', '').trim()))
+    .find((cells) => cells[2] === 'Ghost' && /Weekly field note/i.test(cells[3] ?? ''));
+  if (!row) {
+    fail('docs/technical/publish-timing.md no longer carries a Ghost row for the weekly field note, so DEFAULT_PUBLISH_WEEKDAY cannot be derived from the schedule of record.');
+  } else {
+    const declared = days.findIndex((day) => row[1].startsWith(day));
+    if (declared === -1) {
+      fail(`docs/technical/publish-timing.md names the field-note publish slot as "${row[1]}", which does not begin with a weekday.`);
+    } else if (declared !== DEFAULT_PUBLISH_WEEKDAY) {
+      fail(
+        `docs/technical/publish-timing.md publishes the weekly field note on ${days[declared]}, but note-slot.mjs measures the publication week from ${days[DEFAULT_PUBLISH_WEEKDAY]}. ` +
+          'Both note tasks would then accept or refuse the wrong essay; update DEFAULT_PUBLISH_WEEKDAY to match the schedule of record.',
+      );
+    }
+  }
 }
 
 if (failures.length) {

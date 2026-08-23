@@ -99,3 +99,48 @@ export function slotVerdict({
     graceMinutes,
   };
 }
+
+// --- the publication week -------------------------------------------------
+// One preflight serves both note tasks, and its essay precondition was written
+// for only one of them: it required the latest essay to have published *today*.
+// Note 1 posts four hours after the Tuesday essay, so that passed. Note 2 posts
+// the Saturday of the same week, so it could not — `gmg-saturday-note` stood
+// down every week from the day it was written, and no test covered the check.
+//
+// `operating-cadence.md` states the rule as refusing "when the week's essay did
+// not publish", so the week is the unit, not the day. The week is anchored on
+// the publish day at midnight rather than at the 08:00 publish time: a minute of
+// scheduler jitter should not throw an essay out of its own week, and the
+// anchor still refuses last week's essay at either slot, which is the whole
+// point of the precondition.
+
+/** Ghost publishes Tuesday 08:00 ET — `docs/technical/publish-timing.md`. */
+export const DEFAULT_PUBLISH_WEEKDAY = 2; // 0 = Sunday
+
+/** The UTC instant that opened the publication week `epochMs` falls in. */
+export function publicationWeekStartMs({
+  epochMs,
+  publishWeekday = DEFAULT_PUBLISH_WEEKDAY,
+  timeZone = DEFAULT_TIME_ZONE,
+}) {
+  if (!Number.isInteger(publishWeekday) || publishWeekday < 0 || publishWeekday > 6) {
+    throw new TypeError(`Invalid publishWeekday ${JSON.stringify(publishWeekday)}; expected an integer 0-6, Sunday first.`);
+  }
+  const shifted = new Date(epochMs + zoneOffsetMs(epochMs, timeZone));
+  const daysBack = (shifted.getUTCDay() - publishWeekday + 7) % 7;
+  const naive = Date.UTC(shifted.getUTCFullYear(), shifted.getUTCMonth(), shifted.getUTCDate() - daysBack, 0, 0, 0);
+  // Same two-pass convergence as slotEpochMs; see the note there.
+  let resolved = naive;
+  for (let pass = 0; pass < 2; pass += 1) resolved = naive - zoneOffsetMs(resolved, timeZone);
+  return resolved;
+}
+
+/** Is `publishedAtMs` this week's essay, as seen from `epochMs`? */
+export function publishedThisPublicationWeek({
+  publishedAtMs,
+  epochMs,
+  publishWeekday = DEFAULT_PUBLISH_WEEKDAY,
+  timeZone = DEFAULT_TIME_ZONE,
+}) {
+  return publishedAtMs >= publicationWeekStartMs({ epochMs, publishWeekday, timeZone });
+}

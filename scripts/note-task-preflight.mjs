@@ -15,6 +15,7 @@
 //
 // Usage
 //   node scripts/note-task-preflight.mjs --task gmg-tuesday-note --slot 12:00 --note 1
+//   node scripts/note-task-preflight.mjs --task gmg-saturday-note --slot 09:30 --note 2
 //   node scripts/note-task-preflight.mjs --task gmg-tuesday-note --release <token>
 
 import { readFileSync } from 'node:fs';
@@ -24,8 +25,8 @@ import { fileURLToPath } from 'node:url';
 
 import { acquireTaskLock, releaseTaskLock, DEFAULT_LOCK_DIR } from './lib/task-lock.mjs';
 import { parseHold } from './lib/hold-state.mjs';
-import { slotVerdict, zonedDayParts, DEFAULT_GRACE_MINUTES, DEFAULT_TIME_ZONE } from './lib/note-slot.mjs';
-import { resolvePackForSlug, extractNote } from './lib/note-pack.mjs';
+import { slotVerdict, DEFAULT_GRACE_MINUTES, DEFAULT_PUBLISH_WEEKDAY, DEFAULT_TIME_ZONE } from './lib/note-slot.mjs';
+import { decide } from './lib/note-decision.mjs';
 import { latestPublishedPost } from './lib/ghost-admin.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -77,6 +78,7 @@ const slot = args.slot;
 const note = Number(args.note ?? 1);
 const graceMinutes = args['grace-minutes'] === undefined ? DEFAULT_GRACE_MINUTES : Number(args['grace-minutes']);
 const timeZone = args['time-zone'] ?? DEFAULT_TIME_ZONE;
+const publishWeekday = args['publish-weekday'] === undefined ? DEFAULT_PUBLISH_WEEKDAY : Number(args['publish-weekday']);
 const epochMs = args.now ? Date.parse(args.now) : Date.now();
 const holder = args.holder ?? `pid-${process.pid}`;
 
@@ -96,8 +98,9 @@ try {
   // 2. The lock. Before any network call, so two runs cannot race through it.
   //    TTL runs to the far edge of the posting window plus a margin, so a run
   //    that dies mid-wait frees the task rather than wedging it past its slot.
-  const timing = slotVerdict({ epochMs, slot, graceMinutes, timeZone });
-  const ttlMs = Math.min(4 * 60 * 60_000, Math.max(15 * 60_000, timing.slotEpochMs + graceMinutes * 60_000 + 15 * 60_000 - epochMs));
+  // Only for the lock TTL. The verdict the run acts on comes from decide().
+  const lockWindow = slotVerdict({ epochMs, slot, graceMinutes, timeZone });
+  const ttlMs = Math.min(4 * 60 * 60_000, Math.max(15 * 60_000, lockWindow.slotEpochMs + graceMinutes * 60_000 + 15 * 60_000 - epochMs));
   const lock = acquireTaskLock({ task, dir: lockDir, ttlMs, epochMs, holder });
   if (!lock.acquired) {
     emit(
@@ -113,43 +116,40 @@ try {
   }
   held = lock;
 
-  // 3. The essay. A note is a fragment of a fresh essay; without one it means nothing.
+  // 3-5. The essay, the copy, and the window are one decision, and it lives in
+  //      note-decision.mjs so it can be tested without a network call or a
+  //      credential. The regression this replaced was in these lines, not in
+  //      the arithmetic they called.
   const post = await latestPublishedPost();
-  const today = zonedDayParts(epochMs, timeZone);
-  const publishedDay = zonedDayParts(Date.parse(post.published_at), timeZone);
-  const sameDay = today.year === publishedDay.year && today.month === publishedDay.month && today.day === publishedDay.day;
-  if (!sameDay) {
-    standDown("this week's essay has not published", {
-      latestPublished: { slug: post.slug, publishedAt: post.published_at },
+  const decision = decide({ epochMs, slot, note, post, graceMinutes, timeZone, publishWeekday });
+
+  // A stand-down on the essay carries no copy, so it never becomes a payload.
+  if (!decision.essay) {
+    standDown(decision.reason, {
+      latestPublished: decision.latestPublished,
+      publicationWeekStart: decision.publicationWeekStart,
     });
   }
 
-  // 4. The copy, from the approved pack, verbatim.
-  const pack = resolvePackForSlug({ slug: post.slug });
-  const copy = extractNote(readFileSync(pack, 'utf8'), note);
-
   const payload = {
-    ok: timing.verdict !== 'stand-down',
+    ok: decision.verdict !== 'stand-down',
     task,
-    verdict: timing.verdict,
+    verdict: decision.verdict,
     slot,
-    offsetMinutes: timing.offsetMinutes,
+    offsetMinutes: decision.timing.offsetMinutes,
     graceMinutes,
-    waitSeconds: Math.ceil(timing.waitMs / 1000),
+    waitSeconds: Math.ceil(decision.timing.waitMs / 1000),
     lock: { token: lock.token, expiresAt: new Date(lock.expiresAtMs).toISOString(), dir: lockDir },
-    essay: { title: post.title, slug: post.slug, url: post.url, publishedAt: post.published_at },
-    pack: path.relative(root, pack),
+    essay: decision.essay,
+    pack: decision.pack,
     note,
-    copy,
+    copy: decision.copy,
     hold: hold.reason,
     browser: { chromeRunning: isChromeRunning() },
   };
 
-  // 5. The window.
-  if (timing.verdict === 'stand-down') {
-    standDown(`${timing.offsetMinutes} minutes past the ${slot} slot, beyond the ${graceMinutes}-minute grace window`, payload);
-  }
-  emit(payload, timing.verdict === 'wait' ? EXIT.wait : EXIT.post);
+  if (decision.verdict === 'stand-down') standDown(decision.reason, payload);
+  emit(payload, decision.verdict === 'wait' ? EXIT.wait : EXIT.post);
 } catch (error) {
   if (held) releaseTaskLock({ task, dir: lockDir, token: held.token });
   emit({ ok: false, task, error: error.message }, EXIT.error);

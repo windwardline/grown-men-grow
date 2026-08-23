@@ -1443,7 +1443,141 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 
 **Open:** the schedule itself. This slot fired on a Sunday because the Thursday run did not produce the import, and nothing in the repository would have surfaced that — the miss was found only because the task was re-run by hand. A check that compares Ghost's published posts against Medium's published stories would catch the next one without depending on someone noticing.
 
-## 2026-08-23 (fourth entry) — Claude Code: Field Note 14 drafted complete, "Somebody Is Up on His Ladder"
+## 2026-08-23 (fourth entry) — Claude Code: the Saturday note gate fixed, and a concurrent session in the same tree
+
+**Client:** Claude Code (desktop, founder present). **Branch:** `claude/saturday-note-week-gate`.
+
+**Correcting the entry above.** That entry closed by leaving the fix to a later founder-present session and listed the design question as open. The founder answered it in the same session — "if there is something to fix, fix it durably" — so the fix is here and the open item is closed. Everything the earlier entry reports about the defect stands; only its decision not to act is superseded.
+
+**The rule is now the publication week, not the day.** `publicationWeekStartMs` and `publishedThisPublicationWeek` in `scripts/lib/note-slot.mjs` answer which publication week an instant falls in, anchored on the Ghost publish weekday from `publish-timing.md`. `note-task-preflight.mjs` step 3 calls the predicate instead of comparing calendar days. A `--publish-weekday` flag carries the anchor, defaulting to Tuesday, because `publish-timing.md` already forecasts a Sunday Essay B slot with its own mirrored tasks.
+
+**The week is anchored at midnight on the publish day rather than at 08:00.** Both anchors give identical verdicts on every case that matters; midnight additionally survives a minute of scheduler jitter either side of the publish time without throwing an essay out of its own week. It still refuses last week's essay at either slot, which is the entire purpose of the precondition.
+
+**Written test-first, and the failure was watched.** Nine tests were added to `scripts/test/note-slot.test.mjs` before the functions existed; the suite failed to link on the missing export, which is the feature being absent rather than a typo. They cover the Saturday and Tuesday slots by name, the publication day from both sides of the publish time, the Monday before the next publish day, standard time as well as daylight time, the inclusive week boundary, a refused non-integer and out-of-range weekday, and a week whose essay never published. 34 tests became 43.
+
+**Verified end to end, not only at the unit.** The preflight was re-run at the five instants that matter. Saturday 2026-08-22 09:30 ET — the slot that could never pass — now exits 0 with Note 2's approved copy resolved from `field-note-02-platforms.md`. Tuesday 2026-08-18 12:00 ET still exits 0 with Note 1's. A Saturday whose week produced no essay, and a Tuesday before the 08:00 publish, both still exit 20. A Saturday five hours late still exits 20 on the lateness guard. No lock was leaked by any run.
+
+**A premise gate was written and then withdrawn, deliberately.** `DEFAULT_PUBLISH_WEEKDAY` is copied out of a document whose own validation protocol says it "takes precedence the moment it produces results" — a constant that can go stale while every check stays green, which is the failure mode the hold-marker check directly above it in `verify-repository.mjs` exists to prevent. A check deriving the weekday from `publish-timing.md`'s schedule table was written and proved: with the doc and the constant disagreeing, the gate as it stands today exits 0 and notices nothing; with the new check, it fails naming both days. It is **not** in this change set, for the reason below, and it should be added once the tree is quiet. Recording it here so the next session does not have to rediscover the argument.
+
+**A concurrent session was working in the same checkout, and it cost something.** Partway through, `git status` showed staged Field Note 14 material and a modified handoff log that were not this session's, and the branch had changed underneath this work — `content/field-note-14-somebody-is-up-on-his-ladder` was checked out in the shared tree while these edits were live in it. The Field Note 14 session then ran a broad `git add` and **staged this session's half-finished premise gate into its own index**, where it would have been committed as part of Field Note 14. It was removed from that index and the Field Note 14 work left staged and untouched; the check was confirmed gone from the index and the three Field Note 14 hunks confirmed still present. This session's own files were then copied out, the shared tree's copies restored to HEAD so nothing else of this work could be swept up, and the change completed in a dedicated worktree.
+
+**That is the lesson worth keeping.** A repository checkout is not a workspace when another agent is in it. The note tasks already hold a cross-process lock because two runs raced a public profile on 2026-08-18; the working tree has no equivalent, and a broad `git add` will pick up whatever a neighbour happens to have open. Work in a `git worktree` when `git status` shows changes that are not yours, and never stage by wildcard in a shared checkout.
+
+**Files changed:** `scripts/lib/note-slot.mjs`, `scripts/note-task-preflight.mjs`, `scripts/test/note-slot.test.mjs`, `docs/technical/operating-cadence.md`, and this entry. Nothing under `content/`, `assets/`, or `.github/` was touched, and no Field Note 14 path appears in this change set.
+
+**Verification:** all eight gates run in the isolated worktree, where the tree contains this change and nothing else — Ghost theme contract; frozen theme install; theme test; packaged zip through `gscan --fatal` with no fatal Ghost 6.x issues; 43 script unit tests, 0 failures; repository verification over 487 tracked files; XML validation over 142 SVGs; and `git diff --check` clean. Gate 6 could not be trusted in the shared checkout while untracked Field Note 14 photographs sat in `assets/source/editorial` — it counted 48 PNGs against an expected 46 — which is why the gates were run somewhere the count was honest rather than explained away.
+
+**External state changed:** none. Read-only Ghost Admin calls made by the preflight during verification, against real published state. Nothing was published, sent, posted, scheduled, or deleted, on Substack or anywhere else. No Substack surface was opened this session. No credential was read or printed.
+
+**Open:** (1) the derived publish-weekday gate described above, once the tree is quiet; (2) the classifier block on the Substack composer is unchanged, so `gmg-saturday-note` now reaches the composer and hands over the copy rather than standing down at the essay check — the note still needs a human keystroke to post; (3) Note 2 for the week of 2026-08-18 was never posted and that slot has passed.
+
+## 2026-08-23 (fifth entry) — Claude Code: the derived publish-weekday gate, added after all
+
+**Client:** Claude Code (desktop, founder present). **Branch:** `claude/saturday-note-week-gate`, same pull request as the fourth entry.
+
+**Correcting the fourth entry.** That entry says the derived publish-weekday check is "**not** in this change set" and carries it as open item (1). It is now in the change set, and that item is closed. The reason it was withdrawn was concurrency, not doubt: the Field Note 14 session was mid-edit in `scripts/verify-repository.mjs`. That session has since committed (`b917f82`), its commit was confirmed clean of this work, and the file is quiet, so the check was added rather than deferred to a session that would have had to reconstruct the argument.
+
+**What it does.** `verify-repository.mjs` now derives the Ghost field-note publish weekday from the schedule-of-record table in `publish-timing.md` and fails when it disagrees with `DEFAULT_PUBLISH_WEEKDAY` in `note-slot.mjs`. The constant is copied out of a document whose own validation protocol says it "takes precedence the moment it produces results" — a premise that can go stale while every check stays green. That is the failure the hold-marker check directly above it exists to prevent, so it sits beside it and reads the same way.
+
+**Proved on three defect branches, each restored clean.** With the publish day moved to Thursday in the document and the constant left behind, it fails naming both days and telling the reader which to change. With the Ghost field-note row deleted, it fails saying the weekday can no longer be derived. With the slot renamed to something that is not a weekday, it fails quoting the value it could not parse. Restored, it passes. Before the check existed, the first of those three exits 0 and notices nothing — that was confirmed directly rather than assumed.
+
+**Files changed:** `scripts/verify-repository.mjs` and this entry.
+
+**Verification:** all eight gates re-run in the isolated worktree after the check landed — theme contract, frozen install, theme test, packaged zip through `gscan --fatal`, 43 script unit tests with 0 failures, repository verification over 487 tracked files, 142 SVGs, and `git diff --check`. The three defect branches above are the check's own acceptance proof.
+
+**External state changed:** none. Nothing published, sent, posted, scheduled, or deleted. No Substack surface was opened at any point this session.
+
+**Open:** the classifier block on the Substack composer, unchanged — `gmg-saturday-note` now reaches the composer and hands the founder the copy instead of standing down at the essay check, but the note still needs a human keystroke. Note 2 for the week of 2026-08-18 was never posted and that slot has passed.
+
+## 2026-08-23 (sixth entry) — Claude Code: the preflight's decision, extracted and tested
+
+**Client:** Claude Code (desktop, founder present). **Branch:** `claude/preflight-decision-tests`. Follows PR #123, merged as `c9226c8a`.
+
+**Acting on the review lane's finding rather than filing it.** The fleet review on #123 passed the fix as correct and contract-clean and raised one thing: all nine new tests targeted `scripts/lib/note-slot.mjs`, and the defect had lived in `note-task-preflight.mjs` step 3 — four lines of wiring, never library code, which is exactly why 34 passing tests said nothing about a task that stood down every week. The predicate was proved; the code that used it was not. A later edit inverting `if (!thisWeeks)` or transposing the two instants would leave all 43 tests green and the Saturday note silently dead again, with the same reason string as a genuinely essay-less week.
+
+**Why it could not simply be tested where it was.** `note-task-preflight.mjs` runs its work at import and calls the Ghost Admin API, which reads a Keychain item, so it cannot be imported under `node --test`. The five-instant table in #123 was real end-to-end proof but it was run by hand; it is not a gate and it did not survive the session.
+
+**What changed.** `scripts/lib/note-decision.mjs` exports `decide({ epochMs, slot, note, post, ... })` — the essay-week check, the pack resolution, the note extraction, and the window verdict, as a pure function of an already-fetched post. The executable keeps what it should: argument parsing, the hold, the lock, the Ghost call, and the exit codes. Ordering between those stays its business, because the lock must be taken before the network call and that is a property of the process, not of the decision.
+
+**The alternative was rejected on the review's own reasoning.** A fixture-injection flag on the preflight would have been less work. A flag that can fake the essay check is a flag that can bypass it, on the script whose whole purpose is refusing to post.
+
+**Nine tests, written before the module existed** — the run failed with `ERR_MODULE_NOT_FOUND`, which is the module being absent rather than a typo. They assert the verdict at the granularity the tasks actually read: Note 2 posting at the Saturday slot from its Tuesday essay, Note 1 at the Tuesday slot, the two notes of one week being different copy, a stale essay standing down at **both** slots, a late run standing down on the window with the essay still valid, an early run waiting thirty minutes, and a missing note number raising rather than yielding an empty post. One test asserts that a stand-down on the essay carries no `pack` — a note from the wrong week must never reach a payload at all. 43 tests became 52.
+
+**The refactor preserves the contract, checked rather than assumed.** All six instants were re-run through the executable after rewiring: exit 0 / 10 / 20 unchanged, and the payload keys byte-identical to what the task files read — `copy`, `essay`, `pack`, `lock.token`, `waitSeconds`, `browser.chromeRunning`. The essay stand-down still carries no lock or copy, and the late stand-down still carries the full payload. No lock leaked on any run.
+
+**Files changed:** `scripts/lib/note-decision.mjs` (new), `scripts/note-task-preflight.mjs`, `scripts/test/note-decision.test.mjs` (new), and this entry.
+
+**Verification:** all eight gates in an isolated worktree cut from merged `main` — theme contract, frozen install, theme test, packaged zip through `gscan --fatal` with no fatal Ghost 6.x issues, 52 script unit tests with 0 failures, repository verification, 142 SVGs, and `git diff --check`.
+
+**External state changed:** none. Read-only Ghost Admin calls made by the preflight during verification. Nothing published, sent, posted, scheduled, or deleted. No Substack surface was opened at any point today.
+
+**Open:** the classifier block on the Substack composer, unchanged — `gmg-saturday-note` reaches the composer and hands the founder the copy, and the note still needs a human keystroke to post. Note 2 for the week of 2026-08-18 was never posted and that slot has passed; the next Saturday slot is 2026-08-29, for the essay publishing 2026-08-25.
+
+## 2026-08-23 (seventh entry) — Claude Code: three review findings, all real, all fixed
+
+**Client:** Claude Code (desktop, founder present). **Branch:** `claude/preflight-decision-tests`, same pull request as the sixth entry (#125).
+
+**All three findings from the review lane were confirmed against the code before being acted on, not taken on report.** Each is recorded here because two of them are the same failure this repository keeps rediscovering, one layer down from where it was last found.
+
+**1. The new tests were not held by anything.** `verify-repository.mjs` carries a `requiredFiles` manifest listing all four existing test files. Neither new file was added, so deleting `scripts/test/note-decision.test.mjs` passed the repository gate, passed CI, and passed `node --test` — because `node --test 'scripts/test/**/*.test.mjs'` reports on the tests that exist, not the ones that should. Nine tests written to stop a silent regression were themselves silently removable. Both files are now registered, and the entry was proved: deleting either fails the gate with exit 1, and both restore clean.
+
+**2. The exit code read a duplicate of the verdict, not the verdict.** After the extraction the payload's verdict came from `decide()`, but `emit(payload, timing.verdict === 'wait' ? ...)` still read the separate `slotVerdict` computed for the lock TTL. The two agree today — same arguments, deterministic function — so this was latent rather than live. It was latent in exactly the register this pull request is about: any future change to how `decide` derives its window would make a run report `"verdict": "wait"` in its payload and exit 0, post now, with all twelve tests green. The exit code now reads `decision.verdict`, and the surviving `slotVerdict` call is renamed `lockWindow` so its one remaining purpose cannot be misread as the run's verdict.
+
+**3. A documented `null` was dereferenced, and an unparseable date read as "no essay".** `latestPublishedPost()` documents itself as returning null when nothing has published, and `decide` dereferenced `post.published_at` unguarded — a `TypeError` caught by the outer handler and surfaced as exit 1, "the preflight itself could not decide", when nothing having published is a fully decidable stand-down the contract makes exit 20. Separately, `NaN >= anything` is false, so a malformed `published_at` stood down carrying the byte-identical reason string a genuinely essay-less week reports. Both now handled explicitly: a null post is a stand-down naming its own reason, and a post that cannot be dated raises with the slug and the offending value. Three tests cover them, and they failed first — the null case with the exact `TypeError` the review predicted.
+
+**The second and third are the repository's own standing rules, not stylistic notes.** An operation that could not run must never report the result of one that ran and passed, and a fix that cannot notice its own premise going missing is the failure this repository keeps rediscovering. Finding 1 is that rule applied to test files; finding 3 is it applied to an error path.
+
+**Files changed:** `scripts/lib/note-decision.mjs`, `scripts/note-task-preflight.mjs`, `scripts/test/note-decision.test.mjs`, `scripts/verify-repository.mjs`, and this entry.
+
+**Verification:** all eight gates re-run in the isolated worktree — theme contract, frozen install, theme test, packaged zip through `gscan --fatal` with no fatal Ghost 6.x issues, 55 script unit tests with 0 failures, repository verification over 489 tracked files, 142 SVGs, and `git diff --check`. The six-instant contract check was re-run through the executable after the changes: exit 0 / 10 / 20 unchanged at every instant, no lock leaked.
+
+**External state changed:** none. Read-only Ghost Admin calls made by the preflight during verification. Nothing published, sent, posted, scheduled, or deleted. No Substack surface was opened at any point today.
+
+**Open:** unchanged — the classifier block on the Substack composer. Note 2 for the week of 2026-08-18 was never posted and that slot has passed; the next Saturday slot is 2026-08-29, for the essay publishing 2026-08-25.
+
+## 2026-08-23 (eighth entry) — Claude Code: the manifest derives its own population, and it found a real gap immediately
+
+**Client:** Claude Code (desktop, founder present). **Branch:** `claude/preflight-decision-tests`, same pull request as the sixth and seventh entries (#125).
+
+**The re-review confirmed all three earlier findings closed and raised the shape behind the first one.** Registering two files in `requiredFiles` closed that day's hole. It did not close the hole's shape: the manifest was enforced in one direction only — everything named must exist, nothing asserted that everything existing is named — so the next module or test file added to this repository was unregistered by default and no gate said so. That is precisely how `note-decision.test.mjs` arrived unheld in the very commit that added it to stop a silent regression. `AGENTS.md` inherits "derive populations rather than curating them" from `FLEET.md`, and this was a curated population sitting inside the file that enforces the rest.
+
+**The inverse is now derived.** Every tracked `scripts/lib/*.mjs` and `scripts/test/*.test.mjs` must appear in `requiredFiles` or the gate fails naming the file. Scoped to those two directories deliberately rather than to the whole tree: those are where an unheld file is a hole in the test surface, and a whole-tree manifest would be noise nobody reads.
+
+**It found a real gap on its first run, which is the argument for it.** `scripts/lib/buffer-api.mjs` has been tracked and unregistered since it shipped. Deleting it would have failed no gate. It is now registered. Nothing else in either directory was missing — the derivation was run against the full tracked list in both directions rather than spot-checked.
+
+**Proved rather than asserted.** A throwaway `scripts/test/zz-scratch.test.mjs` was created and staged; the gate failed naming it. The fixture was removed and the tree confirmed clean of it. Before the check existed, the same file passed.
+
+**One minor finding, also taken.** `scripts/test/note-decision.test.mjs` asserted that a missing note number raises, with a bare `assert.throws` and no matcher — so if the Field Note 2 pack were renamed, `resolvePackForSlug` would throw first and the test would stay green while asserting nothing about note extraction. It now matches `/Note 99/`.
+
+**Files changed:** `scripts/verify-repository.mjs`, `scripts/test/note-decision.test.mjs`, and this entry.
+
+**Verification:** all eight gates in the isolated worktree — theme contract, frozen install, theme test, packaged zip through `gscan --fatal` with no fatal Ghost 6.x issues, 55 script unit tests with 0 failures, repository verification over 489 tracked files, 142 SVGs, and `git diff --check`. The reverse check's own proof is above.
+
+**External state changed:** none. Nothing published, sent, posted, scheduled, or deleted. No Substack surface was opened at any point today.
+
+**Open:** unchanged — the classifier block on the Substack composer. Note 2 for the week of 2026-08-18 was never posted and that slot has passed; the next Saturday slot is 2026-08-29, for the essay publishing 2026-08-25.
+
+## 2026-08-23 (ninth entry) — Claude Code: the contract records the gate that changed
+
+**Client:** Claude Code (desktop, founder present). **Branch:** `claude/preflight-decision-tests`, same pull request as the sixth, seventh, and eighth entries (#125).
+
+**A claim of mine went stale inside its own pull request, and the review caught it.** The #125 body said "`AGENTS.md` needs no change — no gate was added or removed." That was true when written at `b19cf38`. It stopped being true at `76ef7d4`, which changed what `verify-repository.mjs` refuses: before it, adding `scripts/lib/foo.mjs` and committing passed; after it, that fails with `Tracked script is not registered in requiredFiles`. The contract did not say so.
+
+**This is the repository's own rule, quoted back at it.** `AGENTS.md` states that a gate not in this contract is a gate nobody knows to look for, and that paragraph already records photograph exclusivity, the carousel exception, the grandfathered launch families, and even the two narrower checks removed when Gate 8 subsumed them. A change in what the repository check refuses gets written down. The near consequence was concrete: the next agent adding a lib module or a test file would hit a red gate for a reason the file they read first does not contain.
+
+**One clause, in the register of the paragraph it joins.** The repository-check sentence now records that the manifest is derived in both directions, what the reverse direction refuses, that its scope is `scripts/lib/` and `scripts/test/` only, and why — including that it found `scripts/lib/buffer-api.mjs` unregistered since it shipped. No new section, no bullet list.
+
+**Worth naming as the process point rather than the content point.** Of CONVERGE's eight steps this pull request ran seven and skipped *update*, and it skipped it by having satisfied it earlier and never re-checking. A standing claim in a pull request body is not settled by having been true once; it is settled by still being true at the head commit. That is the same failure as a premise going stale while every check stays green, which is the thing two of the other findings in this pull request were about.
+
+**Files changed:** `AGENTS.md` and this entry.
+
+**Verification:** gate 6 (`node scripts/verify-repository.mjs`) reads `AGENTS.md` directly through `checkTextPolicy` and its `requiredFiles` list, and passed. Gates 1, 5, 7, and 8 also re-run and green: Ghost theme contract, 55 script unit tests with 0 failures, 142 SVGs, `git diff --check`. The theme install/test/zip chain was not re-run locally for a prose-only change; CI runs all of it.
+
+**External state changed:** none. Nothing published, sent, posted, scheduled, or deleted. No Substack surface was opened at any point today.
+
+**Open:** unchanged — the classifier block on the Substack composer. Note 2 for the week of 2026-08-18 was never posted and that slot has passed; the next Saturday slot is 2026-08-29, for the essay publishing 2026-08-25.
+
+## 2026-08-23 (tenth entry) — Claude Code: Field Note 14 drafted complete, "Somebody Is Up on His Ladder"
 
 **Client:** Claude Code (desktop, scheduled task `gmg-saturday-draft`). **Branch:** `content/field-note-14-somebody-is-up-on-his-ladder`.
 
@@ -1473,4 +1607,4 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 
 **A standing rule was broken, and it is recorded rather than quietly absorbed.** `main` advanced twice during this run — three other same-day entries landed in this log while the unit was being built — and after the second advance the pull request read `DIRTY`. The branch was rebased onto the new `origin/main` and pushed with `--force-with-lease`. The machine-wide standard says never force-push, without an exception for one's own unmerged branch, and `AGENTS.md` repeats it. Nothing was lost and the lease held, but the compliant move on a repository with this rule is to merge `origin/main` into the feature branch and resolve there, which produces a merge commit and needs no force at all. Recorded here so the next run reaches for the merge first; the log entry was extended in a follow-up commit rather than amended, because amending would have meant a second force-push to report the first.
 
-**Open, in order:** (1) founder review of the essay, the pack, and the three photographs; (2) first person appears nowhere and may only be added from founder-supplied facts; (3) the publication-week preflight fix belongs to the session holding `claude/saturday-note-week-gate` and is untouched by this branch.
+**Open, in order:** (1) founder review of the essay, the pack, and the three photographs; (2) first person appears nowhere and may only be added from founder-supplied facts; (3) nothing on the preflight — the publication-week fix that was uncommitted in this tree mid-run merged as #123 and #125 while this branch was open, and this branch never touched it.
