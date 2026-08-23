@@ -1356,3 +1356,31 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** GitHub only — this branch and its pull request. No Ghost, Buffer, Instagram, Medium, Bluesky, Substack, LinkedIn, email, DNS, or other publication surface was read or changed. Nothing was published, sent, posted, scheduled, or deleted.
 
 **Open:** none. The pull request merges only after its required checks pass; the byte-identical auto-merge workflow remains untouched.
+
+## 2026-08-23 — Claude Code: the Saturday note stood down, and it can never do anything else
+
+**Client:** Claude Code (desktop, `gmg-saturday-note`, resumed run). **Branch:** `claude/saturday-note-gate-finding`.
+
+**Nothing was posted.** The preflight returned exit 20 — stand down — with `reason: "this week's essay has not published"`, naming `call-your-friends-before-theres-a-reason`, published 2026-08-18T12:00:00Z. Per the task file that ends the run: no composer was opened, no browser tool was called, and the profile was never loaded. The preflight released the lock it took; both the default lock directory and the scratchpad directory used for probes were confirmed empty afterwards.
+
+**Two independent reasons, not one.** The run itself was late: it executed Sunday 2026-08-23 at 14:43 ET against a Saturday 09:30 slot. `slotVerdict` puts that 314 minutes past the slot against a 60-minute grace, which is its own stand-down. Either reason alone stops the post. The lateness is the ordinary consequence of a task that fires at next launch when the app is closed, and it cost nothing this week because the other reason is permanent.
+
+**The finding: `gmg-saturday-note` cannot fire, and has never fired.** Step 3 of `scripts/note-task-preflight.mjs` (lines 117–125) takes the latest published post and requires its publication day to equal today in `America/New_York`. Essays publish Tuesday 08:00 ET — `publish-timing.md` sets that, and `publication-order.md` projects every slot from it. Note 2's slot is Saturday. A Saturday is never the day a Tuesday essay published, so the check cannot pass at that slot.
+
+**Verified rather than reasoned.** The preflight was re-run against its own real slot with `--now 2026-08-22T13:30:00Z` (Saturday 09:30 ET) into a scratchpad lock directory: still exit 20, same reason. The same script, same essay, same lock directory, run at `--now 2026-08-18T16:00:00Z` for `gmg-tuesday-note --slot 12:00 --note 1`, returns exit 0, `verdict: "post"`, with Note 1's copy resolved from `content/distribution/field-note-02-platforms.md`. The only difference between passing and failing is the day of the week. The probe lock was released and both directories re-checked clean.
+
+**The implementation is narrower than the contract it serves.** `operating-cadence.md` line 51 states the rule as refusing to post "when the week's essay did not publish". The Tuesday essay *is* the week's essay on Saturday — Note 2 is a fragment of it, four days later, which is the whole design of the Saturday slot. `sameDay` is the correct reading for `gmg-tuesday-note`, where the note follows the essay by four hours, and it is the wrong reading for the task that shares the script. One preflight serves both tasks, as its own header says, and step 3 was written for one of them.
+
+**No test covers step 3.** `scripts/test/` holds `hold-state`, `note-pack`, `note-slot`, and `task-lock` tests. The hold, the copy extraction, the slot arithmetic, and the lock are all covered; the essay precondition is not. That is why a check that inverts the outcome for one of its two callers shipped and stayed.
+
+**Note 2 has only ever reached the profile by hand.** The log records it live at 2026-08-16 15:47, from the run that fired at 3:39 PM against a 9:15 schedule and handed the copy to the founder — before autonomous posting was authorized on 2026-08-17. Saturday 2026-08-22 was the first slot under that authorization, and there is no entry for it. Whatever ran, or did not run, it would have stood down here.
+
+**The fix was not made, and that is a decision rather than an omission.** Changing step 3 changes when an autonomous task posts publicly, and the correct replacement carries a real design question the founder should settle: whether "the week's essay" means the most recent essay published in the current ET week, or specifically this week's Tuesday post, and what either does on a week where publication slips past its slot or the hold fires. There is also a second-order effect worth stating — a fixed gate does not restore posting. The composer is a contenteditable div, keystroke injection through the `computer` tool is still refused by the auto-mode classifier, and that refusal is documented as not to be routed around. Fixing step 3 moves the Saturday task from standing down at the essay check to handing the founder the copy at the composer. That is a real improvement and it is not a working post.
+
+**Files changed:** this entry only. No script, workflow, content, or asset was touched.
+
+**Verification:** exit codes read directly rather than the prose around them. Gates run locally on this branch: `node scripts/verify-repository.mjs`, `bash scripts/verify-svg-xml.sh`, `node --test 'scripts/test/**/*.test.mjs'`, `git diff --check`. The theme chain was not re-run locally for a prose-only change; CI runs all of it.
+
+**External state changed:** none. Two read-only Ghost Admin calls through `latestPublishedPost()`, made by the preflight itself. Nothing was published, sent, posted, scheduled, or deleted, on Substack or anywhere else. No credential was read or printed.
+
+**Open, in order:** (1) the founder settles what "the week's essay" means for the Saturday slot, after which step 3 takes a note-aware or window-based form and gets the test it never had; (2) until then `gmg-saturday-note` is a no-op every week and Note 2 needs posting by hand from the week's pack if it is to go out at all; (3) the classifier block on the composer is unchanged and is the ceiling on that task regardless.
