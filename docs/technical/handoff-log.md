@@ -1556,3 +1556,23 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** none. Nothing published, sent, posted, scheduled, or deleted. No Substack surface was opened at any point today.
 
 **Open:** unchanged — the classifier block on the Substack composer. Note 2 for the week of 2026-08-18 was never posted and that slot has passed; the next Saturday slot is 2026-08-29, for the essay publishing 2026-08-25.
+
+## 2026-08-23 (ninth entry) — Claude Code: the contract records the gate that changed
+
+**Client:** Claude Code (desktop, founder present). **Branch:** `claude/preflight-decision-tests`, same pull request as the sixth, seventh, and eighth entries (#125).
+
+**A claim of mine went stale inside its own pull request, and the review caught it.** The #125 body said "`AGENTS.md` needs no change — no gate was added or removed." That was true when written at `b19cf38`. It stopped being true at `76ef7d4`, which changed what `verify-repository.mjs` refuses: before it, adding `scripts/lib/foo.mjs` and committing passed; after it, that fails with `Tracked script is not registered in requiredFiles`. The contract did not say so.
+
+**This is the repository's own rule, quoted back at it.** `AGENTS.md` states that a gate not in this contract is a gate nobody knows to look for, and that paragraph already records photograph exclusivity, the carousel exception, the grandfathered launch families, and even the two narrower checks removed when Gate 8 subsumed them. A change in what the repository check refuses gets written down. The near consequence was concrete: the next agent adding a lib module or a test file would hit a red gate for a reason the file they read first does not contain.
+
+**One clause, in the register of the paragraph it joins.** The repository-check sentence now records that the manifest is derived in both directions, what the reverse direction refuses, that its scope is `scripts/lib/` and `scripts/test/` only, and why — including that it found `scripts/lib/buffer-api.mjs` unregistered since it shipped. No new section, no bullet list.
+
+**Worth naming as the process point rather than the content point.** Of CONVERGE's eight steps this pull request ran seven and skipped *update*, and it skipped it by having satisfied it earlier and never re-checking. A standing claim in a pull request body is not settled by having been true once; it is settled by still being true at the head commit. That is the same failure as a premise going stale while every check stays green, which is the thing two of the other findings in this pull request were about.
+
+**Files changed:** `AGENTS.md` and this entry.
+
+**Verification:** gate 6 (`node scripts/verify-repository.mjs`) reads `AGENTS.md` directly through `checkTextPolicy` and its `requiredFiles` list, and passed. Gates 1, 5, 7, and 8 also re-run and green: Ghost theme contract, 55 script unit tests with 0 failures, 142 SVGs, `git diff --check`. The theme install/test/zip chain was not re-run locally for a prose-only change; CI runs all of it.
+
+**External state changed:** none. Nothing published, sent, posted, scheduled, or deleted. No Substack surface was opened at any point today.
+
+**Open:** unchanged — the classifier block on the Substack composer. Note 2 for the week of 2026-08-18 was never posted and that slot has passed; the next Saturday slot is 2026-08-29, for the essay publishing 2026-08-25.
