@@ -1384,3 +1384,33 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** none. Two read-only Ghost Admin calls through `latestPublishedPost()`, made by the preflight itself. Nothing was published, sent, posted, scheduled, or deleted, on Substack or anywhere else. No credential was read or printed.
 
 **Open, in order:** (1) the founder settles what "the week's essay" means for the Saturday slot, after which step 3 takes a note-aware or window-based form and gets the test it never had; (2) until then `gmg-saturday-note` is a no-op every week and Note 2 needs posting by hand from the week's pack if it is to go out at all; (3) the classifier block on the composer is unchanged and is the ceiling on that task regardless.
+
+## 2026-08-23 (second entry) — Claude Code: weekly analytics readout (deferred Friday run)
+
+**Client:** Claude Code (`gmg-friday-analytics`, scheduled task). **Branch:** `claude/friday-analytics-2026-08-23`. Verify-only; nothing published, sent, posted, scheduled, replied to, or deleted.
+
+**Run date.** This is the 2026-08-21 Friday readout executed Sunday 2026-08-23. The two-day lag matters only for the moderation sweep, which is the backstop rather than the alarm — Ghost emails the founder on each new comment, and the sweep found nothing on any surface.
+
+**Moderation sweep — nothing to escalate.** Every surface checked and every one empty: Ghost comments (Admin API, 0 across the site), Instagram comments and DMs (Business Suite inbox — "No messages" and "No comments" confirmed on screen, to-do list clear), Bluesky replies and mentions (authenticated `listNotifications`: 2 notifications, both likes from 2026-08-11, no replies, no mentions, no quotes), LinkedIn comments (0 on both Page posts, confirmed in the admin post list and in Buffer's per-post metrics). No escalation-row content of any kind. Nobody was replied to.
+
+**Schedule adherence — every Buffer-scheduled slot fired within five minutes.** Ghost publish + email Tue 08:00 ET (actual 08:00). Bluesky Tue 12:00 (12:01). LinkedIn Wed 10:00 (10:01). Instagram Thu 09:00 (09:05). Bluesky Sat 09:30 (09:30). The Sunday Essay B slot is correctly dormant — the second weekly slot has not been activated. Two schedule-of-record rows pair Substack Notes with Bluesky; only the Bluesky half of each is accounted for above, and the Substack half is treated separately below rather than counted as fired.
+
+**Numbers.** Ghost: one publish this week ("Call Your Friends Before There's a Reason", 2026-08-18), email sent 1 / delivered 1 / opened 1 / failed 0. Members 1 total, 1 free, 0 paid, unchanged week over week; the single member joined 2026-08-11. Next Tuesday's post ("A Confession Can Still Be Selfish") is scheduled for 2026-08-25 08:00 ET with the newsletter bound; 0 drafts. Social this week: Instagram 7 views / 2 reach / 2 reactions / 0 saves / 0 shares; LinkedIn 1 impression / 1 reach / 0 reactions; Bluesky 0 / 0 / 0 on both posts. Followers: Instagram 2, Bluesky 0, LinkedIn 0. Business Suite 28-day: 94 views, 20 reach, 19 interactions, 0 conversations, 0 follows.
+
+**The finding that outranks the timing data.** Every measurement this week is a single-digit count against a list of one. Week-over-week deltas are arithmetic on noise, and the weeks 5–8 A/B in `publish-timing.md` cannot run as written — open rate on n=1 is 0% or 100% and resolves nothing. The protocol's minimum of four sends per arm does not fix a sample of one recipient. This is a distribution problem, not a timing problem, and no amount of slot-tuning reaches it. Flagged for the founder; no protocol change made here, because the protocol is not what is broken.
+
+**A measurement gap, verified not assumed.** Ghost's `/stats/` family — `member_count`, `top-posts`, `newsletter-stats` — and `/links/` all return 403 to an Admin API integration key, while `posts/`, `members/`, `comments/`, and `newsletters/` answer 200 with the same key. These endpoints are session-authenticated for the admin UI only. `publish-timing.md` names 48-hour pageviews and per-post member conversions as the A/B's secondary metrics; neither is reachable programmatically. Until that is settled, those two numbers come from the Ghost admin UI by hand or they do not come at all.
+
+**Qualitative pass: nothing to report, which is itself the report.** Zero comments, replies, DMs, or mentions across every surface. Two Bluesky likes on 2026-08-11 from accounts that read as generic rather than engaged. No question has recurred, because none has been asked. No reader has disclosed anything. There is no evidence yet about how the writing lands on men, and none of the numbers above is a proxy for it.
+
+**Corpus balance check: skipped, correctly.** The trigger is bank growth of ten since the last recorded count, not the calendar. Last recorded 2026-08-12: nine of eleven pieces turn to the reader in their closing lines. The approved bank is now thirteen (twelve field notes plus Essay 1), a growth of two. Eight more pieces before the next run.
+
+**Buffer queue empty.** Expected, not a defect: `gmg-monday-staging` (Mon 09:30) queues the week's social posts, and this run is Sunday.
+
+**Files changed:** this entry only.
+
+**Verification:** `node scripts/verify-repository.mjs` and `git diff --check` run against the tree. No code, dependency, workflow, or hosting artifact touched. Credentials were read at exec by the helpers and never printed; the Bluesky app password was read into a local for one `createSession` call and nothing else.
+
+**External state changed:** one Bluesky session created for the notification read. Nothing else anywhere — no Ghost, Buffer, Instagram, LinkedIn, Medium, or Substack state was written.
+
+**Open, for the founder:** (1) the audience problem above, which is the only thing that makes the rest of this protocol measurable; (2) whether 48-hour pageviews and member conversions are read manually from Ghost admin or dropped from the A/B's secondary metrics; (3) the Thursday Medium import is a manual surface this readout cannot verify, and whether it went out this week is unknown to it. Substack Notes are no longer unknown: the preceding entry establishes that `gmg-saturday-note` stood down and can never pass its essay gate, so Saturday's Note 2 did not go out and has never gone out autonomously. An earlier draft of this entry filed Substack alongside Medium as merely unverified; that was wrong by the time it was written, and it is corrected here before merge rather than appended after it.
