@@ -5,6 +5,7 @@ import { lstat, readFile, readdir } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 
 import { parseHold } from './lib/hold-state.mjs';
+import { DEFAULT_PUBLISH_WEEKDAY } from './lib/note-slot.mjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -683,6 +684,36 @@ try {
   parseHold(await readFile(path.join(root, 'docs/technical/operating-cadence.md'), 'utf8'));
 } catch (error) {
   fail(`docs/technical/operating-cadence.md: ${error.message}`);
+}
+
+// `note-slot.mjs` hardcodes the publish weekday both note tasks measure their
+// publication week from, and `publish-timing.md` is where that day is actually
+// decided — a document whose own validation protocol "takes precedence the
+// moment it produces results". A constant copied out of a document expected to
+// change is a premise that can go stale while every check stays green, which is
+// the failure the hold-marker check directly above exists to prevent, repeated.
+// Derive it rather than trust it.
+{
+  const timing = await readFile(path.join(root, 'docs/technical/publish-timing.md'), 'utf8');
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const row = timing
+    .split('\n')
+    .filter((line) => line.startsWith('|'))
+    .map((line) => line.split('|').map((cell) => cell.replaceAll('*', '').trim()))
+    .find((cells) => cells[2] === 'Ghost' && /Weekly field note/i.test(cells[3] ?? ''));
+  if (!row) {
+    fail('docs/technical/publish-timing.md no longer carries a Ghost row for the weekly field note, so DEFAULT_PUBLISH_WEEKDAY cannot be derived from the schedule of record.');
+  } else {
+    const declared = days.findIndex((day) => row[1].startsWith(day));
+    if (declared === -1) {
+      fail(`docs/technical/publish-timing.md names the field-note publish slot as "${row[1]}", which does not begin with a weekday.`);
+    } else if (declared !== DEFAULT_PUBLISH_WEEKDAY) {
+      fail(
+        `docs/technical/publish-timing.md publishes the weekly field note on ${days[declared]}, but note-slot.mjs measures the publication week from ${days[DEFAULT_PUBLISH_WEEKDAY]}. ` +
+          'Both note tasks would then accept or refuse the wrong essay; update DEFAULT_PUBLISH_WEEKDAY to match the schedule of record.',
+      );
+    }
+  }
 }
 
 if (failures.length) {

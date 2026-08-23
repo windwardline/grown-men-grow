@@ -1442,3 +1442,21 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** none. Read-only Ghost Admin calls made by the preflight during verification, against real published state. Nothing was published, sent, posted, scheduled, or deleted, on Substack or anywhere else. No Substack surface was opened this session. No credential was read or printed.
 
 **Open:** (1) the derived publish-weekday gate described above, once the tree is quiet; (2) the classifier block on the Substack composer is unchanged, so `gmg-saturday-note` now reaches the composer and hands over the copy rather than standing down at the essay check — the note still needs a human keystroke to post; (3) Note 2 for the week of 2026-08-18 was never posted and that slot has passed.
+
+## 2026-08-23 (fourth entry) — Claude Code: the derived publish-weekday gate, added after all
+
+**Client:** Claude Code (desktop, founder present). **Branch:** `claude/saturday-note-week-gate`, same pull request as the third entry.
+
+**Correcting the third entry.** That entry says the derived publish-weekday check is "**not** in this change set" and carries it as open item (1). It is now in the change set, and that item is closed. The reason it was withdrawn was concurrency, not doubt: the Field Note 14 session was mid-edit in `scripts/verify-repository.mjs`. That session has since committed (`b917f82`), its commit was confirmed clean of this work, and the file is quiet, so the check was added rather than deferred to a session that would have had to reconstruct the argument.
+
+**What it does.** `verify-repository.mjs` now derives the Ghost field-note publish weekday from the schedule-of-record table in `publish-timing.md` and fails when it disagrees with `DEFAULT_PUBLISH_WEEKDAY` in `note-slot.mjs`. The constant is copied out of a document whose own validation protocol says it "takes precedence the moment it produces results" — a premise that can go stale while every check stays green. That is the failure the hold-marker check directly above it exists to prevent, so it sits beside it and reads the same way.
+
+**Proved on three defect branches, each restored clean.** With the publish day moved to Thursday in the document and the constant left behind, it fails naming both days and telling the reader which to change. With the Ghost field-note row deleted, it fails saying the weekday can no longer be derived. With the slot renamed to something that is not a weekday, it fails quoting the value it could not parse. Restored, it passes. Before the check existed, the first of those three exits 0 and notices nothing — that was confirmed directly rather than assumed.
+
+**Files changed:** `scripts/verify-repository.mjs` and this entry.
+
+**Verification:** all eight gates re-run in the isolated worktree after the check landed — theme contract, frozen install, theme test, packaged zip through `gscan --fatal`, 43 script unit tests with 0 failures, repository verification over 487 tracked files, 142 SVGs, and `git diff --check`. The three defect branches above are the check's own acceptance proof.
+
+**External state changed:** none. Nothing published, sent, posted, scheduled, or deleted. No Substack surface was opened at any point this session.
+
+**Open:** the classifier block on the Substack composer, unchanged — `gmg-saturday-note` now reaches the composer and hands the founder the copy instead of standing down at the essay check, but the note still needs a human keystroke. Note 2 for the week of 2026-08-18 was never posted and that slot has passed.
