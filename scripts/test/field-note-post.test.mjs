@@ -191,6 +191,17 @@ test('assertRenderableEssay allows a snake_case identifier in running prose', ()
   assert.doesNotThrow(() => assertRenderableEssay('Both personal_claims and artwork_status are set.'));
 });
 
+// Masking exists only so the line-opening test is not fooled by `*Never*` at the
+// start of a line. Running the inline rules against the masked line instead of
+// the raw one would hide every construct wrapped in emphasis — and a link
+// renders its brackets just as literally inside an <em> as outside one.
+test('assertRenderableEssay still sees inline constructs wrapped in emphasis', () => {
+  assert.throws(() => assertRenderableEssay('*see [the note](https://x.test)*'), /inline link/);
+  assert.throws(() => assertRenderableEssay('**a `code` span**'), /code formatting/);
+  assert.throws(() => assertRenderableEssay('*he was <em>never</em> sure*'), /raw HTML/);
+  assert.throws(() => assertRenderableEssay('*close&mdash;quarters*'), /HTML entity/);
+});
+
 // The block rule is derived from CommonMark's line-opening set, so the supported
 // inline constructs must be masked before it runs — `*Never* again.` legitimately
 // opens a line with an asterisk.

@@ -1954,3 +1954,23 @@ The corpus test now holds every note in the bank to the same rule, so a note nee
 **External state changed:** none. Every call across this entire sequence was a read. This week's Ghost post and all four Buffer posts are untouched.
 
 **Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (fifteenth entry) — Claude Code: the mask hid what the inline rules were meant to see
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Thirteenth review round, on head `170514e`.
+
+**Deriving the block rule introduced a coverage regression in the inline rules, in the same commit.** Masking exists for one reason: so the line-opening test is not fooled by `*Never* again.`, which legitimately begins a line with an asterisk. The previous commit then ran the inline checks against the masked line as well, and masking replaces `*…*` and `**…**` with a single character — so every inline construct wrapped in emphasis stopped being scanned. Verified: `*see [the note](https://x.test)*` passed and rendered as `<p><em>see [the note](https://x.test)</em></p>`, brackets literal and href dead. Same for a code span, raw HTML, and an entity inside emphasis. A link mangles exactly as badly inside an `<em>` as outside one.
+
+**The inline rules run against the raw line again; only the line-opening test uses the mask.** That is the narrowest correct scope for masking, and it is now written into the code beside both uses so the next edit does not widen it again. Four tests hold the four shapes above.
+
+**This is the fourth consecutive round where a fix of mine created the next finding**, and the pattern is stable enough to name: each fix moved a boundary, and an assertion that was correct at the old boundary was silently wrong at the new one. Extraction inverted validate-before-mutate. Reordering silenced the feature-image guard. Deriving the block rule blinded the inline rules. None was careless and each did what it set out to do. The only thing that caught them was a review round against the changed code, which is the argument for not arming auto-merge beside the review.
+
+**The bank is clean under the restored scope**, checked again, and the builder still reproduces both live posts' HTML exactly.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (110 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean.
+
+**External state changed:** none. Every call across this sequence was a read. This week's Ghost post and all four Buffer posts are untouched.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.

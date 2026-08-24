@@ -201,9 +201,11 @@ const UNRENDERABLE_INLINE = [
   [/(?:^|[\s(])_[^_\s][^_]*_/, 'underscore emphasis (write *emphasis* instead)'],
 ];
 
-// The two things the builder renders inline, removed so what remains can be
-// judged as plain text. `## ` is handled separately, because whether it renders
-// depends on where the line sits.
+// The two things the builder renders inline, removed so the LINE-OPENING test
+// is not fooled by `*Never* again.` — that and nothing else. The inline rules
+// run against the raw line, because a construct wrapped in emphasis mangles
+// exactly as it would outside it. `## ` is handled separately, because whether
+// it renders depends on where the line sits.
 function maskSupportedInline(line) {
   return line.replace(/\*\*[^*]+\*\*/g, 'S').replace(/\*[^*]+\*/g, 'E');
 }
@@ -252,8 +254,13 @@ export function assertRenderableEssay(body) {
     if (NUMBERED_LIST.test(masked)) {
       throw new Error(`Essay line ${index + 1} opens a numbered list, which this builder renders as literal text: ${JSON.stringify(line.trim().slice(0, 60))}`);
     }
+    // Against the RAW line, not the masked one. Masking exists only so the
+    // line-opening test is not fooled by `*Never* again.`; using it here would
+    // hide every inline construct wrapped in emphasis, and `*see [the
+    // note](url)*` renders its brackets just as literally inside an <em> as
+    // outside one.
     for (const [pattern, description] of UNRENDERABLE_INLINE) {
-      if (pattern.test(masked)) {
+      if (pattern.test(line)) {
         throw new Error(`Essay line ${index + 1} uses ${description}, which this builder renders as literal text rather than markup: ${JSON.stringify(line.trim().slice(0, 60))}`);
       }
     }
