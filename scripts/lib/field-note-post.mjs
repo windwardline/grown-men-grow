@@ -214,11 +214,19 @@ export function assertRenderableEssay(body) {
   // what `/\n{2,}/` splits on. A whitespace-only line does not separate blocks
   // there, so it must not count as one here: matching on `.trim() === ''` would
   // wave through a heading the renderer keeps inside the paragraph.
+  //
+  // Both directions, because the mismatch cuts both ways and the second is
+  // worse. essayHtml's h2 branch takes the WHOLE block — `block.slice(3)` — so
+  // a heading with text under it and no blank line between emits
+  // `<h2>A heading\nThe paragraph that follows it.</h2>`: the paragraph is
+  // swallowed into the heading rather than merely printed with its hashes.
   for (const [index, line] of lines.entries()) {
     if (!/^\s*## /.test(line)) continue;
-    const opensBlock = index === 0 || lines[index - 1] === '';
-    if (!opensBlock) {
+    if (!(index === 0 || lines[index - 1] === '')) {
       throw new Error(`Essay line ${index + 1} is a "## " subheading that does not begin its paragraph, so it renders as literal hashes in running text; put a blank line before it.`);
+    }
+    if (index < lines.length - 1 && lines[index + 1] !== '') {
+      throw new Error(`Essay line ${index + 1} is a "## " subheading with text on the line below it, so the renderer swallows that text into the heading; put a blank line after it.`);
     }
   }
 }

@@ -1910,3 +1910,25 @@ The corpus test now holds every note in the bank to the same rule, so a note nee
 **External state changed:** none. Every call across this entire sequence was a read. All four Buffer posts remain queued.
 
 **Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (thirteenth entry) — Claude Code: the mirror of the last fix, and the worse half
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Eleventh review round, on head `006823a`.
+
+**The previous fix closed one direction of the block-versus-line mismatch and left the other.** It asked whether a `## ` line *opens* its block. It did not ask whether anything follows it inside that block. `essayHtml`'s heading branch takes the whole block — `block.slice(3)` — so a heading with text under it and no blank line between produced `<h2>A heading\nThe paragraph that follows it.</h2>`. Verified by running it.
+
+**This is the worse of the two.** The case fixed last round printed the hashes in running text: visibly wrong, and a reader would see a mistake. This one *swallows an entire paragraph into a heading* — the text is still present and reads as a heading, so it is likelier to survive a skim of the dry run, and it ships to a newsletter that cannot be unsent.
+
+**Both directions are now checked symmetrically and named separately**, because the fix differs: put a blank line before it, or put a blank line after it. The same exact-empty-line rule governs both, so `## A heading` followed by a whitespace-only line is refused too — the renderer does not split on that, and a test covers it. A heading that ends the body is allowed.
+
+**Coverage gap rather than a live defect, checked before being called either:** no block in the bank starts with `## ` and carries a second line.
+
+**Worth recording about this sequence rather than only about this commit.** This is the third round in a row where a fix I made created or exposed the next finding: the extraction inverted validate-before-mutate, the reordering silenced the feature-image guard, the placeholder made it unreachable, the renderability guard exempted `## ` by line, and closing that exposed the mirror. None of them was a careless change and each was correct in what it set out to do. The pattern is that a fix moves a boundary, and the assertions that held at the old boundary do not automatically hold at the new one. Waiting for the review round rather than arming auto-merge beside it is what converted every one of these into a correction before merge instead of an entry in a follow-up.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (106 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. The builder still reproduces both live posts' HTML exactly.
+
+**External state changed:** none. Every call across this entire sequence was a read. All four Buffer posts remain queued and this week's Ghost post is untouched.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.

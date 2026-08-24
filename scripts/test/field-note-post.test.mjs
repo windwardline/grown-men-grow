@@ -132,6 +132,19 @@ test('assertRenderableEssay refuses a "## " heading that does not begin its para
   assert.throws(() => assertRenderableEssay('one\n\ntwo\n\nthree\n## bad'), /Essay line 6/);
 });
 
+// The mirror of the case above, and the worse of the two: essayHtml's h2 branch
+// takes the WHOLE block, so text under a heading with no blank line between is
+// swallowed INTO the heading rather than merely printed with its hashes.
+test('assertRenderableEssay refuses a "## " heading with text on the line below it', () => {
+  assert.throws(() => assertRenderableEssay('## A heading\nText below.'), /blank line after it/);
+  assert.throws(() => assertRenderableEssay('## A heading\n   \nText.'), /blank line after it/);
+});
+
+test('assertRenderableEssay allows a "## " heading that ends the body', () => {
+  assert.doesNotThrow(() => assertRenderableEssay('## A heading'));
+  assert.doesNotThrow(() => assertRenderableEssay('Text.\n\n## A heading'));
+});
+
 test('assertRenderableEssay allows a "## " heading that opens its block', () => {
   assert.doesNotThrow(() => assertRenderableEssay('## Opening the essay'));
   assert.doesNotThrow(() => assertRenderableEssay('A sentence.\n\n## A heading\n\nMore.'));
