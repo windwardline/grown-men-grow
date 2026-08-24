@@ -1804,3 +1804,27 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** none. Every Ghost call across this entire sequence was a read. The week's staging is untouched — the post remains scheduled with the newsletter bound, and all four Buffer posts remain queued.
 
 **Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (eighth entry) — Claude Code: the last prose guard on the mutating path
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Sixth review round, on head `dc0e5a6`.
+
+**The mistyped flag was never the only entrance to the hazard, and the seventh entry's own docstring said so without covering it.** Closing the flag route left the clause after the comma true: nothing checked whether the slug already had a Ghost post. Ghost suffixes a duplicate slug rather than refusing it, so re-running the *real* command for an already-staged week — typed twice, or run again because it was not clear the first one took — creates a second post and transitions it to scheduled with the newsletter bound to `email_segment: all`. Two sends of one essay. The verification block would have printed a clean result for the duplicate, because it only ever reads back the post it just made.
+
+**The only thing standing between the script and that outcome was a sentence in `publication-order.md`** — "takes the lowest-numbered note with no Ghost post". This branch rejected exactly that arrangement one commit earlier, in its own words, when it moved the founder-approval rule out of the weekly instruction and into `buildPostPayload`: a rule that lives in prose is the shape of guard this repository keeps finding it cannot rely on. The argument transfers without modification, and the guard is cheaper here — `findPostBySlug` is a **read**, so it sits with the publish-time check ahead of the upload and costs the validate-before-mutate ordering nothing.
+
+**It is written to fail closed.** A 404 means no post holds the slug and staging proceeds; every other status rethrows. Treating an auth failure or a network error as "absent" would turn the guard into a green light at precisely the wrong moment.
+
+**Proved against production, and the proof is that nothing happened.** Running the real command for `a-confession-can-still-be-selfish` — this week's already-scheduled slot — refused by name with the existing post's status and id. Ghost still holds exactly one scheduled post afterwards. The dry run stays offline: the guard is skipped there rather than made a network call, because "no network call" is a property of that mode and not an incidental.
+
+**A docstring this fix made stale was corrected in the same commit rather than left.** `parseStagingArgs` justified its strictness partly by saying nothing downstream catches the duplicate. That sentence was true when written and false one commit later. Both guards are kept and the reason for each is now stated separately: the argument check because a verification run must not mutate at all, the slug check because the flag was never the hazard's only entrance.
+
+**`publication-order.md` did not ride along with `dc0e5a6`, and that was a miss.** The status gate and the publish-time rule each got a paragraph there on the reasoning that the weekly operator must be able to read what the script will refuse. The argument strictness — attached to an instruction *that document itself introduced*, to pass the flag every week — got nothing. Both refusals are documented there now.
+
+**Files changed:** `scripts/lib/ghost-admin.mjs`, `scripts/lib/field-note-post.mjs`, `scripts/stage-next-field-note.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (89 pass, 0 fail); `node scripts/verify-repository.mjs` (514 tracked files, 42 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean.
+
+**External state changed:** none. The duplicate-guard proof ran the real command against the live instance and it refused before any write; Ghost holds the same single scheduled post it held before. Every call across this entire sequence was a read. All four Buffer posts remain queued.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.

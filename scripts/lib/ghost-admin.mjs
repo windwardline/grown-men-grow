@@ -184,6 +184,26 @@ export async function probeGhostAdmin() {
 }
 
 /**
+ * The post holding this slug, or null when nothing does.
+ *
+ * Ghost SUFFIXES a duplicate slug rather than refusing it, so a create is not
+ * self-guarding: staging an already-staged week a second time yields a second
+ * post that transitions to scheduled with the newsletter bound to everyone.
+ * A 404 here is the answer "no post holds it", not a failure; every other
+ * status rethrows, because treating an auth or network error as "absent" would
+ * turn the guard into a green light at exactly the wrong moment.
+ */
+export async function findPostBySlug(slug, {fields = 'id,slug,status,published_at'} = {}) {
+  try {
+    const payload = await ghostAdmin(`posts/slug/${encodeURIComponent(slug)}/`, {searchParams: {fields}});
+    return payload?.posts?.[0] ?? null;
+  } catch (error) {
+    if (error.status === 404) return null;
+    throw error;
+  }
+}
+
+/**
  * The week's essay: the most recently published post, or null when nothing has
  * published. Ordered explicitly so a draft edited today cannot outrank it, and
  * matched on both terminal states — Ghost marks an email-only post `sent`, not

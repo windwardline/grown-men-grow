@@ -17,7 +17,7 @@ import fs from "node:fs";
 import path from "node:path";
 import {fileURLToPath} from "node:url";
 import {assertPublishInstant, buildPostPayload, parseStagingArgs} from "./lib/field-note-post.mjs";
-import {ghostAdmin} from "./lib/ghost-admin.mjs";
+import {findPostBySlug, ghostAdmin} from "./lib/ghost-admin.mjs";
 
 // Stands in for the image URL while the payload is built and validated ahead of
 // the upload that produces the real one.
@@ -92,6 +92,20 @@ if (DRY_RUN) {
   // captures this output, Node writes to a pipe asynchronously, and exit()
   // does not flush what is still queued — a silently truncated HTML dump is
   // the exact failure this script exists to stop. Let the module end instead.
+
+  // A READ, so it keeps the validate-before-mutate ordering intact. Ghost
+  // suffixes a duplicate slug rather than refusing it, so re-running this
+  // command for an already-staged week would create a SECOND post and schedule
+  // it with the newsletter bound to everyone — two sends of one essay, and the
+  // verification block below would print a clean result for the duplicate
+  // because it only reads back the post it just made. Until now the only thing
+  // preventing that was the sentence in publication-order.md telling the
+  // operator to pick a note with no Ghost post, and a rule that lives in prose
+  // is the shape of guard this repository keeps finding it cannot rely on.
+  const existing = await findPostBySlug(SLUG);
+  if (existing) {
+    throw new Error(`${SLUG} already has a Ghost post (${existing.status}, id ${existing.id}); refusing to create a second one that would send the newsletter again.`);
+  }
 
   // Built BEFORE the upload, because building is where the validation lives:
   // buildPostPayload throws on missing frontmatter, on a note that is not

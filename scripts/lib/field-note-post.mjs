@@ -27,13 +27,15 @@ export const DRY_RUN_FLAG = '--dry-run';
  * filter, so a mistyped flag would leave both positionals intact and every
  * later check would pass — the slug is real and the timestamp is the genuine
  * next slot. The run would then upload, create, and transition the post to
- * scheduled with the newsletter bound to the whole list. Nothing downstream
- * catches it: this script does not check whether the slug already has a Ghost
- * post, and Ghost suffixes a duplicate slug rather than refusing it, so on an
- * already-staged week the typo yields a SECOND scheduled post that sends. The
- * weekly instruction is to pass this flag every week, including the weeks whose
- * whole intent is to verify without mutating, which is exactly when the typo
- * would be made.
+ * scheduled with the newsletter bound to the whole list. The weekly instruction
+ * is to pass this flag every week, including the weeks whose whole intent is to
+ * verify without mutating, which is exactly when the typo would be made.
+ *
+ * The duplicate-slug consequence that made this dangerous is separately covered
+ * now: the executable refuses a slug that already has a Ghost post, because
+ * Ghost suffixes a duplicate rather than refusing it. Both guards are kept —
+ * this one because a verification run must not mutate at all, that one because
+ * the mistyped flag was never its only entrance.
  */
 export function parseStagingArgs(argv) {
   const flags = argv.filter((arg) => arg.startsWith('-'));
