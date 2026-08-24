@@ -251,6 +251,41 @@ test('parseApprovedMetadata lifts the approved values and strips the bold', () =
   });
 });
 
+test('parseApprovedMetadata folds a soft-wrapped value instead of truncating it', () => {
+  const wrapped = NOTE.replace('# Instagram caption source', [
+    '# Metadata', '',
+    '- Meta description: **A field note on male friendship, ordinary contact, and',
+    '  why men should not wait for crisis to tell each other the truth.**', '',
+    '# Instagram caption source',
+  ].join('\n'));
+  assert.equal(
+    parseApprovedMetadata(wrapped).meta_description,
+    'A field note on male friendship, ordinary contact, and why men should not wait for crisis to tell each other the truth.',
+  );
+});
+
+// Every one of these used to yield {} and revert silently to the derived value,
+// which is the defect this parser exists to close.
+test('parseApprovedMetadata reads the near misses instead of reverting silently', () => {
+  const withSection = (line) => NOTE.replace('# Instagram caption source', `# Metadata\n\n${line}\n\n# Instagram caption source`);
+  assert.equal(parseApprovedMetadata(withSection('* Meta title: **X | Y**')).meta_title, 'X | Y');
+  assert.equal(parseApprovedMetadata(withSection('- **Meta title:** X | Y')).meta_title, 'X | Y');
+  assert.equal(parseApprovedMetadata(withSection('- Meta Title: **X | Y**')).meta_title, 'X | Y');
+  assert.equal(parseApprovedMetadata(withSection('- Meta title: Male **Friendship** Before Crisis')).meta_title, 'Male Friendship Before Crisis');
+});
+
+test('parseApprovedMetadata raises rather than half-reading a meta line', () => {
+  const withSection = (line) => NOTE.replace('# Instagram caption source', `# Metadata\n\n${line}\n\n# Instagram caption source`);
+  assert.throws(() => parseApprovedMetadata(withSection('- Meta title:')), /empty meta_title/);
+  assert.throws(() => parseApprovedMetadata(withSection('- Meta title: **A**\n- Meta title: **B**')), /more than once/);
+  assert.throws(() => parseApprovedMetadata(withSection('- Meta title: a *stray* asterisk')), /literal asterisk/);
+});
+
+test('parseApprovedMetadata ignores lines in the section that are not meta fields', () => {
+  const withSection = NOTE.replace('# Instagram caption source', '# Metadata\n\n- Primary reader question: **Why?**\n\n# Instagram caption source');
+  assert.deepEqual(parseApprovedMetadata(withSection), {});
+});
+
 test('parseApprovedMetadata returns nothing for a note with no Metadata section', () => {
   assert.deepEqual(parseApprovedMetadata(NOTE), {});
 });
@@ -424,6 +459,25 @@ function essaySliceByLine(source) {
   return (end === -1 ? rest : rest.slice(0, end)).join('\n').trim();
 }
 
+// Anchored to the literal strings in the file rather than to whatever the parser
+// returns, because the corpus loop can only compare the payload against the
+// parser's own output. If the parser goes blind on this note, this fails.
+test('the one note carrying approved metadata sends exactly those strings', () => {
+  const name = 'call-your-friends-before-theres-a-reason.md';
+  const source = readFileSync(path.join(notesDir, name), 'utf8');
+  assert.match(source, /\n# Metadata\s*\n/, 'precondition: this note carries the section');
+
+  const payload = buildPostPayload({ source, featureImage: 'https://example.test/f.png' });
+  assert.equal(payload.meta_title, 'Male Friendship Before Crisis | Grown Men Grow');
+  assert.equal(
+    payload.meta_description,
+    'A field note on male friendship, ordinary contact, and why men should not wait for crisis to tell each other the truth.',
+  );
+  // The derived values, which must NOT win here.
+  assert.notEqual(payload.meta_title, `${parseFrontmatter(source).title} | Grown Men Grow`);
+  assert.notEqual(payload.meta_description, parseFrontmatter(source).dek);
+});
+
 test('every approved field note in the bank builds a payload', () => {
   const notes = readdirSync(notesDir).filter((name) => name.endsWith('.md'));
   assert.ok(notes.length >= 13, `expected the bank, found ${notes.length} notes`);
@@ -434,10 +488,25 @@ test('every approved field note in the bank builds a payload', () => {
     assert.doesNotMatch(payload.html, /\*/, `${name} left a stray asterisk in its HTML`);
     assert.equal(extractEssaySource(source), essaySliceByLine(source), `${name} essay slice disagrees with its section boundaries`);
     assert.doesNotThrow(() => assertRenderableEssay(extractEssaySource(source)), `${name} carries Markdown the builder would render as literal text`);
-    // No note's payload may contradict a value the founder approved in it.
-    const approved = parseApprovedMetadata(source);
-    for (const [field, value] of Object.entries(approved)) {
-      assert.equal(payload[field], value, `${name} would send a ${field} the founder did not approve`);
+    // Compared against the FILE, not against the parser. `payload[field]` is
+    // `approved[field] ?? derived`, so looping over the parser's own output
+    // asserts `approved === approved` whenever the parser produces anything —
+    // force against the implementation dropping the preference, none at all
+    // against the parser going blind. So: a note whose source carries the
+    // heading must parse to something, and neither meta field may carry an
+    // asterisk, which is what a half-read bold value looks like.
+    if (/\n# Metadata\s*\n/.test(source)) {
+      const approved = parseApprovedMetadata(source);
+      assert.ok(
+        Object.keys(approved).length > 0,
+        `${name} has a "# Metadata" section the parser read nothing out of`,
+      );
+      for (const [field, value] of Object.entries(approved)) {
+        assert.equal(payload[field], value, `${name} would send a ${field} the founder did not approve`);
+      }
+    }
+    for (const field of ['meta_title', 'meta_description', 'title', 'custom_excerpt']) {
+      assert.doesNotMatch(payload[field], /\*/, `${name} would send a ${field} carrying a literal asterisk`);
     }
     assert.equal(payload.slug, name.replace(/\.md$/, ''), `${name} frontmatter slug disagrees with its filename`);
   }

@@ -1998,3 +1998,25 @@ The corpus test now holds every note in the bank to the same rule, so a note nee
 **External state changed:** none. Every Ghost call this session made was a read, including the one that disproved the earlier diagnosis. This week's post and all four Buffer posts are untouched.
 
 **Open, in order:** (1) **new, and narrower than what it replaces** — the live Field Note 2 `custom_excerpt` is the dek where the builder sends the preview; no approved value covers it, so this is a founder call on which field the excerpt takes; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout. The `meta_title` / `meta_description` item is **closed**, not deferred: the founder had already answered it in the file.
+
+## 2026-08-24 (seventeenth entry) — Claude Code: the parser that closed a silent revert had three of its own
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Fifteenth review round, on head `bbeb585`.
+
+**The corpus assertion added last round was tautological.** It looped over `parseApprovedMetadata`'s output and asserted `payload[field] === approved[field]` — but `payload[field]` *is* `approved[field] ?? derived`, so whenever the parser produced anything the assertion reduced to comparing a value with itself. It had force against one regression, the implementation dropping the preference, which is exactly the regression the "proved by reverting" check exercised. It had none against the parser going blind. Round two's finding in a new place: the population under test derived from the thing under test.
+
+**It now compares against the file.** A separate test asserts the one note carrying approved metadata sends those two literal strings, transcribed from the file rather than read through the parser, and asserts the derived values do *not* win. The corpus loop additionally requires that a note whose source carries the heading parses to something non-empty, and that no meta field, title, or excerpt carries an asterisk. Proved by blinding the parser: seven tests fail, including the anchored one.
+
+**The parser's accept-set was narrow and every way of missing it was quiet.** A soft-wrapped value — wrapping a 150-character description is the ordinary editorial reflex — matched only its first line and shipped a truncated half-sentence with two literal asterisks on the front, which for `meta_title` is the Medium headline. Bold anywhere but around the whole value survived as punctuation. And a near miss on the line shape — an asterisk bullet, a bold label, a capitalised label — returned `{}`, which `buildPostPayload` could not tell apart from a note carrying no section at all, so it fell through to the derived value with every gate green. That last one is precisely the defect the parser was written to close.
+
+**All three are fixed, and the fix simplified the parser rather than adding to it.** Bold is presentation everywhere in this section, so it is stripped from the whole entry before anything is matched — which also makes `Male **Friendship** Before Crisis` resolve to the words rather than being refused, since Ghost's meta fields are plain text. Soft-wrapped continuations are folded onto their entry first. The label is matched case-insensitively and accepts any bullet. What remains is loud: an empty value, a duplicate field, a surviving single asterisk, or a line that names a meta field and cannot be read all raise by name. The earlier attempt at this kept bold-stripping anchored to the value and had the label pattern eat the value's opening asterisks — caught by probing every shape before committing.
+
+**The live post still matches:** the builder reproduces Field Note 2's `meta_title` and `meta_description` exactly.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (119 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean.
+
+**External state changed:** none. Every Ghost call was a read. This week's post and all four Buffer posts are untouched.
+
+**Open, in order:** unchanged from the sixteenth entry — (1) the live Field Note 2 `custom_excerpt` is the dek where the builder sends the preview, a founder call on which field the excerpt takes; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.

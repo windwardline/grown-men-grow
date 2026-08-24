@@ -280,6 +280,20 @@ export function assertRenderableEssay(body) {
   // wave through a heading the renderer keeps inside the paragraph.
 }
 
+// The labels this section may carry, matched case-insensitively and with the
+// label's own bold optional, because a near miss on any of that used to revert
+// silently to the derived value — which is the defect this parser exists to
+// close. Anything that LOOKS like one of these and cannot be read raises.
+// Bold is presentation throughout this section — around the value, around the
+// label, or inside either — so it is removed from the whole entry BEFORE
+// anything is matched. Trying to strip it around the value only meant the label
+// pattern ate the value's opening asterisks and the anchored strip then missed.
+// Ghost's meta fields are plain text; `Male **Friendship** Before Crisis` means
+// the words, not the asterisks.
+const BOLD = /\*\*/g;
+const META_LABEL = /^[-*+]\s*(meta\s+title|meta\s+description)\s*:\s*(.*)$/i;
+const META_MENTION = /meta\s+(title|description)/i;
+
 /**
  * The `# Metadata` section's approved values, when a note carries one.
  *
@@ -291,19 +305,54 @@ export function assertRenderableEssay(body) {
  * that rewrite, and it is not cosmetic — Medium's URL importer takes
  * `meta_title` as the headline, so it decides what a second platform publishes.
  *
- * Values are written as `- Meta title: **the value**`; the bold is presentation
- * and is stripped.
+ * Every failure here is LOUD. An earlier version returned `{}` for a section it
+ * could not read, which `buildPostPayload` could not tell apart from a note that
+ * carries no section at all — so a bulleted `*` instead of `-`, a capitalised
+ * label, or bold around the label reverted to the derived value with every gate
+ * green. Values may be soft-wrapped across lines, because wrapping a 150-character
+ * description is the ordinary editorial reflex and truncating it silently would
+ * ship a half-sentence as a Medium headline.
  */
 export function parseApprovedMetadata(source) {
-  const section = source.split(/\n# Metadata\n/)[1];
+  const section = source.split(/\n# Metadata\s*\n/)[1];
   if (section === undefined) return {};
+  const body = section.split(/\n# /)[0];
+
+  // Fold soft-wrapped continuations onto their entry before anything is matched.
+  const entries = [];
+  for (const line of body.split('\n')) {
+    if (line.trim() === '') continue;
+    const stripped = line.replace(BOLD, '');
+    if (/^\s*[-*+]\s/.test(stripped) || entries.length === 0) entries.push(stripped.trim());
+    else entries[entries.length - 1] += ` ${stripped.trim()}`;
+  }
 
   const approved = {};
-  for (const line of section.split(/\n# /)[0].split('\n')) {
-    const match = /^-\s*(Meta title|Meta description):\s*(.+?)\s*$/.exec(line);
-    if (!match) continue;
-    const value = match[2].replace(/^\*\*(.*)\*\*$/, '$1').trim();
-    if (value) approved[match[1] === 'Meta title' ? 'meta_title' : 'meta_description'] = value;
+  for (const entry of entries) {
+    const match = META_LABEL.exec(entry);
+    if (!match) {
+      // A line naming one of these fields that this parser could not read is the
+      // silent-revert case, and it must never be one.
+      if (META_MENTION.test(entry)) {
+        throw new Error(`The "# Metadata" section has a line naming a meta field that cannot be read: ${JSON.stringify(entry.slice(0, 80))}`);
+      }
+      continue;
+    }
+
+    const field = /title/i.test(match[1]) ? 'meta_title' : 'meta_description';
+    const value = match[2].trim();
+    if (!value) {
+      throw new Error(`The "# Metadata" section approves an empty ${field}.`);
+    }
+    // Bold is gone by now, so a surviving asterisk is emphasis or a stray, and
+    // these two fields decide what Ghost and Medium publish as plain text.
+    if (value.includes('*')) {
+      throw new Error(`The approved ${field} carries a literal asterisk, which ships as punctuation: ${JSON.stringify(value.slice(0, 80))}`);
+    }
+    if (approved[field]) {
+      throw new Error(`The "# Metadata" section approves ${field} more than once.`);
+    }
+    approved[field] = value;
   }
   return approved;
 }
