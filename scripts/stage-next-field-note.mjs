@@ -8,7 +8,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import {fileURLToPath} from "node:url";
-import {ghostAdmin} from "./scripts/lib/ghost-admin.mjs";
+import {ghostAdmin} from "./lib/ghost-admin.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const [, , SLUG, PUBLISH_AT_UTC] = process.argv;
