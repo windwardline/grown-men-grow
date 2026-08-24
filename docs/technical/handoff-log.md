@@ -1932,3 +1932,25 @@ The corpus test now holds every note in the bank to the same rule, so a note nee
 **External state changed:** none. Every call across this entire sequence was a read. All four Buffer posts remain queued and this week's Ghost post is untouched.
 
 **Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (fourteenth entry) — Claude Code: the guard was a curated list, and its own near misses passed
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Twelfth review round, on head `f707935`.
+
+**`UNRENDERABLE` was one entry per named construct, which is the shape this branch already replaced once.** Round two swapped a blocklist of section headings for a slice derived line by line, on the reasoning that a hand-written list inherits the blind spots of whoever wrote it. The renderability guard was written two rounds later in exactly that shape, and it had exactly that kind of hole — each one character away from an entry it did have. `-----` passed because the rule matched exactly three dashes, though CommonMark accepts three or more. `****`, `_____`, and a setext `===` underline passed for the same reason or for none at all. `[the note][ref]` passed because the link rule required the inline `](` form. Raw inline HTML and HTML entities had no rule at all. All four were verified as passing before being fixed, and `AGENTS.md` states the principle in its opening paragraph: derive populations rather than curating them.
+
+**The block half is now derived from one property.** CommonMark gives block meaning to a small closed set of characters when they open a line. So the check masks the two constructs the builder does render inline, then refuses any line that still begins with one of them. Lists, rules of any length, blockquotes, tables, every other heading level, and setext underlines all fall out of that single rule rather than needing an entry each. Masking has to happen first, because `*Never* again.` legitimately opens a line with an asterisk — a test holds that.
+
+**The inline half stays enumerated, and that is a judgement rather than an oversight, stated in the code.** The derived version would refuse every bracket and every angle bracket, which rejects ordinary prose: `[sic]` renders as `[sic]` and is fine, while `[sic](url)` is not. So each inline entry is a shape CommonMark gives meaning to and this builder does not — inline and reference links, reference definitions, images, code, strikethrough, backslash escapes, raw HTML, entities, and the underscore spellings — and the residual risk is written down rather than implied. Four tests hold the prose that must keep working: `[sic]`, parenthetical asides, `R&D`, and hyphenated words.
+
+**The `## ` rules were moved ahead of the derived rule so their diagnostics survive.** Both name the actual remedy — a blank line, before or after — where the generic rule could only report that the line opens with a hash. That precedence broke two tests when the derived rule went in first, which is how it was caught.
+
+**The bank is still clean under the stricter rules**, checked before and after: all thirteen notes pass, and the builder still reproduces both live posts' HTML exactly.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (109 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean.
+
+**External state changed:** none. Every call across this entire sequence was a read. This week's Ghost post and all four Buffer posts are untouched.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.

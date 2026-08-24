@@ -150,42 +150,63 @@ function inline(text) {
     .replace(/\*([^*]+)\*/g, '<em>$1</em>');
 }
 
-// Everything this builder understands: a paragraph, `## ` as an h2, `**strong**`
-// and `*em*`. Every other Markdown construct does not break it — it survives,
-// HTML-escaped, inside a <p>. A list becomes `<p>- like this</p>`, a link ships
-// as literal brackets with the href dead, `### ` becomes a paragraph starting
-// with three hashes. That is silent mangling rather than a throw, and it ends up
-// in a post transitioned to scheduled with the newsletter bound to everyone: a
-// published page can be corrected afterwards, a sent newsletter cannot.
+// Everything this builder understands: a paragraph, `## ` opening a block as an
+// h2, `**strong**`, and `*em*`. Every other Markdown construct does not break it
+// — it survives, HTML-escaped, inside a <p>. A list becomes `<p>- like this</p>`,
+// a link ships as literal brackets with the href dead. That is silent mangling
+// rather than a throw, and it ends up in a post transitioned to scheduled with
+// the newsletter bound to everyone: a published page can be corrected
+// afterwards, a sent newsletter cannot. So the builder refuses instead.
 //
-// So the builder refuses instead. The whole approved bank is clean of all of
-// these today, which is why this can be strict rather than advisory; a note that
-// needs one of them needs the builder taught it, which is a change made
-// deliberately rather than discovered in a reader's inbox.
+// The block half is DERIVED, not enumerated. An earlier version listed one entry
+// per construct — a bullet, a rule, a table — and every near miss of every entry
+// passed: `-----` where the rule matched exactly three dashes, `### ` where it
+// matched `#`, a setext underline nothing matched at all. AGENTS.md says derive
+// populations rather than curating them, and the derivation here is that
+// CommonMark gives block meaning to a small closed set of characters when they
+// open a line. So: mask the constructs this builder DOES render, then refuse any
+// line that still begins with one of them. Lists, rules, blockquotes, tables,
+// other heading levels, and setext underlines all fall out of the one rule
+// rather than needing an entry each.
 //
-// Numeric lists require one or two digits so that a soft-wrapped line beginning
-// with a four-digit year is not mistaken for one.
-const UNRENDERABLE = [
-  [/^\s*[-+] /, 'a bulleted list'],
-  [/^\s*\* /, 'a bulleted list'],
-  [/^\s*\d{1,2}[.)] /, 'a numbered list'],
-  [/^\s*> /, 'a blockquote'],
-  [/^\s*#(?!# )/, 'a heading level other than "## "'],
-  [/^\s*(?:---|\*\*\*|___)\s*$/, 'a horizontal rule'],
-  [/^\s*\|/, 'a table'],
+// Masking has to happen first, because `*Never* again.` legitimately opens a
+// line with an asterisk. Numeric lists still need their own entry, restricted to
+// one or two digits so a soft-wrapped line beginning with a four-digit year is
+// not read as a list.
+const BLOCK_STRUCTURAL = /^\s*[#>|=+\-*_~`]/;
+const NUMBERED_LIST = /^\s*\d{1,2}[.)]\s/;
+
+// The inline half stays enumerated, and that is a judgement rather than an
+// oversight. The derived version would refuse every bracket and every angle
+// bracket, which rejects ordinary prose — `[sic]` renders as `[sic]` and is
+// fine, while `[sic](url)` does not. So each entry below is a shape that
+// CommonMark gives meaning to and this builder does not, and the residual risk
+// is stated rather than implied: an inline construct outside this list ships as
+// literal text. The block rule above is what makes that residue small.
+const UNRENDERABLE_INLINE = [
   [/!\[[^\]]*\]\(/, 'an image'],
-  [/\[[^\]]*\]\([^)]*\)/, 'a link'],
+  [/\[[^\]]*\]\([^)]*\)/, 'an inline link'],
+  [/\[[^\]]*\]\[[^\]]*\]/, 'a reference link'],
+  [/^\s*\[[^\]]+\]:\s*\S/, 'a link reference definition'],
   [/`/, 'code formatting'],
+  [/~~/, 'strikethrough'],
+  [/\\[^\s]/, 'a backslash escape'],
+  [/<[a-zA-Z/!?]/, 'raw HTML'],
+  [/&(?:[a-zA-Z][a-zA-Z0-9]{1,10}|#\d{1,6}|#[xX][0-9a-fA-F]{1,6});/, 'an HTML entity'],
   // The other standard spellings of the two constructs the builder DOES
   // support, which is what an editorial hand reaches for without thinking about
-  // the renderer. `inline()` converts asterisks and nothing else, so these ship
-  // with their punctuation visible. The opening underscore must sit at a word
-  // boundary so a snake_case identifier in running prose is not mistaken for
-  // emphasis.
+  // the renderer. The opening underscore must sit at a word boundary so a
+  // snake_case identifier in running prose is not mistaken for emphasis.
   [/(?:^|[\s(])__[^_\s][^_]*__/, 'underscore strong (write **strong** instead)'],
   [/(?:^|[\s(])_[^_\s][^_]*_/, 'underscore emphasis (write *emphasis* instead)'],
-  [/~~/, 'strikethrough'],
 ];
+
+// The two things the builder renders inline, removed so what remains can be
+// judged as plain text. `## ` is handled separately, because whether it renders
+// depends on where the line sits.
+function maskSupportedInline(line) {
+  return line.replace(/\*\*[^*]+\*\*/g, 'S').replace(/\*[^*]+\*/g, 'E');
+}
 
 /**
  * Refuses an essay body carrying Markdown this builder would silently mangle.
@@ -194,9 +215,45 @@ const UNRENDERABLE = [
  */
 export function assertRenderableEssay(body) {
   const lines = body.split('\n');
+
+  // The `## ` rules run FIRST so their diagnostics win. Both name the actual
+  // remedy — a blank line, on one side or the other — where the generic block
+  // rule below could only say the line opens with a hash.
+  //
+  // `## ` is the one supported construct whose correctness depends on WHERE the
+  // line sits. essayHtml splits on /\n{2,}/ and treats `## ` as a heading only
+  // when it OPENS a block, and its heading branch takes the WHOLE block. So a
+  // heading with text above it prints its hashes in running text, and one with
+  // text below it swallows that text into the heading.
+  //
+  // A block boundary is an EXACTLY empty line, because that is what /\n{2,}/
+  // matches. A whitespace-only line does not separate blocks for the renderer,
+  // so it must not count as one here.
+  const opensHeading = new Set();
   for (const [index, line] of lines.entries()) {
-    for (const [pattern, description] of UNRENDERABLE) {
-      if (pattern.test(line)) {
+    if (!/^\s*## /.test(line)) continue;
+    if (!(index === 0 || lines[index - 1] === '')) {
+      throw new Error(`Essay line ${index + 1} is a "## " subheading that does not begin its paragraph, so it renders as literal hashes in running text; put a blank line before it.`);
+    }
+    if (index < lines.length - 1 && lines[index + 1] !== '') {
+      throw new Error(`Essay line ${index + 1} is a "## " subheading with text on the line below it, so the renderer swallows that text into the heading; put a blank line after it.`);
+    }
+    opensHeading.add(index);
+  }
+
+  for (const [index, line] of lines.entries()) {
+    // A heading the builder really does render is masked whole; one it does not
+    // falls through to the positional checks below, which name the actual fix.
+    const masked = maskSupportedInline(opensHeading.has(index) ? line.replace(/^\s*## /, '') : line);
+
+    if (BLOCK_STRUCTURAL.test(masked)) {
+      throw new Error(`Essay line ${index + 1} opens with ${JSON.stringify(masked.trim()[0])}, which CommonMark reads as block markup and this builder renders as literal text: ${JSON.stringify(line.trim().slice(0, 60))}`);
+    }
+    if (NUMBERED_LIST.test(masked)) {
+      throw new Error(`Essay line ${index + 1} opens a numbered list, which this builder renders as literal text: ${JSON.stringify(line.trim().slice(0, 60))}`);
+    }
+    for (const [pattern, description] of UNRENDERABLE_INLINE) {
+      if (pattern.test(masked)) {
         throw new Error(`Essay line ${index + 1} uses ${description}, which this builder renders as literal text rather than markup: ${JSON.stringify(line.trim().slice(0, 60))}`);
       }
     }
@@ -214,21 +271,6 @@ export function assertRenderableEssay(body) {
   // what `/\n{2,}/` splits on. A whitespace-only line does not separate blocks
   // there, so it must not count as one here: matching on `.trim() === ''` would
   // wave through a heading the renderer keeps inside the paragraph.
-  //
-  // Both directions, because the mismatch cuts both ways and the second is
-  // worse. essayHtml's h2 branch takes the WHOLE block — `block.slice(3)` — so
-  // a heading with text under it and no blank line between emits
-  // `<h2>A heading\nThe paragraph that follows it.</h2>`: the paragraph is
-  // swallowed into the heading rather than merely printed with its hashes.
-  for (const [index, line] of lines.entries()) {
-    if (!/^\s*## /.test(line)) continue;
-    if (!(index === 0 || lines[index - 1] === '')) {
-      throw new Error(`Essay line ${index + 1} is a "## " subheading that does not begin its paragraph, so it renders as literal hashes in running text; put a blank line before it.`);
-    }
-    if (index < lines.length - 1 && lines[index + 1] !== '') {
-      throw new Error(`Essay line ${index + 1} is a "## " subheading with text on the line below it, so the renderer swallows that text into the heading; put a blank line after it.`);
-    }
-  }
 }
 
 /** The essay block as the HTML Ghost stores, one block element per paragraph. */

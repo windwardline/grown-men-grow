@@ -72,8 +72,15 @@ test('essayHtml joins a soft-wrapped paragraph into one line', () => {
   assert.equal(essayHtml('One line\nand its continuation.'), '<p>One line and its continuation.</p>');
 });
 
-test('essayHtml escapes HTML-significant characters', () => {
-  assert.equal(essayHtml('Tom & Jerry <b>x</b>'), '<p>Tom &amp; Jerry &lt;b&gt;x&lt;/b&gt;</p>');
+// Raw HTML is refused by the guard now, so what remains to escape is the
+// ampersand that is not an entity and the angle bracket that is not a tag —
+// both of which are ordinary prose and must still reach the reader intact.
+test('essayHtml escapes HTML-significant characters that are ordinary prose', () => {
+  assert.equal(essayHtml('Tom & Jerry, and a < b.'), '<p>Tom &amp; Jerry, and a &lt; b.</p>');
+});
+
+test('essayHtml refuses raw HTML rather than escaping it into view', () => {
+  assert.throws(() => essayHtml('He was <b>never</b> sure.'), /raw HTML/);
 });
 
 test('essayHtml converts single asterisks to emphasis', () => {
@@ -104,19 +111,31 @@ test('essayHtml does not let one bold run bleed into the next', () => {
 // sent newsletter cannot. So the builder refuses.
 test('essayHtml refuses Markdown it would render as literal text', () => {
   const cases = [
-    ['- one\n- two', /bulleted list/],
-    ['* one\n* two', /bulleted list/],
-    ['+ one', /bulleted list/],
+    ['- one\n- two', /block markup/],
+    ['* one\n* two', /block markup/],
+    ['+ one', /block markup/],
     ['1. first', /numbered list/],
     ['10) tenth', /numbered list/],
-    ['> a quotation', /blockquote/],
-    ['### deeper heading', /heading level/],
-    ['# top heading', /heading level/],
-    ['---', /horizontal rule/],
-    ['| a | b |', /table/],
-    ['See [the note](https://example.test).', /link/],
-    ['![alt](img.png)', /image|link/],
+    ['> a quotation', /block markup/],
+    ['### deeper heading', /block markup/],
+    ['# top heading', /block markup/],
+    ['---', /block markup/],
+    ['| a | b |', /block markup/],
+    ['See [the note](https://example.test).', /inline link/],
+    ['![alt](img.png)', /image/],
     ['a `code` span', /code formatting/],
+    // The near misses of the enumerated version, each one character away from
+    // an entry it had. All four passed it; the derived block rule and the three
+    // added inline entries close them.
+    ['-----', /block markup/],
+    ['****', /block markup/],
+    ['_____', /block markup/],
+    ['===', /block markup/],
+    ['See [the note][ref].', /reference link/],
+    ['[ref]: https://example.test', /link reference definition/],
+    ['He was <em>never</em> sure.', /raw HTML/],
+    ['close&mdash;quarters', /HTML entity/],
+    ['an escaped \\* asterisk', /backslash escape/],
   ];
   for (const [body, expected] of cases) {
     assert.throws(() => essayHtml(body), expected, `${JSON.stringify(body)} was rendered instead of refused`);
@@ -172,6 +191,24 @@ test('assertRenderableEssay allows a snake_case identifier in running prose', ()
   assert.doesNotThrow(() => assertRenderableEssay('Both personal_claims and artwork_status are set.'));
 });
 
+// The block rule is derived from CommonMark's line-opening set, so the supported
+// inline constructs must be masked before it runs — `*Never* again.` legitimately
+// opens a line with an asterisk.
+test('assertRenderableEssay allows supported inline markup at the start of a line', () => {
+  assert.doesNotThrow(() => assertRenderableEssay('*Never* again.'));
+  assert.doesNotThrow(() => assertRenderableEssay('**Never** again.'));
+});
+
+// The inline half is enumerated rather than derived, and the reason is that the
+// derived version would refuse ordinary prose. These are the shapes that must
+// keep working.
+test('assertRenderableEssay allows prose punctuation that carries no Markdown meaning', () => {
+  assert.doesNotThrow(() => assertRenderableEssay('He said [sic] and meant it.'));
+  assert.doesNotThrow(() => assertRenderableEssay('It cost 40 (roughly) an hour.'));
+  assert.doesNotThrow(() => assertRenderableEssay('He worked in R&D, less than before.'));
+  assert.doesNotThrow(() => assertRenderableEssay('Half-finished work sat there.'));
+});
+
 // A soft-wrapped paragraph can begin with a year. That must not read as a list.
 test('assertRenderableEssay allows a line beginning with a four-digit year', () => {
   assert.doesNotThrow(() => assertRenderableEssay('1994. A firefighter on television said so.'));
@@ -182,7 +219,7 @@ test('assertRenderableEssay allows the four things the builder does understand',
 });
 
 test('assertRenderableEssay names the line number so the fix is findable', () => {
-  assert.throws(() => assertRenderableEssay('fine\n\nalso fine\n\n- a list'), /Essay line 5 uses/);
+  assert.throws(() => assertRenderableEssay('fine\n\nalso fine\n\n- a list'), /Essay line 5 /);
 });
 
 test('buildPostPayload carries the fields Ghost needs to publish and send', () => {
