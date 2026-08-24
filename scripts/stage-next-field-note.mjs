@@ -6,12 +6,13 @@
 // params on that PUT; setting it on an already-scheduled post is silently
 // ignored. Verified afterwards with ?include=newsletter.
 //
-// `--dry-run` builds everything from the approved source and prints the exact
-// payloads without touching the network. Everything below the argument check
-// went unexecuted from the day this shipped until 2026-08-24, because the
-// register always held a scheduled slot and so the Monday task never had to
-// stage anything; the dry run exists so the mutating path is exercised on real
-// input every week instead of first running for real on the week it is needed.
+// `--dry-run` builds the payloads from the approved source and prints them
+// without touching the network. Precisely: it proves the payload the real run
+// would send, on the real note, every week. It does NOT exercise the three
+// Ghost calls below or the order they happen in — those are still first run for
+// real on the day they are needed. Everything under the argument check went
+// unexecuted from the day this shipped until 2026-08-24, because the register
+// always held a scheduled slot and so the Monday task never staged anything.
 import fs from "node:fs";
 import path from "node:path";
 import {fileURLToPath} from "node:url";
@@ -44,8 +45,10 @@ if (!fs.existsSync(imagePath)) {
 }
 
 if (DRY_RUN) {
-  // Built against a placeholder URL: the upload is the only thing the real run
-  // learns that this cannot, and everything downstream of it is proved here.
+  // Built against a placeholder URL, because the upload is the one input the
+  // payload cannot have offline. What this proves is the payload; the upload,
+  // the POST, the draft->scheduled PUT and its newsletter binding, and the
+  // verify read are all below and none of them run here.
   const payload = buildPostPayload({source, featureImage: "https://storage.ghost.io/<uploaded-at-run-time>.png"});
   console.log("DRY RUN — no network call made\n");
   console.log("  source      :", path.relative(root, sourcePath));
@@ -61,44 +64,48 @@ if (DRY_RUN) {
   console.log("  publish_at  :", PUBLISH_AT_UTC ?? "(not given; required for a real run)");
   console.log("\n--- html ---");
   console.log(payload.html);
-  process.exit(0);
+} else {
+  // No process.exit() after that dump. stdout is a pipe when the weekly task
+  // captures this output, Node writes to a pipe asynchronously, and exit()
+  // does not flush what is still queued — a silently truncated HTML dump is
+  // the exact failure this script exists to stop. Let the module end instead.
+
+  // Feature image -> Ghost storage.
+  const form = new FormData();
+  form.append("file", new Blob([fs.readFileSync(imagePath)], {type: "image/png"}), `${SLUG}.png`);
+  form.append("purpose", "image");
+  const upload = await ghostAdmin("images/upload/", {method: "POST", body: form});
+  const featureImage = upload.images[0].url;
+  console.log("feature image:", featureImage);
+
+  // Create as draft, then transition to scheduled so the newsletter binds.
+  const created = await ghostAdmin("posts/", {
+    method: "POST",
+    body: {posts: [buildPostPayload({source, featureImage})]},
+    searchParams: {source: "html"},
+  });
+  const draft = created.posts[0];
+  console.log("draft:", draft.id, draft.slug);
+
+  const scheduled = await ghostAdmin(`posts/${draft.id}/`, {
+    method: "PUT",
+    body: {posts: [{status: "scheduled", published_at: PUBLISH_AT_UTC, updated_at: draft.updated_at}]},
+    searchParams: {newsletter: "default-newsletter", email_segment: "all"},
+  });
+  console.log("scheduled:", scheduled.posts[0].status, scheduled.posts[0].published_at);
+
+  // Verified with `include` and NO `fields`: Ghost applies `fields` after
+  // `include` and drops the relation it just fetched, so a query passing both
+  // reports `newsletter: NONE` on a correctly bound post.
+  const check = await ghostAdmin(`posts/${draft.id}/`, {searchParams: {include: "newsletter"}});
+  const post = check.posts[0];
+  console.log("\nVERIFY");
+  console.log("  status      :", post.status);
+  console.log("  published_at:", post.published_at);
+  console.log("  newsletter  :", post.newsletter ? post.newsletter.slug : "NONE — email would not send");
+  console.log("  email_segment:", post.email_segment);
+  console.log("  feature     :", post.feature_image ? "set" : "MISSING");
+  console.log("  alt text    :", post.feature_image_alt || "MISSING — the feature image ships with no alt text");
+  console.log("  excerpt     :", post.custom_excerpt);
+  console.log("  html length :", (post.html || "").length);
 }
-
-// Feature image -> Ghost storage.
-const form = new FormData();
-form.append("file", new Blob([fs.readFileSync(imagePath)], {type: "image/png"}), `${SLUG}.png`);
-form.append("purpose", "image");
-const upload = await ghostAdmin("images/upload/", {method: "POST", body: form});
-const featureImage = upload.images[0].url;
-console.log("feature image:", featureImage);
-
-// Create as draft, then transition to scheduled so the newsletter binds.
-const created = await ghostAdmin("posts/", {
-  method: "POST",
-  body: {posts: [buildPostPayload({source, featureImage})]},
-  searchParams: {source: "html"},
-});
-const draft = created.posts[0];
-console.log("draft:", draft.id, draft.slug);
-
-const scheduled = await ghostAdmin(`posts/${draft.id}/`, {
-  method: "PUT",
-  body: {posts: [{status: "scheduled", published_at: PUBLISH_AT_UTC, updated_at: draft.updated_at}]},
-  searchParams: {newsletter: "default-newsletter", email_segment: "all"},
-});
-console.log("scheduled:", scheduled.posts[0].status, scheduled.posts[0].published_at);
-
-// Verified with `include` and NO `fields`: Ghost applies `fields` after
-// `include` and drops the relation it just fetched, so a query passing both
-// reports `newsletter: NONE` on a correctly bound post.
-const check = await ghostAdmin(`posts/${draft.id}/`, {searchParams: {include: "newsletter"}});
-const post = check.posts[0];
-console.log("\nVERIFY");
-console.log("  status      :", post.status);
-console.log("  published_at:", post.published_at);
-console.log("  newsletter  :", post.newsletter ? post.newsletter.slug : "NONE — email would not send");
-console.log("  email_segment:", post.email_segment);
-console.log("  feature     :", post.feature_image ? "set" : "MISSING");
-console.log("  alt text    :", post.feature_image_alt || "MISSING — the feature image ships with no alt text");
-console.log("  excerpt     :", post.custom_excerpt);
-console.log("  html length :", (post.html || "").length);

@@ -69,7 +69,19 @@ async function checkImportsResolve(file) {
   const directory = path.dirname(file);
   for (const [, specifier] of source.matchAll(RELATIVE_SPECIFIER)) {
     const target = path.resolve(directory, specifier);
-    if (!statSync(target, { throwIfNoEntry: false })?.isFile()) {
+    // Any stat error means the same thing here — the specifier does not name a
+    // file — and every one of them must arrive as a named failure rather than a
+    // stack trace, or the checks after this one never run. `throwIfNoEntry`
+    // suppresses only ENOENT by contract, so a path whose intermediate
+    // component is a regular file can still raise ENOTDIR. Node reports that
+    // specifier as ERR_MODULE_NOT_FOUND, so it belongs in this same branch.
+    let resolved = null;
+    try {
+      resolved = statSync(target);
+    } catch {
+      resolved = null;
+    }
+    if (!resolved?.isFile()) {
       fail(`${relative(file)} imports ${specifier}, which does not resolve to a file.`);
     }
   }

@@ -134,6 +134,21 @@ test('buildPostPayload refuses a note missing a field the send depends on', () =
 // The register's whole remaining bank runs through this builder on some future
 // Monday. Proving it against the real corpus is the only way a note that breaks
 // it is found before the morning it is staged.
+// The boundary is derived here rather than named, because a list of headings to
+// keep out inherits the blind spots of whoever wrote it. Twelve notes are
+// followed by `# Instagram carousel source`; `call-your-friends-before-theres-a-reason`
+// is followed by `# Metadata` — and that section holds the very meta_title whose
+// divergence from the live post matters to Medium's importer. A blocklist of the
+// common headings would not have caught a leak of the uncommon one.
+function essaySliceByLine(source) {
+  const lines = source.split('\n');
+  const start = lines.findIndex((line) => line.trim() === '# Ghost essay source');
+  assert.notEqual(start, -1, 'note has no "# Ghost essay source" heading');
+  const rest = lines.slice(start + 1);
+  const end = rest.findIndex((line) => line.startsWith('# '));
+  return (end === -1 ? rest : rest.slice(0, end)).join('\n').trim();
+}
+
 test('every approved field note in the bank builds a payload', () => {
   const notes = readdirSync(notesDir).filter((name) => name.endsWith('.md'));
   assert.ok(notes.length >= 13, `expected the bank, found ${notes.length} notes`);
@@ -142,7 +157,18 @@ test('every approved field note in the bank builds a payload', () => {
     const payload = buildPostPayload({ source, featureImage: 'https://example.test/f.png' });
     assert.ok(payload.html.length > 0, `${name} produced empty HTML`);
     assert.doesNotMatch(payload.html, /\*/, `${name} left a stray asterisk in its HTML`);
-    assert.doesNotMatch(payload.html, /Instagram|Visual direction|Production notes/, `${name} leaked a non-essay section`);
+    assert.equal(extractEssaySource(source), essaySliceByLine(source), `${name} essay slice disagrees with its section boundaries`);
     assert.equal(payload.slug, name.replace(/\.md$/, ''), `${name} frontmatter slug disagrees with its filename`);
   }
+});
+
+test('the bank contains a note whose essay is followed by something other than the Instagram section', () => {
+  const followers = readdirSync(notesDir)
+    .filter((name) => name.endsWith('.md'))
+    .map((name) => {
+      const lines = readFileSync(path.join(notesDir, name), 'utf8').split('\n');
+      const start = lines.findIndex((line) => line.trim() === '# Ghost essay source');
+      return lines.slice(start + 1).find((line) => line.startsWith('# ')) ?? '';
+    });
+  assert.ok(new Set(followers).size > 1, 'the derived slice test is only meaningful while the bank has more than one following heading');
 });
