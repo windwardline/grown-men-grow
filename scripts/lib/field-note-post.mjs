@@ -314,9 +314,30 @@ const META_MENTION = /meta\s+(title|description)/i;
  * ship a half-sentence as a Medium headline.
  */
 export function parseApprovedMetadata(source) {
-  const section = source.split(/\n# Metadata\s*\n/)[1];
-  if (section === undefined) return {};
-  const body = section.split(/\n# /)[0];
+  // The heading is matched TOLERANTLY, because every loud refusal below lives
+  // inside a section this match found — so a near miss here is a silent revert
+  // to the derived value, which is the one thing this parser exists to prevent.
+  // `# Metadata and internal links`, `# Post metadata`, `# metadata`, and
+  // `## Metadata` all used to return {}. The repository's other home for
+  // approved metadata, `content/metadata.md`, files the same bullets under
+  // page-named headings rather than under `# Metadata` at all, so the nearest
+  // precedent an author has uses a different spelling and nothing holds this one.
+  const lines = source.split('\n');
+  const headings = lines
+    .map((line, index) => ({line, index}))
+    .filter(({line}) => /^#{1,2}[^\n]*\bmetadata\b/i.test(line));
+  if (headings.length === 0) return {};
+  if (headings.length > 1) {
+    throw new Error(`The note carries ${headings.length} metadata headings; approved values must live under exactly one.`);
+  }
+
+  // Cut at the next heading of the same level or shallower, so a `## ` under a
+  // `# ` stays inside the section it belongs to.
+  const level = /^##/.test(headings[0].line) ? 2 : 1;
+  const closes = new RegExp(`^#{1,${level}} `);
+  const rest = lines.slice(headings[0].index + 1);
+  const end = rest.findIndex((line) => closes.test(line));
+  const body = (end === -1 ? rest : rest.slice(0, end)).join('\n');
 
   // Fold soft-wrapped continuations onto their entry before anything is matched.
   //

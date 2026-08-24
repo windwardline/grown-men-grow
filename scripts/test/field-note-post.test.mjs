@@ -251,6 +251,30 @@ test('parseApprovedMetadata lifts the approved values and strips the bold', () =
   });
 });
 
+// Every loud refusal in this parser lives inside a section the heading match
+// found, so a near miss on the HEADING is a silent revert to the derived value —
+// the one thing the parser exists to prevent. `content/metadata.md` files the
+// same bullets under page-named headings, so the nearest precedent an author has
+// uses a different spelling and nothing holds this one.
+test('parseApprovedMetadata finds the section however the heading is spelled', () => {
+  const withHeading = (heading) => NOTE.replace('# Instagram caption source', `${heading}\n\n- Meta title: **A | B**\n\n# Instagram caption source`);
+  for (const heading of ['# Metadata', '# Metadata and internal links', '# Metadata (approved 2026-08-24)', '# Post metadata', '# metadata', '## Metadata']) {
+    assert.equal(parseApprovedMetadata(withHeading(heading)).meta_title, 'A | B', `${heading} was not found`);
+  }
+});
+
+test('parseApprovedMetadata refuses a note carrying more than one metadata heading', () => {
+  const two = NOTE.replace('# Instagram caption source', '# Metadata\n\n- Meta title: **A**\n\n# More metadata\n\n- Meta title: **B**\n\n# Instagram caption source');
+  assert.throws(() => parseApprovedMetadata(two), /metadata headings/);
+});
+
+// A `## ` inside a `# ` section belongs to that section; the cut is at the next
+// heading of the same level or shallower.
+test('parseApprovedMetadata keeps a nested sub-heading inside the section', () => {
+  const nested = NOTE.replace('# Instagram caption source', '# Metadata\n\n## Search\n\n- Meta title: **A | B**\n\n# Instagram caption source');
+  assert.equal(parseApprovedMetadata(nested).meta_title, 'A | B');
+});
+
 test('parseApprovedMetadata folds a soft-wrapped value instead of truncating it', () => {
   const wrapped = NOTE.replace('# Instagram caption source', [
     '# Metadata', '',
@@ -523,11 +547,15 @@ test('every approved field note in the bank builds a payload', () => {
     // against the parser going blind. So: a note whose source carries the
     // heading must parse to something, and neither meta field may carry an
     // asterisk, which is what a half-read bold value looks like.
-    if (/\n# Metadata\s*\n/.test(source)) {
+    // The precondition is derived from the CONTENT — does this note contain an
+    // approved meta line at all — not from the parser's own section regex. Using
+    // the same pattern as the parser meant a note the parser could not see was a
+    // note this guard skipped, which is the tautology one round over.
+    if (/^\s*[-*+]?\s*\*{0,2}\s*Meta\s+(?:title|description)\s*:/im.test(source)) {
       const approved = parseApprovedMetadata(source);
       assert.ok(
         Object.keys(approved).length > 0,
-        `${name} has a "# Metadata" section the parser read nothing out of`,
+        `${name} carries an approved meta line the parser read nothing out of`,
       );
       for (const [field, value] of Object.entries(approved)) {
         assert.equal(payload[field], value, `${name} would send a ${field} the founder did not approve`);

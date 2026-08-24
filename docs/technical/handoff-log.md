@@ -2046,3 +2046,27 @@ produced `Male Friendship Before Crisis | Grown Men Grow Approved 2026-08-24 alo
 **External state changed:** none. Every Ghost call was a read. This week's post and all four Buffer posts are untouched.
 
 **Open, in order:** unchanged — (1) the live Field Note 2 `custom_excerpt` is the dek where the builder sends the preview, a founder call; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (nineteenth entry) — Claude Code: the strict section, entered through a strict heading
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Seventeenth review round, on head `e20b201`.
+
+**Every loud refusal this parser gained over two rounds lives inside a section that one exact-match line found.** The heading was split on `/\n# Metadata\s*\n/` — case-sensitive, exactly one hash, no trailing words. So `# Metadata and internal links`, `# Metadata (approved 2026-08-24)`, `# Post metadata`, `# metadata`, and `## Metadata` each returned `{}`, `buildPostPayload` fell through to `<title> | Grown Men Grow` and the dek, and founder-approved copy four lines below was overwritten with every gate green. All five verified as returning `{}` before the fix. That is the defect this parser exists to close, at its entry point, under a docstring claiming every failure here is loud.
+
+**The corpus guard could not see it because its precondition was the parser's own regex.** A note the parser could not find was a note the guard skipped. That is the fifteenth round's finding one turn out: there the payload was compared against the parser's output, here the precondition was derived from it. The guard now keys on the content — any note containing a line that names an approved meta field must parse to something non-empty — and that is independent of how the parser finds its section. Proved by narrowing the heading match back to an exact string: two tests fail.
+
+**The heading is matched tolerantly now**: one or two hashes, any case, extra words allowed, cut at the next heading of the same level or shallower so a `## ` inside a `# ` section stays in it. Two headings in one note raise rather than one silently winning.
+
+**The detail that made this more than a hypothetical is in the repository.** `content/metadata.md` is the other home for approved metadata, and it files exactly these bullets under **page-named** headings — `# Start Here`, `# About`, `# Essay 1` — never under `# Metadata`. Three notes in the bank defer their metadata to the approval pass, so the next such section will be written later by hand, by someone whose nearest precedent in this repository uses a different spelling. Nothing anywhere held the one the parser required.
+
+**A useful thing found while reading that file, recorded rather than acted on.** `content/metadata.md` carries a `# Feature-image alt text` section with approved alt text for Start Here, About, and Essay 1 — which is why Essay 1's live post has alt text and the two field notes do not. The open item stands unchanged: no field note has an approved feature-image description anywhere. But the precedent exists and is page-keyed, so if the founder supplies them, that file is where they already belong.
+
+**`publication-order.md` did not ride along with either of the last two commits, and now does.** Those commits added five author-visible rules — four refusals and a blank-line boundary that fails the build — while the operator-facing paragraph still described only which values win and showed `- Meta title:` as though that spelling were required. It now says what the section may look like and what it refuses.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (125 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. The builder still reproduces Field Note 2's live `meta_title` and `meta_description` exactly.
+
+**External state changed:** none. Every Ghost call was a read. This week's post and all four Buffer posts are untouched.
+
+**Open, in order:** (1) the live Field Note 2 `custom_excerpt` is the dek where the builder sends the preview, a founder call; (2) `feature_image_alt` — no field note has an approved description, though `content/metadata.md` holds page-keyed ones for the three launch pages and is where field-note descriptions would belong; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
