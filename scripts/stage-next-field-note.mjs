@@ -93,28 +93,29 @@ if (DRY_RUN) {
   // does not flush what is still queued — a silently truncated HTML dump is
   // the exact failure this script exists to stop. Let the module end instead.
 
-  // A READ, so it keeps the validate-before-mutate ordering intact. Ghost
-  // suffixes a duplicate slug rather than refusing it, so re-running this
-  // command for an already-staged week would create a SECOND post and schedule
-  // it with the newsletter bound to everyone — two sends of one essay, and the
-  // verification block below would print a clean result for the duplicate
-  // because it only reads back the post it just made. Until now the only thing
-  // preventing that was the sentence in publication-order.md telling the
-  // operator to pick a note with no Ghost post, and a rule that lives in prose
-  // is the shape of guard this repository keeps finding it cannot rely on.
-  const existing = await findPostBySlug(SLUG);
-  if (existing) {
-    throw new Error(`${SLUG} already has a Ghost post (${existing.status}, id ${existing.id}); refusing to create a second one that would send the newsletter again.`);
-  }
-
-  // Built BEFORE the upload, because building is where the validation lives:
-  // buildPostPayload throws on missing frontmatter, on a note that is not
+  // Built BEFORE anything is written, because building is where the validation
+  // lives: buildPostPayload throws on missing frontmatter, on a note that is not
   // founder-approved, on an absent essay heading, and on an empty essay body.
   // AGENTS.md states the rule outright — validate before mutating. Calling it
   // after the upload would leave an orphaned PNG in Ghost storage and a stack
   // trace, on the morning the slot is due. The image URL is the one field that
   // cannot exist yet, so it is attached below rather than waited for here.
   const payload = buildPostPayload({source, featureImage: PENDING_UPLOAD});
+
+  // Asked about payload.slug, NOT the argument. The argument is the filename
+  // stem; the create uses the frontmatter slug. They agree across the bank
+  // today — a corpus test asserts it — but that is a property of the corpus
+  // held in another file, not of this guard, and the guard is what stands
+  // between a re-run and a second send. Ghost suffixes a duplicate slug rather
+  // than refusing it, so asking about the wrong key returns a clean null and
+  // the create goes out anyway: a SECOND post, scheduled, newsletter bound to
+  // everyone, with the verification block below printing clean for it because
+  // it only reads back the post it just made. This is a read, so it still runs
+  // ahead of every mutation.
+  const existing = await findPostBySlug(payload.slug);
+  if (existing) {
+    throw new Error(`${payload.slug} already has a Ghost post (${existing.status}, id ${existing.id}); refusing to create a second one that would send the newsletter again.`);
+  }
 
   // Feature image -> Ghost storage.
   const form = new FormData();

@@ -193,11 +193,16 @@ export async function probeGhostAdmin() {
  * status rethrows, because treating an auth or network error as "absent" would
  * turn the guard into a green light at exactly the wrong moment.
  */
-export async function findPostBySlug(slug, {fields = 'id,slug,status,published_at'} = {}) {
+export async function findPostBySlug(slug, {fields = 'id,slug,status,published_at', request = ghostAdmin} = {}) {
   try {
-    const payload = await ghostAdmin(`posts/slug/${encodeURIComponent(slug)}/`, {searchParams: {fields}});
+    const payload = await request(`posts/slug/${encodeURIComponent(slug)}/`, {searchParams: {fields}});
     return payload?.posts?.[0] ?? null;
   } catch (error) {
+    // Only a 404 means "no post holds this slug". Widening this to any error
+    // would make the duplicate guard a no-op on every 403, 500, and timeout,
+    // with the gates still green and the failure appearing as a second
+    // newsletter send. `request` is injectable so a test can hold that line;
+    // it is not a configuration point and nothing but a test should pass it.
     if (error.status === 404) return null;
     throw error;
   }

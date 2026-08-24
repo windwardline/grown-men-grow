@@ -1828,3 +1828,25 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** none. The duplicate-guard proof ran the real command against the live instance and it refused before any write; Ghost holds the same single scheduled post it held before. Every call across this entire sequence was a read. All four Buffer posts remain queued.
 
 **Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (ninth entry) — Claude Code: the guard asked about the wrong key, and its safety property had no test
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Seventh review round, on head `46a8244`.
+
+**The duplicate guard queried the slug the operator typed; the create uses the slug in the frontmatter.** The argument is the filename stem — `:57` reads `content/field-notes/${SLUG}.md` — while the payload carries `front.slug`. Two values that happen to agree. Where they disagree the guard asks about a key nothing holds, returns a clean null, and the create goes out with the frontmatter slug; Ghost suffixes it against whatever already holds that, and the draft transitions to scheduled with the newsletter bound to everyone. Verbatim the outcome the guard exists to prevent, reached through the one input it did not read.
+
+**A corpus test does assert the two agree for every note in the bank, so this was not live.** It is fixed anyway because the protection was a property of the corpus asserted in another file rather than a property of the guard, and the guard is what stands between a re-run and a second send. `buildPostPayload` is offline, so the payload is now built first and `findPostBySlug(payload.slug)` asked second — the guard reads the slug the create will actually use, and being a read it still runs ahead of every mutation.
+
+**The fail-closed branch that the previous entry leaned on had nothing holding it.** That entry argued the guard is safe because a 404 returns null and every other status rethrows — and `scripts/lib/ghost-admin.mjs` had no test file at all. The manifest's reverse derivation only requires that a library module be *registered*, not that anything exercises it, so `verify-repository.mjs` went green over a function with zero coverage. Widening that catch during a later edit would make the duplicate guard a no-op on every 403, 500, and timeout, with all gates still green and the failure arriving as a second newsletter send. This is the argument the branch already accepted for `assertPublishInstant` and `parseStagingArgs`; it applies here and was not applied.
+
+`findPostBySlug` now takes an injectable `request` — a test seam, stated as such in the code, not a configuration point — and `scripts/test/ghost-admin.test.mjs` holds six tests over it: a post found, a 404, an empty list, an absent `posts` key, seven non-404 statuses that must propagate, an error carrying no status at all, and the URL encoding of the slug it asks about. **Proved by the failure it exists to produce:** widening the catch to return null on any error drops two tests with the message `status 401 was swallowed, which would let a duplicate post through`, and restoring it returns all six to green.
+
+**Verified against production again after the reordering:** the real command for `a-confession-can-still-be-selfish` refuses by name, and Ghost still holds exactly one scheduled post.
+
+**Files changed:** `scripts/lib/ghost-admin.mjs`, `scripts/stage-next-field-note.mjs`, `scripts/test/ghost-admin.test.mjs` (new), `scripts/verify-repository.mjs` (manifest), and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (95 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean.
+
+**External state changed:** none. The duplicate-guard proof ran the real command against the live instance and it refused before any write. Every call across this entire sequence was a read. All four Buffer posts remain queued.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.

@@ -440,6 +440,7 @@ const requiredFiles = [
   'scripts/test/note-decision.test.mjs',
   'scripts/test/task-lock.test.mjs',
   'scripts/test/field-note-post.test.mjs',
+  'scripts/test/ghost-admin.test.mjs',
   'scripts/test/hold-state.test.mjs',
   'theme/package.json',
   'theme/pnpm-lock.yaml',
