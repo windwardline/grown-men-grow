@@ -591,6 +591,13 @@ test('every approved field note in the bank builds a payload', () => {
         assert.equal(payload[field], value, `${name} would send a ${field} the founder did not approve`);
       }
     }
+    // Founder ruling 2026-08-24: no image ships without alt text, and the agent
+    // that generates the artwork writes it. Both live field-note posts shipped
+    // without it before that.
+    assert.ok(
+      payload.feature_image_alt && payload.feature_image_alt.length >= 20,
+      `${name} would send a Ghost feature image with no usable alt text`,
+    );
     for (const field of ['meta_title', 'meta_description', 'title', 'custom_excerpt']) {
       assert.doesNotMatch(payload[field], /\*/, `${name} would send a ${field} carrying a literal asterisk`);
     }

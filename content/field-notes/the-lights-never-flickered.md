@@ -6,6 +6,7 @@ byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: The Lights Never Flickered
 preview: The load lands somewhere. Nobody tells him where.
+feature_image_alt: Steel base plates and anchor bolts on a cured concrete slab in morning light, beside an open panel cabinet with a labeled transfer switch, in a paper collage.
 status: founder-approved
 approved: 2026-08-12 — approved as written, after the register correction rather than before it
 stance: witness — the first witness piece under the 2026-08-11 stance ruling

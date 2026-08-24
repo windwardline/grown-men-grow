@@ -6,6 +6,7 @@ byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Ask for Help While It’s Still Cheap
 preview: The price of help only goes one direction while you wait.
+feature_image_alt: A man asking a question at a hardware-store counter while an older counterman leans in, beside a renovation wall opened to clean studs with wiring paused mid-run, in a paper collage.
 status: founder-approved
 approved: 2026-08-09 — essay, carousel, caption, and visual direction approved as written; publication timing remains gated
 personal_claims: none included; add only from founder-supplied facts

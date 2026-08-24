@@ -734,22 +734,42 @@ for (const [label, file] of packs) {
     }
   }
 }
-const altTexted = [
-  'content/instagram/launch-package.md',
-  'content/field-notes/call-your-friends-before-theres-a-reason.md',
-  'content/field-notes/friendship-has-a-maintenance-schedule.md',
-  'content/field-notes/a-confession-can-still-be-selfish.md',
-  'content/field-notes/ask-for-help-while-its-still-cheap.md',
-  'content/field-notes/anger-is-a-terrible-manager.md',
-  'content/field-notes/rest-is-not-a-reward.md',
-  'content/field-notes/you-cant-outwork-a-wrong-direction.md',
-  'content/field-notes/comparison-is-a-bad-map.md',
-  'content/field-notes/your-body-keeps-the-books.md',
-  'content/field-notes/nobody-rigs-to-the-breaking-strength.md',
-];
-for (const file of altTexted) {
+// Every reader-facing image ships with alt text, and the population is DERIVED
+// rather than listed. The list this replaced named ten of the thirteen notes and
+// asserted only that the phrase "alt text" appeared somewhere in the file — so
+// three notes were unchecked, and a note with a heading and no lines under it
+// passed. Founder ruling 2026-08-24: the agent that generates the artwork writes
+// its alt text, and no image ships without it.
+const launchPackage2 = path.join(root, 'content/instagram/launch-package.md');
+if (!/alt text/i.test(await readFile(launchPackage2, 'utf8'))) {
+  fail('content/instagram/launch-package.md is missing its Instagram alt text section.');
+}
+
+for (const file of tracked.filter((item) => item.startsWith('content/field-notes/') && item.endsWith('.md'))) {
   const text = await readFile(path.join(root, file), 'utf8');
-  if (!/alt text/i.test(text)) fail(`${file} is missing its Instagram alt text section.`);
+
+  // The Ghost feature image. `buildPostPayload` omits the field when this is
+  // absent, and an absent alt attribute is what shipped on both live field-note
+  // posts before this gate existed.
+  const featureAlt = /^feature_image_alt:[^\S\n]*(\S.*)$/m.exec(text);
+  if (!featureAlt) {
+    fail(`${file} has no feature_image_alt in its frontmatter; its Ghost feature image would ship with no alt text.`);
+  } else if (featureAlt[1].trim().length < 20) {
+    fail(`${file} has a feature_image_alt too short to describe an image: ${JSON.stringify(featureAlt[1].trim())}`);
+  }
+
+  // The carousel. One alt line per slide, counted both ways — a heading with
+  // nothing under it, or a slide added without a line, each fails.
+  const slides = (text.match(/^## Slide \d+/gm) ?? []).length;
+  const altSection = text.split('# Instagram alt text source')[1];
+  if (slides > 0 && altSection === undefined) {
+    fail(`${file} has ${slides} carousel slides and no "# Instagram alt text source" section.`);
+  } else if (slides > 0) {
+    const lines = altSection.split(/\n# /)[0].split('\n').filter((line) => /^- Slide \d+:\s*\S/.test(line));
+    if (lines.length !== slides) {
+      fail(`${file} has ${slides} carousel slides but ${lines.length} alt text line(s); every slide needs one.`);
+    }
+  }
 }
 
 // The weekly hold is the brake on an automation that otherwise publishes with

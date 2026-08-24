@@ -6,6 +6,7 @@ byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: You Can Walk on It Tomorrow
 preview: The surface hardens first, and it hardens fast. That is not the same as strength.
+feature_image_alt: A freshly poured concrete slab kept covered under a light sheet, one corner turned back to show the grey surface, beside a fine hairline crack across a tidy garage floor, in a paper collage.
 status: founder-approved
 approved: 2026-08-19; founder approved and authorized for publication in one pass
 stance: assignment — the reader has a move, and the closing hundred words turn to him

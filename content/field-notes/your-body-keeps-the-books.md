@@ -6,6 +6,7 @@ byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Your Body Keeps the Books
 preview: Every ledger gets audited eventually. Pick the auditor.
+feature_image_alt: A blood-pressure cuff and an open notebook on a kitchen table in morning light, beside hands slicing vegetables on a cutting board in bright daylight, in a paper collage.
 status: founder-approved
 approved: 2026-08-09 under the ten-round directive; founder veto on sight
 personal_claims: none included; add only from founder-supplied facts
