@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { createHash } from 'node:crypto';
+import { existsSync } from 'node:fs';
 import { lstat, readFile, readdir } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 
@@ -41,6 +42,26 @@ function checkNodeSyntax(file) {
   const result = spawnSync(process.execPath, ['--check', file], { cwd: root, encoding: 'utf8' });
   if (result.status !== 0) {
     fail(`${relative(file)} failed node --check: ${result.stderr.trim()}`);
+  }
+}
+
+// `node --check` parses a module; it never resolves its imports, because ESM
+// specifiers are looked up at link time. So a wrong relative path is invisible
+// to every syntax gate and only surfaces the first time the file is actually
+// run. `stage-next-field-note.mjs` imported "./scripts/lib/ghost-admin.mjs"
+// from inside scripts/ and died on ERR_MODULE_NOT_FOUND on its first line —
+// unnoticed because `publication-order.md` names it as the staging path and the
+// register happened to have two slots already scheduled, so nothing invoked it.
+const RELATIVE_SPECIFIER = /(?:\bfrom\s*|\bimport\s*\(?\s*)['"](\.{1,2}\/[^'"]+)['"]/g;
+
+async function checkImportsResolve(file) {
+  const source = await readFile(file, 'utf8');
+  const directory = path.dirname(file);
+  for (const [, specifier] of source.matchAll(RELATIVE_SPECIFIER)) {
+    const target = path.resolve(directory, specifier);
+    if (!existsSync(target)) {
+      fail(`${relative(file)} imports ${specifier}, which does not resolve to a file.`);
+    }
   }
 }
 
@@ -474,6 +495,7 @@ const scriptFiles = tracked
   .filter((file) => file.startsWith('scripts/') && /\.(?:mjs|js)$/.test(file))
   .map((file) => path.join(root, file));
 for (const script of scriptFiles) checkNodeSyntax(script);
+for (const script of scriptFiles) await checkImportsResolve(script);
 
 const themeResult = spawnSync(process.execPath, ['scripts/verify-ghost-theme.mjs'], {
   cwd: root,
