@@ -4,7 +4,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { parseFrontmatter, extractEssaySource, essayHtml, buildPostPayload, assertPublishInstant, parseStagingArgs } from '../lib/field-note-post.mjs';
+import { parseFrontmatter, extractEssaySource, essayHtml, buildPostPayload, assertPublishInstant, parseStagingArgs, assertRenderableEssay } from '../lib/field-note-post.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const notesDir = path.join(root, 'content', 'field-notes');
@@ -96,6 +96,44 @@ test('essayHtml leaves no stray asterisk when bold and emphasis share a paragrap
 test('essayHtml does not let one bold run bleed into the next', () => {
   const html = essayHtml('**one** plain **two**');
   assert.equal(html, '<p><strong>one</strong> plain <strong>two</strong></p>');
+});
+
+// The builder understands four things. Everything else survives HTML-escaped
+// inside a <p> — silent mangling, not a throw — and lands in a post scheduled
+// with the newsletter bound. A published page can be corrected afterwards; a
+// sent newsletter cannot. So the builder refuses.
+test('essayHtml refuses Markdown it would render as literal text', () => {
+  const cases = [
+    ['- one\n- two', /bulleted list/],
+    ['* one\n* two', /bulleted list/],
+    ['+ one', /bulleted list/],
+    ['1. first', /numbered list/],
+    ['10) tenth', /numbered list/],
+    ['> a quotation', /blockquote/],
+    ['### deeper heading', /heading level/],
+    ['# top heading', /heading level/],
+    ['---', /horizontal rule/],
+    ['| a | b |', /table/],
+    ['See [the note](https://example.test).', /link/],
+    ['![alt](img.png)', /image|link/],
+    ['a `code` span', /code formatting/],
+  ];
+  for (const [body, expected] of cases) {
+    assert.throws(() => essayHtml(body), expected, `${JSON.stringify(body)} was rendered instead of refused`);
+  }
+});
+
+// A soft-wrapped paragraph can begin with a year. That must not read as a list.
+test('assertRenderableEssay allows a line beginning with a four-digit year', () => {
+  assert.doesNotThrow(() => assertRenderableEssay('1994. A firefighter on television said so.'));
+});
+
+test('assertRenderableEssay allows the four things the builder does understand', () => {
+  assert.doesNotThrow(() => assertRenderableEssay('A paragraph.\n\n## A heading\n\n**Bold** and *emphasis*.'));
+});
+
+test('assertRenderableEssay names the line number so the fix is findable', () => {
+  assert.throws(() => assertRenderableEssay('fine\n\nalso fine\n\n- a list'), /Essay line 5 uses/);
 });
 
 test('buildPostPayload carries the fields Ghost needs to publish and send', () => {
@@ -260,6 +298,7 @@ test('every approved field note in the bank builds a payload', () => {
     assert.ok(payload.html.length > 0, `${name} produced empty HTML`);
     assert.doesNotMatch(payload.html, /\*/, `${name} left a stray asterisk in its HTML`);
     assert.equal(extractEssaySource(source), essaySliceByLine(source), `${name} essay slice disagrees with its section boundaries`);
+    assert.doesNotThrow(() => assertRenderableEssay(extractEssaySource(source)), `${name} carries Markdown the builder would render as literal text`);
     assert.equal(payload.slug, name.replace(/\.md$/, ''), `${name} frontmatter slug disagrees with its filename`);
   }
 });

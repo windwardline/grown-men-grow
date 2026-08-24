@@ -150,8 +150,53 @@ function inline(text) {
     .replace(/\*([^*]+)\*/g, '<em>$1</em>');
 }
 
+// Everything this builder understands: a paragraph, `## ` as an h2, `**strong**`
+// and `*em*`. Every other Markdown construct does not break it — it survives,
+// HTML-escaped, inside a <p>. A list becomes `<p>- like this</p>`, a link ships
+// as literal brackets with the href dead, `### ` becomes a paragraph starting
+// with three hashes. That is silent mangling rather than a throw, and it ends up
+// in a post transitioned to scheduled with the newsletter bound to everyone: a
+// published page can be corrected afterwards, a sent newsletter cannot.
+//
+// So the builder refuses instead. The whole approved bank is clean of all of
+// these today, which is why this can be strict rather than advisory; a note that
+// needs one of them needs the builder taught it, which is a change made
+// deliberately rather than discovered in a reader's inbox.
+//
+// Numeric lists require one or two digits so that a soft-wrapped line beginning
+// with a four-digit year is not mistaken for one.
+const UNRENDERABLE = [
+  [/^\s*[-+] /, 'a bulleted list'],
+  [/^\s*\* /, 'a bulleted list'],
+  [/^\s*\d{1,2}[.)] /, 'a numbered list'],
+  [/^\s*> /, 'a blockquote'],
+  [/^\s*#(?!# )/, 'a heading level other than "## "'],
+  [/^\s*(?:---|\*\*\*|___)\s*$/, 'a horizontal rule'],
+  [/^\s*\|/, 'a table'],
+  [/!\[[^\]]*\]\(/, 'an image'],
+  [/\[[^\]]*\]\([^)]*\)/, 'a link'],
+  [/`/, 'code formatting'],
+];
+
+/**
+ * Refuses an essay body carrying Markdown this builder would silently mangle.
+ * Named by construct and by line, because the fix is editorial and the person
+ * reading the failure needs to know which line to look at.
+ */
+export function assertRenderableEssay(body) {
+  const lines = body.split('\n');
+  for (const [index, line] of lines.entries()) {
+    for (const [pattern, description] of UNRENDERABLE) {
+      if (pattern.test(line)) {
+        throw new Error(`Essay line ${index + 1} uses ${description}, which this builder renders as literal text rather than markup: ${JSON.stringify(line.trim().slice(0, 60))}`);
+      }
+    }
+  }
+}
+
 /** The essay block as the HTML Ghost stores, one block element per paragraph. */
 export function essayHtml(body) {
+  assertRenderableEssay(body);
   return body
     .split(/\n{2,}/)
     .map((paragraph) => {

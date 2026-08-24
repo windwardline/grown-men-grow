@@ -1868,3 +1868,25 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** none. Every call across this entire sequence was a read. All four Buffer posts remain queued.
 
 **Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (eleventh entry) — Claude Code: the corpus test proved the builder ran, not that its output was publishable
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Ninth review round, on head `0d3dc81`.
+
+**The bank test asserted four things and none of them could see the builder's actual failure class.** `essayHtml` understands a paragraph, `## ` as an h2, `**strong**`, and `*em*`. Every other Markdown construct does not break it — it survives, HTML-escaped, inside a `<p>`. A list ships as `<p>- like this</p>`, a link ships as literal brackets with the href dead, `### ` becomes a paragraph starting with three hashes. The four assertions were non-empty HTML, no surviving asterisk, slice agreement, and slug agreement, and mangled output satisfies all four. So the test proved the builder *ran*. Its own stated purpose was the other thing: that a note which breaks it is found before the morning it is staged.
+
+**Measured rather than argued.** Adding a two-item list to a real note and running the four original assertions against it: non-empty true, no asterisk true, slice correct, slug correct — all four pass, and what a reader would have received is `<p>- a list item the builder cannot render - another one</p>`.
+
+**The consequence is why this was not a note-to-self.** The staged post is transitioned to scheduled with the newsletter bound to everyone. A published page can be corrected afterwards; a sent newsletter cannot. And the dry run does print the HTML, but nothing reads it — which is the argument this branch has made against every prose guard it has replaced.
+
+**So the builder refuses instead of mangling.** `assertRenderableEssay` rejects bulleted and numbered lists, blockquotes, any heading level other than `## `, horizontal rules, tables, images, links, and code formatting, naming the construct and the line number so the fix is findable. It is called from `essayHtml`, so both the dry run and the real path get it. **The whole approved bank is clean of every one of these**, verified by scanning all thirteen notes before writing the gate, which is why it can be strict rather than advisory. Numeric lists require one or two digits so a soft-wrapped line beginning with a four-digit year is not read as a list — checked explicitly, since one note opens a sentence with 1994.
+
+The corpus test now holds every note in the bank to the same rule, so a note needing one of these constructs fails CI when it is moved into `content/field-notes/`, not on the Monday it is staged. Teaching the builder a new construct is a deliberate change rather than something discovered in a reader's inbox.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (99 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. The new gate was proved in both directions on a real note, and the builder still reproduces both live posts' HTML exactly and still produces 5,055 characters for next Monday's note.
+
+**External state changed:** none. Every call across this entire sequence was a read. All four Buffer posts remain queued.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
