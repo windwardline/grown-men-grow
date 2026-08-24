@@ -319,12 +319,27 @@ export function parseApprovedMetadata(source) {
   const body = section.split(/\n# /)[0];
 
   // Fold soft-wrapped continuations onto their entry before anything is matched.
+  //
+  // A BLANK LINE CLOSES THE ENTRY, the way it ends a list item's lazy
+  // continuation in Markdown. Skipping blanks instead — the first version of
+  // this — folded any later non-bullet line onto whichever meta entry preceded
+  // it, however far above: an editorial aside under the bullets became part of
+  // the meta title, silently, with no asterisk left to catch it and the corpus
+  // check comparing the payload against the same corrupted string. That field is
+  // the Medium headline. A non-bullet line opening after a blank now starts its
+  // own entry, where it is either ignored or raises on META_MENTION — loud
+  // either way, which is this parser's contract.
   const entries = [];
+  let openEntry = false;
   for (const line of body.split('\n')) {
-    if (line.trim() === '') continue;
-    const stripped = line.replace(BOLD, '');
-    if (/^\s*[-*+]\s/.test(stripped) || entries.length === 0) entries.push(stripped.trim());
-    else entries[entries.length - 1] += ` ${stripped.trim()}`;
+    if (line.trim() === '') {
+      openEntry = false;
+      continue;
+    }
+    const stripped = line.replace(BOLD, '').trim();
+    if (openEntry && !/^[-*+]\s/.test(stripped)) entries[entries.length - 1] += ` ${stripped}`;
+    else entries.push(stripped);
+    openEntry = true;
   }
 
   const approved = {};

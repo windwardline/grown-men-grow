@@ -264,6 +264,34 @@ test('parseApprovedMetadata folds a soft-wrapped value instead of truncating it'
   );
 });
 
+// A blank line closes an entry, the way it ends a list item's lazy continuation
+// in Markdown. Folding across one appended an editorial aside onto the meta
+// title — silently, with no asterisk left to catch it, and the corpus check
+// comparing the payload against the same corrupted string. That field is the
+// Medium headline.
+test('parseApprovedMetadata does not fold a line separated by a blank into the entry above', () => {
+  const withSection = (lines) => NOTE.replace('# Instagram caption source', `# Metadata\n\n${lines}\n\n# Instagram caption source`);
+
+  const aside = withSection('- Meta title: **A | B**\n\nApproved 2026-08-24 alongside the essay.\n\n- Meta description: **D.**');
+  assert.deepEqual(parseApprovedMetadata(aside), { meta_title: 'A | B', meta_description: 'D.' });
+
+  const heading = withSection('- Meta title: **A | B**\n\n## A sub-heading\n\n- Meta description: **D.**');
+  assert.deepEqual(parseApprovedMetadata(heading), { meta_title: 'A | B', meta_description: 'D.' });
+});
+
+// The other half of the same rule: an adjacent line IS a continuation.
+test('parseApprovedMetadata still folds an adjacent continuation line', () => {
+  const wrapped = NOTE.replace('# Instagram caption source', '# Metadata\n\n- Meta title: **A very long title that\n  wrapped across two lines**\n\n# Instagram caption source');
+  assert.equal(parseApprovedMetadata(wrapped).meta_title, 'A very long title that wrapped across two lines');
+});
+
+// A meta line that lost its bullet opens its own entry after a blank, where it
+// raises rather than being quietly missed.
+test('parseApprovedMetadata raises on an unbulleted meta line after a blank', () => {
+  const bare = NOTE.replace('# Instagram caption source', '# Metadata\n\n- Meta title: **A | B**\n\nMeta description: **D.**\n\n# Instagram caption source');
+  assert.throws(() => parseApprovedMetadata(bare), /cannot be read/);
+});
+
 // Every one of these used to yield {} and revert silently to the derived value,
 // which is the defect this parser exists to close.
 test('parseApprovedMetadata reads the near misses instead of reverting silently', () => {

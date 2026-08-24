@@ -2020,3 +2020,29 @@ The corpus test now holds every note in the bank to the same rule, so a note nee
 **External state changed:** none. Every Ghost call was a read. This week's post and all four Buffer posts are untouched.
 
 **Open, in order:** unchanged from the sixteenth entry — (1) the live Field Note 2 `custom_excerpt` is the dek where the builder sends the preview, a founder call on which field the excerpt takes; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (eighteenth entry) — Claude Code: the fold that fixed truncation swallowed the line after the blank
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Sixteenth review round, on head `7c5f5b9`.
+
+**The continuation rule was "not a bullet", and blank lines were skipped rather than closing the entry.** So any non-bullet line anywhere later in the `# Metadata` section was appended to whichever meta entry preceded it, however far above it sat. An editorial aside under the bullets became part of the meta title:
+
+    - Meta title: **Male Friendship Before Crisis | Grown Men Grow**
+
+    Approved 2026-08-24 alongside the essay.
+
+produced `Male Friendship Before Crisis | Grown Men Grow Approved 2026-08-24 alongside the essay.` — verified by running it. No throw, no surviving asterisk to catch it, and the corpus assertion compared the payload against the same corrupted string. That field is the Medium headline, which is the reason this parser exists at all. A `## ` sub-heading inside the section folded the same way.
+
+**In Markdown a blank line ends a list item's lazy continuation, and that was the one place this parser diverged from what an author is actually writing.** A blank line now closes the entry. A non-bullet line opening after a blank starts its own, where it is either ignored or raises on the meta-mention check — loud either way, which is this parser's stated contract. An adjacent continuation still folds, so the soft-wrap fix from the previous round is intact; both halves have their own test.
+
+**The bank survived this only by accident of ordering.** The one `# Metadata` section puts both meta bullets first and three non-meta bullets after them, so a trailing non-bullet line would have folded onto the last of those and been discarded. Nothing asserted that ordering and no author writing the next section would know to preserve it.
+
+**The live post still matches:** the builder reproduces Field Note 2's `meta_title` and `meta_description` exactly.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (122 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean.
+
+**External state changed:** none. Every Ghost call was a read. This week's post and all four Buffer posts are untouched.
+
+**Open, in order:** unchanged — (1) the live Field Note 2 `custom_excerpt` is the dek where the builder sends the preview, a founder call; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
