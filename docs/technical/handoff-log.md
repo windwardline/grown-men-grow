@@ -1974,3 +1974,27 @@ The corpus test now holds every note in the bank to the same rule, so a note nee
 **External state changed:** none. Every call across this sequence was a read. This week's Ghost post and all four Buffer posts are untouched.
 
 **Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (sixteenth entry) — Claude Code: correcting an earlier diagnosis, and the copy the builder was overwriting
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Fourteenth review round, on head `d62d2ed`.
+
+**Correcting the second entry of 2026-08-24 and everything that repeated it.** That entry reported Field Note 2's live post disagreeing with `content/` on `meta_title` and `meta_description`, diagnosed it as "historical rather than systemic — it was hand-staged in the 2026-08-10 week-one bridge before this script existed", and observed that the live text "reads deliberate". The diagnosis was wrong. It reads deliberate because a deliberate version of it is in the repository: `content/field-notes/call-your-friends-before-theres-a-reason.md` carries a `# Metadata` section whose approved values are, byte for byte, what is live. Verified against the Admin API this session. The three later entries that carried the item forward as a founder decision inherited the error; this entry corrects it by append rather than editing them.
+
+**What was actually happening is systemic and still live.** `extractEssaySource` cuts the essay at the next top-level heading, so that block was discarded in silence while `buildPostPayload` synthesised `meta_title` as `<title> | Grown Men Grow` and `meta_description` from the dek, over the top of copy the founder wrote. `AGENTS.md` is explicit: founder-approved public copy under `content/` is canonical and is not rewritten during implementation. Deriving over it is that rewrite. Nothing caught it — the corpus test asserted title, slug, HTML, slice agreement and no stray asterisk, and passed on a payload carrying metadata the founder did not write, while the only other check was reading the dry run's output by eye every week, which is the shape of guard this branch has spent fourteen rounds replacing.
+
+**And it is not cosmetic.** Medium's URL importer takes `meta_title` as the headline rather than the title, which is why the 2026-08-23 Medium run had to correct a title by hand. That was not a one-off; it was this mechanism's downstream cost, and re-staging that note would have reintroduced it.
+
+**Approved values now win, derivation is the fallback.** `parseApprovedMetadata` reads the section; `buildPostPayload` prefers what it finds. With that in place the builder reproduces the live Field Note 2 post's `meta_title` and `meta_description` exactly — which is the corroboration that the approved values are the founder's intent. The dry run labels each value `(approved, from # Metadata)` or `(derived from title)`, and the corpus test fails any note whose payload would contradict a value approved inside it — proved by reverting the preference and watching two tests fail by name.
+
+**One field is left alone deliberately, and it is a real founder question.** The live post's `custom_excerpt` is the note's `dek`; the builder sends its `preview`. No approved value covers the excerpt, so nothing is being overwritten and there is nothing for this branch to apply. Which of the two belongs in the excerpt is the founder's call, and it now stands alone rather than bundled with two fields that turned out to have an answer.
+
+**The stranded comment from the thirteenth round is deleted.** A code move in `170514e` left thirteen lines restating the `## ` positional rules with no code under them. Both copies were accurate, which is exactly why a duplicate is worth removing in a file that has twice had a comment drift away from its function.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/stage-next-field-note.mjs`, `scripts/test/field-note-post.test.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (114 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean.
+
+**External state changed:** none. Every Ghost call this session made was a read, including the one that disproved the earlier diagnosis. This week's post and all four Buffer posts are untouched.
+
+**Open, in order:** (1) **new, and narrower than what it replaces** — the live Field Note 2 `custom_excerpt` is the dek where the builder sends the preview; no approved value covers it, so this is a founder call on which field the excerpt takes; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout. The `meta_title` / `meta_description` item is **closed**, not deferred: the founder had already answered it in the file.

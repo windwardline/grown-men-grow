@@ -4,7 +4,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { parseFrontmatter, extractEssaySource, essayHtml, buildPostPayload, assertPublishInstant, parseStagingArgs, assertRenderableEssay } from '../lib/field-note-post.mjs';
+import { parseFrontmatter, extractEssaySource, essayHtml, buildPostPayload, assertPublishInstant, parseStagingArgs, assertRenderableEssay, parseApprovedMetadata } from '../lib/field-note-post.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const notesDir = path.join(root, 'content', 'field-notes');
@@ -233,6 +233,44 @@ test('assertRenderableEssay names the line number so the fix is findable', () =>
   assert.throws(() => assertRenderableEssay('fine\n\nalso fine\n\n- a list'), /Essay line 5 /);
 });
 
+const NOTE_WITH_METADATA = NOTE.replace(
+  '# Instagram caption source',
+  ['# Metadata',
+   '',
+   '- Meta title: **A Search-Shaped Title | Grown Men Grow**',
+   '- Meta description: **A description the founder wrote.**',
+   '- Primary reader question: **Something else entirely?**',
+   '',
+   '# Instagram caption source'].join('\n'),
+);
+
+test('parseApprovedMetadata lifts the approved values and strips the bold', () => {
+  assert.deepEqual(parseApprovedMetadata(NOTE_WITH_METADATA), {
+    meta_title: 'A Search-Shaped Title | Grown Men Grow',
+    meta_description: 'A description the founder wrote.',
+  });
+});
+
+test('parseApprovedMetadata returns nothing for a note with no Metadata section', () => {
+  assert.deepEqual(parseApprovedMetadata(NOTE), {});
+});
+
+// AGENTS.md: founder-approved public copy under content/ is canonical and is not
+// rewritten during implementation. Deriving `title | Grown Men Grow` over a meta
+// title the founder wrote is that rewrite — and Medium's URL importer takes
+// meta_title as the headline, so it decides what a second platform publishes.
+test('buildPostPayload prefers approved metadata over the derived values', () => {
+  const payload = buildPostPayload({ source: NOTE_WITH_METADATA, featureImage: 'x' });
+  assert.equal(payload.meta_title, 'A Search-Shaped Title | Grown Men Grow');
+  assert.equal(payload.meta_description, 'A description the founder wrote.');
+});
+
+test('buildPostPayload derives metadata only when the note approves none', () => {
+  const payload = buildPostPayload({ source: NOTE, featureImage: 'x' });
+  assert.equal(payload.meta_title, 'A Title | Grown Men Grow');
+  assert.equal(payload.meta_description, 'The dek line.');
+});
+
 test('buildPostPayload carries the fields Ghost needs to publish and send', () => {
   const payload = buildPostPayload({ source: NOTE, featureImage: 'https://example.test/f.png' });
   assert.equal(payload.title, 'A Title');
@@ -396,6 +434,11 @@ test('every approved field note in the bank builds a payload', () => {
     assert.doesNotMatch(payload.html, /\*/, `${name} left a stray asterisk in its HTML`);
     assert.equal(extractEssaySource(source), essaySliceByLine(source), `${name} essay slice disagrees with its section boundaries`);
     assert.doesNotThrow(() => assertRenderableEssay(extractEssaySource(source)), `${name} carries Markdown the builder would render as literal text`);
+    // No note's payload may contradict a value the founder approved in it.
+    const approved = parseApprovedMetadata(source);
+    for (const [field, value] of Object.entries(approved)) {
+      assert.equal(payload[field], value, `${name} would send a ${field} the founder did not approve`);
+    }
     assert.equal(payload.slug, name.replace(/\.md$/, ''), `${name} frontmatter slug disagrees with its filename`);
   }
 });

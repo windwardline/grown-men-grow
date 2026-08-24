@@ -280,6 +280,34 @@ export function assertRenderableEssay(body) {
   // wave through a heading the renderer keeps inside the paragraph.
 }
 
+/**
+ * The `# Metadata` section's approved values, when a note carries one.
+ *
+ * `extractEssaySource` cuts the essay at the next top-level heading, so this
+ * block was being discarded in silence while the builder synthesised its own
+ * `meta_title` and `meta_description` over the top of it. AGENTS.md is explicit:
+ * founder-approved public copy under `content/` is canonical and is not
+ * rewritten during implementation. Deriving over a value the founder wrote is
+ * that rewrite, and it is not cosmetic — Medium's URL importer takes
+ * `meta_title` as the headline, so it decides what a second platform publishes.
+ *
+ * Values are written as `- Meta title: **the value**`; the bold is presentation
+ * and is stripped.
+ */
+export function parseApprovedMetadata(source) {
+  const section = source.split(/\n# Metadata\n/)[1];
+  if (section === undefined) return {};
+
+  const approved = {};
+  for (const line of section.split(/\n# /)[0].split('\n')) {
+    const match = /^-\s*(Meta title|Meta description):\s*(.+?)\s*$/.exec(line);
+    if (!match) continue;
+    const value = match[2].replace(/^\*\*(.*)\*\*$/, '$1').trim();
+    if (value) approved[match[1] === 'Meta title' ? 'meta_title' : 'meta_description'] = value;
+  }
+  return approved;
+}
+
 /** The essay block as the HTML Ghost stores, one block element per paragraph. */
 export function essayHtml(body) {
   assertRenderableEssay(body);
@@ -309,14 +337,19 @@ export function buildPostPayload({ source, featureImage }) {
   }
   if (!featureImage) throw new Error('buildPostPayload needs the uploaded feature image URL.');
 
+  // Approved values win over derived ones. The derivation is a convenience for
+  // the notes that carry no `# Metadata` section; it is not a licence to
+  // overwrite copy the founder wrote and left in the file.
+  const approved = parseApprovedMetadata(source);
+
   const payload = {
     title: front.title,
     slug: front.slug,
     html: essayHtml(extractEssaySource(source)),
     status: 'draft',
     custom_excerpt: front.preview,
-    meta_title: `${front.title} | Grown Men Grow`,
-    meta_description: front.dek,
+    meta_title: approved.meta_title ?? `${front.title} | Grown Men Grow`,
+    meta_description: approved.meta_description ?? front.dek,
     feature_image: featureImage,
     visibility: 'public',
     email_subject: front.email_subject,

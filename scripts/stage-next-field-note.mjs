@@ -19,7 +19,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import {fileURLToPath} from "node:url";
-import {assertPublishInstant, buildPostPayload, parseStagingArgs} from "./lib/field-note-post.mjs";
+import {assertPublishInstant, buildPostPayload, parseApprovedMetadata, parseStagingArgs} from "./lib/field-note-post.mjs";
 import {findPostBySlug, ghostAdmin} from "./lib/ghost-admin.mjs";
 
 // Stands in for the image URL while the payload is built and validated ahead of
@@ -85,8 +85,11 @@ if (DRY_RUN) {
   console.log("  slug        :", payload.slug);
   console.log("  email_subject:", payload.email_subject);
   console.log("  excerpt     :", payload.custom_excerpt);
-  console.log("  meta_title  :", payload.meta_title);
-  console.log("  meta_desc   :", payload.meta_description);
+  // Labelled by source, because the difference is the difference between copy
+  // the founder wrote and a string this script made up.
+  const approved = parseApprovedMetadata(source);
+  console.log("  meta_title  :", payload.meta_title, approved.meta_title ? "(approved, from # Metadata)" : "(derived from title)");
+  console.log("  meta_desc   :", payload.meta_description, approved.meta_description ? "(approved, from # Metadata)" : "(derived from dek)");
   console.log("  alt text    :", payload.feature_image_alt ?? "MISSING — the feature image will ship with no alt text");
   console.log("  html length :", payload.html.length);
   console.log("  publish_at  :", PUBLISH_AT_UTC ?? "(not given; required for a real run)");
