@@ -1649,6 +1649,6 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 
 **Verification, each gate named:** `node scripts/verify-ghost-theme.mjs`; `pnpm --dir theme install --frozen-lockfile`; `pnpm --dir theme test`; `pnpm --dir theme zip` plus packaged-ZIP fatal GScan; `node --test 'scripts/test/**/*.test.mjs'`; `node scripts/verify-repository.mjs`; `bash scripts/verify-svg-xml.sh`; `git diff --check`; and exact tracked-text and tracked-path provider sweeps.
 
-**External state changed:** Pull request #127 merged as `9957cf2c428e74a4ac963b6c9eafce55a5e2ab0c`; its branch was deleted locally and remotely; post-merge CI and security runs passed. This corrective branch changes no provider account, publication surface, integration, or media file.
+**External state changed:** Pull request #127 merged as `9957cf2c428e74a4ac963b6c9eafce55a5e2ab0c`; its branch was deleted locally and remotely; post-merge CI and security runs passed. Corrective branch `codex/reconcile-provider-retirement-record` was pushed and pull request #128 opened. No provider account, publication surface, integration, or media file changed.
 
-**Open:** Publish this corrective record through the normal green-gate path, then restore clean local `main` at exact remote parity.
+**Open:** Merge pull request #128 only after its required and advisory checks finish, then restore clean local `main` at exact remote parity.
