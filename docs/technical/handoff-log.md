@@ -1652,3 +1652,15 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** Pull request #127 merged as `9957cf2c428e74a4ac963b6c9eafce55a5e2ab0c`; its branch was deleted locally and remotely; post-merge CI and security runs passed. Corrective branch `codex/reconcile-provider-retirement-record` was pushed and pull request #128 opened. No provider account, publication surface, integration, or media file changed.
 
 **Open:** Merge pull request #128 only after its required and advisory checks finish, then restore clean local `main` at exact remote parity.
+
+## 2026-08-24 (third entry) — Codex: corrective review details closed before merge
+
+**Scope completed:** The advisory review on pull request #128 completed before merge and raised three precise record issues. All survived refutation. The redaction boundary now names the two 2026-08-11 decision records rather than a nonexistent 2026-08-10 target; the historical voice decision carries its 2026-08-24 supersession pointer; and the proof delivery is dated 2026-08-11 rather than only by year.
+
+**Files changed:** `docs/technical/decision-log.md` and this log.
+
+**External state changed:** None beyond the already-open pull request #128. No provider account, publication surface, integration, or media file changed.
+
+**Verification:** The full repository gate sequence and exact provider sweeps are rerun after these corrections; remote checks and advisory review must rerun on the corrected head before merge.
+
+**Open:** Push the corrected head, inspect the fresh advisory result, merge only if it is clean, then restore local `main` to exact remote parity.
