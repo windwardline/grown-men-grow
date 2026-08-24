@@ -1746,3 +1746,21 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** none. Every Ghost call was a read. The week's staging is untouched.
 
 **Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (fifth entry) — Claude Code: the guard the reordering silenced, and the argument nothing checked
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Third review round, on head `e80ceb0`.
+
+**The fix for the ordering regression silenced a guard, which is the second-order cost the previous entry did not look for.** Passing `PENDING_UPLOAD` into `buildPostPayload` to get validate-before-mutate ordering made that function's own `featureImage` check unreachable from its only caller — the placeholder is always truthy. Before the reordering, an upload that answered without a URL threw ahead of the create and nothing was made. After it, the key would drop on serialisation and the post would be created **and transitioned to scheduled with the newsletter bound**, carrying no feature image in the email header or the social card. That is worse than the crash it replaced, because the crash created nothing. The executable now re-checks the assigned URL by name before the create, and a test covers `buildPostPayload` with `undefined`, `null`, and `''` — the case none of the 21 previous tests touched.
+
+**Worth stating for the next person who reads this sequence:** each fix in this branch was correct and each introduced or exposed the next. That is what the review rounds are for, and it is the argument for waiting on the advisory review rather than arming auto-merge beside it.
+
+**`PUBLISH_AT_UTC` was checked for presence and never for shape, and two mutations happened before it was used.** Pre-existing on `main` rather than a regression, raised because this change set restructured that exact argument block and adopted validate-before-mutating as its stated principle. Its only use is the draft→scheduled PUT, the third network call, so a malformed value surfaced there leaves an uploaded PNG and an orphaned draft behind it. It is now checked before anything is written, and the check requires more than parseability: the value must end in `Z`. A timestamp without a zone parses fine and is read as local time, which is how an 8:00 AM ET slot silently becomes a different hour — the failure would be a correctly staged post at the wrong time, which no verification block would flag. Confirmed by running all three bad shapes; each exits before any network call.
+
+**Files changed:** `scripts/stage-next-field-note.mjs`, `scripts/test/field-note-post.test.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (77 pass, 0 fail); `node scripts/verify-repository.mjs` (514 tracked files, 42 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. The final ordering on the real path was read back and is: publish time checked, payload built and validated, image uploaded, uploaded URL checked, post created, post scheduled with the newsletter bound, result verified.
+
+**External state changed:** none. Every Ghost call this whole sequence made was a read. The week's staging is untouched — the post remains scheduled with the newsletter bound, and all four Buffer posts remain queued.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.

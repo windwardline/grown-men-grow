@@ -126,6 +126,12 @@ test('buildPostPayload passes feature_image_alt through when frontmatter supplie
   assert.equal(payload.feature_image_alt, 'A described collage.');
 });
 
+test('buildPostPayload refuses a falsy feature image', () => {
+  for (const featureImage of [undefined, null, '']) {
+    assert.throws(() => buildPostPayload({ source: NOTE, featureImage }), /feature image URL/);
+  }
+});
+
 test('buildPostPayload refuses a note the founder has not approved', () => {
   const draft = NOTE.replace('status: founder-approved', 'status: draft');
   assert.throws(() => buildPostPayload({ source: draft, featureImage: 'x' }), /not "founder-approved"/);
