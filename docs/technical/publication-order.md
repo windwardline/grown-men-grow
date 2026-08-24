@@ -81,6 +81,16 @@ node scripts/stage-next-field-note.mjs <slug> <ISO-utc>
 
 That script uploads the feature image, builds the post from the approved source under `content/field-notes/`, and transitions draft→scheduled with the newsletter bound — the binding only takes on that transition, so it cannot be set on an already-scheduled post. It prints a verification block; a run that reports `newsletter: NONE` has staged a post that will publish without sending.
 
+**Run the dry run first, every week, whether or not the slot needs staging.**
+
+```
+node scripts/stage-next-field-note.mjs <slug> <ISO-utc> --dry-run
+```
+
+It reads the approved source, parses the frontmatter, builds the HTML, resolves the feature image, and prints the exact payloads without touching the network. This exists because of what 2026-08-24 found: the script had an unresolvable import and died on its first line in every invocation since it shipped, and everything below its argument check had never executed at all. Nothing caught that, because this register always held a scheduled slot and so the Monday task verified rather than staged, every week of the script's life. The first week the register runs dry would have been the first week the code ran — with the slot empty and no time to fix it. The dry run makes the staging path exercised weekly on the real note instead of first proven on the morning it is needed. `scripts/test/field-note-post.test.mjs` covers the other half in CI by building a payload for every note in the bank.
+
+A dry run that reports `alt text: MISSING` is accurate rather than broken: no field note carries `feature_image_alt` in its frontmatter yet, so the Ghost feature image ships without alt text. The staged post passes the value through the moment a note supplies one.
+
 **The hold check in that task still runs first and still governs** — a held week shifts every projection below it by one slot and changes nothing about the order.
 
 Changing the order is a founder decision recorded here. The checker enforces the constraints; it does not enforce the preferences, which are stated above so a future change can disagree with them knowingly.

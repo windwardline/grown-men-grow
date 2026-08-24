@@ -1,42 +1,70 @@
 // Stage the next field note in `docs/technical/publication-order.md` as a Ghost
 // post scheduled for the coming Tuesday 8:00 AM ET slot, with the newsletter
-// bound. Mirrors the shape of the already-scheduled Field Note 2.
+// bound.
 //
 // The newsletter binds ONLY on the draft -> scheduled transition, via query
 // params on that PUT; setting it on an already-scheduled post is silently
 // ignored. Verified afterwards with ?include=newsletter.
+//
+// `--dry-run` builds everything from the approved source and prints the exact
+// payloads without touching the network. Everything below the argument check
+// went unexecuted from the day this shipped until 2026-08-24, because the
+// register always held a scheduled slot and so the Monday task never had to
+// stage anything; the dry run exists so the mutating path is exercised on real
+// input every week instead of first running for real on the week it is needed.
 import fs from "node:fs";
 import path from "node:path";
 import {fileURLToPath} from "node:url";
+import {buildPostPayload} from "./lib/field-note-post.mjs";
 import {ghostAdmin} from "./lib/ghost-admin.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const [, , SLUG, PUBLISH_AT_UTC] = process.argv;
-if (!SLUG || !PUBLISH_AT_UTC) {
-  console.error("usage: node scripts/stage-next-field-note.mjs <slug> <ISO-utc>");
+const args = process.argv.slice(2);
+const DRY_RUN = args.includes("--dry-run");
+const [SLUG, PUBLISH_AT_UTC] = args.filter((arg) => arg !== "--dry-run");
+
+if (!SLUG || (!PUBLISH_AT_UTC && !DRY_RUN)) {
+  console.error("usage: node scripts/stage-next-field-note.mjs <slug> <ISO-utc> [--dry-run]");
   console.error("  slug: lowest-numbered note in docs/technical/publication-order.md with no Ghost post");
+  console.error("  --dry-run: build and print the payloads, make no network call");
   process.exit(1);
 }
 
-const source = fs.readFileSync(path.join(root, `content/field-notes/${SLUG}.md`), "utf8");
-const front = Object.fromEntries(
-  source.split("---")[1].trim().split("\n")
-    .map((line) => [line.slice(0, line.indexOf(":")).trim(), line.slice(line.indexOf(":") + 1).trim()]),
-);
+const sourcePath = path.join(root, `content/field-notes/${SLUG}.md`);
+if (!fs.existsSync(sourcePath)) {
+  console.error(`No approved field note at content/field-notes/${SLUG}.md`);
+  process.exit(1);
+}
+const source = fs.readFileSync(sourcePath, "utf8");
 
-// The Ghost essay is the block between its heading and the next top-level one.
-const body = source.split("# Ghost essay source")[1].split("\n# ")[0].trim();
-const html = body.split(/\n{2,}/).map((para) => {
-  const block = para.trim();
-  if (block.startsWith("## ")) return `<h2>${block.slice(3).trim()}</h2>`;
-  const inline = block
-    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-    .replace(/\*([^*]+)\*/g, "<em>$1</em>");
-  return `<p>${inline.replace(/\n/g, " ")}</p>`;
-}).join("\n");
+const imagePath = path.join(root, `assets/drafts/ghost/feature-images/${SLUG}.png`);
+if (!fs.existsSync(imagePath)) {
+  console.error(`No feature image at assets/drafts/ghost/feature-images/${SLUG}.png`);
+  process.exit(1);
+}
+
+if (DRY_RUN) {
+  // Built against a placeholder URL: the upload is the only thing the real run
+  // learns that this cannot, and everything downstream of it is proved here.
+  const payload = buildPostPayload({source, featureImage: "https://storage.ghost.io/<uploaded-at-run-time>.png"});
+  console.log("DRY RUN — no network call made\n");
+  console.log("  source      :", path.relative(root, sourcePath));
+  console.log("  feature png :", path.relative(root, imagePath), `(${fs.statSync(imagePath).size} bytes)`);
+  console.log("  title       :", payload.title);
+  console.log("  slug        :", payload.slug);
+  console.log("  email_subject:", payload.email_subject);
+  console.log("  excerpt     :", payload.custom_excerpt);
+  console.log("  meta_title  :", payload.meta_title);
+  console.log("  meta_desc   :", payload.meta_description);
+  console.log("  alt text    :", payload.feature_image_alt ?? "MISSING — the feature image will ship with no alt text");
+  console.log("  html length :", payload.html.length);
+  console.log("  publish_at  :", PUBLISH_AT_UTC ?? "(not given; required for a real run)");
+  console.log("\n--- html ---");
+  console.log(payload.html);
+  process.exit(0);
+}
 
 // Feature image -> Ghost storage.
-const imagePath = path.join(root, `assets/drafts/ghost/feature-images/${SLUG}.png`);
 const form = new FormData();
 form.append("file", new Blob([fs.readFileSync(imagePath)], {type: "image/png"}), `${SLUG}.png`);
 form.append("purpose", "image");
@@ -47,20 +75,7 @@ console.log("feature image:", featureImage);
 // Create as draft, then transition to scheduled so the newsletter binds.
 const created = await ghostAdmin("posts/", {
   method: "POST",
-  body: {
-    posts: [{
-      title: front.title,
-      slug: front.slug,
-      html,
-      status: "draft",
-      custom_excerpt: front.preview,
-      meta_title: `${front.title} | Grown Men Grow`,
-      meta_description: front.dek,
-      feature_image: featureImage,
-      visibility: "public",
-      email_subject: front.email_subject,
-    }],
-  },
+  body: {posts: [buildPostPayload({source, featureImage})]},
   searchParams: {source: "html"},
 });
 const draft = created.posts[0];
@@ -73,6 +88,9 @@ const scheduled = await ghostAdmin(`posts/${draft.id}/`, {
 });
 console.log("scheduled:", scheduled.posts[0].status, scheduled.posts[0].published_at);
 
+// Verified with `include` and NO `fields`: Ghost applies `fields` after
+// `include` and drops the relation it just fetched, so a query passing both
+// reports `newsletter: NONE` on a correctly bound post.
 const check = await ghostAdmin(`posts/${draft.id}/`, {searchParams: {include: "newsletter"}});
 const post = check.posts[0];
 console.log("\nVERIFY");
@@ -81,5 +99,6 @@ console.log("  published_at:", post.published_at);
 console.log("  newsletter  :", post.newsletter ? post.newsletter.slug : "NONE — email would not send");
 console.log("  email_segment:", post.email_segment);
 console.log("  feature     :", post.feature_image ? "set" : "MISSING");
+console.log("  alt text    :", post.feature_image_alt || "MISSING — the feature image ships with no alt text");
 console.log("  excerpt     :", post.custom_excerpt);
 console.log("  html length :", (post.html || "").length);
