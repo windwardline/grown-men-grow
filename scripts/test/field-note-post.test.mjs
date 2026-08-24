@@ -4,7 +4,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { parseFrontmatter, extractEssaySource, essayHtml, buildPostPayload, assertPublishInstant } from '../lib/field-note-post.mjs';
+import { parseFrontmatter, extractEssaySource, essayHtml, buildPostPayload, assertPublishInstant, parseStagingArgs } from '../lib/field-note-post.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const notesDir = path.join(root, 'content', 'field-notes');
@@ -124,6 +124,41 @@ test('buildPostPayload passes feature_image_alt through when frontmatter supplie
   const withAlt = NOTE.replace('status: founder-approved', 'feature_image_alt: A described collage.\nstatus: founder-approved');
   const payload = buildPostPayload({ source: withAlt, featureImage: 'https://example.test/f.png' });
   assert.equal(payload.feature_image_alt, 'A described collage.');
+});
+
+test('parseStagingArgs reads a real run', () => {
+  assert.deepEqual(parseStagingArgs(['a-slug', '2026-09-01T12:00:00.000Z']), {
+    slug: 'a-slug', publishAt: '2026-09-01T12:00:00.000Z', dryRun: false,
+  });
+});
+
+test('parseStagingArgs reads a dry run with or without a publish time', () => {
+  assert.equal(parseStagingArgs(['a-slug', '--dry-run']).dryRun, true);
+  assert.equal(parseStagingArgs(['--dry-run', 'a-slug']).slug, 'a-slug');
+  assert.equal(parseStagingArgs(['a-slug', '2026-09-01T12:00:00.000Z', '--dry-run']).dryRun, true);
+});
+
+// The whole reason this is strict. Each of these fails an `includes` check and
+// survives a filter, so both positionals stay intact, every later check passes,
+// and a verification run becomes a real one that binds a newsletter send.
+test('parseStagingArgs refuses a near miss on the dry-run flag rather than running for real', () => {
+  for (const typo of ['--dry-runn', '-dry-run', '--dryrun', '--dry_run', '--DRY-RUN']) {
+    assert.throws(
+      () => parseStagingArgs(['a-slug', '2026-09-01T12:00:00.000Z', typo]),
+      /Unrecognised argument/,
+      `${typo} was accepted, which would have staged for real`,
+    );
+  }
+});
+
+test('parseStagingArgs refuses an extra positional', () => {
+  assert.throws(() => parseStagingArgs(['a-slug', '2026-09-01T12:00:00.000Z', 'dry-run']), /at most a slug and a publish time/);
+});
+
+test('parseStagingArgs requires a slug, and a publish time unless the run is dry', () => {
+  assert.throws(() => parseStagingArgs([]), /slug is required/);
+  assert.throws(() => parseStagingArgs(['--dry-run']), /slug is required/);
+  assert.throws(() => parseStagingArgs(['a-slug']), /publish time is required/);
 });
 
 // A fixed instant, because a test that reads the clock proves something

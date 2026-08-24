@@ -1782,3 +1782,25 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** none. Every Ghost call across this entire sequence was a read. The week's staging is untouched.
 
 **Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (seventh entry) — Claude Code: the mistyped flag that would have staged for real
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Fifth review round, on head `66e3f8c`.
+
+**One finding, in code this branch introduced, and it is the most consequential of the sequence.** Argument parsing was `args.includes("--dry-run")` with a filter beside it. Every near miss — `--dry-runn`, `-dry-run`, `--dryrun`, a stray space — fails the `includes` test *and* survives the filter, so `DRY_RUN` came out false while both positionals stayed intact. Every later check then passes, because the slug is real and the timestamp is the genuine next slot. The run would upload the image, create the post, and transition it to scheduled with the newsletter bound to `email_segment: all`.
+
+**Nothing downstream catches it.** This script does not check whether the slug already has a Ghost post, and Ghost suffixes a duplicate slug rather than refusing it. On an already-staged week — which is most weeks — the typo produces a **second** scheduled post carrying the same publish instant with the newsletter bound. That is a Ghost send without the founder's authorization for that action, which the launch-authority rule forbids outright.
+
+**The exposure is this branch's own making, twice over.** `main` parsed positionally with no flag to mistype, and every invocation was a real run by design. This work added the flag *and* wrote the instruction to type it every week including the weeks whose entire intent is to verify without mutating — which is exactly when the typo would be made and exactly when a real run is least expected.
+
+`parseStagingArgs` now lives in the library and rejects any argument beginning with `-` that is not exactly `--dry-run`, rejects a third positional, and requires a slug plus a publish time unless the run is dry. Five tests cover it, one iterating the near misses with a failure message naming what acceptance would have meant. All six shapes were also run against the executable and each refuses before any network call.
+
+**That completes the argument surface.** Everything the script does before its first network call — argument parsing, publish-instant validation, payload construction and validation — is now a pure function under `node --test`. What remains in the executable is the three Ghost calls and their ordering, which is where the module header always said the line should fall.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, `scripts/stage-next-field-note.mjs`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (89 pass, 0 fail); `node scripts/verify-repository.mjs` (514 tracked files, 42 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. The builder was re-checked against production and still reproduces both live posts' HTML exactly.
+
+**External state changed:** none. Every Ghost call across this entire sequence was a read. The week's staging is untouched — the post remains scheduled with the newsletter bound, and all four Buffer posts remain queued.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.

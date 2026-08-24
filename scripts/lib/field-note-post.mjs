@@ -16,6 +16,45 @@
 // here.
 const MINIMUM_LEAD_MS = 5 * 60 * 1000;
 
+export const DRY_RUN_FLAG = '--dry-run';
+
+/**
+ * The staging command line, parsed strictly. Returns `{slug, publishAt, dryRun}`
+ * and throws by name on anything it does not recognise.
+ *
+ * Strict because of what a near miss costs here. `--dry-runn`, `-dry-run`,
+ * `--dryrun` and a stray space all fail an `includes` test while surviving a
+ * filter, so a mistyped flag would leave both positionals intact and every
+ * later check would pass — the slug is real and the timestamp is the genuine
+ * next slot. The run would then upload, create, and transition the post to
+ * scheduled with the newsletter bound to the whole list. Nothing downstream
+ * catches it: this script does not check whether the slug already has a Ghost
+ * post, and Ghost suffixes a duplicate slug rather than refusing it, so on an
+ * already-staged week the typo yields a SECOND scheduled post that sends. The
+ * weekly instruction is to pass this flag every week, including the weeks whose
+ * whole intent is to verify without mutating, which is exactly when the typo
+ * would be made.
+ */
+export function parseStagingArgs(argv) {
+  const flags = argv.filter((arg) => arg.startsWith('-'));
+  const unknown = flags.filter((flag) => flag !== DRY_RUN_FLAG);
+  if (unknown.length > 0) {
+    throw new Error(`Unrecognised argument ${JSON.stringify(unknown[0])}; the only flag is ${DRY_RUN_FLAG}.`);
+  }
+
+  const positional = argv.filter((arg) => !arg.startsWith('-'));
+  if (positional.length > 2) {
+    throw new Error(`Expected at most a slug and a publish time; got ${positional.length} positional arguments.`);
+  }
+
+  const [slug, publishAt] = positional;
+  const dryRun = flags.includes(DRY_RUN_FLAG);
+  if (!slug) throw new Error('A field note slug is required.');
+  if (!publishAt && !dryRun) throw new Error('A publish time is required for a real run.');
+
+  return {slug, publishAt: publishAt ?? null, dryRun};
+}
+
 /**
  * The publish instant, validated. Returns its epoch milliseconds and throws by
  * name on anything else.

@@ -16,7 +16,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import {fileURLToPath} from "node:url";
-import {assertPublishInstant, buildPostPayload} from "./lib/field-note-post.mjs";
+import {assertPublishInstant, buildPostPayload, parseStagingArgs} from "./lib/field-note-post.mjs";
 import {ghostAdmin} from "./lib/ghost-admin.mjs";
 
 // Stands in for the image URL while the payload is built and validated ahead of
@@ -24,11 +24,17 @@ import {ghostAdmin} from "./lib/ghost-admin.mjs";
 const PENDING_UPLOAD = "pending-upload";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const args = process.argv.slice(2);
-const DRY_RUN = args.includes("--dry-run");
-const [SLUG, PUBLISH_AT_UTC] = args.filter((arg) => arg !== "--dry-run");
-
-if (!SLUG || (!PUBLISH_AT_UTC && !DRY_RUN)) {
+// Parsed strictly, in the library, where tests reach it. A near miss on the
+// flag — `--dry-runn`, `--dryrun`, a stray space — would otherwise leave both
+// positionals intact and turn a verification run into a real one that binds a
+// newsletter send. See parseStagingArgs for why nothing downstream catches it.
+let SLUG;
+let PUBLISH_AT_UTC;
+let DRY_RUN;
+try {
+  ({slug: SLUG, publishAt: PUBLISH_AT_UTC, dryRun: DRY_RUN} = parseStagingArgs(process.argv.slice(2)));
+} catch (error) {
+  console.error(error.message);
   console.error("usage: node scripts/stage-next-field-note.mjs <slug> <ISO-utc> [--dry-run]");
   console.error("  slug: lowest-numbered note in docs/technical/publication-order.md with no Ghost post");
   console.error("  --dry-run: build and print the payloads, make no network call");
