@@ -10,6 +10,50 @@
 // in the executable is what should: argument parsing, the network calls, and the
 // order they happen in.
 
+// A slot is staged days ahead, so anything inside this window of "now" is a
+// mistake regardless of what Ghost itself would accept. Stated as our own floor
+// rather than as a claim about Ghost's scheduling rule, which is not measured
+// here.
+const MINIMUM_LEAD_MS = 5 * 60 * 1000;
+
+/**
+ * The publish instant, validated. Returns its epoch milliseconds and throws by
+ * name on anything else.
+ *
+ * Lives here rather than in the executable because it is a pure function of a
+ * string, and the executable does its work at import so no test can reach it.
+ * The caller still checks at the top, before any network call: this value is
+ * first USED at the draft -> scheduled transition, which is the third call, so
+ * a bad one caught there leaves an uploaded image and an orphaned draft behind.
+ *
+ * Trailing Z is required rather than mere parseability: `2026-09-01T12:00:00`
+ * parses and is read as LOCAL time, so an 8:00 AM ET slot silently lands at
+ * another hour with every verification line still reading correct.
+ *
+ * Staleness is checked in the same place and for the same reason. Last week's
+ * timestamp is a well-formed instant ending in Z, and re-running last week's
+ * command is a likelier slip than mistyping a zone. Ghost either refuses it —
+ * a 422 at the third call, with the upload and the draft already made — or
+ * accepts it and the scheduler fires on a past date, sending the newsletter
+ * immediately and unreviewed, which the launch-authority rule forbids.
+ */
+export function assertPublishInstant(value, {now = Date.now()} = {}) {
+  if (typeof value !== 'string' || !value) {
+    throw new Error('Publish time is required as an ISO instant in UTC.');
+  }
+  if (!value.endsWith('Z')) {
+    throw new Error(`Publish time ${JSON.stringify(value)} does not end in Z; an instant without a zone is read as local time (12:00:00.000Z is 8:00 AM ET during daylight time).`);
+  }
+  const epochMs = Date.parse(value);
+  if (Number.isNaN(epochMs)) {
+    throw new Error(`Publish time ${JSON.stringify(value)} is not a parseable ISO instant.`);
+  }
+  if (epochMs - now < MINIMUM_LEAD_MS) {
+    throw new Error(`Publish time ${JSON.stringify(value)} is not at least five minutes ahead of now; staging a past slot either fails after the upload or publishes and sends immediately.`);
+  }
+  return epochMs;
+}
+
 const REQUIRED_FRONTMATTER = ['title', 'slug', 'dek', 'preview', 'email_subject'];
 
 // Staging binds a newsletter send, so the approval gate belongs in code rather

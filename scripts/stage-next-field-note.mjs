@@ -16,7 +16,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import {fileURLToPath} from "node:url";
-import {buildPostPayload} from "./lib/field-note-post.mjs";
+import {assertPublishInstant, buildPostPayload} from "./lib/field-note-post.mjs";
 import {ghostAdmin} from "./lib/ghost-admin.mjs";
 
 // Stands in for the image URL while the payload is built and validated ahead of
@@ -35,14 +35,17 @@ if (!SLUG || (!PUBLISH_AT_UTC && !DRY_RUN)) {
   process.exit(1);
 }
 
-// Checked HERE, not at the PUT that uses it. That PUT is the third network call:
-// a malformed or locally-zoned timestamp caught there leaves an uploaded PNG and
-// an orphaned draft behind it, on the morning the slot is due. Trailing Z is
-// required rather than merely parseable — a naive string is read as local time,
-// which is how an 8:00 AM ET slot silently becomes a different hour.
-if (PUBLISH_AT_UTC && (!/Z$/.test(PUBLISH_AT_UTC) || Number.isNaN(Date.parse(PUBLISH_AT_UTC)))) {
-  console.error(`publish time ${JSON.stringify(PUBLISH_AT_UTC)} is not an ISO instant in UTC; it must parse and end in Z (12:00:00.000Z is 8:00 AM ET during daylight time).`);
-  process.exit(1);
+// Checked HERE, not at the PUT that uses it. That PUT is the third network call,
+// so a bad timestamp caught there leaves an uploaded PNG and an orphaned draft
+// behind it, on the morning the slot is due. The predicate itself lives in the
+// library so tests can reach it; only the ordering is this file's business.
+if (PUBLISH_AT_UTC) {
+  try {
+    assertPublishInstant(PUBLISH_AT_UTC);
+  } catch (error) {
+    console.error(error.message);
+    process.exit(1);
+  }
 }
 
 const sourcePath = path.join(root, `content/field-notes/${SLUG}.md`);
@@ -98,7 +101,7 @@ if (DRY_RUN) {
   form.append("file", new Blob([fs.readFileSync(imagePath)], {type: "image/png"}), `${SLUG}.png`);
   form.append("purpose", "image");
   const upload = await ghostAdmin("images/upload/", {method: "POST", body: form});
-  payload.feature_image = upload.images[0].url;
+  payload.feature_image = upload.images?.[0]?.url;
   // Re-checked after the assignment, because passing a placeholder into
   // buildPostPayload to get validate-before-mutate ordering made its own
   // featureImage guard unreachable from here. Without this, an upload that

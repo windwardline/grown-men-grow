@@ -4,7 +4,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { parseFrontmatter, extractEssaySource, essayHtml, buildPostPayload } from '../lib/field-note-post.mjs';
+import { parseFrontmatter, extractEssaySource, essayHtml, buildPostPayload, assertPublishInstant } from '../lib/field-note-post.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const notesDir = path.join(root, 'content', 'field-notes');
@@ -124,6 +124,47 @@ test('buildPostPayload passes feature_image_alt through when frontmatter supplie
   const withAlt = NOTE.replace('status: founder-approved', 'feature_image_alt: A described collage.\nstatus: founder-approved');
   const payload = buildPostPayload({ source: withAlt, featureImage: 'https://example.test/f.png' });
   assert.equal(payload.feature_image_alt, 'A described collage.');
+});
+
+// A fixed instant, because a test that reads the clock proves something
+// different every time it runs.
+const NOW = Date.parse('2026-08-24T14:00:00.000Z');
+const NEXT_SLOT = '2026-09-01T12:00:00.000Z';
+
+test('assertPublishInstant accepts a future UTC instant and returns its epoch', () => {
+  assert.equal(assertPublishInstant(NEXT_SLOT, { now: NOW }), Date.parse(NEXT_SLOT));
+});
+
+// `2026-09-01T12:00:00` parses cleanly and is read as LOCAL time, so the slot
+// lands at another hour while every verification line still reads correct.
+test('assertPublishInstant rejects an instant with no zone', () => {
+  assert.throws(() => assertPublishInstant('2026-09-01T12:00:00', { now: NOW }), /does not end in Z/);
+});
+
+test('assertPublishInstant rejects an offset-form instant', () => {
+  assert.throws(() => assertPublishInstant('2026-09-01T08:00:00-04:00', { now: NOW }), /does not end in Z/);
+});
+
+test('assertPublishInstant rejects an unparseable string', () => {
+  assert.throws(() => assertPublishInstant('not-a-dateZ', { now: NOW }), /not a parseable ISO instant/);
+});
+
+test('assertPublishInstant rejects a missing or non-string value', () => {
+  for (const value of [undefined, null, '', 42]) {
+    assert.throws(() => assertPublishInstant(value, { now: NOW }), /required as an ISO instant/);
+  }
+});
+
+// Last week's command re-run: a well-formed instant ending in Z, which the shape
+// checks pass. Ghost either refuses it after the upload and the create, or
+// accepts it and sends the newsletter immediately and unreviewed.
+test('assertPublishInstant rejects a stale instant', () => {
+  assert.throws(() => assertPublishInstant('2026-08-18T12:00:00.000Z', { now: NOW }), /five minutes ahead/);
+});
+
+test('assertPublishInstant rejects an instant inside the lead-time floor', () => {
+  assert.throws(() => assertPublishInstant('2026-08-24T14:04:00.000Z', { now: NOW }), /five minutes ahead/);
+  assert.equal(assertPublishInstant('2026-08-24T14:05:00.000Z', { now: NOW }), NOW + 5 * 60 * 1000);
 });
 
 test('buildPostPayload refuses a falsy feature image', () => {
