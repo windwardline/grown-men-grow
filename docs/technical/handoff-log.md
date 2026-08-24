@@ -1676,3 +1676,15 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** None beyond pull request #128. No provider account, publication surface, integration, or media file changed.
 
 **Open:** Push this append-only correction, wait for the fresh remote gates and advisory review, merge only on a clean result, then restore local `main` to exact remote parity.
+
+## 2026-08-24 (fifth entry) — Codex: exception boundary made internally consistent
+
+**Scope completed:** The third advisory pass confirmed every earlier finding closed and found one remaining contradiction: the decision simultaneously called the redaction an exception and claimed the general non-rewrite rule was unchanged by it. The ruling now states the relationship directly. The 2026-08-18 prohibition remains general; the founder's 2026-08-24 instruction creates one narrow exception for the vendor name in the two 2026-08-11 decision records and matching handoff entry. No other historical rewrite is authorized.
+
+**Files changed:** `docs/technical/decision-log.md` and this log.
+
+**Verification:** `node scripts/verify-ghost-theme.mjs` passed for 17 required files; `pnpm --dir theme install --frozen-lockfile` completed with the lockfile current; `pnpm --dir theme test` passed fatal GScan on the source theme; `pnpm --dir theme zip` and packaged-ZIP fatal GScan passed; `node --test 'scripts/test/**/*.test.mjs'` passed 55 tests with zero failures; `node scripts/verify-repository.mjs` passed over 512 tracked files; `bash scripts/verify-svg-xml.sh` validated 150 SVG files; `git diff --check` passed; and the exact tracked-text and tracked-path provider sweeps returned no match. On head `3e1adc4`, Repository verification, Dependency scan / osv-scan, Secret scan, Semgrep CE, review / gate, and review / review all passed remotely; the third advisory pass independently confirmed the prior findings closed.
+
+**External state changed:** None beyond pull request #128. No provider account, publication surface, integration, or media file changed.
+
+**Open:** Push the final wording, inspect the fresh remote and advisory results, merge only if no finding survives, then restore local `main` to exact remote parity.
