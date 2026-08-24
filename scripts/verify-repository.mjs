@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { createHash } from 'node:crypto';
-import { existsSync } from 'node:fs';
+import { statSync } from 'node:fs';
 import { lstat, readFile, readdir } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 
@@ -48,10 +48,23 @@ function checkNodeSyntax(file) {
 // `node --check` parses a module; it never resolves its imports, because ESM
 // specifiers are looked up at link time. So a wrong relative path is invisible
 // to every syntax gate and only surfaces the first time the file is actually
-// run. `stage-next-field-note.mjs` imported "./scripts/lib/ghost-admin.mjs"
-// from inside scripts/ and died on ERR_MODULE_NOT_FOUND on its first line —
-// unnoticed because `publication-order.md` names it as the staging path and the
-// register happened to have two slots already scheduled, so nothing invoked it.
+// run. stage-next-field-note.mjs pointed at a scripts/scripts/lib path from
+// inside scripts/ and died on ERR_MODULE_NOT_FOUND on its first line — unnoticed
+// because publication-order.md names it as the staging path and the register
+// happened to have two slots already scheduled, so nothing invoked it.
+//
+// The target must be a regular FILE, not merely present: a directory specifier
+// throws ERR_UNSUPPORTED_DIR_IMPORT at exactly the same link-time moment, so a
+// bare existence check would pass the defect this gate exists to catch.
+//
+// Stated plainly, because a gate must not imply coverage it does not have: this
+// reads raw source rather than a parse tree, and the match requires a preceding
+// `from` or `import`. So a path quoted after one of those is scanned wherever it
+// appears, comments and string literals included; a path quoted on its own in
+// prose is not scanned at all. That direction is safe — it can only fail the
+// build loudly on something real, never wave a broken import through — and it is
+// the argument for keeping this over a comment-stripping scanner, which could
+// desync on a regex literal and skip a real import instead.
 const RELATIVE_SPECIFIER = /(?:\bfrom\s*|\bimport\s*\(?\s*)['"](\.{1,2}\/[^'"]+)['"]/g;
 
 async function checkImportsResolve(file) {
@@ -59,7 +72,19 @@ async function checkImportsResolve(file) {
   const directory = path.dirname(file);
   for (const [, specifier] of source.matchAll(RELATIVE_SPECIFIER)) {
     const target = path.resolve(directory, specifier);
-    if (!existsSync(target)) {
+    // Any stat error means the same thing here — the specifier does not name a
+    // file — and every one of them must arrive as a named failure rather than a
+    // stack trace, or the checks after this one never run. `throwIfNoEntry`
+    // suppresses only ENOENT by contract, so a path whose intermediate
+    // component is a regular file can still raise ENOTDIR. Node reports that
+    // specifier as ERR_MODULE_NOT_FOUND, so it belongs in this same branch.
+    let resolved = null;
+    try {
+      resolved = statSync(target);
+    } catch {
+      resolved = null;
+    }
+    if (!resolved?.isFile()) {
       fail(`${relative(file)} imports ${specifier}, which does not resolve to a file.`);
     }
   }
@@ -402,6 +427,7 @@ const requiredFiles = [
   'scripts/render-theme-preview.mjs',
   'scripts/lib/buffer-api.mjs',
   'scripts/lib/editorial-collage.mjs',
+  'scripts/lib/field-note-post.mjs',
   'scripts/lib/ghost-admin.mjs',
   'scripts/lib/note-slot.mjs',
   'scripts/lib/note-pack.mjs',
@@ -413,6 +439,8 @@ const requiredFiles = [
   'scripts/test/note-pack.test.mjs',
   'scripts/test/note-decision.test.mjs',
   'scripts/test/task-lock.test.mjs',
+  'scripts/test/field-note-post.test.mjs',
+  'scripts/test/ghost-admin.test.mjs',
   'scripts/test/hold-state.test.mjs',
   'theme/package.json',
   'theme/pnpm-lock.yaml',
