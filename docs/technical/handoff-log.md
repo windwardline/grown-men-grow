@@ -1633,7 +1633,7 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 
 **Files changed:** `docs/technical/decision-log.md` and this log.
 
-**External state changed:** None. The founder canceled the subscription outside this repository; this work did not alter an account, integration, publication surface, or generated-media file.
+**External state changed:** Branch `codex/remove-retired-voice-provider` was pushed and pull request #127 opened. The founder canceled the subscription outside this repository; this work did not alter an account, integration, publication surface, or generated-media file.
 
 **Verification:** Exact case-insensitive searches over tracked text and tracked paths found no retired-provider reference. `node scripts/verify-repository.mjs` and `git diff --check` pass.
 
