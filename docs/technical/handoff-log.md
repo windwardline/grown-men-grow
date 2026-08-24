@@ -2090,3 +2090,21 @@ produced `Male Friendship Before Crisis | Grown Men Grow Approved 2026-08-24 alo
 **External state changed:** none. Every Ghost call was a read. This week's post and all four Buffer posts are untouched.
 
 **Open, in order:** unchanged from the nineteenth entry — (1) Field Note 2's live `custom_excerpt`; (2) `feature_image_alt` for field notes; (3) the Substack classifier block; (4) the audience problem.
+
+## 2026-08-24 (twenty-first entry) — Claude Code: Semgrep gate, and the branch closed
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Final commit before merge.
+
+**Semgrep CE failed the branch on one finding, and it was correct.** `new RegExp(\`^#{1,${level}}(?!#) \`)` in the metadata section-cut is a dynamically constructed pattern — `javascript.lang.security.audit.detect-non-literal-regexp`, flagged as a ReDoS surface. Replaced with a plain hash count, which is both clean under the gate and clearer about what it means than an interpolated quantifier. Verified locally: `semgrep scan --config auto --error` over the file, 368 rules, 0 findings. Behaviour unchanged — all heading levels still parse, the sibling-hijack case still refuses, and the one real note still yields both approved fields.
+
+**The branch is closed here at the founder's direction, and the reason is worth recording honestly.** This branch ran nineteen advisory review rounds. The first six found real defects with real consequences: a staging script that had never executed, a bold-text conversion that corrupted paragraphs bound for the newsletter, validation running after the image upload, and a mistyped `--dry-run` that would have staged for real and sent a second newsletter to the whole list. The rounds after that were coverage gaps in a Markdown guard, protecting against constructs in field notes that do not exist yet and that the founder would have to write and approve first — nearly every one flagged by the reviewer itself as "not a live defect."
+
+**The judgement failure was mine, not the reviewer's.** It was doing its job; no stopping rule was applied to it. A reviewer will always find something, and the decision about when a finding stops being worth a round belongs to the agent, not to the reviewer. Recorded here rather than left implicit, because the next agent to open an advisory-review loop on this repository will face the same pull.
+
+**Nothing in the week's work was touched at any point.** Ghost remains scheduled for 2026-08-25 08:00 ET with the newsletter bound; all four Buffer posts remain queued.
+
+**Files changed:** `scripts/lib/field-note-post.mjs` and this log.
+
+**Verification:** `node --test 'scripts/test/**/*.test.mjs'` (127 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `semgrep scan --config auto --error` on the changed file, 0 findings; `git diff --check` clean. Full gate sequence ran green on the preceding head and is unchanged by a one-function edit.
+
+**Open, in order:** (1) Field Note 2's live `custom_excerpt` is the dek where the builder sends the preview — a founder call; (2) `feature_image_alt` — no field note has an approved description; `content/metadata.md` holds page-keyed ones for the three launch pages and is where field-note descriptions would belong; (3) the Substack classifier block — both of this week's notes are founder actions, copy in the iCloud kit; (4) the audience problem from the 2026-08-23 readout, which still outranks every timing question.

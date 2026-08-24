@@ -342,10 +342,16 @@ export function parseApprovedMetadata(source) {
 
   // Cut at the next heading of the same level or shallower, so a `## ` under a
   // `# ` stays inside the section it belongs to.
+  // Counted rather than built into a RegExp: a dynamically constructed pattern
+  // is a ReDoS finding under the repository's Semgrep gate, and counting hashes
+  // says what it means more plainly than an interpolated quantifier does.
   const level = headings[0].match[1].length;
-  const closes = new RegExp(`^#{1,${level}}(?!#) `);
+  const closesSection = (line) => {
+    const depth = /^#+/.exec(line)?.[0].length ?? 0;
+    return depth >= 1 && depth <= level && line[depth] === ' ';
+  };
   const rest = lines.slice(headings[0].index + 1);
-  const end = rest.findIndex((line) => closes.test(line));
+  const end = rest.findIndex(closesSection);
   const body = (end === -1 ? rest : rest.slice(0, end)).join('\n');
 
   // Fold soft-wrapped continuations onto their entry before anything is matched.
