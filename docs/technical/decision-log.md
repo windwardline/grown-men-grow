@@ -432,7 +432,7 @@
 ## 2026-08-11 — Voice decision deferred; the field is narrowed to two
 
 - **Status:** Deferred by the founder. No voiceover work proceeds until they decide.
-- **Decision:** When voice work begins, the voice will be either a clone of the founder's own or a professional voice from the then-current provider's library, licensed through the entitlement held at the time. The founder-at-a-microphone option and other providers were out when this decision was made.
+- **Decision:** When voice work begins, the voice will be either a clone of the founder's own or a professional voice from the then-current provider's library, licensed through the entitlement held at the time. The founder-at-a-microphone option and every source outside that provider are out.
 - **A brand constraint, not just a tooling one:** one voice for the whole project. Whichever is chosen becomes the publication's spoken identity across every surface, so it is not a per-piece or per-platform choice and should not be revisited casually once set.
 - **Verify at decision time, not now:** if a professional library voice is chosen, confirm that specific voice's commercial-use license before any public use; terms vary by voice, and a general plan entitlement is not enough. If the clone is chosen, confirm that the selected service supports consent-verified cloning and retain the founder's recorded consent statement.
 - **Still unresolved and load-bearing whenever this resumes:** whether paid-tier synthetic output carries a provenance watermark such as SynthID, which decides whether Meta's mandatory per-post disclosure control applies. That question outranks the choice of voice.
@@ -669,5 +669,6 @@
 
 - **Status:** Founder-ruled after canceling the subscription.
 - **Decision:** Remove the retired provider from current documentation and project structure. No active entitlement, integration, or provider assumption remains.
-- **Historical record preserved:** The 25-second audio proof remains in place. Earlier findings still stand: the spoken identity must be one consistent founder clone or properly licensed professional voice, and any public synthetic audio or video requires a fresh provenance, license, and platform-disclosure review.
-- **Reversibility:** This is not a ban or stack exception. If a future need justifies voice work, select and verify the provider on the facts and terms available then.
+- **Historical redaction boundary:** The founder's remove-everywhere instruction authorizes only the vendor-name redactions in the 2026-08-10 and 2026-08-11 records and the matching handoff entry. Their substantive facts and conclusions remain. This narrow exception neither weakens the append-only handoff rule nor authorizes other historical rewriting. The 2026-08-18 non-rewrite statement concerns the founder, employer, and disclosure references named in that entry and stands unchanged.
+- **Proof disposition:** The 25-second audio proof was delivered to the founder outside this repository in 2026. Its current availability is unverified. This cleanup deleted no generated media.
+- **Reversibility:** This decision supersedes the earlier provider-specific exclusion for future work. It is not a ban or stack exception. If a future need justifies voice work, select and verify the provider on the facts and terms available then. The standing identity constraint still requires one consistent founder clone or properly licensed professional voice, and public synthetic audio or video still requires a fresh provenance, license, and platform-disclosure review.

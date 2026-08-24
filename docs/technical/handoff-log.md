@@ -1638,3 +1638,17 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **Verification:** Exact case-insensitive searches over tracked text and tracked paths found no retired-provider reference. `node scripts/verify-repository.mjs` and `git diff --check` pass.
 
 **Open:** None for provider retirement. If voice work resumes, provider selection, license terms, provenance marking, and platform disclosure are fresh checks on the facts then in force.
+
+## 2026-08-24 (second entry) — Codex: post-merge review reconciled
+
+**Review timing:** Pull request #127 auto-merged after its required checks passed but before the advisory review worker finished. The later review found four record-integrity issues and one verification-detail omission. They were examined rather than inherited wholesale.
+
+**Resolution:** Restoring the vendor name was rejected because it would violate the founder's explicit remove-everywhere instruction. The decision log now records that this is a narrow owner-authorized name redaction, not a general exception to append-only history. The 2026-08-11 decision again preserves the original absolute exclusion in vendor-neutral language; the 2026-08-24 ruling supersedes that provider-specific exclusion only for future work. The 2026-08-18 non-rewrite statement is scoped to the identity and disclosure references its own paragraph names. The audio proof is now recorded as delivered outside the repository with current availability unverified, rather than asserted to remain available.
+
+**Files changed:** `docs/technical/decision-log.md` and this log.
+
+**Verification, each gate named:** `node scripts/verify-ghost-theme.mjs`; `pnpm --dir theme install --frozen-lockfile`; `pnpm --dir theme test`; `pnpm --dir theme zip` plus packaged-ZIP fatal GScan; `node --test 'scripts/test/**/*.test.mjs'`; `node scripts/verify-repository.mjs`; `bash scripts/verify-svg-xml.sh`; `git diff --check`; and exact tracked-text and tracked-path provider sweeps.
+
+**External state changed:** Pull request #127 merged as `9957cf2c428e74a4ac963b6c9eafce55a5e2ab0c`; its branch was deleted locally and remotely; post-merge CI and security runs passed. This corrective branch changes no provider account, publication surface, integration, or media file.
+
+**Open:** Publish this corrective record through the normal green-gate path, then restore clean local `main` at exact remote parity.
