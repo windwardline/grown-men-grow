@@ -12,6 +12,14 @@
 
 const REQUIRED_FRONTMATTER = ['title', 'slug', 'dek', 'preview', 'email_subject'];
 
+// Staging binds a newsletter send, so the approval gate belongs in code rather
+// than in an instruction an agent has to remember. `gmg-monday-staging` has
+// always carried the rule as prose — "only stage a note whose frontmatter shows
+// founder approval" — which is exactly the shape of guard this repository keeps
+// finding it cannot rely on. Every note in `content/field-notes/` carries this
+// value today; a note that does not is one that has not been cleared to send.
+const APPROVED_STATUS = 'founder-approved';
+
 /**
  * The YAML-ish frontmatter block, as a flat object. Values keep any colon after
  * the first, so `dek: One thing: and another.` survives intact.
@@ -79,6 +87,9 @@ export function buildPostPayload({ source, featureImage }) {
   const missing = REQUIRED_FRONTMATTER.filter((key) => !front[key]);
   if (missing.length > 0) {
     throw new Error(`Field note frontmatter is missing ${missing.join(', ')}; the staged post would publish incomplete.`);
+  }
+  if (front.status !== APPROVED_STATUS) {
+    throw new Error(`Field note ${front.slug ?? '(unknown)'} has status "${front.status ?? 'none'}", not "${APPROVED_STATUS}"; staging it would send a newsletter for copy the founder has not cleared.`);
   }
   if (!featureImage) throw new Error('buildPostPayload needs the uploaded feature image URL.');
 

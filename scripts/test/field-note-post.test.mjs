@@ -126,6 +126,26 @@ test('buildPostPayload passes feature_image_alt through when frontmatter supplie
   assert.equal(payload.feature_image_alt, 'A described collage.');
 });
 
+test('buildPostPayload refuses a note the founder has not approved', () => {
+  const draft = NOTE.replace('status: founder-approved', 'status: draft');
+  assert.throws(() => buildPostPayload({ source: draft, featureImage: 'x' }), /not "founder-approved"/);
+});
+
+test('buildPostPayload refuses a note carrying no status at all', () => {
+  const none = NOTE.replace('status: founder-approved\n', '');
+  assert.throws(() => buildPostPayload({ source: none, featureImage: 'x' }), /status "none"/);
+});
+
+// The executable builds the payload BEFORE the upload so that an invalid note
+// cannot leave an orphaned image in Ghost storage. That ordering only protects
+// anything if validation does not depend on the real image URL.
+test('buildPostPayload validates without a real feature image URL', () => {
+  const draft = NOTE.replace('status: founder-approved', 'status: draft');
+  assert.throws(() => buildPostPayload({ source: draft, featureImage: 'pending-upload' }), /not "founder-approved"/);
+  const noSubject = NOTE.replace('email_subject: A Title\n', '');
+  assert.throws(() => buildPostPayload({ source: noSubject, featureImage: 'pending-upload' }), /email_subject/);
+});
+
 test('buildPostPayload refuses a note missing a field the send depends on', () => {
   const noSubject = NOTE.replace('email_subject: A Title\n', '');
   assert.throws(() => buildPostPayload({ source: noSubject, featureImage: 'x' }), /email_subject/);

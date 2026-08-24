@@ -91,6 +91,8 @@ It reads the approved source, parses the frontmatter, builds the HTML, resolves 
 
 A dry run that reports `alt text: MISSING` is accurate rather than broken: no field note carries `feature_image_alt` in its frontmatter yet, so the Ghost feature image ships without alt text. The staged post passes the value through the moment a note supplies one.
 
+**The script refuses a note whose frontmatter is not `status: founder-approved`, and it decides that before it uploads anything.** Staging binds a newsletter send, so the approval rule lives in `buildPostPayload` rather than in an instruction the weekly task has to remember. The payload is built and validated first and the uploaded image URL attached afterwards — the reverse order would leave an orphaned PNG in Ghost storage and a stack trace on the morning a slot is due, and `AGENTS.md` states the rule outright: validate before mutating.
+
 **The hold check in that task still runs first and still governs** — a held week shifts every projection below it by one slot and changes nothing about the order.
 
 Changing the order is a founder decision recorded here. The checker enforces the constraints; it does not enforce the preferences, which are stated above so a future change can disagree with them knowingly.

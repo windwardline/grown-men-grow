@@ -19,6 +19,10 @@ import {fileURLToPath} from "node:url";
 import {buildPostPayload} from "./lib/field-note-post.mjs";
 import {ghostAdmin} from "./lib/ghost-admin.mjs";
 
+// Stands in for the image URL while the payload is built and validated ahead of
+// the upload that produces the real one.
+const PENDING_UPLOAD = "pending-upload";
+
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
 const DRY_RUN = args.includes("--dry-run");
@@ -70,18 +74,27 @@ if (DRY_RUN) {
   // does not flush what is still queued — a silently truncated HTML dump is
   // the exact failure this script exists to stop. Let the module end instead.
 
+  // Built BEFORE the upload, because building is where the validation lives:
+  // buildPostPayload throws on missing frontmatter, on a note that is not
+  // founder-approved, on an absent essay heading, and on an empty essay body.
+  // AGENTS.md states the rule outright — validate before mutating. Calling it
+  // after the upload would leave an orphaned PNG in Ghost storage and a stack
+  // trace, on the morning the slot is due. The image URL is the one field that
+  // cannot exist yet, so it is attached below rather than waited for here.
+  const payload = buildPostPayload({source, featureImage: PENDING_UPLOAD});
+
   // Feature image -> Ghost storage.
   const form = new FormData();
   form.append("file", new Blob([fs.readFileSync(imagePath)], {type: "image/png"}), `${SLUG}.png`);
   form.append("purpose", "image");
   const upload = await ghostAdmin("images/upload/", {method: "POST", body: form});
-  const featureImage = upload.images[0].url;
-  console.log("feature image:", featureImage);
+  payload.feature_image = upload.images[0].url;
+  console.log("feature image:", payload.feature_image);
 
   // Create as draft, then transition to scheduled so the newsletter binds.
   const created = await ghostAdmin("posts/", {
     method: "POST",
-    body: {posts: [buildPostPayload({source, featureImage})]},
+    body: {posts: [payload]},
     searchParams: {source: "html"},
   });
   const draft = created.posts[0];

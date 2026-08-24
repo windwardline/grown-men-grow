@@ -58,10 +58,13 @@ function checkNodeSyntax(file) {
 // bare existence check would pass the defect this gate exists to catch.
 //
 // Stated plainly, because a gate must not imply coverage it does not have: this
-// reads raw source, so a quoted relative path sitting in a comment or a string
-// literal is scanned like an import. That direction is safe — it can only fail
-// the build loudly on something real, never wave a broken import through — but
-// it means prose in this file avoids quoting a path that does not exist.
+// reads raw source rather than a parse tree, and the match requires a preceding
+// `from` or `import`. So a path quoted after one of those is scanned wherever it
+// appears, comments and string literals included; a path quoted on its own in
+// prose is not scanned at all. That direction is safe — it can only fail the
+// build loudly on something real, never wave a broken import through — and it is
+// the argument for keeping this over a comment-stripping scanner, which could
+// desync on a regex literal and skip a real import instead.
 const RELATIVE_SPECIFIER = /(?:\bfrom\s*|\bimport\s*\(?\s*)['"](\.{1,2}\/[^'"]+)['"]/g;
 
 async function checkImportsResolve(file) {
