@@ -1890,3 +1890,23 @@ The corpus test now holds every note in the bank to the same rule, so a note nee
 **External state changed:** none. Every call across this entire sequence was a read. All four Buffer posts remain queued.
 
 **Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (twelfth entry) — Claude Code: the guard's one position-dependent rule, and the spellings it did not cover
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Tenth review round, on head `8aff174`.
+
+**The renderability guard scanned lines; the renderer renders blocks, and for one construct that difference is the whole rule.** `essayHtml` splits on `/\n{2,}/` and treats `## ` as a heading only when it opens a block. The guard exempted `## ` by line, so a heading following a text line without a blank between them passed and rendered as `<p>A sentence here. ## A heading</p>` — verified. In CommonMark an ATX heading interrupts a paragraph, so that is valid Markdown which renders as a heading everywhere except here. The one construct the guard declared supported was the one route back into the failure class the guard exists to close.
+
+**The check now splits the way the renderer does, and one detail of that mattered.** A block opens at the start or after an **exactly empty** line, because that is what `/\n{2,}/` matches. A whitespace-only line does not separate blocks for the renderer, so treating it as one here would have waved through a heading the renderer keeps inside the paragraph. The first draft of the fix used `.trim() === ''` and had precisely that hole; it was rewritten before commit, and a test asserts the renderer sees one block for that input while the guard refuses it.
+
+**The inline half covered the asterisk spellings and nothing else.** `_emphasis_`, `__strong__`, and `~~struck~~` shipped with their punctuation visible. Underscore emphasis is the one that matters: it is the other standard spelling of a construct the builder *does* support, so it is what an editorial hand reaches for without thinking about the renderer. All three are refused by name, and the opening underscore must sit at a word boundary so a snake_case identifier written into running prose is still allowed — two tests hold that, since the frontmatter keys in this repository are all snake_case and quoting one in an essay is plausible.
+
+**Both were coverage gaps rather than live defects, checked before being called either.** Every `## ` in the bank is preceded by a blank line, and no essay slice contains underscore emphasis or strikethrough. The corpus test holds all thirteen notes to both rules from here.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (104 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. The builder still reproduces both live posts' HTML exactly and still produces 5,055 characters for next Monday's note.
+
+**External state changed:** none. Every call across this entire sequence was a read. All four Buffer posts remain queued.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.

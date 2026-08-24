@@ -123,6 +123,42 @@ test('essayHtml refuses Markdown it would render as literal text', () => {
   }
 });
 
+// `## ` is the one supported construct whose correctness depends on POSITION.
+// essayHtml only treats it as a heading when it opens a block; anywhere else it
+// is literal hashes in running text — valid CommonMark everywhere else, mangled
+// here, and bound to a newsletter that cannot be unsent.
+test('assertRenderableEssay refuses a "## " heading that does not begin its paragraph', () => {
+  assert.throws(() => assertRenderableEssay('A sentence here.\n## A heading'), /does not begin its paragraph/);
+  assert.throws(() => assertRenderableEssay('one\n\ntwo\n\nthree\n## bad'), /Essay line 6/);
+});
+
+test('assertRenderableEssay allows a "## " heading that opens its block', () => {
+  assert.doesNotThrow(() => assertRenderableEssay('## Opening the essay'));
+  assert.doesNotThrow(() => assertRenderableEssay('A sentence.\n\n## A heading\n\nMore.'));
+});
+
+// `/\n{2,}/` splits on consecutive newlines, so a whitespace-only line does NOT
+// separate blocks for the renderer. Treating it as a separator here would wave
+// through a heading the renderer keeps inside the paragraph.
+test('assertRenderableEssay does not treat a whitespace-only line as a block break', () => {
+  const body = 'A sentence.\n   \n## A heading';
+  assert.equal(body.split(/\n{2,}/).length, 1, 'precondition: the renderer sees one block');
+  assert.throws(() => assertRenderableEssay(body), /does not begin its paragraph/);
+});
+
+test('essayHtml refuses the underscore spellings of the constructs it does support', () => {
+  assert.throws(() => essayHtml('He was _never_ sure.'), /underscore emphasis/);
+  assert.throws(() => essayHtml('He was __certainly__ sure.'), /underscore strong/);
+  assert.throws(() => essayHtml('He was ~~calm~~.'), /strikethrough/);
+});
+
+// The opening underscore must sit at a word boundary, or an identifier written
+// into running prose would be refused as emphasis.
+test('assertRenderableEssay allows a snake_case identifier in running prose', () => {
+  assert.doesNotThrow(() => assertRenderableEssay('The field is social_copy_status in the frontmatter.'));
+  assert.doesNotThrow(() => assertRenderableEssay('Both personal_claims and artwork_status are set.'));
+});
+
 // A soft-wrapped paragraph can begin with a year. That must not read as a list.
 test('assertRenderableEssay allows a line beginning with a four-digit year', () => {
   assert.doesNotThrow(() => assertRenderableEssay('1994. A firefighter on television said so.'));

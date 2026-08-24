@@ -176,6 +176,15 @@ const UNRENDERABLE = [
   [/!\[[^\]]*\]\(/, 'an image'],
   [/\[[^\]]*\]\([^)]*\)/, 'a link'],
   [/`/, 'code formatting'],
+  // The other standard spellings of the two constructs the builder DOES
+  // support, which is what an editorial hand reaches for without thinking about
+  // the renderer. `inline()` converts asterisks and nothing else, so these ship
+  // with their punctuation visible. The opening underscore must sit at a word
+  // boundary so a snake_case identifier in running prose is not mistaken for
+  // emphasis.
+  [/(?:^|[\s(])__[^_\s][^_]*__/, 'underscore strong (write **strong** instead)'],
+  [/(?:^|[\s(])_[^_\s][^_]*_/, 'underscore emphasis (write *emphasis* instead)'],
+  [/~~/, 'strikethrough'],
 ];
 
 /**
@@ -190,6 +199,26 @@ export function assertRenderableEssay(body) {
       if (pattern.test(line)) {
         throw new Error(`Essay line ${index + 1} uses ${description}, which this builder renders as literal text rather than markup: ${JSON.stringify(line.trim().slice(0, 60))}`);
       }
+    }
+  }
+
+  // `## ` is the one rule above whose correctness depends on WHERE the line
+  // sits. The list scans lines; essayHtml renders blocks, and only treats
+  // `## ` as a heading when it OPENS one. In CommonMark an ATX heading
+  // interrupts a paragraph, so `Text\n## Heading` is valid Markdown that renders
+  // as a heading everywhere else and as literal hashes in running text here —
+  // the same silent mangling, reached through the one construct the list
+  // declares supported.
+  //
+  // A block opens at the start or after an EXACTLY empty line, because that is
+  // what `/\n{2,}/` splits on. A whitespace-only line does not separate blocks
+  // there, so it must not count as one here: matching on `.trim() === ''` would
+  // wave through a heading the renderer keeps inside the paragraph.
+  for (const [index, line] of lines.entries()) {
+    if (!/^\s*## /.test(line)) continue;
+    const opensBlock = index === 0 || lines[index - 1] === '';
+    if (!opensBlock) {
+      throw new Error(`Essay line ${index + 1} is a "## " subheading that does not begin its paragraph, so it renders as literal hashes in running text; put a blank line before it.`);
     }
   }
 }
