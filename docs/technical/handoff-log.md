@@ -1664,3 +1664,15 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **Verification:** The full repository gate sequence and exact provider sweeps are rerun after these corrections; remote checks and advisory review must rerun on the corrected head before merge.
 
 **Open:** Push the corrected head, inspect the fresh advisory result, merge only if it is clean, then restore local `main` to exact remote parity.
+
+## 2026-08-24 (fourth entry) — Codex: re-review record corrected by append
+
+**Scope completed:** The re-review on corrected head `605baa5` confirmed the preceding three findings closed and identified two smaller record defects. The second entry's shorthand "identity and disclosure references" is corrected here to the exact 2026-08-18 scope: the founder, his employer, and the litigation rationale for not naming the company on public assets. The decision log now uses those terms. The third entry recorded an intended rerun without enumerating results; this entry supplies the completed evidence rather than rewriting the published handoff sequence.
+
+**Files changed:** `docs/technical/decision-log.md` and this log.
+
+**Verification:** `node scripts/verify-ghost-theme.mjs` passed for 17 required files; `pnpm --dir theme install --frozen-lockfile` completed with the lockfile current; `pnpm --dir theme test` passed fatal GScan on the source theme; `pnpm --dir theme zip` and packaged-ZIP fatal GScan passed; `node --test 'scripts/test/**/*.test.mjs'` passed 55 tests with zero failures; `node scripts/verify-repository.mjs` passed over 512 tracked files; `bash scripts/verify-svg-xml.sh` validated 150 SVG files; `git diff --check` passed; and the exact tracked-text and tracked-path provider sweeps returned no match. On head `605baa5`, Repository verification, Dependency scan / osv-scan, Secret scan, Semgrep CE, review / gate, and review / review all passed remotely.
+
+**External state changed:** None beyond pull request #128. No provider account, publication surface, integration, or media file changed.
+
+**Open:** Push this append-only correction, wait for the fresh remote gates and advisory review, merge only on a clean result, then restore local `main` to exact remote parity.
