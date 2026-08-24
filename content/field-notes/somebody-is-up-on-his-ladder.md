@@ -6,6 +6,7 @@ byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Somebody Is Up on His Ladder
 preview: The leaves come down on the same schedule regardless. Nothing about a maple is tracking his year.
+feature_image_alt: An extension ladder standing against the eave of a well-kept house in autumn daylight, beside a downspout elbow discharging at the base of a house wall, in a paper collage.
 status: founder-approved
 approved: 2026-08-23 — essay, platform pack, and artwork approved together, in one pass, as written
 publication_authorized: false — approval covers the work, not a slot; publication, newsletter delivery, and posting remain separately gated

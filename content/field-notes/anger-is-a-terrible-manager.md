@@ -6,6 +6,7 @@ byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Anger Is a Terrible Manager
 preview: Hear the alarm. Don’t hand it the wheel.
+feature_image_alt: A finger pressing the test button of a ceiling smoke detector, beside a man standing calm at a kitchen counter with his hands braced, in a paper collage.
 status: founder-approved
 approved: 2026-08-09 under the ten-round directive; founder veto on sight
 personal_claims: none included; add only from founder-supplied facts

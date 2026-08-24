@@ -6,6 +6,7 @@ byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: You Can’t Outwork a Wrong Direction
 preview: More speed, wrong trail, farther from the truck.
+feature_image_alt: A man studying a paper map spread on a truck hood in bright morning light, beside a handheld compass held over a folded map, in a paper collage.
 status: founder-approved
 approved: 2026-08-09 under the ten-round directive; founder veto on sight
 personal_claims: none included; add only from founder-supplied facts
