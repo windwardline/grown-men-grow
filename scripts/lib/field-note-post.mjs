@@ -293,6 +293,9 @@ export function assertRenderableEssay(body) {
 const BOLD = /\*\*/g;
 const META_LABEL = /^[-*+]\s*(meta\s+title|meta\s+description)\s*:\s*(.*)$/i;
 const META_MENTION = /meta\s+(title|description)/i;
+// A line anywhere in the note that declares an approved value. Used to prove
+// none was missed, independently of where the section turned out to be.
+const META_LINE = /^\s*[-*+]?\s*\*{0,2}\s*meta\s+(?:title|description)\s*:/i;
 
 /**
  * The `# Metadata` section's approved values, when a note carries one.
@@ -318,14 +321,20 @@ export function parseApprovedMetadata(source) {
   // inside a section this match found — so a near miss here is a silent revert
   // to the derived value, which is the one thing this parser exists to prevent.
   // `# Metadata and internal links`, `# Post metadata`, `# metadata`, and
-  // `## Metadata` all used to return {}. The repository's other home for
+  // `## Metadata` all used to return {}. Any heading level is accepted. The repository's other home for
   // approved metadata, `content/metadata.md`, files the same bullets under
   // page-named headings rather than under `# Metadata` at all, so the nearest
   // precedent an author has uses a different spelling and nothing holds this one.
   const lines = source.split('\n');
+  // The hash run is captured and BOUNDED on its right. `#{1,2}[^\n]*` had no
+  // `(?!#)`, so `### Metadata` matched with the trailing hashes absorbed by the
+  // wildcard — accepted while the comment and the operator doc both said two
+  // hashes was the deepest, and then mis-levelled as 2 so the section ran past
+  // every sibling `### `. Deriving the level from what was actually matched
+  // closes both halves at once.
   const headings = lines
-    .map((line, index) => ({line, index}))
-    .filter(({line}) => /^#{1,2}[^\n]*\bmetadata\b/i.test(line));
+    .map((line, index) => ({line, index, match: /^(#{1,6})(?!#)[^\n]*\bmetadata\b/i.exec(line)}))
+    .filter(({match}) => match !== null);
   if (headings.length === 0) return {};
   if (headings.length > 1) {
     throw new Error(`The note carries ${headings.length} metadata headings; approved values must live under exactly one.`);
@@ -333,8 +342,8 @@ export function parseApprovedMetadata(source) {
 
   // Cut at the next heading of the same level or shallower, so a `## ` under a
   // `# ` stays inside the section it belongs to.
-  const level = /^##/.test(headings[0].line) ? 2 : 1;
-  const closes = new RegExp(`^#{1,${level}} `);
+  const level = headings[0].match[1].length;
+  const closes = new RegExp(`^#{1,${level}}(?!#) `);
   const rest = lines.slice(headings[0].index + 1);
   const end = rest.findIndex((line) => closes.test(line));
   const body = (end === -1 ? rest : rest.slice(0, end)).join('\n');
@@ -389,6 +398,18 @@ export function parseApprovedMetadata(source) {
       throw new Error(`The "# Metadata" section approves ${field} more than once.`);
     }
     approved[field] = value;
+  }
+
+  // Nothing that looks like an approved value may be left unread, wherever it
+  // sits. Without this, a note whose only `metadata` heading is a working one —
+  // `## Image metadata` under `# Production notes` — parses that section, finds
+  // nothing, and returns {}, which `buildPostPayload` cannot tell apart from a
+  // note that approves nothing. That is the silent revert again, one level up
+  // from the heading spelling. Counting rather than trusting the section keeps
+  // the loud contract whole.
+  const declared = lines.filter((line) => META_LINE.test(line)).length;
+  if (declared !== Object.keys(approved).length) {
+    throw new Error(`The note declares ${declared} approved meta value(s) but ${Object.keys(approved).length} could be read from its metadata section; move them under that heading or fix their shape.`);
   }
   return approved;
 }

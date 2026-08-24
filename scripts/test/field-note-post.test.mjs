@@ -263,6 +263,36 @@ test('parseApprovedMetadata finds the section however the heading is spelled', (
   }
 });
 
+// `#{1,2}[^\n]*` had no right bound, so `### Metadata` matched with the trailing
+// hashes absorbed — accepted while the docs said two was the deepest, then
+// mis-levelled as 2 so the section ran past every sibling `### `.
+test('parseApprovedMetadata accepts any heading level and levels it correctly', () => {
+  const withHeading = (heading, extra = '') => NOTE.replace(
+    '# Instagram caption source',
+    `${heading}\n\n- Meta title: **A | B**\n${extra}\n# Instagram caption source`,
+  );
+  for (const heading of ['# Metadata', '## Metadata', '### Metadata', '#### Metadata']) {
+    assert.equal(parseApprovedMetadata(withHeading(heading)).meta_title, 'A | B', `${heading} was not found`);
+  }
+  // A sibling at the same level closes the section, so its value is unread —
+  // and an unread declared value is loud, not silent.
+  assert.throws(
+    () => parseApprovedMetadata(withHeading('### Metadata', '\n### Unrelated\n\n- Meta description: **HIJACK**\n')),
+    /could be read/,
+  );
+});
+
+// The silent revert one level up from the heading spelling: a note whose only
+// `metadata` heading is a working one parses that section, finds nothing, and
+// returns {} — indistinguishable from a note approving nothing.
+test('parseApprovedMetadata refuses to miss an approved value sitting outside the section', () => {
+  const misplaced = NOTE.replace(
+    '# Instagram caption source',
+    '## Image metadata\n\n- nothing here\n\n# Production notes\n\n- Meta title: **REAL | X**\n\n# Instagram caption source',
+  );
+  assert.throws(() => parseApprovedMetadata(misplaced), /could be read/);
+});
+
 test('parseApprovedMetadata refuses a note carrying more than one metadata heading', () => {
   const two = NOTE.replace('# Instagram caption source', '# Metadata\n\n- Meta title: **A**\n\n# More metadata\n\n- Meta title: **B**\n\n# Instagram caption source');
   assert.throws(() => parseApprovedMetadata(two), /metadata headings/);

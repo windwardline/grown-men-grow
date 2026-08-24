@@ -2070,3 +2070,23 @@ produced `Male Friendship Before Crisis | Grown Men Grow Approved 2026-08-24 alo
 **External state changed:** none. Every Ghost call was a read. This week's post and all four Buffer posts are untouched.
 
 **Open, in order:** (1) the live Field Note 2 `custom_excerpt` is the dek where the builder sends the preview, a founder call; (2) `feature_image_alt` — no field note has an approved description, though `content/metadata.md` holds page-keyed ones for the three launch pages and is where field-note descriptions would belong; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (twentieth entry) — Claude Code: the tolerant heading was too tolerant, and mis-levelled what it took
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Eighteenth review round, on head `fd7b95d`.
+
+**`#{1,2}[^\n]*` had no right bound.** The wildcard absorbed any further hashes, so `### Metadata` and deeper matched — accepted while the code comment and `publication-order.md` both told the reader two hashes was the deepest. That is the third time in this branch a description has generalised past the thing it describes, after the `RELATIVE_SPECIFIER` comment and the `AGENTS.md` line, in a file whose whole premise is that a gate's description must match the gate.
+
+**The level computation inherited it, and that half was the dangerous one.** `/^##/.test('### Metadata')` is true, so a level-3 heading was treated as level 2 and its section closed on `/^#{1,2} /` — which never matches `### `. A `### Metadata` section therefore ran past every sibling `### ` heading, feeding everything beneath them to the entry loop. Verified: a sibling's `- Meta description:` was picked up out of an unrelated section. The hash run is now captured with `(?!#)` and the level derived from what was actually matched.
+
+**A second silent revert, one level up from the heading spelling, is closed in the same commit.** Any heading whose text contains the word becomes *the* metadata section — a working `## Image metadata` under `# Production notes` would qualify. That section parses, finds nothing, and returns `{}`, which `buildPostPayload` cannot tell apart from a note approving nothing. So the parser now counts: every line in the note that declares an approved meta value must have been read out of the section, and a shortfall raises by name. Trusting the section was the assumption; counting is the check. Verified on a note whose real value sits under the wrong heading — it raises rather than deriving over it.
+
+**Both the comment and the operator doc now state what the code does**: any heading level, any case, extra words allowed, section closing at the next heading of that level or shallower, and nothing declared may go unread.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (127 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. The builder still reproduces Field Note 2's live meta fields exactly and still produces 5,055 characters for next Monday's note.
+
+**External state changed:** none. Every Ghost call was a read. This week's post and all four Buffer posts are untouched.
+
+**Open, in order:** unchanged from the nineteenth entry — (1) Field Note 2's live `custom_excerpt`; (2) `feature_image_alt` for field notes; (3) the Substack classifier block; (4) the audience problem.
