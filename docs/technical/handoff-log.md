@@ -1850,3 +1850,21 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** none. The duplicate-guard proof ran the real command against the live instance and it refused before any write. Every call across this entire sequence was a read. All four Buffer posts remain queued.
 
 **Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (tenth entry) — Claude Code: the guard invalidated the documentation that justified it
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Eighth review round, on head `a967032`.
+
+**Adding the duplicate-slug read made "the three Ghost calls" wrong in two places, both of them mine.** The real path now makes five: the duplicate read, the upload, the create, the draft→scheduled transition, and the verify read. `--dry-run` returns ahead of all of them. Both the executable's header and `publication-order.md` enumerated three, so a reader counting off the named ones would have concluded the duplicate check was covered. Corrected to five, with the duplicate read named first because it is the one a reader would assume runs.
+
+**The sharper half, and it re-opened a finding from the second round.** `publication-order.md` closed the duplicate-refusal paragraph by claiming the register's "no Ghost post" rule had moved from prose into code. That is true of a real run and false of the dry run — and the dry run is the weekly action this same document instructs at every slot, staged or not. On a verification week the operator's only invocation is the one that cannot answer the question the register sets them. The claim is now scoped to a real run, and the document says outright that a clean dry run is not evidence the slot is unstaged; only the Ghost read in step 1 of the weekly task answers that. Whether the dry run should instead *report* an existing post without failing is a design call and was left alone, because "makes no network call" is a stated property of that mode.
+
+**Two carried-over minors, both closed.** The duplicate-slug refusal and the empty-upload refusal used a bare `throw` after a top-level await, which prints the message wrapped in `file:///` frames and a Node version trailer, while every other refusal in the file uses `console.error` then `process.exit(1)`. The duplicate refusal is the one an operator actually meets, and the proof pasted into the review thread showed it in the clean form — which is not what that path printed. Both now fail the way the rest of the file does: named, exit 1, zero stack frames, verified against the live instance. And the dry run now builds against the same `PENDING_UPLOAD` constant as the real path rather than a different placeholder string; both were truthy so nothing was wrong, but tightening the feature-image guard to require a URL shape would have broken the real path while the dry run — the thing that exists to prove the payload the real run would send — kept passing.
+
+**Files changed:** `scripts/stage-next-field-note.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (95 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. The duplicate refusal was re-run against the live instance: named message, exit 1, zero `file:///` frames, and Ghost still holds exactly one scheduled post.
+
+**External state changed:** none. Every call across this entire sequence was a read. All four Buffer posts remain queued.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.

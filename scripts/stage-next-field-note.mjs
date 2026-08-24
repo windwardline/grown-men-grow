@@ -8,9 +8,12 @@
 //
 // `--dry-run` builds the payloads from the approved source and prints them
 // without touching the network. Precisely: it proves the payload the real run
-// would send, on the real note, every week. It does NOT exercise the three
-// Ghost calls below or the order they happen in — those are still first run for
-// real on the day they are needed. Everything under the argument check went
+// would send, on the real note, every week. It does NOT exercise any of the
+// five Ghost calls below or the order they happen in — the duplicate-slug read,
+// the image upload, the create, the draft -> scheduled transition, and the
+// verify read are all still first run for real on the day they are needed.
+// That includes the duplicate-slug read, so a clean dry run is NOT evidence
+// that the slot is unstaged. Everything under the argument check went
 // unexecuted from the day this shipped until 2026-08-24, because the register
 // always held a scheduled slot and so the Monday task never staged anything.
 import fs from "node:fs";
@@ -68,11 +71,13 @@ if (!fs.existsSync(imagePath)) {
 }
 
 if (DRY_RUN) {
-  // Built against a placeholder URL, because the upload is the one input the
-  // payload cannot have offline. What this proves is the payload; the upload,
-  // the POST, the draft->scheduled PUT and its newsletter binding, and the
-  // verify read are all below and none of them run here.
-  const payload = buildPostPayload({source, featureImage: "https://storage.ghost.io/<uploaded-at-run-time>.png"});
+  // Built against the same placeholder the real path uses, because the upload is
+  // the one input the payload cannot have offline — and because a dry run that
+  // passed a different value could keep passing while a tightened check broke
+  // the real path. What this proves is the payload; the duplicate-slug read, the
+  // upload, the POST, the draft->scheduled PUT and its newsletter binding, and
+  // the verify read are all below and none of them run here.
+  const payload = buildPostPayload({source, featureImage: PENDING_UPLOAD});
   console.log("DRY RUN — no network call made\n");
   console.log("  source      :", path.relative(root, sourcePath));
   console.log("  feature png :", path.relative(root, imagePath), `(${fs.statSync(imagePath).size} bytes)`);
@@ -114,7 +119,12 @@ if (DRY_RUN) {
   // ahead of every mutation.
   const existing = await findPostBySlug(payload.slug);
   if (existing) {
-    throw new Error(`${payload.slug} already has a Ghost post (${existing.status}, id ${existing.id}); refusing to create a second one that would send the newsletter again.`);
+    // console.error + exit rather than a bare throw: after a top-level await,
+    // a throw prints the message wrapped in file:/// frames and a Node version
+    // trailer. This is the refusal an operator actually meets, on a re-run, and
+    // it should read the same as every other refusal in this file.
+    console.error(`${payload.slug} already has a Ghost post (${existing.status}, id ${existing.id}); refusing to create a second one that would send the newsletter again.`);
+    process.exit(1);
   }
 
   // Feature image -> Ghost storage.
@@ -130,7 +140,8 @@ if (DRY_RUN) {
   // would be created AND scheduled with the newsletter bound and no feature
   // image — worse than the crash it replaced, which created nothing.
   if (!payload.feature_image) {
-    throw new Error("Ghost image upload returned no URL; refusing to create a post whose feature image would be empty.");
+    console.error("Ghost image upload returned no URL; refusing to create a post whose feature image would be empty.");
+    process.exit(1);
   }
   console.log("feature image:", payload.feature_image);
 
