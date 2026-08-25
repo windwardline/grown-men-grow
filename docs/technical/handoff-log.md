@@ -2202,3 +2202,15 @@ produced `Male Friendship Before Crisis | Grown Men Grow Approved 2026-08-24 alo
 **External state changed:** one Substack note, posted by the founder. Nothing else — no Ghost write, no Buffer change, no publish, no send. The preflight lock was taken at 11:46 and released at 12:02.
 
 **Open, in order:** unchanged — (1) Field Note 2's live `custom_excerpt` is the dek where the builder sends the preview, a founder call; (2) the audience problem from the 2026-08-23 readout. The Substack classifier item is closed as a standing blocker: it is intermittent, and the procedure now handles either outcome.
+
+## 2026-08-25 (second entry) — Codex: provider-retirement record reconciled with current main
+
+**Scope completed:** Merged current `origin/main` into pull request #128 without rebasing or rewriting the branch. The only conflict was this append-only log. The five provider-retirement follow-up entries were retained before the later staging and accessibility entries from `main`; neither history was rewritten or dropped. The pull request's effective diff against current `main` remains confined to `docs/technical/decision-log.md` and this log.
+
+**Files changed:** This log records the reconciliation. Merge commit `29dc119` carries the unchanged advances already landed on `main` into the pull-request branch.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` passed for 17 required files; `pnpm --dir theme install --frozen-lockfile` completed with the lockfile current; `pnpm --dir theme test` passed fatal GScan on the source theme; `pnpm --dir theme zip` and packaged-ZIP fatal GScan passed; `node --test 'scripts/test/**/*.test.mjs'` passed 127 tests with zero failures; `node scripts/verify-repository.mjs` passed over 515 tracked files and 43 JavaScript files; `bash scripts/verify-svg-xml.sh` validated 150 SVG files; `git diff --cached --check` passed; the staged file list was reviewed; and exact tracked-text and tracked-path searches found no retired-provider name.
+
+**External state changed:** None yet beyond the existing pull request. No provider account, publication surface, integration, or media file changed.
+
+**Open:** Push the reconciled head, require the fresh Repository verification, Dependency scan / osv-scan, Secret scan, Semgrep CE, review / gate, and review / review results, squash-merge through GitHub's native auto-merge, then restore clean local `main` at exact remote parity.
