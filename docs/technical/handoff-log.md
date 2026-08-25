@@ -1639,6 +1639,56 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 
 **Open:** None for provider retirement. If voice work resumes, provider selection, license terms, provenance marking, and platform disclosure are fresh checks on the facts then in force.
 
+## 2026-08-24 (second entry) — Codex: post-merge review reconciled
+
+**Review timing:** Pull request #127 auto-merged after its required checks passed but before the advisory review worker finished. The later review found four record-integrity issues and one verification-detail omission. They were examined rather than inherited wholesale.
+
+**Resolution:** Restoring the vendor name was rejected because it would violate the founder's explicit remove-everywhere instruction. The decision log now records that this is a narrow owner-authorized name redaction, not a general exception to append-only history. The 2026-08-11 decision again preserves the original absolute exclusion in vendor-neutral language; the 2026-08-24 ruling supersedes that provider-specific exclusion only for future work. The 2026-08-18 non-rewrite statement is scoped to the identity and disclosure references its own paragraph names. The audio proof is now recorded as delivered outside the repository with current availability unverified, rather than asserted to remain available.
+
+**Files changed:** `docs/technical/decision-log.md` and this log.
+
+**Verification, each gate named:** `node scripts/verify-ghost-theme.mjs`; `pnpm --dir theme install --frozen-lockfile`; `pnpm --dir theme test`; `pnpm --dir theme zip` plus packaged-ZIP fatal GScan; `node --test 'scripts/test/**/*.test.mjs'`; `node scripts/verify-repository.mjs`; `bash scripts/verify-svg-xml.sh`; `git diff --check`; and exact tracked-text and tracked-path provider sweeps.
+
+**External state changed:** Pull request #127 merged as `9957cf2c428e74a4ac963b6c9eafce55a5e2ab0c`; its branch was deleted locally and remotely; post-merge CI and security runs passed. Corrective branch `codex/reconcile-provider-retirement-record` was pushed and pull request #128 opened. No provider account, publication surface, integration, or media file changed.
+
+**Open:** Merge pull request #128 only after its required and advisory checks finish, then restore clean local `main` at exact remote parity.
+
+## 2026-08-24 (third entry) — Codex: corrective review details closed before merge
+
+**Scope completed:** The advisory review on pull request #128 completed before merge and raised three precise record issues. All survived refutation. The redaction boundary now names the two 2026-08-11 decision records rather than a nonexistent 2026-08-10 target; the historical voice decision carries its 2026-08-24 supersession pointer; and the proof delivery is dated 2026-08-11 rather than only by year.
+
+**Files changed:** `docs/technical/decision-log.md` and this log.
+
+**External state changed:** None beyond the already-open pull request #128. No provider account, publication surface, integration, or media file changed.
+
+**Verification:** The full repository gate sequence and exact provider sweeps are rerun after these corrections; remote checks and advisory review must rerun on the corrected head before merge.
+
+**Open:** Push the corrected head, inspect the fresh advisory result, merge only if it is clean, then restore local `main` to exact remote parity.
+
+## 2026-08-24 (fourth entry) — Codex: re-review record corrected by append
+
+**Scope completed:** The re-review on corrected head `605baa5` confirmed the preceding three findings closed and identified two smaller record defects. The second entry's shorthand "identity and disclosure references" is corrected here to the exact 2026-08-18 scope: the founder, his employer, and the litigation rationale for not naming the company on public assets. The decision log now uses those terms. The third entry recorded an intended rerun without enumerating results; this entry supplies the completed evidence rather than rewriting the published handoff sequence.
+
+**Files changed:** `docs/technical/decision-log.md` and this log.
+
+**Verification:** `node scripts/verify-ghost-theme.mjs` passed for 17 required files; `pnpm --dir theme install --frozen-lockfile` completed with the lockfile current; `pnpm --dir theme test` passed fatal GScan on the source theme; `pnpm --dir theme zip` and packaged-ZIP fatal GScan passed; `node --test 'scripts/test/**/*.test.mjs'` passed 55 tests with zero failures; `node scripts/verify-repository.mjs` passed over 512 tracked files; `bash scripts/verify-svg-xml.sh` validated 150 SVG files; `git diff --check` passed; and the exact tracked-text and tracked-path provider sweeps returned no match. On head `605baa5`, Repository verification, Dependency scan / osv-scan, Secret scan, Semgrep CE, review / gate, and review / review all passed remotely.
+
+**External state changed:** None beyond pull request #128. No provider account, publication surface, integration, or media file changed.
+
+**Open:** Push this append-only correction, wait for the fresh remote gates and advisory review, merge only on a clean result, then restore local `main` to exact remote parity.
+
+## 2026-08-24 (fifth entry) — Codex: exception boundary made internally consistent
+
+**Scope completed:** The third advisory pass confirmed every earlier finding closed and found one remaining contradiction: the decision simultaneously called the redaction an exception and claimed the general non-rewrite rule was unchanged by it. The ruling now states the relationship directly. The 2026-08-18 prohibition remains general; the founder's 2026-08-24 instruction creates one narrow exception for the vendor name in the two 2026-08-11 decision records and matching handoff entry. No other historical rewrite is authorized.
+
+**Files changed:** `docs/technical/decision-log.md` and this log.
+
+**Verification:** `node scripts/verify-ghost-theme.mjs` passed for 17 required files; `pnpm --dir theme install --frozen-lockfile` completed with the lockfile current; `pnpm --dir theme test` passed fatal GScan on the source theme; `pnpm --dir theme zip` and packaged-ZIP fatal GScan passed; `node --test 'scripts/test/**/*.test.mjs'` passed 55 tests with zero failures; `node scripts/verify-repository.mjs` passed over 512 tracked files; `bash scripts/verify-svg-xml.sh` validated 150 SVG files; `git diff --check` passed; and the exact tracked-text and tracked-path provider sweeps returned no match. On head `3e1adc4`, Repository verification, Dependency scan / osv-scan, Secret scan, Semgrep CE, review / gate, and review / review all passed remotely; the third advisory pass independently confirmed the prior findings closed.
+
+**External state changed:** None beyond pull request #128. No provider account, publication surface, integration, or media file changed.
+
+**Open:** Push the final wording, inspect the fresh remote and advisory results, merge only if no finding survives, then restore local `main` to exact remote parity.
+
 ## 2026-08-24 — Claude Code: week 3 staged, and the staging script had never been able to run
 
 **Client:** Claude Code (`gmg-monday-staging`, scheduled task). **Branch:** `claude/monday-staging-2026-08-24`.
@@ -2152,3 +2202,15 @@ produced `Male Friendship Before Crisis | Grown Men Grow Approved 2026-08-24 alo
 **External state changed:** one Substack note, posted by the founder. Nothing else — no Ghost write, no Buffer change, no publish, no send. The preflight lock was taken at 11:46 and released at 12:02.
 
 **Open, in order:** unchanged — (1) Field Note 2's live `custom_excerpt` is the dek where the builder sends the preview, a founder call; (2) the audience problem from the 2026-08-23 readout. The Substack classifier item is closed as a standing blocker: it is intermittent, and the procedure now handles either outcome.
+
+## 2026-08-25 (second entry) — Codex: provider-retirement record reconciled with current main
+
+**Scope completed:** Merged current `origin/main` into pull request #128 without rebasing or rewriting the branch. The only conflict was this append-only log. The five provider-retirement follow-up entries were retained before the later staging and accessibility entries from `main`; neither history was rewritten or dropped. The pull request's effective diff against current `main` remains confined to `docs/technical/decision-log.md` and this log.
+
+**Files changed:** This log records the reconciliation. Merge commit `29dc119` carries the unchanged advances already landed on `main` into the pull-request branch.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` passed for 17 required files; `pnpm --dir theme install --frozen-lockfile` completed with the lockfile current; `pnpm --dir theme test` passed fatal GScan on the source theme; `pnpm --dir theme zip` and packaged-ZIP fatal GScan passed; `node --test 'scripts/test/**/*.test.mjs'` passed 127 tests with zero failures; `node scripts/verify-repository.mjs` passed over 515 tracked files and 43 JavaScript files; `bash scripts/verify-svg-xml.sh` validated 150 SVG files; `git diff --cached --check` passed; the staged file list was reviewed; and exact tracked-text and tracked-path searches found no retired-provider name.
+
+**External state changed:** None yet beyond the existing pull request. No provider account, publication surface, integration, or media file changed.
+
+**Open:** Push the reconciled head, require the fresh Repository verification, Dependency scan / osv-scan, Secret scan, Semgrep CE, review / gate, and review / review results, squash-merge through GitHub's native auto-merge, then restore clean local `main` at exact remote parity.
