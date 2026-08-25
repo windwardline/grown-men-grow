@@ -2132,3 +2132,23 @@ produced `Male Friendship Before Crisis | Grown Men Grow Approved 2026-08-24 alo
 **External state changed:** `feature_image_alt` set on two Ghost posts, one published and one scheduled. Nothing else — no publish, no send, no post, no delete. The week's staging is otherwise untouched: Ghost scheduled for 2026-08-25 08:00 ET with the newsletter bound, four Buffer posts queued.
 
 **Open, in order:** (1) Field Note 2's live `custom_excerpt` is the dek where the builder sends the preview — a founder call, and the last of the metadata questions; (2) the Substack classifier block, with both of this week's notes in the founder's hands; (3) the audience problem from the 2026-08-23 readout. The alt-text item is closed.
+
+## 2026-08-25 (twenty-third entry) — Claude Code: Tuesday Note 1 staged, founder posted
+
+**Client:** Claude Code (scheduled task `gmg-tuesday-note`, founder present). **Branch:** `claude/tuesday-note-2026-08-25`.
+
+**Note 1 is live at 12:00 PM ET exactly**, on the slot: `https://substack.com/@grownmengrow/note/c-322382776`. Copy posted verbatim from `content/distribution/field-note-04-platforms.md`, verified against the pack before staging and against the permalink after — both em dashes intact, no truncation, published under the Grown Men Grow publication identity. It accompanies this morning's essay, *A Confession Can Still Be Selfish*.
+
+**The founder changed the standing procedure mid-run: the agent stages, the founder posts.** Ruled 2026-08-25, "now and every time." The task file's step 4 said to post; it now says to type the copy, leave the composer open, and hand it over. The agent never clicks Post. Step 5 survives the change unaltered — the founder's word that they posted is not evidence either, so the live profile is still read back before anything is reported.
+
+**The classifier block is intermittent, not permanent, and the task file was wrong about it.** Since 2026-08-18 the file said to *expect* the `computer` `type` action to be denied. It was not denied today — the same action, against the same composer, with no permission change in between, typed the full sentence. The file now says to attempt it and branch on the result rather than assume refusal. The forbidden workarounds are unchanged and were not used: no `javascript_tool`, no clipboard injection, no AppleScript, no `computer-use`.
+
+**A staged note and a posted note read identically, which nearly produced a false report.** `get_page_text` renders the unposted composer content as a feed item complete with a "just now" timestamp, in the position above the previous note. Reloading to disambiguate would have destroyed the staged draft the founder was waiting to click. Verification moved to a second tab, which is now the documented method; the founder resolved the ambiguity himself by saying he had clicked Post, and the permalink confirmed it.
+
+**The Chrome extension precondition failed again and self-cleared.** `list_connected_browsers` returned empty at 11:46 with Chrome already running — the same 2026-08-18 symptom. It registered by 11:49 after an `open -a "Google Chrome"` nudge and roughly three minutes. Worth knowing the ~60-second allowance in the task file is optimistic.
+
+**Files changed:** `~/.claude/scheduled-tasks/gmg-tuesday-note/SKILL.md` (outside this repository — steps 4 and 5) and this log. One cosmetic wording edit to that file's step 6 was itself blocked by the classifier and left alone; the existing line still covers the case.
+
+**External state changed:** one Substack note, posted by the founder. Nothing else — no Ghost write, no Buffer change, no publish, no send. The preflight lock was taken at 11:46 and released at 12:02.
+
+**Open, in order:** unchanged — (1) Field Note 2's live `custom_excerpt` is the dek where the builder sends the preview, a founder call; (2) the audience problem from the 2026-08-23 readout. The Substack classifier item is closed as a standing blocker: it is intermittent, and the procedure now handles either outcome.
