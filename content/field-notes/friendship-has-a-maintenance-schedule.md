@@ -6,6 +6,7 @@ byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Friendship Has a Maintenance Schedule
 preview: Men maintain everything they value. Almost everything.
+feature_image_alt: A man taking a relaxed phone call in his open garage doorway, beside hands checking a car's oil dipstick over a clean engine bay, in a paper collage.
 status: founder-approved
 approved: 2026-08-09 — essay, carousel, caption, and visual direction approved as written; publication timing remains gated
 personal_claims: none included; add only from founder-supplied facts

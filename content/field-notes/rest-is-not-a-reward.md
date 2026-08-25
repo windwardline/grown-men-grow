@@ -6,6 +6,7 @@ byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Rest Is Not a Reward
 preview: The tools get put away properly. The man doesn’t.
+feature_image_alt: A man asleep in a daytime hammock in a bright backyard, beside a kettle, a mug, and an open book at an armchair in morning light, in a paper collage.
 status: founder-approved
 approved: 2026-08-09 under the ten-round directive; founder veto on sight
 personal_claims: none included; add only from founder-supplied facts

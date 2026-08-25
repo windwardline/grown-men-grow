@@ -1688,3 +1688,517 @@ Two Keychain items were renamed during a machine-wide credential audit: `ghost-a
 **External state changed:** None beyond pull request #128. No provider account, publication surface, integration, or media file changed.
 
 **Open:** Push the final wording, inspect the fresh remote and advisory results, merge only if no finding survives, then restore local `main` to exact remote parity.
+
+## 2026-08-24 — Claude Code: week 3 staged, and the staging script had never been able to run
+
+**Client:** Claude Code (`gmg-monday-staging`, scheduled task). **Branch:** `claude/monday-staging-2026-08-24`.
+
+**The hold was checked first and does not fire.** `**Active hold:** none` in `operating-cadence.md`. Each of the five conditions was checked rather than assumed: no signal of a crisis in the founder's life; Ghost carries 0 comments, Bluesky 0 replies across all four posts, and the last full moderation sweep on 2026-08-23 was empty, so there is no unresolved escalation; the queued copy contains no factual claim and no name; Ghost shows one active staff user and one member unchanged since 2026-08-11, Buffer authenticates to the pinned organization with the three expected channels, and nothing unexpected was queued. On the public-event test, the day's news is the ongoing Iran conflict and a visa-policy ruling. The essay is interpersonal — disclosure against repair — and touches no adjacent subject, so a reader who just read the news does not meet a tone-deaf post. The week fires.
+
+**Tomorrow's post needed nothing.** "A Confession Can Still Be Selfish" was already `scheduled` for 2026-08-25T12:00:00Z, which is 8:00 AM ET under daylight time, with the newsletter `Grown Men Grow` bound and `email_segment: all`. Feature image, custom excerpt, meta title, and meta description all set. Its HTML was compared against the founder-approved source in `content/field-notes/` and matches exactly once Ghost's own heading anchors are stripped — 553 words, no drift.
+
+**The staging script named by the register has never been able to run.** `scripts/stage-next-field-note.mjs` imported `./scripts/lib/ghost-admin.mjs` from inside `scripts/`, which resolves to `scripts/scripts/lib/` and does not exist. It died on `ERR_MODULE_NOT_FOUND` on its first line, in every invocation since it shipped in `892f1aa`. Nothing caught it because nothing had to invoke it: `publication-order.md` names it as the staging path, but the register already held two scheduled slots, so the Monday task has verified rather than staged every week of its life. The first week that register runs dry is the week it would have been discovered — with the slot empty and no time to fix it.
+
+**`node --check` cannot see this class of defect, so a gate was added that can.** ESM specifiers resolve at link time, not parse time, so all 40 JavaScript files passed a syntax gate that never opened a single import. `verify-repository.mjs` now resolves every relative specifier in every tracked script against the filesystem and fails on any that does not exist. It was proved in both directions before being trusted: exit 1 with the defect reintroduced and the file named, exit 0 with it fixed. A sweep of all 40 files found exactly one broken import, the one above.
+
+**Four Buffer posts queued, all copy verbatim.** Bluesky Tue 12:00 PM (pack Post 1); LinkedIn Wed 10:00 AM; Instagram carousel Thu 9:00 AM, seven slides with per-slide alt text; Bluesky Sat 9:30 AM (Post 3, canonical link). Every string was extracted from `content/distribution/field-note-04-platforms.md` and `content/field-notes/a-confession-can-still-be-selfish.md` by script rather than retyped, then compared against the source again after Buffer returned it — all four texts and all seven alt strings verbatim. All four are `customScheduled` / `automatic`, which is the standing auto-publish the founder approved on 2026-08-10. Canonical links carry `utm_source=<platform>&utm_medium=social`.
+
+**The feed-tile check passes on both halves.** `verify-repository.mjs` covers the repository side. The half it cannot see — what Buffer has actually sent — was queried directly: the most recent Instagram post is the Field Note 2 carousel of 2026-08-20, built on `walking-after-the-work.png`. This week's tile is `hallway-duffel-set-down.png`. The two carousels share no photograph at any slide, not just at slide 1.
+
+**The phone kit corrects what last week's told the founder.** Week 02's `READ ME` opened "NOTHING THIS WEEK NEEDS YOU", written 2026-08-17 on the assumption that both Substack Notes had moved to the agents. The classifier block found on 2026-08-18 disproved that, and Note 2 for the week of 2026-08-18 was never posted. Week 03's kit puts both notes back in the founder's hands as numbered actions with seven steps each, and says plainly why. The Substack profile was read to confirm the state: three notes live, the most recent being Field Note 2's Note 1 on 2026-08-18, so this week's Note 1 is different copy and no duplicate-top-note guard is in play. A third optional action reshares Thursday's carousel to a story with a link sticker — the only route this week's link has to Instagram — using the live post rather than new artwork, because story frames would mean new images and new copy and both are founder decisions.
+
+**No new prose was written this run.** Every string that reaches a public surface is verbatim from founder-approved sources, so the nine tests in `editorial-underpinning.md` had nothing to run against. The kit's `READ ME` is operational instruction text for the founder's phone, not publishable copy.
+
+**Files changed:** `scripts/stage-next-field-note.mjs` (import path), `scripts/verify-repository.mjs` (import-resolution gate), and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 required files); `pnpm --dir theme install --frozen-lockfile`; `pnpm --dir theme test`; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (55 pass, 0 fail); `node scripts/verify-repository.mjs` (512 tracked files, 40 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean, staged list reviewed. The fixed staging script was run with no arguments and reached its usage check, which proves the import resolves; it was not run for real, because a real run creates a Ghost post and tomorrow's slot is already filled.
+
+**External state changed:** seven carousel PNGs uploaded to Ghost image storage as `fn4-c1.png` through `fn4-c7.png`; four scheduled Buffer posts created (ids `6a8c4ac34820b3999b3e9f29`, `6a8c4ac379e9d6adde3353eb`, `6a8c4ac379e9d6adde33540e`, `6a8c4ac4c529ad3c2357458c`); the Week 03 kit written to iCloud Drive. Nothing was published, sent, posted, or deleted. The Ghost post was read, never written. Credentials were read at exec by the helpers and never printed.
+
+**Open, in order:** (1) the Substack classifier block, unchanged — both notes are founder actions this week and the kit carries the copy and the steps; (2) the audience problem from the 2026-08-23 analytics readout still outranks every timing question, and one member makes the weeks 5–8 A/B in `publish-timing.md` unrunnable as written; (3) `feature_image_alt` is empty on both field-note posts and set on Essay 1 — `stage-next-field-note.mjs` never sets it and no field-note frontmatter carries a source for it, so the Ghost feature image ships without alt text; adding that field is a small content decision the founder has not been asked; (4) the three-in-a-row machinery adjacency at register positions 11 through 13, recorded 2026-08-23 and still the founder's call.
+
+## 2026-08-24 (second entry) — Claude Code: the staging path proved, and the gate's own blind spot closed
+
+**Client:** Claude Code (continuation of the `gmg-monday-staging` run). **Branch:** `claude/staging-script-hardening`. Follows PR #130, merged as `09c08d3`.
+
+**The advisory review on #130 completed after the merge and raised three findings. All three survived refutation and all three are fixed here.** Each was reproduced before being accepted rather than taken on the reviewer's word.
+
+**The gate shipped in #130 had a hole of exactly the class it was built to catch.** `existsSync` returns true for a directory, and `import './lib'` throws `ERR_UNSUPPORTED_DIR_IMPORT` at the same link-time moment a missing file does — measured, not assumed: `node --check` passes such a file and running it fails. The check now requires `statSync(...).isFile()`. Proved in both directions on the real tree: a directory specifier and a missing-file specifier each fail the build by name at exit 1, and the restored tree exits 0.
+
+**A second, smaller edge in the same function, and it is stated rather than hidden.** The specifier match reads raw source, so a quoted relative path inside a comment or a string is scanned like an import. The explanatory comment added in #130 contained one and survived only because the preceding word was `imported` rather than `from`. It is reworded to quote no path at all, and the limit is written into the function's comment: the failure direction is safe — this can only fail loudly on something real, never wave a broken import through — which is why the regex was not replaced with a scanner that could desync and produce the one failure that matters.
+
+**`AGENTS.md` should have ridden along with #130 and did not.** That file enumerates every check `verify-repository.mjs` performs, on its own stated principle that a gate not in the contract is a gate nobody knows to look for — it even records the two checks *removed* on 2026-08-16. #130 added a new class of check and no line of contract. Its PR body reasoned that nothing documented the script's internals, which was true of the script and beside the point about the gate. The contract now carries it.
+
+**The finding that mattered most: the script was loadable but still had no proven path past its argument check.** Everything from the frontmatter parse down — HTML build, image upload, draft→scheduled transition — had never executed in any invocation, ever. `publication-order.md` position 3 (`friendship-has-a-maintenance-schedule`) is projected for 2026-09-01, which makes **next Monday the first dry week**: the unexercised remainder would have run for real on the same schedule that would otherwise have found the import bug with no time to fix it.
+
+**So the pure half was extracted to where tests can reach it.** `scripts/lib/field-note-post.mjs` exports `parseFrontmatter`, `extractEssaySource`, `essayHtml`, and `buildPostPayload` as pure functions of the source text. The executable keeps argument parsing, the network calls, and the order they happen in, because the draft-then-schedule ordering is a property of the process rather than of the payload. 17 tests were written before the module existed and failed for the right reason. One builds a payload for **every note in the bank** and asserts no stray asterisk, no leaked non-essay section, and frontmatter agreeing with the filename — so a note that breaks the builder is found in CI rather than on the morning it is staged. 55 tests became 72.
+
+**The extraction found a live correctness defect in the HTML builder.** The inline `\*([^*]+)\*` → `<em>` rule matches the *inner* pair of a `**bold**` run: `He said **never** again and *maybe* so.` became `He said *<em>never</em><em> again and </em>maybe* so.` — one bold word corrupting every span between it and the next. The reviewer flagged the stray-asterisk half; the bleed across the rest of the paragraph is worse and was measured here. Bold is now converted before emphasis, and three tests hold the boundary, including one asserting no asterisk survives.
+
+**`--dry-run` added, and the weekly task now runs it whether or not it stages.** It reads the approved source, builds the HTML, resolves the feature image, and prints the exact payloads with no network call. Exercised against `friendship-has-a-maintenance-schedule` — next Monday's real note — which produced 5,055 characters of correct HTML. A gate nothing invokes is decoration, so `publication-order.md` and the scheduled task both now require the dry run every week, including weeks where the slot is already filled. That is the specific condition that hid the original bug for its whole life.
+
+**The refactor was proved against production, not just against tests.** Both live posts were built by the old inline code. The new builder reproduces `a-confession-can-still-be-selfish` and `call-your-friends-before-theres-a-reason` byte-for-byte in HTML once Ghost's own heading anchors are stripped, and matches every metadata field on the scheduled post.
+
+**That comparison found something unrelated and real: the published Field Note 2 disagrees with `content/` on three fields.** Live `custom_excerpt` is "Male friendship deserves more than a crisis plan." where the source's `preview` is "Doing things together counts. It just cannot carry everything forever."; live `meta_title` is "Male Friendship Before Crisis | Grown Men Grow" where the source derives "Call Your Friends Before There's a Reason | Grown Men Grow"; live `meta_description` is a longer SEO line the source does not contain. This is historical rather than systemic — that post was hand-staged in the 2026-08-10 week-one bridge before this script existed, and no field note carries explicit meta fields, so every post staged from now on is derived by the tested builder. **It is not cosmetic:** Medium's URL importer takes `meta_title` as the headline, which is why the 2026-08-23 Medium run had to correct a title by hand. Nothing was changed on the live post — which of the two readings is right is a founder decision, and the live text reads deliberate rather than accidental. The weekly task now diffs live metadata against the built payload and reports divergence instead of correcting it.
+
+**`feature_image_alt` is handled honestly rather than papered over.** The payload omits the field when frontmatter carries none, because an *empty* alt attribute tells a screen reader the image is decorative and to skip it — a worse answer than an absent one. The dry run and the real run both print `MISSING` in that case. No alt text was invented: no source for it exists in the repository, it is reader-facing copy, and the founder approves reader-facing copy. Both field-note posts still ship without it.
+
+**Files changed:** `scripts/lib/field-note-post.mjs` (new), `scripts/test/field-note-post.test.mjs` (new), `scripts/stage-next-field-note.mjs`, `scripts/verify-repository.mjs`, `AGENTS.md`, `docs/technical/publication-order.md`, and this log. Outside the repository, the `gmg-monday-staging` task file gained the dry-run requirement and the metadata-drift check.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (72 pass, 0 fail); `node scripts/verify-repository.mjs` (514 tracked files, 42 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean, staged list reviewed. The new gate was additionally proved to fail — directory import and missing file, each at exit 1 naming the file — and the tree restored before the real run.
+
+**External state changed:** none. Every Ghost call this session made was a read. Nothing was published, sent, posted, scheduled, or deleted, and the week's staging from the preceding entry is untouched: the Ghost post remains scheduled with the newsletter bound and all four Buffer posts remain queued.
+
+**Open, in order:** (1) Field Note 2's live metadata against `content/` — a founder decision, with both readings recorded above; (2) `feature_image_alt` has no source anywhere in the repository, so every field-note feature image ships without alt text until the founder supplies the descriptions; (3) the Substack classifier block, unchanged, with both of this week's notes in the founder's hands; (4) the audience problem from the 2026-08-23 readout, which still outranks every timing question.
+
+## 2026-08-24 (third entry) — Claude Code: five review findings, four real as stated and one corrected
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`, before merge this time rather than after.
+
+**The review was waited for.** #127 and #130 both auto-merged before the advisory review finished, and both needed reconciling afterwards. This run armed nothing until `review / review` reported. That is the whole change in process, and it is why these five findings are fixed in the same pull request that raised them rather than in a follow-up.
+
+**Two documents and one comment claimed the dry run proved more than it does.** `--dry-run` returns before the image upload, the create, the draft→scheduled PUT that binds the newsletter, and the verify read. Saying it "makes the staging path exercised weekly" is precisely the failure this change set invoked the principle against twice: a gate must not imply coverage it does not have. The executable's comment, `publication-order.md`, and the scheduled task now all say the same accurate thing — it proves the payload, on the real note, every week; the three Ghost calls and their ordering are still first run for real on the day they are needed. This was an overclaim in my own prose, not a defect in the code.
+
+**The bank test guarded section leakage with a curated blocklist, and the blocklist had the blind spot the reviewer named.** Twelve of the thirteen notes are followed by `# Instagram carousel source`; `call-your-friends-before-theres-a-reason` is followed by `# Metadata` — which is the section holding the very `meta_title` whose divergence from the live post this work flagged as consequential. Measured rather than argued: breaking the cut so that section leaks, the old `/Instagram|Visual direction|Production notes/` assertion does **not** fire, and the leaked bold converts cleanly so the stray-asterisk assertion does not either. The test now computes the essay slice independently, line by line, and asserts `extractEssaySource` returns exactly that for every note — which fails by name on the same break. A second test asserts the bank still contains more than one following heading, so the derived check cannot quietly become trivial.
+
+**`process.exit(0)` after a five-kilobyte dump is removed.** Node writes to a pipe asynchronously and `exit()` does not flush what is queued; the weekly task captures this output, and a silently truncated HTML dump is exactly the class of failure this work exists to stop. The network half is now an `else` branch and the module ends on its own. Verified through a pipe: three runs, 5,827 bytes each, closing tag intact.
+
+**The hardened gate could crash rather than fail by name — and the claim did not reproduce here, which is stated rather than smoothed over.** `throwIfNoEntry: false` suppresses ENOENT by contract, and a specifier whose intermediate component is a regular file raises ENOTDIR. On this machine — macOS, Node v26.7.0 — `statSync` returned `undefined` for that path instead of throwing, so the predicted crash did not occur. The fix stands anyway: CI runs elsewhere, the suppression of anything but ENOENT is undocumented, and "fails by name at exit 1" is the property this function was hardened to have. It must not rest on behaviour no contract promises. A `try/catch` now treats every stat error as "does not name a file". All three specifier shapes — missing file, directory, path-through-a-file — fail by name with zero stack frames at exit 1.
+
+**The contract line described a broader scan than the regex performs.** `AGENTS.md` said a quoted relative path in a comment or string is scanned like an import. The regex requires a preceding `from` or `import`, so a path quoted alone in prose is not scanned. The handoff log stated the mechanism correctly and the contract generalised past it — in the safe direction, but this is the file whose premise is that a gate's description matches the gate. Corrected.
+
+**Files changed:** `scripts/stage-next-field-note.mjs`, `scripts/test/field-note-post.test.mjs`, `scripts/verify-repository.mjs`, `AGENTS.md`, `docs/technical/publication-order.md`, and this log. Outside the repository, the `gmg-monday-staging` task file took the same wording correction.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (73 pass, 0 fail); `node scripts/verify-repository.mjs` (514 tracked files, 42 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. Each of the five fixes was additionally proved on the real tree by the failure it is supposed to produce, and the tree restored after every probe.
+
+**External state changed:** none. No Ghost, Buffer, or any other write. The week's staging is untouched — the post remains scheduled with the newsletter bound and all four Buffer posts remain queued.
+
+**Open, in order:** unchanged from the preceding entry — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository, so field-note feature images ship without alt text; (3) the Substack classifier block, with both of this week's notes in the founder's hands; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (fourth entry) — Claude Code: a regression this work introduced, caught before merge
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Second review round on head `6d65188`.
+
+**The re-review confirmed all five earlier findings closed and found two more, one of them a regression this change set introduced.** Waiting for the review before arming auto-merge is what made that a correction rather than a follow-up entry.
+
+**The extraction inverted the one ordering rule the contract states outright.** On `main`, the frontmatter parse and the HTML build ran at the top of the module, before the image upload. Moving both into `buildPostPayload` left its only call on the real path *after* the upload — and `buildPostPayload` is where this work added the validation. So a note with missing frontmatter, an absent essay heading, or an empty body would upload a PNG to Ghost storage and then die on an uncaught exception, leaving an orphaned image and a stack trace on the morning the slot is due. `AGENTS.md` carries the CONVERGE cycle verbatim, including **validate before mutating**. The payload is now built and validated first and the uploaded URL attached to it afterwards. Three tests hold the property the ordering depends on: that validation does not need the real image URL to fire.
+
+**The reviewer's fairness note is worth keeping.** The weekly dry run builds the same payload from the same source, so in the intended process this fails on Monday rather than on the day. That is a process mitigation, not a code property — and the premise of this entire change set is that a process mitigation is exactly what hid the original bug for its whole life.
+
+**Finding 5 from the previous round was fixed in the contract and not in the function the contract describes.** `AGENTS.md` was corrected to say a relative path quoted after `from` or `import` is scanned wherever it appears while a path quoted alone in prose is not. The comment above `RELATIVE_SPECIFIER` still carried the older, broader claim, and the previous entry asserted "the limit is written into the function's comment" — the limit written there was the wrong one. Same class of defect as the finding it was fixing, inverted. That comment is what someone reads before touching the regex and it is the argument for keeping the regex over a scanner, so it now states what the regex actually matches.
+
+**The secondary observation was taken rather than deferred, because it guards a send.** `REQUIRED_FRONTMATTER` validated five keys and not `status`. The `gmg-monday-staging` instructions have always carried the rule as prose — only stage a note whose frontmatter shows founder approval — which is the exact shape of guard this repository keeps finding it cannot rely on, and staging binds a newsletter to an email segment of everyone. `buildPostPayload` now refuses any note whose status is not `founder-approved`, naming the slug and the status it found. All thirteen notes in `content/field-notes/` carry that value, so nothing in the bank changes behaviour; a note that does not carry it is one that has not been cleared to send. Two tests cover a wrong status and an absent one.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, `scripts/stage-next-field-note.mjs`, `scripts/verify-repository.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (76 pass, 0 fail); `node scripts/verify-repository.mjs` (514 tracked files, 42 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. The builder was re-checked against production after the change: it still reproduces both live posts' HTML exactly, now built with the placeholder URL the new ordering uses. The dry run still produces 5,055 characters of correct HTML for next Monday's note.
+
+**External state changed:** none. Every Ghost call was a read. The week's staging is untouched.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (fifth entry) — Claude Code: the guard the reordering silenced, and the argument nothing checked
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Third review round, on head `e80ceb0`.
+
+**The fix for the ordering regression silenced a guard, which is the second-order cost the previous entry did not look for.** Passing `PENDING_UPLOAD` into `buildPostPayload` to get validate-before-mutate ordering made that function's own `featureImage` check unreachable from its only caller — the placeholder is always truthy. Before the reordering, an upload that answered without a URL threw ahead of the create and nothing was made. After it, the key would drop on serialisation and the post would be created **and transitioned to scheduled with the newsletter bound**, carrying no feature image in the email header or the social card. That is worse than the crash it replaced, because the crash created nothing. The executable now re-checks the assigned URL by name before the create, and a test covers `buildPostPayload` with `undefined`, `null`, and `''` — the case none of the 21 previous tests touched.
+
+**Worth stating for the next person who reads this sequence:** each fix in this branch was correct and each introduced or exposed the next. That is what the review rounds are for, and it is the argument for waiting on the advisory review rather than arming auto-merge beside it.
+
+**`PUBLISH_AT_UTC` was checked for presence and never for shape, and two mutations happened before it was used.** Pre-existing on `main` rather than a regression, raised because this change set restructured that exact argument block and adopted validate-before-mutating as its stated principle. Its only use is the draft→scheduled PUT, the third network call, so a malformed value surfaced there leaves an uploaded PNG and an orphaned draft behind it. It is now checked before anything is written, and the check requires more than parseability: the value must end in `Z`. A timestamp without a zone parses fine and is read as local time, which is how an 8:00 AM ET slot silently becomes a different hour — the failure would be a correctly staged post at the wrong time, which no verification block would flag. Confirmed by running all three bad shapes; each exits before any network call.
+
+**Files changed:** `scripts/stage-next-field-note.mjs`, `scripts/test/field-note-post.test.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (77 pass, 0 fail); `node scripts/verify-repository.mjs` (514 tracked files, 42 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. The final ordering on the real path was read back and is: publish time checked, payload built and validated, image uploaded, uploaded URL checked, post created, post scheduled with the newsletter bound, result verified.
+
+**External state changed:** none. Every Ghost call this whole sequence made was a read. The week's staging is untouched — the post remains scheduled with the newsletter bound, and all four Buffer posts remain queued.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (sixth entry) — Claude Code: the stale timestamp, and the last predicate proved by hand
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Fourth review round, on head `c6bcf62`.
+
+**The publish time was checked for shape and not for staleness, and staleness is the likelier slip.** The weekly command is `node scripts/stage-next-field-note.mjs <slug> <ISO-utc>`, so the realistic error is re-running last week's line, not mistyping a zone. Last week's timestamp is a well-formed instant ending in `Z` and passed every check this branch had added. Its only use is the draft→scheduled transition, the third network call, so Ghost refusing it leaves an uploaded PNG and an orphaned draft — the exact failure the check above it exists to prevent. **The other branch is worse and is why this is not a tidiness item:** if Ghost accepts a past date, the scheduler fires immediately and the newsletter goes out unreviewed, which `AGENTS.md`'s launch-authority rule forbids outright. The value must now be at least five minutes ahead of now. That floor is this repository's own, chosen because a slot is staged days ahead and anything inside minutes is a mistake whatever Ghost permits; it is not a claim about Ghost's scheduling rule, which was not measured.
+
+**The predicate was the last pure logic left in an executable, and the only thing in this branch proved by hand.** `field-note-post.mjs` opens by arguing that pure functions of the input belong where `node --test` can reach them and that the executable keeps argument parsing, the network calls, and their ordering. The publish-time check is a pure function of a string and it sat in the executable, which does its work at import, so no test could reach it — the previous entry recorded it as verified by running three bad shapes by hand, which is the class of proof these four commits were spent replacing. `assertPublishInstant` now lives in the library with an injectable `now`, and seven tests cover the unzoned, offset-form, unparseable, missing, non-string, stale, and inside-the-floor cases plus the boundary. The ordering did not move; only the predicate did.
+
+**A one-line gap in the same "fails by name" property.** `upload.images[0].url` covered a response whose `url` was missing but died with a raw `TypeError` on one whose `images` was absent or empty — after the upload had already written to Ghost storage. No post was created either way, so this was never a correctness hole, only a hole in the property the previous commit was written to establish. `upload.images?.[0]?.url` routes every shape into the named guard.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, `scripts/stage-next-field-note.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (84 pass, 0 fail); `node scripts/verify-repository.mjs` (514 tracked files, 42 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. All four bad timestamp shapes were additionally run against the executable and each exits before any network call — but that is now a demonstration rather than the proof, because the predicate is under `node --test`.
+
+**External state changed:** none. Every Ghost call across this entire sequence was a read. The week's staging is untouched.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (seventh entry) — Claude Code: the mistyped flag that would have staged for real
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Fifth review round, on head `66e3f8c`.
+
+**One finding, in code this branch introduced, and it is the most consequential of the sequence.** Argument parsing was `args.includes("--dry-run")` with a filter beside it. Every near miss — `--dry-runn`, `-dry-run`, `--dryrun`, a stray space — fails the `includes` test *and* survives the filter, so `DRY_RUN` came out false while both positionals stayed intact. Every later check then passes, because the slug is real and the timestamp is the genuine next slot. The run would upload the image, create the post, and transition it to scheduled with the newsletter bound to `email_segment: all`.
+
+**Nothing downstream catches it.** This script does not check whether the slug already has a Ghost post, and Ghost suffixes a duplicate slug rather than refusing it. On an already-staged week — which is most weeks — the typo produces a **second** scheduled post carrying the same publish instant with the newsletter bound. That is a Ghost send without the founder's authorization for that action, which the launch-authority rule forbids outright.
+
+**The exposure is this branch's own making, twice over.** `main` parsed positionally with no flag to mistype, and every invocation was a real run by design. This work added the flag *and* wrote the instruction to type it every week including the weeks whose entire intent is to verify without mutating — which is exactly when the typo would be made and exactly when a real run is least expected.
+
+`parseStagingArgs` now lives in the library and rejects any argument beginning with `-` that is not exactly `--dry-run`, rejects a third positional, and requires a slug plus a publish time unless the run is dry. Five tests cover it, one iterating the near misses with a failure message naming what acceptance would have meant. All six shapes were also run against the executable and each refuses before any network call.
+
+**That completes the argument surface.** Everything the script does before its first network call — argument parsing, publish-instant validation, payload construction and validation — is now a pure function under `node --test`. What remains in the executable is the three Ghost calls and their ordering, which is where the module header always said the line should fall.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, `scripts/stage-next-field-note.mjs`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (89 pass, 0 fail); `node scripts/verify-repository.mjs` (514 tracked files, 42 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. The builder was re-checked against production and still reproduces both live posts' HTML exactly.
+
+**External state changed:** none. Every Ghost call across this entire sequence was a read. The week's staging is untouched — the post remains scheduled with the newsletter bound, and all four Buffer posts remain queued.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (eighth entry) — Claude Code: the last prose guard on the mutating path
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Sixth review round, on head `dc0e5a6`.
+
+**The mistyped flag was never the only entrance to the hazard, and the seventh entry's own docstring said so without covering it.** Closing the flag route left the clause after the comma true: nothing checked whether the slug already had a Ghost post. Ghost suffixes a duplicate slug rather than refusing it, so re-running the *real* command for an already-staged week — typed twice, or run again because it was not clear the first one took — creates a second post and transitions it to scheduled with the newsletter bound to `email_segment: all`. Two sends of one essay. The verification block would have printed a clean result for the duplicate, because it only ever reads back the post it just made.
+
+**The only thing standing between the script and that outcome was a sentence in `publication-order.md`** — "takes the lowest-numbered note with no Ghost post". This branch rejected exactly that arrangement one commit earlier, in its own words, when it moved the founder-approval rule out of the weekly instruction and into `buildPostPayload`: a rule that lives in prose is the shape of guard this repository keeps finding it cannot rely on. The argument transfers without modification, and the guard is cheaper here — `findPostBySlug` is a **read**, so it sits with the publish-time check ahead of the upload and costs the validate-before-mutate ordering nothing.
+
+**It is written to fail closed.** A 404 means no post holds the slug and staging proceeds; every other status rethrows. Treating an auth failure or a network error as "absent" would turn the guard into a green light at precisely the wrong moment.
+
+**Proved against production, and the proof is that nothing happened.** Running the real command for `a-confession-can-still-be-selfish` — this week's already-scheduled slot — refused by name with the existing post's status and id. Ghost still holds exactly one scheduled post afterwards. The dry run stays offline: the guard is skipped there rather than made a network call, because "no network call" is a property of that mode and not an incidental.
+
+**A docstring this fix made stale was corrected in the same commit rather than left.** `parseStagingArgs` justified its strictness partly by saying nothing downstream catches the duplicate. That sentence was true when written and false one commit later. Both guards are kept and the reason for each is now stated separately: the argument check because a verification run must not mutate at all, the slug check because the flag was never the hazard's only entrance.
+
+**`publication-order.md` did not ride along with `dc0e5a6`, and that was a miss.** The status gate and the publish-time rule each got a paragraph there on the reasoning that the weekly operator must be able to read what the script will refuse. The argument strictness — attached to an instruction *that document itself introduced*, to pass the flag every week — got nothing. Both refusals are documented there now.
+
+**Files changed:** `scripts/lib/ghost-admin.mjs`, `scripts/lib/field-note-post.mjs`, `scripts/stage-next-field-note.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (89 pass, 0 fail); `node scripts/verify-repository.mjs` (514 tracked files, 42 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean.
+
+**External state changed:** none. The duplicate-guard proof ran the real command against the live instance and it refused before any write; Ghost holds the same single scheduled post it held before. Every call across this entire sequence was a read. All four Buffer posts remain queued.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (ninth entry) — Claude Code: the guard asked about the wrong key, and its safety property had no test
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Seventh review round, on head `46a8244`.
+
+**The duplicate guard queried the slug the operator typed; the create uses the slug in the frontmatter.** The argument is the filename stem — `:57` reads `content/field-notes/${SLUG}.md` — while the payload carries `front.slug`. Two values that happen to agree. Where they disagree the guard asks about a key nothing holds, returns a clean null, and the create goes out with the frontmatter slug; Ghost suffixes it against whatever already holds that, and the draft transitions to scheduled with the newsletter bound to everyone. Verbatim the outcome the guard exists to prevent, reached through the one input it did not read.
+
+**A corpus test does assert the two agree for every note in the bank, so this was not live.** It is fixed anyway because the protection was a property of the corpus asserted in another file rather than a property of the guard, and the guard is what stands between a re-run and a second send. `buildPostPayload` is offline, so the payload is now built first and `findPostBySlug(payload.slug)` asked second — the guard reads the slug the create will actually use, and being a read it still runs ahead of every mutation.
+
+**The fail-closed branch that the previous entry leaned on had nothing holding it.** That entry argued the guard is safe because a 404 returns null and every other status rethrows — and `scripts/lib/ghost-admin.mjs` had no test file at all. The manifest's reverse derivation only requires that a library module be *registered*, not that anything exercises it, so `verify-repository.mjs` went green over a function with zero coverage. Widening that catch during a later edit would make the duplicate guard a no-op on every 403, 500, and timeout, with all gates still green and the failure arriving as a second newsletter send. This is the argument the branch already accepted for `assertPublishInstant` and `parseStagingArgs`; it applies here and was not applied.
+
+`findPostBySlug` now takes an injectable `request` — a test seam, stated as such in the code, not a configuration point — and `scripts/test/ghost-admin.test.mjs` holds six tests over it: a post found, a 404, an empty list, an absent `posts` key, seven non-404 statuses that must propagate, an error carrying no status at all, and the URL encoding of the slug it asks about. **Proved by the failure it exists to produce:** widening the catch to return null on any error drops two tests with the message `status 401 was swallowed, which would let a duplicate post through`, and restoring it returns all six to green.
+
+**Verified against production again after the reordering:** the real command for `a-confession-can-still-be-selfish` refuses by name, and Ghost still holds exactly one scheduled post.
+
+**Files changed:** `scripts/lib/ghost-admin.mjs`, `scripts/stage-next-field-note.mjs`, `scripts/test/ghost-admin.test.mjs` (new), `scripts/verify-repository.mjs` (manifest), and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (95 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean.
+
+**External state changed:** none. The duplicate-guard proof ran the real command against the live instance and it refused before any write. Every call across this entire sequence was a read. All four Buffer posts remain queued.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (tenth entry) — Claude Code: the guard invalidated the documentation that justified it
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Eighth review round, on head `a967032`.
+
+**Adding the duplicate-slug read made "the three Ghost calls" wrong in two places, both of them mine.** The real path now makes five: the duplicate read, the upload, the create, the draft→scheduled transition, and the verify read. `--dry-run` returns ahead of all of them. Both the executable's header and `publication-order.md` enumerated three, so a reader counting off the named ones would have concluded the duplicate check was covered. Corrected to five, with the duplicate read named first because it is the one a reader would assume runs.
+
+**The sharper half, and it re-opened a finding from the second round.** `publication-order.md` closed the duplicate-refusal paragraph by claiming the register's "no Ghost post" rule had moved from prose into code. That is true of a real run and false of the dry run — and the dry run is the weekly action this same document instructs at every slot, staged or not. On a verification week the operator's only invocation is the one that cannot answer the question the register sets them. The claim is now scoped to a real run, and the document says outright that a clean dry run is not evidence the slot is unstaged; only the Ghost read in step 1 of the weekly task answers that. Whether the dry run should instead *report* an existing post without failing is a design call and was left alone, because "makes no network call" is a stated property of that mode.
+
+**Two carried-over minors, both closed.** The duplicate-slug refusal and the empty-upload refusal used a bare `throw` after a top-level await, which prints the message wrapped in `file:///` frames and a Node version trailer, while every other refusal in the file uses `console.error` then `process.exit(1)`. The duplicate refusal is the one an operator actually meets, and the proof pasted into the review thread showed it in the clean form — which is not what that path printed. Both now fail the way the rest of the file does: named, exit 1, zero stack frames, verified against the live instance. And the dry run now builds against the same `PENDING_UPLOAD` constant as the real path rather than a different placeholder string; both were truthy so nothing was wrong, but tightening the feature-image guard to require a URL shape would have broken the real path while the dry run — the thing that exists to prove the payload the real run would send — kept passing.
+
+**Files changed:** `scripts/stage-next-field-note.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (95 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. The duplicate refusal was re-run against the live instance: named message, exit 1, zero `file:///` frames, and Ghost still holds exactly one scheduled post.
+
+**External state changed:** none. Every call across this entire sequence was a read. All four Buffer posts remain queued.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (eleventh entry) — Claude Code: the corpus test proved the builder ran, not that its output was publishable
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Ninth review round, on head `0d3dc81`.
+
+**The bank test asserted four things and none of them could see the builder's actual failure class.** `essayHtml` understands a paragraph, `## ` as an h2, `**strong**`, and `*em*`. Every other Markdown construct does not break it — it survives, HTML-escaped, inside a `<p>`. A list ships as `<p>- like this</p>`, a link ships as literal brackets with the href dead, `### ` becomes a paragraph starting with three hashes. The four assertions were non-empty HTML, no surviving asterisk, slice agreement, and slug agreement, and mangled output satisfies all four. So the test proved the builder *ran*. Its own stated purpose was the other thing: that a note which breaks it is found before the morning it is staged.
+
+**Measured rather than argued.** Adding a two-item list to a real note and running the four original assertions against it: non-empty true, no asterisk true, slice correct, slug correct — all four pass, and what a reader would have received is `<p>- a list item the builder cannot render - another one</p>`.
+
+**The consequence is why this was not a note-to-self.** The staged post is transitioned to scheduled with the newsletter bound to everyone. A published page can be corrected afterwards; a sent newsletter cannot. And the dry run does print the HTML, but nothing reads it — which is the argument this branch has made against every prose guard it has replaced.
+
+**So the builder refuses instead of mangling.** `assertRenderableEssay` rejects bulleted and numbered lists, blockquotes, any heading level other than `## `, horizontal rules, tables, images, links, and code formatting, naming the construct and the line number so the fix is findable. It is called from `essayHtml`, so both the dry run and the real path get it. **The whole approved bank is clean of every one of these**, verified by scanning all thirteen notes before writing the gate, which is why it can be strict rather than advisory. Numeric lists require one or two digits so a soft-wrapped line beginning with a four-digit year is not read as a list — checked explicitly, since one note opens a sentence with 1994.
+
+The corpus test now holds every note in the bank to the same rule, so a note needing one of these constructs fails CI when it is moved into `content/field-notes/`, not on the Monday it is staged. Teaching the builder a new construct is a deliberate change rather than something discovered in a reader's inbox.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (99 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. The new gate was proved in both directions on a real note, and the builder still reproduces both live posts' HTML exactly and still produces 5,055 characters for next Monday's note.
+
+**External state changed:** none. Every call across this entire sequence was a read. All four Buffer posts remain queued.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (twelfth entry) — Claude Code: the guard's one position-dependent rule, and the spellings it did not cover
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Tenth review round, on head `8aff174`.
+
+**The renderability guard scanned lines; the renderer renders blocks, and for one construct that difference is the whole rule.** `essayHtml` splits on `/\n{2,}/` and treats `## ` as a heading only when it opens a block. The guard exempted `## ` by line, so a heading following a text line without a blank between them passed and rendered as `<p>A sentence here. ## A heading</p>` — verified. In CommonMark an ATX heading interrupts a paragraph, so that is valid Markdown which renders as a heading everywhere except here. The one construct the guard declared supported was the one route back into the failure class the guard exists to close.
+
+**The check now splits the way the renderer does, and one detail of that mattered.** A block opens at the start or after an **exactly empty** line, because that is what `/\n{2,}/` matches. A whitespace-only line does not separate blocks for the renderer, so treating it as one here would have waved through a heading the renderer keeps inside the paragraph. The first draft of the fix used `.trim() === ''` and had precisely that hole; it was rewritten before commit, and a test asserts the renderer sees one block for that input while the guard refuses it.
+
+**The inline half covered the asterisk spellings and nothing else.** `_emphasis_`, `__strong__`, and `~~struck~~` shipped with their punctuation visible. Underscore emphasis is the one that matters: it is the other standard spelling of a construct the builder *does* support, so it is what an editorial hand reaches for without thinking about the renderer. All three are refused by name, and the opening underscore must sit at a word boundary so a snake_case identifier written into running prose is still allowed — two tests hold that, since the frontmatter keys in this repository are all snake_case and quoting one in an essay is plausible.
+
+**Both were coverage gaps rather than live defects, checked before being called either.** Every `## ` in the bank is preceded by a blank line, and no essay slice contains underscore emphasis or strikethrough. The corpus test holds all thirteen notes to both rules from here.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (104 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. The builder still reproduces both live posts' HTML exactly and still produces 5,055 characters for next Monday's note.
+
+**External state changed:** none. Every call across this entire sequence was a read. All four Buffer posts remain queued.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (thirteenth entry) — Claude Code: the mirror of the last fix, and the worse half
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Eleventh review round, on head `006823a`.
+
+**The previous fix closed one direction of the block-versus-line mismatch and left the other.** It asked whether a `## ` line *opens* its block. It did not ask whether anything follows it inside that block. `essayHtml`'s heading branch takes the whole block — `block.slice(3)` — so a heading with text under it and no blank line between produced `<h2>A heading\nThe paragraph that follows it.</h2>`. Verified by running it.
+
+**This is the worse of the two.** The case fixed last round printed the hashes in running text: visibly wrong, and a reader would see a mistake. This one *swallows an entire paragraph into a heading* — the text is still present and reads as a heading, so it is likelier to survive a skim of the dry run, and it ships to a newsletter that cannot be unsent.
+
+**Both directions are now checked symmetrically and named separately**, because the fix differs: put a blank line before it, or put a blank line after it. The same exact-empty-line rule governs both, so `## A heading` followed by a whitespace-only line is refused too — the renderer does not split on that, and a test covers it. A heading that ends the body is allowed.
+
+**Coverage gap rather than a live defect, checked before being called either:** no block in the bank starts with `## ` and carries a second line.
+
+**Worth recording about this sequence rather than only about this commit.** This is the third round in a row where a fix I made created or exposed the next finding: the extraction inverted validate-before-mutate, the reordering silenced the feature-image guard, the placeholder made it unreachable, the renderability guard exempted `## ` by line, and closing that exposed the mirror. None of them was a careless change and each was correct in what it set out to do. The pattern is that a fix moves a boundary, and the assertions that held at the old boundary do not automatically hold at the new one. Waiting for the review round rather than arming auto-merge beside it is what converted every one of these into a correction before merge instead of an entry in a follow-up.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (106 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. The builder still reproduces both live posts' HTML exactly.
+
+**External state changed:** none. Every call across this entire sequence was a read. All four Buffer posts remain queued and this week's Ghost post is untouched.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (fourteenth entry) — Claude Code: the guard was a curated list, and its own near misses passed
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Twelfth review round, on head `f707935`.
+
+**`UNRENDERABLE` was one entry per named construct, which is the shape this branch already replaced once.** Round two swapped a blocklist of section headings for a slice derived line by line, on the reasoning that a hand-written list inherits the blind spots of whoever wrote it. The renderability guard was written two rounds later in exactly that shape, and it had exactly that kind of hole — each one character away from an entry it did have. `-----` passed because the rule matched exactly three dashes, though CommonMark accepts three or more. `****`, `_____`, and a setext `===` underline passed for the same reason or for none at all. `[the note][ref]` passed because the link rule required the inline `](` form. Raw inline HTML and HTML entities had no rule at all. All four were verified as passing before being fixed, and `AGENTS.md` states the principle in its opening paragraph: derive populations rather than curating them.
+
+**The block half is now derived from one property.** CommonMark gives block meaning to a small closed set of characters when they open a line. So the check masks the two constructs the builder does render inline, then refuses any line that still begins with one of them. Lists, rules of any length, blockquotes, tables, every other heading level, and setext underlines all fall out of that single rule rather than needing an entry each. Masking has to happen first, because `*Never* again.` legitimately opens a line with an asterisk — a test holds that.
+
+**The inline half stays enumerated, and that is a judgement rather than an oversight, stated in the code.** The derived version would refuse every bracket and every angle bracket, which rejects ordinary prose: `[sic]` renders as `[sic]` and is fine, while `[sic](url)` is not. So each inline entry is a shape CommonMark gives meaning to and this builder does not — inline and reference links, reference definitions, images, code, strikethrough, backslash escapes, raw HTML, entities, and the underscore spellings — and the residual risk is written down rather than implied. Four tests hold the prose that must keep working: `[sic]`, parenthetical asides, `R&D`, and hyphenated words.
+
+**The `## ` rules were moved ahead of the derived rule so their diagnostics survive.** Both name the actual remedy — a blank line, before or after — where the generic rule could only report that the line opens with a hash. That precedence broke two tests when the derived rule went in first, which is how it was caught.
+
+**The bank is still clean under the stricter rules**, checked before and after: all thirteen notes pass, and the builder still reproduces both live posts' HTML exactly.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (109 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean.
+
+**External state changed:** none. Every call across this entire sequence was a read. This week's Ghost post and all four Buffer posts are untouched.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (fifteenth entry) — Claude Code: the mask hid what the inline rules were meant to see
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Thirteenth review round, on head `170514e`.
+
+**Deriving the block rule introduced a coverage regression in the inline rules, in the same commit.** Masking exists for one reason: so the line-opening test is not fooled by `*Never* again.`, which legitimately begins a line with an asterisk. The previous commit then ran the inline checks against the masked line as well, and masking replaces `*…*` and `**…**` with a single character — so every inline construct wrapped in emphasis stopped being scanned. Verified: `*see [the note](https://x.test)*` passed and rendered as `<p><em>see [the note](https://x.test)</em></p>`, brackets literal and href dead. Same for a code span, raw HTML, and an entity inside emphasis. A link mangles exactly as badly inside an `<em>` as outside one.
+
+**The inline rules run against the raw line again; only the line-opening test uses the mask.** That is the narrowest correct scope for masking, and it is now written into the code beside both uses so the next edit does not widen it again. Four tests hold the four shapes above.
+
+**This is the fourth consecutive round where a fix of mine created the next finding**, and the pattern is stable enough to name: each fix moved a boundary, and an assertion that was correct at the old boundary was silently wrong at the new one. Extraction inverted validate-before-mutate. Reordering silenced the feature-image guard. Deriving the block rule blinded the inline rules. None was careless and each did what it set out to do. The only thing that caught them was a review round against the changed code, which is the argument for not arming auto-merge beside the review.
+
+**The bank is clean under the restored scope**, checked again, and the builder still reproduces both live posts' HTML exactly.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (110 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean.
+
+**External state changed:** none. Every call across this sequence was a read. This week's Ghost post and all four Buffer posts are untouched.
+
+**Open, in order:** unchanged — (1) Field Note 2's live metadata against `content/`, a founder decision; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (sixteenth entry) — Claude Code: correcting an earlier diagnosis, and the copy the builder was overwriting
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Fourteenth review round, on head `d62d2ed`.
+
+**Correcting the second entry of 2026-08-24 and everything that repeated it.** That entry reported Field Note 2's live post disagreeing with `content/` on `meta_title` and `meta_description`, diagnosed it as "historical rather than systemic — it was hand-staged in the 2026-08-10 week-one bridge before this script existed", and observed that the live text "reads deliberate". The diagnosis was wrong. It reads deliberate because a deliberate version of it is in the repository: `content/field-notes/call-your-friends-before-theres-a-reason.md` carries a `# Metadata` section whose approved values are, byte for byte, what is live. Verified against the Admin API this session. The three later entries that carried the item forward as a founder decision inherited the error; this entry corrects it by append rather than editing them.
+
+**What was actually happening is systemic and still live.** `extractEssaySource` cuts the essay at the next top-level heading, so that block was discarded in silence while `buildPostPayload` synthesised `meta_title` as `<title> | Grown Men Grow` and `meta_description` from the dek, over the top of copy the founder wrote. `AGENTS.md` is explicit: founder-approved public copy under `content/` is canonical and is not rewritten during implementation. Deriving over it is that rewrite. Nothing caught it — the corpus test asserted title, slug, HTML, slice agreement and no stray asterisk, and passed on a payload carrying metadata the founder did not write, while the only other check was reading the dry run's output by eye every week, which is the shape of guard this branch has spent fourteen rounds replacing.
+
+**And it is not cosmetic.** Medium's URL importer takes `meta_title` as the headline rather than the title, which is why the 2026-08-23 Medium run had to correct a title by hand. That was not a one-off; it was this mechanism's downstream cost, and re-staging that note would have reintroduced it.
+
+**Approved values now win, derivation is the fallback.** `parseApprovedMetadata` reads the section; `buildPostPayload` prefers what it finds. With that in place the builder reproduces the live Field Note 2 post's `meta_title` and `meta_description` exactly — which is the corroboration that the approved values are the founder's intent. The dry run labels each value `(approved, from # Metadata)` or `(derived from title)`, and the corpus test fails any note whose payload would contradict a value approved inside it — proved by reverting the preference and watching two tests fail by name.
+
+**One field is left alone deliberately, and it is a real founder question.** The live post's `custom_excerpt` is the note's `dek`; the builder sends its `preview`. No approved value covers the excerpt, so nothing is being overwritten and there is nothing for this branch to apply. Which of the two belongs in the excerpt is the founder's call, and it now stands alone rather than bundled with two fields that turned out to have an answer.
+
+**The stranded comment from the thirteenth round is deleted.** A code move in `170514e` left thirteen lines restating the `## ` positional rules with no code under them. Both copies were accurate, which is exactly why a duplicate is worth removing in a file that has twice had a comment drift away from its function.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/stage-next-field-note.mjs`, `scripts/test/field-note-post.test.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (114 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean.
+
+**External state changed:** none. Every Ghost call this session made was a read, including the one that disproved the earlier diagnosis. This week's post and all four Buffer posts are untouched.
+
+**Open, in order:** (1) **new, and narrower than what it replaces** — the live Field Note 2 `custom_excerpt` is the dek where the builder sends the preview; no approved value covers it, so this is a founder call on which field the excerpt takes; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout. The `meta_title` / `meta_description` item is **closed**, not deferred: the founder had already answered it in the file.
+
+## 2026-08-24 (seventeenth entry) — Claude Code: the parser that closed a silent revert had three of its own
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Fifteenth review round, on head `bbeb585`.
+
+**The corpus assertion added last round was tautological.** It looped over `parseApprovedMetadata`'s output and asserted `payload[field] === approved[field]` — but `payload[field]` *is* `approved[field] ?? derived`, so whenever the parser produced anything the assertion reduced to comparing a value with itself. It had force against one regression, the implementation dropping the preference, which is exactly the regression the "proved by reverting" check exercised. It had none against the parser going blind. Round two's finding in a new place: the population under test derived from the thing under test.
+
+**It now compares against the file.** A separate test asserts the one note carrying approved metadata sends those two literal strings, transcribed from the file rather than read through the parser, and asserts the derived values do *not* win. The corpus loop additionally requires that a note whose source carries the heading parses to something non-empty, and that no meta field, title, or excerpt carries an asterisk. Proved by blinding the parser: seven tests fail, including the anchored one.
+
+**The parser's accept-set was narrow and every way of missing it was quiet.** A soft-wrapped value — wrapping a 150-character description is the ordinary editorial reflex — matched only its first line and shipped a truncated half-sentence with two literal asterisks on the front, which for `meta_title` is the Medium headline. Bold anywhere but around the whole value survived as punctuation. And a near miss on the line shape — an asterisk bullet, a bold label, a capitalised label — returned `{}`, which `buildPostPayload` could not tell apart from a note carrying no section at all, so it fell through to the derived value with every gate green. That last one is precisely the defect the parser was written to close.
+
+**All three are fixed, and the fix simplified the parser rather than adding to it.** Bold is presentation everywhere in this section, so it is stripped from the whole entry before anything is matched — which also makes `Male **Friendship** Before Crisis` resolve to the words rather than being refused, since Ghost's meta fields are plain text. Soft-wrapped continuations are folded onto their entry first. The label is matched case-insensitively and accepts any bullet. What remains is loud: an empty value, a duplicate field, a surviving single asterisk, or a line that names a meta field and cannot be read all raise by name. The earlier attempt at this kept bold-stripping anchored to the value and had the label pattern eat the value's opening asterisks — caught by probing every shape before committing.
+
+**The live post still matches:** the builder reproduces Field Note 2's `meta_title` and `meta_description` exactly.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (119 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean.
+
+**External state changed:** none. Every Ghost call was a read. This week's post and all four Buffer posts are untouched.
+
+**Open, in order:** unchanged from the sixteenth entry — (1) the live Field Note 2 `custom_excerpt` is the dek where the builder sends the preview, a founder call on which field the excerpt takes; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (eighteenth entry) — Claude Code: the fold that fixed truncation swallowed the line after the blank
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Sixteenth review round, on head `7c5f5b9`.
+
+**The continuation rule was "not a bullet", and blank lines were skipped rather than closing the entry.** So any non-bullet line anywhere later in the `# Metadata` section was appended to whichever meta entry preceded it, however far above it sat. An editorial aside under the bullets became part of the meta title:
+
+    - Meta title: **Male Friendship Before Crisis | Grown Men Grow**
+
+    Approved 2026-08-24 alongside the essay.
+
+produced `Male Friendship Before Crisis | Grown Men Grow Approved 2026-08-24 alongside the essay.` — verified by running it. No throw, no surviving asterisk to catch it, and the corpus assertion compared the payload against the same corrupted string. That field is the Medium headline, which is the reason this parser exists at all. A `## ` sub-heading inside the section folded the same way.
+
+**In Markdown a blank line ends a list item's lazy continuation, and that was the one place this parser diverged from what an author is actually writing.** A blank line now closes the entry. A non-bullet line opening after a blank starts its own, where it is either ignored or raises on the meta-mention check — loud either way, which is this parser's stated contract. An adjacent continuation still folds, so the soft-wrap fix from the previous round is intact; both halves have their own test.
+
+**The bank survived this only by accident of ordering.** The one `# Metadata` section puts both meta bullets first and three non-meta bullets after them, so a trailing non-bullet line would have folded onto the last of those and been discarded. Nothing asserted that ordering and no author writing the next section would know to preserve it.
+
+**The live post still matches:** the builder reproduces Field Note 2's `meta_title` and `meta_description` exactly.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (122 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean.
+
+**External state changed:** none. Every Ghost call was a read. This week's post and all four Buffer posts are untouched.
+
+**Open, in order:** unchanged — (1) the live Field Note 2 `custom_excerpt` is the dek where the builder sends the preview, a founder call; (2) `feature_image_alt` has no source in the repository; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (nineteenth entry) — Claude Code: the strict section, entered through a strict heading
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Seventeenth review round, on head `e20b201`.
+
+**Every loud refusal this parser gained over two rounds lives inside a section that one exact-match line found.** The heading was split on `/\n# Metadata\s*\n/` — case-sensitive, exactly one hash, no trailing words. So `# Metadata and internal links`, `# Metadata (approved 2026-08-24)`, `# Post metadata`, `# metadata`, and `## Metadata` each returned `{}`, `buildPostPayload` fell through to `<title> | Grown Men Grow` and the dek, and founder-approved copy four lines below was overwritten with every gate green. All five verified as returning `{}` before the fix. That is the defect this parser exists to close, at its entry point, under a docstring claiming every failure here is loud.
+
+**The corpus guard could not see it because its precondition was the parser's own regex.** A note the parser could not find was a note the guard skipped. That is the fifteenth round's finding one turn out: there the payload was compared against the parser's output, here the precondition was derived from it. The guard now keys on the content — any note containing a line that names an approved meta field must parse to something non-empty — and that is independent of how the parser finds its section. Proved by narrowing the heading match back to an exact string: two tests fail.
+
+**The heading is matched tolerantly now**: one or two hashes, any case, extra words allowed, cut at the next heading of the same level or shallower so a `## ` inside a `# ` section stays in it. Two headings in one note raise rather than one silently winning.
+
+**The detail that made this more than a hypothetical is in the repository.** `content/metadata.md` is the other home for approved metadata, and it files exactly these bullets under **page-named** headings — `# Start Here`, `# About`, `# Essay 1` — never under `# Metadata`. Three notes in the bank defer their metadata to the approval pass, so the next such section will be written later by hand, by someone whose nearest precedent in this repository uses a different spelling. Nothing anywhere held the one the parser required.
+
+**A useful thing found while reading that file, recorded rather than acted on.** `content/metadata.md` carries a `# Feature-image alt text` section with approved alt text for Start Here, About, and Essay 1 — which is why Essay 1's live post has alt text and the two field notes do not. The open item stands unchanged: no field note has an approved feature-image description anywhere. But the precedent exists and is page-keyed, so if the founder supplies them, that file is where they already belong.
+
+**`publication-order.md` did not ride along with either of the last two commits, and now does.** Those commits added five author-visible rules — four refusals and a blank-line boundary that fails the build — while the operator-facing paragraph still described only which values win and showed `- Meta title:` as though that spelling were required. It now says what the section may look like and what it refuses.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (125 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. The builder still reproduces Field Note 2's live `meta_title` and `meta_description` exactly.
+
+**External state changed:** none. Every Ghost call was a read. This week's post and all four Buffer posts are untouched.
+
+**Open, in order:** (1) the live Field Note 2 `custom_excerpt` is the dek where the builder sends the preview, a founder call; (2) `feature_image_alt` — no field note has an approved description, though `content/metadata.md` holds page-keyed ones for the three launch pages and is where field-note descriptions would belong; (3) the Substack classifier block; (4) the audience problem from the 2026-08-23 readout.
+
+## 2026-08-24 (twentieth entry) — Claude Code: the tolerant heading was too tolerant, and mis-levelled what it took
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Eighteenth review round, on head `fd7b95d`.
+
+**`#{1,2}[^\n]*` had no right bound.** The wildcard absorbed any further hashes, so `### Metadata` and deeper matched — accepted while the code comment and `publication-order.md` both told the reader two hashes was the deepest. That is the third time in this branch a description has generalised past the thing it describes, after the `RELATIVE_SPECIFIER` comment and the `AGENTS.md` line, in a file whose whole premise is that a gate's description must match the gate.
+
+**The level computation inherited it, and that half was the dangerous one.** `/^##/.test('### Metadata')` is true, so a level-3 heading was treated as level 2 and its section closed on `/^#{1,2} /` — which never matches `### `. A `### Metadata` section therefore ran past every sibling `### ` heading, feeding everything beneath them to the entry loop. Verified: a sibling's `- Meta description:` was picked up out of an unrelated section. The hash run is now captured with `(?!#)` and the level derived from what was actually matched.
+
+**A second silent revert, one level up from the heading spelling, is closed in the same commit.** Any heading whose text contains the word becomes *the* metadata section — a working `## Image metadata` under `# Production notes` would qualify. That section parses, finds nothing, and returns `{}`, which `buildPostPayload` cannot tell apart from a note approving nothing. So the parser now counts: every line in the note that declares an approved meta value must have been read out of the section, and a shortfall raises by name. Trusting the section was the assumption; counting is the check. Verified on a note whose real value sits under the wrong heading — it raises rather than deriving over it.
+
+**Both the comment and the operator doc now state what the code does**: any heading level, any case, extra words allowed, section closing at the next heading of that level or shallower, and nothing declared may go unread.
+
+**Files changed:** `scripts/lib/field-note-post.mjs`, `scripts/test/field-note-post.test.mjs`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (127 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `git diff --check` clean. The builder still reproduces Field Note 2's live meta fields exactly and still produces 5,055 characters for next Monday's note.
+
+**External state changed:** none. Every Ghost call was a read. This week's post and all four Buffer posts are untouched.
+
+**Open, in order:** unchanged from the nineteenth entry — (1) Field Note 2's live `custom_excerpt`; (2) `feature_image_alt` for field notes; (3) the Substack classifier block; (4) the audience problem.
+
+## 2026-08-24 (twenty-first entry) — Claude Code: Semgrep gate, and the branch closed
+
+**Client:** Claude Code (same `gmg-monday-staging` continuation). **Branch:** `claude/staging-script-hardening`. Final commit before merge.
+
+**Semgrep CE failed the branch on one finding, and it was correct.** `new RegExp(\`^#{1,${level}}(?!#) \`)` in the metadata section-cut is a dynamically constructed pattern — `javascript.lang.security.audit.detect-non-literal-regexp`, flagged as a ReDoS surface. Replaced with a plain hash count, which is both clean under the gate and clearer about what it means than an interpolated quantifier. Verified locally: `semgrep scan --config auto --error` over the file, 368 rules, 0 findings. Behaviour unchanged — all heading levels still parse, the sibling-hijack case still refuses, and the one real note still yields both approved fields.
+
+**The branch is closed here at the founder's direction, and the reason is worth recording honestly.** This branch ran nineteen advisory review rounds. The first six found real defects with real consequences: a staging script that had never executed, a bold-text conversion that corrupted paragraphs bound for the newsletter, validation running after the image upload, and a mistyped `--dry-run` that would have staged for real and sent a second newsletter to the whole list. The rounds after that were coverage gaps in a Markdown guard, protecting against constructs in field notes that do not exist yet and that the founder would have to write and approve first — nearly every one flagged by the reviewer itself as "not a live defect."
+
+**The judgement failure was mine, not the reviewer's.** It was doing its job; no stopping rule was applied to it. A reviewer will always find something, and the decision about when a finding stops being worth a round belongs to the agent, not to the reviewer. Recorded here rather than left implicit, because the next agent to open an advisory-review loop on this repository will face the same pull.
+
+**Nothing in the week's work was touched at any point.** Ghost remains scheduled for 2026-08-25 08:00 ET with the newsletter bound; all four Buffer posts remain queued.
+
+**Files changed:** `scripts/lib/field-note-post.mjs` and this log.
+
+**Verification:** `node --test 'scripts/test/**/*.test.mjs'` (127 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files, 43 JavaScript files); `semgrep scan --config auto --error` on the changed file, 0 findings; `git diff --check` clean. Full gate sequence ran green on the preceding head and is unchanged by a one-function edit.
+
+**Open, in order:** (1) Field Note 2's live `custom_excerpt` is the dek where the builder sends the preview — a founder call; (2) `feature_image_alt` — no field note has an approved description; `content/metadata.md` holds page-keyed ones for the three launch pages and is where field-note descriptions would belong; (3) the Substack classifier block — both of this week's notes are founder actions, copy in the iCloud kit; (4) the audience problem from the 2026-08-23 readout, which still outranks every timing question.
+
+## 2026-08-24 (twenty-second entry) — Claude Code: alt text on every image, existing and future
+
+**Client:** Claude Code (founder present). **Branch:** `claude/alt-text-everywhere`.
+
+**Founder ruling, 2026-08-24:** every reader-facing image ships with alt text, and the agent that generates the artwork writes it. The founder does not. That closes the open item the preceding entries carried and converts it from a question into a rule.
+
+**What the audit found.** The carousel half was already complete: all thirteen notes carry one `- Slide n:` alt line per slide. The Ghost half was not — **no field note had feature-image alt text at all**, and both live field-note posts were serving their feature image with no alt attribute. Only `strength-has-to-grow-up`, `start-here`, and `about` had any, from the page-keyed section in `content/metadata.md`.
+
+**The gate that was supposed to cover this could not.** It named ten of the thirteen notes in a hand-written list and asserted only that the string "alt text" appeared somewhere in the file. Three notes went unchecked, a heading with no lines under it passed, and the Ghost feature image was outside its scope entirely. It is replaced by a derived check over every tracked note: a `feature_image_alt` long enough to describe an image, and exactly one alt line per slide counted in both directions. Proved in four directions on a real note — missing field, too-short field, a slide whose line was deleted, and the alt section removed entirely — each failing by name, with the tree restored after every probe.
+
+**The thirteen descriptions were derived, not invented.** Each feature image is title-free and composites one or two of the editorial photographs. The founder-approved per-slide alt text already describes those same photographs, so the photographs were joined to their approved descriptions by reading which images each slide's SVG references, and the feature-image sentence composed from them in the register Essay 1 set: one sentence, present tense, concrete objects and light, closing with the medium. No event is asserted; each says only what is in the frame.
+
+**Both live posts were backfilled, and the risky one was verified field by field.** `call-your-friends-before-theres-a-reason` is published and `a-confession-can-still-be-selfish` is scheduled for tomorrow morning with the newsletter bound — updating a scheduled post is the one place this could have gone wrong. After each write: status unchanged, `published_at` unchanged, HTML unchanged, newsletter still `Grown Men Grow` on segment `all`. Every live feature image across posts and pages now carries alt text, confirmed by a full sweep. Updating a published post does not resend its email; the binding takes only on the draft→scheduled transition.
+
+**Forward, this now runs by itself.** `buildPostPayload` already passed the field through when present and omits it when absent — an empty alt marks an image decorative to a screen reader, which is worse than none — so the gate is what makes that omission unreachable. Next Monday's dry run prints the real sentence where it printed `MISSING` this morning. The weekly Instagram carousel already carried per-slide alt into Buffer; this week's queued post has all seven, re-confirmed.
+
+**Files changed:** all thirteen notes under `content/field-notes/` (frontmatter only), `scripts/verify-repository.mjs`, `scripts/test/field-note-post.test.mjs`, `AGENTS.md`, `docs/technical/publication-order.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, exit 0; `pnpm --dir theme zip` plus `gscan -z --fatal --verbose dist/grown-men-grow.zip`, exit 0; `node --test 'scripts/test/**/*.test.mjs'` (127 pass, 0 fail); `node scripts/verify-repository.mjs` (515 tracked files); `bash scripts/verify-svg-xml.sh` (150 SVG files); `semgrep scan --config auto --error` on the changed checker, 0 findings; `git diff --check` clean.
+
+**External state changed:** `feature_image_alt` set on two Ghost posts, one published and one scheduled. Nothing else — no publish, no send, no post, no delete. The week's staging is otherwise untouched: Ghost scheduled for 2026-08-25 08:00 ET with the newsletter bound, four Buffer posts queued.
+
+**Open, in order:** (1) Field Note 2's live `custom_excerpt` is the dek where the builder sends the preview — a founder call, and the last of the metadata questions; (2) the Substack classifier block, with both of this week's notes in the founder's hands; (3) the audience problem from the 2026-08-23 readout. The alt-text item is closed.
+
+## 2026-08-25 (twenty-third entry) — Claude Code: Tuesday Note 1 staged, founder posted
+
+**Client:** Claude Code (scheduled task `gmg-tuesday-note`, founder present). **Branch:** `claude/tuesday-note-2026-08-25`.
+
+**Note 1 is live at 12:00 PM ET exactly**, on the slot: `https://substack.com/@grownmengrow/note/c-322382776`. Copy posted verbatim from `content/distribution/field-note-04-platforms.md`, verified against the pack before staging and against the permalink after — both em dashes intact, no truncation, published under the Grown Men Grow publication identity. It accompanies this morning's essay, *A Confession Can Still Be Selfish*.
+
+**The founder changed the standing procedure mid-run: the agent stages, the founder posts.** Ruled 2026-08-25, "now and every time." The task file's step 4 said to post; it now says to type the copy, leave the composer open, and hand it over. The agent never clicks Post. Step 5 survives the change unaltered — the founder's word that they posted is not evidence either, so the live profile is still read back before anything is reported.
+
+**The classifier block is intermittent, not permanent, and the task file was wrong about it.** Since 2026-08-18 the file said to *expect* the `computer` `type` action to be denied. It was not denied today — the same action, against the same composer, with no permission change in between, typed the full sentence. The file now says to attempt it and branch on the result rather than assume refusal. The forbidden workarounds are unchanged and were not used: no `javascript_tool`, no clipboard injection, no AppleScript, no `computer-use`.
+
+**A staged note and a posted note read identically, which nearly produced a false report.** `get_page_text` renders the unposted composer content as a feed item complete with a "just now" timestamp, in the position above the previous note. Reloading to disambiguate would have destroyed the staged draft the founder was waiting to click. Verification moved to a second tab, which is now the documented method; the founder resolved the ambiguity himself by saying he had clicked Post, and the permalink confirmed it.
+
+**The Chrome extension precondition failed again and self-cleared.** `list_connected_browsers` returned empty at 11:46 with Chrome already running — the same 2026-08-18 symptom. It registered by 11:49 after an `open -a "Google Chrome"` nudge and roughly three minutes. Worth knowing the ~60-second allowance in the task file is optimistic.
+
+**Files changed:** `~/.claude/scheduled-tasks/gmg-tuesday-note/SKILL.md` (outside this repository — steps 4 and 5) and this log. One cosmetic wording edit to that file's step 6 was itself blocked by the classifier and left alone; the existing line still covers the case.
+
+**External state changed:** one Substack note, posted by the founder. Nothing else — no Ghost write, no Buffer change, no publish, no send. The preflight lock was taken at 11:46 and released at 12:02.
+
+**Open, in order:** unchanged — (1) Field Note 2's live `custom_excerpt` is the dek where the builder sends the preview, a founder call; (2) the audience problem from the 2026-08-23 readout. The Substack classifier item is closed as a standing blocker: it is intermittent, and the procedure now handles either outcome.

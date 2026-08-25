@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { createHash } from 'node:crypto';
+import { statSync } from 'node:fs';
 import { lstat, readFile, readdir } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 
@@ -41,6 +42,51 @@ function checkNodeSyntax(file) {
   const result = spawnSync(process.execPath, ['--check', file], { cwd: root, encoding: 'utf8' });
   if (result.status !== 0) {
     fail(`${relative(file)} failed node --check: ${result.stderr.trim()}`);
+  }
+}
+
+// `node --check` parses a module; it never resolves its imports, because ESM
+// specifiers are looked up at link time. So a wrong relative path is invisible
+// to every syntax gate and only surfaces the first time the file is actually
+// run. stage-next-field-note.mjs pointed at a scripts/scripts/lib path from
+// inside scripts/ and died on ERR_MODULE_NOT_FOUND on its first line — unnoticed
+// because publication-order.md names it as the staging path and the register
+// happened to have two slots already scheduled, so nothing invoked it.
+//
+// The target must be a regular FILE, not merely present: a directory specifier
+// throws ERR_UNSUPPORTED_DIR_IMPORT at exactly the same link-time moment, so a
+// bare existence check would pass the defect this gate exists to catch.
+//
+// Stated plainly, because a gate must not imply coverage it does not have: this
+// reads raw source rather than a parse tree, and the match requires a preceding
+// `from` or `import`. So a path quoted after one of those is scanned wherever it
+// appears, comments and string literals included; a path quoted on its own in
+// prose is not scanned at all. That direction is safe — it can only fail the
+// build loudly on something real, never wave a broken import through — and it is
+// the argument for keeping this over a comment-stripping scanner, which could
+// desync on a regex literal and skip a real import instead.
+const RELATIVE_SPECIFIER = /(?:\bfrom\s*|\bimport\s*\(?\s*)['"](\.{1,2}\/[^'"]+)['"]/g;
+
+async function checkImportsResolve(file) {
+  const source = await readFile(file, 'utf8');
+  const directory = path.dirname(file);
+  for (const [, specifier] of source.matchAll(RELATIVE_SPECIFIER)) {
+    const target = path.resolve(directory, specifier);
+    // Any stat error means the same thing here — the specifier does not name a
+    // file — and every one of them must arrive as a named failure rather than a
+    // stack trace, or the checks after this one never run. `throwIfNoEntry`
+    // suppresses only ENOENT by contract, so a path whose intermediate
+    // component is a regular file can still raise ENOTDIR. Node reports that
+    // specifier as ERR_MODULE_NOT_FOUND, so it belongs in this same branch.
+    let resolved = null;
+    try {
+      resolved = statSync(target);
+    } catch {
+      resolved = null;
+    }
+    if (!resolved?.isFile()) {
+      fail(`${relative(file)} imports ${specifier}, which does not resolve to a file.`);
+    }
   }
 }
 
@@ -381,6 +427,7 @@ const requiredFiles = [
   'scripts/render-theme-preview.mjs',
   'scripts/lib/buffer-api.mjs',
   'scripts/lib/editorial-collage.mjs',
+  'scripts/lib/field-note-post.mjs',
   'scripts/lib/ghost-admin.mjs',
   'scripts/lib/note-slot.mjs',
   'scripts/lib/note-pack.mjs',
@@ -392,6 +439,8 @@ const requiredFiles = [
   'scripts/test/note-pack.test.mjs',
   'scripts/test/note-decision.test.mjs',
   'scripts/test/task-lock.test.mjs',
+  'scripts/test/field-note-post.test.mjs',
+  'scripts/test/ghost-admin.test.mjs',
   'scripts/test/hold-state.test.mjs',
   'theme/package.json',
   'theme/pnpm-lock.yaml',
@@ -474,6 +523,7 @@ const scriptFiles = tracked
   .filter((file) => file.startsWith('scripts/') && /\.(?:mjs|js)$/.test(file))
   .map((file) => path.join(root, file));
 for (const script of scriptFiles) checkNodeSyntax(script);
+for (const script of scriptFiles) await checkImportsResolve(script);
 
 const themeResult = spawnSync(process.execPath, ['scripts/verify-ghost-theme.mjs'], {
   cwd: root,
@@ -684,22 +734,42 @@ for (const [label, file] of packs) {
     }
   }
 }
-const altTexted = [
-  'content/instagram/launch-package.md',
-  'content/field-notes/call-your-friends-before-theres-a-reason.md',
-  'content/field-notes/friendship-has-a-maintenance-schedule.md',
-  'content/field-notes/a-confession-can-still-be-selfish.md',
-  'content/field-notes/ask-for-help-while-its-still-cheap.md',
-  'content/field-notes/anger-is-a-terrible-manager.md',
-  'content/field-notes/rest-is-not-a-reward.md',
-  'content/field-notes/you-cant-outwork-a-wrong-direction.md',
-  'content/field-notes/comparison-is-a-bad-map.md',
-  'content/field-notes/your-body-keeps-the-books.md',
-  'content/field-notes/nobody-rigs-to-the-breaking-strength.md',
-];
-for (const file of altTexted) {
+// Every reader-facing image ships with alt text, and the population is DERIVED
+// rather than listed. The list this replaced named ten of the thirteen notes and
+// asserted only that the phrase "alt text" appeared somewhere in the file — so
+// three notes were unchecked, and a note with a heading and no lines under it
+// passed. Founder ruling 2026-08-24: the agent that generates the artwork writes
+// its alt text, and no image ships without it.
+const launchPackage2 = path.join(root, 'content/instagram/launch-package.md');
+if (!/alt text/i.test(await readFile(launchPackage2, 'utf8'))) {
+  fail('content/instagram/launch-package.md is missing its Instagram alt text section.');
+}
+
+for (const file of tracked.filter((item) => item.startsWith('content/field-notes/') && item.endsWith('.md'))) {
   const text = await readFile(path.join(root, file), 'utf8');
-  if (!/alt text/i.test(text)) fail(`${file} is missing its Instagram alt text section.`);
+
+  // The Ghost feature image. `buildPostPayload` omits the field when this is
+  // absent, and an absent alt attribute is what shipped on both live field-note
+  // posts before this gate existed.
+  const featureAlt = /^feature_image_alt:[^\S\n]*(\S.*)$/m.exec(text);
+  if (!featureAlt) {
+    fail(`${file} has no feature_image_alt in its frontmatter; its Ghost feature image would ship with no alt text.`);
+  } else if (featureAlt[1].trim().length < 20) {
+    fail(`${file} has a feature_image_alt too short to describe an image: ${JSON.stringify(featureAlt[1].trim())}`);
+  }
+
+  // The carousel. One alt line per slide, counted both ways — a heading with
+  // nothing under it, or a slide added without a line, each fails.
+  const slides = (text.match(/^## Slide \d+/gm) ?? []).length;
+  const altSection = text.split('# Instagram alt text source')[1];
+  if (slides > 0 && altSection === undefined) {
+    fail(`${file} has ${slides} carousel slides and no "# Instagram alt text source" section.`);
+  } else if (slides > 0) {
+    const lines = altSection.split(/\n# /)[0].split('\n').filter((line) => /^- Slide \d+:\s*\S/.test(line));
+    if (lines.length !== slides) {
+      fail(`${file} has ${slides} carousel slides but ${lines.length} alt text line(s); every slide needs one.`);
+    }
+  }
 }
 
 // The weekly hold is the brake on an automation that otherwise publishes with

@@ -6,6 +6,7 @@ byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Nobody Rigs to the Breaking Strength
 preview: He books his life at a figure he hit once, in a good season, with nothing else going on.
+feature_image_alt: A coiled lifting sling and its stitched capacity tag on a clean workbench in daylight, beside a densely written paper wall calendar in a kitchen in morning light, in a paper collage.
 status: founder-approved
 approved: 2026-08-16 — essay, platform pack, and artwork approved together
 publication_authorized: false — approval covers the work, not a slot; publication, newsletter delivery, and posting remain separately gated
