@@ -610,6 +610,9 @@ const editorialSources = new Map([
   ['ladder-against-eave-autumn', { width: 1024, height: 1536 }],
   ['gutter-leaves-from-above', { width: 1024, height: 1536 }],
   ['downspout-extension-turned', { width: 1024, height: 1536 }],
+  ['machinist-caliper-part', { width: 1024, height: 1536 }],
+  ['cabinet-seam-proud-door', { width: 1024, height: 1536 }],
+  ['datum-face-square', { width: 1024, height: 1536 }],
 ]);
 await validateNamedPngs('assets/source/editorial', editorialSources);
 await validateNamedPngs('assets/drafts/brand/banners', new Map([
