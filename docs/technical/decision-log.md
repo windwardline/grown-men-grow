@@ -706,3 +706,31 @@
 - **Fixed live**, on the one affected post. Only `custom_excerpt` was sent, with the `updated_at` Ghost requires for collision detection. Verified after the write: status, `published_at`, title, `meta_description` and `email_subject` all unchanged, and both live pages now render their approved dek. Updating a published post does not resend its email — the newsletter binds only on the draft→scheduled transition — and this post had already sent.
 - **The tradeoff, stated rather than buried.** Ghost has exactly one excerpt field and also uses it as the newsletter preheader, so it cannot serve both jobs. The visible reading surface wins: the dek is part of the approved composition, and it makes a serviceable preheader. The consequence is that **`preview` now has no Ghost destination** and is an internal frontmatter field only. It is left in place because it is founder-approved copy in fourteen notes, but it no longer feeds anything, and a future reader should not assume it does.
 - **Why this was mistaken for a taste question for two days.** The divergence report compared live values against built values and reported the difference. It had no way to say which side was right, because nothing in the repository connected the Ghost field to the template that renders it. The answer was one grep away in `theme/post.hbs` and nobody looked, because the item had already been labelled a founder call and labels are sticky.
+
+## 2026-08-26 — The register reorder, the stance commission, and the suspended A/B
+
+- **Status:** Executed on the founder's instruction to act on the standing recommendations rather than carry them.
+
+### The build-metaphor run was five, not four
+
+- The register recorded four consecutive build-trade openings at positions 11–14 and named `the-lights-never-flickered` as one of the pieces available to break them. It opens on anchor bolts set an inch and a half off a template. It is a jobsite piece, it sat at position 10 directly above the run, and **the run was five.** The recommendation formed on 2026-08-26 inherited that miscount and is corrected here rather than executed as written.
+- **Five build pieces need four separators; the bank offers three** that are unambiguously not build-trade — `ask-for-help-while-its-still-cheap`, `comparison-is-a-bad-map`, `your-body-keeps-the-books`. Three reduces the longest run from five to two, and no arrangement of this bank does better. The remaining pair sits at 13 and 14, at the end.
+- `your-body-keeps-the-books` moved from 7 to 12 to supply the third separator — the only constraint-bearing piece touched, and it moved later, which its constraint permits. Nothing scheduled moved: positions 1 and 2 are staged on Ghost and untouched. The three binding constraints were each broken deliberately and confirmed to fail by name, then restored.
+- **The lesson is about appending, not about metaphors.** Three consecutive appends each recorded the same strain and deferred it. Appending moves nothing, which is its virtue and was here its defect: no single append looked like the problem, and the run grew one slot at a time under a note saying it was being watched.
+
+### The stance commission
+
+- The corpus measurement recorded earlier today found `witness` at two pieces in fifteen against a Stance section describing roughly a quarter, and recommended commissioning the next draft deliberately. **`operating-cadence.md` now carries a `**Standing commission:** witness` marker**, read by the draft tasks and asserted by the checker.
+- **Why a marker and not a sentence in a task file.** The subject test does not close this gap on its own: every draft with a move available reads as an assignment, and almost every subject has a move available. Left to itself the register produces assignments, which is exactly what fifteen pieces of evidence show. A commission is how a stance gets chosen rather than arrived at.
+- **What it does not do.** It is an instruction about what to look for, never a licence to force a subject through the three witness gates. A draft task that cannot find a passing subject says so and leaves the commission standing rather than shipping an assignment piece wearing the label. The task clears it back to `none` in the change set that lands the note.
+
+### The A/B is suspended, with the precondition stated
+
+- The 2026-08-23 readout found the newsletter list at one member and concluded the weeks 5–8 A/B in `publish-timing.md` cannot run: open rate on one recipient is 0% or 100%. It made no protocol change, on the reasoning that the protocol was not what was broken.
+- **That was half right.** The distribution problem is the real one and nothing here touches it. But a protocol that specifies an experiment it cannot run, while step 4 says "minimum four sends per arm" as though four sends sufficed at any list size, reads as an experiment in progress and produces noise that reads as findings. **`**A/B minimum recipients:** 30`** now gates steps 3 and 4.
+- **Thirty is a floor, not a target.** Below it a five-point open-rate difference — the protocol's own stated decision threshold — is smaller than the swing of one reader opening or not, so the threshold cannot resolve. It is not a claim that thirty is enough for confidence.
+- The separate `/stats/` and `/links/` 403 problem is recorded alongside it: step 3's secondary metrics are unreachable programmatically, and whether they come from the admin UI by hand or leave the protocol is left open for whoever restarts it.
+
+### Both markers are gated
+
+`verify-repository.mjs` fails if either marker is missing, duplicated, or carries an unrecognised value. Five failure modes proved to fire by name, tree restored byte-exact after each.

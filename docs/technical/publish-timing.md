@@ -41,3 +41,17 @@ Essay B's Sunday slot is the one genuinely contested call: email aggregates say 
 3. **Weeks 5–8:** A/B the contested slot — alternate essay B between Sunday 9 AM and Thursday 8 AM (two sends each). Primary metric: open rate; secondary: 48-hour pageviews and member conversions.
 4. **Weeks 9+:** adopt the winner, then A/B the next-largest uncertainty (Tuesday 8 AM vs 9:30 AM send). One variable at a time, minimum four sends per arm before concluding anything — small-list open-rate noise is large, so differences under ~5 points are not decisions.
 5. Record each decision here with the numbers that made it.
+
+## The protocol is suspended at step 3, and why
+
+**Precondition, added 2026-08-26: steps 3 and 4 do not run below 30 newsletter recipients.** The 2026-08-23 analytics readout found the list at one member. Open rate on a single recipient is 0% or 100%; it is not a measurement, and no number of sends per arm repairs a sample of one. Step 4's "minimum four sends per arm" was written to control noise on a small list and reads, without this precondition, as though four sends were sufficient at any size — which is how a protocol that cannot run comes to look like a protocol that is running.
+
+Thirty is a floor rather than a target: below it a five-point open-rate difference — step 4's stated decision threshold — is smaller than the swing of a single reader opening or not, so the protocol's own threshold cannot be resolved. It is not a claim that thirty is enough for confidence.
+
+**What this is not.** It is not a timing decision, and it does not change the schedule of record. The schedule stands as written and steps 1 and 2 continue. **This is a distribution problem, and no amount of slot-tuning reaches it** — the readout said so and was right; the only change here is that the protocol now says so too, rather than specifying an experiment that silently produces noise.
+
+**Marker, read by `verify-repository.mjs`.** The gate fails if this line is missing or duplicated, so the suspension cannot be lifted by quietly deleting the sentence that records it.
+
+**A/B minimum recipients:** 30
+
+**Also unreachable, and separate from the sample-size problem.** Ghost's `/stats/` family and `/links/` return 403 to an Admin API integration key; they are session-authenticated for the admin UI only. Step 3's secondary metrics — 48-hour pageviews and per-post member conversions — cannot be collected programmatically. When the precondition is met, either those two numbers are read from the Ghost admin UI by hand or they are dropped from the protocol; that choice is still open and belongs with whoever restarts the A/B.
