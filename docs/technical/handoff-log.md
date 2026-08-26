@@ -2260,3 +2260,33 @@ produced `Male Friendship Before Crisis | Grown Men Grow Approved 2026-08-24 alo
 **External state changed:** none in the publication. Three images were generated in the founder's own ChatGPT project and downloaded; no publish, no send, no post, no schedule, no Ghost write, no Buffer change. The share dialog's X, LinkedIn, and Reddit controls were never touched — only Download.
 
 **Open, in order:** (1) founder review of Field Note 15, now a complete image-led unit; (2) Field Note 2's live `custom_excerpt` is the dek where the builder sends the preview, a founder call; (3) the audience problem from the 2026-08-23 readout. The imagery item from this morning's entry is closed. Test 9 remains not clean on this draft and the corpus stands at two `witness` pieces in fourteen.
+
+## 2026-08-26 (third entry) — Claude Code: Field Note 15 approved; the corpus test mechanised
+
+**Client:** Claude Code (continuation of the `gmg-wednesday-draft` run, founder present). **Branch:** `claude/corpus-test-2026-08-26`.
+
+**The founder approved Field Note 15 and instructed that test 9 be addressed rather than reported again.** Both were done in this change set.
+
+**Approval and promotion.** `every-part-passed-inspection` moved from `drafts/` to `content/field-notes/`, frontmatter marked founder-approved 2026-08-26 with publication still separately gated, its platform pack likewise. The register gate caught the promotion immediately — an approved note with no slot fails the build — and slot 14 was added.
+
+**The register records a preference that has now failed rather than strained.** Positions 11 through 14 are rigging, concrete, gutters and machining: four consecutive build-trade metaphors where the spread-the-machinery preference intends them separated. Positions 12 and 13 each recorded the same strain and deferred the fix, and the deferral is what produced the run. Interleaving one of positions 8 through 10 breaks it, violates none of the three binding constraints, and pushes no scheduled post. Recorded as a recommendation, since reordering the register is a founder call.
+
+**Test 9 was addressed at the corpus level, which is where the underpinning says it lives.** The document is explicit that test 9 is weak per piece — a single essay can honourably ask a man to do something — and that principle 7 is a question about the whole body of work. `every-part-passed-inspection` was not softened; there is nothing wrong in its reasoning, and the underpinning forbids smoothing a piece rather than rewriting from where reasoning went wrong.
+
+**The measurement, derived rather than curated: fifteen approved pieces, two `witness` (13%), eleven closings that address him (73%).** At eleven pieces it was nine of eleven (82%), so the trend is right and the level is not: `witness` sits at 13% where the Stance section describes roughly a quarter. The four that do not turn to him are `anger-is-a-terrible-manager`, `nobody-rigs-to-the-breaking-strength`, and the two witness pieces where not turning is the gate. The count and the judgment are in the decision log, as the document asks.
+
+**The real defect was that none of this was mechanised.** Between the 2026-08-12 measurement at eleven pieces and today the bank reached fifteen, and nothing in the repository could have noticed the next measurement falling due. `verify-repository.mjs` now derives the corpus population from tracked files and fails on a missing, malformed or duplicated `stance` or `closing_addresses_reader`, on a `witness` piece whose closing addresses the reader (witness gate 1), and on the bank reaching the due threshold read from the `**Corpus test last measured:**` marker. The due date is written by whoever records a measurement, so this out-of-cadence measurement records fifteen and leaves the next at twenty-one rather than pushing it out.
+
+**Seven failure modes were each proved to fire by name**, with the tree restored byte-exact after every probe.
+
+**A process failure is recorded in the decision log rather than hidden.** The first probe harness used `git checkout --` to undo each mutation. That restores from the index, not the working tree, so every restore reverted the file to its last committed state and destroyed the uncommitted backfill in the same motion: three notes lost their markers and the decision-log entry was wiped before it was ever committed. Nothing was lost permanently because the damage was found by re-deriving the population rather than by trusting the probe output, and the harness was rewritten to snapshot and restore exact bytes.
+
+**All fifteen pieces now carry both markers with the deciding sentence quoted.** Nine field notes and Essay 1 predate the 2026-08-11 stance ruling and carried no stance. No reader-facing copy changed; the 2026-08-11 boundary protects approved copy, and the same document instructs that every published piece be marked.
+
+**Files changed:** `content/field-notes/` (all fourteen notes — frontmatter only — plus the promoted note), `content/ghost/essay-01-strength-has-to-grow-up.md` (frontmatter only), `content/distribution/field-note-15-platforms.md`, `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `scripts/verify-repository.mjs`, `AGENTS.md`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, no fatal issues on Ghost 6.x; `pnpm --dir theme zip` plus fatal GScan on the packaged zip, no fatal issues; `node --test 'scripts/test/**/*.test.mjs'` (127 pass, 0 fail); `node scripts/verify-repository.mjs` (539 tracked files); `bash scripts/verify-svg-xml.sh` (158 SVG files); `git diff --cached --check` clean. Both renderers re-run against the committed tree produce byte-identical output.
+
+**External state changed:** none. No publish, no send, no post, no schedule.
+
+**Open, in order:** (1) whether to interleave one of positions 8 through 10 to break the four-piece build-metaphor run — a register change and therefore a founder call; (2) commissioning the next draft `witness` deliberately, per the decision log's standing recommendation; (3) Field Note 2's live `custom_excerpt` is the dek where the builder sends the preview; (4) the audience problem from the 2026-08-23 readout. The corpus-test item is closed: it is measured, recorded, and enforced.
