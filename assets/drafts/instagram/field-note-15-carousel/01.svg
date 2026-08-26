@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn15-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn15-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn15-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 15 · 01 / 07</text>
+  <text x="64" y="402" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="108" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.8">EVERY PART</text>
+    <text x="64" y="520" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="108" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.8">PASSED</text>
+    <text x="64" y="638" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="108" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.8">INSPECTION.</text>
+    <text x="68" y="742" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="44" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">Nothing went out of spec.</text>
+    <g>
+    <line x1="75" y1="900" x2="959.1000000000001" y2="900" stroke="#121416" stroke-width="3.3600000000000003" opacity="0.55"/>
+    <line x1="96" y1="965.1" x2="219.9" y2="965.1" stroke="#B14F3F" stroke-width="7.3500000000000005" stroke-linecap="round"/>
+    <line x1="219.9" y1="953.5500000000001" x2="219.9" y2="976.65" stroke="#B14F3F" stroke-width="3.57" opacity="0.72"/><line x1="230.4" y1="994.5" x2="354.3" y2="994.5" stroke="#B14F3F" stroke-width="7.3500000000000005" stroke-linecap="round"/>
+    <line x1="354.3" y1="982.95" x2="354.3" y2="1006.05" stroke="#B14F3F" stroke-width="3.57" opacity="0.72"/><line x1="364.8" y1="1023.9000000000001" x2="488.70000000000005" y2="1023.9000000000001" stroke="#B14F3F" stroke-width="7.3500000000000005" stroke-linecap="round"/>
+    <line x1="488.70000000000005" y1="1012.3500000000001" x2="488.70000000000005" y2="1035.45" stroke="#B14F3F" stroke-width="3.57" opacity="0.72"/><line x1="499.20000000000005" y1="1053.3" x2="623.1" y2="1053.3" stroke="#B14F3F" stroke-width="7.3500000000000005" stroke-linecap="round"/>
+    <line x1="623.1" y1="1041.75" x2="623.1" y2="1064.85" stroke="#B14F3F" stroke-width="3.57" opacity="0.72"/><line x1="633.6" y1="1082.7" x2="757.5" y2="1082.7" stroke="#B14F3F" stroke-width="7.3500000000000005" stroke-linecap="round"/>
+    <line x1="757.5" y1="1071.15" x2="757.5" y2="1094.25" stroke="#B14F3F" stroke-width="3.57" opacity="0.72"/><line x1="768" y1="1112.1000000000001" x2="891.9" y2="1112.1000000000001" stroke="#B14F3F" stroke-width="7.3500000000000005" stroke-linecap="round"/>
+    <line x1="891.9" y1="1100.5500000000002" x2="891.9" y2="1123.65" stroke="#B14F3F" stroke-width="3.57" opacity="0.72"/>
+    <line x1="923.4000000000001" y1="900" x2="923.4000000000001" y2="1112.1000000000001" stroke="#B14F3F" stroke-width="3.57"/>
+    <line x1="912.9000000000001" y1="900" x2="933.9000000000001" y2="900" stroke="#B14F3F" stroke-width="3.57"/>
+    <line x1="912.9000000000001" y1="1112.1000000000001" x2="933.9000000000001" y2="1112.1000000000001" stroke="#B14F3F" stroke-width="3.57"/>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn15-01-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
