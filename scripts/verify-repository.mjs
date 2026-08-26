@@ -778,6 +778,26 @@ for (const file of tracked.filter((item) => item.startsWith('content/field-notes
   }
 }
 
+// The standing stance commission, and the A/B precondition. Both are single
+// marker lines that a task reads and a human could delete, which is the shape
+// this repository has repeatedly found to be a brake that is not a brake. The
+// commission exists because the 2026-08-26 corpus measurement found witness at
+// two pieces in fifteen and the subject test does not close that gap on its own.
+// The A/B precondition exists because the protocol in publish-timing.md
+// specifies an experiment that cannot run on a list of one, and a protocol that
+// cannot run while claiming to measure produces noise that reads as findings.
+for (const [file, label, pattern, legal] of [
+  ['docs/technical/operating-cadence.md', 'standing commission', /^\*\*Standing commission:\*\* (\S+)$/gm, new Set(['none', 'witness', 'assignment'])],
+  ['docs/technical/publish-timing.md', 'A/B minimum recipients', /^\*\*A\/B minimum recipients:\*\* (\d+)$/gm, null],
+]) {
+  const matches = [...(await readFile(path.join(root, file), 'utf8')).matchAll(pattern)];
+  if (matches.length !== 1) {
+    fail(`${file} must carry exactly one "${label}" marker; found ${matches.length}. A brake that can be deleted or doubled silently is not a brake.`);
+  } else if (legal && !legal.has(matches[0][1])) {
+    fail(`${file} has an unrecognised ${label} value ${JSON.stringify(matches[0][1])}; expected one of ${[...legal].join(', ')}.`);
+  }
+}
+
 // Corpus test (docs/editorial-underpinning.md). Principle 7 — "the culture a
 // man builds can eventually hold him" — is a question about the whole body of
 // work, and the document is explicit that no per-piece reading can answer it:

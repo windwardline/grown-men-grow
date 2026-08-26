@@ -64,6 +64,12 @@ Each week's kit lives at `~/Library/Mobile Documents/com~apple~CloudDocs/Grown M
 
 **Active hold:** none
 
+**Standing commission:** witness
+
+Read by the draft tasks and asserted by `verify-repository.mjs`. It names the stance the next field-note draft must be written in, and it exists because the 2026-08-26 corpus measurement found `witness` at two pieces in fifteen where the Stance section describes roughly a quarter — a gap the subject test demonstrably does not close on its own, because every draft that has a move available reads as an assignment and almost every subject has a move available. The commission is how a stance gets chosen deliberately rather than arrived at.
+
+A draft task that writes a note in this stance clears the commission by setting it back to `none` in the same change set that lands the note. `assignment` is the ordinary value and needs no commission; setting this to `witness` is the deliberate act. The three witness gates in `docs/editorial-underpinning.md` still decide whether a given subject can carry the stance — a commission is an instruction about what to look for, never a licence to force a subject that fails the subject test. A draft task that cannot find a subject passing those gates says so and leaves the commission standing rather than shipping an assignment piece wearing the label.
+
 That line is the brake, and it is read by machine — `scripts/note-task-preflight.mjs` refuses to post when it says anything but `none`. Holding is an edit to it: replace `none` with the date and the reason. Resuming is the founder restoring `none`, and only the founder. The preflight errors rather than proceeding if the line is missing or appears twice, so removing it stops the tasks instead of silently unblocking them.
 
 Every week this publication auto-fires: Ghost publishes and emails Tuesday at 8:00, and Buffer posts four more times without a human in the loop. That is the point of it. It also means the machine will publish cheerfully into a week that has stopped being ordinary unless someone stops it.

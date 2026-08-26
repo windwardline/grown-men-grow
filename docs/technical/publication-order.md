@@ -47,36 +47,34 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 4 | `anger-is-a-terrible-manager` | 2026-09-08 | |
 | 5 | `rest-is-not-a-reward` | 2026-09-15 | |
 | 6 | `you-cant-outwork-a-wrong-direction` | 2026-09-22 | |
-| 7 | `your-body-keeps-the-books` | 2026-09-29 | |
+| 7 | `nobody-rigs-to-the-breaking-strength` | 2026-09-29 | |
 | 8 | `ask-for-help-while-its-still-cheap` | 2026-10-06 | |
-| 9 | `comparison-is-a-bad-map` | 2026-10-13 | |
-| 10 | `the-lights-never-flickered` | 2026-10-20 | |
-| 11 | `nobody-rigs-to-the-breaking-strength` | 2026-10-27 | |
-| 12 | `you-can-walk-on-it-tomorrow` | 2026-11-03 | |
+| 9 | `the-lights-never-flickered` | 2026-10-13 | |
+| 10 | `comparison-is-a-bad-map` | 2026-10-20 | |
+| 11 | `you-can-walk-on-it-tomorrow` | 2026-10-27 | |
+| 12 | `your-body-keeps-the-books` | 2026-11-03 | |
 | 13 | `somebody-is-up-on-his-ladder` | 2026-11-10 | |
 | 14 | `every-part-passed-inspection` | 2026-11-17 | |
 
 ## Why this order and not another
 
-The constraints above fix positions 3, 5, 6, and 7 relative to each other. The remaining choices are editorial and were made on three grounds:
+The three constraints above fix positions 3, 5, 6, and 12 relative to each other. Everything else is editorial and was decided on three grounds, recorded so a future change can disagree with them knowingly.
 
-- **Two friendship pieces do not run back to back.** Position 1 and position 3 are both about friendship; position 2 separates them with a piece about repair.
-- **The witness piece runs late.** `the-lights-never-flickered` is the only note where the reader is held rather than asked. It sits at position 10, after the voice is established, so it reads as a deliberate change of stance rather than as the publication's default register. It is not a series and nothing labels it.
-- **Related machinery is spread.** `rest-is-not-a-reward` and `nobody-rigs-to-the-breaking-strength` both argue about capacity and both run on maintenance metaphors; they sit at 5 and 11 rather than adjacent.
+- **Two friendship pieces do not run back to back.** Positions 1 and 3 are both about friendship; position 2 separates them with a piece about repair.
+- **The two witness pieces run late and apart.** `the-lights-never-flickered` sits at 9 and `somebody-is-up-on-his-ladder` at 13, both in the back half so a change of stance reads as deliberate rather than as the publication's default register, and four slots apart so they do not read as a series. Neither is labelled and neither is announced.
+- **Build-trade openings are separated.** This is the preference that had quietly failed, and the reorder of 2026-08-26 is what fixed it.
 
-`you-can-walk-on-it-tomorrow` was appended at 12 on 2026-08-19 because appending moves nothing, and two slots are already scheduled. **It sits directly after `nobody-rigs-to-the-breaking-strength`, and both open on a jobsite material fact** — which is the one preference above that an append cannot honour. The arguments do not overlap: 11 is about how much load a man books himself at, 12 is about how long a thing takes to become load-bearing. But they will read as neighbours, and a reader who noticed the first opening will notice the second. Moving 12 earlier is a founder decision and would push two scheduled posts; it is recorded here rather than taken.
+### The reorder of 2026-08-26, and the miscount that delayed it
 
-`somebody-is-up-on-his-ladder` was appended at 13 on 2026-08-23, for the same reason: appending moves nothing and two slots are already scheduled. Two preferences above take strain and are recorded rather than quietly overridden.
+Positions 12, 13, and 14 were each appended in turn, each append recorded the same strain, and each deferred the fix. Appending moves nothing, which is its virtue and was here its defect: the run grew one slot at a time and no single append looked like the problem.
 
-**The witness preference holds, and gets a second test.** This is the second `witness` note, and at 13 it runs three slots after `the-lights-never-flickered` at 10. Late is right for the same reason it was right at 10 — a change of stance reads as deliberate only once the default register is established — and three slots apart is far enough that two witness pieces will not read as a series. Nothing labels either one.
+**The run was also undercounted.** It was recorded as four consecutive build-trade openings — rigging, concrete, gutters, machining. It was five. `the-lights-never-flickered` opens on anchor bolts set an inch and a half off a template, which is as much a jobsite fact as a lifting sling is, and it sat at position 10 directly above them. The same miscount named it as one of the pieces available to break the run, when it was one of the pieces making it.
 
-**The machinery preference now takes real strain, and this is the third slot in a row to do it.** Positions 11, 12, and 13 all run on building metaphors — rigging, concrete, gutters — and 12 and 13 both open on a physical fact about a house. The arguments do not overlap: 11 is how much load a man books himself at, 12 is how long a thing takes to become load-bearing, 13 is what happens to the part that carries water off everything else. But three construction-adjacent openings in a row is more than the spread-the-machinery preference intends, and a reader who noticed the first two will notice the third. Moving 13 earlier, or interleaving one of positions 8 through 10 between 12 and 13, is a founder decision and would push scheduled posts; it is recorded here rather than taken.
+**What the reorder does.** Five build-trade pieces need four separators to be fully spread, and the bank offers three that are unambiguously not build-trade — `ask-for-help-while-its-still-cheap`, `comparison-is-a-bad-map`, and `your-body-keeps-the-books`. Three separators is enough to reduce the longest run from five to two, and no arrangement of this bank does better. The remaining pair is 13 and 14, at the end, where the reader has the most distance from the last one.
 
-`every-part-passed-inspection` was appended at 14 on 2026-08-26, for the same reason the two before it were: appending moves nothing and two slots are already scheduled. It carries no cross-reference, so no constraint binds it.
+`your-body-keeps-the-books` moved from 7 to 12 to supply the third separator. That is the only constraint-bearing piece the reorder touches, and it moved later, which the constraint allows — `rest-is-not-a-reward` must precede it and now precedes it by seven slots rather than two.
 
-**The machinery preference now fails rather than strains, and saying so is the point of recording it.** Positions 11, 12, 13, and 14 are rigging, concrete, gutters, and machining — four consecutive pieces running on build-trade metaphor, where the preference intends them spread. Each append was individually defensible and the run is not; that is the same arithmetic the note at position 14 is about, which is an irony worth naming rather than enjoying. The arguments still do not overlap: 11 is how much load a man books himself at, 12 is how long a thing takes to become load-bearing, 13 is what carries water off everything else, 14 is why an assembly of good parts still does not fit. But a reader who noticed three will notice four.
-
-**This is the point at which "recorded rather than taken" stops being sufficient.** Positions 12 and 13 each recorded the same strain and deferred the fix to a founder decision, and the deferral is what produced the run. Interleaving one of positions 8 through 10 — `ask-for-help-while-its-still-cheap`, `comparison-is-a-bad-map`, or `the-lights-never-flickered` — between 12 and 13 would break it and violates no constraint, because the three binding constraints fix only positions 3, 5, 6, and 7. It pushes no scheduled post: slots 1 and 2 are the only ones staged. It remains a founder decision because reordering the register is explicitly not an agent's call, but it is now a recommendation rather than an observation.
+**Nothing scheduled moved.** Positions 1 and 2 are staged on Ghost and are untouched. Every position from 3 onward is a projection, and the checker proves the three binding constraints still hold — verified by breaking each one and confirming the named failure.
 
 ## How this is used
 
