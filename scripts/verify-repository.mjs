@@ -417,6 +417,7 @@ const requiredFiles = [
   'scripts/render-field-note-12.mjs',
   'scripts/render-field-note-13.mjs',
   'scripts/render-field-note-14.mjs',
+  'scripts/render-field-note-15.mjs',
   'scripts/stage-next-field-note.mjs',
   'scripts/render-brand-banners.mjs',
   'scripts/render-ghost-feature-images.mjs',
@@ -552,11 +553,12 @@ await validateAssetFamily('assets/drafts/instagram/field-note-11-carousel', 7, 1
 await validateAssetFamily('assets/drafts/instagram/field-note-12-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-13-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-14-carousel', 7, 1080, 1350);
+await validateAssetFamily('assets/drafts/instagram/field-note-15-carousel', 7, 1080, 1350);
 await validatePhotographExclusivity('assets/drafts/instagram');
 await validatePublicationOrder();
 await validateCrossReferences();
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
-await validateAssetFamily('assets/drafts/ghost/feature-images', 16, 1600, 1000);
+await validateAssetFamily('assets/drafts/ghost/feature-images', 17, 1600, 1000);
 await validateEditorialConcepts();
 const editorialSources = new Map([
   ['friends-in-conversation', { width: 1023, height: 1537 }],
@@ -632,6 +634,7 @@ const reviewSheets = new Map([
   ['field-note-12-carousel', { width: 1362, height: 1004 }],
   ['field-note-13-carousel', { width: 1362, height: 1004 }],
   ['field-note-14-carousel', { width: 1362, height: 1004 }],
+  ['field-note-15-carousel', { width: 1362, height: 1004 }],
   ['ghost-social-cards', { width: 1310, height: 884 }],
   ['pinned-introduction', { width: 1362, height: 1004 }],
   ['recognition-carousel', { width: 1362, height: 1004 }],
