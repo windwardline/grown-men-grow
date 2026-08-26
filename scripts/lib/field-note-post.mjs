@@ -459,7 +459,21 @@ export function buildPostPayload({ source, featureImage }) {
     slug: front.slug,
     html: essayHtml(extractEssaySource(source)),
     status: 'draft',
-    custom_excerpt: front.preview,
+    // The THEME decides what this field is. `post.hbs` renders custom_excerpt as
+    // `article-header__deck` — the on-page subtitle under the title — so this
+    // slot is the dek, not the email preview. Sending `preview` here printed the
+    // inbox preheader as the visible subtitle on every post the builder staged;
+    // `a-confession-can-still-be-selfish` shipped that way on 2026-08-25 and the
+    // hand-staged Field Note 2 was correct by accident, which is why the two
+    // disagreed and the divergence report kept surfacing it as a taste question.
+    //
+    // Ghost has exactly one excerpt field and also uses it as the newsletter
+    // preheader, so this cannot serve both jobs. The visible reading surface
+    // wins: the dek is part of the approved editorial composition, and it makes
+    // a perfectly good preheader. `preview` consequently has no Ghost
+    // destination and is now an internal field only — stated here rather than
+    // left as a frontmatter key that looks like it still does something.
+    custom_excerpt: front.dek,
     meta_title: approved.meta_title ?? `${front.title} | Grown Men Grow`,
     meta_description: approved.meta_description ?? front.dek,
     feature_image: featureImage,

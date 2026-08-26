@@ -388,12 +388,23 @@ test('buildPostPayload derives metadata only when the note approves none', () =>
   assert.equal(payload.meta_description, 'The dek line.');
 });
 
+test('buildPostPayload puts the dek in the excerpt, because the theme renders it as the deck', () => {
+  // Regression guard for the defect found 2026-08-26: post.hbs renders
+  // custom_excerpt as article-header__deck, so sending `preview` printed the
+  // inbox preheader as the on-page subtitle. The two source fields differ in
+  // every real note, so asserting the dek lands AND the preview does not is what
+  // makes this test able to fail.
+  const payload = buildPostPayload({ source: NOTE, featureImage: 'https://example.test/f.png' });
+  assert.equal(payload.custom_excerpt, 'The dek line.');
+  assert.notEqual(payload.custom_excerpt, 'The preview line.');
+});
+
 test('buildPostPayload carries the fields Ghost needs to publish and send', () => {
   const payload = buildPostPayload({ source: NOTE, featureImage: 'https://example.test/f.png' });
   assert.equal(payload.title, 'A Title');
   assert.equal(payload.slug, 'a-title');
   assert.equal(payload.status, 'draft');
-  assert.equal(payload.custom_excerpt, 'The preview line.');
+  assert.equal(payload.custom_excerpt, 'The dek line.');
   assert.equal(payload.meta_title, 'A Title | Grown Men Grow');
   assert.equal(payload.meta_description, 'The dek line.');
   assert.equal(payload.email_subject, 'A Title');
