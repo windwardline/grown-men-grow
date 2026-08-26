@@ -9,6 +9,8 @@ preview: Men maintain everything they value. Almost everything.
 feature_image_alt: A man taking a relaxed phone call in his open garage doorway, beside hands checking a car's oil dipstick over a clean engine bay, in a paper collage.
 status: founder-approved
 approved: 2026-08-09 — essay, carousel, caption, and visual direction approved as written; publication timing remains gated
+stance: assignment — the schedule is his to set
+closing_addresses_reader: yes — "Put them on the schedule you already trust … Then make the call."
 personal_claims: none included; add only from founder-supplied facts
 artwork_status: in production 2026-08-09 under the per-article image rule
 ---

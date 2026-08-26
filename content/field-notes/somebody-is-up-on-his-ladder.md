@@ -11,6 +11,7 @@ status: founder-approved
 approved: 2026-08-23 — essay, platform pack, and artwork approved together, in one pass, as written
 publication_authorized: false — approval covers the work, not a slot; publication, newsletter delivery, and posting remain separately gated
 stance: witness — the subject test passes; being covered while laid up is an event he neither caused nor can fix, and he has no move in it
+closing_addresses_reader: no — witness gate 1: ends on the last fact, "Nothing on the house records who turned it."
 register: generic present — asserts that this happens, never that a particular instance happened
 personal_claims: none — no event is asserted as reportage and no first person appears, per the 2026-08-08 ruling reaffirmed 2026-08-12
 social_copy_status: founder-approved as written 2026-08-23; posting remains separately gated

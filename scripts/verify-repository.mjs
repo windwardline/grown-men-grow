@@ -778,6 +778,83 @@ for (const file of tracked.filter((item) => item.startsWith('content/field-notes
   }
 }
 
+// Corpus test (docs/editorial-underpinning.md). Principle 7 — "the culture a
+// man builds can eventually hold him" — is a question about the whole body of
+// work, and the document is explicit that no per-piece reading can answer it:
+// across everything published, is the reader ever the one being held, or is he
+// always the one doing the holding? Test 9 flags it per piece and is weak there,
+// because a single essay can honourably ask a man to do something.
+//
+// The doc says to measure at the bank rather than the calendar, to mark each
+// piece for stance AND for whether its last hundred words address him, and to
+// record the count and the judgment in the decision log. None of that was
+// mechanised. Between the 2026-08-12 measurement at eleven pieces and
+// 2026-08-26 the bank reached fifteen and nothing could have noticed the next
+// one falling due — the same shape as every other obligation in this repository
+// that was prose until it was a gate.
+//
+// So two things are enforced. Every approved piece carries both markers, derived
+// over the tracked population rather than a hand-written list, because a list
+// inherits the blind spots of the scan that built it. And the measurement's own
+// due date is read from the decision log, so the threshold fails the build
+// instead of being remembered.
+const STANCES = new Set(['assignment', 'witness']);
+const ADDRESSES = new Set(['yes', 'no']);
+
+const corpusPieces = tracked.filter((item) =>
+  (item.startsWith('content/field-notes/') && item.endsWith('.md'))
+  || item === 'content/ghost/essay-01-strength-has-to-grow-up.md');
+
+if (corpusPieces.length < 2) {
+  fail('The corpus test examined fewer than two pieces; the population derivation is broken.');
+}
+
+let corpusWitness = 0;
+let corpusAddresses = 0;
+for (const file of corpusPieces) {
+  const text = await readFile(path.join(root, file), 'utf8');
+  const stance = [...text.matchAll(/^stance:[^\S\n]*(\w+)/gm)];
+  const closing = [...text.matchAll(/^closing_addresses_reader:[^\S\n]*(\w+)/gm)];
+
+  if (stance.length !== 1 || !STANCES.has(stance[0][1])) {
+    fail(`${file} needs exactly one \`stance\` of assignment or witness; the corpus test marks every published piece.`);
+    continue;
+  }
+  if (closing.length !== 1 || !ADDRESSES.has(closing[0][1])) {
+    fail(`${file} needs exactly one \`closing_addresses_reader\` of yes or no; stance alone misses the tell the corpus test is looking for.`);
+    continue;
+  }
+  if (stance[0][1] === 'witness') corpusWitness += 1;
+  if (closing[0][1] === 'yes') corpusAddresses += 1;
+
+  // Witness gate 1 (docs/editorial-underpinning.md): a witness piece ends on the
+  // last fact and stops. A witness piece whose closing turns to him is an
+  // assignment piece wearing different clothes, which is the failure the stance
+  // ruling exists to catch.
+  if (stance[0][1] === 'witness' && closing[0][1] === 'yes') {
+    fail(`${file} is marked witness but its closing addresses the reader; witness gate 1 forbids that turn.`);
+  }
+}
+
+// The due date is written by whoever records a measurement, and enforced here,
+// so an out-of-cadence measurement cannot quietly push the scheduled one out.
+const decisionLog = await readFile(path.join(root, 'docs/technical/decision-log.md'), 'utf8');
+const measurements = [...decisionLog.matchAll(
+  /^\*\*Corpus test last measured:\*\* (\d{4}-\d{2}-\d{2}) at a bank of (\d+) pieces; next due at (\d+)\.$/gm)];
+if (!measurements.length) {
+  fail('docs/technical/decision-log.md carries no "**Corpus test last measured:**" marker; the corpus test has no recorded baseline and its threshold cannot be enforced.');
+} else {
+  const latest = measurements[measurements.length - 1];
+  const dueAt = Number(latest[3]);
+  if (corpusPieces.length >= dueAt) {
+    fail(
+      `The corpus test is due: the bank is ${corpusPieces.length} pieces and the last measurement (${latest[1]}, at ${latest[2]}) set the next at ${dueAt}. `
+      + `Re-measure stance and closings across the bank, record the count AND the judgment in the decision log per docs/editorial-underpinning.md, `
+      + `and add a new marker line with the next threshold. Current standing: ${corpusWitness} witness and ${corpusAddresses} closings that address him, of ${corpusPieces.length}.`,
+    );
+  }
+}
+
 // The weekly hold is the brake on an automation that otherwise publishes with
 // nobody in the loop, and note-task-preflight.mjs reads it from one marker
 // line. Assert the marker here too: a fix that cannot notice its own premise

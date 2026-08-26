@@ -9,6 +9,8 @@ preview: You’re reading someone else’s odometer and calling it a route.
 feature_image_alt: Two neighboring garden beds at different heights in morning light, beside old photographs and a notebook spread on a wooden table, in a paper collage.
 status: founder-approved
 approved: 2026-08-09 under the ten-round directive; founder veto on sight
+stance: assignment — the question is his to ask before the envy loads
+closing_addresses_reader: yes — "run your own route toward it. … then close the map. It was never yours."
 personal_claims: none included; add only from founder-supplied facts
 artwork_status: complete; founder-approved 2026-08-10 with rounds 7-10
 ---

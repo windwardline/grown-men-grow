@@ -54,6 +54,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 11 | `nobody-rigs-to-the-breaking-strength` | 2026-10-27 | |
 | 12 | `you-can-walk-on-it-tomorrow` | 2026-11-03 | |
 | 13 | `somebody-is-up-on-his-ladder` | 2026-11-10 | |
+| 14 | `every-part-passed-inspection` | 2026-11-17 | |
 
 ## Why this order and not another
 
@@ -70,6 +71,12 @@ The constraints above fix positions 3, 5, 6, and 7 relative to each other. The r
 **The witness preference holds, and gets a second test.** This is the second `witness` note, and at 13 it runs three slots after `the-lights-never-flickered` at 10. Late is right for the same reason it was right at 10 — a change of stance reads as deliberate only once the default register is established — and three slots apart is far enough that two witness pieces will not read as a series. Nothing labels either one.
 
 **The machinery preference now takes real strain, and this is the third slot in a row to do it.** Positions 11, 12, and 13 all run on building metaphors — rigging, concrete, gutters — and 12 and 13 both open on a physical fact about a house. The arguments do not overlap: 11 is how much load a man books himself at, 12 is how long a thing takes to become load-bearing, 13 is what happens to the part that carries water off everything else. But three construction-adjacent openings in a row is more than the spread-the-machinery preference intends, and a reader who noticed the first two will notice the third. Moving 13 earlier, or interleaving one of positions 8 through 10 between 12 and 13, is a founder decision and would push scheduled posts; it is recorded here rather than taken.
+
+`every-part-passed-inspection` was appended at 14 on 2026-08-26, for the same reason the two before it were: appending moves nothing and two slots are already scheduled. It carries no cross-reference, so no constraint binds it.
+
+**The machinery preference now fails rather than strains, and saying so is the point of recording it.** Positions 11, 12, 13, and 14 are rigging, concrete, gutters, and machining — four consecutive pieces running on build-trade metaphor, where the preference intends them spread. Each append was individually defensible and the run is not; that is the same arithmetic the note at position 14 is about, which is an irony worth naming rather than enjoying. The arguments still do not overlap: 11 is how much load a man books himself at, 12 is how long a thing takes to become load-bearing, 13 is what carries water off everything else, 14 is why an assembly of good parts still does not fit. But a reader who noticed three will notice four.
+
+**This is the point at which "recorded rather than taken" stops being sufficient.** Positions 12 and 13 each recorded the same strain and deferred the fix to a founder decision, and the deferral is what produced the run. Interleaving one of positions 8 through 10 — `ask-for-help-while-its-still-cheap`, `comparison-is-a-bad-map`, or `the-lights-never-flickered` — between 12 and 13 would break it and violates no constraint, because the three binding constraints fix only positions 3, 5, 6, and 7. It pushes no scheduled post: slots 1 and 2 are the only ones staged. It remains a founder decision because reordering the register is explicitly not an agent's call, but it is now a recommendation rather than an observation.
 
 ## How this is used
 

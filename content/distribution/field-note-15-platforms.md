@@ -1,15 +1,15 @@
 ---
 essay: Every Part Passed Inspection
 canonical: https://grownmengrow.com/every-part-passed-inspection/ (live only after publication)
-status: draft — NOT founder-approved
-approved: none — this pack has not been reviewed or approved by the founder
-publication_authorized: false — nothing here is authorized to post, send, or schedule
+status: founder-approved
+approved: 2026-08-26 — approved as written alongside the essay and artwork
+publication_authorized: false — approval covers the copy, not a slot; posting remains separately gated
 image_rule: per-article — this pack may use only Field Note 15 imagery
 ---
 
 # Field Note 15 — platform adaptations
 
-Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts until the founder approves the note and the canonical Ghost URL is live, and until each platform's gate passes. Ghost remains canonical; Medium is the only full-essay surface.
+Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts until the canonical Ghost URL is live and each platform's gate passes. Ghost remains canonical; Medium is the only full-essay surface.
 
 # Medium
 
