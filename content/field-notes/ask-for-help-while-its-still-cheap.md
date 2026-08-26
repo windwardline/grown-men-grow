@@ -9,6 +9,8 @@ preview: The price of help only goes one direction while you wait.
 feature_image_alt: A man asking a question at a hardware-store counter while an older counterman leans in, beside a renovation wall opened to clean studs with wiring paused mid-run, in a paper collage.
 status: founder-approved
 approved: 2026-08-09 — essay, carousel, caption, and visual direction approved as written; publication timing remains gated
+stance: assignment — asking is an action with a correct execution, which is why it never counted as witness
+closing_addresses_reader: yes — "Ask early. Ask specifically. … You know which one."
 personal_claims: none included; add only from founder-supplied facts
 artwork_status: queued — next production batch under the per-article image rule; round closes only with artwork and platform pack
 ---

@@ -10,6 +10,7 @@ feature_image_alt: A freshly poured concrete slab kept covered under a light she
 status: founder-approved
 approved: 2026-08-19; founder approved and authorized for publication in one pass
 stance: assignment — the reader has a move, and the closing hundred words turn to him
+closing_addresses_reader: yes — "what you do in the meantime … sets the number you get to keep."
 personal_claims: none included; no first person appears, and none may be added except from founder-supplied facts
 artwork_status: complete; all three photographs banked 2026-08-19 and the carousel and feature image rebuilt image-led
 ---

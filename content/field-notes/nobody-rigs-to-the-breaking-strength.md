@@ -11,6 +11,7 @@ status: founder-approved
 approved: 2026-08-16 — essay, platform pack, and artwork approved together
 publication_authorized: false — approval covers the work, not a slot; publication, newsletter delivery, and posting remain separately gated
 stance: assignment — the subject test fails for witness; overcommitment is a thing he has a move on
+closing_addresses_reader: no — closes on the fact, not on him: "It was only ever a description of how it ends."
 register: generic present — asserts that this happens, never that a particular instance happened
 personal_claims: none — no event is asserted as reportage, per the 2026-08-08 ruling reaffirmed 2026-08-12
 social_copy_status: founder-approved as written 2026-08-16; posting remains separately gated

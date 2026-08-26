@@ -9,6 +9,8 @@ preview: More speed, wrong trail, farther from the truck.
 feature_image_alt: A man studying a paper map spread on a truck hood in bright morning light, beside a handheld compass held over a folded map, in a paper collage.
 status: founder-approved
 approved: 2026-08-09 under the ten-round directive; founder veto on sight
+stance: assignment — checking the heading is his to do
+closing_addresses_reader: yes — "you walk back to the work with your whole back in it."
 personal_claims: none included; add only from founder-supplied facts
 artwork_status: complete; founder-approved 2026-08-10 with rounds 7-10
 ---

@@ -9,6 +9,8 @@ preview: Every ledger gets audited eventually. Pick the auditor.
 feature_image_alt: A blood-pressure cuff and an open notebook on a kitchen table in morning light, beside hands slicing vegetables on a cutting board in bright daylight, in a paper collage.
 status: founder-approved
 approved: 2026-08-09 under the ten-round directive; founder veto on sight
+stance: assignment — reading his own books is his to do
+closing_addresses_reader: yes — "Open the mail. It’s addressed to him."
 personal_claims: none included; add only from founder-supplied facts
 artwork_status: complete; founder-approved 2026-08-10 with rounds 7-10
 ---

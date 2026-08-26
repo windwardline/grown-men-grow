@@ -9,6 +9,8 @@ preview: The tools get put away properly. The man doesn’t.
 feature_image_alt: A man asleep in a daytime hammock in a bright backyard, beside a kettle, a mug, and an open book at an armchair in morning light, in a paper collage.
 status: founder-approved
 approved: 2026-08-09 under the ten-round directive; founder veto on sight
+stance: assignment — scheduling rest is his to do
+closing_addresses_reader: yes — "Put it on the schedule. Not after. On."
 personal_claims: none included; add only from founder-supplied facts
 artwork_status: complete; founder-approved 2026-08-10 with rounds 7-10
 ---

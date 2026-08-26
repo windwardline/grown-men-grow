@@ -7,6 +7,8 @@ access: public
 email_subject: Strength Has to Grow Up
 preview: Strength tells us what a man can do. It does not tell us what he serves.
 cta: Get the next field note.
+stance: assignment — the reader is the one with a move throughout
+closing_addresses_reader: yes — closes on a question to him: "Where does your strength stop being strength and start becoming a hiding place?"
 status: founder-approved
 approved: 2026-08-07
 ---

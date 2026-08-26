@@ -10,6 +10,7 @@ feature_image_alt: Steel base plates and anchor bolts on a cured concrete slab i
 status: founder-approved
 approved: 2026-08-12 — approved as written, after the register correction rather than before it
 stance: witness — the first witness piece under the 2026-08-11 stance ruling
+closing_addresses_reader: no — witness gate 1: ends on the last fact and turns to him nowhere
 register: generic present — asserts that this happens, never that a particular instance happened
 personal_claims: none — no event is asserted as reportage, per the 2026-08-08 ruling that no event may be invented for narrative force
 publication_authorized: false — no publication, newsletter, or posting slot authorized

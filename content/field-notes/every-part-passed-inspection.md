@@ -7,15 +7,16 @@ access: public
 email_subject: Every Part Passed Inspection
 preview: The audit comes back clean and the gap is still thirty thousandths.
 feature_image_alt: A title-free paper collage pairing a photograph of two hands closing a dial caliper on a small steel cylinder at a maple workbench with a photograph of two cabinet doors meeting beneath a wooden counter, one standing slightly proud of the other, beside a drawn run of measured segments stepping away from a ruled datum line.
-status: draft — NOT founder-approved
-approved: none — this draft has not been reviewed or approved by the founder
-publication_authorized: false — no publication, newsletter, posting, or scheduling slot is authorized
+status: founder-approved
+approved: 2026-08-26 — essay, platform pack, and artwork approved together, in one pass
+publication_authorized: false — approval covers the work, not a slot; publication, newsletter delivery, and posting remain separately gated
 stance: assignment — the subject test fails for witness; drift is a thing he has a move on, and the closing hundred words turn to him
+closing_addresses_reader: yes — "Let it, and then put it down" is aimed at him, though the final line turns impersonal
 register: generic present — asserts that this happens, never that a particular instance happened
 personal_claims: none — no event is asserted as reportage and no first person appears, per the 2026-08-08 ruling reaffirmed 2026-08-12
-social_copy_status: draft — not approved
-visual_direction_status: draft — not approved
-artwork_status: image-led; three source photographs generated for this note, seven carousel slides, feature image, review sheet, and gate entries complete
+social_copy_status: founder-approved as written 2026-08-26; posting remains separately gated
+visual_direction_status: founder-approved as written 2026-08-26
+artwork_status: founder-approved 2026-08-26 — three source photographs, seven carousel slides, feature image, review sheet, and gate entries
 origin: written 2026-08-26 by the Wednesday draft task
 ---
 
@@ -160,7 +161,7 @@ The clean verdict is worth something real: he is not a bad man, and he can stop 
 
 # Production notes
 
-- Written 2026-08-26 by the Wednesday draft task; artwork generated the same day once the Chrome extension came back online. **Not founder-approved. Not authorized for publication, newsletter delivery, posting, or scheduling.**
+- Written 2026-08-26 by the Wednesday draft task; artwork generated the same day once the Chrome extension came back online. Founder-approved 2026-08-26 in one pass. Publication, newsletter delivery, and posting remain separately gated.
 - Stance is `assignment`. The subject test fails for witness: drift is something the reader has a move on, and the closing hundred words turn to him.
 - Register is the generic present throughout. No event is asserted as having happened, no composite is asserted, and no first person appears. Nothing here may be converted to reportage except from founder-supplied facts.
 - Test 9 is not clean and is reported rather than smoothed: the piece adds to the reader's ledger and shows no man being held. That is the corpus's standing debt, not this draft's alone — the bank stands at two `witness` pieces in fourteen. The next slot is the place to correct it.

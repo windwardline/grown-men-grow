@@ -9,6 +9,8 @@ preview: Hear the alarm. Don’t hand it the wheel.
 feature_image_alt: A finger pressing the test button of a ceiling smoke detector, beside a man standing calm at a kitchen counter with his hands braced, in a paper collage.
 status: founder-approved
 approved: 2026-08-09 under the ten-round directive; founder veto on sight
+stance: assignment — demoting the alarm is his to do
+closing_addresses_reader: no — closes on signal, not on him: "That is the goal. Not silence. Signal."
 personal_claims: none included; add only from founder-supplied facts
 artwork_status: complete; founder-approved 2026-08-10 with rounds 7-10
 ---

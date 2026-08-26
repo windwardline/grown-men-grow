@@ -7,6 +7,8 @@ access: public
 email_subject: Call Your Friends Before There’s a Reason
 preview: Doing things together counts. It just cannot carry everything forever.
 feature_image_alt: Two friends walking a bright neighborhood sidewalk carrying a canvas tool bag, in a paper collage.
+stance: assignment — the call is his to make
+closing_addresses_reader: yes — closes on a question to him: "Which friend have you been waiting for a reason to call?"
 status: founder-approved
 approved: 2026-08-08
 personal_claims_verified: true
