@@ -6,7 +6,7 @@ byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: Every Part Passed Inspection
 preview: The audit comes back clean and the gap is still thirty thousandths.
-feature_image_alt: A title-free paper collage in oxblood, rust, and warm paper tones, showing a run of measured segments stepping steadily away from a ruled datum line with the accumulated gap bracketed at its end, and a second run below sitting level on a single datum.
+feature_image_alt: A title-free paper collage pairing a photograph of two hands closing a dial caliper on a small steel cylinder at a maple workbench with a photograph of two cabinet doors meeting beneath a wooden counter, one standing slightly proud of the other, beside a drawn run of measured segments stepping away from a ruled datum line.
 status: draft — NOT founder-approved
 approved: none — this draft has not been reviewed or approved by the founder
 publication_authorized: false — no publication, newsletter, posting, or scheduling slot is authorized
@@ -15,7 +15,7 @@ register: generic present — asserts that this happens, never that a particular
 personal_claims: none — no event is asserted as reportage and no first person appears, per the 2026-08-08 ruling reaffirmed 2026-08-12
 social_copy_status: draft — not approved
 visual_direction_status: draft — not approved
-artwork_status: type-led composition under the 2026-08-16 photograph-exclusivity ruling; no new photography was generated because the Chrome extension was unreachable this run
+artwork_status: image-led; three source photographs generated for this note, seven carousel slides, feature image, review sheet, and gate entries complete
 origin: written 2026-08-26 by the Wednesday draft task
 ---
 
@@ -139,34 +139,53 @@ The clean verdict is worth something real: he is not a bad man, and he can stop 
 
 # Instagram alt text source
 
-- Slide 1: Title Every Part Passed Inspection in heavy condensed type on warm paper, above a drawn run of stacked measured segments and a ruled datum line.
-- Slide 2: Serif text about the second number in smaller type, beside a single drawn segment with a small plus-or-minus band marked at its right edge.
-- Slide 3: Serif text about six parts drifting the same way, above a run of six drawn segments whose far end falls well clear of the ruled datum line, with the accumulated gap marked.
-- Slide 4: Paper card in serif type about the audit coming back clean, with the drawn segment run continuing faintly behind it.
-- Slide 5: Sparse italic page reading Innocence is not a repair. It is a finding.
-- Slide 6: Two stacked strips contrasting fault as an inspection with responsibility as a gauge, beside a drawn gauge tick reading against the datum line.
-- Slide 7: Closing page reading Somebody has to hold the gauge against the part, with the drawn segments re-referenced to a single datum and the gap closed to one band.
+- Slide 1: Title Every Part Passed Inspection above a photograph of two hands closing a dial caliper around a small steel cylinder at a maple workbench, with a drawn run of measured segments stepping away from a ruled line beneath.
+- Slide 2: Serif text about every dimension carrying a second number in smaller type, above a single drawn segment with a plus-or-minus band marked at its right end.
+- Slide 3: Serif text about six parts each allowed five thousandths and all drifting the same way, above a run of six drawn segments falling well clear of a ruled datum line with the accumulated gap bracketed, and a dark strip reading Not one bad part in the assembly.
+- Slide 4: A photograph of two kitchen cabinet doors meeting beneath a wooden counter, the right door standing slightly proud of the left so a thin shadow line runs down the seam, above serif text about the audit coming back clean.
+- Slide 5: Sparse page reading Innocence is not a repair. It is a finding.
+- Slide 6: Two heavy strips contrasting fault as an inspection with responsibility as a gauge, each with serif text beneath, and a short drawn segment run in the lower corner.
+- Slide 7: A photograph of a hand holding an engineer's square against one machined face of a rectangular steel block on a bright workbench, above the closing lines and a drawn run of segments sitting level on a single datum with the gap closed to one band.
 
 # Visual direction
 
-- Family: **Marginalia** — typographic, spare, abrupt scale shifts, no required photograph.
-- Signature: a hand-drawn **tolerance stack** — a run of short stacked segments, each carrying a small plus-or-minus band, set against a ruled datum line. The run is short and close to the datum in the early slides, drifts visibly clear of it through the middle, and on the closing slide re-references to a single datum so the gap collapses to one band. Used by no other note.
-- Palette: Paper and Paper Light grounds, Ink and Oxblood type, Rust for the stack marks, Green for the closed datum on the final slide.
-- **No photography.** This is deliberate and authorized, not a shortfall: under the 2026-08-16 photograph-exclusivity ruling a note without its own new source photography takes a type-led composition rather than re-cropping any picture that already exists. The Chrome extension was unreachable this run, so no new photography could be generated.
-- If the founder prefers this note image-led, three house prompts are written below and ready to run in one pass; the composition would then be rebuilt against them.
+- Family: **Field Note** — image-led, with type-led and mark-led slides between the photographs so no two consecutive slides share a skeleton. The run is image, type, mark, image, type, type, image.
+- Signature: a hand-drawn **tolerance stack** — a run of short measured segments, each carrying a plus-or-minus band, set against a ruled datum line. Short and close to the datum early, drifting visibly clear of it through the middle, and on the closing slide re-referenced to a single datum so the gap collapses to one band. Used by no other note.
+- Palette: Paper and Paper Light grounds, Ink and Oxblood type, Rust for the drifting stack, Green for the resolved datum on the final slide.
+- Photography, all three generated for this note under the house prompt and unique to it:
+  - `assets/source/editorial/machinist-caliper-part.png` — the caliper closed on a steel cylinder. Slide 1 and the feature image.
+  - `assets/source/editorial/cabinet-seam-proud-door.png` — the cabinet seam with one door proud. Slide 4 and the feature image.
+  - `assets/source/editorial/datum-face-square.png` — the square registered on one machined face. Slide 7.
+- The renderer asserts that no photograph belonging to another article appears in this composition.
 
 # Production notes
 
-- Written 2026-08-26 by the Wednesday draft task. **Not founder-approved. Not authorized for publication, newsletter delivery, posting, or scheduling.**
+- Written 2026-08-26 by the Wednesday draft task; artwork generated the same day once the Chrome extension came back online. **Not founder-approved. Not authorized for publication, newsletter delivery, posting, or scheduling.**
 - Stance is `assignment`. The subject test fails for witness: drift is something the reader has a move on, and the closing hundred words turn to him.
 - Register is the generic present throughout. No event is asserted as having happened, no composite is asserted, and no first person appears. Nothing here may be converted to reportage except from founder-supplied facts.
 - Test 9 is not clean and is reported rather than smoothed: the piece adds to the reader's ledger and shows no man being held. That is the corpus's standing debt, not this draft's alone — the bank stands at two `witness` pieces in fourteen. The next slot is the place to correct it.
 - Contains no reference, explicit or implicit, to another field note, so it registers no cross-reference constraint.
 
-## Imagery — not generated this run
+## Imagery — generated 2026-08-26
 
-The Chrome extension was unreachable at both attempts, so no ChatGPT session could be opened and no source photography was generated. Nothing was skipped quietly and no existing photograph was reused. The three prompts below are written to the house shape in `docs/technical/content-pipeline.md` and are ready to send, in order, in the pinned **Grown Men Grow** project's current *Editorial Photography Request* thread. Source paths are reserved and currently unpopulated.
+Generated in ChatGPT in the founder's pinned **Grown Men Grow** project, continuing the most recent *Editorial Photography Request* thread. Each was reviewed at full resolution against the quality gate before entering the repository; **two were rejected and regenerated rather than shipped**, both for object continuity, which is the failure mode this subject invites because precision tools have geometry a reader of this publication knows by hand.
 
-1. `assets/source/editorial/machinist-caliper-part.png` — *Now a first, separate image in the same editorial photography style, portrait orientation 2:3, single image. A machinist's dial caliper closed on a small turned steel part on a clean bench top, a paper drawing with dimension callouts beside it; the image suggests exactness practiced calmly rather than anxiously. A well-kept, well-lit machine shop in daily use, swept floor, ordered tooling. Hands and forearms only. Contemporary editorial photography with the polish of a major men's magazine, natural texture, restrained fine film grain, candid rather than posed. Dynamic off-center composition with clean negative space at the upper left. Even daylight from a high window, warm, optimistic, grounded. Adult subject, pristine natural anatomy, maintained welcoming setting, no logos, no readable text, no watermark. Avoid: grime, oil-blackened hands, macho workshop cliches, sparks, dramatic rim light, cluttered scrap, rust, dim industrial gloom.*
-2. `assets/source/editorial/assembly-panel-gap.png` — *Now a second, separate image in the same editorial photography style, portrait orientation 2:3, single image. A cabinet door standing very slightly proud of its neighbor, the shadow line between them visible along one edge, in a finished and well-kept room; the image suggests a small accumulated discrepancy noticed by someone who cares about the work. A maintained contemporary interior in use, warm wood and clean painted surfaces. No people. Contemporary editorial photography with the polish of a major men's magazine, natural texture, restrained fine film grain, candid rather than posed. Asymmetric composition with clean negative space to the right. Soft directional daylight, warm, optimistic, grounded. Adult subject, pristine natural anatomy, maintained welcoming setting, no logos, no readable text, no watermark. Avoid: dilapidation, peeling paint, water damage, a room that reads as neglected or poor, exaggerated damage, moody underexposure.*
-3. `assets/source/editorial/datum-face-square.png` — *Now a third, separate image in the same editorial photography style, portrait orientation 2:3, single image. A machinist's square registered against one flat reference face of a workpiece, a scribed line running from that face; the image suggests everything being measured from one chosen surface. A bright, orderly bench in a shop that is plainly used every day. Hands and forearms only. Contemporary editorial photography with the polish of a major men's magazine, natural texture, restrained fine film grain, candid rather than posed. Dynamic off-center composition with clean negative space along the top edge. Cool north daylight warmed by wood surfaces, warm, optimistic, grounded. Adult subject, pristine natural anatomy, maintained welcoming setting, no logos, no readable text, no watermark. Avoid: blueprint-blue color grading, excessive bokeh, showroom sterility, staged perfect prop arrangement, over-sharpened metal, waxy skin.*
+**1. `assets/source/editorial/machinist-caliper-part.png`** — accepted on the second attempt.
+
+> Now a new, separate image in the same editorial photography style, portrait orientation 2:3, single image. One dial caliper alone, its two jaws clearly closed around a single plain steel cylinder held in one hand, on an otherwise bare maple bench top; the image suggests exactness practiced calmly rather than anxiously. A well-kept, well-lit machine shop softly out of focus behind. Hands and forearms only. Contemporary editorial photography with the polish of a major men's magazine, natural texture, restrained fine film grain, candid rather than posed. Dynamic off-center composition with clean negative space at the upper left. Even daylight from a high window, warm, optimistic, grounded. Adult subject, pristine natural anatomy, maintained welcoming setting, no logos, no readable text, no watermark. Avoid: invented or hybrid tools, extra or doubled jaws, doubled beams or scales, more than one measuring tool in frame, cluttered props, grime, oil-blackened hands, macho workshop cliches, sparks, dramatic rim light, rust, dim industrial gloom.
+
+*First attempt rejected.* It carried a bench of assorted tools; the caliper had a doubled beam and a fork of extra prongs corresponding to no real caliper, and the tool at lower left was a hybrid of a micrometer and a tap wrench. The fix was to strip the scene to one tool and one part — fewer objects, fewer chances for a tell — rather than to re-prompt the same crowded frame.
+
+**2. `assets/source/editorial/cabinet-seam-proud-door.png`** — accepted on the first attempt.
+
+> Now a new, separate image in the same editorial photography style, portrait orientation 2:3, single image. Two cabinet doors meeting, one standing very slightly proud of the other so a thin shadow line runs down the seam between them; the image suggests a small accumulated discrepancy noticed by someone who cares about the work. A maintained contemporary kitchen in daily use, warm wood and clean painted surfaces, a little life on the counter. No people. Contemporary editorial photography with the polish of a major men's magazine, natural texture, restrained fine film grain, candid rather than posed. Asymmetric composition, close on the seam, with clean negative space to the right. Soft directional daylight, warm, optimistic, grounded. Maintained welcoming setting, no logos, no readable text, no watermark. Avoid: dilapidation, peeling paint, water damage, a room that reads as neglected or poor, exaggerated or obvious damage, a gap so wide it looks broken, moody underexposure, showroom sterility.
+
+**3. `assets/source/editorial/datum-face-square.png`** — accepted on the second attempt.
+
+> Make a new image from scratch, same editorial photography style, portrait orientation 2:3, single image. One rigid one-piece engineer's try square: a thin flat steel blade fixed into a thicker handle at a single true right angle, the blade ending flush where it meets the handle and never protruding past it. The handle is held flat against one machined side face of a rectangular steel block on a bright bench, the blade standing up across the block's top face, one fine scribed line running from that same face. A bright, orderly shop bench plainly used every day. Hands and forearms only, and keep the joint between blade and handle fully visible, not covered by fingers. Contemporary editorial photography with the polish of a major men's magazine, natural texture, restrained fine film grain, candid rather than posed. Dynamic off-center composition with clean negative space along the top edge. Cool north daylight warmed by wood surfaces, warm, optimistic, grounded. Adult subject, pristine natural anatomy, maintained welcoming setting, no logos, no readable text, no watermark. Avoid: two separate bars, any visible seam or gap where blade meets handle, blade passing through or below the handle, invented or hybrid tools, more than one tool in frame, blueprint-blue grading, excessive bokeh, showroom sterility, over-sharpened metal, waxy skin.
+
+*First attempt rejected.* The square read as two separate loose bars overlapping rather than one rigid tool: a visible seam where blade met stock, and the blade protruding well below the stock. The accepted image shows the blade stepping cleanly out of a thicker handle with the joint visible and no protrusion.
+
+**One deliberate departure from the drafted prompts.** The originally drafted caliper prompt asked for "a paper drawing with dimension callouts" alongside the standing "no readable text" constraint. Those contradict, and the reliable outcome is garbled synthetic lettering — the single tell that rejects a whole image. The drawing was dropped rather than the constraint.
+
+**Composition note.** Slide 4's seam photograph is cropped with a top bias rather than centred; a centre slice of a tall source into a wide box kept only the flat door faces and threw away the counter and the proud step, which is the entire subject.

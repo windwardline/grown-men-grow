@@ -20,22 +20,30 @@
   <rect width="1080" height="1350" fill="#F8F3EA"/>
   <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
   <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 15 · 01 / 07</text>
-  <text x="64" y="402" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="108" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.8">EVERY PART</text>
-    <text x="64" y="520" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="108" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.8">PASSED</text>
-    <text x="64" y="638" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="108" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.8">INSPECTION.</text>
-    <text x="68" y="742" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="44" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">Nothing went out of spec.</text>
+  <text x="64" y="244" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="96" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.8">EVERY PART</text>
+    <text x="64" y="348" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="96" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.8">PASSED INSPECTION.</text>
+    <text x="68" y="424" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">Nothing went out of spec.</text>
+    <g transform="rotate(-0.8 550 788)">
+    <rect x="138" y="496" width="824" height="618" fill="#60735A"/>
+    <rect x="146" y="482" width="808" height="612" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/machinist-caliper-part.png" x="150" y="486" width="800" height="604" preserveAspectRatio="xMidYMid slice" filter="url(#fn15-01-photo)"/>
+  </g>
+    <g transform="rotate(-4 369 485)">
+    <rect x="262" y="462" width="214" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="270" y1="469" x2="466" y2="466" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
     <g>
-    <line x1="75" y1="900" x2="959.1000000000001" y2="900" stroke="#121416" stroke-width="3.3600000000000003" opacity="0.55"/>
-    <line x1="96" y1="965.1" x2="219.9" y2="965.1" stroke="#B14F3F" stroke-width="7.3500000000000005" stroke-linecap="round"/>
-    <line x1="219.9" y1="953.5500000000001" x2="219.9" y2="976.65" stroke="#B14F3F" stroke-width="3.57" opacity="0.72"/><line x1="230.4" y1="994.5" x2="354.3" y2="994.5" stroke="#B14F3F" stroke-width="7.3500000000000005" stroke-linecap="round"/>
-    <line x1="354.3" y1="982.95" x2="354.3" y2="1006.05" stroke="#B14F3F" stroke-width="3.57" opacity="0.72"/><line x1="364.8" y1="1023.9000000000001" x2="488.70000000000005" y2="1023.9000000000001" stroke="#B14F3F" stroke-width="7.3500000000000005" stroke-linecap="round"/>
-    <line x1="488.70000000000005" y1="1012.3500000000001" x2="488.70000000000005" y2="1035.45" stroke="#B14F3F" stroke-width="3.57" opacity="0.72"/><line x1="499.20000000000005" y1="1053.3" x2="623.1" y2="1053.3" stroke="#B14F3F" stroke-width="7.3500000000000005" stroke-linecap="round"/>
-    <line x1="623.1" y1="1041.75" x2="623.1" y2="1064.85" stroke="#B14F3F" stroke-width="3.57" opacity="0.72"/><line x1="633.6" y1="1082.7" x2="757.5" y2="1082.7" stroke="#B14F3F" stroke-width="7.3500000000000005" stroke-linecap="round"/>
-    <line x1="757.5" y1="1071.15" x2="757.5" y2="1094.25" stroke="#B14F3F" stroke-width="3.57" opacity="0.72"/><line x1="768" y1="1112.1000000000001" x2="891.9" y2="1112.1000000000001" stroke="#B14F3F" stroke-width="7.3500000000000005" stroke-linecap="round"/>
-    <line x1="891.9" y1="1100.5500000000002" x2="891.9" y2="1123.65" stroke="#B14F3F" stroke-width="3.57" opacity="0.72"/>
-    <line x1="923.4000000000001" y1="900" x2="923.4000000000001" y2="1112.1000000000001" stroke="#B14F3F" stroke-width="3.57"/>
-    <line x1="912.9000000000001" y1="900" x2="933.9000000000001" y2="900" stroke="#B14F3F" stroke-width="3.57"/>
-    <line x1="912.9000000000001" y1="1112.1000000000001" x2="933.9000000000001" y2="1112.1000000000001" stroke="#B14F3F" stroke-width="3.57"/>
+    <line x1="132" y1="1150" x2="889.8000000000001" y2="1150" stroke="#121416" stroke-width="2.8800000000000003" opacity="0.55"/>
+    <line x1="150" y1="1192.8999999999999" x2="256.2" y2="1192.8999999999999" stroke="#B14F3F" stroke-width="6.3" stroke-linecap="round"/>
+    <line x1="256.2" y1="1182.9999999999998" x2="256.2" y2="1202.8" stroke="#B14F3F" stroke-width="3.06" opacity="0.72"/><line x1="265.2" y1="1205.1999999999998" x2="371.4" y2="1205.1999999999998" stroke="#B14F3F" stroke-width="6.3" stroke-linecap="round"/>
+    <line x1="371.4" y1="1195.2999999999997" x2="371.4" y2="1215.1" stroke="#B14F3F" stroke-width="3.06" opacity="0.72"/><line x1="380.4" y1="1217.5" x2="486.59999999999997" y2="1217.5" stroke="#B14F3F" stroke-width="6.3" stroke-linecap="round"/>
+    <line x1="486.59999999999997" y1="1207.6" x2="486.59999999999997" y2="1227.4" stroke="#B14F3F" stroke-width="3.06" opacity="0.72"/><line x1="495.6" y1="1229.8" x2="601.8000000000001" y2="1229.8" stroke="#B14F3F" stroke-width="6.3" stroke-linecap="round"/>
+    <line x1="601.8000000000001" y1="1219.8999999999999" x2="601.8000000000001" y2="1239.7" stroke="#B14F3F" stroke-width="3.06" opacity="0.72"/><line x1="610.8" y1="1242.1" x2="717" y2="1242.1" stroke="#B14F3F" stroke-width="6.3" stroke-linecap="round"/>
+    <line x1="717" y1="1232.1999999999998" x2="717" y2="1252" stroke="#B14F3F" stroke-width="3.06" opacity="0.72"/><line x1="726" y1="1254.3999999999999" x2="832.2" y2="1254.3999999999999" stroke="#B14F3F" stroke-width="6.3" stroke-linecap="round"/>
+    <line x1="832.2" y1="1244.4999999999998" x2="832.2" y2="1264.3" stroke="#B14F3F" stroke-width="3.06" opacity="0.72"/>
+    <line x1="859.2" y1="1150" x2="859.2" y2="1254.3999999999999" stroke="#B14F3F" stroke-width="3.06"/>
+    <line x1="850.2" y1="1150" x2="868.2" y2="1150" stroke="#B14F3F" stroke-width="3.06"/>
+    <line x1="850.2" y1="1254.3999999999999" x2="868.2" y2="1254.3999999999999" stroke="#B14F3F" stroke-width="3.06"/>
   </g>
   <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
   <rect width="1080" height="1350" filter="url(#fn15-01-paper)" opacity="0.22" pointer-events="none"/>

@@ -2236,3 +2236,27 @@ produced `Male Friendship Before Crisis | Grown Men Grow Approved 2026-08-24 alo
 **External state changed:** none. No publish, no send, no post, no schedule, no Ghost write, no Buffer change, no Substack action.
 
 **Open, in order:** (1) founder review of Field Note 15 — copy, pack, and the type-led art direction, which is the decision this run most needs answered; (2) if image-led is preferred, run the three recorded prompts once the Chrome extension is reachable; (3) Field Note 2's live `custom_excerpt` is the dek where the builder sends the preview, a founder call; (4) the audience problem from the 2026-08-23 readout. Test 9 is not clean on this draft and the corpus stands at two `witness` pieces in fourteen — the next slot is the place to correct it.
+
+## 2026-08-26 (second entry) — Claude Code: Field Note 15 rebuilt image-led once Chrome came back
+
+**Client:** Claude Code (continuation of the `gmg-wednesday-draft` run, founder present). **Branch:** `claude/field-note-15-draft-2026-08-26`.
+
+**The extension came back and the imagery was generated.** The earlier entry today recorded a type-led composition because `mcp__claude-in-chrome__tabs_context_mcp` returned not-connected on both attempts. The founder confirmed Chrome was online; the extension responded, and all three source photographs were generated in the pinned **Grown Men Grow** project, continuing the most recent *Editorial Photography Request* thread rather than starting a new one. The type-led treatment was correct while no photography existed and is now superseded; the note is image-led.
+
+**Three photographs, each unique to this note and registered in the checker:** `machinist-caliper-part.png`, `cabinet-seam-proud-door.png`, `datum-face-square.png`, all 1024×1536.
+
+**Two of the three were rejected at full resolution and regenerated rather than shipped.** This is the substantive part of the run. The first caliper image carried a doubled beam, a fork of extra prongs corresponding to no real caliper, and a bench tool that was a micrometer/tap-wrench hybrid. The first square read as two separate loose bars overlapping — a visible seam where blade met stock, and the blade protruding well below it. Both are object-continuity failures under the visual system's gate, and both would have been obvious to a reader who has used the tools, which is this publication's readership. In each case the fix was to strip the frame to a single tool and specify the joint explicitly, not to re-roll the same prompt: crowded frames and unspecified junctions are where this subject generates tells. Every prompt actually sent, both rejections, and the reasoning are recorded in the note's production notes.
+
+**One prompt was corrected before it was ever sent.** The drafted caliper prompt asked for a paper drawing "with dimension callouts" while the house prompt's standing constraint is "no readable text." Those contradict, and the reliable outcome is garbled synthetic lettering — the single tell that rejects a whole image. The drawing was dropped rather than the constraint.
+
+**Composition defects found by reading the rendered output, not assumed.** Slide 4's seam photograph was centre-sliced from a tall source into a wide box, which kept only the flat door faces and threw away the counter and the proud step — the entire subject. The crop is now top-biased. The carousel runs image, type, mark, image, type, type, image, so no two consecutive slides share a skeleton.
+
+**The renderer's guard changed with the treatment.** The type-led assertion (throw if any `/assets/source/` reference appears) is replaced by the standard cross-article guard, so the note now fails the build if it composes a photograph belonging to another article. Exclusivity is scoped per Instagram family, so the carousel may use all three across its own slides and the Ghost feature image may reuse them — the same arrangement every banked note uses.
+
+**Files changed:** `drafts/every-part-passed-inspection.md` (frontmatter, alt text, visual direction, production notes), `scripts/render-field-note-15.mjs`, `scripts/verify-repository.mjs`, three new source photographs under `assets/source/editorial/`, the sixteen re-rendered assets under `assets/drafts/`, and this log.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` (17 files); `pnpm --dir theme install --frozen-lockfile`, exit 0; `pnpm --dir theme test`, no fatal issues on Ghost 6.x; `pnpm --dir theme zip` plus fatal GScan on the packaged zip, no fatal issues; `node --test 'scripts/test/**/*.test.mjs'` (127 pass, 0 fail); `node scripts/verify-repository.mjs` (539 tracked files, 52 editorial source images); `bash scripts/verify-svg-xml.sh` (158 SVG files); `git diff --cached --check` clean.
+
+**External state changed:** none in the publication. Three images were generated in the founder's own ChatGPT project and downloaded; no publish, no send, no post, no schedule, no Ghost write, no Buffer change. The share dialog's X, LinkedIn, and Reddit controls were never touched — only Download.
+
+**Open, in order:** (1) founder review of Field Note 15, now a complete image-led unit; (2) Field Note 2's live `custom_excerpt` is the dek where the builder sends the preview, a founder call; (3) the audience problem from the 2026-08-23 readout. The imagery item from this morning's entry is closed. Test 9 remains not clean on this draft and the corpus stands at two `witness` pieces in fourteen.
