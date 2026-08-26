@@ -4,7 +4,7 @@ canonical: https://grownmengrow.com/every-part-passed-inspection/ (live only aft
 status: draft — NOT founder-approved
 approved: none — this pack has not been reviewed or approved by the founder
 publication_authorized: false — nothing here is authorized to post, send, or schedule
-image_rule: per-article — this pack may use only Field Note 15 imagery, which is type-led this run
+image_rule: per-article — this pack may use only Field Note 15 imagery
 ---
 
 # Field Note 15 — platform adaptations
