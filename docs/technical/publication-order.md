@@ -55,6 +55,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 12 | `your-body-keeps-the-books` | 2026-11-03 | |
 | 13 | `somebody-is-up-on-his-ladder` | 2026-11-10 | |
 | 14 | `every-part-passed-inspection` | 2026-11-17 | |
+| 15 | `a-temp-wall-comes-out-in-april` | 2026-11-24 | |
 
 ## Why this order and not another
 
@@ -75,6 +76,20 @@ Positions 12, 13, and 14 were each appended in turn, each append recorded the sa
 `your-body-keeps-the-books` moved from 7 to 12 to supply the third separator. That is the only constraint-bearing piece the reorder touches, and it moved later, which the constraint allows — `rest-is-not-a-reward` must precede it and now precedes it by seven slots rather than two.
 
 **Nothing scheduled moved.** Positions 1 and 2 are staged on Ghost and are untouched. Every position from 3 onward is a projection, and the checker proves the three binding constraints still hold — verified by breaking each one and confirming the named failure.
+
+### Position 15 was appended, and it puts the run back to three
+
+`a-temp-wall-comes-out-in-april` was approved on 2026-08-30 and appended at 15. **Appending it costs both of the preferences the 2026-08-26 reorder was built to protect**, and that is recorded here rather than discovered later.
+
+It opens on framing a temporary wall, which is a build-trade opening by the same reading that counted anchor bolts as one. Positions 13, 14, and 15 are now gutters, machining, and framing — a run of three, where the reorder had got the longest run down to two. It is also the third `witness` piece, and it sits two slots after `somebody-is-up-on-his-ladder` at 13, against the preference that the witness pieces run four apart so they do not read as a series.
+
+**This is the fourth append in a row to record the same strain, which is the pattern this document already named as the defect.** So the fix is worked out here rather than deferred again, and it is one move.
+
+**Move `anger-is-a-terrible-manager` from 4 to 14.** Everything between shifts up one. That yields build-trade at 6, 8, 10, 12, 13, 15 — longest run two, at 12 and 13, which is the state the reorder settled on — and witness at 8, 12, and 15, three apart rather than two. `anger-is-a-terrible-manager` is the only non-build-trade piece in the front half that carries no constraint, which is what makes it the piece that can move.
+
+The three binding constraints survive it, checked rather than assumed: `friendship-has-a-maintenance-schedule` at 3 still precedes `rest-is-not-a-reward` at 4; `rest-is-not-a-reward` at 4 is still immediately before `you-cant-outwork-a-wrong-direction` at 5; and `rest-is-not-a-reward` still precedes `your-body-keeps-the-books`, at 11. Positions 1 and 2 are scheduled and do not move.
+
+**It is not applied, because changing the order is a founder decision and approving a note is not approving a reorder of nine other slots.** Nothing is urgent: position 3 is the next slot to stage, on 2026-09-01, and position 15 projects to 2026-11-24. The recommendation is stated with the arithmetic done so it can be taken or refused in one step.
 
 ## How this is used
 

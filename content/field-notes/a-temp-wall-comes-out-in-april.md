@@ -7,16 +7,16 @@ access: public
 email_subject: A Temp Wall Comes Out in April
 preview: Nobody frames a temp wall plumb. It is not going to be there in April.
 feature_image_alt: A title-free paper collage pairing a photograph of a rough temporary stud wall standing in a stripped-open room with a photograph of two opposing cedar shims tapped between a top plate and a ceiling joist, beside a drawn load-path mark of a short bar over a post reaching a hatched ground line.
-status: DRAFT — NOT founder-approved
-approved: none — this draft has not been reviewed or approved by the founder
-publication_authorized: false — no publication, newsletter, posting, or scheduling slot is authorized for this draft
+status: founder-approved
+approved: 2026-08-30 — essay, platform pack, and artwork approved together, in one pass
+publication_authorized: false — approval covers the work and a register position, not a Ghost slot; publication, newsletter delivery, and posting remain separately gated
 stance: witness — the subject test passes: the wall comes out on a schedule he did not set, and he has no move in it
 closing_addresses_reader: no — witness gate 1: ends on the last fact, "The room goes into use," and turns to him nowhere
 register: generic present — asserts that this happens, never that a particular instance happened
 personal_claims: none — no event is asserted as reportage and no first person appears, per the 2026-08-08 ruling reaffirmed 2026-08-12
-social_copy_status: DRAFT — not approved, not authorized for posting
-visual_direction_status: DRAFT — not approved
-artwork_status: DRAFT — three source photographs, seven carousel slides, feature image, and review sheet built for founder review; not approved
+social_copy_status: founder-approved as written 2026-08-30; posting remains separately gated
+visual_direction_status: founder-approved as written 2026-08-30
+artwork_status: founder-approved 2026-08-30 — three source photographs, seven carousel slides, feature image, review sheet, and gate entries
 origin: written 2026-08-30 by the Saturday draft task, against the standing commission `witness` recorded in operating-cadence.md
 ---
 
