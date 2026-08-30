@@ -2312,3 +2312,25 @@ The founder authorised executing the standing recommendations on all four open i
 **External state changed:** one field on one published Ghost post (`custom_excerpt` on `a-confession-can-still-be-selfish`), verified field by field after the write. Updating a published post does not resend its email, and that post had already sent. Nothing else — no publish, no send, no post, no schedule.
 
 **Open, in order:** (1) **the distribution problem**, unchanged and now the only substantive open item — the newsletter list is at one member, and the A/B stays suspended until thirty; nothing in the repository reaches this and it is not an engineering task; (2) when the A/B restarts, whether step 3's secondary metrics come from the Ghost admin UI by hand or leave the protocol, since `/stats/` and `/links/` return 403 to an integration key; (3) the next field-note draft is commissioned `witness` and the marker will hold until a draft task lands one.
+
+## 2026-08-30 — Claude Code: the Saturday note stood down; the scheduler fired nine hours late
+
+**Client:** Claude Code (scheduled task `gmg-saturday-note`, founder not present). **Branch:** `claude/saturday-note-standdown-2026-08-30`.
+
+**Nothing was posted. The slot is unfilled and stays that way.** The preflight returned exit 20, stand-down, with the reason `547 minutes past the 09:30 slot, beyond the 60-minute grace window`. The run fired at 18:36:44 EDT against a 09:30 ET slot. This is the lateness guard hardened on 2026-08-18 doing exactly the job it was built for: a "this week" note landing at 6:36 PM costs the Friday baseline the same way an hour early does, and the guard refused it without needing an agent to exercise judgment.
+
+**The cause is the scheduler, not the note task.** Three scheduled tasks share a `lastRunAt` inside twenty-six seconds today — `levelflow-bank-minute-bars` (10:02 slot) at 18:36:24, `gmg-saturday-note` (09:15) at 18:36:44, `gmg-saturday-draft` (10:36) at 18:36:50. That is a catch-up burst on application launch, not drift: scheduled tasks fire while the app is open, else on next launch, so nothing ran until the app was opened this evening. `gmg-friday-analytics` shows the same shape on 2026-08-28 — a 09:08 slot with a 14:46 EDT `lastRunAt`. The note task's own machinery was correct at every step; it was simply handed a dead slot.
+
+**The copy that did not go out** is Note 2 of `content/distribution/field-note-04-platforms.md`, against this week's essay *A Confession Can Still Be Selfish* (published 2026-08-25 12:00 UTC): "If you would be irritated by a follow-up question, it was an exhale." It is unposted and unaltered, and it remains this week's Note 2 if the founder chooses to post it by hand.
+
+**The profile was read, not written.** `substack.com/@grownmengrow/notes` was opened read-only to establish whether the slot was genuinely empty rather than already filled by an earlier run — the composer was never opened and no keystroke was injected. The publication identity is correct (the `Edit profile` control is present). The top note is Note 1 from Aug 25, five days old. This week's Note 2 is absent, confirming the slot is unfilled.
+
+**One observation that is not this run's to close.** The visible note history reads Aug 25 (Tue), Aug 18 (Tue), Aug 16 (Sat), Aug 11 (Tue). **Saturday 2026-08-23 carries no note**, so today is the second consecutive missed Saturday slot rather than a one-off. This run did not establish the cause of the Aug 23 gap and does not assert one; `**Active hold:**` reads `none`, so it was not a hold. It is recorded here because the Friday analytics task reads these timestamps as its baseline and would otherwise treat two absences as signal.
+
+**Files changed:** this log only. No content, script, gate, or configuration change.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs`; `pnpm --dir theme install --frozen-lockfile`; `pnpm --dir theme test`; `pnpm --dir theme zip` plus fatal GScan on the packaged zip; `node --test 'scripts/test/**/*.test.mjs'`; `node scripts/verify-repository.mjs`; `bash scripts/verify-svg-xml.sh`; `git diff --cached --check`. Results recorded in the pull request.
+
+**External state changed:** none. No post, no publish, no send, no schedule, no Ghost write, no Buffer change. One read-only page load of a public Substack profile. The preflight took its cross-process lock and released it on the stand-down; the lock directory was confirmed empty afterwards.
+
+**Open, in order:** (1) **the Saturday slot depends on the desktop app being open at 09:15 ET on a Saturday, and twice now it was not** — this is the live defect, and it is a scheduling-substrate question rather than an editorial one; the note tasks cannot fix it from inside the repository. (2) Whether the founder wants this week's Note 2 posted late by hand or skipped — a founder call, since posting it now is exactly what the guard declined to do automatically. (3) The Aug 23 gap above, for whoever next reconciles the note history. (4) Carried forward unchanged: the distribution problem, the newsletter list at one member, and the A/B suspended until thirty recipients.
