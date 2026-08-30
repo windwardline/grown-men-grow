@@ -64,7 +64,7 @@ Each week's kit lives at `~/Library/Mobile Documents/com~apple~CloudDocs/Grown M
 
 **Active hold:** none
 
-**Standing commission:** witness
+**Standing commission:** none
 
 Read by the draft tasks and asserted by `verify-repository.mjs`. It names the stance the next field-note draft must be written in, and it exists because the 2026-08-26 corpus measurement found `witness` at two pieces in fifteen where the Stance section describes roughly a quarter — a gap the subject test demonstrably does not close on its own, because every draft that has a move available reads as an assignment and almost every subject has a move available. The commission is how a stance gets chosen deliberately rather than arrived at.
 

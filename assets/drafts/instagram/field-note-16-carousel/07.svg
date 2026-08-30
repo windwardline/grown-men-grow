@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn16-07-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn16-07-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn16-07-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 16 · 07 / 07</text>
+  <g transform="rotate(-0.6 540 472)">
+    <rect x="228" y="162" width="624" height="654" fill="#60735A"/>
+    <rect x="236" y="148" width="608" height="648" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/filled-holes-floor.png" x="240" y="152" width="600" height="640" preserveAspectRatio="xMidYMid slice" filter="url(#fn16-07-photo)"/>
+  </g>
+    <g transform="rotate(3 439 153)">
+    <rect x="336" y="130" width="206" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="344" y1="137" x2="532" y2="134" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="78" y="872" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">Somebody fills the four holes</text><text x="78" y="938" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">before the floor gets refinished.</text>
+    <text x="80" y="1040" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">The filler dries a shade light.</text><text x="80" y="1106" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">The room goes into use.</text>
+    <g><line x1="330" y1="1170" x2="710" y2="1170" stroke="#60735A" stroke-width="8" stroke-linecap="round"/>
+    <rect x="390.8" y="1244" width="258.40000000000003" height="22" fill="#60735A" rx="3"/>
+    <line x1="314" y1="1266" x2="726" y2="1266" stroke="#121416" stroke-width="3.4" opacity="0.7"/><line x1="330" y1="1266" x2="318" y2="1282" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="393.3333333333333" y1="1266" x2="381.3333333333333" y2="1282" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="456.6666666666667" y1="1266" x2="444.6666666666667" y2="1282" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="520" y1="1266" x2="508" y2="1282" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="583.3333333333334" y1="1266" x2="571.3333333333334" y2="1282" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="646.6666666666667" y1="1266" x2="634.6666666666667" y2="1282" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="710" y1="1266" x2="698" y2="1282" stroke="#121416" stroke-width="2.6" opacity="0.5"/>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn16-07-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="fn16-feature-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn16-feature-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn16-feature-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="#F8F3EA"/>
+  <rect x="1260" y="0" width="340" height="1000" fill="#3A1518"/>
+  <g transform="rotate(-0.8 410 500)">
+    <rect x="68" y="80" width="684" height="874" fill="#3A1518"/>
+    <rect x="76" y="66" width="668" height="868" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/temp-wall-open-room.png" x="80" y="70" width="660" height="860" preserveAspectRatio="xMidYMid slice" filter="url(#fn16-feature-photo)"/>
+  </g>
+  <g transform="rotate(1.4 1000 420)">
+    <rect x="778" y="150" width="444" height="574" fill="#60735A"/>
+    <rect x="786" y="136" width="428" height="568" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/shims-top-plate.png" x="790" y="140" width="420" height="560" preserveAspectRatio="xMidYMid slice" filter="url(#fn16-feature-photo)"/>
+  </g>
+  <g transform="rotate(-4 327 69)">
+    <rect x="214" y="46" width="226" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="222" y1="53" x2="430" y2="50" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g transform="rotate(4 983 139)">
+    <rect x="884" y="116" width="198" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="892" y1="123" x2="1072" y2="120" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g><line x1="830" y1="760" x2="1170" y2="760" stroke="#B14F3F" stroke-width="8" stroke-linecap="round"/>
+    <line x1="1000" y1="760" x2="1000" y2="826" stroke="#B14F3F" stroke-width="7" stroke-linecap="round"/>
+    <line x1="987" y1="826" x2="1013" y2="826" stroke="#B14F3F" stroke-width="3.2" opacity="0.8"/>
+    <line x1="814" y1="910" x2="1186" y2="910" stroke="#121416" stroke-width="3.4" opacity="0.7"/><line x1="830" y1="910" x2="818" y2="926" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="886.6666666666666" y1="910" x2="874.6666666666666" y2="926" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="943.3333333333334" y1="910" x2="931.3333333333334" y2="926" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="1000" y1="910" x2="988" y2="926" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="1056.6666666666667" y1="910" x2="1044.6666666666667" y2="926" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="1113.3333333333333" y1="910" x2="1101.3333333333333" y2="926" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="1170" y1="910" x2="1158" y2="926" stroke="#121416" stroke-width="2.6" opacity="0.5"/>
+  </g>
+  <rect width="1600" height="1000" filter="url(#fn16-feature-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
