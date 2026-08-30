@@ -1,9 +1,9 @@
 ---
 essay: A Temp Wall Comes Out in April
 canonical: https://grownmengrow.com/a-temp-wall-comes-out-in-april/ (live only after publication)
-status: DRAFT — NOT founder-approved
-approved: none
-publication_authorized: false — no posting, scheduling, or newsletter slot is authorized
+status: founder-approved
+approved: 2026-08-30 — approved as written alongside the essay and artwork
+publication_authorized: false — approval covers the copy, not a slot; posting remains separately gated
 image_rule: per-article — this pack may use only Field Note 16 imagery
 stance_note: witness — every excerpt below holds the three gates: no imperative aimed at the reader, no closing question, and nothing liftable in the shape "so a man should ___"
 ---
