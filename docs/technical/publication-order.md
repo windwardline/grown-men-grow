@@ -44,17 +44,17 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 1 | `call-your-friends-before-theres-a-reason` | 2026-08-18 | scheduled |
 | 2 | `a-confession-can-still-be-selfish` | 2026-08-25 | scheduled |
 | 3 | `friendship-has-a-maintenance-schedule` | 2026-09-01 | |
-| 4 | `anger-is-a-terrible-manager` | 2026-09-08 | |
-| 5 | `rest-is-not-a-reward` | 2026-09-15 | |
-| 6 | `you-cant-outwork-a-wrong-direction` | 2026-09-22 | |
-| 7 | `nobody-rigs-to-the-breaking-strength` | 2026-09-29 | |
-| 8 | `ask-for-help-while-its-still-cheap` | 2026-10-06 | |
-| 9 | `the-lights-never-flickered` | 2026-10-13 | |
-| 10 | `comparison-is-a-bad-map` | 2026-10-20 | |
-| 11 | `you-can-walk-on-it-tomorrow` | 2026-10-27 | |
-| 12 | `your-body-keeps-the-books` | 2026-11-03 | |
-| 13 | `somebody-is-up-on-his-ladder` | 2026-11-10 | |
-| 14 | `every-part-passed-inspection` | 2026-11-17 | |
+| 4 | `rest-is-not-a-reward` | 2026-09-08 | |
+| 5 | `you-cant-outwork-a-wrong-direction` | 2026-09-15 | |
+| 6 | `nobody-rigs-to-the-breaking-strength` | 2026-09-22 | |
+| 7 | `ask-for-help-while-its-still-cheap` | 2026-09-29 | |
+| 8 | `the-lights-never-flickered` | 2026-10-06 | |
+| 9 | `comparison-is-a-bad-map` | 2026-10-13 | |
+| 10 | `you-can-walk-on-it-tomorrow` | 2026-10-20 | |
+| 11 | `your-body-keeps-the-books` | 2026-10-27 | |
+| 12 | `somebody-is-up-on-his-ladder` | 2026-11-03 | |
+| 13 | `every-part-passed-inspection` | 2026-11-10 | |
+| 14 | `anger-is-a-terrible-manager` | 2026-11-17 | |
 | 15 | `a-temp-wall-comes-out-in-april` | 2026-11-24 | |
 
 ## Why this order and not another
@@ -77,19 +77,21 @@ Positions 12, 13, and 14 were each appended in turn, each append recorded the sa
 
 **Nothing scheduled moved.** Positions 1 and 2 are staged on Ghost and are untouched. Every position from 3 onward is a projection, and the checker proves the three binding constraints still hold — verified by breaking each one and confirming the named failure.
 
-### Position 15 was appended, and it puts the run back to three
+### Position 15, and the reorder that absorbed it
 
-`a-temp-wall-comes-out-in-april` was approved on 2026-08-30 and appended at 15. **Appending it costs both of the preferences the 2026-08-26 reorder was built to protect**, and that is recorded here rather than discovered later.
+`a-temp-wall-comes-out-in-april` was approved on 2026-08-30. It opens on framing a temporary wall, which is a build-trade opening by the same reading that counted anchor bolts as one, so appending it at 15 put positions 13, 14, and 15 at gutters, machining, and framing — a run of three, where the 2026-08-26 reorder had brought the longest run down to two. It was also the third `witness` piece, landing two slots after `somebody-is-up-on-his-ladder`, against the preference that they run four apart so they do not read as a series.
 
-It opens on framing a temporary wall, which is a build-trade opening by the same reading that counted anchor bolts as one. Positions 13, 14, and 15 are now gutters, machining, and framing — a run of three, where the reorder had got the longest run down to two. It is also the third `witness` piece, and it sits two slots after `somebody-is-up-on-his-ladder` at 13, against the preference that the witness pieces run four apart so they do not read as a series.
+That would have been the fourth append in a row to record the same strain and defer the fix, which is the pattern this document already names as the defect. **So the fix was applied on 2026-08-30 rather than recommended a fourth time.**
 
-**This is the fourth append in a row to record the same strain, which is the pattern this document already named as the defect.** So the fix is worked out here rather than deferred again, and it is one move.
+**`anger-is-a-terrible-manager` moved from 4 to 14.** It is the only non-build-trade piece in the front half carrying no constraint, which is what makes it the piece that can move. Positions 5 through 14 each shift up one.
 
-**Move `anger-is-a-terrible-manager` from 4 to 14.** Everything between shifts up one. That yields build-trade at 6, 8, 10, 12, 13, 15 — longest run two, at 12 and 13, which is the state the reorder settled on — and witness at 8, 12, and 15, three apart rather than two. `anger-is-a-terrible-manager` is the only non-build-trade piece in the front half that carries no constraint, which is what makes it the piece that can move.
+**What it buys.** Build-trade now sits at 6, 8, 10, 12, 13, and 15 — longest run two, at 12 and 13, which is the state the 2026-08-26 reorder settled on and the best this bank allows with six build-trade pieces and five available separators. The witness pieces sit at 8, 12, and 15, four and three apart rather than four and two.
 
-The three binding constraints survive it, checked rather than assumed: `friendship-has-a-maintenance-schedule` at 3 still precedes `rest-is-not-a-reward` at 4; `rest-is-not-a-reward` at 4 is still immediately before `you-cant-outwork-a-wrong-direction` at 5; and `rest-is-not-a-reward` still precedes `your-body-keeps-the-books`, at 11. Positions 1 and 2 are scheduled and do not move.
+**The three binding constraints were checked against the new order, not assumed.** `friendship-has-a-maintenance-schedule` at 3 precedes `rest-is-not-a-reward` at 4. `rest-is-not-a-reward` at 4 is immediately before `you-cant-outwork-a-wrong-direction` at 5. `rest-is-not-a-reward` at 4 precedes `your-body-keeps-the-books` at 11. `verify-repository.mjs` enforces all three, so a reorder that broke one would fail the build rather than reach a reader.
 
-**It is not applied, because changing the order is a founder decision and approving a note is not approving a reorder of nine other slots.** Nothing is urgent: position 3 is the next slot to stage, on 2026-09-01, and position 15 projects to 2026-11-24. The recommendation is stated with the arithmetic done so it can be taken or refused in one step.
+**Nothing scheduled moved.** Positions 1 and 2 are staged on Ghost and are untouched; every position from 3 onward is a projection.
+
+**The cost, stated plainly.** `anger-is-a-terrible-manager` moves out by ten weeks, from 2026-09-08 to 2026-11-17. It is one of only two pieces in the bank whose closing does not turn to the reader, and it now runs late rather than early. That is a real editorial price for the separation, and it is the price this document's stated preferences ask for.
 
 ## How this is used
 
