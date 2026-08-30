@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn16-05-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn16-05-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn16-05-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 16 · 05 / 07</text>
+  <g transform="rotate(-0.7 540 338)">
+    <rect x="68" y="286" width="944" height="104" fill="#121416"/>
+    <text x="92" y="365.04" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="46" font-weight="900" letter-spacing="-0.4">THE FIRST TWO WEEKS ARE STAFFED.</text>
+  </g>
+    <text x="74" y="470" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">People know what to do with two weeks.</text><text x="74" y="528" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">Food in disposable pans, masking tape on</text><text x="74" y="586" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">the lid, 350 for forty minutes.</text>
+    <g transform="rotate(0.6 540 752)">
+    <rect x="68" y="700" width="944" height="104" fill="#3A1518"/>
+    <text x="92" y="779.04" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="46" font-weight="900" letter-spacing="-0.4">THAT IS NOT THE SHORING.</text>
+  </g>
+    <text x="74" y="884" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">That is the demolition crew, and</text><text x="74" y="942" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">demolition always draws a crowd.</text>
+    <g><line x1="660" y1="1108" x2="912" y2="1108" stroke="#B14F3F" stroke-width="7.2" stroke-linecap="round"/>
+    <line x1="786" y1="1108" x2="786" y2="1157.5" stroke="#B14F3F" stroke-width="6.3" stroke-linecap="round"/>
+    <line x1="774.3" y1="1157.5" x2="797.7" y2="1157.5" stroke="#B14F3F" stroke-width="2.8800000000000003" opacity="0.8"/>
+    <line x1="645.6" y1="1207" x2="926.4" y2="1207" stroke="#121416" stroke-width="3.06" opacity="0.7"/><line x1="660" y1="1207" x2="649.2" y2="1221.4" stroke="#121416" stroke-width="2.3400000000000003" opacity="0.5"/><line x1="702" y1="1207" x2="691.2" y2="1221.4" stroke="#121416" stroke-width="2.3400000000000003" opacity="0.5"/><line x1="744" y1="1207" x2="733.2" y2="1221.4" stroke="#121416" stroke-width="2.3400000000000003" opacity="0.5"/><line x1="786" y1="1207" x2="775.2" y2="1221.4" stroke="#121416" stroke-width="2.3400000000000003" opacity="0.5"/><line x1="828" y1="1207" x2="817.2" y2="1221.4" stroke="#121416" stroke-width="2.3400000000000003" opacity="0.5"/><line x1="870" y1="1207" x2="859.2" y2="1221.4" stroke="#121416" stroke-width="2.3400000000000003" opacity="0.5"/><line x1="912" y1="1207" x2="901.2" y2="1221.4" stroke="#121416" stroke-width="2.3400000000000003" opacity="0.5"/>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn16-05-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

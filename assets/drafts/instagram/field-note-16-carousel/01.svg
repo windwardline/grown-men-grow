@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn16-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn16-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn16-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 16 · 01 / 07</text>
+  <text x="64" y="244" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="96" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.8">A TEMP WALL</text>
+    <text x="64" y="348" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="84" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.8">COMES OUT IN APRIL.</text>
+    <text x="68" y="424" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">It holds the whole floor.</text>
+    <g transform="rotate(-0.8 550 788)">
+    <rect x="138" y="496" width="824" height="618" fill="#60735A"/>
+    <rect x="146" y="482" width="808" height="612" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/temp-wall-open-room.png" x="150" y="486" width="800" height="604" preserveAspectRatio="xMidYMid slice" filter="url(#fn16-01-photo)"/>
+  </g>
+    <g transform="rotate(-4 369 485)">
+    <rect x="262" y="462" width="214" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="270" y1="469" x2="466" y2="466" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <g><line x1="330" y1="1152" x2="710" y2="1152" stroke="#B14F3F" stroke-width="8" stroke-linecap="round"/>
+    <line x1="520" y1="1152" x2="520" y2="1192.8" stroke="#B14F3F" stroke-width="7" stroke-linecap="round"/>
+    <line x1="507" y1="1192.8" x2="533" y2="1192.8" stroke="#B14F3F" stroke-width="3.2" opacity="0.8"/>
+    <line x1="314" y1="1272" x2="726" y2="1272" stroke="#121416" stroke-width="3.4" opacity="0.7"/><line x1="330" y1="1272" x2="318" y2="1288" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="393.3333333333333" y1="1272" x2="381.3333333333333" y2="1288" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="456.6666666666667" y1="1272" x2="444.6666666666667" y2="1288" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="520" y1="1272" x2="508" y2="1288" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="583.3333333333334" y1="1272" x2="571.3333333333334" y2="1288" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="646.6666666666667" y1="1272" x2="634.6666666666667" y2="1288" stroke="#121416" stroke-width="2.6" opacity="0.5"/><line x1="710" y1="1272" x2="698" y2="1288" stroke="#121416" stroke-width="2.6" opacity="0.5"/>
+  </g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn16-01-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
