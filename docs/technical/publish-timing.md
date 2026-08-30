@@ -27,7 +27,7 @@ Each platform gets its own slot, staggered so every surface has its own moment a
 | **Wednesday 10:00 AM** | LinkedIn Page | The pack's LinkedIn adaptation | LinkedIn's Tue–Wed mid-morning worktime peak (Sprout); one clear day after the email |
 | **Thursday 7:00 AM** | Medium | URL import of the essay, canonical verified | ~48h after publish so search indexes the canonical first; Medium weekday-morning readership; import timing is low-stakes — recirculation is algorithmic |
 | **Thursday 9:00 AM** | Instagram | The essay's carousel | Buffer's 9.6M-post peak slot (Thu 9 AM); Sprout midweek convergence |
-| **Saturday 9:30 AM** | Substack Notes + Bluesky | Second fragment or canonical-link post | Weekend Notes engagement-per-post peak (Writing Edge analyses); low-competition leisure window |
+| **Saturday 6:30 PM** | Substack Notes + Bluesky | Second fragment or canonical-link post | Weekend Notes engagement-per-post peak (Writing Edge analyses); low-competition leisure window. Moved from 9:30 AM on 2026-08-30 — see "The Saturday slot moved because it could not fire" below |
 | **Sunday 9:00 AM** | Ghost | Essay B, when the second weekly slot activates | Personal-essay weekend counter-signal; contested — first A/B target |
 
 Essay B's cross-platform posts mirror the same pattern shifted: fragments Sunday midday, LinkedIn Monday 10:00 AM, Medium import Tuesday 7:00 AM, carousel Wednesday 12:00 PM (Buffer's second peak).
@@ -53,5 +53,19 @@ Thirty is a floor rather than a target: below it a five-point open-rate differen
 **Marker, read by `verify-repository.mjs`.** The gate fails if this line is missing or duplicated, so the suspension cannot be lifted by quietly deleting the sentence that records it.
 
 **A/B minimum recipients:** 30
+
+## The Saturday slot moved because it could not fire
+
+**Founder-directed, 2026-08-30.** The Saturday slot ran at 9:30 AM and missed twice in a row — 2026-08-23 with no note posted at all, and 2026-08-30 when `gmg-saturday-note` fired at 6:36 PM ET and its lateness guard correctly refused a slot 547 minutes gone.
+
+**The cause is measured rather than guessed.** Across the ten scheduled tasks on this machine, every Monday-through-Thursday morning task fired within a minute of its slot — fleet health 09:02, Monday staging 09:31, Tuesday publish check 08:35, Tuesday note 11:45, Wednesday draft 10:01, Thursday Medium 06:51. Every Friday and Saturday task fired hours late: Friday analytics +338 minutes, Saturday note +556, Saturday draft +481. Scheduled tasks fire while the desktop application is open and otherwise on next launch, so a slot is only real if the application is open at it. On weekday mornings it is. On Friday and Saturday mornings it demonstrably is not.
+
+**A slot that never fires posts nothing, which is strictly worse than posting at a less optimal hour.** The research behind this row distinguishes weekend from weekday — leisure-reading engagement rising Saturday and Sunday while publishers go quiet — not morning from evening. Saturday 6:30 PM sits inside the same weekend window the row was chosen for, so the move spends no part of the stated rationale.
+
+**What it rests on, stated honestly:** one observation that the application was open at 6:36 PM on a Saturday, against two observations that it was not open at 9:30 AM. That is thin evidence for the new time and strong evidence against the old one. If the Saturday note misses from the evening slot as well, the conclusion is that no unattended Saturday slot is reachable on this machine and the note becomes a founder-run action rather than a scheduled one.
+
+**Changed together, because a half-move is worse than none:** this row, the `gmg-saturday-note` cron (`15 9 * * 6` → `15 18 * * 6`), and the `--slot` argument in that task's `SKILL.md` (`09:30` → `18:30`). The guard computes lateness against the slot it is passed, so moving the cron without the argument would have produced a task that fires on time and refuses itself as nine hours late.
+
+
 
 **Also unreachable, and separate from the sample-size problem.** Ghost's `/stats/` family and `/links/` return 403 to an Admin API integration key; they are session-authenticated for the admin UI only. Step 3's secondary metrics — 48-hour pageviews and per-post member conversions — cannot be collected programmatically. When the precondition is met, either those two numbers are read from the Ghost admin UI by hand or they are dropped from the protocol; that choice is still open and belongs with whoever restarts the A/B.

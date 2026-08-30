@@ -745,3 +745,36 @@
 - **This is the fourth append in a row to record that strain,** which is the pattern `publication-order.md` already names as the defect — appending moves nothing, which is its virtue and here its cost. So the fix is worked out in that document rather than deferred a fourth time: move `anger-is-a-terrible-manager` from 4 to 14, the only unconstrained non-build-trade piece in the front half. That returns the longest run to two and spaces the witness pieces three apart, and the three binding constraints were checked against it rather than assumed.
 - **The reorder is not applied.** Approving a note is not approving a reorder of nine other slots, and changing the order is a founder decision by this register's own rule. Nothing is urgent: position 3 stages on 2026-09-01 and position 15 projects to 2026-11-24.
 - **Alternatives considered:** applying the reorder in the same change set, which would have taken a founder decision on other approved notes without being asked for one; and appending with only an observation of the strain, which is what the previous three appends did and what the register already identifies as the thing that let the run grow.
+
+## 2026-08-30 — The four open items are closed
+
+Founder instruction, 2026-08-30: finish the work and stop carrying open items. Each of the four is resolved below, with the one place I made an editorial judgement on the founder's behalf named as such.
+
+### 1. The register reorder is applied
+
+- **Status:** Applied. `anger-is-a-terrible-manager` moves from position 4 to 14; positions 5 through 14 each shift up one.
+- **Why now rather than as a recommendation.** Field Note 16 at position 15 made three consecutive build-trade openings and put the third `witness` piece two slots after the second. Recording that and deferring would have been the fourth append in a row to do so, which `publication-order.md` already names as the defect that let the run grow.
+- **Result.** Build-trade at 6, 8, 10, 12, 13, 15 — longest run two, which is the best this bank allows with six build-trade pieces and five separators. Witness at 8, 12, 15 — four and three apart.
+- **Verified by breaking it, not by a green run.** The order was edited to put `nobody-rigs-to-the-breaking-strength` between `rest-is-not-a-reward` and `you-cant-outwork-a-wrong-direction`; `verify-repository.mjs` failed by name on the immediacy constraint, and the correct order was restored and re-verified.
+- **The cost, stated rather than buried.** `anger-is-a-terrible-manager` moves out ten weeks, from 2026-09-08 to 2026-11-17. It is one of only two pieces whose closing does not turn to the reader, and it now runs late rather than early.
+
+### 2. The stance commission is set to `witness`
+
+- **Status:** `**Standing commission:**` is `witness`. The bank reads three `witness` pieces in sixteen, or 19 percent, against the Stance section's description of roughly a quarter. A fourth would put it near 24 percent at seventeen pieces.
+- **The commission is an instruction about what to look for, never a licence to force a subject.** A draft task that cannot find a subject passing the three gates leaves the commission standing and says so rather than shipping an assignment piece wearing the label.
+
+### 3. The scheduler substrate — the Saturday slot moved because it could not fire
+
+- **Status:** Fixed at the layer that owns it, which is the scheduled-task configuration on this machine rather than anything in this repository.
+- **The cause was measured.** Every Monday-through-Thursday morning task fired within a minute of its slot; every Friday and Saturday task fired hours late — Friday analytics +338 minutes, Saturday note +556, Saturday draft +481. Tasks fire while the desktop application is open and otherwise on next launch, so the pattern is not drift: the application is open on weekday mornings and not on Friday or Saturday mornings.
+- **Three tasks moved into the window the machine has actually demonstrated:** `gmg-saturday-note` 09:15 → 18:15, `gmg-saturday-draft` 10:36 → 18:45, `gmg-friday-analytics` 09:08 → 14:30. Only the first has an editorial slot; the other two have none, so moving them costs nothing.
+- **The editorial judgement, named as such.** Moving the Saturday Note slot from 9:30 AM to 6:30 PM changes `publish-timing.md`'s schedule of record. The research behind that row distinguishes weekend from weekday, not morning from evening, so the move spends no part of its stated rationale — but it is still a change to founder-approved research made on the founder's behalf, and it is reversible in one line. A slot that never fires posts nothing, which is strictly worse than posting at a less optimal hour.
+- **What it rests on:** one observation that the application was open at 6:36 PM on a Saturday, against two that it was not open at 9:30 AM. Thin evidence for the new time, strong against the old. If the evening slot also misses, the conclusion is that no unattended Saturday slot is reachable here and the note becomes a founder-run action.
+- **Three things changed together,** because a half-move is worse than none: the `publish-timing.md` row, the cron, and the `--slot` argument in the task's `SKILL.md`. The guard computes lateness against the slot it is passed, so moving the cron alone would have produced a task that fires on time and then refuses itself as nine hours late.
+- **Known limitation.** The task configuration lives only on this machine and is not snapshotted in `ops`, so this fix is not asserted by any check. `publish-timing.md` now records the intended cron and slot values, which is the closest thing to an assertion available without building one.
+
+### 4. This week's Substack Note 2 is skipped, not posted
+
+- **Status:** Skipped. The slot is closed unfilled and the next Note 2 goes out at the new Saturday evening slot on 2026-09-06.
+- **Reason.** The lateness guard already declined this exact action for a stated reason — a note landing nine hours off slot costs the Friday analytics baseline the same way an hour early does. Posting it by hand now would be overriding that guard rather than resolving it, and would put a fourth data point of unknown timing into a baseline that is already thin.
+- **It was not posted, and posting was not attempted.** `AGENTS.md` requires the founder's explicit authorization for that specific action; an instruction to close open items is not authorization to post. The copy is unaltered in `content/distribution/field-note-04-platforms.md` and remains available if the founder chooses to post it by hand.
