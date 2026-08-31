@@ -167,7 +167,12 @@ if (DRY_RUN) {
   // Verified with `include` and NO `fields`: Ghost applies `fields` after
   // `include` and drops the relation it just fetched, so a query passing both
   // reports `newsletter: NONE` on a correctly bound post.
-  const check = await ghostAdmin(`posts/${draft.id}/`, {searchParams: {include: "newsletter"}});
+  // `formats: "html"` is not optional here. Ghost defaults a post read to
+  // mobiledoc, so a request that omits it comes back with `html` undefined and
+  // the body length below prints 0 on a perfectly good post — the same 0 an
+  // empty one would print. A line that reads identically whether the check
+  // passed or failed is not a check.
+  const check = await ghostAdmin(`posts/${draft.id}/`, {searchParams: {include: "newsletter", formats: "html"}});
   const post = check.posts[0];
   console.log("\nVERIFY");
   console.log("  status      :", post.status);
@@ -177,5 +182,6 @@ if (DRY_RUN) {
   console.log("  feature     :", post.feature_image ? "set" : "MISSING");
   console.log("  alt text    :", post.feature_image_alt || "MISSING — the feature image ships with no alt text");
   console.log("  excerpt     :", post.custom_excerpt);
-  console.log("  html length :", (post.html || "").length);
+  const bodyLength = (post.html || "").length;
+  console.log("  html length :", bodyLength || "0 — the post has no body");
 }
