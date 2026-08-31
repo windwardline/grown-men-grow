@@ -97,10 +97,10 @@ Credentials remain in authenticated sessions, a password manager, macOS Keychain
 
 ## Gate 7 — Repository operations
 
-- [x] Private GitHub repository: `windwardline/grown-men-grow`
+- [x] Public GitHub repository: `windwardline/grown-men-grow`, founder-approved 2026-08-18 after accepting that tracked internal records would be readable
 - [x] Project agents may test, verify, commit, push, open or update pull requests, merge after required gates pass, and clean merged branches or temporary worktrees without separate per-step approval
 - [x] Repository authority does not authorize Ghost billing, privacy removal, publication, newsletter delivery, Instagram posting, or another launch action
-- [ ] Public GitHub visibility — separate founder authorization required
+- [x] Private source packs, exports, backups, member data, credentials, and other confidential inputs remain excluded from Git despite public visibility
 
 ## Gate 8 — Visual exclusivity (founder-ruled 2026-08-16)
 

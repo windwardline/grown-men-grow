@@ -21,7 +21,7 @@ The approved publication name is **Grown Men Grow**. The launch domain is `grown
 
 The imported handoff pack and legacy PDFs are local inputs and are excluded from Git. Private evidence, legal files, account exports, member data, and credentials must never be committed.
 
-If this repository is ever made public or broadly shared, review every tracked file before the remote is created.
+The founder approved public repository visibility on 2026-08-18 after accepting that tracked internal records would be readable. The imported handoff pack, legacy PDFs, private evidence, legal files, account exports, member data, credentials, and backups remain outside Git.
 
 ## Repository path
 
@@ -35,7 +35,7 @@ The implementation plan was approved on 2026-08-07. The routed project email, pu
 
 The original Ghost theme and complete collage-led launch asset set are built and validated locally. Field Note 2, “Call Your Friends Before There’s a Reason,” is approved under `content/`, including its verified first-person claim, Ghost and Instagram direction, social copy, and bright friendship-led collage brief; final artwork and publication timing remain gated. Search configuration, launch classifications, the concise Ghost staff bio, immediate Ghost and Instagram launch work, the exact Essay 1 distribution copy, and the zero-cost distribution network are approved. Source remains active in private Ghost because authenticated Chrome control was not callable in the launch-execution task. No replacement theme or artwork was uploaded, no content was published or sent, and no Instagram post was made.
 
-The source repository is private at `windwardline/grown-men-grow`. The founder authorized Ghost web publication and Instagram launch posting after the technical gates pass. Newsletter delivery and any change to GitHub visibility remain separately gated.
+The source repository is public at `windwardline/grown-men-grow` by the founder's 2026-08-18 decision. Repository visibility does not authorize publication, newsletter delivery, posting, billing, or another production action; those boundaries remain governed by `AGENTS.md` and the decision registers.
 
 The next Claude Code session begins with the repository-wide audit, repair pass, and plan-gap review required by `AGENTS.md`. It resumes live launch work only after that review produces a verified, ordered queue.
 
