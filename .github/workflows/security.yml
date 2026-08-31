@@ -43,44 +43,19 @@ jobs:
     name: Secret scan
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    # Set only on a Dependabot-triggered run, where it resolves from the
-    # Dependabot secret store; on every other trigger it is the empty string and
-    # the mint below is skipped. Not a feature flag — the fallback is the
-    # unchanged behaviour this job has always had.
-    env:
-      APP_ID: ${{ secrets.FLEET_AUTOMERGE_APP_ID }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
 
-      # gitleaks reads the PR's commit list through the API. On a PRIVATE repo a
-      # Dependabot-scoped GITHUB_TOKEN cannot: `GET /pulls/{n}/commits` answers
-      # 403 "Resource not accessible by integration", the action exits non-zero,
-      # and a REQUIRED check fails on every Dependabot PR — grown-men-grow#101
-      # sat unmergeable for a day on exactly this. Skipping the job for
-      # Dependabot is not the fix: GitHub counts a skipped required check as
-      # satisfied, so the gate would report green having scanned nothing, which
-      # fleet-conformance.sh fails on by name.
-      #
-      # Public repos never hit this — a read-only token can list commits there —
-      # so this matters for private-by-design repos only.
-      #
-      # A mangled PEM fails inside the mint as "Invalid keyData", naming neither
-      # cause nor fix; dependabot-auto-merge.yml carries the diagnosis and the
-      # one-line repair.
-      - name: Mint the fleet token for the commit-list read
-        id: apptoken
-        if: env.APP_ID != ''
-        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
-        with:
-          app-id: ${{ secrets.FLEET_AUTOMERGE_APP_ID }}
-          private-key: ${{ secrets.FLEET_AUTOMERGE_PRIVATE_KEY }}
-
+      # This repository is public, so a Dependabot-scoped GITHUB_TOKEN can list
+      # a pull request's commits. The App-token mint that stood here existed for
+      # the private-repo 403 (grown-men-grow#101) and its premise left with the
+      # register on 2026-08-18.
       - uses: gitleaks/gitleaks-action@e0c47f4f8be36e29cdc102c57e68cb5cbf0e8d1e # v3.0.0
         env:
-          GITHUB_TOKEN: ${{ steps.apptoken.outputs.token || secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # A step, not a job: the gate rides an already-required check, so no
       # ruleset change. Pinned by SHA like every other action — the gate that
@@ -109,6 +84,7 @@ jobs:
     name: Ghost managed edge
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
-      - uses: windwardline/windwardline/actions/verify-ghost-managed-edge@7e6d53cdf02944bf21cab73e13104386e9a4735a # v1.1.1
+      - name: Verify the managed Ghost production edge
+        uses: windwardline/windwardline/actions/verify-ghost-managed-edge@7e6d53cdf02944bf21cab73e13104386e9a4735a # v1.1.1
