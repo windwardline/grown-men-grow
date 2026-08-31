@@ -2458,3 +2458,17 @@ Three crons moved into the window the machine has demonstrated: `gmg-saturday-no
 **Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs` passed for 17 required files; `pnpm --dir theme install --frozen-lockfile` completed with the lockfile current; `pnpm --dir theme test` passed fatal GScan on the source theme; `pnpm --dir theme zip` plus packaged-ZIP fatal GScan passed for Ghost 6.x; `node --test 'scripts/test/**/*.test.mjs'` passed 128 tests with zero failures; `node scripts/verify-repository.mjs` passed over 562 tracked files and 45 JavaScript files; `bash scripts/verify-svg-xml.sh` validated 166 SVG files; `actionlint` passed every workflow; `git diff --check` passed; and the caller SHA-256 exactly matched `windwardline/templates/claude-review.yml` (`24ed5e747358db7d4083ea78ace97a039ed4c3b9b3748a84c995cd5535607cfd`). Live GitHub state was read before editing and reported `PUBLIC` with default branch `main`.
 
 **Open:** No repository-content blocker. Push this branch, open the pull request, require the repository's remote CI and security gates, arm native squash auto-merge, and remove the temporary worktree after the merge.
+
+## 2026-08-31 — Codex: exact global-contract citation applied before merge
+
+**Client:** Codex (fleet conformance work). **Branch:** `codex/contract-citation-caller`. **Pull request:** #147.
+
+**Scope completed:** Corrected the new operative sentence in `AGENTS.md` to the fleet-required exact clause: `The live global contract at ~/AGENTS.md applies.` The meaning was already present, but the exact form is what lets the conformance checker distinguish an operative citation from examples, comments, and negations. The caller predicate, dynamic default-branch guard, public-visibility correction, privacy boundary, and prior append-only record remain unchanged.
+
+**Files changed:** `AGENTS.md` and this append-only correction. The pull request's other files remain those recorded in the preceding entry.
+
+**Verification:** Before this entry was appended, all eight repository gates passed on the corrected contract: Ghost theme contract; frozen theme install; source-tree fatal GScan; packaged-ZIP fatal GScan; 128 script tests; repository verification over 562 tracked files; XML validation over 166 SVG files; and `git diff --check`. `actionlint` passed every workflow. Repository verification, `actionlint`, and `git diff --check` were repeated after this append.
+
+**External state changed:** None. No publication or account surface was read or changed.
+
+**Open:** Push this correction, require fresh remote checks, and merge only through the repository's native green-gate path.
