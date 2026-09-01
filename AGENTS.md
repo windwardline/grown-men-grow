@@ -83,3 +83,22 @@ This authority is limited to repository operations for Grown Men Grow. The GitHu
 ## Launch authority
 
 The founder makes final decisions. Do not purchase a Ghost plan, make the site public, publish or send Ghost content, post to Instagram, or make a comparable launch action without the founder's explicit authorization for that action.
+
+## Declared gates
+
+The machine-readable gate set. `scripts/fleet-conformance.sh` requires this block
+and the workspace done-gate hook runs every `gate:` line before a session may
+finish, so what runs is what is written here rather than what a hook guessed from
+`package.json`. Each key states its own boundary: `gate:` runs at session end and
+must be local and quick; `release:` runs before a pull request and may be slow;
+`cadence:` is scheduled or needs the live machine and is run by neither.
+
+```fleet-gates
+gate: node scripts/verify-ghost-theme.mjs
+gate: node --test 'scripts/test/**/*.test.mjs'
+gate: node scripts/verify-repository.mjs
+gate: bash scripts/verify-svg-xml.sh
+release: pnpm --dir theme install --frozen-lockfile
+release: pnpm --dir theme test
+release: pnpm --dir theme zip && theme/node_modules/.bin/gscan -z --fatal --verbose dist/grown-men-grow.zip
+```
