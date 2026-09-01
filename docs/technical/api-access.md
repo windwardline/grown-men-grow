@@ -8,12 +8,22 @@ All programmatic access to the publication's platforms follows the machine-wide 
 | --- | --- | --- | --- |
 | `ghost-admin-key` | Ghost(Pro) Admin API on `https://grown-men-grow.ghost.io` (custom integration `ghost-admin-api`) | Content operations; member, tier, and settings reads (settings writes return 403) | HTTP 200 on `/ghost/api/admin/posts/?limit=1` |
 | `bluesky-app-password` | Bluesky app password (DM access excluded) | Direct AT Protocol operations (profile, posts) | HTTP 200 `createSession` as `grownmengrow.com` |
+| `bluesky-buffer` | Bluesky app password held by Buffer | Lets Buffer post to Bluesky on the schedule; no local script reads it | Listed by `listAppPasswords` as `bluesky-buffer` |
 | `buffer-api-token` | Buffer personal access key on `https://api.buffer.com` (GraphQL) | Reading and scheduling the week's Bluesky, LinkedIn, and Instagram posts | `node scripts/check-buffer-access.mjs` returning the pinned organization |
 | `cloudflare-dns-edit` | Cloudflare API token (Zone.DNS edit) | DNS for `windwardline.com` and `grownmengrow.com` via the `cf-dns` helper | Zone lookup returned `grownmengrow.com` |
 
 The Cloudflare entry predates this publication; its token was scope-extended to include the `grownmengrow.com` zone on 2026-08-10 (same secret, no new key).
 
 Two rows were renamed on 2026-08-17 to satisfy the `provider-purpose` convention: `ghost-admin-api` became `ghost-admin-key` (the old name read as a provider named "ghost-admin"), and `bluesky-claude-code` became `bluesky-app-password` (a credential is named for what it is, never for the client that happens to use it). The Ghost integration keeps its original dashboard name because renaming it there would re-issue the key. **This table is the operating instruction** — no script reads the Bluesky credential, so an agent following a stale name here runs a Keychain lookup that fails with nothing to explain why. `ops/credentials-check.sh` asserts the names still resolve.
+
+`bluesky-buffer` was renamed at Bluesky on 2026-09-01. It had been created as
+`buffer` — the name Bluesky suggests when a service asks for an app password —
+which is not `provider-purpose` kebab-case. That single missing hyphen was the
+entire "Bluesky provider population differs from the exact manifest" failure on
+2026-08-31; the app-password API had not changed, and every row still carried
+exactly `name`, `createdAt`, and `privileged`. **A provider's default name is
+not a name this fleet accepts.** Any app password created at a provider's
+prompting needs renaming before it is done.
 
 `buffer-api-token` was removed on 2026-08-17 and re-issued on 2026-08-18. The removal reasoning was that the key was dead (Buffer returned 401) and had no executing consumer — only this table. The second half was true and is now fixed: `scripts/lib/buffer-api.mjs` is the executing consumer, so the credential is exercised by code rather than described by prose. **The first half does not survive its own timeline.** The same key scheduled four posts through this API on 2026-08-17, each verified by re-query, hours before it was called dead. A 401 was read as expiry without asking which host answered it — Buffer's older REST surface at `api.bufferapp.com` rejects a personal access key exactly that way, and so does the GraphQL host if the `Bearer` prefix is dropped. The key could not be recovered either way (Buffer shows a personal key once), so the fix was a new key, not an argument about the old one. The helper pins the host and names the 401 ambiguity in the error text so the next reading of it starts from the right question.
 
