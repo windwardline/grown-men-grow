@@ -69,3 +69,13 @@ Thirty is a floor rather than a target: below it a five-point open-rate differen
 
 
 **Also unreachable, and separate from the sample-size problem.** Ghost's `/stats/` family and `/links/` return 403 to an Admin API integration key; they are session-authenticated for the admin UI only. Step 3's secondary metrics — 48-hour pageviews and per-post member conversions — cannot be collected programmatically. When the precondition is met, either those two numbers are read from the Ghost admin UI by hand or they are dropped from the protocol; that choice is still open and belongs with whoever restarts the A/B.
+
+## The weekday premise broke on a Tuesday
+
+**Observed 2026-09-01, not a decision.** `gmg-tuesday-note` fired at about 6:14 PM ET against an 11:45 AM cron and a 12:00 PM slot. The preflight's lateness guard refused it at 378 minutes past, and no Substack note went out. The profile was read afterwards to confirm rather than assume: the top note on `@grownmengrow` was seven days old, so Note 1 for this essay was never posted.
+
+**This narrows the cause recorded in the Saturday section above.** That analysis measured ten tasks on 2026-08-30, found every Monday-through-Thursday task on time and every Friday and Saturday task hours late, and concluded that scheduled tasks fire only while the desktop application is open. The mechanism survives today intact. The generalisation drawn from it does not: **"weekday" was never the operative variable, and this row's own entry — Tuesday note, 11:45, on time that week — is the one that missed today.** A single dated survey was read as a standing property of weekdays, and it was a snapshot of one week's application usage.
+
+**What can be said with the evidence in hand.** A slot is real only if the application happens to be open at it, and nothing about the day of week makes that reliable. Morning slots have a better record than midday and evening ones, which is consistent with when the machine is first used rather than with anything about audience timing. That is an observation about this machine, not about readers.
+
+**Deliberately not changed here.** No slot moves on this evidence. The Saturday move was founder-directed and this would be a second timing change made from a single miss, which is the reasoning the Saturday section itself flagged as thin. The open question is whether the Tuesday fragment slot should stay unattended at all, or join the Saturday note as a founder-run action; that is a founder decision and it is listed as open in the handoff log rather than settled here.
