@@ -12,7 +12,7 @@ The welcome email invites every new member to reply. The invitation is good and 
 
 ## Why not Resend
 
-Resend is the fleet's standard transactional provider and the account is on the free plan, which includes exactly one domain. `windwardline.com` occupies it and carries magic-link delivery for Levelflow, TimeShift, and pathfinder. Adding `grownmengrow.com` requires a paid upgrade, which the founder ruled out.
+Resend is the fleet's standard transactional provider and the account is on the free plan, which includes exactly one domain. `windwardline.com` occupies it and carries magic-link delivery for Levelflow and pathfinder. Adding `grownmengrow.com` requires a paid upgrade, which the founder ruled out.
 
 ## Why not Gmail's own SMTP
 
