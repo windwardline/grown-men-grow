@@ -33,19 +33,24 @@ jobs:
           cache-dependency-path: theme/pnpm-lock.yaml
       - name: Install Ghost theme validation dependencies
         run: pnpm --dir theme install --frozen-lockfile
-      - name: Validate Ghost theme
-        run: pnpm --dir theme test
-      - name: Package and validate Ghost theme archive
-        run: |
-          pnpm --dir theme zip
-          theme/node_modules/.bin/gscan -z --fatal --verbose dist/grown-men-grow.zip
-      - name: Run script unit tests
-        run: node --test 'scripts/test/**/*.test.mjs'
-      - name: Verify repository contracts and assets
-        run: node scripts/verify-repository.mjs
       - name: Install XML validator
         run: |
           sudo apt-get update
           sudo apt-get install --yes --no-install-recommends libxml2-utils
-      - name: Validate SVG XML
-        run: bash scripts/verify-svg-xml.sh
+
+      # Runs exactly the gates AGENTS.md declares in its fleet-gates block, so the
+      # contract's gate list is executable rather than prose. Byte-identical in
+      # every fleet repository with CI; the conformance checker compares it.
+      - name: Run declared gates
+        run: |
+          gates=$(awk '/^```fleet-gates$/{o=1;next} o&&/^```$/{o=0;next} o&&/^gate: /{sub(/^gate: /,"");print}' AGENTS.md)
+          [ -n "$gates" ] || { echo "AGENTS.md declares no gate: entry in its fleet-gates block" >&2; exit 1; }
+          n=0
+          while IFS= read -r gate; do
+            [ -n "$gate" ] || continue
+            echo "::group::$gate"
+            sh -c "$gate"
+            echo "::endgroup::"
+            n=$((n + 1))
+          done <<< "$gates"
+          echo "$n declared gate(s) executed."

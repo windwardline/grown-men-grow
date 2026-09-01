@@ -95,10 +95,9 @@ must be local and quick; `release:` runs before a pull request and may be slow;
 
 ```fleet-gates
 gate: node scripts/verify-ghost-theme.mjs
+gate: pnpm --dir theme test
+gate: pnpm --dir theme zip && theme/node_modules/.bin/gscan -z --fatal --verbose dist/grown-men-grow.zip
 gate: node --test 'scripts/test/**/*.test.mjs'
 gate: node scripts/verify-repository.mjs
 gate: bash scripts/verify-svg-xml.sh
-release: pnpm --dir theme install --frozen-lockfile
-release: pnpm --dir theme test
-release: pnpm --dir theme zip && theme/node_modules/.bin/gscan -z --fatal --verbose dist/grown-men-grow.zip
 ```
