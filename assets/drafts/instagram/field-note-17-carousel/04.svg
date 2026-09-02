@@ -20,17 +20,17 @@
   <rect width="1080" height="1350" fill="#EEE6D8"/>
   <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
   <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 17 · 04 / 07</text>
-  <g transform="rotate(-0.7 540 354)">
-    <rect x="66" y="300" width="948" height="108" fill="#121416"/>
-    <text x="90" y="382.08" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="48" font-weight="900" letter-spacing="-0.4">THERE IS NO LIGHT FOR THIS.</text>
+  <g transform="rotate(0.7 540 518)">
+    <rect x="108" y="178" width="864" height="714" fill="#3A1518"/>
+    <rect x="116" y="164" width="848" height="708" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/water-heater-top-fittings.png" x="120" y="168" width="840" height="700" preserveAspectRatio="xMidYMax slice" filter="url(#fn17-04-photo)"/>
   </g>
-    <text x="72" y="500" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">Nothing on the front of the appliance</text><text x="72" y="558" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">reports it, and no part of the sound</text><text x="72" y="616" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">it makes changes.</text>
-    <g transform="rotate(0.6 540 772)">
-    <rect x="66" y="718" width="948" height="108" fill="#3A1518"/>
-    <text x="90" y="800.08" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="48" font-weight="900" letter-spacing="-0.4">AND THE TANK IS NEVER TOLD.</text>
+    <g transform="rotate(-3 327 169)">
+    <rect x="220" y="146" width="214" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="228" y1="153" x2="424" y2="150" stroke="#fff" stroke-opacity="0.38"/>
   </g>
-    <text x="72" y="918" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">Water goes in cold and comes out hot</text><text x="72" y="976" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">at whatever the dial says, for eleven</text><text x="72" y="1034" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">or twelve years.</text>
-    <path d="M74 1136 C282 1094 494 1154 706 1108 C880 1070 946 1102 1006 1090" fill="none" stroke="#B14F3F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="74" y="950" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">There is no light for this.</text><text x="74" y="1014" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">Nothing on the front of the</text><text x="74" y="1078" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">appliance reports it.</text>
+    <text x="76" y="1168" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="36" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">Water goes in cold and comes out hot for</text><text x="76" y="1218" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="36" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">twelve years, and the tank is never told.</text>
   <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
   <rect width="1080" height="1350" filter="url(#fn17-04-paper)" opacity="0.22" pointer-events="none"/>
 </svg>
