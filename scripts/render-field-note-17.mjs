@@ -11,9 +11,9 @@ import {
   defs,
   grain,
   lines,
+  photo,
   portraitCanvas,
   scribble,
-  strip,
   tape,
   writeAsset,
 } from "./lib/editorial-collage.mjs";
@@ -29,19 +29,24 @@ import {
 // curve, sling, transfer switch, battery gauge, route line, tally, ledger,
 // alarm arc or diverging fork.
 //
-// This build composes NO photograph. The three source images specified in the
-// note's visual direction were not generated — the Chrome extension was
-// unreachable for the whole run, and image generation happens only in the
-// founder's saved ChatGPT project. Type-led and mark-led composition is what
-// editorial-visual-system.md provides for in exactly this case. When the
-// photography lands, the image-led slides get rebuilt against it.
+// Photography: three source images generated for this note under the house
+// prompt and unique to it. The first build of this script was type-led because
+// the Chrome extension was unreachable; the photographs landed later the same
+// day and slides 1, 4 and 7 were rebuilt against them.
+const ROD = "editorial/anode-rod-pulled.png";
+const FITTINGS = "editorial/water-heater-top-fittings.png";
+const TAP = "editorial/tap-running-hot.png";
+
 const otherArticles = ["repairing-wooden-chair", "sunlit-writing-table", "friends-in-conversation", "cooking-breakfast-together", "doorway-running-shoes", "balcony-plant-care", "workbench-hand-tools", "walking-after-the-work", "deck-board-detail", "truck-tailgate-loading", "porch-coffee-pause", "garage-doorway-call", "oil-check-detail", "smoke-detector-battery", "hallway-duffel-set-down", "tool-bag-handoff", "porch-two-chairs", "hardware-counter-question", "open-wall-wiring", "paperwork-second-eyes", "detector-test-press", "breaker-panel-check", "kitchen-counter-pause", "hammock-midday-rest", "pegboard-end-of-day", "morning-armchair-mug", "truck-hood-map", "trail-fork-daylight", "compass-in-hand", "garden-beds-two-heights", "car-odometer-daylight", "photos-notebook-spread", "bp-cuff-notebook", "running-shoes-alarm", "cutting-board-vegetables", "base-plates-anchor-bolts", "transfer-switch-cabinet", "covered-slab-curing", "garage-floor-hairline-crack", "hose-wetting-fresh-pour", "sling-capacity-tag", "wall-calendar-kitchen", "rigging-shackles-bench", "punch-list-tailgate", "ladder-against-eave-autumn", "downspout-extension-turned", "gutter-leaves-from-above", "driveway-hoop-late-afternoon", "restaurant-table-after-lunch", "machinist-caliper-part", "cabinet-seam-proud-door", "datum-face-square", "temp-wall-open-room", "shims-top-plate", "filled-holes-floor"];
 
 // consumed: 0 = a new rod at full section, 1 = nothing left but the core wire.
 // The rod is drawn as a stack of segments whose widths are eaten from the side
 // facing the wall, hardest opposite the pits, because that is where the current
 // concentrates. `closed` fills the pits, which only happens on the close.
-function anodeSection(x, y, {consumed = 0, height = 300, scale = 1, color = RUST, closed = false}) {
+// `structure` colours the tank wall line and the threaded head. It defaults
+// to Ink for a paper ground and is lightened where the mark sits on Oxblood,
+// because a dark wall line on a dark field renders the pits meaningless.
+function anodeSection(x, y, {consumed = 0, height = 300, scale = 1, color = RUST, closed = false, structure = INK}) {
   const s = scale;
   const h = height * s;
   const wallX = x + 132 * s;
@@ -61,12 +66,12 @@ function anodeSection(x, y, {consumed = 0, height = 300, scale = 1, color = RUST
       : `<path d="M${wallX} ${py - r} A ${r} ${r} 0 0 1 ${wallX} ${py + r}" fill="none" stroke="${color}" stroke-width="${4.4 * s}"/>`;
   }).join("");
   const wallSegments = closed
-    ? `<line x1="${wallX}" y1="${y - 18 * s}" x2="${wallX}" y2="${y + h + 18 * s}" stroke="${INK}" stroke-width="${7 * s}" opacity="0.8"/>`
+    ? `<line x1="${wallX}" y1="${y - 18 * s}" x2="${wallX}" y2="${y + h + 18 * s}" stroke="${structure}" stroke-width="${7 * s}" opacity="0.8"/>`
     : pitAt.reduce((acc, t, index) => {
       const py = y + h * t;
       const prev = index === 0 ? y - 18 * s : y + h * pitAt[index - 1] + 16 * s;
-      return `${acc}<line x1="${wallX}" y1="${prev}" x2="${wallX}" y2="${py - 16 * s}" stroke="${INK}" stroke-width="${7 * s}" opacity="0.8"/>`;
-    }, "") + `<line x1="${wallX}" y1="${y + h * pitAt[2] + 16 * s}" x2="${wallX}" y2="${y + h + 18 * s}" stroke="${INK}" stroke-width="${7 * s}" opacity="0.8"/>`;
+      return `${acc}<line x1="${wallX}" y1="${prev}" x2="${wallX}" y2="${py - 16 * s}" stroke="${structure}" stroke-width="${7 * s}" opacity="0.8"/>`;
+    }, "") + `<line x1="${wallX}" y1="${y + h * pitAt[2] + 16 * s}" x2="${wallX}" y2="${y + h + 18 * s}" stroke="${structure}" stroke-width="${7 * s}" opacity="0.8"/>`;
 
   // Each segment keeps its left edge and loses material toward the wall, so the
   // rod thins asymmetrically the way a real one does.
@@ -82,7 +87,7 @@ function anodeSection(x, y, {consumed = 0, height = 300, scale = 1, color = RUST
 
   // The threaded head at the top of the rod, which never corrodes because it
   // sits above the water line.
-  const head = `<rect x="${x - 9 * s}" y="${y - 22 * s}" width="${fullWidth + 18 * s}" height="${18 * s}" fill="${INK}" rx="${2 * s}"/>`;
+  const head = `<rect x="${x - 9 * s}" y="${y - 22 * s}" width="${fullWidth + 18 * s}" height="${18 * s}" fill="${structure}" rx="${2 * s}"/>`;
 
   return `<g>${head}${body}${wallSegments}${pits}</g>`;
 }
@@ -96,12 +101,12 @@ const slides = [
     number: 1,
     total: 7,
     label: LABEL,
-    body: `${lines(["THE ROD"], {x: 64, y: 268, size: 116, leading: 128, family: SANS, weight: 900, tracking: 0.8})}
-    ${lines(["GOES FIRST."], {x: 64, y: 392, size: 116, leading: 128, family: SANS, weight: 900, tracking: 0.8, fill: OXBLOOD})}
-    ${lines(["The lining was never the plan."], {x: 68, y: 470, size: 40, leading: 54, family: SERIF, weight: 400, style: "italic", fill: SMOKE, tracking: 0.2})}
-    <rect x="392" y="548" width="620" height="576" fill="url(#fn17-01-dots)"/>
-    ${anodeSection(266, 582, {consumed: 0, height: 512, scale: 1.15, color: RUST})}
-    ${scribble("M84 1188 C300 1146 512 1206 724 1160 C900 1122 960 1150 1014 1140", RUST, 9)}`,
+    body: `${lines(["THE ROD"], {x: 64, y: 250, size: 104, leading: 116, family: SANS, weight: 900, tracking: 0.8})}
+    ${lines(["GOES FIRST."], {x: 64, y: 358, size: 104, leading: 116, family: SANS, weight: 900, tracking: 0.8, fill: OXBLOOD})}
+    ${lines(["The lining was never the plan."], {x: 68, y: 428, size: 38, leading: 52, family: SERIF, weight: 400, style: "italic", fill: SMOKE, tracking: 0.2})}
+    ${photo({name: ROD, x: 150, y: 486, width: 800, height: 610, rotation: -0.8, position: "xMidYMax", backing: GREEN, id: "fn17-01"})}
+    ${tape(262, 462, 214, -4)}
+    ${anodeSection(700, 1148, {consumed: 0, height: 142, scale: 0.6, color: RUST})}`,
   }),
   // 2 — torn oxblood field, tape, serif reverse type. No mark.
   portraitCanvas({
@@ -129,18 +134,18 @@ const slides = [
     ${lines(["The current concentrates at the defect.", "The good glass needs nothing", "and gets nothing."], {x: 76, y: 828, size: 38, leading: 52, family: SERIF, weight: 400, fill: INK, tracking: 0.2})}
     ${anodeSection(618, 972, {consumed: 0.45, height: 254, scale: 0.95, color: RUST})}`,
   }),
-  // 4 — strips. The absence of any signal, given graphic weight.
+  // 4 — image-led. The fittings photograph carries the no-signal beat better
+  // than two more bars of type; the strips this replaced said it twice.
   portraitCanvas({
     id: "fn17-04",
     number: 4,
     total: 7,
     label: LABEL,
     background: PAPER,
-    body: `${strip({x: 66, y: 300, width: 948, height: 108, fill: INK, text: "THERE IS NO LIGHT FOR THIS.", color: PAPER_LIGHT, size: 48, rotation: -0.7, tracking: -0.4})}
-    ${lines(["Nothing on the front of the appliance", "reports it, and no part of the sound", "it makes changes."], {x: 72, y: 500, size: 42, leading: 58, family: SERIF, weight: 400, fill: INK, tracking: 0.2})}
-    ${strip({x: 66, y: 718, width: 948, height: 108, fill: OXBLOOD, text: "AND THE TANK IS NEVER TOLD.", color: PAPER_LIGHT, size: 48, rotation: 0.6, tracking: -0.4})}
-    ${lines(["Water goes in cold and comes out hot", "at whatever the dial says, for eleven", "or twelve years."], {x: 72, y: 918, size: 42, leading: 58, family: SERIF, weight: 400, fill: INK, tracking: 0.2})}
-    ${scribble("M74 1136 C282 1094 494 1154 706 1108 C880 1070 946 1102 1006 1090", RUST, 9)}`,
+    body: `${photo({name: FITTINGS, x: 120, y: 168, width: 840, height: 700, rotation: 0.7, position: "xMidYMax", backing: OXBLOOD, id: "fn17-04"})}
+    ${tape(220, 146, 214, -3)}
+    ${lines(["There is no light for this.", "Nothing on the front of the", "appliance reports it."], {x: 74, y: 950, size: 50, leading: 64, family: SERIF, weight: 700, tracking: 0})}
+    ${lines(["Water goes in cold and comes out hot for", "twelve years, and the tank is never told."], {x: 76, y: 1168, size: 36, leading: 50, family: SERIF, weight: 400, style: "italic", fill: OXBLOOD, tracking: 0.2})}`,
   }),
   // 5 — pressure point. Almost nothing on the page and no mark at all.
   portraitCanvas({
@@ -171,33 +176,28 @@ const slides = [
     number: 7,
     total: 7,
     label: LABEL,
-    body: `    ${lines(["Most of the weight is gone", "somewhere it does not", "come back from."], {x: 78, y: 396, size: 62, leading: 80, family: SERIF, weight: 700, tracking: 0})}
-    ${lines(["The water at the tap is the same", "temperature it was yesterday."], {x: 80, y: 640, size: 52, leading: 68, family: SERIF, weight: 400, style: "italic", fill: OXBLOOD, tracking: 0})}
-    ${anodeSection(322, 830, {consumed: 1, height: 366, scale: 1.05, color: RUST, closed: true})}`,
+    body: `${photo({name: TAP, x: 240, y: 152, width: 600, height: 640, rotation: -0.6, position: "xMidYMid", backing: GREEN, id: "fn17-07"})}
+    ${tape(336, 130, 206, 3)}
+    ${lines(["Most of the weight is gone", "somewhere it does not come back from."], {x: 78, y: 872, size: 46, leading: 62, family: SERIF, weight: 700, tracking: 0})}
+    ${lines(["The water at the tap is the same", "temperature it was yesterday."], {x: 80, y: 1020, size: 48, leading: 62, family: SERIF, weight: 400, style: "italic", fill: OXBLOOD, tracking: 0})}
+    ${anodeSection(700, 1148, {consumed: 1, height: 142, scale: 0.6, color: RUST, closed: true})}`,
   }),
 ];
 
-// Title-free, per the Ghost feature-image convention. Landscape wants width
-// used, and a single mark on open paper read as an unfinished page rather than
-// a composed one. Three sections in sequence — new, spent into the pits, down
-// to the core wire — make a specimen plate, which is the one composition this
-// mark can carry at 1600 by 1000 without a photograph in it.
+// Title-free, per the Ghost feature-image convention. The rod photograph
+// dominant, the fittings small beside it, and the mark run as a two-state
+// plate — full section against bare core wire — in the oxblood margin.
 const feature = `<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
   ${defs("fn17-feature")}
   <rect width="1600" height="1000" fill="${PAPER_LIGHT}"/>
-  <rect x="0" y="0" width="286" height="1000" fill="${OXBLOOD}"/>
-  <rect x="286" y="0" width="64" height="1000" fill="url(#fn17-feature-dots)"/>
-  <rect x="96" y="150" width="150" height="470" fill="${GREEN}" transform="rotate(-1 171 385)"/>
-  ${scribble("M96 726 C142 690 200 738 248 706", RUST, 10)}
-  <rect x="388" y="92" width="1140" height="816" fill="${PAPER}" transform="rotate(-0.6 958 500)"/>
-  ${tape(462, 66, 236, -4)}
-  ${tape(1284, 872, 210, 3)}
-  ${anodeSection(486, 224, {consumed: 0, height: 540, scale: 1.0, color: RUST})}
-  ${anodeSection(866, 224, {consumed: 0.55, height: 540, scale: 1.0, color: RUST})}
-  ${anodeSection(1246, 224, {consumed: 1, height: 540, scale: 1.0, color: RUST, closed: true})}
-  <rect x="486" y="836" width="164" height="16" fill="${INK}" opacity="0.75"/>
-  <rect x="866" y="836" width="164" height="16" fill="${RUST}"/>
-  <rect x="1246" y="836" width="164" height="16" fill="${GREEN}"/>
+  <rect x="1230" y="0" width="370" height="1000" fill="${OXBLOOD}"/>
+  ${photo({name: ROD, x: 80, y: 70, width: 660, height: 860, rotation: -0.8, position: "xMidYMid", backing: OXBLOOD, id: "fn17-feature"})}
+  ${photo({name: FITTINGS, x: 790, y: 140, width: 400, height: 560, rotation: 1.4, position: "xMidYMid", backing: GREEN, id: "fn17-feature"})}
+  ${tape(214, 46, 226, -4)}
+  ${tape(864, 116, 198, 4)}
+  ${anodeSection(1272, 210, {consumed: 0, height: 300, scale: 0.72, color: RUST, structure: PAPER})}
+  ${anodeSection(1272, 620, {consumed: 1, height: 300, scale: 0.72, color: RUST, closed: true, structure: PAPER})}
+  ${scribble("M800 786 C902 748 1010 800 1112 762", RUST, 10)}
   ${grain(1600, 1000, "fn17-feature", 0.22)}
 </svg>`;
 

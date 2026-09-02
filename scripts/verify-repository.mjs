@@ -620,6 +620,9 @@ const editorialSources = new Map([
   ['temp-wall-open-room', { width: 1024, height: 1536 }],
   ['shims-top-plate', { width: 1024, height: 1536 }],
   ['filled-holes-floor', { width: 1024, height: 1536 }],
+  ['anode-rod-pulled', { width: 1024, height: 1536 }],
+  ['water-heater-top-fittings', { width: 1024, height: 1536 }],
+  ['tap-running-hot', { width: 1024, height: 1536 }],
 ]);
 await validateNamedPngs('assets/source/editorial', editorialSources);
 await validateNamedPngs('assets/drafts/brand/banners', new Map([

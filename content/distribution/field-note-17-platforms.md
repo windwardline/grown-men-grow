@@ -1,16 +1,16 @@
 ---
 essay: The Rod Goes First
-canonical: https://grownmengrow.com/the-rod-goes-first/ (does not exist; the essay is an unapproved draft)
-status: draft — NOT founder-approved
-approved: none
-publication_authorized: false — no approval of any kind; posting is separately gated and none is sought here
-image_rule: per-article — this pack may use only Field Note 17 imagery, of which none yet exists
+canonical: https://grownmengrow.com/the-rod-goes-first/ (live only after publication)
+status: founder-approved
+approved: 2026-09-02 — approved as written alongside the essay and artwork
+publication_authorized: false — approval covers the copy, not a slot; posting remains separately gated
+image_rule: per-article — this pack may use only Field Note 17 imagery: anode-rod-pulled, water-heater-top-fittings, tap-running-hot
 stance_note: witness — every excerpt below holds the three gates: no imperative aimed at the reader, no closing question, and nothing liftable in the shape "so a man should ___"
 ---
 
 # Field Note 17 — platform adaptations
 
-Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts. The essay is an unapproved draft and there is no canonical Ghost URL to point at; the `[canonical link]` placeholders below are placeholders and not a pending action. Ghost remains canonical; Medium is the only full-essay surface.
+Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts until the canonical Ghost URL is live and each platform's gate passes. Ghost remains canonical; Medium is the only full-essay surface.
 
 # Medium
 

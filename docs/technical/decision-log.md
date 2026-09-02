@@ -788,3 +788,33 @@ Founder instruction, 2026-08-30: finish the work and stop carrying open items. E
 - **Why nobody saw it.** The checker's own harness fixtures carry the required step names, so the mocked suite was green at 203/203 against a subject the fleet had never adopted. A gate reporting on something other than what it examined is this fleet's standing defect; here it appeared one level up, inside the machinery built to catch it.
 - **Verified, not assumed.** Repository visibility re-derived from the API before the mint was removed (`isPrivate: false`). The inspector was run on the file before and after: `secret_scan` and `managed_edge` each move from `valid: false` with every liveness flag false to `valid: true` with all flags true, and `pin_gates` moves 0 → 1. `actionlint` and `git diff --check` clean.
 - **Reversibility.** High, and conditional: if this repository ever returns to private, the commit-list 403 returns with it and the mint must come back. That is a property of visibility, not of this change.
+
+## 2026-09-02 — Field Note 17 approved; the register reordered to hold four witness pieces apart
+
+### 1. `the-rod-goes-first` is founder-approved and takes position 16
+
+- **Status:** Approved by the founder on 2026-09-02 — essay, platform pack, and artwork in one pass. Approval covers the work and a register position. **It does not authorize publication, newsletter delivery, or posting**, each of which remains separately gated under `AGENTS.md`.
+- **The note is the fourth `witness` piece**, written against the standing commission and clearing it. The subject is a sacrificial anode: a rod spent in the dark over years so the tank is not, already gone by the time anything about it is visible. The subject test passes because no move is available to the man inside the event.
+- **The commission is now cleared.** `**Standing commission:**` in `operating-cadence.md` reads `none`. Its own rule is that a draft task clears it in the change set that lands the note, and this is that change set. Setting another is a founder call, not something a draft task does to itself.
+
+### 2. The corpus figures, recorded rather than just counted
+
+- **The bank is 17 pieces: 16 field notes and the launch essay.** `witness` stands at four, or 23.5 percent, against the Stance section's description of roughly a quarter. That gap — two in fifteen on 2026-08-26 — is now closed, and it closed through two deliberate commissions rather than through the subject test, which is what the 2026-08-26 entry predicted would be necessary.
+- **Eleven of seventeen closings address the reader.** The six that do not are `anger-is-a-terrible-manager`, `nobody-rigs-to-the-breaking-strength`, and the four witness pieces.
+- **No measurement is due.** `**Corpus test last measured:**` stands at 2026-08-26, a bank of 15, next due at 21. The bank is 17. The marker is left alone rather than advanced, because recording a measurement that was not made is the failure the marker exists to prevent.
+
+### 3. Positions 7 through 16 were rearranged rather than appending the note at 16
+
+- **Status:** Applied, and recorded in `publication-order.md` with its cost.
+- **Appending would have put two witness pieces side by side.** `a-temp-wall-comes-out-in-april` sat at 15; an append gave witness at 8, 12, 15, 16. The 2026-08-30 entry names a gap of two as the fault it was correcting, and a gap of one is worse.
+- **The smaller fix was checked and does not exist.** Four witness pieces spread three or more apart across sixteen slots require the last two at 13 and 16, which forces the two before them to 7 and 10. Every insert-and-shift arrangement leaves a gap of two somewhere.
+- **Result.** Build-trade at 6, 7, 9, 10, 12, 13, 16 — seven pieces, longest run two, the best this bank allows with four separators behind position 5. Witness at 7, 10, 13, 16 — gaps of three, three, three.
+- **The cost.** Ten slots move. `your-body-keeps-the-books` 11 → 14 and `comparison-is-a-bad-map` 9 → 11, both later; `somebody-is-up-on-his-ladder` 12 → 10 and `a-temp-wall-comes-out-in-april` 15 → 13, both earlier. `the-lights-never-flickered` moves to 7, putting the first witness piece marginally earlier than the back-half preference wants. That concession is real and is the one this arrangement asks for.
+- **Verified by breaking it.** The new note's row was deleted and `verify-repository.mjs` failed by name on the missing slot; the rest/direction adjacency was inverted and the checker failed by name on that too. Both were restored and re-verified.
+- **Nothing scheduled moved.** Positions 1 and 2 are published, 3 is staged on Ghost, and every position from 4 onward is a projection.
+
+### 4. A dependency fix rode along because it blocked the approval landing
+
+- **Status:** Applied. `qs` moves 6.15.3 → 6.16.0 in `theme/pnpm-lock.yaml`.
+- **Reason.** OSV reported GHSA-4mjr-xmp4-gh2g and GHSA-x5fp-wj9c-mxmx against `qs` 6.15.3, both medium, both fixed in 6.16.0, and the failing check blocked the merge. It is unrelated to the note and was not introduced by it.
+- **Fixed rather than suppressed.** `qs` is transitive through `express` 5.2.1 and `body-parser` 2.3.0 under the single `gscan` devDependency; both declare ranges (`^6.14.0`, `^6.15.2`) that already accept 6.16.0, so a lockfile refresh resolves it with no override and no new `osv-scanner.toml` entry. A suppression would have been the wrong instrument for an advisory with an upstream path — the existing extract-zip entry exists precisely because that one has none.
