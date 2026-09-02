@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn17-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn17-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn17-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 17 · 01 / 07</text>
+  <text x="64" y="268" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="116" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.8">THE ROD</text>
+    <text x="64" y="392" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="116" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.8">GOES FIRST.</text>
+    <text x="68" y="470" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">The lining was never the plan.</text>
+    <rect x="392" y="548" width="620" height="576" fill="url(#fn17-01-dots)"/>
+    <g><rect x="255.65" y="556.7" width="55.2" height="20.7" fill="#121416" rx="2.3"/><rect x="266" y="582" width="34.5" height="37.489999999999995" fill="#B14F3F"/><rect x="266" y="618.8" width="34.5" height="37.489999999999995" fill="#B14F3F"/><rect x="266" y="655.6" width="34.5" height="37.489999999999995" fill="#B14F3F"/><rect x="266" y="692.4" width="34.5" height="37.489999999999995" fill="#B14F3F"/><rect x="266" y="729.2" width="34.5" height="37.489999999999995" fill="#B14F3F"/><rect x="266" y="766" width="34.5" height="37.489999999999995" fill="#B14F3F"/><rect x="266" y="802.8" width="34.5" height="37.489999999999995" fill="#B14F3F"/><rect x="266" y="839.5999999999999" width="34.5" height="37.489999999999995" fill="#B14F3F"/><rect x="266" y="876.4" width="34.5" height="37.489999999999995" fill="#B14F3F"/><rect x="266" y="913.2" width="34.5" height="37.489999999999995" fill="#B14F3F"/><rect x="266" y="950" width="34.5" height="37.489999999999995" fill="#B14F3F"/><rect x="266" y="986.8" width="34.5" height="37.489999999999995" fill="#B14F3F"/><rect x="266" y="1023.5999999999999" width="34.5" height="37.489999999999995" fill="#B14F3F"/><rect x="266" y="1060.4" width="34.5" height="37.489999999999995" fill="#B14F3F"/><rect x="266" y="1097.1999999999998" width="34.5" height="37.489999999999995" fill="#B14F3F"/><rect x="266" y="1134" width="34.5" height="37.489999999999995" fill="#B14F3F"/><line x1="417.79999999999995" y1="561.3" x2="417.79999999999995" y2="704.912" stroke="#121416" stroke-width="8.049999999999999" opacity="0.8"/><line x1="417.79999999999995" y1="741.712" x2="417.79999999999995" y2="869.776" stroke="#121416" stroke-width="8.049999999999999" opacity="0.8"/><line x1="417.79999999999995" y1="906.5759999999999" x2="417.79999999999995" y2="1022.8639999999999" stroke="#121416" stroke-width="8.049999999999999" opacity="0.8"/><line x1="417.79999999999995" y1="1059.664" x2="417.79999999999995" y2="1191.5" stroke="#121416" stroke-width="8.049999999999999" opacity="0.8"/><path d="M417.79999999999995 704.912 A 18.4 18.4 0 0 1 417.79999999999995 741.712" fill="none" stroke="#B14F3F" stroke-width="5.06"/><path d="M417.79999999999995 869.776 A 18.4 18.4 0 0 1 417.79999999999995 906.5759999999999" fill="none" stroke="#B14F3F" stroke-width="5.06"/><path d="M417.79999999999995 1022.8639999999999 A 18.4 18.4 0 0 1 417.79999999999995 1059.664" fill="none" stroke="#B14F3F" stroke-width="5.06"/></g>
+    <path d="M84 1188 C300 1146 512 1206 724 1160 C900 1122 960 1150 1014 1140" fill="none" stroke="#B14F3F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn17-01-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

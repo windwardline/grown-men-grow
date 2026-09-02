@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn17-06-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn17-06-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn17-06-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#EEE6D8"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 17 · 06 / 07</text>
+  <rect x="640" y="236" width="376" height="452" fill="url(#fn17-06-dots)"/>
+    <text x="74" y="336" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="72" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">The rotten-egg smell</text><text x="74" y="428" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="72" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">is the protection</text><text x="74" y="520" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="72" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">running.</text>
+    <text x="74" y="720" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">It is the only signal the system puts out,</text><text x="74" y="776" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">and it is a terrible one. It does not read</text><text x="74" y="832" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">as protection. It reads as a problem</text><text x="74" y="888" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">with the water.</text>
+    <text x="74" y="948" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">Real diligence, wrong thing.</text>
+    <g><rect x="652.35" y="991.3" width="40.8" height="15.299999999999999" fill="#121416" rx="1.7"/><rect x="660" y="1010" width="8.006740284521545" height="13.0475" fill="#B14F3F"/><rect x="660" y="1022.5375" width="7.01871078339283" height="13.0475" fill="#B14F3F"/><rect x="660" y="1035.075" width="4.25" height="13.0475" fill="#B14F3F"/><rect x="660" y="1047.6125" width="4.25" height="13.0475" fill="#B14F3F"/><rect x="660" y="1060.15" width="4.25" height="13.0475" fill="#B14F3F"/><rect x="660" y="1072.6875" width="4.25" height="13.0475" fill="#B14F3F"/><rect x="660" y="1085.225" width="5.076920539920177" height="13.0475" fill="#B14F3F"/><rect x="660" y="1097.7625" width="4.25" height="13.0475" fill="#B14F3F"/><rect x="660" y="1110.3" width="4.25" height="13.0475" fill="#B14F3F"/><rect x="660" y="1122.8375" width="4.25" height="13.0475" fill="#B14F3F"/><rect x="660" y="1135.375" width="5.838835710894841" height="13.0475" fill="#B14F3F"/><rect x="660" y="1147.9125" width="4.25" height="13.0475" fill="#B14F3F"/><rect x="660" y="1160.45" width="4.25" height="13.0475" fill="#B14F3F"/><rect x="660" y="1172.9875" width="4.25" height="13.0475" fill="#B14F3F"/><rect x="660" y="1185.525" width="6.004890440188884" height="13.0475" fill="#B14F3F"/><rect x="660" y="1198.0625" width="7.8928553308525515" height="13.0475" fill="#B14F3F"/><line x1="772.2" y1="994.7" x2="772.2" y2="1044.544" stroke="#121416" stroke-width="5.95" opacity="0.8"/><line x1="772.2" y1="1071.744" x2="772.2" y2="1100.712" stroke="#121416" stroke-width="5.95" opacity="0.8"/><line x1="772.2" y1="1127.9119999999998" x2="772.2" y2="1152.8680000000002" stroke="#121416" stroke-width="5.95" opacity="0.8"/><line x1="772.2" y1="1180.068" x2="772.2" y2="1225.8999999999999" stroke="#121416" stroke-width="5.95" opacity="0.8"/><path d="M772.2 1044.544 A 13.6 13.6 0 0 1 772.2 1071.744" fill="none" stroke="#B14F3F" stroke-width="3.74"/><path d="M772.2 1100.712 A 13.6 13.6 0 0 1 772.2 1127.9119999999998" fill="none" stroke="#B14F3F" stroke-width="3.74"/><path d="M772.2 1152.8680000000002 A 13.6 13.6 0 0 1 772.2 1180.068" fill="none" stroke="#B14F3F" stroke-width="3.74"/></g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn17-06-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

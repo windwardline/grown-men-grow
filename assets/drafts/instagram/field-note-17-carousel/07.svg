@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn17-07-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn17-07-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn17-07-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 17 · 07 / 07</text>
+      <text x="78" y="396" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">Most of the weight is gone</text><text x="78" y="476" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">somewhere it does not</text><text x="78" y="556" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">come back from.</text>
+    <text x="80" y="640" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">The water at the tap is the same</text><text x="80" y="708" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">temperature it was yesterday.</text>
+    <g><rect x="312.55" y="806.9" width="50.400000000000006" height="18.900000000000002" fill="#121416" rx="2.1"/><rect x="322" y="830" width="5.25" height="24.64875" fill="#B14F3F"/><rect x="322" y="854.01875" width="5.25" height="24.64875" fill="#B14F3F"/><rect x="322" y="878.0375" width="5.25" height="24.64875" fill="#B14F3F"/><rect x="322" y="902.05625" width="5.25" height="24.64875" fill="#B14F3F"/><rect x="322" y="926.075" width="5.25" height="24.64875" fill="#B14F3F"/><rect x="322" y="950.09375" width="5.25" height="24.64875" fill="#B14F3F"/><rect x="322" y="974.1125" width="5.25" height="24.64875" fill="#B14F3F"/><rect x="322" y="998.13125" width="5.25" height="24.64875" fill="#B14F3F"/><rect x="322" y="1022.15" width="5.25" height="24.64875" fill="#B14F3F"/><rect x="322" y="1046.16875" width="5.25" height="24.64875" fill="#B14F3F"/><rect x="322" y="1070.1875" width="5.25" height="24.64875" fill="#B14F3F"/><rect x="322" y="1094.20625" width="5.25" height="24.64875" fill="#B14F3F"/><rect x="322" y="1118.225" width="5.25" height="24.64875" fill="#B14F3F"/><rect x="322" y="1142.24375" width="5.25" height="24.64875" fill="#B14F3F"/><rect x="322" y="1166.2625" width="5.25" height="24.64875" fill="#B14F3F"/><rect x="322" y="1190.28125" width="5.25" height="24.64875" fill="#B14F3F"/><line x1="460.6" y1="811.1" x2="460.6" y2="1233.2" stroke="#121416" stroke-width="7.3500000000000005" opacity="0.8"/><path d="M460.6 905.432 A 16.8 16.8 0 0 1 460.6 939.0319999999999 Z" fill="#60735A"/><path d="M460.6 1013.0360000000001 A 16.8 16.8 0 0 1 460.6 1046.636 Z" fill="#60735A"/><path d="M460.6 1112.954 A 16.8 16.8 0 0 1 460.6 1146.5539999999999 Z" fill="#60735A"/></g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn17-07-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
