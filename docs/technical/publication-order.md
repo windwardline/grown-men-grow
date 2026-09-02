@@ -47,15 +47,16 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 4 | `rest-is-not-a-reward` | 2026-09-08 | |
 | 5 | `you-cant-outwork-a-wrong-direction` | 2026-09-15 | |
 | 6 | `nobody-rigs-to-the-breaking-strength` | 2026-09-22 | |
-| 7 | `ask-for-help-while-its-still-cheap` | 2026-09-29 | |
-| 8 | `the-lights-never-flickered` | 2026-10-06 | |
-| 9 | `comparison-is-a-bad-map` | 2026-10-13 | |
-| 10 | `you-can-walk-on-it-tomorrow` | 2026-10-20 | |
-| 11 | `your-body-keeps-the-books` | 2026-10-27 | |
-| 12 | `somebody-is-up-on-his-ladder` | 2026-11-03 | |
-| 13 | `every-part-passed-inspection` | 2026-11-10 | |
-| 14 | `anger-is-a-terrible-manager` | 2026-11-17 | |
-| 15 | `a-temp-wall-comes-out-in-april` | 2026-11-24 | |
+| 7 | `the-lights-never-flickered` | 2026-09-29 | |
+| 8 | `ask-for-help-while-its-still-cheap` | 2026-10-06 | |
+| 9 | `you-can-walk-on-it-tomorrow` | 2026-10-13 | |
+| 10 | `somebody-is-up-on-his-ladder` | 2026-10-20 | |
+| 11 | `comparison-is-a-bad-map` | 2026-10-27 | |
+| 12 | `every-part-passed-inspection` | 2026-11-03 | |
+| 13 | `a-temp-wall-comes-out-in-april` | 2026-11-10 | |
+| 14 | `your-body-keeps-the-books` | 2026-11-17 | |
+| 15 | `anger-is-a-terrible-manager` | 2026-11-24 | |
+| 16 | `the-rod-goes-first` | 2026-12-01 | |
 
 ## Why this order and not another
 
@@ -92,6 +93,22 @@ That would have been the fourth append in a row to record the same strain and de
 **Nothing scheduled moved.** Positions 1 and 2 are staged on Ghost and are untouched; every position from 3 onward is a projection.
 
 **The cost, stated plainly.** `anger-is-a-terrible-manager` moves out by ten weeks, from 2026-09-08 to 2026-11-17. It is one of only two pieces in the bank whose closing does not turn to the reader, and it now runs late rather than early. That is a real editorial price for the separation, and it is the price this document's stated preferences ask for.
+
+### Position 16, and why it could not be appended
+
+`the-rod-goes-first` was approved on 2026-09-02. It is the fourth `witness` piece, and its opening is a domestic plumbing mechanism — a build-trade opening by the same reading that counted anchor bolts and framing as one.
+
+**Appending it at 16 would have put two witness pieces side by side.** `a-temp-wall-comes-out-in-april` sat at 15, so an append produced witness at 8, 12, 15, and 16 — adjacent at the end. The 2026-08-30 entry above records a gap of two as the fault it was correcting; a gap of one is worse, and it lands where the reader has just been given the previous change of stance.
+
+**No small insert fixes it.** Four witness pieces cannot be spread three or more apart across sixteen slots unless the last two sit at 13 and 16, which fixes the tail and forces the two before it to 7 and 10. Inserting the note lower down and shifting everything by one leaves a gap of two somewhere in the middle; that was checked before the larger move was taken, not assumed away.
+
+**So positions 7 through 16 were rearranged.** Build-trade now sits at 6, 7, 9, 10, 12, 13, and 16 — seven pieces, longest run two, which is the best this bank allows with four separators available behind position 5. Witness sits at 7, 10, 13, and 16: gaps of three, three, and three, where the previous register managed four and three with one fewer piece.
+
+**The cost, stated plainly rather than buried.** Ten slots move. `your-body-keeps-the-books` goes from 11 to 14 and `comparison-is-a-bad-map` from 9 to 11, both later; `somebody-is-up-on-his-ladder` moves from 12 to 10 and `a-temp-wall-comes-out-in-april` from 15 to 13, both earlier. `the-lights-never-flickered` moves up one slot to 7, which puts the first witness piece marginally earlier than the back-half preference above would like — position 7 of 16 rather than 8 of 15. That is a real concession and it is the one this arrangement asks for.
+
+**The three binding constraints were checked against the new order, not assumed.** `friendship-has-a-maintenance-schedule` at 3 precedes `rest-is-not-a-reward` at 4. `rest-is-not-a-reward` at 4 is immediately before `you-cant-outwork-a-wrong-direction` at 5. `rest-is-not-a-reward` at 4 precedes `your-body-keeps-the-books` at 14. All three are enforced by `verify-repository.mjs`.
+
+**Nothing scheduled moved.** Positions 1 and 2 are published and position 3 is staged on Ghost; all three are untouched, and every position from 4 onward is a projection.
 
 ## How this is used
 
