@@ -4,7 +4,7 @@ canonical: https://grownmengrow.com/the-rod-goes-first/ (does not exist; the ess
 status: draft — NOT founder-approved
 approved: none
 publication_authorized: false — no approval of any kind; posting is separately gated and none is sought here
-image_rule: per-article — this pack may use only Field Note 17 imagery, of which none yet exists
+image_rule: per-article — this pack may use only Field Note 17 imagery: anode-rod-pulled, water-heater-top-fittings, tap-running-hot
 stance_note: witness — every excerpt below holds the three gates: no imperative aimed at the reader, no closing question, and nothing liftable in the shape "so a man should ___"
 ---
 
