@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn18-02-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn18-02-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn18-02-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#EEE6D8"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 18 · 02 / 07</text>
+  <rect x="56" y="228" width="968" height="704" fill="#3A1518" transform="rotate(-0.8 540 580)"/>
+    <g transform="rotate(-4 325 229)">
+    <rect x="212" y="206" width="226" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="220" y1="213" x2="428" y2="210" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <g transform="rotate(3 803 931)">
+    <rect x="704" y="908" width="198" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="712" y1="915" x2="892" y2="912" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="106" y="364" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="76" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">A level that is out</text><text x="106" y="462" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="76" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">does not read</text><text x="106" y="560" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="76" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">erratically.</text>
+    <text x="108" y="692" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">It reads by the same amount,</text><text x="108" y="750" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">in the same direction, every time.</text>
+    <text x="108" y="832" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="38" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">Repeatability is its most reliable quality.</text>
+    <text x="76" y="1062" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">Nothing about it looks any different.</text>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn18-02-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

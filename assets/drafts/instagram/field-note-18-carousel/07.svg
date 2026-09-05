@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn18-07-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn18-07-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn18-07-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 18 · 07 / 07</text>
+  <g transform="rotate(-0.6 540 472)">
+    <rect x="228" y="162" width="624" height="654" fill="#60735A"/>
+    <rect x="236" y="148" width="608" height="648" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/level-reversed-pencil-mark.png" x="240" y="152" width="600" height="640" preserveAspectRatio="xMidYMid slice" filter="url(#fn18-07-photo)"/>
+  </g>
+    <g transform="rotate(3 437 153)">
+    <rect x="334" y="130" width="206" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="342" y1="137" x2="530" y2="134" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="78" y="876" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">The one instrument that never gets checked</text><text x="78" y="932" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">is the one every other check runs through.</text>
+    <text x="80" y="1024" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="56" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">Turn it around,</text><text x="80" y="1096" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="56" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">and it will tell you.</text>
+    <g><rect x="716" y="1156" width="186" height="45.88" rx="22.94" fill="none" stroke="#121416" stroke-width="3.1" opacity="0.85"/><line x1="771.8" y1="1160.34" x2="771.8" y2="1197.5400000000002" stroke="#121416" stroke-width="2.604" opacity="0.75"/><line x1="846.2" y1="1160.34" x2="846.2" y2="1197.5400000000002" stroke="#121416" stroke-width="2.604" opacity="0.75"/><circle cx="785.936" cy="1178.94" r="9.3" fill="#B14F3F"/><g>
+      <line x1="809" y1="1215.5200000000002" x2="785.936" y2="1215.5200000000002" stroke="#B14F3F" stroke-width="2.728"/>
+      <line x1="809" y1="1209.94" x2="809" y2="1221.1000000000001" stroke="#B14F3F" stroke-width="2.728"/>
+      <line x1="785.936" y1="1209.94" x2="785.936" y2="1221.1000000000001" stroke="#B14F3F" stroke-width="2.728"/>
+    </g></g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn18-07-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

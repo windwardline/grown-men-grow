@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn18-03-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn18-03-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn18-03-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 18 · 03 / 07</text>
+  <text x="74" y="316" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="74" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">Every line struck</text><text x="74" y="410" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="74" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">off it agrees with</text><text x="74" y="504" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="74" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">every other line</text><text x="74" y="598" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="74" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">struck off it.</text>
+    <text x="76" y="700" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">The work checks out</text><text x="76" y="768" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">because it is internally correct.</text>
+    <text x="76" y="856" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="38" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">Square to a lie, and square to it beautifully.</text>
+    <g><rect x="300" y="1000" width="480" height="74" rx="37" fill="none" stroke="#121416" stroke-width="5" opacity="0.85"/><line x1="444" y1="1007" x2="444" y2="1067" stroke="#121416" stroke-width="4.2" opacity="0.75"/><line x1="636" y1="1007" x2="636" y2="1067" stroke="#121416" stroke-width="4.2" opacity="0.75"/><circle cx="599.52" cy="1037" r="15" fill="#B14F3F"/></g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn18-03-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
