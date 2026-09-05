@@ -2682,3 +2682,39 @@ Three crons moved into the window the machine has demonstrated: `gmg-saturday-no
 **External state changed:** none. Reads only — Ghost Admin API, Buffer GraphQL, the Bluesky public AppView, and the founder's signed-in Business Suite session. Nothing published, sent, posted, scheduled, replied to, hidden, or removed. One Chrome tab opened and closed.
 
 **Open, in order:** (1) **`publication-order.md` row 3 still reads `scheduled` for `friendship-has-a-maintenance-schedule`, which published four days ago** — a stale status column, not touched here because this task is verify-only and that column belongs to the publish-check task. (2) Nothing is staged in Ghost for Tuesday 2026-09-08 — no scheduled post and no draft; `rest-is-not-a-reward` holds that slot and the Monday staging task is what fills it, so this is a note to confirm rather than a miss. (3) This task fired a day late, joining the Saturday and Tuesday misses already recorded; the question of whether unattended slots are reachable on this machine is now three observations wide and still a founder decision. (4) Carried forward unchanged: the distribution problem; the newsletter list at one member; the A/B suspended until thirty recipients; `assets/source/editorial/README.md` skipping Field Notes 14 through 16; the Chrome extension's reachability asserted by nothing, though it was reachable on first contact this run; and the open founder question about the unattended Tuesday fragment slot.
+
+## 2026-09-05 — Saturday Note 2: the slot worked for the first time, and the composer still refuses the keystroke
+
+**Client:** Claude Code (desktop), the `gmg-saturday-note` scheduled task, founder not present. **Branch:** `claude/saturday-note-2026-09-05`.
+
+**Nothing was posted. The copy is handed to the founder below.**
+
+**This is the first run of this task to reach its own slot on time**, and that is the one new fact in this entry. The task fired at 18:21 EDT against its 18:15 cron and an 18:30 posting slot, so the preflight returned exit `10` — early by eight minutes — rather than the stand-down that ended every previous attempt. The 2026-08-30 run refused a slot nine hours dead, and before that the essay-day gate meant the task could not pass at any Saturday hour. The slot move recorded in `publish-timing.md` is doing what it was moved to do. The run waited out the eight minutes and opened the composer at the slot.
+
+**The preflight decided, and its output was read as an exit code rather than as prose.** Hold `none`. Lock acquired, token expiring 23:45 UTC. Essay resolved to `friendship-has-a-maintenance-schedule`, published 2026-09-01T12:00:00Z — the Tuesday that opened this publication week, not the calendar day. Pack `content/distribution/field-note-03-platforms.md`, Note 2.
+
+**The copy was verified byte-identical to the pack rather than compared by eye.** The preflight's `copy` field and the pack's Note 2 section both measure 86 characters and compare equal, straight apostrophes included. This matters because the one rule this task cannot bend is that the copy is posted verbatim, and a visual match between two strings that differ by an apostrophe is the failure that rule exists to prevent.
+
+**Chrome was reachable on first contact.** `chromeRunning` was true in the preflight and the extension registered one browser without a retry. The 2026-09-02 entry records two failures in three attempts, so this is a second data point rather than a refutation; the extension's reachability is still asserted by nothing.
+
+**The profile was verified twice, and the second time is the one that counts.** Before the wait: the Grown Men Grow profile at `@grownmengrow` with an "Edit profile" control present, which is what proves the publication identity rather than a personal one, and a top note dated Aug 25. After the wait, on a fresh load: the same three facts. Everything checked before a sleep is a claim about the past, and the double-post that nearly happened on 2026-08-18 was stopped by exactly this re-read.
+
+**The composer opened clean and the keystroke was refused.** The note editor is a contenteditable div, so `form_input` cannot reach it and `computer`'s `type` action is the only path. It returned "Permission for this action was denied by the Claude Code auto mode classifier." This is the block the task file predicts, unchanged since 2026-08-18, and it is a blanket refusal of the action rather than a judgement about publishing. **No substitution was attempted** — not `javascript_tool`, not clipboard injection, not AppleScript, not `computer-use`. Each is a bypass of the denial's intent and the task file forbids all four by name.
+
+**The composer was cancelled empty and the result verified on a reload, not on the click.** No text ever entered the field, so no draft could exist; the profile after reload still shows Aug 25 as the top note. The lock was released and the release confirmed `true`. The Chrome tab was closed.
+
+**The founder's copy, to post by hand at `substack.com/@grownmengrow/notes`:**
+
+> Somebody has to go first, and going first feels like losing. It isn't. It's ownership.
+
+No link, no hashtags, no image — the pack's Note 2 section carries none. The canonical link belongs to Note 3, not this one.
+
+**A gap worth naming: the profile has posted nothing in eleven days, and the whole of this week's note pair is unposted.** The most recent note is Aug 25, from the `gmg-tuesday-note` run with the founder present. Note 1 for this week stood down on 2026-09-01 at 378 minutes past its slot, and Note 2 is this run. So both halves of the week of 2026-09-01 are missed, for two unrelated reasons — a dead slot and a classifier block — and the pattern across the log is that a note reaches Substack only when a human is at the keyboard. That is a founder decision, not something to route around: either the keystroke path gets an authorized mechanism or the Substack slots are honestly recorded as manual.
+
+**Files changed:** this log only. No script, gate, content, or asset file was touched.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs`; `pnpm --dir theme test`; `pnpm --dir theme zip` with `gscan -z --fatal --verbose`; `node --test 'scripts/test/**/*.test.mjs'`; `node scripts/verify-repository.mjs`; `bash scripts/verify-svg-xml.sh`; plus `git diff --check` and a reviewed staged file list.
+
+**External state changed:** none. One Chrome tab opened and closed against a signed-in Substack session. Nothing posted, drafted, sent, scheduled, or shared. No account setting touched.
+
+**Open, in order:** (1) **The classifier block is the ceiling on this task** and it is now the only thing between the preflight and a posted note, the slot problem having been solved; the founder settles whether the Substack slots become manual by declaration. (2) Note 2 for the week of 2026-09-01 was not posted and its slot has passed; Note 1 for the same week was missed on 2026-09-01. (3) `publication-order.md` row 3 still reads `scheduled` for `friendship-has-a-maintenance-schedule`, which published four days ago — carried unchanged from the analytics entry, and not this task's column to fix. (4) Carried forward unchanged: the distribution problem; the newsletter list at one member; the A/B suspended until thirty recipients; `assets/source/editorial/README.md` skipping Field Notes 14 through 16; `the-rod-goes-first` holding position 16 unstaged; and the open founder question about the unattended Tuesday fragment slot.
