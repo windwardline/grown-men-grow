@@ -420,6 +420,7 @@ const requiredFiles = [
   'scripts/render-field-note-15.mjs',
   'scripts/render-field-note-16.mjs',
   'scripts/render-field-note-17.mjs',
+  'scripts/render-field-note-18.mjs',
   'scripts/stage-next-field-note.mjs',
   'scripts/render-brand-banners.mjs',
   'scripts/render-ghost-feature-images.mjs',
@@ -558,11 +559,12 @@ await validateAssetFamily('assets/drafts/instagram/field-note-14-carousel', 7, 1
 await validateAssetFamily('assets/drafts/instagram/field-note-15-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-16-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-17-carousel', 7, 1080, 1350);
+await validateAssetFamily('assets/drafts/instagram/field-note-18-carousel', 7, 1080, 1350);
 await validatePhotographExclusivity('assets/drafts/instagram');
 await validatePublicationOrder();
 await validateCrossReferences();
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
-await validateAssetFamily('assets/drafts/ghost/feature-images', 19, 1600, 1000);
+await validateAssetFamily('assets/drafts/ghost/feature-images', 20, 1600, 1000);
 await validateEditorialConcepts();
 const editorialSources = new Map([
   ['friends-in-conversation', { width: 1023, height: 1537 }],
@@ -623,6 +625,9 @@ const editorialSources = new Map([
   ['anode-rod-pulled', { width: 1024, height: 1536 }],
   ['water-heater-top-fittings', { width: 1024, height: 1536 }],
   ['tap-running-hot', { width: 1024, height: 1536 }],
+  ['level-on-top-plate', { width: 1024, height: 1536 }],
+  ['bubble-vial-close', { width: 1024, height: 1536 }],
+  ['level-reversed-pencil-mark', { width: 1024, height: 1536 }],
 ]);
 await validateNamedPngs('assets/source/editorial', editorialSources);
 await validateNamedPngs('assets/drafts/brand/banners', new Map([
@@ -650,6 +655,7 @@ const reviewSheets = new Map([
   ['field-note-15-carousel', { width: 1362, height: 1004 }],
   ['field-note-16-carousel', { width: 1362, height: 1004 }],
   ['field-note-17-carousel', { width: 1362, height: 1004 }],
+  ['field-note-18-carousel', { width: 1362, height: 1004 }],
   ['ghost-social-cards', { width: 1310, height: 884 }],
   ['pinned-introduction', { width: 1362, height: 1004 }],
   ['recognition-carousel', { width: 1362, height: 1004 }],
@@ -694,21 +700,27 @@ for (const file of tracked.filter((item) => publicSurface(item) && textExtension
 // Pinterest (2026-08-09), Threads (2026-08-10), and Facebook (2026-08-10)
 // were eliminated from the network by founder decision.
 const packSections = ['# Medium', '# Bluesky', '# LinkedIn', '# Substack'];
-const packs = new Map([
-  ['Essay 1', 'content/distribution/essay-01-launch.md'],
-  ['Field Note 2', 'content/distribution/field-note-02-platforms.md'],
-  ['Field Note 3', 'content/distribution/field-note-03-platforms.md'],
-  ['Field Note 4', 'content/distribution/field-note-04-platforms.md'],
-  ['Field Note 5', 'content/distribution/field-note-05-platforms.md'],
-  ['Field Note 6', 'content/distribution/field-note-06-platforms.md'],
-  ['Field Note 7', 'content/distribution/field-note-07-platforms.md'],
-  ['Field Note 8', 'content/distribution/field-note-08-platforms.md'],
-  ['Field Note 9', 'content/distribution/field-note-09-platforms.md'],
-  ['Field Note 10', 'content/distribution/field-note-10-platforms.md'],
-  ['Field Note 11', 'content/distribution/field-note-11-platforms.md'],
-  ['Field Note 12', 'content/distribution/field-note-12-platforms.md'],
-  ['Field Note 13', 'content/distribution/field-note-13-platforms.md'],
-]);
+// The population is DERIVED from tracked packs rather than listed. The list
+// this replaces named Essay 1 and Field Notes 2 through 13 and stopped there,
+// so the packs for Field Notes 14, 15, 16 and 17 were never checked for their
+// four required sections or for Medium tag legality — four packs sitting in
+// `content/distribution` that the gate could not see, and a fifth about to
+// join them. A curated list inherits the blind spots of whoever last edited
+// it; a derived one cannot fall behind the directory it describes.
+const packs = new Map(tracked
+  .filter((file) => file.startsWith('content/distribution/') && file.endsWith('.md'))
+  .sort()
+  .map((file) => {
+    const base = path.basename(file, '.md');
+    const note = base.match(/^field-note-(\d+)-platforms$/);
+    if (note) return [`Field Note ${Number(note[1])}`, file];
+    const essay = base.match(/^essay-(\d+)-/);
+    if (essay) return [`Essay ${Number(essay[1])}`, file];
+    return [base, file];
+  }));
+if (packs.size === 0) {
+  fail('No platform packs were found under content/distribution; the pack gate would pass having checked nothing.');
+}
 // Medium refuses a tag containing anything but letters, numbers, spaces, and
 // dashes, and caps one at 25 characters. Observed live on 2026-08-13 while
 // importing Essay 1: "Men's Health" was rejected at the publish dialog with

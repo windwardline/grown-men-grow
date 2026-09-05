@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="fn18-feature-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn18-feature-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn18-feature-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="#F8F3EA"/>
+  <rect x="1226" y="0" width="374" height="1000" fill="#3A1518"/>
+  <g transform="rotate(-0.8 410 500)">
+    <rect x="68" y="80" width="684" height="874" fill="#3A1518"/>
+    <rect x="76" y="66" width="668" height="868" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/level-on-top-plate.png" x="80" y="70" width="660" height="860" preserveAspectRatio="xMidYMid slice" filter="url(#fn18-feature-photo)"/>
+  </g>
+  <g transform="rotate(1.4 990 420)">
+    <rect x="778" y="150" width="424" height="574" fill="#60735A"/>
+    <rect x="786" y="136" width="408" height="568" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/level-reversed-pencil-mark.png" x="790" y="140" width="400" height="560" preserveAspectRatio="xMidYMid slice" filter="url(#fn18-feature-photo)"/>
+  </g>
+  <g transform="rotate(-4 325 69)">
+    <rect x="212" y="46" width="226" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="220" y1="53" x2="428" y2="50" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g transform="rotate(4 961 139)">
+    <rect x="862" y="116" width="198" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="870" y1="123" x2="1050" y2="120" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g><rect x="1266" y="300" width="294" height="72.52" rx="36.26" fill="none" stroke="#EEE6D8" stroke-width="4.9" opacity="0.85"/><line x1="1354.2" y1="306.86" x2="1354.2" y2="365.65999999999997" stroke="#EEE6D8" stroke-width="4.116" opacity="0.75"/><line x1="1471.8" y1="306.86" x2="1471.8" y2="365.65999999999997" stroke="#EEE6D8" stroke-width="4.116" opacity="0.75"/><circle cx="1449.456" cy="336.26" r="14.7" fill="#B14F3F"/></g>
+  <g><rect x="1266" y="560" width="294" height="72.52" rx="36.26" fill="none" stroke="#EEE6D8" stroke-width="4.9" opacity="0.85"/><line x1="1354.2" y1="566.86" x2="1354.2" y2="625.66" stroke="#EEE6D8" stroke-width="4.116" opacity="0.75"/><line x1="1471.8" y1="566.86" x2="1471.8" y2="625.66" stroke="#EEE6D8" stroke-width="4.116" opacity="0.75"/><circle cx="1376.544" cy="596.26" r="14.7" fill="#B14F3F"/><g>
+      <line x1="1413" y1="654.0799999999999" x2="1376.544" y2="654.0799999999999" stroke="#B14F3F" stroke-width="4.312"/>
+      <line x1="1413" y1="645.26" x2="1413" y2="662.9" stroke="#B14F3F" stroke-width="4.312"/>
+      <line x1="1376.544" y1="645.26" x2="1376.544" y2="662.9" stroke="#B14F3F" stroke-width="4.312"/>
+    </g></g>
+  <path d="M800 786 C902 748 1010 800 1112 762" fill="none" stroke="#B14F3F" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect width="1600" height="1000" filter="url(#fn18-feature-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
