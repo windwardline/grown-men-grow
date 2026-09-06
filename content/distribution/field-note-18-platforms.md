@@ -1,14 +1,16 @@
 ---
 essay: The Error Is Half the Difference
-canonical: https://grownmengrow.com/the-error-is-half-the-difference/ (not live; the essay is an unapproved draft)
-status: DRAFT — not founder-approved, not authorized for posting
-approved: not approved; written 2026-09-05 by the Saturday draft task for founder review
-image_rule: per-article — this pack may use only Field Note 18 imagery
+canonical: https://grownmengrow.com/the-error-is-half-the-difference/ (live only after publication)
+status: founder-approved
+approved: 2026-09-05 — approved as written alongside the essay and artwork
+publication_authorized: false — approval covers the copy, not a slot; posting remains separately gated
+image_rule: per-article — this pack may use only Field Note 18 imagery: level-on-top-plate, bubble-vial-close, level-reversed-pencil-mark
+stance_note: assignment — the reversal is a move the reader has, so the excerpts may address him directly; the closing turns on what the test returns rather than on a question
 ---
 
 # Field Note 18 — platform adaptations
 
-Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts until the founder approves the note, the canonical Ghost URL is live, and each platform's gate passes. Ghost remains canonical; Medium is the only full-essay surface.
+Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts until the canonical Ghost URL is live and each platform's gate passes. Ghost remains canonical; Medium is the only full-essay surface.
 
 # Medium
 

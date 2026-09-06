@@ -57,6 +57,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 14 | `your-body-keeps-the-books` | 2026-11-17 | |
 | 15 | `anger-is-a-terrible-manager` | 2026-11-24 | |
 | 16 | `the-rod-goes-first` | 2026-12-01 | |
+| 17 | `the-error-is-half-the-difference` | 2026-12-08 | |
 
 ## Why this order and not another
 
@@ -65,6 +66,14 @@ The three constraints above fix positions 3, 5, 6, and 12 relative to each other
 - **Two friendship pieces do not run back to back.** Positions 1 and 3 are both about friendship; position 2 separates them with a piece about repair.
 - **The two witness pieces run late and apart.** `the-lights-never-flickered` sits at 9 and `somebody-is-up-on-his-ladder` at 13, both in the back half so a change of stance reads as deliberate rather than as the publication's default register, and four slots apart so they do not read as a series. Neither is labelled and neither is announced.
 - **Build-trade openings are separated.** This is the preference that had quietly failed, and the reorder of 2026-08-26 is what fixed it.
+
+### Position 17 was appended, and the trade-opening adjacency is stated rather than hidden
+
+`the-error-is-half-the-difference` was approved 2026-09-05 and appended at 17. Appending moves nothing: every scheduled slot and every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note.
+
+It does open on a build trade — a spirit level on a top plate — directly after `the-rod-goes-first`, which opens on a water heater. That is a run of two, which is the tolerance this document already accepts as the best the bank allows; the 2026-08-26 reorder reduced the longest run from five to two and stopped there because no arrangement of the bank does better. A pair at the end is the same shape that reorder deliberately left in place.
+
+It was appended rather than slotted for separation because moving it up would have displaced projections to accommodate one opening, which is the thing this document forbids. If the founder would rather break the pair, that is a reorder decision and belongs to them; nothing here is scheduled and nothing is urgent.
 
 ### The reorder of 2026-08-26, and the miscount that delayed it
 
