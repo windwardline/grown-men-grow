@@ -7,16 +7,16 @@ access: public
 email_subject: The Error Is Half the Difference
 preview: Two readings, thirty seconds, and no second tool required.
 feature_image_alt: A title-free paper collage pairing a large taped photograph of a spirit level lying along the top plate of a newly framed wall in window daylight with a smaller photograph of a carpenter's pencil tick beside the level being set back down end for end, and an oxblood margin carrying two drawn bubble-vial marks — a bubble off centre to the right above, the same vial reversed with the bubble off centre to the left below, and a bracket between them marking half the gap.
-status: DRAFT — not founder-approved
-publication_authorized: false — no approval, no register position, no Ghost slot; publication, newsletter delivery, and posting all separately gated
-approved: not approved; written 2026-09-05 by the Saturday draft task for founder review
+status: founder-approved
+publication_authorized: false — approval covers the work and a register position, not a Ghost slot; publication, newsletter delivery, and posting remain separately gated
+approved: 2026-09-05 — essay, platform pack, and artwork approved together, in one pass
 stance: assignment — the subject test fails for witness, and correctly: the reversal is a move he has, takes thirty seconds, and is the whole argument
 closing_addresses_reader: no — closes on the mechanism and what it returns, not on an instruction or a question
 register: generic present — asserts that this happens, never that a particular instance happened
 personal_claims: none — no event is asserted as reportage and no first person appears, per the 2026-08-08 ruling reaffirmed 2026-08-12
-social_copy_status: DRAFT — not approved, not authorized for posting
-visual_direction_status: DRAFT — not approved
-artwork_status: DRAFT — three source photographs, seven carousel slides, feature image, review sheet, and gate entries built this run; not approved
+social_copy_status: founder-approved as written 2026-09-05; posting remains separately gated
+visual_direction_status: founder-approved as written 2026-09-05
+artwork_status: founder-approved 2026-09-05 — three source photographs, seven carousel slides, feature image, review sheet, and gate entries
 origin: written 2026-09-05 by the Saturday draft task with the standing commission at `none`, so the ordinary `assignment` stance applies and no commission is cleared by this change set
 ---
 
@@ -156,7 +156,7 @@ Thirty seconds, and no second tool required.
 
 # Production notes
 
-- **DRAFT.** Written 2026-09-05 by the Saturday draft task. Not founder-approved, not authorized for publication, newsletter delivery, or posting, and holding no register position.
+- Written 2026-09-05 by the Saturday draft task. Founder-approved the same day. Approval covers the work and a register position; publication, newsletter delivery, and posting remain separately gated.
 - Stance is `assignment`, and the subject test is what decides it rather than preference: the reversal is a move he has, it costs thirty seconds, and it is the whole argument of the piece. A witness framing would have had to strip the move out, which would leave the essay with nothing in it. The standing commission in `docs/technical/operating-cadence.md` reads `none`, so the ordinary stance applies and this change set clears no commission.
 - Register is the generic present. No event is asserted as having happened, no composite is asserted, and no first person appears.
 - **Counterpart to Field Note 17, not a sibling.** "The Rod Goes First" ran three days earlier as a `witness` piece: an object spent in the dark, protecting a tank that cannot know, with no move available to anyone inside the event. This is its inverse on every axis that matters — the man holds the instrument, the check is his to run, it takes half a minute, and the piece ends on what the test returns to him. Wednesday was interior and done to him; this is external and done by him.
