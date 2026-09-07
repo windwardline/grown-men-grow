@@ -43,8 +43,8 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | — | `strength-has-to-grow-up` (Essay 1) | 2026-08-09 | published |
 | 1 | `call-your-friends-before-theres-a-reason` | 2026-08-18 | published |
 | 2 | `a-confession-can-still-be-selfish` | 2026-08-25 | published |
-| 3 | `friendship-has-a-maintenance-schedule` | 2026-09-01 | scheduled |
-| 4 | `rest-is-not-a-reward` | 2026-09-08 | |
+| 3 | `friendship-has-a-maintenance-schedule` | 2026-09-01 | published |
+| 4 | `rest-is-not-a-reward` | 2026-09-08 | scheduled |
 | 5 | `you-cant-outwork-a-wrong-direction` | 2026-09-15 | |
 | 6 | `nobody-rigs-to-the-breaking-strength` | 2026-09-22 | |
 | 7 | `the-lights-never-flickered` | 2026-09-29 | |
