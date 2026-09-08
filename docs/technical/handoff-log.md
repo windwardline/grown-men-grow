@@ -2834,3 +2834,21 @@ No link, no hashtags, no image — the pack's Note 2 section carries none. The c
 **External state changed:** none. Nothing was posted, sent, published, scheduled, or purchased, and no account setting was touched. One Substack composer is left open with unposted text in it.
 
 **Open, in order:** (1) **Substack Note 1 is staged and unposted; it needs the founder's click.** If it is not posted today the slot is simply missed — nothing expires, and the copy stays valid whenever it goes out. (2) Saturday's Note 2 should attempt the keystroke path rather than assume Monday's prediction, on this run's evidence. (3) Whether the Tuesday 12:00 PM fragment slot should stay unattended is still a founder decision, unchanged since 2026-09-01. (4) Thursday's Medium import will again take the ` | Grown Men Grow` suffix as the headline — expected, and a hand fix in that task. (5) Carried forward unchanged: the distribution problem, the newsletter list at one member, the A/B suspended until thirty recipients, `publication-order.md` row 3 still reading `scheduled` for `friendship-has-a-maintenance-schedule`, and task instruction files drifting out of step with the repository with nothing detecting it.
+
+## 2026-09-08 — Claude Code: correction — Substack Note 1 is posted, 2h28m after its slot
+
+**Client:** Claude Code (same session as the entry above, founder present for this part). **Branch:** `claude/tuesday-note-posted-2026-09-08`. This entry corrects the preceding one, which recorded the note as staged and unposted and recorded external state as unchanged. Both were true when written and are no longer true. The earlier entry stands as written, per the append-only rule.
+
+**The founder clicked, and it was verified on the profile rather than on their word.** The note is live at `https://substack.com/@grownmengrow/note/c-332603638`, under the publication identity `@grownmengrow`, text complete and untruncated:
+
+> Rest before the big thing, not just after. Nobody admires the man who shows up to the decisive week already spent.
+
+**It went out at 2:28 PM ET, two hours and twenty-eight minutes after the 12:00 PM slot.** That is far outside the minute or two the task file treats as on-slot, and **the Friday analytics task reads these timestamps as its baseline** — this week's Note 1 engagement is not comparable to a week posted on the hour, and any read of it should carry the offset rather than average it in. The delay is not a fault in the run: the copy was staged at 12:00 and sat waiting on the founder's click, which is exactly what the 2026-08-25 staging ruling asks for. **The ruling and the slot are in tension whenever the founder is not at the keyboard at noon, and nothing in the current design resolves it.** That is a founder question, not an agent one.
+
+**Verification was done in a fresh tab, not the staged one.** The task file warns that `get_page_text` renders a staged-but-unposted note in the feed position with a "just now" timestamp, indistinguishable from a live post — so the profile was loaded in a new tab, where the entry could only have come from the server, and then the permalink itself was opened and read. The timestamp was taken from the note's own permalink element (`Sep 8, 2026, 2:28 PM`) rather than from the relative "just now" string.
+
+**Files changed:** this log only.
+
+**External state changed:** **one Substack note posted publicly** to `substack.com/@grownmengrow`, permalink `c-332603638`, at 2026-09-08 14:28 ET. Nothing else — no send, no schedule, no purchase, no account setting.
+
+**Open, in order:** (1) **Whether the noon slot survives the staging ruling** — a slot the agent cannot fill and the founder may not be free for is a slot that will keep drifting; today it drifted 148 minutes. (2) Friday's analytics run must treat this week's Note 1 as off-baseline. (3) Saturday's Note 2 should attempt the keystroke path rather than inherit a prediction; it worked today. (4) Carried forward unchanged: the distribution problem, the newsletter list at one member, the A/B suspended until thirty recipients, `publication-order.md` row 3 still reading `scheduled` for `friendship-has-a-maintenance-schedule`, and task instruction files drifting out of step with the repository with nothing detecting it.
