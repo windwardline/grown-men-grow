@@ -501,6 +501,10 @@ if (tracked.includes('drafts/field-note-13-you-can-walk-on-it-tomorrow.md')
   || tracked.includes('drafts/field-note-13-platforms.md')) {
   fail('Approved Field Note 13 and its platform pack must live under content/, not drafts/.');
 }
+if (tracked.includes('drafts/field-note-19-the-line-was-capped-not-removed.md')
+  || tracked.includes('drafts/field-note-19-platforms.md')) {
+  fail('Approved Field Note 19 and its platform pack must live under content/, not drafts/.');
+}
 
 const launchPackage = await readFile(path.join(root, 'content/instagram/launch-package.md'), 'utf8');
 const captionSource = launchPackage.split('\n## 8. Approved discovery classifications')[0];

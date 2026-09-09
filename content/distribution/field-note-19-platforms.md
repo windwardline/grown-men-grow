@@ -1,16 +1,16 @@
 ---
 essay: The Line Was Capped, Not Removed
 canonical: https://grownmengrow.com/the-line-was-capped-not-removed/ (live only after publication)
-status: draft — NOT founder-approved
-approved: none
-publication_authorized: false — nothing here posts; the essay itself is unapproved and no slot exists
+status: founder-approved
+approved: 2026-09-09 — approved as written alongside the essay and artwork
+publication_authorized: false — approval covers the copy, not a slot; posting remains separately gated
 image_rule: per-article — this pack may use only Field Note 19 imagery: capped-copper-stub-wall, basement-main-run-tees, tubing-cutter-on-copper
 stance_note: assignment — the question is one the reader answers about his own building, so the excerpts may address him directly; the closing turns on the difference between a private cap and a loud cut
 ---
 
 # Field Note 19 — platform adaptations
 
-Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts until the founder approves the essay, a canonical Ghost URL is live, and each platform's gate passes. Ghost remains canonical; Medium is the only full-essay surface.
+Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts until the canonical Ghost URL is live and each platform's gate passes. Ghost remains canonical; Medium is the only full-essay surface.
 
 # Medium
 
