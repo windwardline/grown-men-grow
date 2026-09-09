@@ -58,6 +58,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 15 | `anger-is-a-terrible-manager` | 2026-11-24 | |
 | 16 | `the-rod-goes-first` | 2026-12-01 | |
 | 17 | `the-error-is-half-the-difference` | 2026-12-08 | |
+| 18 | `the-line-was-capped-not-removed` | 2026-12-15 | |
 
 ## Why this order and not another
 

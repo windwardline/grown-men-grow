@@ -37,3 +37,33 @@
 id = "GHSA-jmr9-qjv8-65gv"
 ignoreUntil = 2026-11-09
 reason = "extract-zip 2.0.1 has no patched release and no upstream path off it (gscan 6.4.2 pins @tryghost/zip 3.5.0; its latest 3.5.6 still pins extract-zip 2.0.1). devDependency only: the sole extraction is GScan theme validation of a zip this repository builds from its own tracked files. Expires 2026-11-09 for re-decision."
+
+# extract-zip 2.0.1 -- a second symlink-escape in the same package, found the
+# same way and unpatched the same way. Containment is checked only against an
+# entry's parent directory and never against the entry's own final path
+# component, so an archive carrying a symlink and then a regular file under one
+# name writes through the symlink to anywhere the process can reach.
+# https://osv.dev/GHSA-7pqw-9j4j-h8q3 (High 8.1,
+# CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H)
+#
+# Accepted on the same facts as GHSA-jmr9-qjv8-65gv above, which are unchanged:
+# extract-zip has published nothing above 2.0.1, gscan 6.4.2 pins @tryghost/zip
+# 3.5.0 exactly, and @tryghost/zip 3.5.6 still pins extract-zip 2.0.1 exactly.
+# The scanner reports this one as unfixable while reporting the four multer
+# advisories as fixable, and those were fixed rather than accepted -- see the
+# multer override in theme/pnpm-workspace.yaml.
+#
+# The exposure argument is the one that matters and it holds here too: the
+# attacker must control the contents of the archive. gscan is a devDependency
+# that never runs on the published site, and the only archive it extracts is
+# the theme zip this repository builds moments earlier from its own tracked
+# files. No archive from outside this repository enters that path.
+#
+# Deliberately expires on the same day as GHSA-jmr9-qjv8-65gv. Both are the
+# same package, the same class of defect and the same acceptance argument, so
+# they are one decision and should be re-made in one sitting on that day's
+# facts. Splitting the dates would mean two chances to forget one.
+[[IgnoredVulns]]
+id = "GHSA-7pqw-9j4j-h8q3"
+ignoreUntil = 2026-11-09
+reason = "Second unpatched symlink-escape in extract-zip 2.0.1, accepted on the same unchanged facts as GHSA-jmr9-qjv8-65gv: no release above 2.0.1 exists and no upstream path off it (gscan 6.4.2 pins @tryghost/zip 3.5.0; its latest 3.5.6 still pins extract-zip 2.0.1). devDependency only: the sole extraction is GScan theme validation of a zip this repository builds from its own tracked files, so no attacker-controlled archive reaches it. Expires 2026-11-09 alongside GHSA-jmr9-qjv8-65gv for one combined re-decision."

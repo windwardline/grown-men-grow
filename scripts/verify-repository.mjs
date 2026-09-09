@@ -421,6 +421,7 @@ const requiredFiles = [
   'scripts/render-field-note-16.mjs',
   'scripts/render-field-note-17.mjs',
   'scripts/render-field-note-18.mjs',
+  'scripts/render-field-note-19.mjs',
   'scripts/stage-next-field-note.mjs',
   'scripts/render-brand-banners.mjs',
   'scripts/render-ghost-feature-images.mjs',
@@ -500,6 +501,10 @@ if (tracked.includes('drafts/field-note-13-you-can-walk-on-it-tomorrow.md')
   || tracked.includes('drafts/field-note-13-platforms.md')) {
   fail('Approved Field Note 13 and its platform pack must live under content/, not drafts/.');
 }
+if (tracked.includes('drafts/field-note-19-the-line-was-capped-not-removed.md')
+  || tracked.includes('drafts/field-note-19-platforms.md')) {
+  fail('Approved Field Note 19 and its platform pack must live under content/, not drafts/.');
+}
 
 const launchPackage = await readFile(path.join(root, 'content/instagram/launch-package.md'), 'utf8');
 const captionSource = launchPackage.split('\n## 8. Approved discovery classifications')[0];
@@ -560,11 +565,12 @@ await validateAssetFamily('assets/drafts/instagram/field-note-15-carousel', 7, 1
 await validateAssetFamily('assets/drafts/instagram/field-note-16-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-17-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-18-carousel', 7, 1080, 1350);
+await validateAssetFamily('assets/drafts/instagram/field-note-19-carousel', 7, 1080, 1350);
 await validatePhotographExclusivity('assets/drafts/instagram');
 await validatePublicationOrder();
 await validateCrossReferences();
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
-await validateAssetFamily('assets/drafts/ghost/feature-images', 20, 1600, 1000);
+await validateAssetFamily('assets/drafts/ghost/feature-images', 21, 1600, 1000);
 await validateEditorialConcepts();
 const editorialSources = new Map([
   ['friends-in-conversation', { width: 1023, height: 1537 }],
@@ -628,6 +634,9 @@ const editorialSources = new Map([
   ['level-on-top-plate', { width: 1024, height: 1536 }],
   ['bubble-vial-close', { width: 1024, height: 1536 }],
   ['level-reversed-pencil-mark', { width: 1024, height: 1536 }],
+  ['capped-copper-stub-wall', { width: 1024, height: 1536 }],
+  ['basement-main-run-tees', { width: 1024, height: 1536 }],
+  ['tubing-cutter-on-copper', { width: 1024, height: 1536 }],
 ]);
 await validateNamedPngs('assets/source/editorial', editorialSources);
 await validateNamedPngs('assets/drafts/brand/banners', new Map([
@@ -656,6 +665,7 @@ const reviewSheets = new Map([
   ['field-note-16-carousel', { width: 1362, height: 1004 }],
   ['field-note-17-carousel', { width: 1362, height: 1004 }],
   ['field-note-18-carousel', { width: 1362, height: 1004 }],
+  ['field-note-19-carousel', { width: 1362, height: 1004 }],
   ['ghost-social-cards', { width: 1310, height: 884 }],
   ['pinned-introduction', { width: 1362, height: 1004 }],
   ['recognition-carousel', { width: 1362, height: 1004 }],

@@ -1,2 +1,23 @@
+# pnpm settings for the theme's dev toolchain.
+
+# dtrace-provider is an optional native dependency pulled in beneath gscan.
+# Its build is refused rather than run: nothing in theme validation needs it,
+# and a native compile is the slowest and most fragile step in a CI install.
 allowBuilds:
   dtrace-provider: false
+
+# `overrides` lives here rather than in package.json's `pnpm` field: pnpm 11
+# stopped reading that field and ignores it with a warning, so an override
+# written there is silently not applied — which is worse than not having one,
+# because the lockfile still resolves the vulnerable version while the repo
+# looks like it was fixed.
+#
+# multer: gscan 6.4.2 pins multer to exactly 2.2.0, which carries four
+# advisories fixed in 2.3.0 (GHSA-535w-7cp7-47q4, GHSA-qfvm-cv95-jqjf,
+# GHSA-qvfw-j98x-7q72, GHSA-wc9g-mqfw-jrwm). An exact pin means no lockfile
+# refresh can move it, so the override is the only way off 2.2.0 short of
+# waiting for a gscan release. 2.3.0 is a minor within the same major, and
+# gscan's use of multer is its upload path, which theme validation never
+# reaches. Remove this once gscan ships a release that pins 2.3.0 or later.
+overrides:
+  multer: ">=2.3.0"

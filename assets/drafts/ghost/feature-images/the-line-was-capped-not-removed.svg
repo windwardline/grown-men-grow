@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="fn19-feature-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn19-feature-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn19-feature-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="#F8F3EA"/>
+  <rect x="1226" y="0" width="374" height="1000" fill="#3A1518"/>
+  <g transform="rotate(-0.8 410 500)">
+    <rect x="68" y="80" width="684" height="874" fill="#3A1518"/>
+    <rect x="76" y="66" width="668" height="868" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/capped-copper-stub-wall.png" x="80" y="70" width="660" height="860" preserveAspectRatio="xMidYMax slice" filter="url(#fn19-feature-photo)"/>
+  </g>
+  <g transform="rotate(1.4 990 420)">
+    <rect x="778" y="150" width="424" height="574" fill="#60735A"/>
+    <rect x="786" y="136" width="408" height="568" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/tubing-cutter-on-copper.png" x="790" y="140" width="400" height="560" preserveAspectRatio="xMidYMid slice" filter="url(#fn19-feature-photo)"/>
+  </g>
+  <g transform="rotate(-4 325 69)">
+    <rect x="212" y="46" width="226" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="220" y1="53" x2="428" y2="50" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g transform="rotate(4 961 139)">
+    <rect x="862" y="116" width="198" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="870" y1="123" x2="1050" y2="120" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g><line x1="1272" y1="250" x2="1566" y2="250" stroke="#EEE6D8" stroke-width="8.82" stroke-linecap="round" opacity="0.9"/><line x1="1448.4" y1="250" x2="1448.4" y2="436.2" stroke="#EEE6D8" stroke-width="8.82" stroke-linecap="round" opacity="0.9"/><line x1="1433.7" y1="298.412" x2="1463.1000000000001" y2="298.412" stroke="#B14F3F" stroke-width="4.312" stroke-linecap="round" opacity="0.8"/><line x1="1433.7" y1="331.928" x2="1463.1000000000001" y2="331.928" stroke="#B14F3F" stroke-width="4.312" stroke-linecap="round" opacity="0.8"/><line x1="1433.7" y1="365.44399999999996" x2="1463.1000000000001" y2="365.44399999999996" stroke="#B14F3F" stroke-width="4.312" stroke-linecap="round" opacity="0.8"/><line x1="1433.7" y1="398.96000000000004" x2="1463.1000000000001" y2="398.96000000000004" stroke="#B14F3F" stroke-width="4.312" stroke-linecap="round" opacity="0.8"/><rect x="1419" y="432.28" width="58.8" height="17.64" rx="3.92" fill="#B14F3F"/></g>
+  <g><line x1="1272" y1="680" x2="1566" y2="680" stroke="#EEE6D8" stroke-width="8.82" stroke-linecap="round" opacity="0.9"/><line x1="1448.4" y1="671.18" x2="1448.4" y2="688.82" stroke="#EEE6D8" stroke-width="5.88" opacity="0.55"/><path d="M1325.9 669.22 L1341.5800000000002 680 L1325.9 690.78" fill="none" stroke="#60735A" stroke-width="6.859999999999999" stroke-linecap="round" stroke-linejoin="round"/><path d="M1390.5800000000002 669.22 L1406.2600000000002 680 L1390.5800000000002 690.78" fill="none" stroke="#60735A" stroke-width="6.859999999999999" stroke-linecap="round" stroke-linejoin="round"/><path d="M1514.06 669.22 L1529.74 680 L1514.06 690.78" fill="none" stroke="#60735A" stroke-width="6.859999999999999" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path d="M800 786 C902 748 1010 800 1112 762" fill="none" stroke="#B14F3F" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect width="1600" height="1000" filter="url(#fn19-feature-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
