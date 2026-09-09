@@ -6,18 +6,18 @@
 allowBuilds:
   dtrace-provider: false
 
-# `overrides` lives here rather than in package.json's `pnpm` field: pnpm 11
-# stopped reading that field and ignores it with a warning, so an override
-# written there is silently not applied — which is worse than not having one,
-# because the lockfile still resolves the vulnerable version while the repo
-# looks like it was fixed.
+# There are deliberately no `overrides` here. One existed briefly on
+# 2026-09-09, forcing multer off gscan 6.4.2's exact 2.2.0 pin, and it was
+# removed the same day when gscan 6.6.0 turned out to drop multer altogether.
+# An override is a workaround for an upstream that has not moved yet; when the
+# upstream moves, the override has to go, or it outlives its reason as a pin
+# nobody remembers choosing. `scripts/verify-dependency-exemptions.mjs` is what
+# makes that non-optional — it re-derives from the registry whether each
+# exemption still has a premise, so this file cannot quietly keep a workaround
+# the world has stopped needing.
 #
-# multer: gscan 6.4.2 pins multer to exactly 2.2.0, which carries four
-# advisories fixed in 2.3.0 (GHSA-535w-7cp7-47q4, GHSA-qfvm-cv95-jqjf,
-# GHSA-qvfw-j98x-7q72, GHSA-wc9g-mqfw-jrwm). An exact pin means no lockfile
-# refresh can move it, so the override is the only way off 2.2.0 short of
-# waiting for a gscan release. 2.3.0 is a minor within the same major, and
-# gscan's use of multer is its upload path, which theme validation never
-# reaches. Remove this once gscan ships a release that pins 2.3.0 or later.
-overrides:
-  multer: ">=2.3.0"
+# If one is ever needed again: it goes here, not in package.json's `pnpm`
+# field. pnpm 11 stopped reading that field and ignores it with a warning, so
+# an override written there is silently not applied — worse than absent,
+# because the lockfile still resolves the vulnerable version while the
+# repository looks fixed.

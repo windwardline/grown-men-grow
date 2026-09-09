@@ -19,9 +19,17 @@
 # https://osv.dev/GHSA-jmr9-qjv8-65gv (CVE-2026-56876, High 8.6)
 #
 # There is nothing to upgrade to. extract-zip has published no version above
-# 2.0.1; gscan 6.4.2 is the current release and pins @tryghost/zip 3.5.0
-# exactly; @tryghost/zip's own latest, 3.5.6, still pins extract-zip 2.0.1
-# exactly. The scanner agrees: "0 vulnerabilities can be fixed."
+# 2.0.1, so every dependent resolves there no matter how its range is written.
+# The scanner agrees: this finding is reported with no fixed version.
+#
+# The rest of this paragraph used to name gscan 6.4.2 as "the current release"
+# and @tryghost/zip 3.5.6 as "its latest". Both had gone stale inside a month
+# -- gscan was on 6.6.0 and @tryghost/zip on 3.5.12 -- while this file went on
+# asserting them, which is the exact failure an accepted risk is prone to: the
+# decision is reviewed on the day it is made and never again until it expires.
+# Version numbers are deliberately not restated here now.
+# scripts/verify-dependency-exemptions.mjs re-derives the premise from the
+# registry on every run instead, and fails the build the day it stops holding.
 #
 # It is a devDependency and reaches no published surface. gscan validates the
 # Ghost theme locally and in CI; the only archive it ever extracts is the zip
@@ -36,7 +44,7 @@
 [[IgnoredVulns]]
 id = "GHSA-jmr9-qjv8-65gv"
 ignoreUntil = 2026-11-09
-reason = "extract-zip 2.0.1 has no patched release and no upstream path off it (gscan 6.4.2 pins @tryghost/zip 3.5.0; its latest 3.5.6 still pins extract-zip 2.0.1). devDependency only: the sole extraction is GScan theme validation of a zip this repository builds from its own tracked files. Expires 2026-11-09 for re-decision."
+reason = "extract-zip has published no version above 2.0.1, so there is no patched release to move to. devDependency only: the sole extraction is GScan theme validation of a zip this repository builds from its own tracked files, so no attacker-controlled archive reaches it. The no-patch premise is re-derived from the registry by scripts/verify-dependency-exemptions.mjs rather than asserted here. Expires 2026-11-09 for re-decision."
 
 # extract-zip 2.0.1 -- a second symlink-escape in the same package, found the
 # same way and unpatched the same way. Containment is checked only against an
@@ -46,12 +54,12 @@ reason = "extract-zip 2.0.1 has no patched release and no upstream path off it (
 # https://osv.dev/GHSA-7pqw-9j4j-h8q3 (High 8.1,
 # CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H)
 #
-# Accepted on the same facts as GHSA-jmr9-qjv8-65gv above, which are unchanged:
-# extract-zip has published nothing above 2.0.1, gscan 6.4.2 pins @tryghost/zip
-# 3.5.0 exactly, and @tryghost/zip 3.5.6 still pins extract-zip 2.0.1 exactly.
-# The scanner reports this one as unfixable while reporting the four multer
-# advisories as fixable, and those were fixed rather than accepted -- see the
-# multer override in theme/pnpm-workspace.yaml.
+# Accepted on the same single fact as GHSA-jmr9-qjv8-65gv above: extract-zip
+# has published nothing above 2.0.1, so no dependent can resolve past it. The
+# scanner reports this one as unfixable while it reported four multer
+# advisories the same day as fixable, and those were fixed rather than
+# accepted -- by upgrading gscan to a release that pins the patched multer,
+# which is why no override survives in theme/pnpm-workspace.yaml.
 #
 # The exposure argument is the one that matters and it holds here too: the
 # attacker must control the contents of the archive. gscan is a devDependency
@@ -66,4 +74,4 @@ reason = "extract-zip 2.0.1 has no patched release and no upstream path off it (
 [[IgnoredVulns]]
 id = "GHSA-7pqw-9j4j-h8q3"
 ignoreUntil = 2026-11-09
-reason = "Second unpatched symlink-escape in extract-zip 2.0.1, accepted on the same unchanged facts as GHSA-jmr9-qjv8-65gv: no release above 2.0.1 exists and no upstream path off it (gscan 6.4.2 pins @tryghost/zip 3.5.0; its latest 3.5.6 still pins extract-zip 2.0.1). devDependency only: the sole extraction is GScan theme validation of a zip this repository builds from its own tracked files, so no attacker-controlled archive reaches it. Expires 2026-11-09 alongside GHSA-jmr9-qjv8-65gv for one combined re-decision."
+reason = "Second unpatched symlink-escape in extract-zip 2.0.1, accepted on the same fact as GHSA-jmr9-qjv8-65gv: extract-zip has published no version above 2.0.1, so there is no patched release to move to. devDependency only: the sole extraction is GScan theme validation of a zip this repository builds from its own tracked files, so no attacker-controlled archive reaches it. The no-patch premise is re-derived from the registry by scripts/verify-dependency-exemptions.mjs rather than asserted here. Expires 2026-11-09 alongside GHSA-jmr9-qjv8-65gv for one combined re-decision."
