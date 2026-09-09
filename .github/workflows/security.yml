@@ -102,6 +102,28 @@ jobs:
       - name: Re-derive the premise under every accepted risk
         run: node scripts/verify-dependency-exemptions.mjs
 
+  # A job that is not a required status check does not block anything, so a run
+  # where it catches something goes red beside a mergeable pull request. That is
+  # exactly what happened when `exemption-premises` was added without its ruleset
+  # entry on 2026-09-09 and went unnoticed for a day. The fleet conformance
+  # checker catches this class weekly; this fails on the pull request that
+  # introduces the job, closing the window in between.
+  required-checks:
+    name: Required checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+      - name: Every pull-request job gates, and every required check has a job
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/verify-required-checks.mjs
+
   ghost-managed-edge:
     name: Ghost managed edge
     if: github.event_name != 'pull_request'
