@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn19-03-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn19-03-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn19-03-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 19 · 03 / 07</text>
+  <text x="74" y="322" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="82" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">The cap is not</text><text x="74" y="424" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="82" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">the mistake.</text>
+    <text x="76" y="528" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="46" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">On the day, the cap is correct.</text><text x="76" y="590" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="46" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">Four minutes and a fitting.</text>
+    <text x="76" y="690" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">The mistake is that it is a</text><text x="76" y="758" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">complete-looking answer.</text>
+    <text x="76" y="838" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="38" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">It holds. It does not drip.</text>
+    <g><line x1="330" y1="968" x2="770" y2="968" stroke="#121416" stroke-width="9" stroke-linecap="round" opacity="0.9"/><line x1="594" y1="968" x2="594" y2="1128" stroke="#121416" stroke-width="9" stroke-linecap="round" opacity="0.9"/><line x1="579" y1="1009.6" x2="609" y2="1009.6" stroke="#B14F3F" stroke-width="4.4" stroke-linecap="round" opacity="0.8"/><line x1="579" y1="1038.4" x2="609" y2="1038.4" stroke="#B14F3F" stroke-width="4.4" stroke-linecap="round" opacity="0.8"/><line x1="579" y1="1067.2" x2="609" y2="1067.2" stroke="#B14F3F" stroke-width="4.4" stroke-linecap="round" opacity="0.8"/><line x1="579" y1="1096" x2="609" y2="1096" stroke="#B14F3F" stroke-width="4.4" stroke-linecap="round" opacity="0.8"/><rect x="564" y="1124" width="60" height="18" rx="4" fill="#B14F3F"/></g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn19-03-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn19-06-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn19-06-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn19-06-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#EEE6D8"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 19 · 06 / 07</text>
+  <rect x="636" y="234" width="380" height="448" fill="url(#fn19-06-dots)"/>
+    <text x="74" y="336" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="64" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">The trade's test</text><text x="74" y="418" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="64" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">has no opinion</text><text x="74" y="500" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="64" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">about intention.</text>
+    <text x="74" y="742" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">Is there a fixture</text><text x="74" y="822" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">on the end of it?</text>
+    <text x="74" y="904" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="36" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">Not is one planned. Not could there be.</text>
+    <text x="74" y="972" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="44" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">Intention has no flow rate.</text>
+    <g><line x1="300" y1="1104" x2="780" y2="1104" stroke="#121416" stroke-width="9" stroke-linecap="round" opacity="0.9"/><line x1="588" y1="1095" x2="588" y2="1113" stroke="#121416" stroke-width="6" opacity="0.55"/><path d="M394.6 1093 L410.6 1104 L394.6 1115" fill="none" stroke="#60735A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M500.2 1093 L516.2 1104 L500.2 1115" fill="none" stroke="#60735A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M701.8 1093 L717.8 1104 L701.8 1115" fill="none" stroke="#60735A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn19-06-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
