@@ -80,6 +80,28 @@ jobs:
       contents: read
       security-events: write
 
+  # The other half of the accepted-risk mechanism. dependency-scan honours the
+  # suppressions in osv-scanner.toml; this asks whether they still deserve to
+  # be honoured. An entry's expiry forces a re-decision on a fixed day, but a
+  # premise can die inside the window and nothing would notice — on 2026-09-09
+  # both extract-zip rationales named registry facts that had gone stale within
+  # a month. Runs on every trigger the OSV scan does, including the daily
+  # cron, so a patch landing upstream is caught within a day rather than in
+  # November.
+  exemption-premises:
+    name: Exemption premises
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+      - name: Re-derive the premise under every accepted risk
+        run: node scripts/verify-dependency-exemptions.mjs
+
   ghost-managed-edge:
     name: Ghost managed edge
     if: github.event_name != 'pull_request'

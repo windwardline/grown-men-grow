@@ -53,6 +53,6 @@
     }
   },
   "devDependencies": {
-    "gscan": "6.4.2"
+    "gscan": "6.5.0"
   }
 }
