@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="fn20-feature-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn20-feature-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn20-feature-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="#F8F3EA"/>
+  <rect x="1226" y="0" width="374" height="1000" fill="#3A1518"/>
+  <g transform="rotate(-0.8 410 500)">
+    <rect x="68" y="80" width="684" height="874" fill="#3A1518"/>
+    <rect x="76" y="66" width="668" height="868" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/garage-door-partly-open-morning.png" x="80" y="70" width="660" height="860" preserveAspectRatio="xMidYMax slice" filter="url(#fn20-feature-photo)"/>
+  </g>
+  <g transform="rotate(1.4 990 420)">
+    <rect x="778" y="150" width="424" height="574" fill="#60735A"/>
+    <rect x="786" y="136" width="408" height="568" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/torsion-spring-shaft-header.png" x="790" y="140" width="400" height="560" preserveAspectRatio="xMidYMid slice" filter="url(#fn20-feature-photo)"/>
+  </g>
+  <g transform="rotate(-4 325 69)">
+    <rect x="212" y="46" width="226" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="220" y1="53" x2="428" y2="50" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g transform="rotate(4 961 139)">
+    <rect x="862" y="116" width="198" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="870" y1="123" x2="1050" y2="120" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g><line x1="1266" y1="210" x2="1563.6" y2="210" stroke="#EEE6D8" stroke-width="8.64" stroke-linecap="round" opacity="0.9"/><ellipse cx="1289.808" cy="210" rx="5.184" ry="14.399999999999999" fill="none" stroke="#B14F3F" stroke-width="4.8" opacity="0.55"/><ellipse cx="1328.496" cy="210" rx="5.184" ry="14.399999999999999" fill="none" stroke="#B14F3F" stroke-width="4.8" opacity="0.55"/><ellipse cx="1367.184" cy="210" rx="5.184" ry="14.399999999999999" fill="none" stroke="#B14F3F" stroke-width="4.8" opacity="0.55"/><ellipse cx="1405.8719999999998" cy="210" rx="5.184" ry="14.399999999999999" fill="none" stroke="#B14F3F" stroke-width="4.8" opacity="0.55"/><ellipse cx="1444.56" cy="210" rx="5.184" ry="14.399999999999999" fill="none" stroke="#B14F3F" stroke-width="4.8" opacity="0.55"/><circle cx="1515.984" cy="210" r="12.48" fill="none" stroke="#EEE6D8" stroke-width="4.8" opacity="0.85"/><line x1="1515.984" y1="222.48" x2="1515.984" y2="402" stroke="#EEE6D8" stroke-width="4.8" stroke-linecap="round" opacity="0.8"/><rect x="1486.224" y="290.64" width="59.519999999999996" height="59.519999999999996" rx="4.8" fill="#B14F3F"/><rect x="1456.464" y="402" width="119.03999999999999" height="19.2" rx="3.84" fill="#EEE6D8" opacity="0.7"/></g>
+  <g><line x1="1266" y1="650" x2="1563.6" y2="650" stroke="#EEE6D8" stroke-width="8.64" stroke-linecap="round" opacity="0.9"/><ellipse cx="1289.808" cy="650" rx="5.184" ry="14.399999999999999" fill="none" stroke="#60735A" stroke-width="4.8" opacity="0.95"/><ellipse cx="1309.152" cy="650" rx="5.184" ry="14.399999999999999" fill="none" stroke="#60735A" stroke-width="4.8" opacity="0.95"/><ellipse cx="1328.496" cy="650" rx="5.184" ry="14.399999999999999" fill="none" stroke="#60735A" stroke-width="4.8" opacity="0.95"/><ellipse cx="1347.84" cy="650" rx="5.184" ry="14.399999999999999" fill="none" stroke="#60735A" stroke-width="4.8" opacity="0.95"/><ellipse cx="1367.184" cy="650" rx="5.184" ry="14.399999999999999" fill="none" stroke="#60735A" stroke-width="4.8" opacity="0.95"/><ellipse cx="1386.528" cy="650" rx="5.184" ry="14.399999999999999" fill="none" stroke="#60735A" stroke-width="4.8" opacity="0.95"/><ellipse cx="1405.8719999999998" cy="650" rx="5.184" ry="14.399999999999999" fill="none" stroke="#60735A" stroke-width="4.8" opacity="0.95"/><ellipse cx="1425.216" cy="650" rx="5.184" ry="14.399999999999999" fill="none" stroke="#60735A" stroke-width="4.8" opacity="0.95"/><ellipse cx="1444.56" cy="650" rx="5.184" ry="14.399999999999999" fill="none" stroke="#60735A" stroke-width="4.8" opacity="0.95"/><circle cx="1515.984" cy="650" r="12.48" fill="none" stroke="#EEE6D8" stroke-width="4.8" opacity="0.85"/><line x1="1515.984" y1="662.48" x2="1515.984" y2="696.08" stroke="#EEE6D8" stroke-width="4.8" stroke-linecap="round" opacity="0.8"/><line x1="1504.464" y1="673.04" x2="1527.504" y2="673.04" stroke="#B14F3F" stroke-width="3.84" stroke-linecap="round" opacity="0.85"/><rect x="1456.464" y="696.08" width="119.03999999999999" height="19.2" rx="3.84" fill="#60735A" opacity="0.95"/></g>
+  <path d="M800 786 C902 748 1010 800 1112 762" fill="none" stroke="#B14F3F" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect width="1600" height="1000" filter="url(#fn20-feature-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
