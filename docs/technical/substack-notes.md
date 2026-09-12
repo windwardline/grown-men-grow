@@ -18,8 +18,14 @@ byte-for-byte. A row claiming `missed`, or still blank, must have **no** live
 note carrying its copy — that is the direction that was wrong in `main`, and it
 is the reason the check is not merely a presence test.
 
-The feed is public and needs no credential, so this runs in CI as well as
-locally. An unreachable feed fails closed: an unread feed is not an empty one.
+The feed needs no credential, but **Substack answers 403 Forbidden to GitHub
+Actions runners** while the identical call from the live machine succeeds — the
+block is on datacenter egress, the same refusal Medium gives `curl`. So this is
+a `cadence:` gate, not a CI job: a required check that can never pass is a wall
+across every merge rather than a gate. Run it on the live machine, alongside the
+publication register, before the Monday staging decision.
+
+An unreachable feed fails closed: an unread feed is not an empty one.
 
 ## Columns
 

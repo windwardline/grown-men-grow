@@ -55,26 +55,3 @@ jobs:
           done <<< "$gates"
           echo "$n declared gate(s) executed."
 
-  # The Substack notes register, reconciled against the live public profile.
-  #
-  # Its own job rather than a `gate:` line because it reaches the network, and a
-  # session-end gate must be local and quick. Unlike the Ghost register's
-  # checker it needs no credential — the notes feed is public — so CI can run it
-  # on every pull request instead of leaving it to the live machine.
-  #
-  # No `if:` guard. A run that could not read the feed fails closed, because the
-  # claim this job exists to test is precisely "nothing was posted", and an
-  # unreachable service must never be allowed to confirm it.
-  substack-register:
-    name: Substack notes register
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
-        with:
-          node-version: '24'
-      - name: Reconcile the register against the live profile
-        run: node scripts/verify-substack-notes.mjs

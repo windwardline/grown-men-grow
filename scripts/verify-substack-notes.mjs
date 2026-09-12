@@ -12,8 +12,11 @@
 // than only at the moment of posting.
 //
 // The feed is public, so unlike the Ghost register's checker this needs no
-// credential and runs in CI. It is `release:` rather than `gate:` because it
-// reaches the network and a session-end gate must be local and quick.
+// credential — but Substack answers 403 Forbidden to GitHub Actions runners
+// while the identical call from the live machine succeeds. The block is on
+// datacenter egress, not on the request. So this is a `cadence:` gate and must
+// not become a CI job: a required check that can never pass is a wall across
+// every merge rather than a gate.
 //
 // Fails closed. A feed that could not be read is not an empty feed.
 
