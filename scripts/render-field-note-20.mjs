@@ -18,8 +18,8 @@ import {
   writeAsset,
 } from "./lib/editorial-collage.mjs";
 
-// Field Note 20 — "The Opener Doesn't Lift the Door". DRAFT, not
-// founder-approved.
+// Field Note 20 — "The Opener Doesn't Lift the Door". Founder-approved
+// 2026-09-12; register position 19, no Ghost slot named.
 //
 // Signature vocabulary: a hand-drawn counterbalance mark — a horizontal spring
 // shaft drawn as a run of coil turns, a cable dropping from the drum end to a

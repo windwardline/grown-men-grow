@@ -1,9 +1,9 @@
 ---
 essay: The Opener Doesn't Lift the Door
 canonical: https://grownmengrow.com/the-opener-doesnt-lift-the-door/ (live only after publication)
-status: draft — NOT founder-approved
-approved: none
-publication_authorized: false — nothing here is cleared for a slot, a send, or a post
+status: founder-approved
+approved: 2026-09-12 — approved as written alongside the essay and artwork
+publication_authorized: false — approval covers the copy, not a slot; posting remains separately gated
 image_rule: per-article — this pack may use only Field Note 20 imagery: garage-door-partly-open-morning, torsion-spring-shaft-header, opener-head-ceiling-rail
 stance_note: witness — every excerpt below holds the three gates: no imperative aimed at the reader, no closing question, nothing liftable as "so a man should ___", and the man carried stays the grammatical object. The platform copy closes on the mechanism, the same way the essay does
 ---
