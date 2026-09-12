@@ -3054,3 +3054,43 @@ No link, no hashtags, no image — the pack's Note 2 section carries none. The c
 **External state changed:** **one Medium story published** — title, body, preview image, five tags and canonical as recorded above, at https://grownmengrow.medium.com/rest-is-not-a-reward-e34fb3d52f92. No Ghost write, no send, no Buffer change, no Substack action, no schedule, no purchase. Nothing was reshared to another platform and no account setting was touched.
 
 **Open, in order:** (1) **The task file's preview-image step should become conditional** — it states an unconditional empty import that did not happen this week. (2) **The task file's tag step should name the general rule rather than `Men`** — `Rest` hit the same trap this run and would have published as *Restaurant*. Both live at `~/.claude/scheduled-tasks/gmg-thursday-medium/SKILL.md`, outside this repository, and were not edited here. (3) The Thursday slot was missed outright and recovered by hand; this is the scheduler substrate, unchanged. (4) The Medium subtitle question above is a founder call. (5) Carried forward: Field Note 19 holds register position 18 with no Ghost slot, a founder call under launch authority; the witness commission is a founder call, bank nineteen against a threshold of twenty-one; and the extract-zip acceptances expire 2026-11-09 with their premise re-derived daily.
+
+## 2026-09-12 — Saturday Note 2 stood at the composer and the keystroke was refused; four days ago the same call was allowed
+
+**Client:** Claude Code (desktop), the `gmg-saturday-note` scheduled task, founder not present. **Branch:** `claude/saturday-note-2026-09-12`.
+
+**Nothing was posted. The copy is handed to the founder below.**
+
+**The new fact is that the classifier block is not stable in either direction.** On 2026-09-08 the `type` action reached this same contenteditable and filled it — the Tuesday entry records the staged text, the accessibility tree read back, and the Post button going from disabled to active. Today the identical call on the identical composer returned "Permission for this action was denied by the Claude Code auto mode classifier." Same machine, same extension, same publication, four days apart. That Tuesday entry's open item asked this run to attempt the keystroke path rather than inherit a prediction; it did, and got the opposite answer. **So the task file's description of a blanket block on the action is no longer accurate, and neither is treating Tuesday's success as the new normal.** The honest statement is that the path is intermittent and must be tested every run — which is exactly why it was tested rather than assumed.
+
+**The task reached its slot on time for the second consecutive week.** It fired at about 18:20 EDT against an 18:15 cron and an 18:30 posting slot, so the preflight returned exit `10` — nine minutes early, `waitSeconds: 531` — rather than a stand-down. The wait was taken and the run resumed at 18:29. The slot move recorded in `publish-timing.md` continues to do what it was moved to do.
+
+**The preflight decided, and its output was read as an exit code.** Hold `none`. Lock acquired, token expiring 23:45 UTC. Essay resolved to `rest-is-not-a-reward`, published 2026-09-08T12:00:00Z — the Tuesday that opened this publication week, not the calendar day. Pack `content/distribution/field-note-07-platforms.md`, Note 2.
+
+**The copy was compared byte-for-byte rather than by eye.** The preflight's `copy` field and the pack's Note 2 section both measure 156 characters and compare equal, including the single em-dash. No apostrophes appear in this note, so the straight-versus-curly failure that the comparison exists to catch had nothing to bite on this week; the check was still run, because knowing that is not the same as assuming it.
+
+**Chrome was reachable on first contact.** `chromeRunning` was true in the preflight and `list_connected_browsers` registered one local browser without a retry. Third consecutive clean contact.
+
+**The profile was verified twice, and the second time is the one that counts.** Before the wait: the Grown Men Grow profile at `@grownmengrow`, an "Edit profile" control present — which is what proves the publication identity rather than a personal one — and the top note dated 4d, Tuesday's Note 1. After the wait, on a fresh load: the same three facts, and this week's Note 2 still absent. Everything checked before a sleep is a claim about the past.
+
+**No substitution was attempted** — not `javascript_tool`, not clipboard injection, not AppleScript, not `computer-use`. Each is a bypass of the denial's intent and the task file forbids all four by name.
+
+**"Nothing drafted" was checked this week rather than reasoned to.** Previous runs argued that no text ever entered the field, so no draft could exist. That is sound but it is an inference, and the task file asks for two claims, not one. The composer's own Drafts surface was opened and reads **"No drafts yet."** The composer was then cancelled and the profile reloaded: five notes, top one still Tuesday's, unchanged. The lock was released and the release confirmed `true`.
+
+**The Chrome tab was left open on the profile, deliberately, and that is a change from last week.** The 2026-09-05 run closed it. The founder's next action is to post this note by hand, and the tab is the surface they need; closing it makes them navigate back to it. Nothing is staged in it — the composer is closed and the copy is below, not in the field.
+
+**The founder's copy, to post by hand at `substack.com/@grownmengrow/notes`:**
+
+> Sleep treated like a load-bearing wall instead of a suggestion. The phone in a drawer, the drawer in another room — willpower is a terrible security system.
+
+No link, no hashtags, no image — the pack's Note 2 section carries none. The canonical link belongs to Note 3, not this one.
+
+**The week's note pair is now one for two, which is the best this pairing has managed.** Note 1 went out on 2026-09-08 at 14:28 ET, 148 minutes past its slot, when the founder clicked. Note 2 is this run and is unposted. Set against the week of 2026-09-01, where both halves missed, that is movement; set against the schedule, it is still a surface that reaches Substack only when a person is at the keyboard. **The intermittency above sharpens the founder decision rather than resolving it**: an authorized keystroke path would make the slot real, and a declaration that the Substack slots are manual would make the record honest. A path that works on Tuesday and not on Saturday supports neither.
+
+**Files changed:** this log only. No script, gate, content, or asset file was touched.
+
+**Verification, each gate named and run:** `node scripts/verify-ghost-theme.mjs`; `pnpm --dir theme test`; `pnpm --dir theme zip` with `gscan -z --fatal --verbose`; `node --test 'scripts/test/**/*.test.mjs'`; `node scripts/verify-repository.mjs`; `bash scripts/verify-svg-xml.sh`; plus `git diff --check` and a reviewed staged file list.
+
+**External state changed:** none. One Chrome tab opened against a signed-in Substack session and left open on the public profile. Nothing posted, drafted, sent, scheduled, or shared. No account setting touched.
+
+**Open, in order:** (1) **The keystroke path is intermittent, not blocked** — that is the correction this run contributes, and the founder decision it feeds is unchanged: authorize a mechanism, or record the Substack slots as manual. (2) Note 2 for the week of 2026-09-08 is unposted and its slot has passed; the copy above stays valid whenever it goes out. (3) The task file at `~/.claude/scheduled-tasks/gmg-saturday-note/SKILL.md` states the classifier denial as certain ("Expect it to be denied") and should state it as intermittent; it lives outside this repository and was not edited here. (4) Carried forward, each re-read rather than copied: Field Note 19 holds register position 18 with no Ghost slot, a founder call under launch authority; the witness commission is a founder call, bank nineteen against a threshold of twenty-one; the distribution problem is measured rather than asserted and is a founder call about reach; the newsletter list stands at one member and the A/B stays suspended under its own thirty-recipient marker; the extract-zip acceptances expire 2026-11-09 with their premise re-derived daily.
