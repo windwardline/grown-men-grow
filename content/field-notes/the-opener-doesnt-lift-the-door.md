@@ -7,14 +7,14 @@ access: public
 email_subject: The Opener Doesn't Lift the Door
 preview: The loudest part of the assembly is doing the least work in it.
 feature_image_alt: A sectional garage door stopped partway up from inside a swept, well-kept garage with morning daylight under the bottom panel, beside a wound torsion spring on its shaft above the opening, in a paper collage.
-status: draft — NOT founder-approved
-approved: none
-publication_authorized: false — no Ghost slot, no newsletter, no social posting; this is a draft and nothing about it is authorized
+status: founder-approved
+approved: 2026-09-12 — essay, platform pack, and artwork approved as written on the day they were drafted; approval covers the work, not a slot
+publication_authorized: false — no Ghost slot named, no newsletter, no social posting; publication remains separately gated
 stance: witness — the subject test passes: the door is counterbalanced by a spring wound before he got there, to a turn count he did not choose and cannot add back, and he has no move available inside the event
 closing_addresses_reader: no — witness gate 1: ends on the last fact, "the motor is the only part of it anybody in the house can hear," and turns to him nowhere
 personal_claims: none included; add only from founder-supplied facts
-artwork_status: complete — three photographs generated for this note, carousel, feature image, and review sheet built
-origin: written 2026-09-12 by the Saturday draft task with the standing commission at `none`; the `witness` stance is taken on the standing corpus duty rather than on a commission, so no commission line is cleared by this change set
+artwork_status: complete; founder-approved 2026-09-12 under the per-article image rule and the photograph-exclusivity ruling
+origin: written 2026-09-12 by the Saturday draft task with the standing commission at `none`; the `witness` stance is taken on the standing corpus duty rather than on a commission, so no commission line is cleared by this change set. Approved the same day and moved into content/ at register position 19
 ---
 
 # Ghost essay source
@@ -144,7 +144,7 @@ He knows what his own effort sounds like. The early alarm is his and the hours a
 
 # Production notes
 
-- Draft written 2026-09-12 by the Saturday draft task. **Not founder-approved and not authorized for publication.** No Ghost slot, no register position, no newsletter, no posting.
+- Written and approved 2026-09-12 — essay, pack, and artwork in one pass, on the day it was drafted. Register position 19. No Ghost slot named; publication timing remains a later founder decision.
 - Stance is `witness`, taken on the standing corpus duty rather than on a commission — `operating-cadence.md` carries `**Standing commission:** none`, so no commission line is cleared here. Witness sat at four pieces in nineteen and the two most recent notes both shipped `assignment`.
 - The subject test: the counterbalance is wound before he arrives, to a turn count he did not choose, and he cannot add cycles back or re-wind it himself. There is no move available to him inside the event, which is what separates this from an ordinary field note.
 - No first-person anecdote appears and no event is asserted as having happened; the essay runs in the generic present per the 2026-08-08 founder ruling, reaffirmed 2026-08-12.
