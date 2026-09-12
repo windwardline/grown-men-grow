@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn20-07-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn20-07-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn20-07-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 20 · 07 / 07</text>
+  <text x="78" y="336" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="68" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">Ten thousand cycles,</text><text x="78" y="424" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="68" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">and no counter on it.</text>
+    <text x="80" y="536" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">No light comes on at nine thousand.</text><text x="80" y="594" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">The door in its last week goes up</text><text x="80" y="652" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">exactly like the door in its first.</text>
+    <g><line x1="300" y1="784" x2="770" y2="784" stroke="#121416" stroke-width="9" stroke-linecap="round" opacity="0.9"/><ellipse cx="337.6" cy="784" rx="5.4" ry="15" fill="none" stroke="#60735A" stroke-width="5" opacity="0.95"/><ellipse cx="368.15000000000003" cy="784" rx="5.4" ry="15" fill="none" stroke="#60735A" stroke-width="5" opacity="0.95"/><ellipse cx="398.70000000000005" cy="784" rx="5.4" ry="15" fill="none" stroke="#60735A" stroke-width="5" opacity="0.95"/><ellipse cx="429.25" cy="784" rx="5.4" ry="15" fill="none" stroke="#60735A" stroke-width="5" opacity="0.95"/><ellipse cx="459.8" cy="784" rx="5.4" ry="15" fill="none" stroke="#60735A" stroke-width="5" opacity="0.95"/><ellipse cx="490.35" cy="784" rx="5.4" ry="15" fill="none" stroke="#60735A" stroke-width="5" opacity="0.95"/><ellipse cx="520.9" cy="784" rx="5.4" ry="15" fill="none" stroke="#60735A" stroke-width="5" opacity="0.95"/><ellipse cx="551.45" cy="784" rx="5.4" ry="15" fill="none" stroke="#60735A" stroke-width="5" opacity="0.95"/><ellipse cx="582" cy="784" rx="5.4" ry="15" fill="none" stroke="#60735A" stroke-width="5" opacity="0.95"/><circle cx="694.8" cy="784" r="13" fill="none" stroke="#121416" stroke-width="5" opacity="0.85"/><line x1="694.8" y1="797" x2="694.8" y2="839.2" stroke="#121416" stroke-width="5" stroke-linecap="round" opacity="0.8"/><line x1="682.8" y1="811.6" x2="706.8" y2="811.6" stroke="#B14F3F" stroke-width="4" stroke-linecap="round" opacity="0.85"/><rect x="632.8" y="839.2" width="124" height="20" rx="4" fill="#60735A" opacity="0.95"/></g>
+    <text x="78" y="1196" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">The motor is the only part of it</text><text x="78" y="1254" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">anybody in the house can hear.</text>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn20-07-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
