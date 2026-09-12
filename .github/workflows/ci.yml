@@ -54,3 +54,4 @@ jobs:
             n=$((n + 1))
           done <<< "$gates"
           echo "$n declared gate(s) executed."
+

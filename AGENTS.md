@@ -57,6 +57,8 @@ The `exemption-premises` job is the other half of that, and it is a **required s
 
 The `required-checks` job (`Required checks`) enforces the ruleset against the workflows in both directions, and is itself a required status check. Every job that runs on a pull request must be a required context, or carry a named exemption with its reason in `EXEMPT_JOBS`; and every required context must be produced by some job, because a required check that never reports never passes and would block every merge. Three jobs are exempt by name and by premise: `review` is advisory and skips without its credential (and GitHub counts a skipped required check as satisfied, so requiring it would report green having reviewed nothing), `dependabot-auto-merge` arms auto-merge rather than gating it, and `Ghost managed edge` is not exempted at all — it carries `if: github.event_name != 'pull_request'`, so the check derives that it never reports on a pull request and does not demand it. This exists because `exemption-premises` was added on 2026-09-09 without its ruleset entry and nothing caught it for a day; the fleet conformance checker catches the class weekly, and this closes the window in between.
 
+`docs/technical/substack-notes.md` is the record of what actually went out on Substack, reconciled against the live public profile by `scripts/verify-substack-notes.mjs` (a `cadence:` gate — see the 403 finding below). Until 2026-09-12 there was no such record: whether a note was posted lived only in `handoff-log.md` prose. The note task hands the copy to the founder and finishes, so its entry asserts a terminal outcome while the outcome is still pending — and on both 2026-09-08 and 2026-09-12 it merged to `main` saying nothing was posted shortly before a note went out. Each was caught by a person noticing, which is not a mechanism. The check reconciles in **both** directions: a row claiming `posted` must name a note the feed carries whose text equals the pack's approved copy byte-for-byte, and a row claiming `missed` or still blank must have **no** live note carrying its copy. That second direction is the one that was wrong in `main`, so a presence test would have caught neither occasion. It is also the only thing that checks "posted verbatim" after the fact; a note edited on the platform after posting previously left no trace anywhere. Slots come from `publish-timing.md`, and an em dash records a note that had no scheduled slot — true of launch week only, where writing a plausible time in the column would invent the one fact the column carries. Lateness is derived and reported, never failed on: it is a fact about a human's evening rather than a defect, and it is the baseline the Friday analytics task reads. An unreachable feed fails closed, because the claim under test is precisely "nothing was posted" and an unread feed is not an empty one.
+
 The `**State**` column in `docs/technical/publication-order.md` is reconciled against Ghost by `scripts/verify-publication-register.mjs`, a `cadence:` gate. It is not decoration: the Monday staging task takes the lowest-numbered note with no Ghost post, so a stale row is an input to the wrong publishing decision. On 2026-09-09 row 4 still read `scheduled` for a note Ghost had published the previous morning, and nothing could detect it because the only record of what had happened was the column that was wrong. A row Ghost cannot be asked about fails as unchecked rather than passing as absent.
 
 An advisory Claude review runs only on eligible same-repo pull requests whose stable author login (`github.event.pull_request.user.login`) is not `dependabot[bot]` and whose base branch equals the repository's dynamic default branch. `claude-review.yml` deliberately calls the fleet reusable at `@main` — one merge updates every repo. It activates only when the `CLAUDE_CODE_OAUTH_TOKEN` secret is present, and reviews bill the owner's Claude subscription rather than Console credits. Fork pull requests and runs without the credential skip by security design.
@@ -111,6 +113,7 @@ gate: bash scripts/verify-svg-xml.sh
 release: node scripts/verify-dependency-exemptions.mjs
 release: node scripts/verify-required-checks.mjs
 cadence: node scripts/verify-publication-register.mjs
+cadence: node scripts/verify-substack-notes.mjs
 ```
 
 `verify-dependency-exemptions.mjs` is `release:` rather than `gate:` because it
@@ -124,6 +127,17 @@ job. **Adding a job to any workflow means adding it to the ruleset in the same
 change set**, and that sentence is not left to memory: the job fails on the
 pull request that introduces an ungated job, and fails equally on a required
 context no job produces, which would block every merge forever.
+
+`verify-substack-notes.mjs` is `cadence:` and **must not** become a CI job.
+It needs no credential — the notes feed is public — so it was written as
+`release:` with a required `Substack notes register` job, and that job failed on
+its first run: **Substack answers 403 Forbidden to GitHub Actions runners**,
+while the identical call from this machine succeeds. The block is on datacenter
+egress, not on the request, and it is the same refusal Medium gives `curl`.
+A required check that can never pass is not a gate, it is a wall across every
+merge, so the job was removed rather than retried or worked around. Run it on
+the live machine, alongside the publication register, before the Monday staging
+decision.
 
 `verify-publication-register.mjs` is `cadence:` because it needs the Ghost admin
 key from the local Keychain, which CI does not have. Run it on the live machine
