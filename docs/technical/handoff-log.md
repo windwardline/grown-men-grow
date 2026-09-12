@@ -3094,3 +3094,25 @@ No link, no hashtags, no image — the pack's Note 2 section carries none. The c
 **External state changed:** none. One Chrome tab opened against a signed-in Substack session and left open on the public profile. Nothing posted, drafted, sent, scheduled, or shared. No account setting touched.
 
 **Open, in order:** (1) **The keystroke path is intermittent, not blocked** — that is the correction this run contributes, and the founder decision it feeds is unchanged: authorize a mechanism, or record the Substack slots as manual. (2) Note 2 for the week of 2026-09-08 is unposted and its slot has passed; the copy above stays valid whenever it goes out. (3) The task file at `~/.claude/scheduled-tasks/gmg-saturday-note/SKILL.md` states the classifier denial as certain ("Expect it to be denied") and should state it as intermittent; it lives outside this repository and was not edited here. (4) Carried forward, each re-read rather than copied: Field Note 19 holds register position 18 with no Ghost slot, a founder call under launch authority; the witness commission is a founder call, bank nineteen against a threshold of twenty-one; the distribution problem is measured rather than asserted and is a founder call about reach; the newsletter list stands at one member and the A/B stays suspended under its own thirty-recipient marker; the extract-zip acceptances expire 2026-11-09 with their premise re-derived daily.
+
+## 2026-09-12 — Correction: Saturday Note 2 is posted, 16 minutes after its slot
+
+**Client:** Claude Code (same session as the entry above, founder present for this part). **Branch:** `claude/saturday-note-posted-2026-09-12`. This entry corrects the preceding one, which recorded the note as unposted and external state as unchanged. Both were true when written and are no longer true. The earlier entry stands as written, per the append-only rule. It merged as #174 at 18:45:44 ET, one minute before the note went out.
+
+**The founder posted it, and it was verified on the profile rather than on their word.** The note is live at `https://substack.com/@grownmengrow/note/c-335779365`, under the publication identity `@grownmengrow`, timestamped **2026-09-12 at 6:46 PM ET**:
+
+> Sleep treated like a load-bearing wall instead of a suggestion. The phone in a drawer, the drawer in another room — willpower is a terrible security system.
+
+**The live text was compared byte-for-byte with the pack, not read for a likeness.** Both measure 156 characters and compare equal, em-dash included, and the note is not truncated. No link, no hashtags, no image — matching `content/distribution/field-note-07-platforms.md` Note 2 exactly. The note page shows zero replies.
+
+**Sixteen minutes past the 6:30 PM ET slot.** Recorded plainly because the Friday analytics task reads these timestamps as its baseline and a handover that lands within the hour should not be filed as on-slot. For comparison, Note 1 this week landed 148 minutes past its slot on the same handover path, so the gap narrowed by a factor of nine — but the mechanism did not change, and one week is not a trend.
+
+**The week's note pair is complete.** Both halves of the week of 2026-09-08 are posted: Note 1 on Tuesday at 14:28 ET, Note 2 today at 18:46 ET. That is the first complete pair since the week of 2026-08-18, and both halves needed the founder's hand.
+
+**The open item from the preceding entry is unchanged, and this does not resolve it.** A posted note does not make the slot autonomous; it makes it attended. The keystroke path remains intermittent — permitted 2026-09-08, refused today — and the founder decision it feeds is the same one: authorize a mechanism, or record the Substack slots as manual. **A correction entry recording a successful hand-post is exactly the outcome that makes it tempting to stop asking.**
+
+**Files changed:** this log only.
+
+**External state changed:** **one Substack note posted publicly** to `substack.com/@grownmengrow`, permalink `c-335779365`, at 2026-09-12 18:46 ET, by the founder. Nothing else — no send, no schedule, no purchase, no account setting, no other platform. The agent posted nothing; the verification above is read-only.
+
+**Open, in order:** unchanged from the preceding entry except that its item (2) is closed — Note 2 for the week of 2026-09-08 is posted. (1) The keystroke path is intermittent, not blocked, and the founder decision stands. (2) The task file at `~/.claude/scheduled-tasks/gmg-saturday-note/SKILL.md` states the denial as certain and should state it as intermittent; it lives outside this repository and was not edited here. (3) Carried forward: Field Note 19 holds register position 18 with no Ghost slot; the witness commission is a founder call, bank nineteen against a threshold of twenty-one; the distribution problem; the newsletter list at one member with the A/B suspended under its own thirty-recipient marker; the extract-zip acceptances expiring 2026-11-09.
