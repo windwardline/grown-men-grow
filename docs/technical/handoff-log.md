@@ -3297,3 +3297,21 @@ No link, no hashtags, no image — the pack's Note 2 section carries none. The c
 > Nobody ever got criticized at the funeral for working too hard, which should maybe tell us something about funerals.
 
 To post it: open `substack.com/@grownmengrow/notes`, confirm the `Edit profile` control is present, click the composer, paste the line above exactly — no link, no hashtags, no image — and click Post. Then record the permalink in `docs/technical/substack-notes.md` row `you-cant-outwork-a-wrong-direction` note 1 and set its State to `posted`, or the register and the profile will disagree.
+
+## 2026-09-15 — Claude Code — publication register position 5 corrected to published
+
+**Client:** Claude Code (continuation of the stood-down `gmg-tuesday-note` run). **Branch:** `claude/publication-register-position-5`.
+
+**What was found.** After the note run's pull request merged, `docs/technical/publication-order.md` position 5 — `you-cant-outwork-a-wrong-direction` — still read `scheduled` for an essay that went out this morning at 2026-09-15T12:00:00Z. The row had briefly carried the correction as an uncommitted edit in the shared working tree during the note run; that edit was gone from the tree afterward and no commit carries it, so the register was left stale in `main`.
+
+**It was confirmed against Ghost, not reasoned about.** `verify-publication-register.mjs` failed with `reads "scheduled" in the register but Ghost reports "published"`. After the one-character-column correction it reconciles all twenty rows — six published, none scheduled, fourteen projected.
+
+**Why it was worth doing now rather than leaving for Monday.** This is the exact defect `AGENTS.md` records from 2026-09-09, when row 4 read `scheduled` for a note Ghost had already published. The State column is the input to the Monday staging task, which takes the lowest-numbered note with no Ghost post; a row claiming `scheduled` for a published essay is a wrong input to a publishing decision, and the only record of what happened is the column that is wrong. The gate caught it because it asks Ghost instead of trusting the file, which is the whole reason it is a `cadence:` gate rather than prose.
+
+**Files changed:** `docs/technical/publication-order.md` (one State cell), this log.
+
+**External state changed:** none. Ghost was read, not written.
+
+**Verification, each gate named and run:** `verify-ghost-theme.mjs`; `pnpm --dir theme test`; the theme zip with `gscan -z --fatal --verbose`; `node --test 'scripts/test/**/*.test.mjs'` — 184 pass, 0 fail; `verify-repository.mjs` over 668 tracked files, which is what enforces the three binding adjacency constraints the row sits inside; `verify-svg-xml.sh` (198 SVGs); `git diff --check` clean. Both `cadence:` gates run: `verify-publication-register.mjs` (20 rows, green after the fix) and `verify-substack-notes.mjs` (12 rows, 2 pending).
+
+**Open, in order:** (1) **Unchanged and still the founder's call — this week's Substack Note 1 is unposted**; the copy and the steps are in the entry above. (2) The suspended-session hole that lost the 12:00 slot is unaddressed. (3) **A third item, new here: an uncommitted correction in the shared working tree did not survive the session.** Sessions share one checkout; a register fix that lives only as an unstaged edit can vanish with no trace and no failure. The register's own gate is what recovered this one, which is an argument for running both `cadence:` gates at the end of any session that touches publication state, not only before the Monday decision.
