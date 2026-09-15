@@ -3257,3 +3257,15 @@ No link, no hashtags, no image — the pack's Note 2 section carries none. The c
 **Why it was worth doing:** the three SMTP2GO CNAMEs were deleted earlier in the day. An alias still pointing at `mail.smtp2go.com` would have lost DKIM alignment at once and stopped sending entirely when the account is deleted — a silent break of the reply path, discoverable only by a reader not getting an answer. The scope argument that covered `hello@` was sound reasoning about a configuration nobody had looked at, which is the same shape as the ungoverned SMTP2GO credential this migration exists to correct.
 
 **Open, in order:** (1) **Founder action — delete the SMTP2GO account.** Nothing routes through it; the DNS records are gone and both aliases are on Resend. (2) One reply sent from `hello@` would turn the remaining configuration evidence into a delivered-message observation.
+
+## 2026-09-15 — Claude Code — SMTP2GO account deleted; migration closed
+
+**Scope completed:** the founder deleted the SMTP2GO account. Post-deletion state verified rather than assumed.
+
+**Files changed:** `docs/technical/decision-log.md`, this file.
+
+**External state changed:** none by the agent. The account deletion was the founder's.
+
+**Verification performed after the deletion:** Resend health clean (2 domains verified, 0 suppressions, 6/6 delivered, 0 bounced, 0 complained). The three retired SMTP2GO hostnames now resolve to nothing — resolver cache has expired, so removal is complete at the zone and downstream. All four Resend records resolve. Inbound untouched: apex MX lists all three Cloudflare routing hosts, apex SPF unchanged, DMARC present, site 200.
+
+**Open, in order:** (1) One reply sent from `hello@grownmengrow.com` would turn the remaining configuration evidence into a delivered-message observation. Nothing depends on it. There are no other open items from this migration.
