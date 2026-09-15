@@ -3269,3 +3269,25 @@ No link, no hashtags, no image — the pack's Note 2 section carries none. The c
 **Verification performed after the deletion:** Resend health clean (2 domains verified, 0 suppressions, 6/6 delivered, 0 bounced, 0 complained). The three retired SMTP2GO hostnames now resolve to nothing — resolver cache has expired, so removal is complete at the zone and downstream. All four Resend records resolve. Inbound untouched: apex MX lists all three Cloudflare routing hosts, apex SPF unchanged, DMARC present, site 200.
 
 **Open, in order:** (1) One reply sent from `hello@grownmengrow.com` would turn the remaining configuration evidence into a delivered-message observation. Nothing depends on it. There are no other open items from this migration.
+
+## 2026-09-15 — Claude Code — Tuesday publish check: everything fired; the register had drifted again
+
+**Client:** Claude Code (scheduled task `gmg-tuesday-publish-check`, founder not present). **Branch:** `claude/tuesday-publish-check-2026-09-15`. Verification only — nothing was published, sent, posted, or scheduled.
+
+**The publication fired correctly.** `you-cant-outwork-a-wrong-direction` went out at 2026-09-15T12:00:00Z, exactly its slot. The newsletter bound and submitted two seconds later: one recipient, one delivered, one open, zero failures, sender `"Grown Men Grow" <noreply@grownmengrow.com>`, reply-to `hello@grownmengrow.com`. The public page answers 200 with its canonical self-referential, `og:title`, `og:description` from the custom excerpt, and a 1200×750 `og:image`; the post heads `sitemap-posts.xml` at `2026-09-15T12:00:00.000Z`. Members total one, unchanged since 2026-08-11.
+
+**The Ghost → Zapier → Buffer Idea arrived four seconds after publish** and carries the expected draft stub. Six ideas now sit on the board, one per published piece, none converted — the same shape as every prior week, because the real posts are staged by hand from the platform packs rather than promoted from the stub.
+
+**This essay's distribution is fully staged and nothing is stalled.** Bluesky sent at 12:00 ET. LinkedIn is scheduled 2026-09-16 10:00 ET, Instagram 2026-09-17 09:00 ET — the expected Thursday carousel — and the second Bluesky 2026-09-19 18:30 ET. Buffer reports zero posts in `draft`, `needs_approval`, `error`, or `sending`, so there is no unscheduled draft awaiting the founder.
+
+**The register said `scheduled` for a post Ghost had published five hours earlier.** `verify-publication-register.mjs` caught it and the State column is now `published`. This is the second consecutive week the row has drifted — row 4 read `scheduled` for a published note on 2026-09-09 — and it matters because the Monday staging task takes the lowest-numbered note with no Ghost post, so a stale row is an input to the wrong publishing decision. The gate caught it both times, which is the difference between this and the class of failure it was built to end.
+
+**Files changed:** `docs/technical/publication-order.md` (row 5 State), this file.
+
+**External state changed:** none. Every Ghost and Buffer call was a read.
+
+**Verification, each gate named and run:** `verify-ghost-theme.mjs`, `pnpm --dir theme test`, `pnpm --dir theme zip` with `gscan -z --fatal`, `node --test scripts/test/**/*.test.mjs`, `verify-repository.mjs`, `verify-svg-xml.sh` — all pass. Both `cadence:` gates were run on the live machine: `verify-publication-register.mjs` fails before the fix and reports 20 rows agreeing after it; `verify-substack-notes.mjs` reports 12 rows against 6 live notes, all agreeing, 2 pending.
+
+**A note on the clock, because it changes how a later reader reads the timestamps.** This task fired at its 08:35 ET slot but did not execute until 14:57 ET — the scheduled-task catch-up behaviour, not a delay in the publication. A post due 16:00Z appearing in Buffer's `sent` list looked wrong against the slot time and was correct against the wall clock; it was checked rather than reported either way.
+
+**Open, in order:** (1) **Founder call, unchanged from the entry above — this week's Substack Note 1 is unposted** and its slot passed at 12:00 ET. The approved copy and the posting steps are in the preceding entry; the register row is deliberately blank rather than `missed` while the outcome is still open. (2) Saturday's Note 2 slot, 2026-09-19 18:30, is pending and unaffected. (3) Carried forward unchanged: the distribution problem, the newsletter list at one member, the A/B suspended under its thirty-recipient marker, the witness commission at bank nineteen against a threshold of twenty-one, and the extract-zip acceptances expiring 2026-11-09.
