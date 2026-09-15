@@ -3319,3 +3319,25 @@ To post it: open `substack.com/@grownmengrow/notes`, confirm the `Edit profile` 
 **A note on the clock, because it changes how a later reader reads the timestamps.** This task fired at its 08:35 ET slot but did not execute until 14:57 ET — the scheduled-task catch-up behaviour, not a delay in the publication. A post due 16:00Z appearing in Buffer's `sent` list looked wrong against the slot time and was correct against the wall clock; it was checked rather than reported either way.
 
 **Open, in order:** (1) **Founder call, unchanged from the entry above — this week's Substack Note 1 is unposted** and its slot passed at 12:00 ET. The approved copy and the posting steps are in the preceding entry; the register row is deliberately blank rather than `missed` while the outcome is still open. (2) Saturday's Note 2 slot, 2026-09-19 18:30, is pending and unaffected. (3) Carried forward unchanged: the distribution problem, the newsletter list at one member, the A/B suspended under its thirty-recipient marker, the witness commission at bank nineteen against a threshold of twenty-one, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-15 — Claude Code — Tuesday Note 1 posted by the founder at +268 minutes; register closed
+
+**Client:** Claude Code (continuation of the stood-down `gmg-tuesday-note` run). **Branch:** `claude/tuesday-note-posted-2026-09-15`.
+
+**The founder posted it, and it was verified rather than taken on their word.** That is the task's own rule and it is the reason this entry exists: a click that appeared to work is not evidence, and neither is the report of one. The live feed carries note `c-337967617` at 2026-09-15T20:27:50Z — 16:27:50 ET — under the `@grownmengrow` publication identity, and the feed grew from six notes to seven.
+
+**Verbatim, checked by comparison rather than by reading.** The live body is 116 characters and `noteCopyForSlug({ slug: 'you-cant-outwork-a-wrong-direction', note: 1 })` returns the same 116; a strict equality against the pack's approved string is true. No truncation, no platform edit, nothing appended.
+
+**The register row is closed.** `you-cant-outwork-a-wrong-direction` note 1 moves from blank to `posted` with permalink `c-337967617`. The checker now reconciles twelve rows against seven live notes — seven posted, four missed, one pending — and the one pending row is Saturday's Note 2.
+
+**Lateness: +268 minutes, derived and reported, never failed on.** It is the largest figure the register carries, ahead of the +149 minutes on 2026-09-08. The reason is on the record in the entry above and it is not the founder's: the agent's 12:00 slot was lost to a session suspended across its own wait, and the note went out when a person got to it. The figure belongs in the Friday analytics baseline as what it is — a slot that no mechanism served, closed by hand four and a half hours later.
+
+**What the day now demonstrates end to end.** The essay published on time at 12:00Z and the newsletter went. The note that accompanies it went out at 20:27Z. Every note in the register that has ever gone out still went out with a person at the keyboard; this run did not change that count, it added to it. The standing founder question — authorize a keystroke mechanism, or record these slots as founder-run rather than scheduled — now has an eleventh data point and a second failure mode behind it.
+
+**Files changed:** `docs/technical/substack-notes.md` (one row: State and Permalink), this log.
+
+**External state changed:** none by the agent. The post was the founder's. Substack was read, not written.
+
+**Verification, each gate named and run:** `verify-ghost-theme.mjs`; `pnpm --dir theme test`; the theme zip with `gscan -z --fatal --verbose`; `node --test 'scripts/test/**/*.test.mjs'` — 184 pass, 0 fail; `verify-repository.mjs` over 668 tracked files; `verify-svg-xml.sh` (198 SVGs); `git diff --check` clean. The `cadence:` gate `verify-substack-notes.mjs` was run before and after the edit and is what establishes both the posting and its verbatim text.
+
+**Open, in order:** (1) **Saturday's Note 2, 2026-09-19 18:30, is the one pending row.** Nothing about it is affected by today. (2) **The suspended-session hole is unaddressed and is now the live question**, with today's +268 as its cost. It is a founder decision, and it sits alongside the unchanged one from 2026-09-01 about whether these slots should be scheduled at all. (3) The keystroke path was never reached today, so it gained no new evidence — still permitted 2026-09-08, refused 2026-09-12, untested since. (4) Carried forward unchanged: the distribution problem, the newsletter list at one member, the A/B suspended under its thirty-recipient marker, the witness commission at bank nineteen against a threshold of twenty-one, and the extract-zip acceptances expiring 2026-11-09.

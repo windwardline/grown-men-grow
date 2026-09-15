@@ -51,7 +51,7 @@ An unreachable feed fails closed: an unread feed is not an empty one.
 | `friendship-has-a-maintenance-schedule` | 2 | 2026-09-05 18:30 | missed |  |
 | `rest-is-not-a-reward` | 1 | 2026-09-08 12:00 | posted | `c-332603638` |
 | `rest-is-not-a-reward` | 2 | 2026-09-12 18:30 | posted | `c-335779365` |
-| `you-cant-outwork-a-wrong-direction` | 1 | 2026-09-15 12:00 |  |  |
+| `you-cant-outwork-a-wrong-direction` | 1 | 2026-09-15 12:00 | posted | `c-337967617` |
 | `you-cant-outwork-a-wrong-direction` | 2 | 2026-09-19 18:30 |  |  |
 
 ## What the rows say, as of 2026-09-12
