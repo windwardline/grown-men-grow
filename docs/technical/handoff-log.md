@@ -3269,3 +3269,31 @@ No link, no hashtags, no image — the pack's Note 2 section carries none. The c
 **Verification performed after the deletion:** Resend health clean (2 domains verified, 0 suppressions, 6/6 delivered, 0 bounced, 0 complained). The three retired SMTP2GO hostnames now resolve to nothing — resolver cache has expired, so removal is complete at the zone and downstream. All four Resend records resolve. Inbound untouched: apex MX lists all three Cloudflare routing hosts, apex SPF unchanged, DMARC present, site 200.
 
 **Open, in order:** (1) One reply sent from `hello@grownmengrow.com` would turn the remaining configuration evidence into a delivered-message observation. Nothing depends on it. There are no other open items from this migration.
+
+## 2026-09-15 — Claude Code — Tuesday Note 1 stood down: the slot was lost to a suspended session, not to a refusal
+
+**Client:** Claude Code (scheduled task `gmg-tuesday-note`, founder not present). **Branch:** `claude/tuesday-note-2026-09-15`. Nothing was posted, nothing was staged, and no composer was opened.
+
+**The task fired on time and every step up to the wait was correct.** The 11:45 EDT fire ran the preflight at 11:46, which returned exit `10` — early by 14 minutes, `waitSeconds` 827, hold `none`, Chrome connected, lock taken to 17:15Z. The essay `you-cant-outwork-a-wrong-direction` was confirmed published at 2026-09-15T12:00:00Z and its public URL answered 200. The approved copy was lifted from `content/distribution/field-note-08-platforms.md` and matched the pack's `## Note 1` line byte-for-byte. The profile was read before the wait: `Grown Men Grow`, `@grownmengrow`, an `Edit profile` control present — publication identity, signed in — and the top note was three days old, so this week's Note 1 was not already up.
+
+**Then the session was suspended across its own wait.** The wait loop reached 12:00:06 EDT and exited cleanly. The session was not resumed until 14:56 EDT. The re-run preflight returned exit `20`, `176 minutes past the 12:00 slot, beyond the 60-minute grace window`, and the run stood down there.
+
+**The stale decision was not acted on.** The first preflight's exit `10` was a statement about 11:46. Continuing on it at 14:56 would have staged a fragment nearly three hours after the essay it accompanies, on an authority that had expired — so the preflight was re-run for a fresh verdict rather than treated as still valid. This is the case the task file's "re-read the profile, because everything verified before the sleep is a claim about the past" is written for; the same reasoning applies to the exit code itself, which is the older claim of the two.
+
+**This is a defect in the wait design, not in the founder's evening.** The `waitSeconds` → sleep → continue path assumes the session stays live through the sleep. This one did not, and nothing failed loudly at 12:00 — the loop exited on schedule into a session that was not there to read it. A 14-minute wait became a 176-minute gap with no signal. Every previous late note in the register was late because a person got to it late; this one was lost while the machine was, as far as the slot was concerned, asleep. A short wait that hands the slot to a resume that may not come is worse than no wait at all, and the remedy is a founder-level design call rather than something to patch inside a stood-down run.
+
+**The register row was left blank, deliberately.** `you-cant-outwork-a-wrong-direction` note 1 stays pending. Marking it `missed` would assert a terminal outcome at a moment when the outcome is still open — the founder can post tonight, as they did on 2026-09-08 at +149 minutes — and asserting a terminal outcome while the outcome is pending is the exact failure this register was built to stop. Blank and `missed` behave identically in the checker; only one of them is honest.
+
+**Files changed:** this log. No content, script, or register file was touched.
+
+**External state changed:** none. Nothing was posted, staged, sent, scheduled, or purchased. The cross-process lock was taken twice and released both times; `.locks/` is empty, verified by listing it rather than by trusting the preflight's report.
+
+**Verification, each gate named and run:** `verify-substack-notes.mjs` — 12 rows against 6 live notes, all agree, 2 pending — which is what establishes that nothing went out rather than a claim that nothing did. The remaining `gate:` lines are recorded in the next section, run before the pull request.
+
+**Open, in order:** (1) **Founder call — Note 1 for this week is unposted and the copy is below.** Posting it late is a real option and the register carries the precedent. (2) **The suspended-session hole is the new finding and it is unaddressed.** The note tasks sleep toward their slot inside a session that can stop existing; nothing detects the loss, and the slot passes silently. Worth a founder decision on whether these slots should be scheduled at all, which is the same question already open from 2026-09-01 and now has a second kind of evidence behind it. (3) The keystroke path was never reached this run, so it produced no new data — it remains permitted 2026-09-08, refused 2026-09-12, untested since. (4) Saturday's Note 2 slot, 2026-09-19 18:30, is unaffected and still pending. (5) Carried forward unchanged: the distribution problem, the newsletter list at one member, the A/B suspended under its thirty-recipient marker, the witness commission at bank nineteen against a threshold of twenty-one, and the extract-zip acceptances expiring 2026-11-09.
+
+**Approved copy, unposted, verbatim:**
+
+> Nobody ever got criticized at the funeral for working too hard, which should maybe tell us something about funerals.
+
+To post it: open `substack.com/@grownmengrow/notes`, confirm the `Edit profile` control is present, click the composer, paste the line above exactly — no link, no hashtags, no image — and click Post. Then record the permalink in `docs/technical/substack-notes.md` row `you-cant-outwork-a-wrong-direction` note 1 and set its State to `posted`, or the register and the profile will disagree.
