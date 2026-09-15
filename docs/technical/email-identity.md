@@ -1,6 +1,6 @@
 # Email Identity
 
-Status: accepted 2026-08-13. SMTP2GO account created, `grownmengrow.com` verified, the three CNAMEs live in Cloudflare, an SMTP user created with open and click tracking disabled, and both send-as aliases confirmed by SMTP2GO and Gmail. See Acceptance below for what was verified and the one residual.
+Status: **migrated to Resend 2026-09-15**, and the residual this document carried since 2026-08-13 is closed. `grownmengrow.com` is a verified Resend domain, both Gmail send-as aliases relay through `smtp.resend.com:465` on a sending-only key scoped to this domain, and the three SMTP2GO CNAMEs have been removed from Cloudflare. Acceptance is now read off the wire rather than inferred. The SMTP2GO history below is kept because the reasoning still explains why the requirement exists.
 
 ## The problem
 
@@ -10,15 +10,19 @@ That breaks the 2026-08-10 publication-voice ruling on the surface where it matt
 
 The welcome email invites every new member to reply. The invitation is good and stays. The sending path is what needs fixing.
 
-## Why not Resend
+## Why not Resend — the 2026-08-11 reasoning, and why it expired
 
-Resend is the fleet's standard transactional provider and the account is on the free plan, which includes exactly one domain. `windwardline.com` occupies it and carries magic-link delivery for Levelflow and pathfinder. Adding `grownmengrow.com` requires a paid upgrade, which the founder ruled out.
+Resend is the fleet's standard transactional provider and the account was on the free plan, which then included exactly one domain. `windwardline.com` occupied it and carried magic-link delivery for Levelflow and pathfinder. Adding `grownmengrow.com` required a paid upgrade, which the founder ruled out.
+
+**That premise died on 2026-09-02** and nothing noticed for thirteen days. Resend moved the free tier from one verified domain to three. The exception this document exists to justify had exactly one load-bearing reason, and it was a number on someone else's pricing page — a premise that cannot be re-derived locally and so goes stale in silence. The decision was correct when it was made and wrong within three weeks, which is the ordinary lifespan of a constraint borrowed from a vendor.
+
+The closing rule: **an exception whose premise lives outside this repository names the fact it depends on, so a later reader can check it.** This one said "requires a paid upgrade" without saying "because the free tier allows one domain, as of 2026-08-11" — and the checker that would have caught it could not exist, because SMTP2GO left no trace in any file, dependency or manifest. It was Gmail configuration and three DNS records.
 
 ## Why not Gmail's own SMTP
 
 Gmail can relay a send-as alias through `smtp.gmail.com` with an app password, and it needs no new account. It fails the actual requirement. The envelope sender stays the personal Gmail address, DKIM signs as `gmail.com`, and the "on behalf of" annotation appears in common clients. It hides nothing.
 
-## The path: SMTP2GO free
+## The path taken 2026-08-13, retired 2026-09-15: SMTP2GO free
 
 A pure SMTP relay rather than a marketing platform. The free plan does not expire: 1,000 emails per month, 200 per day, and five sender domains. Expected use is a few replies a week.
 
@@ -26,7 +30,7 @@ It authenticates by three CNAME records, so SMTP2GO manages the DKIM keys and th
 
 **Stack note.** This deviates from the fleet's preferred Resend standard, forced by the one-domain free-tier cap and the no-spend constraint. On adoption, record in `AGENTS.md`: `Stack exception (owner-approved 2026-08-11): SMTP2GO free relay provides outbound identity for hello@grownmengrow.com; Resend's free tier allows one domain, held by windwardline.com.`
 
-## Steps
+## Steps (as executed for SMTP2GO, 2026-08-13 — historical)
 
 **Founder — 1.** Create a free account at smtp2go.com. Use `michael@grownmengrow.com` as the account address, not the personal Gmail.
 
@@ -42,6 +46,27 @@ Store the SMTP password in the macOS Keychain as `smtp2go-grownmengrow` (account
 
 **Agent — 6.** Add a DMARC record (`_dmarc.grownmengrow.com`, `v=DMARC1; p=none; rua=mailto:hello@grownmengrow.com`) once sending is aligned, then verify a live send: reply to a test member email and confirm the received message shows `hello@grownmengrow.com` in From, a `grownmengrow.com` DKIM signature, no `gmail.com` return path, and no "on behalf of" in a second client.
 
+## The path now: Resend
+
+One provider carries every outbound path the fleet has. `smtp.resend.com` port 465 SSL, username `resend`, password a Resend API key — the same four fields Gmail's send-as asks for, so the migration was a field swap rather than a redesign.
+
+**The key is scoped, and the scope is proven rather than trusted.** It is a `sending_access` key bound to this domain's `domain_id`: it can send as `grownmengrow.com` and do nothing else — it cannot read the account's email logs, cannot touch `windwardline.com`, cannot enumerate or create anything. That matters because the value is pasted into Google's configuration and is therefore held by Google. Resend's `/api-keys` list endpoint omits `permission` and `domain_id`, so the scope cannot be read back and was instead demonstrated on 2026-09-15: sending as `login@windwardline.com` returns `403 This API key is not authorized to send emails from windwardline.com`, and sending as `hello@grownmengrow.com` returns 200. A property you cannot read is verified by behaviour or it is assumed.
+
+The key lives in the macOS Keychain as `resend-gmg-sending` and carries a row in `ops/credentials.tsv`. Its predecessor did not, and that is the more instructive half of this migration: `email-identity.md` step 4 prescribed a Keychain item `smtp2go-grownmengrow`, it was never created, and for a month the SMTP password existed only inside Gmail's send-as config — a surface that does not display it. It could not be enumerated, audited or rotated, and the Keychain/manifest check passed **vacuously** because both sides were empty. A local copy of a remote secret is what makes the remote secret governable.
+
+Four DNS records, all on subdomains, so the apex MX and SPF that carry Cloudflare inbound routing are untouched exactly as they were under SMTP2GO:
+
+| Type | Name | Value |
+|---|---|---|
+| TXT | `resend._domainkey` | DKIM public key |
+| MX | `send` | `feedback-smtp.us-east-1.amazonses.com` (priority 10) |
+| TXT | `send` | `v=spf1 include:amazonses.com ~all` |
+| CNAME | `rsend` | `send.forge.rmta.net` |
+
+The zone was diffed before and after: four records added, zero removed, and the apex MX, apex SPF, DMARC and every Ghost record verified present afterward. The three SMTP2GO CNAMEs (`em790852`, `s790852._domainkey`, `link`) were then removed and the zone re-derived to confirm no `smtp2go` reference survives.
+
+**Deliverability is now watched rather than assumed.** `ops/resend-health.py` runs in the weekly fleet-health cadence and fails on a suppressed recipient, an unverified domain, or a bounce rate over ceiling. Under SMTP2GO nothing watched anything: `~/AGENTS.md` asserted that a check on those three CNAMEs "runs from the Cloudflare credential already held", and no such check was ever written.
+
 ## Two addresses, on purpose
 
 Both `hello@grownmengrow.com` and `michael@grownmengrow.com` are configured as Gmail send-as aliases through SMTP2GO, and both are confirmed.
@@ -54,18 +79,30 @@ This supersedes the 2026-08-10 record that designated `michael@` for private acc
 
 Making `michael@` the Gmail default with "always reply from default address" would automate the choice, and is rejected: it would stamp `michael@grownmengrow.com` onto the founder's ordinary personal correspondence, which shares the same mailbox.
 
-**Tracking is off.** Open and click tracking are disabled on the SMTP user. Click tracking rewrites every link through `link.grownmengrow.com`, which on a private reply to a man who has just disclosed something would log his click and show him a URL other than the one that was sent. The tracking CNAME exists because domain verification requires all three; it is not used.
+**Tracking is off.** Open and click tracking are disabled on the Resend domain (confirmed on the domain record 2026-09-15), as they were on the SMTP2GO user before it. Click tracking rewrites every link through `link.grownmengrow.com`, which on a private reply to a man who has just disclosed something would log his click and show him a URL other than the one that was sent. The tracking CNAME exists because domain verification requires all three; it is not used.
 
 ## Acceptance
 
-**Accepted 2026-08-13 on a delivered message, verified in Outlook.**
+**Accepted 2026-09-15 on a delivered message, with the full headers read directly.** This supersedes the 2026-08-13 acceptance and closes the residual that one recorded.
 
-The test arrived at an Outlook mailbox rendering `Grown Men Grow <hello@grownmengrow.com>` with no "via" and no "on behalf of" appended.
+A message sent from Gmail as `michael@grownmengrow.com` to a Gmail address, received copy read via the Gmail API:
 
-That is the acceptance signal, not a cosmetic one. Outlook appends "via" or "on behalf of" precisely when the authenticated sending domain fails to align with the From domain. Had the send-as still been relaying as the founder's personal Gmail — the exact failure this work existed to close — that is the condition that triggers the annotation, in that client. Its absence is Outlook reporting that the DKIM signature and return path align to `grownmengrow.com`.
+```
+Authentication-Results: mx.google.com;
+  dkim=pass header.i=@grownmengrow.com header.s=resend header.b=gHXSzti8;
+  dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono;
+  spf=pass (google.com: domain of ...@send.grownmengrow.com designates
+    54.240.9.1 as permitted sender) smtp.mailfrom=...@send.grownmengrow.com;
+  dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=grownmengrow.com
+Return-Path: <...@send.grownmengrow.com>
+DKIM-Signature: v=1; a=rsa-sha256; ... s=resend; d=grownmengrow.com;
+From: Grown Men Grow <michael@grownmengrow.com>
+```
 
-Both aliases traverse the same SMTP user and the same verified domain, so the alignment demonstrated for one holds for the other; a separate test per alias is not required.
+Every clause the 2026-08-13 entry could only infer is now stated by the receiving server: DKIM signed by and aligned to `grownmengrow.com`, SPF passing on a return path inside `send.grownmengrow.com`, DMARC aligned, and **no `gmail.com` anywhere in the path**. The display name reads `Grown Men Grow`, which is the 2026-08-10 publication-voice ruling holding on a semi-public surface.
 
-**One residual, cheap to close if ever wanted.** Raw `Return-Path`, `DKIM-Signature`, and `Authentication-Results` lines were not read directly. Outlook exposes no "Show original" equivalent in the founder's build, and Gmail's Sent-folder copy cannot answer the question — those three headers are written in transit, so the stored pre-transmission copy does not contain them. To close it later: send from Gmail with the From dropdown on a `grownmengrow.com` alias to the founder's own Gmail address, then read the received copy via Show original. The message leaves through SMTP2GO and re-enters through Gmail's MX, so the delivery path is complete. Expected: `d=grownmengrow.com`, `dkim=pass`, `spf=pass`, and no `gmail.com` return path.
+Resend's own log records the same message delivered, so both ends of the path are evidenced independently rather than one being assumed from the other.
 
-The distinction worth preserving: the observable outcome was verified directly; the mechanism behind it is inferred from Outlook's own annotation rule rather than read off the wire.
+**How the residual closed, and what it teaches.** The 2026-08-13 entry could not read these headers for a stated reason: Outlook exposed no message-source view in the founder's build, and Gmail's Sent-folder copy cannot supply them because those three headers are written in transit. Both facts were true. What was missing was the third option — read the *received* copy through the Gmail API, which is the same message after transit. The residual stayed open for a month not because the evidence was unreachable but because two blocked routes read as no route. Both messages appeared in this verification: the 562-byte Sent copy with no transit headers, and the 5,718-byte received copy carrying all of them, which is the distinction the original entry described correctly and then stopped at.
+
+**One thing this migration did not prove.** The Gmail send-as configuration for `hello@` was updated in the same sitting as `michael@` and reports saving cleanly, but the delivered-message test was run from `michael@` only. Both aliases traverse one SMTP endpoint, one credential and one verified domain, so alignment shown for either holds for the other — the same scope argument the 2026-08-13 entry made, and it is an inference rather than a second observation. A reply sent from `hello@` would close it at no cost.
