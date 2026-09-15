@@ -3243,3 +3243,17 @@ No link, no hashtags, no image — the pack's Note 2 section carries none. The c
 **Verification performed:** zone diffed before and after in both directions (4 added, 0 removed; apex MX, apex SPF, DMARC and all Ghost records confirmed present), then re-derived after deletion to confirm no `smtp2go` record survives. Key scope proven behaviourally (403 on `windwardline.com`, 200 on `grownmengrow.com`) because Resend's `/api-keys` list does not expose it. Delivered-message headers read via the Gmail API: `dkim=pass` aligned to `grownmengrow.com`, `spf=pass` on a `send.grownmengrow.com` return path, `dmarc=pass`, no `gmail.com` in the path.
 
 **Open, in order:** (1) **Founder action — delete the SMTP2GO account.** The DNS records are gone and nothing routes through it; the account is the last remnant. (2) Send one reply from `hello@` to close the by-scope inference with a second observation. (3) DNS resolvers may serve the deleted SMTP2GO CNAMEs until the 14400s TTL expires — cache, not zone state.
+
+## 2026-09-15 — Claude Code — both send-as aliases confirmed on Resend
+
+**Scope completed:** closed the open inference from the migration entry above by reading Gmail's own "Send mail as" settings rather than reasoning about them.
+
+**Files changed:** `docs/technical/email-identity.md` (Acceptance — the residual paragraph), this file.
+
+**External state changed:** none. Read-only inspection of Gmail settings.
+
+**Verification performed:** both `hello@grownmengrow.com` and `michael@grownmengrow.com` report `Mail is sent through: smtp.resend.com`, port 465 SSL. Neither references SMTP2GO. Display name is `Grown Men Grow` on both. "When replying to a message" is still *Reply from the same address the message was sent to*.
+
+**Why it was worth doing:** the three SMTP2GO CNAMEs were deleted earlier in the day. An alias still pointing at `mail.smtp2go.com` would have lost DKIM alignment at once and stopped sending entirely when the account is deleted — a silent break of the reply path, discoverable only by a reader not getting an answer. The scope argument that covered `hello@` was sound reasoning about a configuration nobody had looked at, which is the same shape as the ungoverned SMTP2GO credential this migration exists to correct.
+
+**Open, in order:** (1) **Founder action — delete the SMTP2GO account.** Nothing routes through it; the DNS records are gone and both aliases are on Resend. (2) One reply sent from `hello@` would turn the remaining configuration evidence into a delivered-message observation.

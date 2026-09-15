@@ -105,4 +105,19 @@ Resend's own log records the same message delivered, so both ends of the path ar
 
 **How the residual closed, and what it teaches.** The 2026-08-13 entry could not read these headers for a stated reason: Outlook exposed no message-source view in the founder's build, and Gmail's Sent-folder copy cannot supply them because those three headers are written in transit. Both facts were true. What was missing was the third option — read the *received* copy through the Gmail API, which is the same message after transit. The residual stayed open for a month not because the evidence was unreachable but because two blocked routes read as no route. Both messages appeared in this verification: the 562-byte Sent copy with no transit headers, and the 5,718-byte received copy carrying all of them, which is the distinction the original entry described correctly and then stopped at.
 
-**One thing this migration did not prove.** The Gmail send-as configuration for `hello@` was updated in the same sitting as `michael@` and reports saving cleanly, but the delivered-message test was run from `michael@` only. Both aliases traverse one SMTP endpoint, one credential and one verified domain, so alignment shown for either holds for the other — the same scope argument the 2026-08-13 entry made, and it is an inference rather than a second observation. A reply sent from `hello@` would close it at no cost.
+**Both aliases were then read back from Gmail's own settings, 2026-09-15.** The delivered-message test ran from `michael@` only, and the earlier version of this paragraph left `hello@` resting on a scope argument — one endpoint, one credential, one verified domain, therefore alignment carries. That reasoning was sound and it was still an assumption about a configuration nobody had looked at, which is the precise shape of the SMTP2GO credential failure recorded above. So it was looked at:
+
+```
+Grown Men Grow <hello@grownmengrow.com>
+  Mail is sent through: smtp.resend.com
+  Secured connection on port 465 using SSL
+Grown Men Grow <michael@grownmengrow.com>
+  Mail is sent through: smtp.resend.com
+  Secured connection on port 465 using SSL
+```
+
+Neither alias references SMTP2GO. This mattered more than it looks: the three SMTP2GO CNAMEs were deleted in this change set, so an alias still pointing at `mail.smtp2go.com` would have lost DKIM alignment immediately and stopped sending entirely once the account is deleted — a silent break of the publication's reply path, discoverable only by a reader not getting an answer.
+
+Two settings confirmed in the same read: the display name is `Grown Men Grow` on both, so the 2026-08-10 publication-voice ruling holds on the semi-public surface; and **When replying to a message** is still *Reply from the same address the message was sent to*, the safety net this document requires.
+
+**What remains unobserved** is narrow and honest: a delivered message *from* `hello@` with its headers read. Configuration is now evidence rather than inference, but a send is still the only thing that proves a send. One reply from `hello@` closes it at no cost.
