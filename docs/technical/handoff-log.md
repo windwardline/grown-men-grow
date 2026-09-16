@@ -3415,3 +3415,15 @@ To post it: open `substack.com/@grownmengrow/notes`, confirm the `Edit profile` 
 **Verification:** every `gate:` line, listed with results in the PR body; cadence gate `verify-publication-register.mjs` run after the reorder.
 
 **Open, in order:** (1) The draft tasks' own instruction files live outside the repository; they read the pipeline doc and the underpinning, which now carry both rules, but were not themselves edited. (2) Saturday's Substack Note 2 pending. (3) Carried forward: distribution, the one-member list, the suspended A/B, extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-16 — Claude Code — draft and analytics task instructions brought in line with today's rules
+
+**Scope completed:** edited three scheduled-task instruction files outside the repository, closing open item (1) from the entry above. `gmg-wednesday-draft` and `gmg-saturday-draft` now require the `closing_addresses_reader` and `opening` markers alongside `stance`, and require every image to be regenerated on any physical tell rather than delivered with a flag. They also run every declared `gate:` line instead of three. Wednesday's description says nine tests, not six. `gmg-saturday-draft` reads the current corpus balance from the decision log in place of the stale "nine of ten" figure, and forbids rebuilding the witness skeleton. `gmg-friday-analytics` reads its trigger from the `**Corpus test last measured:**` marker, carries the 2026-09-16 baseline, and writes a new marker when it measures.
+
+**Files changed:** `~/.claude/scheduled-tasks/{gmg-wednesday-draft,gmg-saturday-draft,gmg-friday-analytics}/SKILL.md` (outside the repository), and this log. `gmg-monday-staging`, `gmg-tuesday-publish-check`, and the note and Medium tasks were read and need nothing: none depends on stance, opening markers, or register spacing.
+
+**External state changed:** none beyond the three instruction files.
+
+**Verification:** each edit was a unique-match replacement that failed loudly on a miss, and the Saturday diff was read in full.
+
+**Open, in order:** (1) Saturday's Substack Note 2 pending. (2) Carried forward: distribution, the one-member list, the suspended A/B, extract-zip acceptances expiring 2026-11-09.
