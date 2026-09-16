@@ -23,7 +23,7 @@
   <g transform="rotate(0.6 550 480)">
     <rect x="238" y="160" width="624" height="674" fill="#60735A"/>
     <rect x="246" y="146" width="608" height="668" fill="#F8F3EA"/>
-    <image href="/assets/source/editorial/bend-test-strips-bench.png" x="250" y="150" width="600" height="660" preserveAspectRatio="xMidYMid slice" filter="url(#fn21-07-photo)"/>
+    <image href="/assets/source/editorial/bend-test-bars-bench.png" x="250" y="150" width="600" height="660" preserveAspectRatio="xMidYMid slice" filter="url(#fn21-07-photo)"/>
   </g>
     <g transform="rotate(3 663 151)">
     <rect x="560" y="128" width="206" height="46" fill="#D9CBAF" opacity="0.74"/>

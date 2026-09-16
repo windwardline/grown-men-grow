@@ -22,12 +22,12 @@
   <g transform="rotate(0.8 410 500)">
     <rect x="68" y="80" width="684" height="874" fill="#60735A"/>
     <rect x="76" y="66" width="668" height="868" fill="#F8F3EA"/>
-    <image href="/assets/source/editorial/pipe-positioner-seam-up.png" x="80" y="70" width="660" height="860" preserveAspectRatio="xMidYMid slice" filter="url(#fn21-feature-photo)"/>
+    <image href="/assets/source/editorial/flat-plate-butt-weld-bench.png" x="80" y="70" width="660" height="860" preserveAspectRatio="xMidYMid slice" filter="url(#fn21-feature-photo)"/>
   </g>
   <g transform="rotate(-1.4 990 460)">
     <rect x="778" y="190" width="424" height="574" fill="#3A1518"/>
     <rect x="786" y="176" width="408" height="568" fill="#F8F3EA"/>
-    <image href="/assets/source/editorial/vertical-practice-plate-beads.png" x="790" y="180" width="400" height="560" preserveAspectRatio="xMidYMid slice" filter="url(#fn21-feature-photo)"/>
+    <image href="/assets/source/editorial/practice-plate-angle-foot.png" x="790" y="180" width="400" height="560" preserveAspectRatio="xMidYMid slice" filter="url(#fn21-feature-photo)"/>
   </g>
   <g transform="rotate(4 593 69)">
     <rect x="480" y="46" width="226" height="46" fill="#D9CBAF" opacity="0.74"/>
