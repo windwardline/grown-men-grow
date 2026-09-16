@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn21-06-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn21-06-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn21-06-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 21 · 06 / 07</text>
+  <g><line x1="270" y1="322" x2="286" y2="304" stroke="#121416" stroke-width="3" stroke-linecap="round" opacity="0.55"/><line x1="335.25" y1="322" x2="351.25" y2="304" stroke="#121416" stroke-width="3" stroke-linecap="round" opacity="0.55"/><line x1="400.5" y1="322" x2="416.5" y2="304" stroke="#121416" stroke-width="3" stroke-linecap="round" opacity="0.55"/><line x1="465.75" y1="322" x2="481.75" y2="304" stroke="#121416" stroke-width="3" stroke-linecap="round" opacity="0.55"/><line x1="531" y1="322" x2="547" y2="304" stroke="#121416" stroke-width="3" stroke-linecap="round" opacity="0.55"/><line x1="596.25" y1="322" x2="612.25" y2="304" stroke="#121416" stroke-width="3" stroke-linecap="round" opacity="0.55"/><line x1="661.5" y1="322" x2="677.5" y2="304" stroke="#121416" stroke-width="3" stroke-linecap="round" opacity="0.55"/><line x1="726.75" y1="322" x2="742.75" y2="304" stroke="#121416" stroke-width="3" stroke-linecap="round" opacity="0.55"/><line x1="792" y1="322" x2="808" y2="304" stroke="#121416" stroke-width="3" stroke-linecap="round" opacity="0.55"/><line x1="270" y1="330" x2="810" y2="330" stroke="#121416" stroke-width="7" stroke-linecap="round" opacity="0.9"/><path d="M271.32 334 A20.68 20.68 0 0 0 312.68 334" fill="none" stroke="#B14F3F" stroke-width="5" stroke-linecap="round" opacity="0.8"/><path d="M330.64 334 A17.16 17.16 0 0 0 364.96000000000004 334" fill="none" stroke="#B14F3F" stroke-width="5" stroke-linecap="round" opacity="0.8"/><path d="M360.36 334 A24.64 24.64 0 0 0 409.64 334" fill="none" stroke="#B14F3F" stroke-width="5" stroke-linecap="round" opacity="0.8"/><path d="M444.92 334 A20.68 20.68 0 0 0 486.28000000000003 334" fill="none" stroke="#B14F3F" stroke-width="5" stroke-linecap="round" opacity="0.8"/><path d="M479.44 334 A17.16 17.16 0 0 0 513.76 334" fill="none" stroke="#B14F3F" stroke-width="5" stroke-linecap="round" opacity="0.8"/><path d="M552.5600000000001 334 A24.64 24.64 0 0 0 601.84 334" fill="none" stroke="#B14F3F" stroke-width="5" stroke-linecap="round" opacity="0.8"/><path d="M581.32 334 A20.68 20.68 0 0 0 622.68 334" fill="none" stroke="#B14F3F" stroke-width="5" stroke-linecap="round" opacity="0.8"/><path d="M671.64 334 A17.16 17.16 0 0 0 705.9599999999999 334" fill="none" stroke="#B14F3F" stroke-width="5" stroke-linecap="round" opacity="0.8"/><path d="M707.5600000000001 334 A24.64 24.64 0 0 0 756.84 334" fill="none" stroke="#B14F3F" stroke-width="5" stroke-linecap="round" opacity="0.8"/><path d="M767.32 334 A20.68 20.68 0 0 0 808.68 334" fill="none" stroke="#B14F3F" stroke-width="5" stroke-linecap="round" opacity="0.8"/><path d="M367.2 356 C374.2 378 374.2 386 367.2 386 C360.2 386 360.2 378 367.2 356 Z" fill="#B14F3F" opacity="0.85"/><path d="M523.8 356 C530.8 366 530.8 374 523.8 374 C516.8 374 516.8 366 523.8 356 Z" fill="#B14F3F" opacity="0.85"/><path d="M653.4 356 C660.4 386 660.4 394 653.4 394 C646.4 394 646.4 386 653.4 356 Z" fill="#B14F3F" opacity="0.85"/><path d="M756 356 C763 362 763 370 756 370 C749 370 749 362 756 356 Z" fill="#B14F3F" opacity="0.85"/></g>
+    <text x="74" y="600" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="92" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">Cold lap.</text>
+    <text x="76" y="732" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="46" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">The bead is laid on the surface</text><text x="76" y="794" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="46" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">of the joint, not fused into it.</text>
+    <text x="76" y="1010" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="58" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">It is often tidy.</text><text x="76" y="1086" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="58" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">It holds nothing.</text>
+    <path d="M80 1180 C290 1140 520 1204 740 1160 C860 1136 940 1170 1000 1150" fill="none" stroke="#B14F3F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn21-06-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

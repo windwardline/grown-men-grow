@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn21-02-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn21-02-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn21-02-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#EEE6D8"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 21 · 02 / 07</text>
+  <rect x="56" y="228" width="968" height="712" fill="#3A1518" transform="rotate(0.9 540 584)"/>
+    <g transform="rotate(4 753 229)">
+    <rect x="640" y="206" width="226" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="648" y1="213" x2="856" y2="210" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <g transform="rotate(-3 249 939)">
+    <rect x="150" y="916" width="198" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="158" y1="923" x2="338" y2="920" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="106" y="360" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="84" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">“If you can</text><text x="106" y="468" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="84" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">move it,</text><text x="106" y="576" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="84" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">weld it flat.”</text>
+    <text x="108" y="742" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">Every shop has a version of that rule,</text><text x="108" y="798" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">and every shop is right.</text>
+    <g><line x1="110" y1="872" x2="530" y2="872" stroke="#EEE6D8" stroke-width="7" stroke-linecap="round" opacity="0.9"/><path d="M110 868 A22 22 0 0 1 154 868" fill="none" stroke="#F8F3EA" stroke-width="5" stroke-linecap="round" opacity="0.95"/><path d="M151.77777777777777 868 A22 22 0 0 1 195.77777777777777 868" fill="none" stroke="#F8F3EA" stroke-width="5" stroke-linecap="round" opacity="0.95"/><path d="M193.55555555555554 868 A22 22 0 0 1 237.55555555555554 868" fill="none" stroke="#F8F3EA" stroke-width="5" stroke-linecap="round" opacity="0.95"/><path d="M235.33333333333337 868 A22 22 0 0 1 279.33333333333337 868" fill="none" stroke="#F8F3EA" stroke-width="5" stroke-linecap="round" opacity="0.95"/><path d="M277.1111111111111 868 A22 22 0 0 1 321.1111111111111 868" fill="none" stroke="#F8F3EA" stroke-width="5" stroke-linecap="round" opacity="0.95"/><path d="M318.8888888888889 868 A22 22 0 0 1 362.8888888888889 868" fill="none" stroke="#F8F3EA" stroke-width="5" stroke-linecap="round" opacity="0.95"/><path d="M360.6666666666667 868 A22 22 0 0 1 404.6666666666667 868" fill="none" stroke="#F8F3EA" stroke-width="5" stroke-linecap="round" opacity="0.95"/><path d="M402.44444444444446 868 A22 22 0 0 1 446.44444444444446 868" fill="none" stroke="#F8F3EA" stroke-width="5" stroke-linecap="round" opacity="0.95"/><path d="M444.22222222222223 868 A22 22 0 0 1 488.22222222222223 868" fill="none" stroke="#F8F3EA" stroke-width="5" stroke-linecap="round" opacity="0.95"/><path d="M486 868 A22 22 0 0 1 530 868" fill="none" stroke="#F8F3EA" stroke-width="5" stroke-linecap="round" opacity="0.95"/></g>
+    <text x="76" y="1080" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">Gravity is on the welder’s side.</text>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn21-02-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
