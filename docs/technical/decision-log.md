@@ -856,3 +856,11 @@ Founder instruction, 2026-08-30: finish the work and stop carrying open items. E
 - **The next measurement** falls at thirty-one pieces, ten on from this one, per `editorial-underpinning.md`.
 
 **Corpus test last measured:** 2026-09-16 at a bank of 21 pieces; next due at 31.
+
+## 2026-09-16 — Open recommendations accepted: register spacing, and the witness skeleton
+
+- **Status:** Founder-accepted ("Recommendations for open items are accepted"), executed the same day.
+- **Register.** Positions 13–20 reordered to break the five-long trade-opening run and the three-slot witness beat; positions 6–12 untouched. The detail and costs are in `publication-order.md`.
+- **Witness skeleton.** The next witness draft does not reuse the shared build. The rule is in the Stance section of `editorial-underpinning.md`.
+- **Mechanised, both.** A new `opening` marker on every field note, backfilled with its deciding reason, feeds a spacing check (`scripts/lib/register-spacing.mjs`, seven unit tests). Any witness piece after the first five fails on the old section heads, including a draft. Each gate was broken on purpose and failed by name before this was committed: the pre-reorder order (five-run and beat), a removed marker, and a skeleton heading on a witness piece.
+- **What the checks do not cover, stated so they imply no more than they do.** The skeleton check reads headings, so the same shape under new words passes it; the draft's own test report has to name that. The `opening` classification is a judgment written into each file, and a wrong marker defeats the run check exactly as a miscount defeated the 2026-08-26 reorder.

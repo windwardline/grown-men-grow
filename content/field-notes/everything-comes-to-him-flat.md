@@ -12,6 +12,7 @@ approved: 2026-09-16 — essay, platform pack, and artwork approved as written o
 publication_authorized: false — no Ghost slot named, no newsletter, no social posting; publication remains separately gated
 stance: assignment — the subject test fails for witness, and correctly: practising out of position is a move he has, and the closing hundred words turn to him
 closing_addresses_reader: yes — the last paragraph turns to him and leaves which position is his to name
+opening: trade — opens on a welding shop rule
 personal_claims: none included; add only from founder-supplied facts
 artwork_status: complete; founder-approved 2026-09-16 under the per-article image rule and the photograph-exclusivity ruling, after the regeneration in #189
 origin: written 2026-09-16 by the Wednesday draft task with the standing commission at `none`, so no commission line is cleared by this change set. Approved the same day and moved into content/ at register position 20

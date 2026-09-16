@@ -53,14 +53,14 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 10 | `somebody-is-up-on-his-ladder` | 2026-10-20 | |
 | 11 | `comparison-is-a-bad-map` | 2026-10-27 | |
 | 12 | `every-part-passed-inspection` | 2026-11-03 | |
-| 13 | `a-temp-wall-comes-out-in-april` | 2026-11-10 | |
-| 14 | `your-body-keeps-the-books` | 2026-11-17 | |
+| 13 | `the-line-was-capped-not-removed` | 2026-11-10 | |
+| 14 | `a-temp-wall-comes-out-in-april` | 2026-11-17 | |
 | 15 | `anger-is-a-terrible-manager` | 2026-11-24 | |
-| 16 | `the-rod-goes-first` | 2026-12-01 | |
-| 17 | `the-error-is-half-the-difference` | 2026-12-08 | |
-| 18 | `the-line-was-capped-not-removed` | 2026-12-15 | |
-| 19 | `the-opener-doesnt-lift-the-door` | 2026-12-22 | |
-| 20 | `everything-comes-to-him-flat` | 2026-12-29 | |
+| 16 | `the-error-is-half-the-difference` | 2026-12-01 | |
+| 17 | `the-rod-goes-first` | 2026-12-08 | |
+| 18 | `your-body-keeps-the-books` | 2026-12-15 | |
+| 19 | `everything-comes-to-him-flat` | 2026-12-22 | |
+| 20 | `the-opener-doesnt-lift-the-door` | 2026-12-29 | |
 
 ## Why this order and not another
 
@@ -91,6 +91,18 @@ It was appended rather than slotted for separation because moving it up would ha
 `everything-comes-to-him-flat` was approved 2026-09-16 and appended at 20. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note.
 
 It opens on a quoted shop rule rather than a mechanism, but the rule is a welding rule and the piece is a fabrication-shop piece, so **the trade opening run at 16–20 is five.** That is the length the 2026-08-26 reorder was undertaken to break. It is an `assignment` piece, so it does not extend the witness cadence at 7, 10, 13, 16 and 19. Both facts are stated here and neither is acted on: reordering is the founder's decision, and the 2026-09-16 corpus entry in the decision log records the related finding that the five witness pieces share one skeleton. Nothing here is scheduled and nothing is urgent.
+
+### The spacing reorder of 2026-09-16, and why the rules are now checked
+
+**Founder-accepted 2026-09-16:** break the five-long trade-opening run at 16–20 and the exact three-slot witness beat at 7, 10, 13, 16 and 19.
+
+**What moved.** Positions 6 through 12 are unchanged, so next Monday's staging decision is unaffected. `the-line-was-capped-not-removed` 18→13, `a-temp-wall-comes-out-in-april` 13→14, `the-error-is-half-the-difference` 17→16, `the-rod-goes-first` 16→17, `your-body-keeps-the-books` 14→18, `everything-comes-to-him-flat` 20→19, `the-opener-doesnt-lift-the-door` 19→20. `anger-is-a-terrible-manager` stays at 15, because it already absorbed a ten-week move on 2026-08-30.
+
+**What it buys.** Trade openings among unpublished rows now run at most three (12–14), down from five. Eleven trade pieces against four separators cannot do better. Witness sits at 7, 10, 14, 17 and 20: gaps of three, four, three and three, with no four pieces on one beat. Adjacent openings no longer share a trade: plumbing at 13 and 17, measurement at 12 and 16.
+
+**The costs.** `your-body-keeps-the-books` moves four weeks later; `the-line-was-capped-not-removed` moves five weeks earlier. Three binding constraints were rechecked by the checker, not by reading: `rest-is-not-a-reward` at 4 still precedes `your-body-keeps-the-books` at 18. The production notes of Field Notes 19, 20 and 21 record the position each held when approved; this table governs.
+
+**Why it is checked now.** Positions 17, 19 and 20 were each appended with a paragraph above saying the strain was recorded and left to the founder, and the run went from two to five under those paragraphs. Every note now carries an `opening` marker (`trade` or `other`, with the deciding reason), and `verify-repository.mjs` fails the build when unpublished rows run more than three trade openings, when two witness pieces sit closer than three slots, or when four fall on an exact beat. An approval that would break one of these has to place the note correctly in the same change set, rather than append and write it down.
 
 ### The reorder of 2026-08-26, and the miscount that delayed it
 

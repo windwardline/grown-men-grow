@@ -7,6 +7,7 @@ import { spawnSync } from 'node:child_process';
 
 import { parseHold } from './lib/hold-state.mjs';
 import { DEFAULT_PUBLISH_WEEKDAY } from './lib/note-slot.mjs';
+import { tradeRunFaults, witnessSkeletonFaults, witnessSpacingFaults } from './lib/register-spacing.mjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -315,6 +316,30 @@ async function validatePublicationOrder() {
       );
     }
   }
+
+  // Spacing (founder-accepted 2026-09-16): no run of more than three trade
+  // openings among rows not yet published, and no witness pieces closer than
+  // three slots or on an exact beat. Opening and stance are read from each
+  // note's own markers, so the check derives the population instead of trusting
+  // a count someone wrote into the register.
+  const states = new Map([...text.matchAll(/^\|\s*\d+\s*\|\s*`([a-z0-9-]+)`\s*\|[^|\n]*\|([^|\n]*)\|/gm)]
+    .map((match) => [match[1], match[2].trim()]));
+  const rows = [];
+  for (const entry of order) {
+    if (!notes.includes(entry.slug)) continue;
+    const note = await readFile(path.join(root, 'content/field-notes', `${entry.slug}.md`), 'utf8');
+    const opening = [...note.matchAll(/^opening:[^\S\n]*(\w+)/gm)];
+    const stance = [...note.matchAll(/^stance:[^\S\n]*(\w+)/gm)];
+    if (opening.length !== 1 || !['trade', 'other'].includes(opening[0][1])) {
+      fail(`content/field-notes/${entry.slug}.md needs exactly one \`opening\` of trade or other; the register's run check reads it.`);
+      continue;
+    }
+    rows.push({slug: entry.slug, state: states.get(entry.slug) ?? '', opening: opening[0][1], stance: stance[0]?.[1]});
+  }
+  if (rows.length !== order.length) return;
+  for (const fault of [...tradeRunFaults(rows), ...witnessSpacingFaults(rows)]) {
+    fail(`docs/technical/publication-order.md: ${fault}`);
+  }
 }
 
 // Forward visual rule (founder-ruled 2026-08-16): every separately published
@@ -448,6 +473,7 @@ const requiredFiles = [
   'scripts/lib/dependency-exemptions.mjs',
   'scripts/lib/required-checks.mjs',
   'scripts/lib/publication-register.mjs',
+  'scripts/lib/register-spacing.mjs',
   'scripts/lib/substack-notes.mjs',
   'scripts/lib/substack-api.mjs',
   'scripts/note-task-preflight.mjs',
@@ -461,6 +487,7 @@ const requiredFiles = [
   'scripts/test/dependency-exemptions.test.mjs',
   'scripts/test/required-checks.test.mjs',
   'scripts/test/publication-register.test.mjs',
+  'scripts/test/register-spacing.test.mjs',
   'scripts/test/substack-notes.test.mjs',
   'theme/package.json',
   'theme/pnpm-lock.yaml',
@@ -922,6 +949,28 @@ for (const file of corpusPieces) {
   if (stance[0][1] === 'witness' && closing[0][1] === 'yes') {
     fail(`${file} is marked witness but its closing addresses the reader; witness gate 1 forbids that turn.`);
   }
+}
+
+// The witness skeleton (decision log, 2026-09-16). The five witness pieces
+// approved by then share it and are left as approved; every later witness piece,
+// in content/ or still in drafts/, is checked so a sixth cannot quietly repeat it.
+const SKELETON_GRANDFATHERED = new Set([
+  'content/field-notes/the-lights-never-flickered.md',
+  'content/field-notes/somebody-is-up-on-his-ladder.md',
+  'content/field-notes/a-temp-wall-comes-out-in-april.md',
+  'content/field-notes/the-rod-goes-first.md',
+  'content/field-notes/the-opener-doesnt-lift-the-door.md',
+]);
+const witnessCandidates = tracked.filter((item) =>
+  (item.startsWith('content/field-notes/') || (item.startsWith('drafts/') && !item.endsWith('-platforms.md') && !item.endsWith('README.md')))
+  && item.endsWith('.md'));
+for (const file of witnessCandidates) {
+  if (SKELETON_GRANDFATHERED.has(file)) continue;
+  const text = await readFile(path.join(root, file), 'utf8');
+  if (!/^stance:[^\S\n]*witness\b/m.test(text)) continue;
+  const essay = text.split(/^# Ghost essay source$/m)[1]?.split(/^# /m)[0] ?? '';
+  const headings = [...essay.matchAll(/^## (.+)$/gm)].map((match) => match[1]);
+  for (const fault of witnessSkeletonFaults(headings)) fail(`${file}: ${fault}`);
 }
 
 // The due date is written by whoever records a measurement, and enforced here,

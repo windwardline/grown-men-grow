@@ -83,6 +83,8 @@ The piece never certifies that the care landed well. Include the deflections and
 
 **How it fails.** Humility theater: the writer in print being carried, arranged to look good about it. Essay 1 already diagnoses that move by name, so the work will be judged against it without mercy. The guard is gate 3 plus the no-certification rule. This is also why the writer's own story does not go first. A witness draft that goes soft is discarded, not repaired.
 
+**It also fails by formula.** The first five witness pieces converged on one build: a mechanism opening, a section conceding the care is done badly, a section on the man who has less, and a close on the last fact. Each was earned, and five in a row is a template, which the voice rules forbid. A witness draft finds its own shape. The honesty the no-certification rule demands still has to be there; it does not have to arrive as a section with that job. `verify-repository.mjs` rejects the old section heads on any later witness piece, which catches the phrasing, not the shape — the draft's test report says whether the shape came back (founder-accepted 2026-09-16).
+
 ## Boundaries
 
 - **Reasoning, not vocabulary.** "Ethics of care," "interdependence," and the theorists' names belong in this document and in internal discussion. They do not belong in essays, captions, or profile copy, where they would read as credentialing.

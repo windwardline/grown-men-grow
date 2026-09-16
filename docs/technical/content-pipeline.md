@@ -8,7 +8,7 @@ The unit of work is not an essay. It is a **complete field note**: the essay, th
 
 | Artifact | Path | Notes |
 |---|---|---|
-| Essay source | `content/field-notes/<slug>.md` | Carries the Ghost essay, carousel slide copy, caption, alt text, visual direction, and production notes — mirror an existing note exactly |
+| Essay source | `content/field-notes/<slug>.md` | Carries the Ghost essay, carousel slide copy, caption, alt text, visual direction, and production notes — mirror an existing note exactly, including the `stance`, `closing_addresses_reader`, and `opening` (`trade` or `other`) frontmatter markers |
 | Platform pack | `content/distribution/field-note-NN-platforms.md` | Four sections: Medium, Bluesky, LinkedIn Page, Substack Notes |
 | Source photography | `assets/source/editorial/<name>.png` | New per article; never reused across articles |
 | Render script | `scripts/render-field-note-NN.mjs` | Bespoke composition with a signature mark used by no other note |
