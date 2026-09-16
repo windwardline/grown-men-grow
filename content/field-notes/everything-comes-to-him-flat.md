@@ -7,14 +7,14 @@ access: public
 email_subject: Everything Comes to Him Flat
 preview: A welder is not certified. He is certified in a position.
 feature_image_alt: Two steel plates butt-welded flat on a welding table with one clean finished bead, beside a practice plate standing upright with three vertical beads that run from rough to clean, in a paper collage.
-status: draft — NOT founder-approved
-approved: no
-publication_authorized: false — NOT authorized for publication, newsletter delivery, metadata, or social posting
+status: founder-approved
+approved: 2026-09-16 — essay, platform pack, and artwork approved as written on the day they were drafted; approval covers the work, not a slot
+publication_authorized: false — no Ghost slot named, no newsletter, no social posting; publication remains separately gated
 stance: assignment — the subject test fails for witness, and correctly: practising out of position is a move he has, and the closing hundred words turn to him
 closing_addresses_reader: yes — the last paragraph turns to him and leaves which position is his to name
 personal_claims: none included; add only from founder-supplied facts
-artwork_status: draft; generated 2026-09-16 for this note under the house prompt, not founder-approved
-origin: written 2026-09-16 by the Wednesday draft task with the standing commission at `none`
+artwork_status: complete; founder-approved 2026-09-16 under the per-article image rule and the photograph-exclusivity ruling, after the regeneration in #189
+origin: written 2026-09-16 by the Wednesday draft task with the standing commission at `none`, so no commission line is cleared by this change set. Approved the same day and moved into content/ at register position 20
 ---
 
 # Ghost essay source
@@ -150,7 +150,7 @@ Some joints do not turn. They arrive already installed, and they come in overhea
 
 # Production notes
 
-- Drafted 2026-09-16 by the Wednesday draft task. Not founder-approved and not authorized for publication; holds no register position and names no Ghost slot.
+- Written and approved 2026-09-16 — essay, pack, and artwork, on the day it was drafted. Register position 20. No Ghost slot named; publication timing remains a later founder decision.
 - Stance is `assignment`. `operating-cadence.md` carries `**Standing commission:** none`, and the subject test fails for witness: running coupons out of position is a move the reader has. The most recent note shipped `witness`.
 - No first-person anecdote appears and no event is asserted as having happened; the essay runs in the generic present per the 2026-08-08 founder ruling, reaffirmed 2026-08-12.
 - The trade specifics are ordinary welding practice — the flat-position rule and work positioners, position-specific welder qualification, cold lap, the guided bend test, and the structural code's six-month continuity rule for a welder's qualification — used as metaphor, not as instruction.

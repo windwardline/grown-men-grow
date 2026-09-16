@@ -18,8 +18,8 @@ import {
   writeAsset,
 } from "./lib/editorial-collage.mjs";
 
-// Field Note 21 — "Everything Comes to Him Flat". Draft, 2026-09-16; not
-// founder-approved, no register position, no Ghost slot named.
+// Field Note 21 — "Everything Comes to Him Flat". Founder-approved
+// 2026-09-16; register position 20, no Ghost slot named.
 //
 // Signature vocabulary: a hand-drawn bead mark — a straight joint line with a
 // run of overlapping crescent ripples laid along it. Its flat state lays the

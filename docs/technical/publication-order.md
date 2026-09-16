@@ -60,6 +60,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 17 | `the-error-is-half-the-difference` | 2026-12-08 | |
 | 18 | `the-line-was-capped-not-removed` | 2026-12-15 | |
 | 19 | `the-opener-doesnt-lift-the-door` | 2026-12-22 | |
+| 20 | `everything-comes-to-him-flat` | 2026-12-29 | |
 
 ## Why this order and not another
 
@@ -84,6 +85,12 @@ It was appended rather than slotted for separation because moving it up would ha
 **The domestic-mechanical opening run is now four, not two.** Positions 16 through 19 open on a water heater, a spirit level on a top plate, a plumbing dead leg, and a garage door. Position 17's entry above recorded a run of two as the tolerance the bank allows; this is longer, and recording it is the point of that entry's precedent. The same reasoning still governs what was done about it: appending displaces nothing, and reordering the register to accommodate one opening is the thing this document forbids. Whether to break the run is a reorder decision and belongs to the founder. Nothing here is scheduled and nothing is urgent.
 
 **The witness cadence is now exactly regular, which is the shape the order was trying to avoid.** The bullet above states that the witness pieces sit at 9 and 13, four slots apart, so they do not read as a series. That bullet was written when there were two and it is left as written. There are now five — positions 7, 10, 13, 16, and 19 — at an unbroken three-slot interval. None is labelled and none is announced, so nothing is visible to a reader who is not counting; a reader who is counting would find a perfectly regular cadence, which is precisely what "do not read as a series" was guarding against. This change set does not move any of them, because moving a witness piece is a reorder and belongs to the founder. It is recorded here so that the next witness append is made knowing it would be the sixth in the same rhythm.
+
+### Position 20 was appended, and the trade-opening run is now five
+
+`everything-comes-to-him-flat` was approved 2026-09-16 and appended at 20. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note.
+
+It opens on a quoted shop rule rather than a mechanism, but the rule is a welding rule and the piece is a fabrication-shop piece, so **the trade opening run at 16–20 is five.** That is the length the 2026-08-26 reorder was undertaken to break. It is an `assignment` piece, so it does not extend the witness cadence at 7, 10, 13, 16 and 19. Both facts are stated here and neither is acted on: reordering is the founder's decision, and the 2026-09-16 corpus entry in the decision log records the related finding that the five witness pieces share one skeleton. Nothing here is scheduled and nothing is urgent.
 
 ### The reorder of 2026-08-26, and the miscount that delayed it
 
