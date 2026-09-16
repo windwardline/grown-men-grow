@@ -3379,3 +3379,23 @@ To post it: open `substack.com/@grownmengrow/notes`, confirm the `Edit profile` 
 **Verification, each gate named and run:** listed in the pull request body; results recorded there and in the report to the founder.
 
 **Open, in order:** (1) Founder review of Field Note 21. (2) Corpus measurement falls due at approval (bank 21). (3) Carried forward unchanged from the entry above.
+
+## 2026-09-16 — Claude Code — Field Note 21 approved; corpus test measured at twenty-one
+
+**Client:** Claude Code. **Branch:** `claude/field-note-21-approved-2026-09-16`.
+
+**Founder approval:** "Draft is approved." That covers the essay, platform pack, and artwork as written, with the photography regenerated in #189. It names no slot, so `publication_authorized` stays false on both files and no Ghost post exists.
+
+**Scope completed:** moved the note and pack into `content/` with `git mv`; set approval frontmatter; appended register position 20 (projected 2026-12-29); added the guard in `verify-repository.mjs` that fails if either file returns to `drafts/`; updated the render script header and `drafts/README.md`. No asset was re-rendered: the artwork approved is the artwork merged in #189.
+
+**The corpus test fell due and was measured, because the checker failed on the approval until it was.** At 21 pieces, 5 are `witness` (24%, up from 13% at fifteen) and 13 of 21 closings address the reader (62%, down from 73%). Judgment in the decision log: the imbalance is corrected at the level the Stance section describes. The finding a count cannot see is that the five witness pieces share one skeleton (mechanism opening, a "done badly" section, a "most men have less" section, a last-fact close), and they sit at an exact three-slot cadence in the register. The recommendation that the next witness draft break the skeleton is recorded for the founder, not enacted. Next measurement at 31.
+
+**Register fact recorded, not acted on:** positions 16–20 are now five consecutive trade openings, the length the 2026-08-26 reorder broke. Reordering is the founder's call.
+
+**Files changed:** `content/field-notes/everything-comes-to-him-flat.md` and `content/distribution/field-note-21-platforms.md` (moved from `drafts/`), `scripts/render-field-note-21.mjs`, `scripts/verify-repository.mjs`, `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `drafts/README.md`, and this log.
+
+**External state changed:** none. Nothing published, sent, or posted.
+
+**Verification:** every `gate:` line run and listed in the PR body, plus the `cadence:` gate `verify-publication-register.mjs` (21 rows agree with Ghost). `verify-repository.mjs` failed before the corpus entry and passed after it.
+
+**Open, in order:** (1) Founder decisions carried in the register and decision log: the five-long trade opening run at 16–20, the three-slot witness cadence, and whether the next witness draft is steered off the shared skeleton. (2) Saturday's Substack Note 2 pending. (3) Carried forward unchanged: distribution, the one-member newsletter list, the suspended A/B, the extract-zip acceptances expiring 2026-11-09.
