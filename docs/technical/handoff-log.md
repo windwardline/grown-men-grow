@@ -3399,3 +3399,19 @@ To post it: open `substack.com/@grownmengrow/notes`, confirm the `Edit profile` 
 **Verification:** every `gate:` line run and listed in the PR body, plus the `cadence:` gate `verify-publication-register.mjs` (21 rows agree with Ghost). `verify-repository.mjs` failed before the corpus entry and passed after it.
 
 **Open, in order:** (1) Founder decisions carried in the register and decision log: the five-long trade opening run at 16–20, the three-slot witness cadence, and whether the next witness draft is steered off the shared skeleton. (2) Saturday's Substack Note 2 pending. (3) Carried forward unchanged: distribution, the one-member newsletter list, the suspended A/B, the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-16 — Claude Code — open recommendations accepted: register spacing and the witness skeleton, mechanised
+
+**Client:** Claude Code. **Branch:** `claude/register-spacing-and-witness-skeleton-2026-09-16`.
+
+**Founder instruction:** "Recommendations for open items are accepted." Two items: break the five-long trade-opening run and the exact three-slot witness beat in the register, and steer the next witness draft off the shared skeleton.
+
+**Scope completed.** Register positions 13–20 reordered (6–12 untouched, so Monday's staging input is unchanged): longest unpublished trade run 5→3, witness at 7, 10, 14, 17, 20. Stance section of `editorial-underpinning.md` gains the formula failure. Both are enforced: every field note now carries an `opening` marker with its reason; `scripts/lib/register-spacing.mjs` (7 tests, TDD — failed on the missing module first) supplies the run, spacing and skeleton rules; `verify-repository.mjs` applies them and registers both files. Each gate was proved by breaking it and restoring exact bytes: the pre-reorder order failed on the five-run and the beat, a removed marker failed, and a skeleton heading on a witness piece failed.
+
+**Files changed:** 20 notes under `content/field-notes/` (one `opening` line each, no copy), `scripts/lib/register-spacing.mjs`, `scripts/test/register-spacing.test.mjs`, `scripts/verify-repository.mjs`, `docs/technical/publication-order.md`, `docs/editorial-underpinning.md`, `docs/technical/content-pipeline.md`, `AGENTS.md`, `docs/technical/decision-log.md`, this log.
+
+**External state changed:** none.
+
+**Verification:** every `gate:` line, listed with results in the PR body; cadence gate `verify-publication-register.mjs` run after the reorder.
+
+**Open, in order:** (1) The draft tasks' own instruction files live outside the repository; they read the pipeline doc and the underpinning, which now carry both rules, but were not themselves edited. (2) Saturday's Substack Note 2 pending. (3) Carried forward: distribution, the one-member list, the suspended A/B, extract-zip acceptances expiring 2026-11-09.

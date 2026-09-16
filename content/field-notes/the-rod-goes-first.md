@@ -12,6 +12,7 @@ approved: 2026-09-02 — essay, platform pack, and artwork approved together, in
 publication_authorized: false — approval covers the work and a register position, not a Ghost slot; publication, newsletter delivery, and posting remain separately gated
 stance: witness — the subject test passes: the rod is spent in the dark over years, and there is no move available to him inside the event
 closing_addresses_reader: no — witness gate 1: ends on the last fact, "The water at the tap is the same temperature it was yesterday," and turns to him nowhere
+opening: trade — opens on the glass lining of a water heater
 register: generic present — asserts that this happens, never that a particular instance happened
 personal_claims: none — no event is asserted as reportage and no first person appears, per the 2026-08-08 ruling reaffirmed 2026-08-12
 social_copy_status: founder-approved as written 2026-09-02; posting remains separately gated

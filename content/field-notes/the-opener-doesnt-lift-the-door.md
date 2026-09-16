@@ -12,6 +12,7 @@ approved: 2026-09-12 — essay, platform pack, and artwork approved as written o
 publication_authorized: false — no Ghost slot named, no newsletter, no social posting; publication remains separately gated
 stance: witness — the subject test passes: the door is counterbalanced by a spring wound before he got there, to a turn count he did not choose and cannot add back, and he has no move available inside the event
 closing_addresses_reader: no — witness gate 1: ends on the last fact, "the motor is the only part of it anybody in the house can hear," and turns to him nowhere
+opening: trade — opens on garage door opener horsepower
 personal_claims: none included; add only from founder-supplied facts
 artwork_status: complete; founder-approved 2026-09-12 under the per-article image rule and the photograph-exclusivity ruling
 origin: written 2026-09-12 by the Saturday draft task with the standing commission at `none`; the `witness` stance is taken on the standing corpus duty rather than on a commission, so no commission line is cleared by this change set. Approved the same day and moved into content/ at register position 19

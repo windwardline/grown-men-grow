@@ -11,6 +11,7 @@ status: founder-approved
 approved: 2026-08-09 under the ten-round directive; founder veto on sight
 stance: assignment — checking the heading is his to do
 closing_addresses_reader: yes — "you walk back to the work with your whole back in it."
+opening: other — opens on being lost miles from the truck
 personal_claims: none included; add only from founder-supplied facts
 artwork_status: complete; founder-approved 2026-08-10 with rounds 7-10
 ---

@@ -11,6 +11,7 @@ status: founder-approved
 approved: 2026-08-09 — essay, carousel, caption, and visual direction approved as written; publication timing remains gated
 stance: assignment — the schedule is his to set
 closing_addresses_reader: yes — "Put them on the schedule you already trust … Then make the call."
+opening: other — opens on what a man would grab from a burning house
 personal_claims: none included; add only from founder-supplied facts
 artwork_status: in production 2026-08-09 under the per-article image rule
 ---

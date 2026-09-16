@@ -12,6 +12,7 @@ publication_authorized: false — approval covers the work and a register positi
 approved: 2026-09-05 — essay, platform pack, and artwork approved together, in one pass
 stance: assignment — the subject test fails for witness, and correctly: the reversal is a move he has, takes thirty seconds, and is the whole argument
 closing_addresses_reader: no — closes on the mechanism and what it returns, not on an instruction or a question
+opening: trade — opens on how a spirit level works
 register: generic present — asserts that this happens, never that a particular instance happened
 personal_claims: none — no event is asserted as reportage and no first person appears, per the 2026-08-08 ruling reaffirmed 2026-08-12
 social_copy_status: founder-approved as written 2026-09-05; posting remains separately gated

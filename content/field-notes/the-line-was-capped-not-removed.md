@@ -12,6 +12,7 @@ approved: 2026-09-09 — essay, platform pack, and artwork approved as written o
 publication_authorized: false — no Ghost slot named, no newsletter, no social posting; publication remains separately gated
 stance: assignment — the subject test fails for witness, and correctly: deciding whether a branch of his own has a fixture on it is a move he has, and the closing hundred words turn to him
 closing_addresses_reader: yes — “Whether any of them come out is yours to say. But go and look at what is on the end.”
+opening: trade — opens on the plumbing code for dead legs
 personal_claims: none included; add only from founder-supplied facts
 artwork_status: complete; founder-approved 2026-09-09 under the per-article image rule and the photograph-exclusivity ruling
 origin: written 2026-09-09 by the Wednesday draft task with the standing commission at `none`, so the ordinary `assignment` stance applies and no commission is cleared by this change set

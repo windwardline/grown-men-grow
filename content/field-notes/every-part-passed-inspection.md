@@ -12,6 +12,7 @@ approved: 2026-08-26 — essay, platform pack, and artwork approved together, in
 publication_authorized: false — approval covers the work, not a slot; publication, newsletter delivery, and posting remain separately gated
 stance: assignment — the subject test fails for witness; drift is a thing he has a move on, and the closing hundred words turn to him
 closing_addresses_reader: yes — "Let it, and then put it down" is aimed at him, though the final line turns impersonal
+opening: trade — opens on the tolerance on a drawing
 register: generic present — asserts that this happens, never that a particular instance happened
 personal_claims: none — no event is asserted as reportage and no first person appears, per the 2026-08-08 ruling reaffirmed 2026-08-12
 social_copy_status: founder-approved as written 2026-08-26; posting remains separately gated

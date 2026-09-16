@@ -11,6 +11,7 @@ status: founder-approved
 approved: 2026-08-09 — essay, carousel, caption, and visual direction approved as written; publication timing remains gated
 stance: assignment — he has a move: the repair after the exhale
 closing_addresses_reader: yes — "Open up. Say the thing. … Then stay in the room."
+opening: other — opens on the look a man gets after saying the hard thing
 personal_claims: none included; add only from founder-supplied facts
 artwork_status: in production 2026-08-09 under the per-article image rule
 origin: expands the founder-approved "A confession can still be selfish" section of Essay 1 into its own field note
