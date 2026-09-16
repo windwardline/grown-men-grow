@@ -34,9 +34,9 @@ import {
 //
 // Photography: three source images generated for this note under the house
 // prompt and unique to it.
-const POSITIONER = "editorial/pipe-positioner-seam-up.png";
-const VERTICAL = "editorial/vertical-practice-plate-beads.png";
-const BEND = "editorial/bend-test-strips-bench.png";
+const FLAT = "editorial/flat-plate-butt-weld-bench.png";
+const VERTICAL = "editorial/practice-plate-angle-foot.png";
+const BEND = "editorial/bend-test-bars-bench.png";
 
 const otherArticles = ["anode-rod-pulled", "balcony-plant-care", "base-plates-anchor-bolts", "basement-main-run-tees", "bp-cuff-notebook", "breaker-panel-check", "bubble-vial-close", "cabinet-seam-proud-door", "capped-copper-stub-wall", "car-odometer-daylight", "compass-in-hand", "cooking-breakfast-together", "covered-slab-curing", "cutting-board-vegetables", "datum-face-square", "deck-board-detail", "detector-test-press", "doorway-running-shoes", "downspout-extension-turned", "driveway-hoop-late-afternoon", "filled-holes-floor", "friends-in-conversation", "garage-door-partly-open-morning", "garage-doorway-call", "garage-floor-hairline-crack", "garden-beds-two-heights", "gutter-leaves-from-above", "hallway-duffel-set-down", "hammock-midday-rest", "hardware-counter-question", "hose-wetting-fresh-pour", "kitchen-counter-pause", "ladder-against-eave-autumn", "level-on-top-plate", "level-reversed-pencil-mark", "machinist-caliper-part", "morning-armchair-mug", "oil-check-detail", "open-wall-wiring", "opener-head-ceiling-rail", "paperwork-second-eyes", "pegboard-end-of-day", "photos-notebook-spread", "porch-coffee-pause", "porch-two-chairs", "punch-list-tailgate", "repairing-wooden-chair", "restaurant-table-after-lunch", "rigging-shackles-bench", "running-shoes-alarm", "shims-top-plate", "sling-capacity-tag", "smoke-detector-battery", "sunlit-writing-table", "tap-running-hot", "temp-wall-open-room", "tool-bag-handoff", "torsion-spring-shaft-header", "trail-fork-daylight", "transfer-switch-cabinet", "truck-hood-map", "truck-tailgate-loading", "tubing-cutter-on-copper", "walking-after-the-work", "wall-calendar-kitchen", "water-heater-top-fittings", "workbench-hand-tools"];
 
@@ -96,7 +96,7 @@ function beadMark(x, y, {
 const LABEL = "FIELD NOTE 21";
 
 const slides = [
-  // 1 — cover. Title lockup, the positioner photograph, the mark small and flat.
+  // 1 — cover. Title lockup, the flat plate photograph, the mark small and flat.
   portraitCanvas({
     id: "fn21-01",
     number: 1,
@@ -105,7 +105,7 @@ const slides = [
     body: `${lines(["EVERYTHING COMES"], {x: 64, y: 250, size: 70, leading: 84, family: SANS, weight: 900, tracking: 0.6})}
     ${lines(["TO HIM FLAT."], {x: 64, y: 346, size: 96, leading: 108, family: SANS, weight: 900, tracking: 0.8, fill: OXBLOOD})}
     ${lines(["The shop is right to turn the work."], {x: 68, y: 414, size: 34, leading: 48, family: SERIF, weight: 400, style: "italic", fill: SMOKE, tracking: 0.2})}
-    ${photo({name: POSITIONER, x: 260, y: 470, width: 590, height: 640, rotation: 0.8, position: "xMidYMid", backing: GREEN, id: "fn21-01"})}
+    ${photo({name: FLAT, x: 260, y: 470, width: 590, height: 640, rotation: 0.8, position: "xMidYMid", backing: GREEN, id: "fn21-01"})}
     ${tape(620, 446, 214, 4)}
     ${beadMark(96, 1186, {length: 300, scale: 0.7})}`,
   }),
@@ -135,7 +135,7 @@ const slides = [
     ${beadMark(270, 790, {length: 540, scale: 1})}
     ${lines(["A man who passes flat has proved", "that he can weld flat."], {x: 76, y: 1080, size: 42, leading: 58, family: SERIF, weight: 400, fill: INK, tracking: 0.2})}`,
   }),
-  // 4 — halftone field, the positioner applied to a life.
+  // 4 — halftone field, turning the work applied to a life.
   portraitCanvas({
     id: "fn21-04",
     number: 4,
@@ -172,7 +172,7 @@ const slides = [
     ${lines(["It is often tidy.", "It holds nothing."], {x: 76, y: 1010, size: 58, leading: 76, family: SERIF, weight: 700, fill: OXBLOOD, tracking: 0})}
     ${scribble("M80 1180 C290 1140 520 1204 740 1160 C860 1136 940 1170 1000 1150", RUST, 9)}`,
   }),
-  // 7 — close, image-led on the bent test strips.
+  // 7 — close, image-led on the bent test bars.
   portraitCanvas({
     id: "fn21-07",
     number: 7,
@@ -185,14 +185,14 @@ const slides = [
   }),
 ];
 
-// Title-free, per the Ghost feature-image convention. The positioner dominant,
+// Title-free, per the Ghost feature-image convention. The flat plate dominant,
 // the vertical plate small beside it, and the mark run as a pair in the oxblood
 // margin — flat and even above, overhead and dripping below.
 const feature = `<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
   ${defs("fn21-feature")}
   <rect width="1600" height="1000" fill="${PAPER_LIGHT}"/>
   <rect x="1226" y="0" width="374" height="1000" fill="${OXBLOOD}"/>
-  ${photo({name: POSITIONER, x: 80, y: 70, width: 660, height: 860, rotation: 0.8, position: "xMidYMid", backing: GREEN, id: "fn21-feature"})}
+  ${photo({name: FLAT, x: 80, y: 70, width: 660, height: 860, rotation: 0.8, position: "xMidYMid", backing: GREEN, id: "fn21-feature"})}
   ${photo({name: VERTICAL, x: 790, y: 180, width: 400, height: 560, rotation: -1.4, position: "xMidYMid", backing: OXBLOOD, id: "fn21-feature"})}
   ${tape(480, 46, 226, 4)}
   ${tape(862, 156, 198, -4)}

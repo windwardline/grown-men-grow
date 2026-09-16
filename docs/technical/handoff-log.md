@@ -3361,3 +3361,21 @@ To post it: open `substack.com/@grownmengrow/notes`, confirm the `Edit profile` 
 **Verification, each gate named and run:** `verify-ghost-theme.mjs`; `pnpm --dir theme install --frozen-lockfile`; `pnpm --dir theme test` (exit 0); the theme zip with `gscan -z --fatal --verbose` (exit 0); `node --test 'scripts/test/**/*.test.mjs'` — 184 pass, 0 fail; `verify-repository.mjs` over 691 tracked files; `verify-svg-xml.sh` (206 SVGs); `git diff --check` clean. Every rendered slide, the feature image, and the review sheet were inspected; the overhead mark's hatching overran its joint line on first render and was fixed before commit.
 
 **Open, in order:** (1) Founder review of Field Note 21: essay, pack, and artwork. (2) Approval makes the bank 21, which is the corpus-test threshold in the decision log; the measurement falls due in that change set. (3) Carried forward unchanged: Saturday's Substack Note 2 pending, the suspended-session hole, the distribution problem, the newsletter list at one member, the A/B suspended under its thirty-recipient marker, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-16 — Claude Code — Field Note 21 photography regenerated to the quality gate
+
+**Client:** Claude Code (continuation of the Wednesday draft run, at the founder's instruction). **Branch:** `claude/field-note-21-image-regeneration-2026-09-16`.
+
+**Correction to the entry above.** It shipped the draft with a known flag on one photograph and handed the call to the founder. That was wrong: the quality gate in `editorial-visual-system.md` says one obvious synthetic tell rejects the image, and applying it is the agent's job, not the founder's. The founder said so. A full-resolution re-review then found tells in all three photographs, not one, so all three are replaced.
+
+**What was rejected, and on what tell.** Pipe in a positioner: chuck jaws sitting between the faceplate's slots. First vertical plate: a clamp crank connected to no screw. Bend strips: thin sheet clips with curled ends, not test bars. Replacement attempts also failed and were rejected: a pipe on turning rolls (one wheel per station, the pipe unsupported), a vertical plate whose beads rendered as strings of polished balls, and one whose C-clamp had two screws and two T-handles. Nine generations, three kept. The prompts that failed on mechanisms were rewritten to remove the mechanism rather than to ask for it more carefully.
+
+**Kept:** `flat-plate-butt-weld-bench.png` (cover, feature), `practice-plate-angle-foot.png` (slide 5, feature), `bend-test-bars-bench.png` (slide 7). Exact prompts and the rejection record are in the note's production notes.
+
+**Files changed:** `assets/source/editorial/` (three removed, three added), `scripts/render-field-note-21.mjs`, `scripts/verify-repository.mjs`, `drafts/field-note-21-everything-comes-to-him-flat.md` (alt text, feature alt, visual direction, production notes), `drafts/field-note-21-platforms.md` (image rule), the re-rendered slides 1, 5, 7, feature image and review sheet, and this log. No copy changed.
+
+**External state changed:** six further image generations in the founder's ChatGPT project. Nothing published, sent, or posted.
+
+**Verification, each gate named and run:** listed in the pull request body; results recorded there and in the report to the founder.
+
+**Open, in order:** (1) Founder review of Field Note 21. (2) Corpus measurement falls due at approval (bank 21). (3) Carried forward unchanged from the entry above.

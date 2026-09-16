@@ -4,7 +4,7 @@ canonical: https://grownmengrow.com/everything-comes-to-him-flat/ (live only aft
 status: draft — NOT founder-approved
 approved: no
 publication_authorized: false — NOT authorized for posting on any platform
-image_rule: per-article — this pack may use only Field Note 21 imagery: pipe-positioner-seam-up, vertical-practice-plate-beads, bend-test-strips-bench
+image_rule: per-article — this pack may use only Field Note 21 imagery: flat-plate-butt-weld-bench, practice-plate-angle-foot, bend-test-bars-bench
 stance_note: assignment — the excerpts carry the mechanism and the cost; none of them issues the move, which stays in the essay's last paragraph where it is left to him
 ---
 

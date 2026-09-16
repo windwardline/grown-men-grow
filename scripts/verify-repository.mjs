@@ -662,9 +662,9 @@ const editorialSources = new Map([
   ['garage-door-partly-open-morning', { width: 1024, height: 1536 }],
   ['torsion-spring-shaft-header', { width: 1024, height: 1536 }],
   ['opener-head-ceiling-rail', { width: 1024, height: 1536 }],
-  ['pipe-positioner-seam-up', { width: 1024, height: 1536 }],
-  ['vertical-practice-plate-beads', { width: 1024, height: 1536 }],
-  ['bend-test-strips-bench', { width: 1024, height: 1536 }],
+  ['flat-plate-butt-weld-bench', { width: 1024, height: 1536 }],
+  ['practice-plate-angle-foot', { width: 1024, height: 1536 }],
+  ['bend-test-bars-bench', { width: 1024, height: 1536 }],
 ]);
 await validateNamedPngs('assets/source/editorial', editorialSources);
 await validateNamedPngs('assets/drafts/brand/banners', new Map([
