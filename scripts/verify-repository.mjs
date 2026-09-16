@@ -423,6 +423,7 @@ const requiredFiles = [
   'scripts/render-field-note-18.mjs',
   'scripts/render-field-note-19.mjs',
   'scripts/render-field-note-20.mjs',
+  'scripts/render-field-note-21.mjs',
   'scripts/verify-dependency-exemptions.mjs',
   'scripts/verify-required-checks.mjs',
   'scripts/verify-publication-register.mjs',
@@ -586,11 +587,12 @@ await validateAssetFamily('assets/drafts/instagram/field-note-17-carousel', 7, 1
 await validateAssetFamily('assets/drafts/instagram/field-note-18-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-19-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-20-carousel', 7, 1080, 1350);
+await validateAssetFamily('assets/drafts/instagram/field-note-21-carousel', 7, 1080, 1350);
 await validatePhotographExclusivity('assets/drafts/instagram');
 await validatePublicationOrder();
 await validateCrossReferences();
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
-await validateAssetFamily('assets/drafts/ghost/feature-images', 22, 1600, 1000);
+await validateAssetFamily('assets/drafts/ghost/feature-images', 23, 1600, 1000);
 await validateEditorialConcepts();
 const editorialSources = new Map([
   ['friends-in-conversation', { width: 1023, height: 1537 }],
@@ -660,6 +662,9 @@ const editorialSources = new Map([
   ['garage-door-partly-open-morning', { width: 1024, height: 1536 }],
   ['torsion-spring-shaft-header', { width: 1024, height: 1536 }],
   ['opener-head-ceiling-rail', { width: 1024, height: 1536 }],
+  ['pipe-positioner-seam-up', { width: 1024, height: 1536 }],
+  ['vertical-practice-plate-beads', { width: 1024, height: 1536 }],
+  ['bend-test-strips-bench', { width: 1024, height: 1536 }],
 ]);
 await validateNamedPngs('assets/source/editorial', editorialSources);
 await validateNamedPngs('assets/drafts/brand/banners', new Map([
@@ -690,6 +695,7 @@ const reviewSheets = new Map([
   ['field-note-18-carousel', { width: 1362, height: 1004 }],
   ['field-note-19-carousel', { width: 1362, height: 1004 }],
   ['field-note-20-carousel', { width: 1362, height: 1004 }],
+  ['field-note-21-carousel', { width: 1362, height: 1004 }],
   ['ghost-social-cards', { width: 1310, height: 884 }],
   ['pinned-introduction', { width: 1362, height: 1004 }],
   ['recognition-carousel', { width: 1362, height: 1004 }],
