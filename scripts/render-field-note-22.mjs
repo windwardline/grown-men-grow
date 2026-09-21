@@ -18,8 +18,8 @@ import {
   writeAsset,
 } from "./lib/editorial-collage.mjs";
 
-// Field Note 22 — "He Writes Both Parts". Draft, not founder-approved; no
-// register position and no Ghost slot.
+// Field Note 22 — "He Writes Both Parts". Founder-approved 2026-09-20;
+// register position 21, no Ghost slot named.
 //
 // Signature vocabulary: a hand-drawn contact gap — a fixed lower contact block
 // on a short stem and a hinged upper arm carrying the upper contact. Its closed
