@@ -3520,3 +3520,23 @@ To post it: open `substack.com/@grownmengrow/notes`, confirm the `Edit profile` 
 **Worktree note.** Local `main` was diverged when this session went to branch: it carried an unpushed concurrent commit (`39aedb0`, the Friday readout) while `origin/main` had moved to `3da1f2f`. This work was built in a separate worktree off `origin/main` so it carries only its own nine files and left the shared tree's HEAD, that session's commit, and its untracked `drafts/field-note-22-*` files untouched.
 
 **Open, in order:** (1) **The Saturday slot decision above — founder's call, and it is the oldest open item now that its trigger has fired.** (2) The concurrent local commit `39aedb0` is unpushed; it is that session's to land. (3) The task's `SKILL.md` still passes `--slot 18:30` and its cron still holds the weekday — the repository now guards the day, but the time and the cron remain outside it. (4) Carried forward from the Friday readout, unverified by this session: the Instagram traffic anomaly, LinkedIn's zero-impression week, the dead Instagram notification route, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-20 — Note 2 posted by hand at 21:53 ET; register corrected
+
+**Client:** Claude Code (desktop app), continuing the `gmg-saturday-note` session above.
+
+**Correction to the entry immediately above, per the append-only rule.** That entry records the 2026-09-19 18:30 slot as `missed` and states nothing was posted. Both were true when written and the second is still true of this agent — **the founder posted the note by hand at 21:53 ET**, after the handover. The register now reads `posted`.
+
+**External state changed: one Substack note, posted by the founder, not by this agent.** `c-341987670`, at 2026-09-21T01:53:15Z, **1,643 minutes after its slot**. The agent opened `substack.com/@grownmengrow/notes` in Chrome at the founder's request and confirmed two preconditions before handing over — the profile showed the Grown Men Grow identity with an "Edit profile" control, and the top note was five days old, so this note was not already up. The composer was not opened and nothing was typed.
+
+**Verified on the feed, not on the click.** `verify-substack-notes.mjs` was run before the hand-off (twelve rows, seven live notes, none carrying this copy) and again after (twelve rows, eight live notes, this copy present). The checker confirms the live text equals the approved pack **byte-for-byte**, so it went out verbatim. Worst lateness in the register is now 1,643 minutes, against 268 before tonight.
+
+**The gate caught the stale row on its own**, which is the whole point of it: with the note live and the register still saying `missed`, the run failed with "the register records this note as still pending, but `c-341987670` carries its approved copy." That is the direction that was wrong in `main` on 2026-09-08 and 2026-09-12 and the reason the checker reconciles both ways rather than testing for presence.
+
+**`publish-timing.md` corrected in the same change set.** Its 2026-09-20 section said the note never went out. It now records the hand-post, and sharpens the founder-decision paragraph: the note existing on the profile tonight is not evidence against the standing conclusion, it *is* the conclusion — an unattended Saturday slot that did not fire, rescued by a person at the keyboard. The register's standing observation, that every note that ever went out went out with a person at the keyboard, is unbroken and now has a 27-hour example.
+
+**Files changed:** `docs/technical/substack-notes.md`, `docs/technical/publish-timing.md`, and this log.
+
+**Verification:** all six `gate:` lines green, `node --test` 200 passing, both `release:` gates green, `verify-substack-notes.mjs` green on all twelve rows.
+
+**Open, in order:** (1) **The Saturday slot decision is still the founder's and is now unambiguous** — the slot did not fire and the note reached the profile only because a person posted it. (2) Carried forward, unverified by this session: the task's `SKILL.md` still holds the cron and `--slot` outside this repository; the Instagram traffic anomaly; LinkedIn's zero-impression week; the dead Instagram notification route; the one-member list; the suspended A/B; the extract-zip acceptances expiring 2026-11-09.
