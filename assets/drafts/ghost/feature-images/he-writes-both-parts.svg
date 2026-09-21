@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="fn22-feature-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn22-feature-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn22-feature-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="#F8F3EA"/>
+  <rect x="0" y="0" width="356" height="1000" fill="#3A1518"/>
+  <g transform="rotate(-0.8 740 500)">
+    <rect x="398" y="80" width="684" height="874" fill="#60735A"/>
+    <rect x="406" y="66" width="668" height="868" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/driveway-house-dusk-dash.png" x="410" y="70" width="660" height="860" preserveAspectRatio="xMidYMid slice" filter="url(#fn22-feature-photo)"/>
+  </g>
+  <g transform="rotate(1.4 1320 480)">
+    <rect x="1108" y="210" width="424" height="574" fill="#3A1518"/>
+    <rect x="1116" y="196" width="408" height="568" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/control-relay-din-rail.png" x="1120" y="200" width="400" height="560" preserveAspectRatio="xMidYMid slice" filter="url(#fn22-feature-photo)"/>
+  </g>
+  <g transform="rotate(-4 811 69)">
+    <rect x="700" y="46" width="222" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="708" y1="53" x2="912" y2="50" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g transform="rotate(4 1278 199)">
+    <rect x="1180" y="176" width="196" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="1188" y1="183" x2="1366" y2="180" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <rect x="186" y="336" width="75" height="17" rx="3" fill="#F8F3EA" opacity="0.95"/>
+    <line x1="223.5" y1="353" x2="223.5" y2="391" stroke="#EEE6D8" stroke-width="7" stroke-linecap="round" opacity="0.9"/><g transform="rotate(0 46 319)">
+      <line x1="46" y1="319" x2="261" y2="319" stroke="#EEE6D8" stroke-width="7" stroke-linecap="round" opacity="0.9"/>
+      <rect x="186" y="319" width="75" height="17" rx="3" fill="#F8F3EA" opacity="0.95"/>
+    </g>
+    <circle cx="46" cy="319" r="8" fill="none" stroke="#EEE6D8" stroke-width="6" opacity="0.9"/>
+    <line x1="46" y1="285" x2="46" y2="311" stroke="#EEE6D8" stroke-width="7" stroke-linecap="round" opacity="0.9"/>
+  <rect x="186" y="660" width="75" height="17" rx="3" fill="#B14F3F" opacity="0.95"/>
+    <line x1="223.5" y1="677" x2="223.5" y2="715" stroke="#EEE6D8" stroke-width="7" stroke-linecap="round" opacity="0.9"/><circle cx="196.5" cy="663.5" r="2.6" fill="#EEE6D8" opacity="0.8"/><circle cx="209.25" cy="663.5" r="2.6" fill="#EEE6D8" opacity="0.8"/><circle cx="220.5" cy="663.5" r="2.6" fill="#EEE6D8" opacity="0.8"/><circle cx="227.25" cy="663.5" r="2.6" fill="#EEE6D8" opacity="0.8"/><circle cx="240" cy="663.5" r="2.6" fill="#EEE6D8" opacity="0.8"/><circle cx="248.25" cy="663.5" r="2.6" fill="#EEE6D8" opacity="0.8"/><path d="M223.5 660 L228.67901106022015 655.3372640409127 L219.45802212044032 650.6745280818254 L230.03703318066044 646.0117921227381 L220.8160442408806 641.349056163651 L228.39505530110074 636.6863202045637 L223.9740663613209 632.0235842454764" fill="none" stroke="#B14F3F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/><g transform="rotate(-9 46 643)">
+      <line x1="46" y1="643" x2="261" y2="643" stroke="#EEE6D8" stroke-width="7" stroke-linecap="round" opacity="0.9"/>
+      <rect x="186" y="643" width="75" height="17" rx="3" fill="#B14F3F" opacity="0.95"/>
+    </g>
+    <circle cx="46" cy="643" r="8" fill="none" stroke="#EEE6D8" stroke-width="6" opacity="0.9"/>
+    <line x1="46" y1="609" x2="46" y2="635" stroke="#EEE6D8" stroke-width="7" stroke-linecap="round" opacity="0.9"/>
+  <path d="M420 854 C524 816 632 868 736 830" fill="none" stroke="#B14F3F" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect width="1600" height="1000" filter="url(#fn22-feature-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

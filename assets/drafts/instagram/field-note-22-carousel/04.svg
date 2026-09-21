@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn22-04-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn22-04-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn22-04-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 22 · 04 / 07</text>
+  <rect x="546.4000000000001" y="340" width="132" height="17" rx="3" fill="#B14F3F" opacity="0.95"/>
+    <line x1="612.4000000000001" y1="357" x2="612.4000000000001" y2="395" stroke="#121416" stroke-width="7" stroke-linecap="round" opacity="0.9"/><circle cx="564.8800000000001" cy="343.5" r="2.6" fill="#121416" opacity="0.8"/><circle cx="587.32" cy="343.5" r="2.6" fill="#121416" opacity="0.8"/><circle cx="607.1200000000001" cy="343.5" r="2.6" fill="#121416" opacity="0.8"/><circle cx="619.0000000000001" cy="343.5" r="2.6" fill="#121416" opacity="0.8"/><circle cx="641.44" cy="343.5" r="2.6" fill="#121416" opacity="0.8"/><circle cx="655.96" cy="343.5" r="2.6" fill="#121416" opacity="0.8"/><path d="M612.4000000000001 340 L617.3022039179343 331.82009581859154 L607.8044078358683 323.6401916371831 L618.1066117538026 315.4602874557746 L608.6088156717368 307.2803832743661 L615.9110195896709 299.10047909295764 L611.2132235076051 290.9205749115492" fill="none" stroke="#B14F3F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/><g transform="rotate(-9 300 323)">
+      <line x1="300" y1="323" x2="678.4000000000001" y2="323" stroke="#121416" stroke-width="7" stroke-linecap="round" opacity="0.9"/>
+      <rect x="546.4000000000001" y="323" width="132" height="17" rx="3" fill="#B14F3F" opacity="0.95"/>
+    </g>
+    <circle cx="300" cy="323" r="8" fill="none" stroke="#121416" stroke-width="6" opacity="0.9"/>
+    <line x1="300" y1="289" x2="300" y2="315" stroke="#121416" stroke-width="7" stroke-linecap="round" opacity="0.9"/>
+    <text x="74" y="596" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="92" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">Chatter.</text>
+    <text x="76" y="706" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">The coil pulls in, the load drops the</text><text x="76" y="764" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">voltage, the coil lets go, the voltage</text><text x="76" y="822" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">comes back.</text>
+    <text x="76" y="1000" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">Closing is the thing</text><text x="76" y="1070" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">that causes the opening.</text>
+    <path d="M80 1184 C300 1146 520 1208 742 1162 C862 1138 942 1172 1002 1152" fill="none" stroke="#B14F3F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn22-04-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
