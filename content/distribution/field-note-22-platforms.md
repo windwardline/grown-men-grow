@@ -1,9 +1,9 @@
 ---
 essay: He Writes Both Parts
 canonical: https://grownmengrow.com/he-writes-both-parts/ (live only after publication)
-status: draft — NOT founder-approved
-approved: no
-publication_authorized: false — NOT authorized for publication, newsletter delivery, metadata, or social posting
+status: founder-approved
+approved: 2026-09-20 — approved as written alongside the essay and artwork
+publication_authorized: false — approval covers the copy, not a slot; posting remains separately gated
 image_rule: per-article — this pack may use only Field Note 22 imagery: driveway-house-dusk-dash, control-relay-din-rail, relay-contacts-bench
 stance_note: assignment — the excerpts carry the mechanism and the cost; none of them issues the move, which stays in the essay's last paragraph where it is left to him
 ---

@@ -3566,3 +3566,23 @@ To post it: open `substack.com/@grownmengrow/notes`, confirm the `Edit profile` 
 **Founder approval arrived mid-run, before delivery.** The founder wrote "The Saturday draft is approved" while the imagery was still generating — that is, before the essay, the pack, or the artwork had been delivered in chat. The approval is recorded here and the note is nonetheless landed in `drafts/`, because a note in `content/` is canonical and is not rewritten, and the repository's own pattern is a separate approval change set after the founder has seen the unit. Moving it to `content/field-notes/` and `content/distribution/` at a register position is one follow-up change set and nothing blocks it.
 
 **Open, in order:** (1) The `content/` move above, on the founder's word once they have read the delivered unit — it needs a register position, its `status`/`approved`/`publication_authorized` frontmatter flipped, the `must live under content/` gate line for Field Note 22, and a `drafts/README.md` line. (2) Carried forward from the Friday readout: the Instagram traffic anomaly, the down notification feed, the unreachable unattended Saturday Substack slot, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-20 — Field Note 22 approved and moved into content/ at register position 21
+
+**Client:** Claude Code (desktop app), continuing the `gmg-saturday-draft` run.
+
+**Scope completed.** The founder approved "He Writes Both Parts" as written — essay, platform pack, and artwork — after the complete unit was delivered in chat. The note moved from `drafts/` to `content/field-notes/he-writes-both-parts.md` and its pack to `content/distribution/field-note-22-platforms.md`, taking register position 21. Nothing is published, sent, posted, or staged, and no Ghost slot is named.
+
+**Two approvals, and why only the second one moved it.** The first arrived mid-run, while the imagery was still generating and before the essay had been delivered; the draft change set (#197) landed in `drafts/` under it. The second arrived after delivery, and that is the one this change set acts on. A note in `content/` is canonical under `AGENTS.md` and is not rewritten, so an approval given before the essay had been read is not the one that should make it canonical. The reasoning is recorded in `decision-log.md` because it is the part that should repeat.
+
+**Register.** Appended at 21, projected 2027-01-05. Appending moves nothing: every projection above it is untouched and none of the three binding constraints involves it. It is the first append since the spacing check landed that records no strain — position 20 is `witness` so an appended witness note would have failed adjacency, and 19 and 20 are both trade openings so an appended trade opening would have hit the three-row ceiling. The draft was written `assignment` with an `other` opening because the register was read before the subject was chosen.
+
+**Corpus.** Bank goes to 22. The `**Corpus test last measured:**` marker stands at 2026-09-16, 21 pieces, next due at 31, and is left alone. No measurement was made and none is due.
+
+**Files changed:** `content/field-notes/he-writes-both-parts.md` and `content/distribution/field-note-22-platforms.md` (both moved from `drafts/`, frontmatter flipped to `status: founder-approved` with `publication_authorized: false`), `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `drafts/README.md`, `scripts/render-field-note-22.mjs`, `scripts/verify-repository.mjs`.
+
+**External state changed:** none.
+
+**Verification:** every `gate:` line run by name — `verify-ghost-theme` (17 theme files), `pnpm --dir theme test` (no fatal issues), theme zip with `gscan --fatal` (exit 0), `node --test` (200 tests, 0 failures), `verify-repository` (716 tracked files), `verify-svg-xml` (214 SVG files), `git diff --check` clean. The new `must live under content/` gate for Field Note 22 was broken on purpose — the draft path re-added and staged — and failed by name before this was committed, then cleared when the file was removed.
+
+**Open, in order:** (1) Nothing is scheduled for this note; when it takes a slot is a later founder decision and the Monday staging task reads the register. (2) Carried forward from the Friday readout: the Instagram traffic anomaly, the down notification feed, the unreachable unattended Saturday Substack slot, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.

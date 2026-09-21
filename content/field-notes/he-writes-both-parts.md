@@ -7,15 +7,15 @@ access: public
 email_subject: He Writes Both Parts
 preview: Nobody has ever lost an argument in his own truck.
 feature_image_alt: A warm lit house at dusk across a driveway, seen over the dark out-of-focus top of a dashboard from a parked vehicle, beside a close view of an industrial control relay on a rail in an open, well-kept control cabinet, in a paper collage.
-status: draft — NOT founder-approved
-approved: no
-publication_authorized: false — NOT authorized for publication, newsletter delivery, metadata, or social posting
+status: founder-approved
+approved: 2026-09-20 — essay, platform pack, and artwork approved as written on the day they were drafted; approval covers the work, not a slot
+publication_authorized: false — no Ghost slot named, no newsletter, no social posting; publication remains separately gated
 stance: assignment — the subject test fails for witness, and correctly: what he drafts is a move he has, and the closing hundred words turn to him
 closing_addresses_reader: yes — the last paragraph turns to him in the second person and leaves the decision named but unmade
 opening: other — opens on a man rehearsing a speech in a parked vehicle, not on a trade or a mechanism; the relay arrives at the third section
 personal_claims: none included; add only from founder-supplied facts
-artwork_status: draft; generated 2026-09-20 for this note under the house prompt, not founder-approved
-origin: written 2026-09-20 by the Saturday draft task with the standing commission at `none`
+artwork_status: complete; founder-approved 2026-09-20 under the per-article image rule and the photograph-exclusivity ruling
+origin: written 2026-09-20 by the Saturday draft task with the standing commission at `none`, so no commission line is cleared by this change set. Approved the same day and moved into content/ at register position 21
 ---
 
 # Ghost essay source
@@ -166,10 +166,10 @@ Run it for a year and he is very good at answering somebody who does not exist.
 
 # Production notes
 
-- Written 2026-09-20 by the Saturday draft task. Not founder-approved. No register position, no Ghost slot, nothing authorized for publication.
+- Written and approved 2026-09-20 — essay, pack, and artwork, on the day it was drafted. Register position 21. No Ghost slot named; publication timing remains a later founder decision.
 - Stance is `assignment`. `operating-cadence.md` carries `**Standing commission:** none`, so no commission line is cleared by this change set. The subject test fails for witness and correctly: what he drafts on the drive home is a move he has, and the closing turns to him.
 - The corpus reading of 2026-09-16 put `witness` at five pieces in twenty-one, roughly the quarter the Stance section describes, and argued for no further commission. The recent run has not tilted back toward obligation — the last note approved before this one was `assignment` and the one before it `witness` — so writing this as a witness piece would have been forcing it.
-- Register note for whoever places this if it is approved: position 20 is `the-opener-doesnt-lift-the-door`, a `witness` piece, so an appended `witness` note would sit adjacent to it and fail the spacing check. This note is `assignment` with an `other` opening, which also breaks the trade run at 19–20 rather than extending it to three.
+- Placed at register position 21. Position 20 is `the-opener-doesnt-lift-the-door`, a `witness` piece, so an appended `witness` note would have sat adjacent to it and failed the spacing check. This note is `assignment` with an `other` opening, which also ends the trade pair at 19–20 rather than extending it to three.
 - No first-person anecdote appears and no event is asserted as having happened; the essay runs in the generic present per the 2026-08-08 founder ruling, reaffirmed 2026-08-12.
 - The electrical specifics are ordinary control-circuit practice — a relay coil and its contacts, chatter under marginal coil voltage, arcing at every make and break, and contacts that pit and eventually weld or fail to pass current — used as metaphor, not as instruction.
 - Photography generated 2026-09-20 in the founder's ChatGPT project, continuing the current Editorial Photography Request thread. Four images were generated and three kept; the rejection was made against the quality gate at full resolution, on a physical tell, not on taste.

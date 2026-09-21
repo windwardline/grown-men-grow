@@ -61,6 +61,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 18 | `your-body-keeps-the-books` | 2026-12-15 | |
 | 19 | `everything-comes-to-him-flat` | 2026-12-22 | |
 | 20 | `the-opener-doesnt-lift-the-door` | 2026-12-29 | |
+| 21 | `he-writes-both-parts` | 2027-01-05 | |
 
 ## Why this order and not another
 
@@ -91,6 +92,12 @@ It was appended rather than slotted for separation because moving it up would ha
 `everything-comes-to-him-flat` was approved 2026-09-16 and appended at 20. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note.
 
 It opens on a quoted shop rule rather than a mechanism, but the rule is a welding rule and the piece is a fabrication-shop piece, so **the trade opening run at 16–20 is five.** That is the length the 2026-08-26 reorder was undertaken to break. It is an `assignment` piece, so it does not extend the witness cadence at 7, 10, 13, 16 and 19. Both facts are stated here and neither is acted on: reordering is the founder's decision, and the 2026-09-16 corpus entry in the decision log records the related finding that the five witness pieces share one skeleton. Nothing here is scheduled and nothing is urgent.
+
+### Position 21 was appended, and for once appending is what the rules wanted
+
+`he-writes-both-parts` was approved 2026-09-20 and appended at 21. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note.
+
+This is the first append since the spacing check landed, and it is the first one that records no strain, because the strain was priced into the drafting rather than into the placement. Position 20 is `witness`, so a `witness` note appended here would have sat adjacent to it and failed the check outright; positions 19 and 20 are both trade openings, so a `trade` opening here would have put 19–21 at the three-row ceiling. The note is `assignment` with an `other` opening, which ends the trade pair and leaves the witness gaps at 7, 10, 14, 17 and 20 untouched. The draft task read the register before choosing a subject rather than after writing one, which is the behaviour the 2026-09-16 entry was trying to produce.
 
 ### The spacing reorder of 2026-09-16, and why the rules are now checked
 
