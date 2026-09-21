@@ -16,8 +16,8 @@ One field note per week, Tuesday, with the newsletter. Everything else in the we
 | Wednesday | 10:00 AM | LinkedIn post | Buffer |
 | Thursday | 7:00 AM | Medium import, canonical-first | Automated |
 | Thursday | 9:00 AM | Instagram carousel | Buffer |
-| Saturday | 9:30 AM | Bluesky weekend fragment | Buffer |
-| Saturday | 9:30 AM | Substack Note 2 | Automated (browser) |
+| Saturday | 6:30 PM | Bluesky weekend fragment | Buffer |
+| Saturday | 6:30 PM | Substack Note 2 | Automated (browser) |
 
 ## Production cadence
 
@@ -31,7 +31,7 @@ Eight recurring tasks. Every one of them either does the work or hands the found
 
 | Task | When (ET) | Does |
 |---|---|---|
-| `gmg-monday-staging` | Mon 9:30 AM | Verifies Tuesday's post is scheduled with the newsletter bound; stages it if missing; queues the week's Buffer posts; builds the iCloud phone kit |
+| `gmg-monday-staging` | Mon 9:30 AM | Verifies Tuesday's post is scheduled with the newsletter bound; stages it if missing; queues the week's Buffer posts with `scripts/queue-week-buffer.mjs` without a further ask (founder-directed 2026-09-21), which refuses unapproved copy and a second run; builds the iCloud phone kit |
 | `gmg-tuesday-publish-check` | Tue 8:30 AM | Confirms the essay published, emailed, and fed the pipeline |
 | `gmg-tuesday-note` | Tue 11:45 AM | Posts Note 1 verbatim to the Substack profile and verifies it live |
 | `gmg-wednesday-draft` | Wed 10:00 AM | Writes and delivers the week's first new draft |
