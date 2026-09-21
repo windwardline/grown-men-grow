@@ -52,26 +52,32 @@ An unreachable feed fails closed: an unread feed is not an empty one.
 | `rest-is-not-a-reward` | 1 | 2026-09-08 12:00 | posted | `c-332603638` |
 | `rest-is-not-a-reward` | 2 | 2026-09-12 18:30 | posted | `c-335779365` |
 | `you-cant-outwork-a-wrong-direction` | 1 | 2026-09-15 12:00 | posted | `c-337967617` |
-| `you-cant-outwork-a-wrong-direction` | 2 | 2026-09-19 18:30 | missed |  |
+| `you-cant-outwork-a-wrong-direction` | 2 | 2026-09-19 18:30 | posted | `c-341987670` |
 
 ## What the rows say, as of 2026-09-20
 
-Seven of twelve notes posted. The two launch-week notes had no slot to be late
-against. Of the ten that did, five went out and five were missed, and the five
-misses have four distinct causes: the old 09:30 Saturday slot that could not
+Eight of twelve notes posted. The two launch-week notes had no slot to be late
+against. Of the ten that did, six went out and four were missed, and the four
+misses have three distinct causes: the old 09:30 Saturday slot that could not
 fire (two), a lateness guard correctly refusing a slot 378 minutes gone (one),
-a classifier refusal at the composer after a clean handover (one), and the
-desktop application sitting closed through a Saturday evening slot (one).
+and a classifier refusal at the composer after a clean handover (one).
 
-**That last one is the 6:30 PM move failing the way 9:30 AM failed.** The slot
-was moved on 2026-08-30 because a Saturday morning could not fire; on
-2026-09-19 a Saturday evening did not fire either, and the catch-up landed at
-21:30 the following day. The guard refused it — correctly, and for the wrong
-reason, which is its own entry in `publish-timing.md`. Two of the five misses
-are now the same cause wearing different clock faces: the scheduler cannot
-fire while the application is closed, and no slot is immune to that.
+**The sixth went out 1,643 minutes late, and that number is the finding.** The
+Saturday 2026-09-19 18:30 slot did not fire at all — the desktop application
+was closed through the evening — and the catch-up fire arrived 21:30 the
+following day and correctly refused itself. The note went out at 21:53 that
+Sunday because the founder posted it by hand. It is recorded `posted` because
+it was, and the lateness column is where the failure is legible; recording it
+`missed` would have been false, and recording it `posted` without the lateness
+would have been true and useless.
 
-**Every note that has ever gone out went out with a person at the keyboard.**
+**The 6:30 PM move failed the way 9:30 AM failed.** The slot was moved on
+2026-08-30 because a Saturday morning could not fire. A Saturday evening did
+not fire either. The scheduler cannot fire while the application is closed and
+no slot is immune to that, so what this row actually records is a founder-run
+post wearing a scheduled slot's timestamp.
+
+**Every note that has ever gone out went out with a person at the keyboard**, including this one, posted by hand 27 hours after its slot.
 That is the standing observation this register was built to make measurable
 rather than arguable, and it is the evidence behind the open founder question:
 authorize a keystroke mechanism for the composer, or record the Substack slots
