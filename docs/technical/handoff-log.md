@@ -3427,3 +3427,39 @@ To post it: open `substack.com/@grownmengrow/notes`, confirm the `Edit profile` 
 **Verification:** each edit was a unique-match replacement that failed loudly on a miss, and the Saturday diff was read in full.
 
 **Open, in order:** (1) Saturday's Substack Note 2 pending. (2) Carried forward: distribution, the one-member list, the suspended A/B, extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-20 — Claude Code — Friday analytics readout (week of 2026-09-14), run late on Sunday evening
+
+**Client:** Claude Code. **Branch:** `claude/friday-analytics-2026-09-20`. The `gmg-friday-analytics` task fired at 21:30 ET on Sunday 2026-09-20 against a Friday slot — the same closed-application cause already recorded in `publish-timing.md`, and the third consecutive weekend slot to land on catch-up.
+
+**Scope: verification only.** Nothing was published, posted, replied to, or sent.
+
+**Ghost.** Six published posts; member count **1**, unchanged since 2026-08-11, and that member has opened 5 of 5 emails. The `/emails/` endpoint answers **403 to an Admin API integration key**, the same session-only restriction already recorded for `/stats/` and `/links/`, so per-send delivered/opened/clicked counts are not collectable programmatically either. That is a third endpoint in the same family and is recorded here rather than in `publish-timing.md` because it changes no decision: at one recipient the numbers would not be a measurement.
+
+**A/B protocol remains suspended at step 3.** The `**A/B minimum recipients:**` floor is 30 and the list is 1. No timing decision is due and none was taken, so no dated entry was appended to `publish-timing.md`.
+
+**Platform numbers, week of 2026-09-14 (`you-cant-outwork-a-wrong-direction`).** Every scheduled Buffer post sent on its slot: Bluesky Tue 12:00, LinkedIn Wed 10:00, Instagram Thu 09:00, Bluesky Sat 18:30. Per-post engagement — Instagram reach **9**, views 12, saves 0, shares 0, follows 0; LinkedIn impressions **0** and reach 0, against 25/17 the prior week; Bluesky 0 likes, 0 replies, 0 reposts on both posts. Bluesky profile: **0 followers**, 12 posts, and zero replies or quotes across the entire feed. Buffer's Instagram metrics were refreshed 2026-09-20T11:01Z, so they are not stale.
+
+**The account-level Instagram numbers contradict the per-post numbers, and the discrepancy is the week's real finding.** Business Suite reports, for Sep 17–19 only, account reach 210/199/185 (**557** in the 28-day window, +2.7K%, 555 of it from non-followers), profile visits 25/18/15 (**64**, +256%), and bio-link clicks 22/17/12 (**51**, from zero across the preceding 25 days). Against that, Meta's *own* per-content table and Buffer agree that the Sep 17 carousel reached **9** accounts, and no story, reel, or ad ran in the window. The four posts in the window account for 45 of the 557. **Roughly 510 of the account-level reach is not attributable to anything the publication published.**
+
+**What it is not, stated plainly.** It is not being reported as growth. Followers moved 4 → 7 and Business Suite's own Follows column reads `‑‑` for the window; 51 bio-link clicks produced **0** new Ghost members; interactions fell 36.8% to 26 across the same 28 days. A ~80% profile-visit-to-link-click rate alongside near-zero conversion and no follows is the shape of automated traffic, not readership. It is also not being reported as an artifact, because a pure reporting glitch does not produce a coherent reach → visit → click funnel sustained across three days.
+
+**The cross-check that would settle it does not exist.** Ghost `/stats/` is 403, and `grownmengrow.com` returns no `cf-ray` — the apex is DNS-only at Cloudflare, as Ghost(Pro) requires — so there is no server-side view of whether those 51 clicks arrived. Whether to add one is a founder decision and is listed open below.
+
+**Moderation sweep — nothing to escalate, on any surface.** Ghost comments: **0** across all six posts, queried per post through the Admin API. Instagram DMs: Primary, General, Requests, and Hidden Requests each empty, Requests and Hidden both reporting "Delete all 0". Instagram comments: 0 on every post, confirmed independently by Buffer and Meta's per-content table. LinkedIn: 0 comments on both posts. Bluesky: 0 replies and 0 quotes across all 12 posts. Nothing in the escalation rows of `community-moderation.md` appeared on any surface, and no reply was made to anyone.
+
+**One moderation route has failed and its replacement is needed.** `instagram.com/notifications` — recorded on 2026-09-12 as the working route after the Business Suite inbox stopped rendering — now hangs on 35 skeleton placeholders past 28 seconds, the identical failure mode. The sweep was completed anyway, because comment counts are readable from two other surfaces and DMs render normally; but the route that gives *attribution* for interactions is gone, which is what the 2026-09-12 entry used to separate the house's own likes from an audience's.
+
+**Qualitative pass: there is still nothing being said back.** Zero comments, zero replies, zero DMs, zero conversations started, across every surface, in week six. No question or objection has recurred because none has been raised once. No reader has disclosed anything. The responsiveness principle in `editorial-underpinning.md` has had no input to respond to since launch, and that is a distribution fact rather than an editorial one — `publish-timing.md` already says slot-tuning does not reach it.
+
+**Corpus balance check: not run, correctly.** The `**Corpus test last measured:**` marker stands at 2026-09-16, 21 pieces, next due at 31. The bank is 21 (20 field notes plus the launch essay). Ten pieces to go; measuring now would overwrite a four-day-old measurement with the same numbers.
+
+**Cadence gates, both run on the live machine.** `verify-publication-register.mjs`: 21 rows agree with Ghost (6 published, 0 scheduled, 15 projected). `verify-substack-notes.mjs`: 12 rows agree with the live feed, worst lateness 268 min. The Saturday 2026-09-19 18:30 slot was recorded `missed` by a concurrent session while this readout ran; that session's edits were left untouched and only this file was staged.
+
+**Buffer's queue is empty.** Expected on a Sunday — Monday's staging task fills it — but it means position 6 `nobody-rigs-to-the-breaking-strength` has nothing staged for Tuesday 08:00 and the Monday task firing is load-bearing.
+
+**Files changed:** this log only. **External state changed:** none.
+
+**Verification:** Ghost Admin API, Buffer GraphQL, the public Bluesky API, and Meta Business Suite read directly; both `cadence:` gates run and their output recorded above. No `gate:` line was run because no code changed.
+
+**Open, in order:** (1) **The Instagram traffic anomaly** — founder decision on whether to add a server-side pageview source, given that Ghost's is unreachable by API and Cloudflare sees nothing. (2) LinkedIn reporting 0 impressions on a post the prior week reported 25 for — one week is not a trend, watch it next readout. (3) The Instagram notification feed is down; the 2026-09-12 attribution route needs a replacement before any interaction figure is quoted again. (4) The Saturday Substack slot has now failed from both 09:30 and 18:30 — `publish-timing.md` already states the conclusion this triggers, that no unattended Saturday slot is reachable on this machine, which makes it a founder decision rather than a scheduled action. (5) Carried forward: distribution, the one-member list, the suspended A/B, the extract-zip acceptances expiring 2026-11-09.
