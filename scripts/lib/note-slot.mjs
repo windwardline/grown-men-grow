@@ -58,16 +58,53 @@ export function zonedDayParts(epochMs, timeZone = DEFAULT_TIME_ZONE) {
   return { year: shifted.getUTCFullYear(), month: shifted.getUTCMonth() + 1, day: shifted.getUTCDate() };
 }
 
-/** The UTC instant of today's `slot`, where "today" is the zone's day. */
-export function slotEpochMs({ epochMs, slot, timeZone = DEFAULT_TIME_ZONE }) {
+/** The day of the week `epochMs` falls on in `timeZone`, Sunday first. */
+export function zonedWeekday(epochMs, timeZone = DEFAULT_TIME_ZONE) {
+  return new Date(epochMs + zoneOffsetMs(epochMs, timeZone)).getUTCDay();
+}
+
+function assertWeekday(weekday, label) {
+  if (!Number.isInteger(weekday) || weekday < 0 || weekday > 6) {
+    throw new TypeError(`Invalid ${label} ${JSON.stringify(weekday)}; expected an integer 0-6, Sunday first.`);
+  }
+}
+
+/**
+ * The UTC instant of `slot` on the zone's day, shifted by `dayOffset` days.
+ *
+ * `dayOffset` defaults to 0, which is today — the only reading this had until
+ * a slot needed to name a weekday as well as a time.
+ */
+export function slotEpochMs({ epochMs, slot, timeZone = DEFAULT_TIME_ZONE, dayOffset = 0 }) {
   const { hour, minute } = parseSlot(slot);
   const { year, month, day } = zonedDayParts(epochMs, timeZone);
-  const naive = Date.UTC(year, month - 1, day, hour, minute, 0);
+  const naive = Date.UTC(year, month - 1, day + dayOffset, hour, minute, 0);
   // Converge: the offset depends on the instant, which depends on the offset.
   // Two passes settle every real zone, including across a DST transition.
   let resolved = naive;
   for (let pass = 0; pass < 2; pass += 1) resolved = naive - zoneOffsetMs(resolved, timeZone);
   return resolved;
+}
+
+/**
+ * The occurrence of `slot` on `slotWeekday` nearest to `epochMs`, either side.
+ *
+ * Nearest rather than most-recent because both directions are real: a catch-up
+ * burst fires after the slot, and a scheduler that runs early fires before it.
+ * Whichever it is, the number this yields is the run's true distance from the
+ * slot it was serving, which is the number worth reporting.
+ */
+export function weekdaySlotEpochMs({ epochMs, slot, slotWeekday, timeZone = DEFAULT_TIME_ZONE }) {
+  assertWeekday(slotWeekday, 'slotWeekday');
+  const runWeekday = zonedWeekday(epochMs, timeZone);
+  let nearest = null;
+  // -7..7 covers both neighbouring occurrences whatever day the run falls on.
+  for (let dayOffset = -7; dayOffset <= 7; dayOffset += 1) {
+    if ((((runWeekday + dayOffset) % 7) + 7) % 7 !== slotWeekday) continue;
+    const candidate = slotEpochMs({ epochMs, slot, timeZone, dayOffset });
+    if (nearest === null || Math.abs(candidate - epochMs) < Math.abs(nearest - epochMs)) nearest = candidate;
+  }
+  return nearest;
 }
 
 /**
@@ -82,13 +119,23 @@ export function slotVerdict({
   slot,
   graceMinutes = DEFAULT_GRACE_MINUTES,
   timeZone = DEFAULT_TIME_ZONE,
+  slotWeekday,
 }) {
-  const slotMs = slotEpochMs({ epochMs, slot, timeZone });
+  const bound = slotWeekday !== undefined;
+  const slotMs = bound
+    ? weekdaySlotEpochMs({ epochMs, slot, slotWeekday, timeZone })
+    : slotEpochMs({ epochMs, slot, timeZone });
   const deltaMs = epochMs - slotMs;
   const graceMs = graceMinutes * 60_000;
+  const runWeekday = zonedWeekday(epochMs, timeZone);
+  const weekdayMismatch = bound && runWeekday !== slotWeekday;
 
+  // A wrong-day run is refused before the clock is consulted. It must never
+  // reach `wait`: told to sleep, it would wake inside the wrong day's window
+  // and post there, which is the failure this branch exists to prevent.
   let verdict = 'post';
-  if (deltaMs < 0) verdict = 'wait';
+  if (weekdayMismatch) verdict = 'stand-down';
+  else if (deltaMs < 0) verdict = 'wait';
   else if (deltaMs > graceMs) verdict = 'stand-down';
 
   return {
@@ -97,6 +144,8 @@ export function slotVerdict({
     offsetMinutes: Math.round(deltaMs / 60_000),
     waitMs: verdict === 'wait' ? -deltaMs : 0,
     graceMinutes,
+    runWeekday,
+    weekdayMismatch,
   };
 }
 
@@ -114,6 +163,24 @@ export function slotVerdict({
 // anchor still refuses last week's essay at either slot, which is the whole
 // point of the precondition.
 
+/** Weekday names, Sunday first — for reasons a person has to read. */
+export const WEEKDAY_NAMES = Object.freeze(['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']);
+
+/**
+ * The weekday each note task's slot belongs to, Sunday 0.
+ *
+ * The weekday was knowable only from the task's cron, which lives outside this
+ * repository in a `SKILL.md` the gates cannot read — so on 2026-09-20 a Saturday
+ * run that fired on Sunday had nothing to check itself against. Holding it here
+ * puts the guard where a gate can reach it: `verify-repository.mjs` reconciles
+ * this table against the schedule of record in `publish-timing.md`, so a slot
+ * that moves days cannot move in one file and not the other.
+ */
+export const NOTE_TASK_SLOT_WEEKDAYS = Object.freeze({
+  'gmg-tuesday-note': 2,
+  'gmg-saturday-note': 6,
+});
+
 /** Ghost publishes Tuesday 08:00 ET — `docs/technical/publish-timing.md`. */
 export const DEFAULT_PUBLISH_WEEKDAY = 2; // 0 = Sunday
 
@@ -123,9 +190,7 @@ export function publicationWeekStartMs({
   publishWeekday = DEFAULT_PUBLISH_WEEKDAY,
   timeZone = DEFAULT_TIME_ZONE,
 }) {
-  if (!Number.isInteger(publishWeekday) || publishWeekday < 0 || publishWeekday > 6) {
-    throw new TypeError(`Invalid publishWeekday ${JSON.stringify(publishWeekday)}; expected an integer 0-6, Sunday first.`);
-  }
+  assertWeekday(publishWeekday, 'publishWeekday');
   const shifted = new Date(epochMs + zoneOffsetMs(epochMs, timeZone));
   const daysBack = (shifted.getUTCDay() - publishWeekday + 7) % 7;
   const naive = Date.UTC(shifted.getUTCFullYear(), shifted.getUTCMonth(), shifted.getUTCDate() - daysBack, 0, 0, 0);
