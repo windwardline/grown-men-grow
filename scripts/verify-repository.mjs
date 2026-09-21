@@ -813,6 +813,15 @@ const mediumTag = /^[A-Za-z0-9][A-Za-z0-9 -]*$/;
 for (const [label, file] of packs) {
   const text = await readFile(path.join(root, file), 'utf8');
   const lines = text.split('\n');
+  // A pack under content/ is canonical and is what the staging task copies to
+  // Buffer verbatim, so its frontmatter must say so. Field Note 12's pack sat
+  // here reading "draft — NOT founder-approved" from 2026-08-16 until
+  // 2026-09-21, a day before it was due to post, while the decision log and
+  // the essay both recorded the pack approved.
+  const packStatus = lines.find((line) => line.startsWith('status:'));
+  if (!packStatus?.startsWith('status: founder-approved')) {
+    fail(`${file} lives under content/ but its frontmatter does not read "status: founder-approved" (${packStatus ?? 'no status line'}).`);
+  }
   for (const section of packSections) {
     if (!lines.some((line) => line.startsWith(section))) {
       fail(`${file} is missing the ${section.slice(2)} section of ${label}'s platform pack.`);
