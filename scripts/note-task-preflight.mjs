@@ -25,7 +25,7 @@ import { fileURLToPath } from 'node:url';
 
 import { acquireTaskLock, releaseTaskLock, DEFAULT_LOCK_DIR } from './lib/task-lock.mjs';
 import { parseHold } from './lib/hold-state.mjs';
-import { slotVerdict, DEFAULT_GRACE_MINUTES, DEFAULT_PUBLISH_WEEKDAY, DEFAULT_TIME_ZONE } from './lib/note-slot.mjs';
+import { slotVerdict, NOTE_TASK_SLOT_WEEKDAYS, DEFAULT_GRACE_MINUTES, DEFAULT_PUBLISH_WEEKDAY, DEFAULT_TIME_ZONE } from './lib/note-slot.mjs';
 import { decide } from './lib/note-decision.mjs';
 import { latestPublishedPost } from './lib/ghost-admin.mjs';
 
@@ -79,6 +79,26 @@ const note = Number(args.note ?? 1);
 const graceMinutes = args['grace-minutes'] === undefined ? DEFAULT_GRACE_MINUTES : Number(args['grace-minutes']);
 const timeZone = args['time-zone'] ?? DEFAULT_TIME_ZONE;
 const publishWeekday = args['publish-weekday'] === undefined ? DEFAULT_PUBLISH_WEEKDAY : Number(args['publish-weekday']);
+
+// Which weekday this task's slot belongs to. Resolved from the task name rather
+// than passed by the caller, because the caller is a `SKILL.md` outside this
+// repository: a flag the task file forgets to pass is a guard that silently is
+// not there, which is how the day went unchecked until 2026-09-20. An unknown
+// task must therefore fail closed — a note task whose day nothing knows is
+// exactly the run this guard exists to refuse.
+const slotWeekday = args['slot-weekday'] === undefined
+  ? NOTE_TASK_SLOT_WEEKDAYS[task]
+  : Number(args['slot-weekday']);
+if (slotWeekday === undefined) {
+  emit(
+    {
+      ok: false,
+      task,
+      error: `Task ${JSON.stringify(task)} is not in NOTE_TASK_SLOT_WEEKDAYS, so the weekday its slot belongs to is unknown. Add it there, or pass --slot-weekday <0-6, Sunday first>.`,
+    },
+    EXIT.error,
+  );
+}
 const epochMs = args.now ? Date.parse(args.now) : Date.now();
 const holder = args.holder ?? `pid-${process.pid}`;
 
@@ -99,7 +119,7 @@ try {
   //    TTL runs to the far edge of the posting window plus a margin, so a run
   //    that dies mid-wait frees the task rather than wedging it past its slot.
   // Only for the lock TTL. The verdict the run acts on comes from decide().
-  const lockWindow = slotVerdict({ epochMs, slot, graceMinutes, timeZone });
+  const lockWindow = slotVerdict({ epochMs, slot, graceMinutes, timeZone, slotWeekday });
   const ttlMs = Math.min(4 * 60 * 60_000, Math.max(15 * 60_000, lockWindow.slotEpochMs + graceMinutes * 60_000 + 15 * 60_000 - epochMs));
   const lock = acquireTaskLock({ task, dir: lockDir, ttlMs, epochMs, holder });
   if (!lock.acquired) {
@@ -121,7 +141,7 @@ try {
   //      credential. The regression this replaced was in these lines, not in
   //      the arithmetic they called.
   const post = await latestPublishedPost();
-  const decision = decide({ epochMs, slot, note, post, graceMinutes, timeZone, publishWeekday });
+  const decision = decide({ epochMs, slot, note, post, graceMinutes, timeZone, publishWeekday, slotWeekday });
 
   // A stand-down on the essay carries no copy, so it never becomes a payload.
   if (!decision.essay) {
@@ -136,6 +156,9 @@ try {
     task,
     verdict: decision.verdict,
     slot,
+    slotWeekday,
+    ranOnWeekday: decision.timing.runWeekday,
+    weekdayMismatch: decision.timing.weekdayMismatch,
     offsetMinutes: decision.timing.offsetMinutes,
     graceMinutes,
     waitSeconds: Math.ceil(decision.timing.waitMs / 1000),

@@ -6,7 +6,7 @@ import { lstat, readFile, readdir } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 
 import { parseHold } from './lib/hold-state.mjs';
-import { DEFAULT_PUBLISH_WEEKDAY } from './lib/note-slot.mjs';
+import { DEFAULT_PUBLISH_WEEKDAY, NOTE_TASK_SLOT_WEEKDAYS } from './lib/note-slot.mjs';
 import { tradeRunFaults, witnessSkeletonFaults, witnessSpacingFaults } from './lib/register-spacing.mjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -1033,6 +1033,41 @@ try {
       fail(
         `docs/technical/publish-timing.md publishes the weekly field note on ${days[declared]}, but note-slot.mjs measures the publication week from ${days[DEFAULT_PUBLISH_WEEKDAY]}. ` +
           'Both note tasks would then accept or refuse the wrong essay; update DEFAULT_PUBLISH_WEEKDAY to match the schedule of record.',
+      );
+    }
+  }
+
+  // The same derivation for the days the Substack Note slots themselves fall
+  // on. Until 2026-09-20 that day was stated only in each task's cron, in a
+  // `SKILL.md` outside this repository — so a Saturday task that fired on a
+  // Sunday measured itself against Sunday's slot, reported 181 minutes late
+  // rather than 1621, and would have posted outright had it fired before
+  // 19:30. `NOTE_TASK_SLOT_WEEKDAYS` is what now refuses that, and a guard
+  // whose premise can drift out of the schedule of record is not one.
+  //
+  // Sets rather than a per-task mapping: the document names slots, not tasks,
+  // and the claim under test is that the days this repository guards are the
+  // days the schedule actually publishes on.
+  const noteDays = timing
+    .split('\n')
+    .filter((line) => line.startsWith('|'))
+    .map((line) => line.split('|').map((cell) => cell.replaceAll('*', '').trim()))
+    .filter((cells) => /Substack Notes/i.test(cells[2] ?? ''))
+    .map((cells) => ({ when: cells[1], weekday: days.findIndex((day) => (cells[1] ?? '').startsWith(day)) }));
+
+  const unparsed = noteDays.filter((row) => row.weekday === -1);
+  if (!noteDays.length) {
+    fail('docs/technical/publish-timing.md no longer carries a Substack Notes row in the schedule of record, so the note slot weekdays cannot be derived.');
+  } else if (unparsed.length) {
+    fail(`docs/technical/publish-timing.md names a Substack Notes slot as ${unparsed.map((row) => JSON.stringify(row.when)).join(', ')}, which does not begin with a weekday.`);
+  } else {
+    const scheduled = [...new Set(noteDays.map((row) => row.weekday))].sort();
+    const guarded = [...new Set(Object.values(NOTE_TASK_SLOT_WEEKDAYS))].sort();
+    if (scheduled.join() !== guarded.join()) {
+      fail(
+        `docs/technical/publish-timing.md schedules Substack Notes on ${scheduled.map((day) => days[day]).join(' and ')}, ` +
+          `but note-slot.mjs guards ${guarded.map((day) => days[day]).join(' and ')} in NOTE_TASK_SLOT_WEEKDAYS. ` +
+          'A note task would then be refused on the day it is meant to run, or accepted on a day it is not; move both together.',
       );
     }
   }

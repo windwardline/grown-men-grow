@@ -17,7 +17,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { slotVerdict, publicationWeekStartMs, publishedThisPublicationWeek, DEFAULT_GRACE_MINUTES, DEFAULT_PUBLISH_WEEKDAY, DEFAULT_TIME_ZONE } from './note-slot.mjs';
+import { slotVerdict, publicationWeekStartMs, publishedThisPublicationWeek, WEEKDAY_NAMES, DEFAULT_GRACE_MINUTES, DEFAULT_PUBLISH_WEEKDAY, DEFAULT_TIME_ZONE } from './note-slot.mjs';
 import { resolvePackForSlug, extractNote } from './note-pack.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -37,8 +37,9 @@ export function decide({
   graceMinutes = DEFAULT_GRACE_MINUTES,
   timeZone = DEFAULT_TIME_ZONE,
   publishWeekday = DEFAULT_PUBLISH_WEEKDAY,
+  slotWeekday,
 }) {
-  const timing = slotVerdict({ epochMs, slot, graceMinutes, timeZone });
+  const timing = slotVerdict({ epochMs, slot, graceMinutes, timeZone, slotWeekday });
 
   // Nothing published at all is a decidable stand-down, and it must not read as
   // the same thing as a week that skipped: `latestPublishedPost()` returns null
@@ -79,7 +80,12 @@ export function decide({
   };
 
   if (timing.verdict === 'stand-down') {
-    decision.reason = `${timing.offsetMinutes} minutes past the ${slot} slot, beyond the ${graceMinutes}-minute grace window`;
+    // A wrong-day run is not a late run, and reporting it as one buries the
+    // fact that matters. The 2026-09-20 fire read as "181 minutes past 18:30"
+    // when the slot it served had been gone for a day and three hours.
+    decision.reason = timing.weekdayMismatch
+      ? `this run fired on ${WEEKDAY_NAMES[timing.runWeekday]}, but the ${slot} slot belongs to ${WEEKDAY_NAMES[slotWeekday]} — ${timing.offsetMinutes} minutes from the slot it was serving`
+      : `${timing.offsetMinutes} minutes past the ${slot} slot, beyond the ${graceMinutes}-minute grace window`;
   }
   return decision;
 }

@@ -6,6 +6,7 @@ import {
   publishedThisPublicationWeek,
   slotEpochMs,
   slotVerdict,
+  weekdaySlotEpochMs,
   zonedDayParts,
 } from '../lib/note-slot.mjs';
 
@@ -150,4 +151,89 @@ test('an essay published exactly at the week boundary is inside the week', () =>
     publishedThisPublicationWeek({ publishedAtMs: boundary, epochMs: Date.parse('2026-08-22T13:30:00Z'), timeZone: ET }),
     true,
   );
+});
+
+// --- the weekday the slot belongs to ---------------------------------------
+// The defect this section exists for, found 2026-09-20. `gmg-saturday-note`
+// fired on Sunday at 21:30 ET after the desktop app spent Saturday evening
+// closed. `slotEpochMs` anchors on *today's* zone day, so the run measured
+// itself against Sunday 18:30 and reported 181 minutes late when the slot it
+// was serving — Saturday 18:30 — was 1621 minutes gone.
+//
+// That run stood down, but only because 21:30 happens to sit past Sunday's
+// grace window. Had the app opened at 17:00 the same Sunday, the verdict was
+// `wait`: sleep 90 minutes, post the Saturday note on Sunday evening, and
+// record it as on time. The essay precondition does not catch it either —
+// Sunday is inside the week its Tuesday essay opened, so the essay check
+// passes. Nothing else looks at the day.
+//
+// Lateness is reported rather than failed on because it is a fact about a
+// human's evening. A note posted into the wrong day is not that: it moves the
+// baseline the Friday analytics task reads, which is the reason this module
+// exists at all.
+test('a slot bound to a weekday refuses a run on any other day', () => {
+  // 17:00 ET Sunday, 90 minutes before Sunday's 18:30 — `wait` without the guard.
+  const sundayEvening = Date.parse('2026-09-20T21:00:00Z');
+  const unguarded = slotVerdict({ epochMs: sundayEvening, slot: '18:30', timeZone: ET });
+  assert.equal(unguarded.verdict, 'wait', 'precondition: the day-blind reading waits');
+
+  const guarded = slotVerdict({ epochMs: sundayEvening, slot: '18:30', slotWeekday: 6, timeZone: ET });
+  assert.equal(guarded.verdict, 'stand-down');
+  assert.equal(guarded.weekdayMismatch, true);
+  assert.equal(guarded.runWeekday, 0);
+  assert.equal(guarded.waitMs, 0, 'a wrong-day run must never be told to wait');
+});
+
+test('a wrong-day run reports its distance from the slot it was serving', () => {
+  // The real 2026-09-20 run: 21:30 ET Sunday, serving Saturday 18:30 ET.
+  const actual = Date.parse('2026-09-21T01:30:00Z');
+  const guarded = slotVerdict({ epochMs: actual, slot: '18:30', slotWeekday: 6, timeZone: ET });
+  assert.equal(guarded.verdict, 'stand-down');
+  // Saturday 2026-09-19 18:30 ET === 22:30Z. 27h01m later, not 181 minutes.
+  assert.equal(guarded.slotEpochMs, Date.parse('2026-09-19T22:30:00Z'));
+  assert.equal(guarded.offsetMinutes, 1620);
+});
+
+test('the weekday guard leaves an on-day run exactly as it was', () => {
+  const cases = [
+    ['2026-09-19T21:00:00Z', 'wait'], // 17:00 ET Saturday, 90 min early
+    ['2026-09-19T22:30:00Z', 'post'], // the slot itself
+    ['2026-09-19T23:30:00Z', 'post'], // the far edge of grace
+    ['2026-09-19T23:31:00Z', 'stand-down'], // one minute past it
+  ];
+  for (const [iso, expected] of cases) {
+    const epochMs = Date.parse(iso);
+    const blind = slotVerdict({ epochMs, slot: '18:30', timeZone: ET });
+    const guarded = slotVerdict({ epochMs, slot: '18:30', slotWeekday: 6, timeZone: ET });
+    assert.equal(guarded.verdict, expected, `${iso} should ${expected}`);
+    assert.deepEqual(
+      { v: guarded.verdict, o: guarded.offsetMinutes, w: guarded.waitMs },
+      { v: blind.verdict, o: blind.offsetMinutes, w: blind.waitMs },
+      `${iso} must be unchanged by the guard`,
+    );
+    assert.equal(guarded.weekdayMismatch, false);
+  }
+});
+
+test('weekdaySlotEpochMs resolves the nearest occurrence, either direction', () => {
+  // Sunday 21:30 ET: Saturday just gone is nearer than Saturday coming.
+  assert.equal(
+    weekdaySlotEpochMs({ epochMs: Date.parse('2026-09-21T01:30:00Z'), slot: '18:30', slotWeekday: 6, timeZone: ET }),
+    Date.parse('2026-09-19T22:30:00Z'),
+  );
+  // Wednesday: the Saturday ahead is nearer than the one behind.
+  assert.equal(
+    weekdaySlotEpochMs({ epochMs: Date.parse('2026-09-23T16:00:00Z'), slot: '18:30', slotWeekday: 6, timeZone: ET }),
+    Date.parse('2026-09-26T22:30:00Z'),
+  );
+});
+
+test('an out-of-range weekday is a typed error, not a silently skipped guard', () => {
+  for (const bad of [7, -1, 2.5, '6', null]) {
+    assert.throws(
+      () => slotVerdict({ epochMs: Date.now(), slot: '18:30', slotWeekday: bad, timeZone: ET }),
+      TypeError,
+      `${JSON.stringify(bad)} should throw`,
+    );
+  }
 });

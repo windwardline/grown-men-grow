@@ -107,3 +107,42 @@ test('a post whose date cannot be parsed raises rather than reading as no essay'
 test('a post missing published_at entirely raises too', () => {
   assert.throws(() => at('2026-08-22T13:30:00Z', { post: { slug: 's' } }), /published_at/);
 });
+
+// --- the wrong day ---------------------------------------------------------
+// 2026-09-20: `gmg-saturday-note` fired on Sunday because the desktop app had
+// been closed all Saturday evening. The essay precondition passes on a Sunday —
+// it is inside the week its Tuesday essay opened — so the day was checked by
+// nothing at all, and the clock alone decided.
+test('a wrong-day run stands down even where the clock would have said post', () => {
+  // Sunday 2026-08-23 13:30Z is 09:30 ET — the 09:30 slot exactly, to the minute.
+  const clockPerfect = at('2026-08-23T13:30:00Z');
+  assert.equal(clockPerfect.verdict, 'post', 'precondition: the day-blind reading posts');
+
+  const guarded = at('2026-08-23T13:30:00Z', { slotWeekday: 6 });
+  assert.equal(guarded.verdict, 'stand-down');
+  assert.match(guarded.reason, /Sunday/);
+  assert.match(guarded.reason, /Saturday/);
+});
+
+test('a wrong-day stand-down still carries the copy, so the founder can post it', () => {
+  // The lateness stand-down carries copy for exactly this reason; a run that
+  // refuses the slot has not stopped being able to hand the note over.
+  const guarded = at('2026-08-23T13:30:00Z', { slotWeekday: 6 });
+  assert.equal(guarded.verdict, 'stand-down');
+  assert.equal(guarded.essay.slug, ESSAY.slug);
+  assert.ok(guarded.copy.length > 0);
+});
+
+test('a wrong-day run against last week’s essay still fails on the essay first', () => {
+  const guarded = at('2026-08-23T13:30:00Z', { slotWeekday: 6, post: STALE });
+  assert.equal(guarded.verdict, 'stand-down');
+  assert.match(guarded.reason, /essay has not published/);
+  assert.equal(guarded.essay, undefined, 'the wrong week must never reach a payload');
+});
+
+test('the weekday guard changes nothing for a run on its own day', () => {
+  for (const [iso, expected] of [['2026-08-22T13:30:00Z', 'post'], ['2026-08-22T12:30:00Z', 'wait'], ['2026-08-22T15:00:00Z', 'stand-down']]) {
+    assert.equal(at(iso).verdict, expected, `${iso} baseline`);
+    assert.equal(at(iso, { slotWeekday: 6 }).verdict, expected, `${iso} guarded`);
+  }
+});
