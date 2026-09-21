@@ -46,7 +46,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 3 | `friendship-has-a-maintenance-schedule` | 2026-09-01 | published |
 | 4 | `rest-is-not-a-reward` | 2026-09-08 | published |
 | 5 | `you-cant-outwork-a-wrong-direction` | 2026-09-15 | published |
-| 6 | `nobody-rigs-to-the-breaking-strength` | 2026-09-22 | |
+| 6 | `nobody-rigs-to-the-breaking-strength` | 2026-09-22 | scheduled |
 | 7 | `the-lights-never-flickered` | 2026-09-29 | |
 | 8 | `ask-for-help-while-its-still-cheap` | 2026-10-06 | |
 | 9 | `you-can-walk-on-it-tomorrow` | 2026-10-13 | |

@@ -1,8 +1,8 @@
 ---
 essay: Nobody Rigs to the Breaking Strength
 canonical: https://grownmengrow.com/nobody-rigs-to-the-breaking-strength/ (live only after publication)
-status: draft — NOT founder-approved
-approved: no
+status: founder-approved
+approved: 2026-08-16 — approved in full with the essay and artwork; the frontmatter flip was missed in #97 and corrected 2026-09-21 on the founder's confirmation
 stance: assignment — the pack may address the reader, as the essay does
 image_rule: per-article — this pack may use only Field Note 12 imagery
 ---
