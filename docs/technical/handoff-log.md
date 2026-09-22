@@ -3680,3 +3680,15 @@ They failed on the missing export before the implementation existed. The live ru
 **Verification:** every `gate:` line was run by name before commit.
 
 **Open:** (1) The founder applies the Tuesday task step, or leaves the Monday backstop as the only automatic path. (2) Carried forward from the publish-check entry above.
+
+## 2026-09-22 — Claude Code: the Tuesday task now records the publish
+
+**Client:** Claude Code (desktop app). The founder directed the edit that the previous entry left open.
+
+Step 4 of `~/.claude/scheduled-tasks/gmg-tuesday-publish-check/SKILL.md` now runs `verify-publication-register.mjs --fix` after the essay publishes. When it records a row, the task completes the branch, gates, PR, and auto-merge for exactly `publication-order.md` and `handoff-log.md`. The old reporting step is now step 5. Both weekly tasks now run `--fix`. `AGENTS.md` and the runner's header comment are updated to say so. This corrects the previous entry's open item (1).
+
+**Files changed:** `AGENTS.md`, `scripts/verify-publication-register.mjs` (comment only), and this log. Outside the repository: the Tuesday task `SKILL.md`.
+
+**External state changed:** none.
+
+**Verification:** every `gate:` line was run by name before commit.

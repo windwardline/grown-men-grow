@@ -15,9 +15,9 @@
 // `scheduled` whose post Ghost reports `published` is rewritten to
 // `published`, and nothing else is. It writes only after every row was looked
 // up, then reconciles the result exactly as without the flag, so any other
-// disagreement still fails. The Monday staging task runs it before deciding
-// what to stage; the Tuesday publish check is meant to run it once the essay
-// is out.
+// disagreement still fails. The Tuesday publish check runs it once the essay
+// is out, and the Monday staging task runs it again before deciding what to
+// stage, in case Tuesday's run never fired.
 
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
