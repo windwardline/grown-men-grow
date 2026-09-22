@@ -3712,3 +3712,21 @@ Step 4 of `~/.claude/scheduled-tasks/gmg-tuesday-publish-check/SKILL.md` now run
 **Verification:** preflight exit code; screenshot comparison of the staged text; `verify-substack-notes.mjs` agreed on every poll; every `gate:` line was run before commit.
 
 **Open:** (1) The founder clicks Post in the open composer, or cancels it. (2) The next session to touch the register runs `verify-substack-notes.mjs` and records row 1 as `posted` with its permalink and lateness, or as `missed` once the founder rules it so. (3) Keystroke injection now has a second intermittent failure: the first sentence was dropped. Every future run must verify the staged text, not just confirm that `type` succeeded.
+
+## 2026-09-22 — Claude Code: the Tuesday note went out; register corrected
+
+**Client:** Claude Code (desktop app), same `gmg-tuesday-note` session, resumed when the founder said they had posted. This corrects open items (1) and (2) of the entry above, which recorded the note as staged and unposted. That entry stands as written: it was true when written.
+
+**Verified, not taken on the founder's word.** `verify-substack-notes.mjs` failed against `main` exactly as designed — a blank row whose copy the feed now carries. The note is `c-343339371`, posted 2026-09-22T18:34:37Z (14:34 ET), and the checker's byte-for-byte match confirms it went out verbatim. The morning's dropped opening sentence did not reach the live note.
+
+**Lateness: +155 minutes** against the 12:00 ET slot, as derived by the checker. Reported, not failed on.
+
+**Register.** Row `nobody-rigs-to-the-breaking-strength` 1 is now `posted` with its permalink. The hand-counted prose was refreshed with it — heading date, and nine of thirteen posted, seven of eleven slotted. Two findings were added: the 155-minute wait sat entirely in the half no schedule governs, since the automated half completed before noon; and keystroke injection has a second failure mode that is silent, dropping the opening sentence while the call returned success. The backfill-provenance paragraph was scoped to the backfill so its count stops rotting as rows are added.
+
+**Files changed:** `docs/technical/substack-notes.md`, and this log.
+
+**External state changed:** none by this session. The note was posted by the founder.
+
+**Verification:** `verify-substack-notes.mjs` reproduced the stale-register failure before the edit and agrees on all 14 rows after it; every `gate:` line was run before commit.
+
+**Open:** (1) The open founder question is unchanged and now has more evidence: authorize a keystroke mechanism for the composer, or record the Substack slots as founder-run rather than scheduled. Any mechanism authorized must read back what landed — a `type` that returns success is not evidence that the copy arrived intact. (2) Saturday's Note 2 slot, 2026-09-26 18:30, is pending.
