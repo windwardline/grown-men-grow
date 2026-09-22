@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { parseRegister, reconcileRegister } from '../lib/publication-register.mjs';
+import { parseRegister, reconcileRegister, recordPublished } from '../lib/publication-register.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const register = path.join(root, 'docs', 'technical', 'publication-order.md');
@@ -101,4 +101,58 @@ test('a row Ghost was never asked about fails rather than passing', () => {
 
 test('reconciling zero rows is an error', () => {
   assert.throws(() => reconcileRegister({ rows: [], live: {} }), /examined nothing/i);
+});
+
+// recordPublished: Ghost's scheduler executing a decision already made is the
+// one disagreement the register may absorb without a person. Row 6 read
+// `scheduled` after publishing on 2026-09-08, 09-15, and 09-22 — three
+// Tuesdays in a row, each corrected by hand.
+test('recordPublished flips a scheduled row Ghost has published, and only that row', () => {
+  const result = recordPublished(TABLE, { ...allLive, 'note-two': { status: 'published' } });
+  assert.deepEqual(result.recorded, ['note-two']);
+  assert.match(result.markdown, /\| 2 \| `note-two` \| 2026-09-08 \| published \|/);
+  assert.equal(result.markdown.replace('| 2026-09-08 | published |', '| 2026-09-08 | scheduled |'), TABLE);
+  const after = reconcileRegister({ rows: parseRegister(result.markdown), live: { ...allLive, 'note-two': { status: 'published' } } });
+  assert.deepEqual(after.failures, []);
+});
+
+test('recordPublished leaves an agreeing register byte-identical', () => {
+  const result = recordPublished(TABLE, allLive);
+  assert.deepEqual(result.recorded, []);
+  assert.equal(result.markdown, TABLE);
+});
+
+// Every other disagreement means a person did something — deleted a post,
+// staged outside the register — and is left failing for a person to read.
+test('recordPublished never absorbs any other disagreement', () => {
+  const cases = [
+    { 'note-two': null },
+    { 'note-two': { status: 'draft' } },
+    { 'note-three': { status: 'published' } },
+    { 'note-one': null },
+  ];
+  for (const change of cases) {
+    const live = { ...allLive, ...change };
+    const result = recordPublished(TABLE, live);
+    assert.deepEqual(result.recorded, [], JSON.stringify(change));
+    assert.equal(result.markdown, TABLE);
+    assert.equal(reconcileRegister({ rows: parseRegister(result.markdown), live }).failures.length, 1);
+  }
+});
+
+// `sent` is an email-only post: it never reached the site, so it is not what
+// the register means by published.
+test('recordPublished does not treat an email-only send as published', () => {
+  const result = recordPublished(TABLE, { ...allLive, 'note-two': { status: 'sent' } });
+  assert.deepEqual(result.recorded, []);
+});
+
+test('recordPublished refuses a lookup that did not happen rather than guessing', () => {
+  const partial = { ...allLive };
+  delete partial['note-two'];
+  assert.throws(() => recordPublished(TABLE, partial), /note-two.*not asked/);
+});
+
+test('recordPublished refuses a register it cannot parse', () => {
+  assert.throws(() => recordPublished('# nothing\n', {}), /examined nothing/i);
 });
