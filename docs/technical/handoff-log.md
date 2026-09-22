@@ -3652,3 +3652,31 @@ To post it: open `substack.com/@grownmengrow/notes`, confirm the `Edit profile` 
 **Verification:** the register check was run before and after the edit. Every `gate:` line was run by name before commit.
 
 **Open, in order:** (1) The Tuesday Substack note (slot 12:00 ET) and Saturday note rows in `substack-notes.md` remain blank until those tasks run. (2) Make the flip part of this task's instructions so the row stops going stale weekly; that is a change to `~/.claude/scheduled-tasks/gmg-tuesday-publish-check/SKILL.md` and is left to the founder. (3) Carried forward: the one-member list, the suspended A/B, the unattended Saturday slot, the Instagram traffic anomaly, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-22 — Claude Code: the register records Ghost's publishes itself
+
+**Client:** Claude Code (desktop app), with the founder present; they directed a durable fix. **Branch:** `claude/register-auto-record-publish`.
+
+**Defect.** Row 6 of `publication-order.md` read `scheduled` after Ghost published it on 2026-09-08, 09-15, and 09-22. Each time `verify-publication-register.mjs` failed and a person corrected the cell. Nothing records the scheduler's publish, so the drift recurred every week by construction.
+
+**Fix.** `recordPublished()` in `scripts/lib/publication-register.mjs` rewrites a row from `scheduled` to `published` only when Ghost reports that post `published`. `sent` (email-only) does not qualify. It refuses a row the lookup did not answer for, and it leaves every other disagreement for `reconcileRegister` to fail on, because those mean a person acted outside the register. `verify-publication-register.mjs --fix` writes the result only after every row was looked up, then reconciles as before. Unknown arguments exit 2. The plain check's message for this case now names `--fix`.
+
+**Tests.** Six new tests in `publication-register.test.mjs` cover these cases:
+- the flip itself;
+- byte-identity when the register already agrees;
+- refusal of four other disagreements;
+- `sent` not counting as published;
+- a missing lookup;
+- an unparseable register.
+
+They failed on the missing export before the implementation existed. The live run reproduced the defect: with row 6 reset to `scheduled`, the plain check exited 1, `--fix` recorded the row and exited 0, the file came out byte-identical to `main`, and a second `--fix` was a no-op.
+
+**Wiring.** The Monday staging task (`~/.claude/scheduled-tasks/gmg-monday-staging/SKILL.md`) now runs `--fix` before choosing the note and commits any row it records. The matching step for the Tuesday publish check was refused by the auto-mode classifier as self-modification, because the edit was made from a session running as that task. It was not routed around. The text is with the founder to apply.
+
+**Files changed:** `scripts/lib/publication-register.mjs`, `scripts/verify-publication-register.mjs`, `scripts/test/publication-register.test.mjs`, `AGENTS.md`, and this log. Outside the repository: the Monday task `SKILL.md`.
+
+**External state changed:** none. Ghost was only read.
+
+**Verification:** every `gate:` line was run by name before commit.
+
+**Open:** (1) The founder applies the Tuesday task step, or leaves the Monday backstop as the only automatic path. (2) Carried forward from the publish-check entry above.

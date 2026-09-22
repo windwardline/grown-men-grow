@@ -90,11 +90,55 @@ export function reconcileRegister({ rows, live }) {
       failures.push(
         `${row.slug} reads "scheduled" in the register but Ghost reports "${actual}". `
         + (actual === 'published'
-          ? 'It went out and the register was never updated; set it to published.'
+          ? 'It went out and the register was never updated; run this check with --fix to record it.'
           : 'The scheduled post is gone from Ghost.'),
       );
     }
   }
 
   return { failures, examined: rows.length };
+}
+
+/**
+ * Record in the register what Ghost's scheduler has already done.
+ *
+ * Exactly one disagreement is absorbed: a row reading `scheduled` whose post
+ * Ghost reports `published`. That is the scheduler executing a decision the
+ * register already records, so writing it down decides nothing. Row 6 went
+ * stale that way on three consecutive Tuesdays, each time fixed by hand after
+ * this check failed. Every other disagreement — a post gone, a draft, a blank
+ * row Ghost holds — means a person acted outside the register, and is left
+ * for `reconcileRegister` to fail on. `sent` is not `published`: an email-only
+ * post never reached the site.
+ *
+ * Returns the rewritten markdown and the slugs recorded. Throws on a row the
+ * lookup did not answer for, because a flip on a guess is worse than none.
+ */
+export function recordPublished(markdown, live) {
+  const rows = parseRegister(markdown);
+  for (const row of rows) {
+    if (!(row.slug in live)) {
+      throw new Error(`${row.slug}: Ghost was not asked about this row, so nothing was recorded.`);
+    }
+  }
+
+  const due = new Set(
+    rows.filter((row) => row.state === 'scheduled' && live[row.slug]?.status === 'published').map((row) => row.slug),
+  );
+  if (due.size === 0) return { markdown, recorded: [] };
+
+  const recorded = [];
+  const rewritten = String(markdown).replace(
+    /^(\|\s*[\d—-]+\s*\|\s*`([a-z0-9-]+)`[^|]*\|\s*[^|]*?\s*\|\s*)scheduled(\s*\|)$/gm,
+    (line, head, slug, tail) => {
+      if (!due.has(slug)) return line;
+      recorded.push(slug);
+      return `${head}published${tail}`;
+    },
+  );
+
+  if (recorded.length !== due.size) {
+    throw new Error(`Expected to record ${[...due].join(', ')} but rewrote ${recorded.join(', ') || 'nothing'}.`);
+  }
+  return { markdown: rewritten, recorded };
 }
