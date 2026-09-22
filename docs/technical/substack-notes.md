@@ -53,13 +53,13 @@ An unreachable feed fails closed: an unread feed is not an empty one.
 | `rest-is-not-a-reward` | 2 | 2026-09-12 18:30 | posted | `c-335779365` |
 | `you-cant-outwork-a-wrong-direction` | 1 | 2026-09-15 12:00 | posted | `c-337967617` |
 | `you-cant-outwork-a-wrong-direction` | 2 | 2026-09-19 18:30 | posted | `c-341987670` |
-| `nobody-rigs-to-the-breaking-strength` | 1 | 2026-09-22 12:00 |  |  |
+| `nobody-rigs-to-the-breaking-strength` | 1 | 2026-09-22 12:00 | posted | `c-343339371` |
 | `nobody-rigs-to-the-breaking-strength` | 2 | 2026-09-26 18:30 |  |  |
 
-## What the rows say, as of 2026-09-20
+## What the rows say, as of 2026-09-22
 
-Eight of twelve notes posted. The two launch-week notes had no slot to be late
-against. Of the ten that did, six went out and four were missed, and the four
+Nine of thirteen notes posted. The two launch-week notes had no slot to be late
+against. Of the eleven that did, seven went out and four were missed, and the four
 misses have three distinct causes: the old 09:30 Saturday slot that could not
 fire (two), a lateness guard correctly refusing a slot 378 minutes gone (one),
 and a classifier refusal at the composer after a clean handover (one).
@@ -79,6 +79,20 @@ not fire either. The scheduler cannot fire while the application is closed and
 no slot is immune to that, so what this row actually records is a founder-run
 post wearing a scheduled slot's timestamp.
 
+**The seventh was staged by an agent and still waited on a person: 155 minutes.**
+The 2026-09-22 12:00 slot fired on time, the preflight cleared, and the copy was
+typed into the composer and verified against the pack before noon. It went out
+at 14:34 because that is when the founder reached it. Nothing in the automated
+half failed, which is the point — the wait is in the half no schedule governs.
+
+**Keystroke injection failed a new way that day, and it failed quietly.** The
+`type` action was not refused. It dropped the copy's opening sentence, leaving
+the composer holding a fragment that read as a complete note; only a read-back
+against the pack caught it. The earlier finding was that the action is
+intermittently *blocked*, which announces itself. This one does not. Any
+mechanism the founder authorizes for this composer has to verify what landed
+rather than trust that the call returned.
+
 **Every note that has ever gone out went out with a person at the keyboard**, including this one, posted by hand 27 hours after its slot.
 That is the standing observation this register was built to make measurable
 rather than arguable, and it is the evidence behind the open founder question:
@@ -93,7 +107,8 @@ Friday analytics task reads.
 
 Rows were not typed from memory. Every live note was matched to its pack by
 comparing the feed's text against `extractNote()` output for each pack and note
-number, so the six `posted` rows are the six the feed carries and their pack
-assignment is derived rather than asserted. Slots come from `publish-timing.md`;
-the four `missed` rows are the slots that passed with no matching live note, and
+number, so the six rows `posted` at backfill time were the six the feed then
+carried, and their pack assignment is derived rather than asserted. Rows added
+since are reconciled the same way on every run. Slots come from
+`publish-timing.md`; the `missed` rows are the slots that passed with no matching live note, and
 the checker re-derives that claim on every run.
