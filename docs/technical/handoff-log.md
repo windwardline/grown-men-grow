@@ -3632,3 +3632,23 @@ To post it: open `substack.com/@grownmengrow/notes`, confirm the `Edit profile` 
 **Verification:** every `gate:` line was run by name. `verify-ghost-theme` checked 17 files; `pnpm --dir theme test` passed; theme zip plus `gscan --fatal` exited 0; `node --test` ran 208 tests with 0 failures; `verify-repository` passed; `verify-svg-xml` validated 214 SVGs; and `git diff --check` was clean.
 
 **Open, in order:** (1) The first unattended use of `queue-week-buffer.mjs` is next Monday, for `the-lights-never-flickered`. The auto-mode classifier may still block its external writes, and if it does, the task now reports rather than stalls. (2) Carried forward from the previous entry.
+
+## 2026-09-22 — Claude Code: Tuesday publish check; Week 7 went out on the slot; register row flipped
+
+**Client:** Claude Code (scheduled task `gmg-tuesday-publish-check`, run 08:44–11:30 EDT). **Branch:** `claude/tuesday-publish-check-2026-09-22`.
+
+**Ghost.** `nobody-rigs-to-the-breaking-strength` reads `published` at 2026-09-22T12:00:00Z, 8:00 AM EDT. The email was submitted at 12:00:03Z: 1 delivered, 1 opened, 0 failed. Members: 1 total, 1 free, 0 paid, 1 subscribed, 0 email-disabled.
+
+**Public page.** Returns 200. The canonical and `og:url` both point to `https://grownmengrow.com/nobody-rigs-to-the-breaking-strength/`. `og:type` is `article` and `og:image` is set. `og:title` carries the derived `| Grown Men Grow` suffix, as in prior weeks. The post is listed in `sitemap-posts.xml`.
+
+**Buffer.** The Ghost → Zapier → Buffer Idea arrived at 12:00:05Z. All four of the week's posts read back `scheduled` with `automatic` scheduling: Bluesky Tue 16:00Z, LinkedIn Wed 14:00Z, the Instagram carousel Thu 13:00Z, and Bluesky Sat 22:30Z. Nothing is in draft, needs approval, or error.
+
+**Register drift, third Tuesday running.** `verify-publication-register.mjs` failed: row 6 still read `scheduled` after Ghost published it. The row is now `published`, and the check agrees on all 22 rows (7 published, 0 scheduled, 15 projected). Nothing flips this row when Ghost publishes, so each Tuesday opens with the cadence gate red until a person or task corrects it.
+
+**Files changed:** `docs/technical/publication-order.md` (one State cell) and this log.
+
+**External state changed:** none. Every Ghost and Buffer call was a read.
+
+**Verification:** the register check was run before and after the edit. Every `gate:` line was run by name before commit.
+
+**Open, in order:** (1) The Tuesday Substack note (slot 12:00 ET) and Saturday note rows in `substack-notes.md` remain blank until those tasks run. (2) Make the flip part of this task's instructions so the row stops going stale weekly; that is a change to `~/.claude/scheduled-tasks/gmg-tuesday-publish-check/SKILL.md` and is left to the founder. (3) Carried forward: the one-member list, the suspended A/B, the unattended Saturday slot, the Instagram traffic anomaly, and the extract-zip acceptances expiring 2026-11-09.
