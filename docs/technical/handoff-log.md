@@ -3692,3 +3692,23 @@ Step 4 of `~/.claude/scheduled-tasks/gmg-tuesday-publish-check/SKILL.md` now run
 **External state changed:** none.
 
 **Verification:** every `gate:` line was run by name before commit.
+
+## 2026-09-22 — Claude Code: Tuesday Substack Note 1 staged, not yet posted
+
+**Client:** Claude Code (desktop app), scheduled task `gmg-tuesday-note`, fired 11:45 ET. The founder was not present.
+
+**Preflight.** Exit `10` (early, 834 s wait). The essay *Nobody Rigs to the Breaking Strength* was published 2026-09-22 08:00 ET. Copy was taken from `content/distribution/field-note-12-platforms.md`, note 1. Hold `none`. The wait ended 11:59:20, so the session was not suspended.
+
+**Staging.** The profile showed Grown Men Grow with an "Edit profile" control. This week's note was absent before the composer opened. The first `type` into the composer dropped the opening sentence: the editor held " It fails somewhere…", and Post stayed disabled. The editor was cleared with select-all and Delete and the copy was typed again. The second attempt matched the pack word for word on screenshot, and Post was enabled. Per the 2026-08-25 ruling, the agent did not click Post. The composer was left open in the Claude-in-Chrome tab for the founder.
+
+**Watch.** From 12:05 to 13:10 ET, `verify-substack-notes.mjs` polled the public feed every minute. The founder's tab was never reloaded. Every run agreed with the register: 8 posted, 4 missed, 2 pending. Nothing went out by 13:10. At 13:10 the composer still held the staged copy. The lock was released.
+
+**Register.** Row `nobody-rigs-to-the-breaking-strength` 1 is left blank (pending). The note can still go out, and recording `missed` now would assert an outcome that has not happened.
+
+**Files changed:** this log only.
+
+**External state changed:** none public. The note sits unposted in an open composer.
+
+**Verification:** preflight exit code; screenshot comparison of the staged text; `verify-substack-notes.mjs` agreed on every poll; every `gate:` line was run before commit.
+
+**Open:** (1) The founder clicks Post in the open composer, or cancels it. (2) The next session to touch the register runs `verify-substack-notes.mjs` and records row 1 as `posted` with its permalink and lateness, or as `missed` once the founder rules it so. (3) Keystroke injection now has a second intermittent failure: the first sentence was dropped. Every future run must verify the staged text, not just confirm that `type` succeeded.
