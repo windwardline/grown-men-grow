@@ -62,6 +62,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 19 | `everything-comes-to-him-flat` | 2026-12-22 | |
 | 20 | `the-opener-doesnt-lift-the-door` | 2026-12-29 | |
 | 21 | `he-writes-both-parts` | 2027-01-05 | |
+| 22 | `everything-looks-straight-in-primer` | 2027-01-12 | |
 
 ## Why this order and not another
 
@@ -98,6 +99,12 @@ It opens on a quoted shop rule rather than a mechanism, but the rule is a weldin
 `he-writes-both-parts` was approved 2026-09-20 and appended at 21. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note.
 
 This is the first append since the spacing check landed, and it is the first one that records no strain, because the strain was priced into the drafting rather than into the placement. Position 20 is `witness`, so a `witness` note appended here would have sat adjacent to it and failed the check outright; positions 19 and 20 are both trade openings, so a `trade` opening here would have put 19–21 at the three-row ceiling. The note is `assignment` with an `other` opening, which ends the trade pair and leaves the witness gaps at 7, 10, 14, 17 and 20 untouched. The draft task read the register before choosing a subject rather than after writing one, which is the behaviour the 2026-09-16 entry was trying to produce.
+
+### Position 22 was appended, and it records no strain
+
+`everything-looks-straight-in-primer` was approved 2026-09-23 and appended at 22. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note.
+
+The register was read before the subject was chosen, as it was for position 21. The last `witness` piece sits at 20, so a `witness` note here would have been two slots away and failed the spacing check; the note is `assignment`. Position 21 opens `other`, and so does this one, so no trade run grows. Two clean appends in a row is still not evidence the rules hold under pressure, only that they were read in time twice.
 
 ### The spacing reorder of 2026-09-16, and why the rules are now checked
 

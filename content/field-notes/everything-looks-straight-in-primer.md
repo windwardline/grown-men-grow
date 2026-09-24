@@ -7,15 +7,15 @@ access: public
 email_subject: Everything Looks Straight in Primer
 preview: He has an answer ready before the sentence finishes. It is almost never about what was said.
 feature_image_alt: A car door and fender in flat grey primer in a bright body shop, a few soft dark smudges of guide coat left in its low spots, beside a long pale wooden sanding block lying on a workbench next to a folded blue shop towel, in a paper collage.
-status: draft — NOT founder-approved
-approved: no
-publication_authorized: false — NOT authorized for publication, newsletter delivery, metadata, or social posting
+status: founder-approved
+approved: 2026-09-23 — essay, platform pack, and artwork approved as written on the day they were drafted; approval covers the work, not a slot
+publication_authorized: false — no Ghost slot named, no newsletter, no social posting; publication remains separately gated
 stance: assignment — the subject test fails for witness, and correctly: hearing the whole sentence is a move he has, and the closing hundred words turn to him
 closing_addresses_reader: yes — the last paragraph turns to him in the second person and leaves what he does with the reading named but unmade
 opening: other — opens on a sentence spoken to him and his body answering it, not on a trade or a mechanism; the body shop arrives at the third section
 personal_claims: none included; add only from founder-supplied facts
-artwork_status: draft; generated 2026-09-23 for this note under the house prompt, not founder-approved
-origin: written 2026-09-23 by the Wednesday draft task with the standing commission at `none`
+artwork_status: complete; founder-approved 2026-09-23 under the per-article image rule and the photograph-exclusivity ruling
+origin: written 2026-09-23 by the Wednesday draft task with the standing commission at `none`, so no commission line is cleared by this change set. Approved the same day and moved into content/ at register position 22
 ---
 
 # Ghost essay source
@@ -151,9 +151,9 @@ The people who try to tell him something and get a hearing learn. They stop spra
 
 # Production notes
 
-- Drafted 2026-09-23 by the Wednesday draft task. Not founder-approved, not authorized for publication, and holding no register position.
+- Written and approved 2026-09-23 — essay, pack, and artwork, on the day it was drafted. Register position 22. No Ghost slot named; publication timing remains a later founder decision.
 - Stance is `assignment`. `operating-cadence.md` carries `**Standing commission:** none`, so no commission line is cleared by this change set. The subject test fails for witness, and correctly: hearing the whole sentence before answering it is a move he has, and the closing turns to him.
-- Register placement, if approved and appended at position 22: position 21 is `he-writes-both-parts`, `assignment` with an `other` opening, and the last `witness` piece sits at 20. An `other` opening adds nothing to a trade-opening run, and an `assignment` stance keeps clear of the three-slot witness spacing that a `witness` note at 22 would fail.
+- Placed at register position 22: position 21 is `he-writes-both-parts`, `assignment` with an `other` opening, and the last `witness` piece sits at 20. An `other` opening adds nothing to a trade-opening run, and an `assignment` stance keeps clear of the three-slot witness spacing that a `witness` note at 22 would fail.
 - No first-person anecdote appears and no event is asserted as having happened; the essay runs in the generic present per the 2026-08-08 founder ruling, reaffirmed 2026-08-12. The friend, the son, the crew, the partner, and the foreman are types in the generic present, not reported people.
 - The body-shop specifics are ordinary refinishing practice: high-build primer is flat and hides waves that gloss shows; guide coat is a thin contrasting mist, usually dark, dusted on before block sanding; a long flat block cuts the highs first and leaves the guide coat in the lows. Used as metaphor, not as instruction.
 - Photography generated 2026-09-23 in the founder's ChatGPT project, continuing the current Editorial Photography Request thread. Five images were generated and three kept; both rejections were made at full resolution against the quality gate, on physical tells, not on taste.
