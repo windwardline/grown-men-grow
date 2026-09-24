@@ -18,8 +18,8 @@ import {
   writeAsset,
 } from "./lib/editorial-collage.mjs";
 
-// Field Note 23 — "Everything Looks Straight in Primer". Draft 2026-09-23; not
-// founder-approved and holding no register position.
+// Field Note 23 — "Everything Looks Straight in Primer". Founder-approved
+// 2026-09-23; register position 22, no Ghost slot named.
 //
 // Signature vocabulary: a hand-drawn guide-coat profile — a panel's surface
 // drawn edge-on as one line with three shallow dips in it. In its primer state
