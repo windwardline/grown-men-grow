@@ -3730,3 +3730,27 @@ Step 4 of `~/.claude/scheduled-tasks/gmg-tuesday-publish-check/SKILL.md` now run
 **Verification:** `verify-substack-notes.mjs` reproduced the stale-register failure before the edit and agrees on all 14 rows after it; every `gate:` line was run before commit.
 
 **Open:** (1) The open founder question is unchanged and now has more evidence: authorize a keystroke mechanism for the composer, or record the Substack slots as founder-run rather than scheduled. Any mechanism authorized must read back what landed — a `type` that returns success is not evidence that the copy arrived intact. (2) Saturday's Note 2 slot, 2026-09-26 18:30, is pending.
+
+## 2026-09-23 — Wednesday draft: Field Note 23, "Everything Looks Straight in Primer", a complete assignment unit
+
+**Client:** Claude Code (desktop app), `gmg-wednesday-draft` scheduled task.
+
+**Scope completed.** The week's first complete field note, drafted end to end: essay, platform pack, three photographs, render script, seven carousel slides, feature image, review sheet, and gate entries in one change set. Nothing is published, sent, posted, or staged.
+
+**Backfill ran first and found nothing owing.** All twenty-one approved notes were checked against the complete-unit table: packs `field-note-02` through `22`, render scripts `02` through `22`, twenty-one carousels of seven, twenty-one review sheets, and a feature image per slug, with `verify-repository` green before any new work began.
+
+**Subject and shape.** Receiving criticism: the reflex that answers before the sentence finishes, the fair complaint about delivery, and the cost nobody announces, when the people closest to him stop telling him and the silence reads as a clean panel. The carrying mechanism is body-shop guide coat: primer is flat and hides waves, a dark mist block-sanded off the highs stays in the lows. No note in the bank covers feedback received, and none uses auto body work. It opens on a sentence spoken to him, so `opening: other`.
+
+**Stance is `assignment`.** The standing commission is `none`; the subject test fails for witness because hearing the whole sentence is a move he has. If appended at 22 it also clears the spacing check: the last witness piece is at 20, and an `other` opening adds nothing to a trade run.
+
+**Imagery: five generated, three kept, two rejected on physical tells.** The first primed-panel image rested a block that read as a stone bar on a shelf no car has, and laid four matching evenly spaced ovals, which is the pattern tell its own `Avoid:` list named. The first gloss image reflected a lawn that broke into concentric ripple rings. Both prompts were rewritten to take the failing mechanism out of frame. Every prompt and source path is in the note's production notes.
+
+**Signature mark.** A `guide-coat profile`: a panel line with three dips over a flat grey band, and, blocked, a flat block on the highs with the dips filled dark. Dip depth scales with the mark's width so the full-width slides show the lows as plainly as the small ones.
+
+**Files changed:** `drafts/field-note-23-everything-looks-straight-in-primer.md`, `drafts/field-note-23-platforms.md`, `drafts/README.md`, `scripts/render-field-note-23.mjs`, `scripts/render-review-contact-sheets.mjs`, `scripts/verify-repository.mjs`, `assets/source/editorial/{primer-panel-guide-coat,sanding-longboard-bench,gloss-panel-low-sun}.png`, `assets/drafts/instagram/field-note-23-carousel/` (7 PNG/SVG pairs), `assets/drafts/ghost/feature-images/everything-looks-straight-in-primer.{png,svg}`, `assets/drafts/review/field-note-23-carousel.png`, `docs/technical/handoff-log.md`.
+
+**External state changed:** none beyond the ChatGPT project. Five prompts were sent in the founder's Grown Men Grow project, continuing the current Editorial Photography Request thread.
+
+**Verification:** every `gate:` line run by name: `verify-ghost-theme` (17 theme files), `pnpm --dir theme test` (exit 0), the theme zip with `gscan --fatal` (exit 0), `node --test` (214 tests, 0 failures), `verify-repository` (742 tracked files, 27 review sheets, 76 editorial sources), `verify-svg-xml` (222 SVG files), and `git diff --check` clean. No `cadence:` gate was run, because none is due to this change set.
+
+**Open, in order:** (1) Founder review of the delivered unit. On approval it moves to `content/` at a register position, with its frontmatter flipped, a `must live under content/` gate line, and a `drafts/README.md` line. (2) Carried forward, unverified by this session: the Substack slot decision, the Instagram traffic anomaly, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.
