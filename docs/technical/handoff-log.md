@@ -3768,3 +3768,33 @@ Step 4 of `~/.claude/scheduled-tasks/gmg-tuesday-publish-check/SKILL.md` now run
 **Verification:** the new Field Note 23 content gate was broken on purpose by re-tracking the pack under `drafts/` and failed by name before being restored. Every `gate:` line was run after staging; results are in the PR.
 
 **Open, in order:** (1) A Ghost slot for position 22 is the founder's later decision; the Monday staging task takes the lowest unpublished row, so nothing needs doing until then. (2) Carried forward, unverified by this session: the Substack slot decision, the Instagram traffic anomaly, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-24 — Claude Code — Thursday Medium import: "Nobody Rigs to the Breaking Strength" published, ten hours after its slot
+
+**Client:** Claude Code (desktop), scheduled task `gmg-thursday-medium`. **Branch:** `claude/thursday-medium-import-2026-09-24`, cut from `origin/main` in a separate worktree.
+
+**The story is live on Medium:** https://grownmengrow.medium.com/nobody-rigs-to-the-breaking-strength-25db62e0c3ce
+
+**The task fired at 17:19 ET against a 07:00 slot**, roughly ten hours late. That is the same catch-up behaviour recorded for earlier slots. The canonical-first rule only sets a minimum wait, so the delay changed nothing about the import.
+
+**Preconditions, each checked.** `latestPublishedPost()` returned `nobody-rigs-to-the-breaking-strength`, published 2026-09-22T12:00:00Z, 57.3 hours before the run against a 40-hour minimum. The canonical URL returned 200. On Medium, Drafts read "No stories in draft" and the profile held exactly the six stories the 2026-09-20 entry leaves it with, so this was not a double-import.
+
+**The importer took the SEO title a fifth time.** It imported as *Nobody Rigs to the Breaking Strength | Grown Men Grow*. I set a collapsed caret at offset 53 inside the title block and pressed BackSpace 17 times, leaving the post's `title` field (36 characters). For the `Grown Men Grow 5 min read` line I set the caret at offset 25 inside that block, confirmed the block held exactly that string, pressed BackSpace 25 times, then once more to remove the empty block. The block count went from 43 to 42 and the dek survived intact. `Home` and `End` were never pressed.
+
+**The subtitle needed no call.** The imported dek, *The number on the tag is the one that holds on a bad day.*, is byte-for-byte the pack's Medium subtitle.
+
+**The preview image imported empty and was set.** The picker offered one image, the sling feature image. It was selected and confirmed, and the live page carries an `og:image`.
+
+**Tags: the `Men` trap fired again and was caught.** Typing `Men` listed *Mental Health*, *Mental Health Awareness*, then *Men (1.4K)*. I pressed Down three times, confirmed the highlight on screen, then pressed Return. `Burnout`, `Masculinity` and `Personal Growth` each ranked their exact match first. `Essays` was offered as *Essays (new)*, the exact match, and taken. Each highlight was confirmed before Return, and the committed chips were read back from their remove-labels: Men, Burnout, Masculinity, Personal Growth, Essays. **One new observation:** the live page shows the chip as *Essays* but links it to `/tag/essay`. Medium normalises the topic slug, so the tag that landed is the pack's word under Medium's singular slug. Nothing in the pack or the gate needs to change for it.
+
+**The canonical was confirmed before and after publication.** Before publishing, Advanced Settings showed "This story was originally published elsewhere" checked. The field held a stored value of `https://grownmengrow.com/nobody-rigs-to-the-breaking-strength/`, which is the value itself, not the placeholder. After publishing, a `fetch` issued in the page context returned HTTP 200 and 164,973 bytes of server-delivered source. It carries `<link rel="canonical">` to exactly that URL, and its `h1` is the corrected title. The only `Grown Men Grow … min read` string in that source is Medium's own byline (*6 min read · 2 days ago*); no body paragraph carries one. The check ran in the browser and never with `curl`, which Medium answers 403.
+
+**No name and no reshare.** Story settings show author *Grown Men Grow*. The post-publish Facebook, LinkedIn and X buttons were not touched; the dialog was closed with its close control. Both Chrome tabs this session opened were closed.
+
+**Files changed:** this log only.
+
+**External state changed:** **one Medium story published** as recorded above. No Ghost write, no send, no Buffer change, no Substack action, no purchase, no account setting touched.
+
+**Verification:** every `gate:` line in `AGENTS.md` was run; results are in the pull request body.
+
+**Open, in order:** (1) The Thursday slot fired ten hours late on catch-up, the same scheduler substrate as before; nothing new to fix in this repository. (2) Carried forward, not re-verified by this session: the Substack slot decision, the Instagram traffic anomaly, the one-member list, the suspended A/B, the Ghost slot for register position 22, and the extract-zip acceptances expiring 2026-11-09.
