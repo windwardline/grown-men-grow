@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn23-04-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn23-04-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn23-04-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 23 · 04 / 07</text>
+  <path d="M200.0 380.0 L211.3 380.0 L222.7 380.1 L234.0 380.3 L245.3 380.7 L256.7 381.6 L268.0 383.4 L279.3 386.4 L290.7 390.7 L302.0 395.9 L313.3 401.1 L324.7 405.0 L336.0 406.4 L347.3 405.0 L358.7 401.1 L370.0 395.9 L381.3 390.7 L392.7 386.5 L404.0 383.5 L415.3 381.9 L426.7 381.3 L438.0 381.4 L449.3 382.4 L460.7 384.2 L472.0 387.0 L483.3 391.1 L494.7 396.4 L506.0 402.7 L517.3 409.2 L528.7 415.2 L540.0 419.6 L551.3 421.5 L562.7 420.7 L574.0 417.2 L585.3 411.8 L596.7 405.3 L608.0 398.9 L619.3 393.1 L630.7 388.5 L642.0 385.2 L653.3 382.9 L664.7 381.6 L676.0 381.1 L687.3 381.5 L698.7 383.3 L710.0 387.0 L721.3 392.1 L732.7 396.9 L744.0 398.9 L755.3 396.9 L766.7 392.1 L778.0 386.9 L789.3 383.2 L800.7 381.2 L812.0 380.3 L823.3 380.1 L834.7 380.0 L846.0 380.0 L857.3 380.0 L868.7 380.0 L880.0 380.0 L880 440 L200 440 Z" fill="#71706B" opacity="0.28"/><path d="M200.0 380.0 L211.3 380.0 L222.7 380.1 L234.0 380.3 L245.3 380.7 L256.7 381.6 L268.0 383.4 L279.3 386.4 L290.7 390.7 L302.0 395.9 L313.3 401.1 L324.7 405.0 L336.0 406.4 L347.3 405.0 L358.7 401.1 L370.0 395.9 L381.3 390.7 L392.7 386.5 L404.0 383.5 L415.3 381.9 L426.7 381.3 L438.0 381.4 L449.3 382.4 L460.7 384.2 L472.0 387.0 L483.3 391.1 L494.7 396.4 L506.0 402.7 L517.3 409.2 L528.7 415.2 L540.0 419.6 L551.3 421.5 L562.7 420.7 L574.0 417.2 L585.3 411.8 L596.7 405.3 L608.0 398.9 L619.3 393.1 L630.7 388.5 L642.0 385.2 L653.3 382.9 L664.7 381.6 L676.0 381.1 L687.3 381.5 L698.7 383.3 L710.0 387.0 L721.3 392.1 L732.7 396.9 L744.0 398.9 L755.3 396.9 L766.7 392.1 L778.0 386.9 L789.3 383.2 L800.7 381.2 L812.0 380.3 L823.3 380.1 L834.7 380.0 L846.0 380.0 L857.3 380.0 L868.7 380.0 L880.0 380.0 L880 380 L200 380 Z" fill="#121416" opacity="0.85"/><path d="M200.0 380.0 L211.3 380.0 L222.7 380.1 L234.0 380.3 L245.3 380.7 L256.7 381.6 L268.0 383.4 L279.3 386.4 L290.7 390.7 L302.0 395.9 L313.3 401.1 L324.7 405.0 L336.0 406.4 L347.3 405.0 L358.7 401.1 L370.0 395.9 L381.3 390.7 L392.7 386.5 L404.0 383.5 L415.3 381.9 L426.7 381.3 L438.0 381.4 L449.3 382.4 L460.7 384.2 L472.0 387.0 L483.3 391.1 L494.7 396.4 L506.0 402.7 L517.3 409.2 L528.7 415.2 L540.0 419.6 L551.3 421.5 L562.7 420.7 L574.0 417.2 L585.3 411.8 L596.7 405.3 L608.0 398.9 L619.3 393.1 L630.7 388.5 L642.0 385.2 L653.3 382.9 L664.7 381.6 L676.0 381.1 L687.3 381.5 L698.7 383.3 L710.0 387.0 L721.3 392.1 L732.7 396.9 L744.0 398.9 L755.3 396.9 L766.7 392.1 L778.0 386.9 L789.3 383.2 L800.7 381.2 L812.0 380.3 L823.3 380.1 L834.7 380.0 L846.0 380.0 L857.3 380.0 L868.7 380.0 L880.0 380.0" fill="none" stroke="#121416" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/><rect x="254.4" y="353" width="421.6" height="24" rx="4" fill="#B14F3F" opacity="0.95"/>
+    <line x1="254.4" y1="378.5" x2="676" y2="378.5" stroke="#121416" stroke-width="3" opacity="0.7"/>
+    <text x="74" y="596" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="92" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">Guide coat.</text>
+    <text x="76" y="706" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">The block rides the highs and takes the</text><text x="76" y="764" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">dark off them first. The lows keep it.</text>
+    <text x="76" y="1000" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">Nothing about</text><text x="76" y="1070" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">the panel changed.</text>
+    <path d="M80 1184 C300 1146 520 1208 742 1162 C862 1138 942 1172 1002 1152" fill="none" stroke="#B14F3F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn23-04-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

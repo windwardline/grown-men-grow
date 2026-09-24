@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn23-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn23-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn23-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 23 · 01 / 07</text>
+  <text x="64" y="250" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="76" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.6">EVERYTHING LOOKS</text>
+    <text x="64" y="348" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="88" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.6">STRAIGHT IN PRIMER.</text>
+    <text x="68" y="416" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="32" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">The waves show up later, in the sun.</text>
+    <g transform="rotate(-0.8 550 792)">
+    <rect x="238" y="482" width="624" height="654" fill="#3A1518"/>
+    <rect x="246" y="468" width="608" height="648" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/primer-panel-guide-coat.png" x="250" y="472" width="600" height="640" preserveAspectRatio="xMidYMid slice" filter="url(#fn23-01-photo)"/>
+  </g>
+    <g transform="rotate(-4 709 471)">
+    <rect x="600" y="448" width="218" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="608" y1="455" x2="808" y2="452" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <path d="M80.0 1190.0 L83.0 1190.0 L86.1 1190.0 L89.1 1190.1 L92.1 1190.2 L95.2 1190.4 L98.2 1190.9 L101.2 1191.7 L104.3 1192.9 L107.3 1194.2 L110.3 1195.6 L113.4 1196.7 L116.4 1197.1 L119.4 1196.7 L122.5 1195.6 L125.5 1194.3 L128.5 1192.9 L131.6 1191.7 L134.6 1190.9 L137.6 1190.5 L140.7 1190.3 L143.7 1190.4 L146.7 1190.6 L149.8 1191.1 L152.8 1191.9 L155.8 1193.0 L158.9 1194.4 L161.9 1196.1 L164.9 1197.8 L168.0 1199.4 L171.0 1200.6 L174.0 1201.1 L177.1 1200.9 L180.1 1200.0 L183.1 1198.5 L186.2 1196.8 L189.2 1195.0 L192.2 1193.5 L195.3 1192.3 L198.3 1191.4 L201.3 1190.8 L204.4 1190.4 L207.4 1190.3 L210.4 1190.4 L213.5 1190.9 L216.5 1191.9 L219.5 1193.2 L222.6 1194.5 L225.6 1195.1 L228.6 1194.5 L231.7 1193.2 L234.7 1191.9 L237.7 1190.9 L240.8 1190.3 L243.8 1190.1 L246.8 1190.0 L249.9 1190.0 L252.9 1190.0 L255.9 1190.0 L259.0 1190.0 L262.0 1190.0 L262 1232 L80 1232 Z" fill="#71706B" opacity="0.28"/><path d="M80.0 1190.0 L83.0 1190.0 L86.1 1190.0 L89.1 1190.1 L92.1 1190.2 L95.2 1190.4 L98.2 1190.9 L101.2 1191.7 L104.3 1192.9 L107.3 1194.2 L110.3 1195.6 L113.4 1196.7 L116.4 1197.1 L119.4 1196.7 L122.5 1195.6 L125.5 1194.3 L128.5 1192.9 L131.6 1191.7 L134.6 1190.9 L137.6 1190.5 L140.7 1190.3 L143.7 1190.4 L146.7 1190.6 L149.8 1191.1 L152.8 1191.9 L155.8 1193.0 L158.9 1194.4 L161.9 1196.1 L164.9 1197.8 L168.0 1199.4 L171.0 1200.6 L174.0 1201.1 L177.1 1200.9 L180.1 1200.0 L183.1 1198.5 L186.2 1196.8 L189.2 1195.0 L192.2 1193.5 L195.3 1192.3 L198.3 1191.4 L201.3 1190.8 L204.4 1190.4 L207.4 1190.3 L210.4 1190.4 L213.5 1190.9 L216.5 1191.9 L219.5 1193.2 L222.6 1194.5 L225.6 1195.1 L228.6 1194.5 L231.7 1193.2 L234.7 1191.9 L237.7 1190.9 L240.8 1190.3 L243.8 1190.1 L246.8 1190.0 L249.9 1190.0 L252.9 1190.0 L255.9 1190.0 L259.0 1190.0 L262.0 1190.0" fill="none" stroke="#121416" stroke-width="4.199999999999999" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn23-01-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
