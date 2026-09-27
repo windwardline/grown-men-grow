@@ -123,3 +123,9 @@ Credentials remain in authenticated sessions, a password manager, macOS Keychain
 - [x] The path is keystroke injection into Substack's contenteditable composer through the founder's logged-in Chrome. It became possible when the permission that blocked it on 2026-08-16 was granted; there is still no Substack API.
 - [x] Authority is limited to the two scheduled notes at their scheduled slots. Note 3, the canonical-link note, remains unposted. Replies, direct messages, restacks, and profile changes are not covered.
 - [ ] Instagram app-only features — link stickers, pinning, native-audio reels — remain founder actions. No API or browser path exists.
+
+## Late notes and the pageview source (founder-ruled 2026-09-27)
+
+- [x] The Tuesday and Saturday Substack slots **stay scheduled**. The founder will not be tied to the computer at specific times. On time is ideal. When a task fires late, a late hand-post is accepted. It is not escalated, and it is not reopened as a decision.
+- [x] Lateness stays recorded in `substack-notes.md` as a fact about the slot, not as a defect.
+- [x] Readership is measured with Ghost's native web analytics, the one source that already exists. The Friday analytics task reads it through the founder's signed-in admin session, because Ghost's stats endpoints refuse an integration key. No second tracker was added to reader pages, and no admin-level staff token is held on disk.

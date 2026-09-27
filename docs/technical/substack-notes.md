@@ -54,7 +54,7 @@ An unreachable feed fails closed: an unread feed is not an empty one.
 | `you-cant-outwork-a-wrong-direction` | 1 | 2026-09-15 12:00 | posted | `c-337967617` |
 | `you-cant-outwork-a-wrong-direction` | 2 | 2026-09-19 18:30 | posted | `c-341987670` |
 | `nobody-rigs-to-the-breaking-strength` | 1 | 2026-09-22 12:00 | posted | `c-343339371` |
-| `nobody-rigs-to-the-breaking-strength` | 2 | 2026-09-26 18:30 |  |  |
+| `nobody-rigs-to-the-breaking-strength` | 2 | 2026-09-26 18:30 | posted | `c-346893821` |
 
 ## What the rows say, as of 2026-09-22
 

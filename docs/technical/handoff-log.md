@@ -3799,6 +3799,84 @@ Step 4 of `~/.claude/scheduled-tasks/gmg-tuesday-publish-check/SKILL.md` now run
 
 **Open, in order:** (1) The Thursday slot fired ten hours late on catch-up, the same scheduler substrate as before; nothing new to fix in this repository. (2) Carried forward, not re-verified by this session: the Substack slot decision, the Instagram traffic anomaly, the one-member list, the suspended A/B, the Ghost slot for register position 22, and the extract-zip acceptances expiring 2026-11-09.
 
+## 2026-09-27 — Claude Code — Saturday Substack Note 2 for "Nobody Rigs to the Breaking Strength": stood down on a wrong-day fire
+
+**Client:** Claude Code (desktop), scheduled task `gmg-saturday-note`. **Branch:** `claude/saturday-note-2026-09-26-stand-down`.
+
+**The Saturday 2026-09-26 18:30 slot did not fire.** The task first ran at 03:18 ET on Sunday, 529 minutes after the slot. The preflight exited `20` with `weekdayMismatch: true`. That is the wrong-day guard added on 2026-09-20 doing its job: the essay precondition passes on a Sunday, and before the guard existed this same fire would have been measured against Sunday's slot. Nothing was typed, drafted, or posted, and no browser was opened.
+
+**The note is still unposted.** `verify-substack-notes.mjs` ran on the live machine and reconciled all 14 rows against 9 live notes. No live note carries this copy. The row stays blank rather than `missed`, because the founder posted last week's Saturday note by hand the next day. Writing a terminal outcome while one is still possible is the error this register was built to catch. If it goes out, the row takes `posted` with its permalink. If it does not, the next reconciliation records `missed`.
+
+**Copy for the founder, verbatim from `content/distribution/field-note-12-platforms.md`, Note 2.** Post it on `substack.com/@grownmengrow/notes` under the publication identity, with no link, hashtags, or image:
+
+> The overload is rarely one heroic yes. It is the extra account, the coaching nobody else stepped up for, the kitchen a contractor would take four months to do. Every one of those is defensible on its own, which is exactly how the total gets past him.
+
+**Files changed:** this log only.
+
+**External state changed:** none.
+
+**Verification:** preflight exit `20`, and the lock was not held past the run. `verify-substack-notes.mjs` exited 0 with 9 posted, 4 missed, and 1 pending. Every `gate:` line is recorded in the PR body.
+
+**Open, in order:** (1) The founder posts the copy above by hand or lets the slot go. Either way, the next reconciliation fills row 57. (2) Two Saturday evenings running have not fired because the application was closed. That is further evidence for the open founder question: record the Substack slots as founder-run rather than scheduled. (3) Carried forward, not re-verified by this session: the Instagram traffic anomaly, the one-member list, the suspended A/B, the Ghost slot for register position 22, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-27 — Claude Code — Correction: Saturday Substack Note 2 posted by the founder at 03:21 ET
+
+**Client:** Claude Code (desktop), same session as the entry above.
+
+**The note the previous entry left pending is now live.** I opened the notes profile in the founder's Chrome, and the founder posted the copy by hand. `verify-substack-notes.mjs` then found it at `c-346893821`, posted 2026-09-27T07:21:17Z, and its text matches the pack's approved copy byte for byte. Row 57 of `substack-notes.md` now reads `posted` with that permalink. The note went out **531 minutes after its Saturday 18:30 slot**, the second Saturday running to go out the next day by the founder's hand.
+
+**Files changed:** `docs/technical/substack-notes.md` (row 57), this log.
+
+**External state changed:** one Substack note posted **by the founder**, not by an agent.
+
+**Verification:** `verify-substack-notes.mjs` after the edit, plus every `gate:` line. Results are in the PR body.
+
+## 2026-09-27 — Claude Code — Friday analytics readout (week of 2026-09-21), run early Sunday morning
+
+**Client:** Claude Code. **Branch:** `claude/friday-analytics-2026-09-27`. The `gmg-friday-analytics` task fired at 03:18 ET on Sunday against a Friday slot. That is the fourth weekend slot in a row to fire only on catch-up. It fired in the same minute as `gmg-saturday-note`, whose run is recorded directly above.
+
+**Scope:** verification only. Nothing was published, posted, replied to, or sent.
+
+**Ghost.** Seven published posts. **1** member, unchanged since 2026-08-11. That member has opened 6 of 6 emails. This week's send, `nobody-rigs-to-the-breaking-strength` on 2026-09-22 at 08:00 ET, went to 1 recipient: 1 delivered, 1 opened, 0 failed. **Correction to the 2026-09-20 entry:** per-send counts *are* readable through an integration key. `/emails/` answers 403, but `posts/?include=email` returns `email_count`, `delivered_count`, `opened_count` and `failed_count` on each post. Clicks are not exposed that way. Site-wide `comments/` returns 0.
+
+**A/B protocol stays suspended at step 3.** The list is 1 against a floor of 30. No timing decision is due, so nothing was appended to `publish-timing.md`.
+
+**Platform numbers.** Every Buffer post sent on its slot: Bluesky Tue 12:00, LinkedIn Wed 10:00, Instagram Thu 09:00, Bluesky Sat 18:30. Buffer's queue and error lists are both empty.
+- **LinkedIn:** 123 impressions and 95 reach, 0 reactions, comments or shares. That is the page's best week. It closes open item 2 from 2026-09-20: last week's 0 was one post, not a trend. Last week's post still reads 0 on a metrics refresh dated today.
+- **Instagram:** the Sep 24 carousel has reach 4, views 10, 1 like, 0 saves, 0 shares, 0 follows. The like came from an outside account, not the house.
+- **Bluesky:** 0 on both posts. Profile: 0 followers, 14 posts, 0 replies or quotes across the feed. The feed's only 2 likes are on a 2026-08-11 post.
+- **Instagram followers:** 7 → **8**. The new follow landed Sep 21.
+
+**The Instagram anomaly stopped on its own, and how it stopped settles what it was.** Business Suite's daily account reach reads 210 / 199 / 185 / 165 / 127 for Sep 17–21, then **0 / 0 / 3 / 1 / 2** for Sep 22–26. Profile visits (25/18/15/16/5) and bio-link clicks (22/17/12/18/7) followed the same curve to zero. Five days produced **76 link clicks and 0 Ghost members**. The Sep 24 carousel went out during the quiet days and reached 4. Real readership does not fall from 127 to 0 overnight with no change in what the publication did. The earlier reading holds: this was automated or referral traffic, not an audience. The organic baseline is single-digit daily reach. Open item 1 from 2026-09-20 (a server-side pageview source) loses its urgency, since the traffic it would have checked has ended. It is still a founder call.
+
+**Moderation sweep: nothing to escalate on any surface.** Ghost comments: 0. Instagram DMs: Primary, General, Requests and Hidden Requests are all empty ("Delete all 0"). Instagram comments: 0, per Buffer and the notifications feed. LinkedIn: 0 comments. Bluesky: 0 replies and 0 quotes. Nothing hit the escalation rows in `community-moderation.md`. No reply was made to anyone. **`instagram.com/notifications` renders again.** On 2026-09-20 it hung on skeleton placeholders. Today it listed attributed activity, so open item 3 from that entry is closed. Account names are not recorded here.
+
+**Qualitative pass: still nothing said back.** Week seven: no comment, reply, DM, or conversation started on any surface. No question or objection has come up even once, so none can recur.
+
+**Corpus balance check: skipped, correctly.** The marker reads 2026-09-16 at 21 pieces, next due at 31. The bank is **23**: 22 field notes plus the launch essay. Eight to go.
+
+**Cadence gates, both run on the live machine.** `verify-publication-register.mjs`: all 23 rows agree with Ghost (7 published, 0 scheduled, 16 projected). `verify-substack-notes.mjs`: all 14 rows agree with the live feed (9 posted, 4 missed, 1 pending). Row 57, Saturday Note 2, belongs to the concurrent Saturday session and was not touched.
+
+**Files changed:** this log only. **External state changed:** none.
+
+**Open, in order:** (1) Tuesday 2026-09-29 has no Ghost post scheduled and Buffer's queue is empty. Monday's staging task has to fire. (2) Founder decision, carried: whether the Saturday and Tuesday Substack slots become founder-run. Weekend tasks have now fired only on catch-up four weeks running. (3) Founder decision, now lower priority: a server-side pageview source. (4) Carried forward: distribution, the one-member list, the suspended A/B, the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-27 — Claude Code — founder rulings: late notes accepted; pageviews come from Ghost's own analytics
+
+**Client:** Claude Code. **Branch:** `claude/founder-rulings-2026-09-27`. This follows the readout above. The founder ruled on its three open items.
+
+**(1) Withdrawn.** Staging the Tuesday post and queueing Buffer are steps 1 and 3 of `gmg-monday-staging`. An empty Sunday queue is the expected state and should not have been raised. The Friday task's `SKILL.md` now says so, so it is not raised again.
+
+**(2) Founder-ruled.** The Substack slots stay scheduled, and a late hand-post is accepted. Recorded in `founder-decisions.md`. The open question in `publish-timing.md` is replaced with the ruling.
+
+**(3) Settled, with no new instrument.** A pageview source already existed. Ghost(Pro)'s native web analytics shows **49 unique visitors and 62 views over 30 days**, and **5 and 5 for Sep 21–27**. This week's visits went to "Nobody Rigs to the Breaking Strength" (3), "You Can't Outwork a Wrong Direction" (1), and the homepage (1), from Direct (4) and Bing (1). Over 30 days, sources were Direct 37, Bing 8, Facebook 2, Google 1, **Instagram 1**. The daily chart shows no rise for Sep 17–21. **That closes the anomaly: Instagram's 76 bio-link clicks never became visits to the site.**
+
+The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 to the integration key, confirmed this session on six endpoints. A staff access token would open them to a script. It was rejected as an administrator-rights credential held for a read-only weekly number. The Friday task now reads **Analytics → Web traffic** in the founder's signed-in Chrome, as it already does for Business Suite (new step 1a). The same edit corrects its step 1: per-send email counts come from `posts/?include=email`. This also settles the choice `publish-timing.md` had left open about step 3's 48-hour pageviews.
+
+**Files changed:** `docs/technical/publish-timing.md`, `docs/technical/founder-decisions.md`, this log. Outside the repository: `~/.claude/scheduled-tasks/gmg-friday-analytics/SKILL.md` (steps 1, 1a, 8). **External state changed:** none. Ghost analytics were read, not changed.
+
+**Open:** nothing new. Carried forward: distribution, the one-member list, the suspended A/B, the extract-zip acceptances expiring 2026-11-09.
+
 ## 2026-09-27 — Saturday draft: Field Note 24, "The Stake Was Supposed to Come Off", a complete assignment unit
 
 **Client:** Claude Code (desktop app), `gmg-saturday-draft` scheduled task. It fired Sunday 03:18 ET on catch-up, the desktop application having been closed through the Saturday slot. A draft carries no weekday dependency, so the run proceeded.
