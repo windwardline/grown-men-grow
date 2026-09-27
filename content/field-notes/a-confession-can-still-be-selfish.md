@@ -100,13 +100,13 @@ Then stay in the room.
 
 # Instagram caption source
 
-There is a look a man gets right after he says the hard thing. Relief. A little pride. Someone setting down a heavy bag.
+There's a look a man gets right after he says the hard thing. Relief. A little pride. Someone setting down a heavy bag.
 
 He earned it. And sometimes the other person just got handed the bag.
 
-Disclosure comes with a built-in reward — the exhale — and it arrives whether or not anything else happens. That is the trap. A confession without follow-through is a withdrawal from someone else's account.
+Disclosure comes with a built-in reward, the exhale, and it shows up whether or not anything else happens. That's the trap. A confession with no follow-through is a withdrawal from someone else's account.
 
-Repair answers on their timeline, names the behavior, volunteers the cost, and repeats. It is a pattern with a speech near the front, not a speech with applause at the end.
+Repair answers on their timeline, names the behavior, volunteers the cost, and repeats. It's a pattern with a speech near the front, not a speech waiting for applause at the end.
 
 Open up. Take the exhale. Then stay in the room.
 

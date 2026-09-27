@@ -205,11 +205,11 @@ Men get told to open up more, which is advice that manages to be correct and alm
 
 Open up where? To whom? About what? How much? And what happens after the confession?
 
-Doing things together counts. A lot of male trust is built sideways: during a drive, over a project, in the middle of a game, or while solving some annoying practical problem. I would not trade that language away.
+Doing things together counts. A lot of male trust gets built sideways: on a drive, over a project, in the middle of a game, or while solving some annoying practical problem. I wouldn't trade that language away.
 
-But the activity cannot carry every subject forever.
+But the activity can't carry every subject forever.
 
-A friendship needs practice before it can hold a crisis. That practice is usually ordinary: ask a specific question, remember the answer, call when nothing is wrong, and let the other man know you too.
+A friendship needs practice before it can hold a crisis. The practice is usually ordinary: ask a specific question, remember the answer, call when nothing's wrong, and let the other man know you too.
 
 # Instagram alt text source
 
