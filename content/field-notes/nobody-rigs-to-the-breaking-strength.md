@@ -134,13 +134,13 @@ That number was never a promise about the rope.
 
 # Instagram caption source
 
-Every lifting sling carries two numbers. The tag gives the working load limit. The other one, in a table somewhere, is the breaking strength. A sling rated at two tons does not fail at two tons — it fails somewhere well past ten.
+Every lifting sling carries two numbers. The tag gives the working load limit. The other one, in a table somewhere, is the breaking strength. A sling rated at two tons doesn't fail at two tons. It fails somewhere well past ten.
 
-The engineer who wrote the smaller number was not losing his nerve. He was pricing in the day the load swings, the day the angle is worse than anyone measured, the day somebody hooks it in a hurry because the truck is idling.
+The engineer who wrote down the smaller number wasn't losing his nerve. He was pricing in the day the load swings, the day the angle's worse than anybody measured, the day somebody hooks it in a hurry because the truck's idling.
 
-Men understand this completely at work and almost not at all about themselves. Asked what he can handle, a man answers with his breaking strength — a figure from a good season, with adrenaline and nobody interrupting — and then books the rest of his life at it.
+Men understand this completely at work and almost not at all about themselves. Ask a man what he can handle and he answers with his breaking strength, a figure from a good season, on adrenaline, with nobody interrupting, and then books the rest of his life at it.
 
-The part worth sitting with: under load he does not get to choose what fails. What parts first is whatever has the least tension on it. The work has a deadline and a number attached, so the work gets the good hours.
+The part worth sitting with: under load, he doesn't get to choose what fails. What parts first is whatever has the least tension on it. The work has a deadline and a number attached, so the work gets the good hours.
 
 # Instagram alt text source
 

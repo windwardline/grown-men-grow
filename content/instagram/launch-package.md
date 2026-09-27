@@ -55,11 +55,11 @@ I kept trying to write a clean introduction to this page.
 
 It sounded like bullshit every time.
 
-So here is the honest version.
+So here's the honest version.
 
-I do not have a new definition of a “real man.” I do not trust those much anymore.
+I don't have a new definition of a “real man.” I don't trust those much anymore.
 
-I am interested in the distance between how a man understands himself and how other people actually experience him. Some of what I write will come from reading. Some will come from work I have done professionally. A fair amount will come from getting things wrong in my own life and trying not to waste the lesson.
+I'm interested in the distance between how a man understands himself and how other people actually experience him. Some of what I write will come from reading. Some will come from work I've done professionally. A fair amount will come from getting things wrong in my own life and trying not to waste the lesson.
 
 The first field note is called **Strength Has to Grow Up**.
 
@@ -111,13 +111,13 @@ Link in bio.
 
 ### Caption
 
-I do not think strength is the problem.
+I don't think strength is the problem.
 
-I think it becomes a problem when a man uses it to avoid everything strength cannot solve.
+I think it turns into one when a man uses it to dodge everything strength can't solve.
 
-The harder question is what his strength answers to when pride, fear, desire, and anger all want the final word.
+The harder question is what his strength answers to when pride, fear, desire, and anger all want the last word.
 
-That is the subject of the first field note.
+That's the subject of the first field note.
 
 #HealthyMasculinity #EmotionalGrowth #GrownMenGrow
 
@@ -163,13 +163,13 @@ Link in bio.
 
 A man can tell the truth and still keep a hand on the steering wheel.
 
-I know because I have done it.
+I know because I've done it.
 
-Confess first. Control the frame. Make anger at you feel cruel because you have already shown everyone how much pain you are in.
+Confess first. Control the frame. Make being angry at you feel cruel, because you've already shown everyone how much pain you're in.
 
-The pain may be completely real. That does not make the arrangement fair.
+The pain may be completely real. That doesn't make the arrangement fair.
 
-Real vulnerability does not guarantee forgiveness. It leaves room for an answer we did not rehearse.
+Real vulnerability doesn't guarantee forgiveness. It leaves room for an answer we didn't rehearse.
 
 #Accountability #EmotionalMaturity #GrownMenGrow
 
@@ -184,11 +184,11 @@ was fear with good posture.**
 
 The performance may have started for a good reason.
 
-Staying composed kept the peace. Self-reliance prevented disappointment. Anger felt safer than fear. Being useful made us harder to abandon.
+Staying composed kept the peace. Self-reliance headed off disappointment. Anger felt safer than fear. Being useful made us harder to abandon.
 
 A strategy can save a boy and still limit the man he becomes.
 
-Growing up means noticing when the old protection has become a prison.
+Growing up means noticing when the old protection has turned into a prison.
 
 #MensGrowth #SelfAwareness #GrownMenGrow
 
@@ -222,7 +222,7 @@ Link in bio.
 
 ### Caption
 
-Composure and presence are not always the same thing.
+Composure and presence aren't always the same thing.
 
 The first field note is live: **Strength Has to Grow Up.**
 

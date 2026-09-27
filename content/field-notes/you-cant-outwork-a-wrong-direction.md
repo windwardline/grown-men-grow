@@ -101,13 +101,13 @@ Most checks confirm the course. Once in a while, the map saves you the strong mi
 
 # Instagram caption source
 
-There is a specific kind of lost that only fit, capable, hardworking men achieve: miles from the truck, making excellent time, in exactly the wrong direction.
+There's a special kind of lost that only fit, capable, hardworking men achieve: miles from the truck, making excellent time, in exactly the wrong direction.
 
-Effort is the familiar part. Grinding is home. Which is exactly why it gets used as a hiding place when the real question — toward what? — requires standing still to ask.
+Effort is the familiar part. Grinding is home. Which is exactly why it makes such a good hiding place when the real question, toward what?, means standing still to ask it.
 
-The compass questions fit in a normal life: If this works completely, what do I have? Who set this course? What’s the cost-per-mile lately?
+The compass questions fit in a normal life. If this works completely, what do I have? Who set this course? What's the cost per mile lately?
 
-And turning is not quitting. Quitting is stopping because it got hard. Turning is changing heading because the heading was wrong — keeping every mile of strength the wrong trail built.
+And turning isn't quitting. Quitting is stopping because it got hard. Turning is changing heading because the heading was wrong, and keeping every mile of strength the wrong trail built.
 
 # Instagram alt text source
 
