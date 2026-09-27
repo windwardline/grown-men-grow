@@ -1,14 +1,15 @@
 ---
-title: Somebody Is Up on His Ladder
+title: Somebody’s Up on His Ladder
 slug: somebody-is-up-on-his-ladder
-dek: He can see every wrong thing they are doing, and he is not going out there.
+dek: He can see every wrong thing they’re doing, and he’s not going out there.
 byline: none — publication voice (founder ruling 2026-08-10)
 access: public
-email_subject: Somebody Is Up on His Ladder
+email_subject: Somebody’s Up on His Ladder
 preview: The leaves come down on the same schedule regardless. Nothing about a maple is tracking his year.
 feature_image_alt: An extension ladder standing against the eave of a well-kept house in autumn daylight, beside a downspout elbow discharging at the base of a house wall, in a paper collage.
 status: founder-approved
 approved: 2026-08-23 — essay, platform pack, and artwork approved together, in one pass, as written
+revised: 2026-09-27 — voice revision under the founder ruling of that day (lighter, more human, more charismatic); arguments, facts, closings, and every line printed on a slide unchanged
 publication_authorized: false — approval covers the work, not a slot; publication, newsletter delivery, and posting remain separately gated
 stance: witness — the subject test passes; being covered while laid up is an event he neither caused nor can fix, and he has no move in it
 closing_addresses_reader: no — witness gate 1: ends on the last fact, "Nothing on the house records who turned it."
@@ -23,81 +24,81 @@ origin: written 2026-08-23 by the Saturday draft task, taking the witness slot u
 
 # Ghost essay source
 
-A gutter has nothing to do with keeping the roof dry. The roof handles that on its own — shingles and gravity, an arrangement that has been working since well before anybody thought to improve it. The gutter is there for the six inches of dirt at the bottom of the wall.
+A gutter has nothing to do with keeping the roof dry. The roof handles that on its own, shingles and gravity, an arrangement that was working long before anybody thought to improve it. The gutter is there for the six inches of dirt at the bottom of the wall.
 
-An inch of rain on an ordinary house comes off the roof as something in the neighborhood of six hundred gallons, and all of it arrives at three or four places. Left alone it digs its own trench against the footing and then does what water does, which is get in, stay in, and take its time about it. The gutter catches that and moves it eight or ten feet out into the yard, where it stops being anybody's problem. The whole system runs on about a quarter inch of fall per ten feet, which is a slope no one can see and every installer argues about.
+An inch of rain on an ordinary house comes off the roof as something like six hundred gallons, and all of it arrives at three or four places. Left alone, it digs its own trench against the footing and then does what water does, which is get in, stay in, and take its time about it. The gutter catches that and walks it eight or ten feet out into the yard, where it stops being anybody's problem. The whole system runs on about a quarter inch of fall per ten feet, a slope nobody can see and every installer argues about.
 
-When a gutter fails, nothing happens. That is the part worth sitting with. There is no event. The failure turns up two floors down and a season later as a corner of a basement that smells like a basement, or a door that has developed an opinion about closing. Nobody connects that to a foot of wet maple leaves sitting in an aluminum trough the previous October.
+When a gutter fails, nothing happens. That's the part worth sitting with. There's no event. The failure turns up two floors down and a season later, as a corner of the basement that smells like a basement, or a door that's developed an opinion about closing. Nobody connects that to a foot of wet maple leaves sitting in an aluminum trough the October before.
 
 ## October is not negotiable
 
-The back goes in October. Or the knee does, or the shoulder, or it is the surgery that has been on the calendar since June and manages to be a surprise anyway. The particular thing matters less than it seems to, and this is not about the particular thing.
+The back goes in October. Or the knee does, or the shoulder, or it's the surgery that's been on the calendar since June and still manages to be a surprise. The particular thing matters less than it seems to, and this isn't about the particular thing.
 
 The leaves come down on the same schedule they always do. Nothing about a maple is tracking his year.
 
-So there is a truck in the driveway on a Saturday morning, and a ladder off the pegs on his own garage wall, and somebody up on it.
+So there's a truck in the driveway on a Saturday morning, and a ladder off the pegs on his own garage wall, and somebody up on it.
 
 ## He can see all of it
 
-This is not happening behind his back. He has a window, a chair, and eleven weeks.
+None of this is happening behind his back. He has a window, a chair, and eleven weeks.
 
 He knows this roof. He knows the back valley loads up first, that the screen somebody installed badly over the corner by the chimney has to come out before anything can be scooped, and that the ground by the spigot goes soft in the fall and will take a ladder foot four inches down under a man's weight.
 
-They set the ladder on the soft ground. They also rest it directly on the gutter lip, which will dent the run and pull the hangers, and which is what the standoff hanging on the wall six feet from where they got the ladder is for.
+They set the ladder on the soft ground. They also rest it right on the gutter lip, which will dent the run and pull the hangers, and which is exactly what the standoff hanging on the wall six feet from the ladder is for.
 
-They do the front and both sides, miss the valley entirely, and put the downspout extension back pointed at the wall — worse than leaving it off, because now the water has been gathered up carefully from four hundred square feet of roof and delivered to the exact spot the entire apparatus exists to keep it away from.
+They do the front and both sides, miss the valley entirely, and put the downspout extension back pointed at the wall. That's worse than leaving it off, because now the water's been gathered up carefully from four hundred square feet of roof and delivered to the exact spot the whole apparatus exists to keep it away from.
 
 He taps the window. Nobody has ever heard a window.
 
 ## He tries to make it a transaction
 
-He offers to pay. This gets refused in the specific tone men keep for refusing money, somewhere between a joke and a door closing.
+He offers to pay. That gets refused in the specific tone men keep for refusing money, somewhere between a joke and a door closing.
 
-He offers to order lunch. Lunch is accepted, which is not the same thing, and he knows it is not the same thing while he is dialing.
+He offers to order lunch. Lunch is accepted, which isn't the same thing, and he knows it isn't the same thing while he's dialing.
 
-He says the sentence — *you really don't have to do this* — and gets what everybody gets, which is not an answer. A noise and a shrug from forty feet up.
+He says the sentence, *you really don't have to do this*, and gets what everybody gets, which isn't an answer. A noise and a shrug from forty feet up.
 
-And he resents it. That gets left out of these stories every time, so it goes in here. Not the men. The arrangement: being the house rather than one of the guys on the ladder, and the way the morning proceeds without requiring anything from him at all, including his permission.
+And he resents it. That gets left out of these stories every time, so it goes in here. Not the men. The arrangement: being the house instead of one of the guys on the ladder, and the way the morning goes on without needing anything from him at all, including his permission.
 
-Nobody asked him. That is not rudeness. It is the only way it could work, because asked, he says no, and every man in that driveway already knows he says no.
+Nobody asked him. That isn't rudeness. It's the only way it could work, because asked, he says no, and every man in that driveway already knows he says no.
 
 ## It is not done gracefully
 
 Somebody calls him chief. Somebody says *we'll get you back on your feet* in a voice with a hospital in it, and it lands wrong and sits there for a week.
 
-Two of them stand in the driveway and disagree about his roof, at length, in front of him, and neither one of them is right.
+Two of them stand in the driveway and disagree about his roof, at length, in front of him, and neither of them is right.
 
-One man comes the first Saturday and the second Saturday and then does not come again. The not-coming is considerably louder from a chair than it would be from a ladder. There is no fight and there is no reason. He builds several.
+One man comes the first Saturday and the second Saturday and then doesn't come again. The not-coming is a lot louder from a chair than it would be from a ladder. There's no fight and there's no reason. He builds several.
 
-They get most of the leaves. Most of the leaves is not a professional standard and is entirely sufficient for the wall.
+They get most of the leaves. Most of the leaves isn't a professional standard and is entirely sufficient for the wall.
 
 ## Most houses just take the water
 
 This should go in plainly rather than be left for someone to work out on his own.
 
-Plenty of men are laid up in October and no truck comes. The leaves pack in, freeze, thaw, and the water finds the footing the way it has been trying to for thirty years, and the corner starts to smell in March. That is the ordinary condition, not the exception.
+Plenty of men are laid up in October and no truck comes. The leaves pack in, freeze, thaw, and the water finds the footing the way it's been trying to for thirty years, and the corner starts to smell in March. That's the ordinary condition, not the exception.
 
-Or a man goes up his own ladder at sixty-one on a knee with clear opinions about it, because the alternative is a phone call he has never once made in his life, and he calls that independence — the only available word, and the one printed on the box.
+Or a man goes up his own ladder at sixty-one on a knee with clear opinions about it, because the alternative is a phone call he's never once made in his life, and he calls that independence, the only word handy and the one printed on the box.
 
-Nothing here says the truck usually shows up. One driveway is not a statistic.
+Nothing here says the truck usually shows up. One driveway isn't a statistic.
 
 ## Nobody cleans a gutter for the gutter
 
-The gutter is the part of the house whose entire function is moving water off of everything else, and it is also the part that goes first. The seams open. The spikes back out. The run sags in the middle, where it has been holding the weight of what it caught.
+The gutter is the part of the house whose whole job is moving water off everything else, and it's also the part that goes first. The seams open. The spikes back out. The run sags in the middle, where it's been holding the weight of what it caught.
 
-And nobody has ever climbed a ladder out of concern for a gutter. They go up because of the wall. The gutter gets maintained as a consequence of being the thing standing between the water and something that matters.
+And nobody has ever climbed a ladder out of concern for a gutter. They go up because of the wall. The gutter gets maintained as a side effect of standing between the water and something that matters.
 
-He would say all of that himself, about himself, cheerfully, if anyone asked him.
+He'd say all of that himself, about himself, cheerfully, if anyone asked him.
 
 Nobody asks him. They keep turning up on Saturdays, badly, for eleven weeks, and going home.
 
-In the spring the water comes off the back corner the way it always has, out past the hydrangea and into the yard. The extension is pointed the right way by then. Nothing on the house records who turned it.
+In the spring the water comes off the back corner the way it always has, out past the hydrangea and into the yard. The extension's pointed the right way by then. Nothing on the house records who turned it.
 
 # Instagram carousel source
 
 ## Slide 1
 
-SOMEBODY IS UP
+SOMEBODY’S UP
 
 ON HIS LADDER.
 
@@ -137,9 +138,9 @@ Nothing on the house records who turned the extension.
 
 A gutter has nothing to do with keeping the roof dry. The roof handles that on its own. The gutter is there for the six inches of dirt at the bottom of the wall — an inch of rain comes off an ordinary house as something like six hundred gallons, and left alone it digs its own trench against the footing.
 
-When a gutter fails, nothing happens. There is no event. It turns up two floors down and a season later, as a corner that smells like a basement.
+When a gutter fails, nothing happens. There's no event. It turns up two floors down and a season later, as a corner that smells like a basement.
 
-The back goes in October. The leaves come down on the same schedule they always do. Nothing about a maple is tracking his year. So there is a truck in the driveway on a Saturday, and a ladder off the pegs on his own garage wall, and somebody up on it.
+The back goes in October. The leaves come down on the same schedule they always do. Nothing about a maple is tracking his year. So there's a truck in the driveway on a Saturday, and a ladder off the pegs on his own garage wall, and somebody up on it.
 
 He has a window, a chair, and eleven weeks. They set the ladder on the soft ground, miss the back valley, and put the downspout extension back pointed at the wall. He taps the window. Nobody has ever heard a window.
 
@@ -147,7 +148,7 @@ Nobody has ever climbed a ladder out of concern for a gutter. They go up because
 
 # Instagram alt text source
 
-- Slide 1: Title Somebody Is Up on His Ladder in condensed type above a photograph of an extension ladder standing against the eave of a well-kept house in autumn daylight, leaves visible in the gutter run, with a small drawn downspout mark at the upper right.
+- Slide 1: Title Somebody’s Up on His Ladder in condensed type above a photograph of an extension ladder standing against the eave of a well-kept house in autumn daylight, leaves visible in the gutter run, with a small drawn downspout mark at the upper right.
 - Slide 2: Serif page reading that a gutter has nothing to do with keeping the roof dry, with the drawn downspout mark showing a vertical run and an empty elbow.
 - Slide 3: Photograph of wet maple leaves packed into an aluminum gutter run photographed from above in flat autumn light, above text about October and the leaves coming down on schedule.
 - Slide 4: Sparse italic page on a deep oxblood field reading He has a window, a chair, and eleven weeks.

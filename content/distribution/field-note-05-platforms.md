@@ -42,11 +42,11 @@ The new field note is about the reframe that holds: knowing when to ask is part 
 
 ## Note 1
 
-The workaround skills are real skills. They are also, past a certain point, an expensive way to avoid a cheap conversation.
+The workaround skills are real skills. They're also, past a certain point, an expensive way to avoid a cheap conversation.
 
 ## Note 2
 
-Every man you ask learns that he is allowed to ask you. The question is an invitation wearing work clothes.
+Every man you ask learns that he's allowed to ask you. The question is an invitation wearing work clothes.
 
 ## Note 3 — canonical link
 

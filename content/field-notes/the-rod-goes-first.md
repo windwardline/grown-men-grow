@@ -9,6 +9,7 @@ preview: The trade name for the part is sacrificial anode, which is the plumbing
 feature_image_alt: A title-free paper collage pairing a large taped photograph of a spent water-heater anode rod laid across folded cloth on a basement bench, its steel core wire bare between knuckles of white scale, with a smaller photograph of a hand lowering a brass fitting onto the top of a water heater beside its anode port, and an oxblood margin carrying two drawn anode-section marks — a full-thickness rod beside three open pits above, a bare core wire beside three closed pits below.
 status: founder-approved
 approved: 2026-09-02 — essay, platform pack, and artwork approved together, in one pass
+revised: 2026-09-27 — voice revision under the founder ruling of that day (lighter, more human, more charismatic); arguments, facts, closings, and every line printed on a slide unchanged
 publication_authorized: false — approval covers the work and a register position, not a Ghost slot; publication, newsletter delivery, and posting remain separately gated
 stance: witness — the subject test passes: the rod is spent in the dark over years, and there is no move available to him inside the event
 closing_addresses_reader: no — witness gate 1: ends on the last fact, "The water at the tap is the same temperature it was yesterday," and turns to him nowhere
@@ -23,67 +24,67 @@ origin: written 2026-09-02 by the Wednesday draft task, against the standing com
 
 # Ghost essay source
 
-A water heater is a steel tank with a coat of glass fused to the inside of it, and that glass is the whole of what stands between forty gallons of hot water and the rust that would otherwise take the tank apart in about three years.
+A water heater is a steel tank with a coat of glass fused to the inside, and that glass is the whole of what stands between forty gallons of hot water and the rust that would otherwise take the tank apart in about three years.
 
-The glass never goes on clean. There are pinholes in it. There is the weld seam, where it thins. There are the two threaded fittings at the top, where it stops short of the steel entirely. Every tank that leaves the factory has flaws in its lining, and the people building it know that while they are building it, and build it anyway, because the lining was never the plan on its own.
+The glass never goes on clean. There are pinholes in it. There's the weld seam, where it thins. There are the two threaded fittings at the top, where it stops short of the steel entirely. Every tank that leaves the factory has flaws in its lining, and the people building it know that while they're building it, and build it anyway, because the lining was never the plan on its own.
 
 The plan is a rod.
 
-It threads into the top of the tank and hangs down the middle of the water — magnesium, usually, or an aluminum alloy — and it is in there for exactly one reason. It corrodes more easily than steel does. Put two metals in the same hot water and the water goes after the more reactive one and leaves the other alone, which is not a preference so much as a law. So the water goes after the rod.
+It threads into the top of the tank and hangs down the middle of the water, magnesium usually, or an aluminum alloy, and it's in there for exactly one reason. It corrodes more easily than steel does. Put two metals in the same hot water and the water goes after the more reactive one and leaves the other alone, which isn't a preference so much as a law. So the water goes after the rod.
 
-The trade name for the part is *sacrificial anode*. That is the plumbing industry being unusually direct.
+The trade name for the part is *sacrificial anode*. That's the plumbing industry being unusually direct.
 
 ## The current goes to the flaws
 
-That is the part that matters, and it is easy to read past.
+This is the part that matters, and it's easy to read past.
 
 The rod does not protect the tank evenly. It protects the places where the lining failed.
 
-Wherever bare steel shows through — the pinhole, the thin spot on the seam, the raw edge at a fitting — that is where the current concentrates, and that is where the rod spends itself. The good glass needs nothing and gets nothing. The defects take all of it. A rod hanging in a tank with one bad spot will empty itself into that one bad spot and be gone in half the time, and the tank will not know the difference, because from inside the tank nothing has happened at all.
+Wherever bare steel shows through, the pinhole, the thin spot on the seam, the raw edge at a fitting, that's where the current concentrates, and that's where the rod spends itself. The good glass needs nothing and gets nothing. The defects take all of it. A rod hanging in a tank with one bad spot will empty itself into that one spot and be gone in half the time, and the tank won't know the difference, because from inside the tank nothing has happened at all.
 
-Nothing has happened at all. That is the actual condition, stated the way the tank experiences it. Water goes in cold and comes out hot at whatever the dial says, for eleven or twelve years, and at no point in those years does the tank do anything, or notice anything, or get told.
+Nothing has happened at all. That's the actual condition, put the way the tank experiences it. Water goes in cold and comes out hot at whatever the dial says, for eleven or twelve years, and at no point does the tank do anything, or notice anything, or get told.
 
-There is no light for this. Nothing on the front of the appliance reports it, and no part of the sound it makes changes. Plenty of tanks have nothing left in them — the rod ran out in year six, nobody looked — and those run exactly like the good ones, and will, right up until a morning when one of them is on the floor. It goes from the inside. The outside is fine the entire time and then it is fine and there is water in the hallway.
+There is no light for this. Nothing on the front of the appliance reports it, and the sound it makes never changes. Plenty of tanks have nothing left in them, the rod ran out in year six and nobody looked, and those run exactly like the good ones, right up until a morning when one of them is on the floor. It goes from the inside. The outside's fine the whole time, and then it's fine and there's water in the hallway.
 
 ## What it looks like from outside is nothing
 
-A man goes through a stretch. It has a name he will use for it later and does not have one yet.
+A man goes through a stretch. It has a name he'll use for it later and doesn't have one yet.
 
-While it runs, calls get fielded. Somebody gives his parents a version of things that is true in every particular and load-bearing in none of them. Somebody says *he's swamped* at a birthday party eleven times in the same easy tone, which is a harder performance than it sounds. His name stays in a group text he has not answered since March, and stays there because two men in it decide separately that taking it out would be a decision. A foreman writes down a start time that is not the start time. A brother pays something and files it in his own books under a heading that will not come up.
+While it runs, calls get fielded. Somebody gives his parents a version of things that's true in every particular and load-bearing in none. Somebody says *he's swamped* at a birthday party eleven times in the same easy tone, which is a harder performance than it sounds. His name stays in a group text he hasn't answered since March, and stays because two men in it decide separately that taking it out would be a decision. A foreman writes down a start time that isn't the start time. A brother pays something and files it in his own books under a heading that won't come up.
 
-None of that goes to his best qualities. It goes where the lining failed. Protection concentrates at the defect because the defect is the only place protection is needed, and the parts of him that were fine got nothing, and needed nothing.
+None of that goes to his best qualities. It goes where the lining failed. Protection concentrates at the defect because the defect is the only place protection's needed, and the parts of him that were fine got nothing, and needed nothing.
 
 The tank is not a party to any of it. It cannot be grateful and it cannot decline. It holds water at a temperature.
 
 ## The smell is the protection running
 
-Magnesium and certain bacteria that live in warm water make hydrogen sulfide between them. That is the rotten-egg smell that comes out of a tap in a house where every component is working exactly as designed.
+Magnesium and certain bacteria that live in warm water make hydrogen sulfide between them. That's the rotten-egg smell that comes out of a tap in a house where every component is working exactly as designed.
 
-The smell is the protection running. It is the only signal the system puts out and it is a terrible one, because it does not read as protection. It reads as a problem with the water. So a softener gets priced. A cartridge goes on the cold line. A man stands in an aisle comparing two filters, solving the wrong thing with real diligence.
+The smell is the protection running. It's the only signal the system puts out and it's a terrible one, because it doesn't read as protection. It reads as a problem with the water. So a softener gets priced. A cartridge goes on the cold line. A man stands in an aisle comparing two filters, solving the wrong thing with real diligence.
 
-It comes out of a house the same way. Somebody who has been fine for four months is not fine on a Tuesday, over something small and badly chosen. A friend goes a beat slow answering and then answers warmly, and the beat is the entire message. This gets read as the friend cooling off, or the marriage having something in it, and both readings are wrong in the same direction. They take the smell for the water.
+It comes out of a house the same way. Somebody who's been fine for four months isn't fine on a Tuesday, over something small and badly chosen. A friend goes a beat slow answering and then answers warmly, and the beat is the whole message. That gets read as the friend cooling off, or the marriage having something in it, and both readings are wrong in the same direction. They take the smell for the water.
 
 ## None of it is done well
 
-A rod is not a gift and it does not get handled like one.
+A rod isn't a gift, and it doesn't get handled like one.
 
-Somebody tells him. Not cruelly, and usually a year later, and usually in a car, because a car is where that gets said — and it lands like a bill. A rod on the kitchen counter is a different object than a rod in a tank.
+Somebody tells him. Not cruelly, and usually a year later, and usually in a car, because a car is where that gets said, and it lands like a bill. A rod on the kitchen counter is a different object from a rod in a tank.
 
-Somebody keeps a tally, and produces it eighteen months on, in an argument about something else. Every line on it is accurate. That is what makes it unusable.
+Somebody keeps a tally, and produces it eighteen months on, in an argument about something else. Every line on it is accurate. That's what makes it unusable.
 
 Somebody picks the wrong problem and works on it hard for two years and gets thanked, and the thanking costs more than the problem did.
 
-Somebody stops. There is no falling-out. He was solid straight through a year and then his own year started, and nobody who has done it will tell you the two are unrelated.
+Somebody stops. There's no falling-out. He was solid straight through a year and then his own year started, and nobody who's done it will tell you the two are unrelated.
 
-And a rod is not a part anyone enjoys replacing. The plug seizes. Fifteen years of pipe dope and heat on a one-and-one-sixteenth head, no clearance above the tank because the ceiling is where the ceiling is, so the whole heater comes off the wall and gets tipped with water still in it by a man who did not plan on the afternoon going this way.
+And a rod isn't a part anyone enjoys replacing. The plug seizes. Fifteen years of pipe dope and heat on a one-and-one-sixteenth head, no clearance above the tank because the ceiling's where the ceiling is, so the whole heater comes off the wall and gets tipped with water still in it by a man who didn't plan on the afternoon going this way.
 
-A rod, for its part, has nothing protecting it. Nothing is hanging in the water on its behalf. That is not a flaw in the design. It is the definition of the part.
+A rod, for its part, has nothing protecting it. Nothing's hanging in the water on its behalf. That isn't a flaw in the design. It's the definition of the part.
 
 ## Threaded in at the top
 
-Rods come out looking like nothing anybody would keep. A steel core wire with a few white knuckles of scale still on it, thinner than a pencil across the middle, and light — most of the weight is gone somewhere it does not come back from.
+Rods come out looking like nothing anybody would keep. A steel core wire with a few white knuckles of scale still on it, thinner than a pencil across the middle, and light, most of the weight gone somewhere it doesn't come back from.
 
-It goes in the barrel at the curb, alongside the cardboard the new one came in.
+It goes in the barrel at the curb, next to the cardboard the new one came in.
 
 The tank stays where it is. The water at the tap is the same temperature it was yesterday.
 
@@ -137,11 +138,11 @@ A water heater is a steel tank with a coat of glass fused inside it, and the gla
 
 The plan is a rod threaded into the top, hanging down the middle of the water, made of something that corrodes more easily than steel does. The water goes after it and leaves the tank alone. The trade name for the part is *sacrificial anode*, which is the plumbing industry being unusually direct.
 
-Here is the part that gets read past. The rod does not protect the tank evenly. It protects the places where the lining failed — the pinhole, the thin spot, the raw edge — because that is where the current concentrates. The good glass needs nothing and gets nothing.
+Here is the part that gets read past. The rod doesn't protect the tank evenly. It protects the places where the lining failed — the pinhole, the thin spot, the raw edge — because that's where the current concentrates. The good glass needs nothing and gets nothing.
 
-And there is no light for it. Nothing on the front of the appliance reports it, and no part of the sound it makes changes. Water goes in cold and comes out hot for eleven or twelve years, and at no point does the tank notice anything or get told.
+And there's no light for it. Nothing on the front of the appliance reports it, and no part of the sound it makes changes. Water goes in cold and comes out hot for eleven or twelve years, and at no point does the tank notice anything or get told.
 
-Rods come out thinner than a pencil across the middle. Most of the weight is gone somewhere it does not come back from.
+Rods come out thinner than a pencil across the middle. Most of the weight is gone somewhere it doesn't come back from.
 
 # Instagram alt text source
 

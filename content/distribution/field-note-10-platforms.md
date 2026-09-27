@@ -28,7 +28,7 @@ It takes nerve to step on a scale you've been avoiding. More to say out loud to 
 
 ## Post 3 — canonical link
 
-The man who books the physical is not fragile. He is the one reading his own mail. [canonical link]
+The man who books the physical isn't fragile. He's the one reading his own mail. [canonical link]
 
 # LinkedIn Page
 
@@ -42,7 +42,7 @@ The new field note is about reading your own books: open the mail, get audited o
 
 ## Note 1
 
-"Getting old" is real. It is also the most popular place men hide numbers they don't want to read.
+"Getting old" is real. It's also the most popular place men hide numbers they don't want to read.
 
 ## Note 2
 
@@ -50,4 +50,4 @@ Books that only one person can read get cooked. Tell one man your actual numbers
 
 ## Note 3 — canonical link
 
-You are not maintaining a body. You are funding the man who shows up later. Open the mail — it's addressed to him. [canonical link]
+You aren't maintaining a body. You're funding the man who shows up later. Open the mail — it's addressed to him. [canonical link]

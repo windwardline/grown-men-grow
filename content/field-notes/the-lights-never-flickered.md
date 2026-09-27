@@ -9,6 +9,7 @@ preview: The load lands somewhere. Nobody tells him where.
 feature_image_alt: Steel base plates and anchor bolts on a cured concrete slab in morning light, beside an open panel cabinet with a labeled transfer switch, in a paper collage.
 status: founder-approved
 approved: 2026-08-12 — approved as written, after the register correction rather than before it
+revised: 2026-09-27 — voice revision under the founder ruling of that day (lighter, more human, more charismatic); arguments, facts, closings, and every line printed on a slide unchanged
 stance: witness — the first witness piece under the 2026-08-11 stance ruling
 closing_addresses_reader: no — witness gate 1: ends on the last fact and turns to him nowhere
 opening: trade — opens on anchor bolts set off a template
@@ -25,11 +26,11 @@ origin: written 2026-08-12 by the Wednesday draft task; revised the same day whe
 
 The bolts get set an inch and a half off, and in the wrong direction, which is the detail that turns an annoyance into a number.
 
-He sets them himself, off a template he checks himself, in the way a man checks something he is already sure of. The pour goes Friday morning. The steel comes the following Thursday. The base plates come off the truck, go down over the bolts, and do not go down over the bolts.
+He sets them himself, off a template he checks himself, the way a man checks something he's already sure of. The pour goes Friday morning. The steel comes the following Thursday. The base plates come off the truck, go down over the bolts, and don't go down over the bolts.
 
-What happens next is not dramatic. Coring, epoxy anchors, a letter from the engineer, a second trip from the inspector, three weeks the schedule did not have. Everyone stays polite. The number sits in the background getting bigger, like a meter running in another room.
+What happens next isn't dramatic. Coring, epoxy anchors, a letter from the engineer, a second trip from the inspector, three weeks the schedule didn't have. Everybody stays polite. The number sits in the background getting bigger, like a meter running in another room.
 
-He drives in Monday with the sentence ready — *I know what this cost and I'm not going to argue* — and intends to be fired with some dignity about it.
+He drives in Monday with the sentence ready, *I know what this cost and I'm not going to argue*, fully intending to be fired with some dignity.
 
 He is told to go finish the punch list on the other job.
 
@@ -37,49 +38,49 @@ Anyone who has worked a trade has heard a version of this, details swapped. The 
 
 ## The switch
 
-In any building that has to keep running, there is a switch sitting between the utility and the emergency panel. The power drops, the switch throws, and the load lands somewhere else. Inside, one fluorescent tube stutters. The people at the desks keep typing. Nothing in the room tells them that something outside is now burning fuel so the room can stay ordinary.
+In any building that has to keep running, there's a switch sitting between the utility and the emergency panel. The power drops, the switch throws, and the load lands somewhere else. Inside, one fluorescent tube stutters. The people at the desks keep typing. Nothing in the room tells them something outside is now burning fuel so the room can stay ordinary.
 
-That is roughly what happens to him, and he does not hear it happen.
+That's roughly what happens to him, and he doesn't hear it happen.
 
-The coring crew gets paid out of a line meant for something else. A deposit goes in late and the next job goes to an outfit that had its deposit in on time. Nothing is announced. He works all of August under lights he assumes come from the street.
+The coring crew gets paid out of a line meant for something else. A deposit goes in late and the next job goes to an outfit that got its deposit in on time. Nothing's announced. He works all of August under lights he assumes come from the street.
 
 ## It is not done gracefully
 
-The owner does not speak to him for eleven days. Not cold exactly — he nods, he hands over a print — but he routes around him the way you route around a hole in a floor. A man who has just eaten a five-figure mistake is entitled to a bad two weeks. The man on the other end of it reads the silence as contempt and drafts his resignation twice.
+The owner doesn't speak to him for eleven days. Not cold, exactly. He nods, he hands over a print, but he routes around him the way you route around a hole in a floor. A man who's just eaten a five-figure mistake is entitled to a bad two weeks. The man on the other end of it reads the silence as contempt and drafts his resignation twice.
 
 Then in December, at the thing they do at the Italian place, the story gets told to the whole table for the laugh, with his name in it. He laughs too. It sits in him for nine years.
 
-And nobody ever says why. Not *everybody gets one*, not *you're worth more than a slab*, not anything. He is left to supply the reason himself, and the one he supplies — that he is being kept out of pity and will be let go quietly after the season — is worse than the true one and lasts a great deal longer.
+And nobody ever says why. Not *everybody gets one*, not *you're worth more than a slab*, not anything. He's left to supply the reason himself, and the one he supplies, that he's being kept out of pity and will be let go quietly after the season, is worse than the true one and lasts a great deal longer.
 
 ## He tries to give it back
 
-He offers to have it taken out of his checks. The offer is refused flatly, in a tone closer to being told to sit down than to generosity, and he resents it for a while, which is the part men leave out when they tell this kind of story.
+He offers to have it taken out of his checks. The offer gets refused flatly, in a tone closer to *sit down* than to generosity, and he resents it for a while, which is the part men leave out when they tell this kind of story.
 
-So he does what is available: Saturdays, for about a year, against a ledger nobody is keeping.
+So he does what's available: Saturdays, for about a year, against a ledger nobody's keeping.
 
-And he tells it, for a decade, as a story about his own screwup — the template, the tolerance, the six-day-old pour that was entirely indifferent to anyone's opinion. That version belongs to him. It has a lesson in it and he is the one who learned it, and it never once requires him to say the words *somebody covered for me*.
+And for a decade he tells it as a story about his own screwup: the template, the tolerance, the six-day-old pour that couldn't have cared less about anyone's opinion. That version belongs to him. It has a lesson in it, he's the one who learned it, and it never once requires him to say the words *somebody covered for me*.
 
 ## It may be arithmetic
 
-Here is the part that does not resolve. It is entirely possible he is kept because keeping him is cheaper — he has just been through the most expensive education available in his trade, at no cost to whoever hires him next, and firing him would hand that away. Loyalty and a spreadsheet point the same direction more often than either party cares to examine.
+Here's the part that doesn't resolve. It's entirely possible he's kept because keeping him is cheaper. He's just been through the most expensive education in his trade, at no cost to whoever hires him next, and firing him would hand that away. Loyalty and a spreadsheet point the same direction more often than either party cares to look at.
 
-He does not know the split, and is never going to. The load moves either way, and the lights he works under in August come from somewhere.
+He doesn't know the split, and never will. The load moves either way, and the lights he works under in August come from somewhere.
 
 ## Most panels have nothing behind them
 
 Plenty of men get the other version, and it should be said here rather than left for someone to notice on his own.
 
-The number gets read back to you in a room with somebody from HR present, you are out by Friday, and the arithmetic that did not save you was the same arithmetic. Or nothing gets covered at all, ever, for anyone, and a man does his own coring at night for eleven years and calls it self-reliance, because there is no other available word for it and the alternative is looking directly at how alone he has been.
+The number gets read back to you in a room with somebody from HR present, you're out by Friday, and the arithmetic that didn't save you was the same arithmetic. Or nothing gets covered at all, ever, for anyone, and a man does his own coring at night for eleven years and calls it self-reliance, because there's no other word handy and the alternative is looking straight at how alone he's been.
 
-Nothing here says the switch always throws. Most panels have nothing behind them, which is the ordinary condition and not the exception. One man getting carried is not a claim about how often men get carried.
+Nothing here says the switch always throws. Most panels have nothing behind them, which is the ordinary condition and not the exception. One man getting carried isn't a claim about how often men get carried.
 
 ## He finds out sideways
 
-He finds out years later, and sideways. At a retirement lunch, from the daughter who did the books that summer between semesters and remembers it the way you remember a bad month at nineteen. Tear-out, coring, the engineer, the inspector, and a five-figure number he will repeat to himself on the drive home.
+He finds out years later, and sideways. At a retirement lunch, from the daughter who did the books that summer between semesters and remembers it the way you remember a bad month at nineteen. Tear-out, coring, the engineer, the inspector, and a five-figure number he'll repeat to himself on the drive home.
 
 Her father skipped his own draw in August, and again in September, and told her not to leave the paperwork anywhere her mother would find it.
 
-Then the plates come out, and somebody at the end of the table starts arguing about the parking, and that is the whole conversation.
+Then the plates come out, and somebody at the end of the table starts arguing about the parking, and that's the whole conversation.
 
 # Instagram carousel source
 
@@ -123,9 +124,9 @@ Then somebody starts arguing about the parking.
 
 # Instagram caption source
 
-The bolts get set an inch and a half off, in the wrong direction. The base plates come off the truck and do not go down over the bolts. Coring, epoxy anchors, a letter from the engineer, three weeks the schedule did not have.
+The bolts get set an inch and a half off, in the wrong direction. The base plates come off the truck and don't go down over the bolts. Coring, epoxy anchors, a letter from the engineer, three weeks the schedule didn't have.
 
-He drives in Monday with the sentence ready and intends to be fired with some dignity about it. He is told to go finish the punch list on the other job.
+He drives in Monday with the sentence ready and intends to be fired with some dignity about it. He's told to go finish the punch list on the other job.
 
 In a building that has to keep running, the power drops and a switch throws the load somewhere else. One tube stutters. The desks keep typing. He works all of August under lights he assumes come from the street.
 

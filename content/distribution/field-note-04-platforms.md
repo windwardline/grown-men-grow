@@ -13,7 +13,7 @@ Native adaptations per the roles in `docs/technical/distribution-plan.md`. Copy 
 # Medium
 
 - Import the live Ghost URL through Medium's URL importer only; verify the canonical points to Ghost before publishing.
-- Subtitle: Opening up is not the same as owning up.
+- Subtitle: Opening up isn’t the same as owning up.
 - Tags: Men, Relationships, Honesty, Masculinity, Personal Growth
 
 # Bluesky

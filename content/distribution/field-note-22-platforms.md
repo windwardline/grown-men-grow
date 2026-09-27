@@ -22,11 +22,11 @@ Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts unti
 
 ## Post 1
 
-Somewhere between the job and the driveway, a man gives a speech. It has been through drafts. The ending has been rewritten three times, because the first two were merely correct and this one is final. He has never lost this argument.
+Somewhere between the job and the driveway, a man gives a speech. It's been through drafts. The ending has been rewritten three times, because the first two were merely correct and this one is final. He has never lost this argument.
 
 ## Post 2
 
-A rehearsed argument is undefeated because it is cast. He plays himself, which is fair enough, and he also plays the other man, which is not. A reasonable opponent ruins the speech.
+A rehearsed argument is undefeated because it's cast. He plays himself, which is fair enough, and he also plays the other man, which is not. A reasonable opponent ruins the speech.
 
 ## Post 3 — canonical link
 
@@ -34,9 +34,9 @@ The body has no category for rehearsal. A man comes through his own front door h
 
 # LinkedIn Page
 
-Nobody rehearses for no reason. Something happened that a man had no answer for at the time, and going back over the ground to find where the answer was is the sanest thing his head knows how to do about it. That part is preparation, and preparation is not a character flaw.
+Nobody rehearses for no reason. Something happened that a man had no answer for at the time, and going back over the ground to find where the answer was is the sanest thing his head knows how to do about it. That part is preparation, and preparation isn't a character flaw.
 
-The trouble is what the conversation turns into while he is not watching. He plays himself, which is fair enough, and he also plays the other man, which is not — and the other man never gets the one fact that would be genuinely inconvenient, because a reasonable opponent ruins the speech. Run it for a year and he is very good at answering somebody who does not exist.
+The trouble is what the conversation turns into while he isn't watching. He plays himself, which is fair enough, and he also plays the other man, which is not — and the other man never gets the one fact that would be genuinely inconvenient, because a reasonable opponent ruins the speech. Run it for a year and he's very good at answering somebody who doesn't exist.
 
 The new field note is about relay chatter: why closing is the thing that causes the opening, what the small arc at every make and break costs over time, and the difference between drafting what you would say and drafting what somebody else would finally admit. [canonical link]
 
@@ -48,8 +48,8 @@ Relay chatter: the coil pulls the contacts closed, the load drags the voltage un
 
 ## Note 2
 
-Every time a relay makes and breaks, a small arc jumps the gap. One is nothing. But the faces pit, the pitting makes the next arc bigger, and contacts built to touch ten million times end up welded shut. The device is not killed by the load. It is killed by the cycling.
+Every time a relay makes and breaks, a small arc jumps the gap. One is nothing. But the faces pit, the pitting makes the next arc bigger, and contacts built to touch ten million times end up welded shut. The device isn't killed by the load. It's killed by the cycling.
 
 ## Note 3 — canonical link
 
-If the work is on what he would say, that is preparation. If it has moved on to what the other man would finally admit, it became a verdict a while ago — and a verdict is the one document a man cannot issue on his own behalf. [canonical link]
+If the work is on what he would say, that's preparation. If it has moved on to what the other man would finally admit, it became a verdict a while ago — and a verdict is the one document a man can't issue on his own behalf. [canonical link]

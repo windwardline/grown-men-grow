@@ -9,6 +9,7 @@ preview: Every turn of the strap was protecting the tree from something real. Th
 feature_image_alt: A young tree in a bright front lawn held by two wooden stakes and a green strap, beside the same kind of young tree standing on its own with its two pulled stakes and a coiled strap lying on the grass, in a paper collage.
 status: founder-approved
 approved: 2026-09-27 — essay, platform pack, and artwork approved as written on the day they were drafted; approval covers the work, not a slot
+revised: 2026-09-27 — voice revision under the founder ruling of that day (lighter, more human, more charismatic); arguments, facts, closings, and every line printed on a slide unchanged
 publication_authorized: false — no Ghost slot named, no newsletter, no social posting; publication remains separately gated
 stance: assignment — the subject test fails for witness, and correctly: the strap is his and letting it out is a move he has; the closing hundred words turn to him and leave the move named but unmade
 closing_addresses_reader: yes — the last paragraph turns to him in the third person, names the strap as his, and leaves what he does with it as a "can"
@@ -20,9 +21,9 @@ origin: written 2026-09-27 by the Saturday draft task (fired Sunday 03:18 ET on 
 
 # Ghost essay source
 
-A tree that comes home from the nursery has usually spent its life so far packed in a row with its neighbours and tied to a bamboo cane, and it has barely been pushed by anything. So when it goes into the ground it often goes in with a stake. Two, on a windy lot, driven outside the root ball, with a soft strap run from each one to the trunk.
+A tree that comes home from the nursery has usually spent its life so far packed in a row with its neighbours and tied to a bamboo cane, and it's barely been pushed by anything. So when it goes into the ground it often goes in with a stake. Two, on a windy lot, driven outside the root ball, with a soft strap run from each one to the trunk.
 
-The stake is not there to hold the tree up. It is there to hold the roots still. A new root is a thin white thread working out into strange soil, and every time the top rocks in a gust the ball twists and shears off whatever went out that week. So the stake keeps the base quiet for a season while the roots get a grip.
+The stake is not there to hold the tree up. It is there to hold the roots still. A new root is a thin white thread feeling its way into strange soil, and every time the top rocks in a gust the ball twists and shears off whatever went out that week. So the stake keeps the base quiet for a season while the roots get a grip.
 
 Anybody who plants trees for a living has a rule for this, and it has three parts. Low on the trunk. Loose enough that the top can move. Out in a year.
 
@@ -30,45 +31,45 @@ Any subdivision about ten years old will show you how the third part goes.
 
 ## What the wind is for
 
-This is the part that surprises people. A tree builds its trunk out of being pushed around. Every time the wind bends it, the wood near the base registers the strain and answers it: more growth low down, more on the side that took the load, a trunk that flares at the ground like the bottom of a bell. The strength comes from the bending, in about the most literal way wood can manage.
+Here's the part that surprises people. A tree builds its trunk out of being pushed around. Every time the wind bends it, the wood near the base registers the strain and answers it: more growth low down, more on the side that took the load, a trunk that flares at the ground like the bottom of a bell. The strength comes from the bending, in about the most literal way wood can manage.
 
-Hold the top still and nothing is asking. A tree strapped tight to a stake puts its effort into height instead, because height is the only thing left to spend on. It comes out tall and even and thin, sometimes thicker above the strap than below it, and it looks fine. Better than fine. Straight as a flagpole, right up until the stake comes out and it lies down in the first real wind.
+Hold the top still and nothing is asking. A tree strapped tight to a stake puts its effort into height instead, because height's the only thing left to spend on. It comes out tall and even and thin, sometimes thicker above the strap than below it, and it looks fine. Better than fine. Straight as a flagpole, right up until the stake comes out and it lies down in the first real wind.
 
 Nobody who drove that stake wanted that. Every turn of the strap was protecting the tree from something real.
 
-## He is very good at staking
+## He's very good at staking
 
 He is, as a rule, excellent at putting the stake in.
 
-The sixteen-year-old with a first car and no idea what that noise is. The new guy on the crew who does not know yet which questions are stupid. His brother after the divorce. His partner's first year running a business of her own. In each case something real was coming, the roots were thin, and a man who drove a stake in beside them was doing exactly the right thing.
+The sixteen-year-old with a first car and no idea what that noise is. The new guy on the crew who doesn't know yet which questions are stupid. His brother after the divorce. His partner's first year running a business of her own. In every case something real was coming, the roots were thin, and a man who drove a stake in beside them was doing exactly the right thing.
 
-The trouble is the third part, because nothing reminds him. The tree does not ask. A staked tree looks, if anything, more cared for than one left alone, and a man who comes by every weekend to check the strap looks like the best kind of neighbour. So he keeps checking it. He takes the drill back from his son halfway through the hole because the angle is off. He rewrites the new guy's email to the supplier before it goes out. He covers his brother's payment again, just this month. Each one prevents a lean. Each one is true.
+The trouble's the third part, because nothing reminds him. The tree doesn't ask. A staked tree looks, if anything, more cared for than one left alone, and a man who comes by every weekend to check the strap looks like the best kind of neighbour. So he keeps checking it. He takes the drill back from his son halfway through the hole because the angle's off. He rewrites the new guy's email to the supplier before it goes out. He covers his brother's payment again, just this month. Each one prevents a lean. Each one is true.
 
-And at twenty-five the son still calls before he buys anything with an engine in it, and the new guy has been there four years and still brings every hard call to him. From where he stands that looks like being needed, and it is, in roughly the way a radio mast needs its guy wires.
+And at twenty-five the son still calls before he buys anything with an engine in it, and the new guy's been there four years and still brings every hard call to him. From where he stands that looks like being needed, and it is, in roughly the way a radio mast needs its guy wires.
 
 ## The strap grows in
 
-There is a worse outcome than the tree lying down, and it arrives slowly enough that nobody sees it come.
+There's a worse outcome than the tree lying down, and it arrives slowly enough that nobody sees it coming.
 
-A strap left on long enough stops being on the tree and starts being in it. The trunk keeps widening and the strap does not, and the bark rolls over it like a lip. The food a tree sends down to its roots travels in a thin layer just under that bark, so a tie that has grown in holds nothing up anymore. All it does now is squeeze. Arborists find them years later, a band of old rubber buried in the wood, the trunk swollen above it and pinched below, and the tree carrying on as if nothing is wrong, because nothing is loudly wrong.
+A strap left on long enough stops being on the tree and starts being in it. The trunk keeps widening and the strap doesn't, and the bark rolls over it like a lip. The food a tree sends down to its roots travels in a thin layer just under that bark, so a tie that's grown in holds nothing up anymore. All it does now is squeeze. Arborists find them years later, a band of old rubber buried in the wood, the trunk swollen above it and pinched below, and the tree carrying on as if nothing's wrong, because nothing's loudly wrong.
 
-The stake does not get off lightly either. A man who is holding up four things at once cannot leave town for a week. He is the one who has to be reachable. He has been driven into the ground beside each of them and he is exactly as fixed as they are, and a fair amount of what he calls being needed is the creak of a strap nobody let out.
+The stake doesn't get off lightly either. A man holding up four things at once can't leave town for a week. He's the one who has to be reachable. He's been driven into the ground beside each of them and he's exactly as stuck as they are, and a fair amount of what he calls being needed is the creak of a strap nobody let out.
 
 ## Some trees keep the stake
 
-Here the rule gives way, and it should be said straight. Some trees need the stake for years: one on an exposed hilltop, or one that came from the nursery with a root ball that was never going to hold. Some people are not saplings. A son with an illness that does not have a season. A brother in the middle of something that could kill him. A father who is not going to get stronger. Nobody writing about maples gets to tell him when those come out, and this will not try.
+Here's where the rule gives way, and it should be said straight. Some trees need the stake for years: one on an exposed hilltop, or one that came from the nursery with a root ball that was never going to hold. Some people aren't saplings. A son with an illness that doesn't have a season. A brother in the middle of something that could kill him. A father who isn't going to get stronger. Nobody writing about maples gets to tell him when those come out, and this won't try.
 
-And sometimes the stake comes off and the tree leans. The kid puts the first car in a ditch. The new guy loses the supplier. That happens, and it is miserable to watch, and it is the exact thing the stake was put there to prevent.
+And sometimes the stake comes off and the tree leans. The kid puts the first car in a ditch. The new guy loses the supplier. That happens, it's miserable to watch, and it's the exact thing the stake was put there to prevent.
 
-The lean is also the first day the trunk has had anything to read. The wood that stands it back up gets laid down in the lean, and there is nowhere else for it to get laid down.
+The lean is also the first day the trunk has had anything to read. The wood that stands it back up gets laid down in the lean, and there's nowhere else for it to get laid down.
 
 ## Low and loose
 
-The arborists' answer was never to leave young trees alone. It was the first two parts of the rule. Tie it low on the trunk, and leave enough slack that the top can move while the roots stay held. The stake takes the twist the roots cannot stand, and the wind gets everything else.
+The arborists' answer was never to leave young trees alone. It was the first two parts of the rule. Tie it low on the trunk, and leave enough slack that the top can move while the roots stay held. The stake takes the twist the roots can't stand, and the wind gets everything else.
 
-The check at the end of the first season is not complicated either. Take the ties off and see whether the tree stands on its own. If it does, the stakes come out. If it flops, the ties go back on lower and looser than before, and the check happens again next year. Nobody in the trade treats a tree that flopped as a tree that failed.
+The check at the end of the first season isn't complicated either. Take the ties off and see whether the tree stands on its own. If it does, the stakes come out. If it flops, the ties go back on lower and looser than before, and the check happens again next year. Nobody in the trade treats a tree that flopped as a tree that failed.
 
-So the move, where there is one, is rarely cutting anything. It is the strap he cinched in some bad week years ago, still at the height he set it, still pulled to the notch it was on then. The strap is his. He can let it out a notch, and then go inside while the next wind comes through.
+So the move, where there is one, is rarely cutting anything. It's the strap he cinched in some bad week years ago, still at the height he set it, still pulled to the notch it was on then. The strap is his. He can let it out a notch, and then go inside while the next wind comes through.
 
 # Instagram carousel source
 
@@ -120,11 +121,11 @@ The strap is his.
 
 # Instagram caption source
 
-A young tree often goes into the ground with a stake. The stake is not there to hold it up. It holds the roots still for a season while they get a grip, and the rule for it has three parts: low on the trunk, loose enough that the top can move, out in a year.
+A young tree often goes into the ground with a stake. The stake isn't there to hold it up. It holds the roots still for a season while they get a grip, and the rule for it has three parts: low on the trunk, loose enough that the top can move, out in a year.
 
 The third part is the one that gets missed. A tree builds its trunk out of being bent by the wind, so a tree held still grows tall and thin and lies down in the first real gust after the stake comes out. Leave the strap long enough and the bark grows over it.
 
-He is very good at staking. The kid with the first car, the new guy on the crew, his brother after the divorce. Every turn of the strap was protecting someone from something real. The trouble is that nothing reminds him when the year is up.
+He's very good at staking. The kid with the first car, the new guy on the crew, his brother after the divorce. Every turn of the strap was protecting someone from something real. The trouble is that nothing reminds him when the year is up.
 
 # Instagram alt text source
 

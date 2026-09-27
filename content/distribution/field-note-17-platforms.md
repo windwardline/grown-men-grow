@@ -26,11 +26,11 @@ A water heater is a steel tank with a coat of glass fused inside it, and the gla
 
 ## Post 2
 
-The rod does not protect the tank evenly. It protects the places where the lining failed — the pinhole, the thin spot, the raw edge — because that is where the current concentrates. The good glass needs nothing and gets nothing.
+The rod doesn't protect the tank evenly. It protects the places where the lining failed — the pinhole, the thin spot, the raw edge — because that's where the current concentrates. The good glass needs nothing and gets nothing.
 
 ## Post 3 — canonical link
 
-There is no light for this. Water goes in cold and comes out hot for twelve years, and the tank is never told. [canonical link]
+There's no light for this. Water goes in cold and comes out hot for twelve years, and the tank is never told. [canonical link]
 
 # LinkedIn Page
 
@@ -38,20 +38,20 @@ A water heater is a steel tank with a coat of glass fused to the inside of it, a
 
 The plan is a rod. It threads into the top and hangs down the middle of the water, made of something that corrodes more easily than steel does, and the water goes after it instead. The trade name for the part is sacrificial anode.
 
-What is worth slowing down over is where the protection goes. Not evenly across the tank — to the places where the lining failed. The current concentrates at the defect, spends the rod there, and leaves the good glass alone, because the good glass needs nothing. And there is no light for any of it. Nothing on the front of the appliance reports it, and the tank runs eleven or twelve years without noticing anything or being told.
+What's worth slowing down over is where the protection goes. Not evenly across the tank — to the places where the lining failed. The current concentrates at the defect, spends the rod there, and leaves the good glass alone, because the good glass needs nothing. And there's no light for any of it. Nothing on the front of the appliance reports it, and the tank runs eleven or twelve years without noticing anything or being told.
 
-The new field note is about the part that is used up quietly, in the dark, and thrown out with the packaging from its replacement. [canonical link]
+The new field note is about the part that's used up quietly, in the dark, and thrown out with the packaging from its replacement. [canonical link]
 
 # Substack Notes
 
 ## Note 1
 
-Put two metals in the same hot water and the water goes after the more reactive one and leaves the other alone. That is not a preference so much as a law, and a whole appliance is designed around it.
+Put two metals in the same hot water and the water goes after the more reactive one and leaves the other alone. That isn't a preference so much as a law, and a whole appliance is designed around it.
 
 ## Note 2
 
-The rotten-egg smell out of a hot tap is the protection running. It is the only signal the system puts out and it is a terrible one, because it does not read as protection. It reads as a problem with the water, so a filter gets bought — real diligence, wrong thing.
+The rotten-egg smell out of a hot tap is the protection running. It's the only signal the system puts out and it's a terrible one, because it doesn't read as protection. It reads as a problem with the water, so a filter gets bought — real diligence, wrong thing.
 
 ## Note 3 — canonical link
 
-Rods come out thinner than a pencil across the middle. Most of the weight is gone somewhere it does not come back from. [canonical link]
+Rods come out thinner than a pencil across the middle. Most of the weight is gone somewhere it doesn't come back from. [canonical link]

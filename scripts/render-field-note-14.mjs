@@ -17,7 +17,7 @@ import {
   writeAsset,
 } from "./lib/editorial-collage.mjs";
 
-// Field Note 14 — "Somebody Is Up on His Ladder".
+// Field Note 14 — "Somebody’s Up on His Ladder".
 // Signature vocabulary: a small hand-drawn downspout — a short vertical run, an
 // elbow at the base, and a horizontal extension out to the yard — with a water
 // line that only exists as far as it has actually travelled. It sits high in the
@@ -79,9 +79,9 @@ const slides = [
     total: 7,
     label: "FIELD NOTE 14",
     body: `<rect x="648" y="146" width="384" height="286" fill="url(#fn14-01-dots)"/>
-    ${lines(["SOMEBODY IS UP"], {x: 62, y: 258, size: 68, leading: 86, family: SANS, weight: 900, tracking: 1.2})}
+    ${lines(["SOMEBODY’S UP"], {x: 62, y: 258, size: 68, leading: 86, family: SANS, weight: 900, tracking: 1.2})}
     ${lines(["ON HIS LADDER."], {x: 62, y: 346, size: 68, leading: 86, family: SANS, weight: 900, tracking: 1.2, fill: OXBLOOD})}
-    ${lines(["He is not going out there."], {x: 64, y: 410, size: 38, leading: 50, family: SERIF, weight: 400, style: "italic", fill: SMOKE})}
+    ${lines(["He’s not going out there."], {x: 64, y: 410, size: 38, leading: 50, family: SERIF, weight: 400, style: "italic", fill: SMOKE})}
     ${downspoutMark(872, 190, 0.18, RUST, 1.05)}
     ${photo({name: LADDER, x: 124, y: 466, width: 832, height: 736, rotation: -0.8, position: "xMidYMid", backing: GREEN, id: "fn14-01"})}
     ${tape(292, 442, 218, -4)}`,

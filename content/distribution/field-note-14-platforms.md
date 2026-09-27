@@ -1,5 +1,5 @@
 ---
-essay: Somebody Is Up on His Ladder
+essay: Somebody’s Up on His Ladder
 canonical: https://grownmengrow.com/somebody-is-up-on-his-ladder/ (live only after publication)
 status: founder-approved
 approved: 2026-08-23 — approved with the essay and the artwork in one pass; posting remains separately gated
@@ -19,7 +19,7 @@ Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts unti
 
 - Import the live Ghost URL through Medium's URL importer only; verify the canonical points to Ghost before publishing.
 - Take the title from the Ghost post's `title` field, never from what the importer produced.
-- Subtitle: He can see every wrong thing they are doing, and he is not going out there.
+- Subtitle: He can see every wrong thing they’re doing, and he’s not going out there.
 - Tags: Men, Masculinity, Friendship, Caregiving, Essays
 
 # Bluesky
@@ -30,7 +30,7 @@ A gutter has nothing to do with keeping the roof dry. The roof handles that on i
 
 ## Post 2
 
-When a gutter fails, nothing happens. There is no event. It turns up two floors down and a season later, as a corner of a basement that smells like a basement.
+When a gutter fails, nothing happens. There's no event. It turns up two floors down and a season later, as a corner of a basement that smells like a basement.
 
 ## Post 3 — canonical link
 
@@ -40,11 +40,11 @@ They set the ladder on the soft ground, miss the back valley, and put the extens
 
 A gutter has nothing to do with keeping the roof dry. The roof handles that on its own. The gutter exists for the six inches of dirt at the bottom of the wall — an inch of rain comes off an ordinary house as something like six hundred gallons, arriving at three or four places, and left alone it digs its own trench against the footing.
 
-When a gutter fails, nothing happens. That is the part worth sitting with. There is no event. The failure turns up two floors down and a season later, as a corner of a basement that smells like a basement or a door that has developed an opinion about closing.
+When a gutter fails, nothing happens. That's the part worth sitting with. There's no event. The failure turns up two floors down and a season later, as a corner of a basement that smells like a basement or a door that has developed an opinion about closing.
 
-The new field note is about the season a man spends as the house rather than the man on the ladder. The back goes in October, or the knee, or the surgery that was on the calendar since June. The leaves come down on the same schedule they always do. So there is a truck in the driveway on a Saturday, and a ladder off the pegs on his own garage wall, and somebody up on it — and he has a window, a chair, and eleven weeks to watch it be done imperfectly by people who are not going to ask him anything.
+The new field note is about the season a man spends as the house rather than the man on the ladder. The back goes in October, or the knee, or the surgery that was on the calendar since June. The leaves come down on the same schedule they always do. So there's a truck in the driveway on a Saturday, and a ladder off the pegs on his own garage wall, and somebody up on it — and he has a window, a chair, and eleven weeks to watch it be done imperfectly by people who aren't going to ask him anything.
 
-The piece does not tidy that up. The ladder goes on soft ground. The back valley gets missed. One man stops coming and there is no reason. And it says the ordinary part out loud: plenty of men are laid up in October and no truck comes at all. [canonical link]
+The piece doesn't tidy that up. The ladder goes on soft ground. The back valley gets missed. One man stops coming and there's no reason. And it says the ordinary part out loud: plenty of men are laid up in October and no truck comes at all. [canonical link]
 
 # Substack Notes
 
@@ -54,7 +54,7 @@ The back goes in October. Or the knee, or the shoulder, or the surgery that has 
 
 ## Note 2
 
-He offers to pay, and it gets refused in the specific tone men keep for refusing money. He offers to order lunch, and lunch is accepted, which is not the same thing, and he knows it is not the same thing while he is dialing.
+He offers to pay, and it gets refused in the specific tone men keep for refusing money. He offers to order lunch, and lunch is accepted, which isn't the same thing, and he knows it isn't the same thing while he's dialing.
 
 ## Note 3 — canonical link
 

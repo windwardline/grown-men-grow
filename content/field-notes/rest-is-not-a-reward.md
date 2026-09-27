@@ -1,14 +1,15 @@
 ---
-title: Rest Is Not a Reward
+title: Rest Isn’t a Reward
 slug: rest-is-not-a-reward
 dek: You don’t earn maintenance. You schedule it.
 byline: none — publication voice (founder ruling 2026-08-10)
 access: public
-email_subject: Rest Is Not a Reward
+email_subject: Rest Isn’t a Reward
 preview: The tools get put away properly. The man doesn’t.
 feature_image_alt: A man asleep in a daytime hammock in a bright backyard, beside a kettle, a mug, and an open book at an armchair in morning light, in a paper collage.
 status: founder-approved
 approved: 2026-08-09 under the ten-round directive; founder veto on sight
+revised: 2026-09-27 — voice revision under the founder ruling of that day (lighter, more human, more charismatic); arguments, facts, closings, and every line printed on a slide unchanged
 stance: assignment — scheduling rest is his to do
 closing_addresses_reader: yes — "Put it on the schedule. Not after. On."
 opening: trade — opens on a man closing down a job site
@@ -24,33 +25,33 @@ Then he goes inside and treats himself like the one tool that doesn't need it.
 
 ## The earning model
 
-Somewhere along the line most of us picked up the earning model of rest: rest is what you get after. After the deadline, after the season, after the list — the list that has never once been finished in the recorded history of lists.
+Somewhere along the line most of us picked up the earning model of rest: rest is what you get after. After the deadline, after the season, after the list, the list that has never once been finished in the recorded history of lists.
 
-The earning model sounds disciplined. It is actually just debt. A man running on the earning model isn't resting less; he is deferring rest at interest, the way he'd never defer an oil change, because he has met himself and knows the engine keeps taking it.
+The earning model sounds disciplined. It is actually just debt. A man on the earning model isn't resting less; he's deferring rest at interest, the way he'd never defer an oil change, because he's met himself and knows the engine keeps taking it.
 
-Until it doesn't, and the crash gets named something more respectable: a bad back, a short fuse, a weekend lost to the couch that fixed nothing because collapse is not rest, it is running out.
+Until it doesn't, and the crash gets a more respectable name: a bad back, a short fuse, a weekend lost to the couch that fixed nothing, because collapse isn't rest. It's running out.
 
-## Collapse is not rest
+## Collapse isn't rest
 
-That distinction deserves a minute, because they get confused constantly.
+That distinction's worth a minute, because the two get confused constantly.
 
-Rest is chosen. It happens on purpose, before the tank hits empty, and it returns something: attention, patience, the ability to hear your kid's third consecutive story about the same video game with something resembling grace.
+Rest is chosen. It happens on purpose, before the tank hits empty, and it gives something back: attention, patience, the ability to hear your kid's third consecutive story about the same video game with something like grace.
 
-Collapse is what happens when the choosing gets skipped. It looks like rest from the outside — man on couch, screen on — but nothing comes back. He gets up dumber and stiffer than he sat down. If a nap works like a fine, it wasn't rest. It was repossession.
+Collapse is what happens when the choosing gets skipped. From the outside it looks like rest, man on couch, screen on, but nothing comes back. He gets up dumber and stiffer than he sat down. If a nap works like a fine, it wasn't rest. It was repossession.
 
 ## The maintenance model
 
-The maintenance model is unromantic, which by now is a family trait: rest is scheduled, not earned. It goes on the calendar the way the oil change does — by interval, not by feeling — because by the time you feel it, you're past due.
+The maintenance model is unromantic, which by now is a family trait: rest is scheduled, not earned. It goes on the calendar the way the oil change does, by interval and not by feeling, because by the time you feel it you're past due.
 
-What that looks like is embarrassingly ordinary. A real day off, on purpose, with a start and an end. Sleep treated like a load-bearing wall instead of a suggestion. The evening where the phone goes in a drawer and the drawer is in another room, because willpower is a terrible security system.
+What that looks like is embarrassingly ordinary. A real day off, on purpose, with a start and an end. Sleep treated like a load-bearing wall instead of a suggestion. The evening the phone goes in a drawer and the drawer's in another room, because willpower is a terrible security system.
 
-And one that men skip most: rest *before* the big thing, not just after. Nobody admires the man who shows up to the decisive week already spent. The pit crew doesn't wait until the engine seizes to change the tires.
+And the one men skip most: rest *before* the big thing, not just after. Nobody admires the man who shows up to the decisive week already spent. The pit crew doesn't wait for the engine to seize before changing the tires.
 
 ## It's not a moral issue
 
-Here is the part that quietly matters. Under the earning model, rest is a character question — take it early and you're soft, need it at all and you're falling behind. That framing has put more good men on the ground than laziness ever did.
+Here's the part that quietly matters. Under the earning model, rest is a character question. Take it early and you're soft; need it at all and you're falling behind. That framing has put more good men on the ground than laziness ever did.
 
-Maintenance has no morality. Nobody calls the truck lazy for needing oil. The question is not whether you deserve rest. Deserve was never the right category. The question is whether you intend to keep running, and every man I'd trust with anything answers that one the same way.
+Maintenance has no morality. Nobody calls the truck lazy for needing oil. The question isn't whether you deserve rest. Deserve was never the right category. The question is whether you intend to keep running, and every man I'd trust with anything answers that one the same way.
 
 Put it on the schedule. Not after. On.
 

@@ -16,7 +16,9 @@ import {
   writeAsset,
 } from "./lib/editorial-collage.mjs";
 
-// Field Note 7 — "Rest Is Not a Reward".
+// Field Note 7 — "Rest Isn’t a Reward". The posted carousel
+// still reads "Rest Is Not a Reward": it went out under the original title and
+// stays as the record of what was published.
 // Signature vocabulary: a battery gauge — rounded rectangle with fill bars,
 // nearly empty in the early slides and full by the close. No prior vocabularies.
 const HAMMOCK = "editorial/hammock-midday-rest.png";

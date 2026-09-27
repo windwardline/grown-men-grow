@@ -25,19 +25,19 @@ A part four thousandths over is a good part. It passes. Put six of them in a row
 
 ## Post 2
 
-The clean audit is worth exactly one thing: he is not a bad man, and he can stop paying rent on that question. It is not worth what he wants it to be worth. It does not close the door.
+The clean audit is worth exactly one thing: he isn't a bad man, and he can stop paying rent on that question. It isn't worth what he wants it to be worth. It doesn't close the door.
 
 ## Post 3 — canonical link
 
-Innocence is not a repair. It is a finding. [canonical link]
+Innocence isn't a repair. It's a finding. [canonical link]
 
 # LinkedIn Page
 
-Every dimension on a drawing carries a second number in smaller type — plus or minus five thousandths — and that second number is the honest one. A part four thousandths over passes, and the inspector who stamps it is doing the job correctly.
+Every dimension on a drawing carries a second number in smaller type — plus or minus five thousandths — and that second number is the honest one. A part four thousandths over passes, and the inspector who stamps it's doing the job correctly.
 
-Put six of those in a row, all drifting the same direction, and the far end of the assembly sits thirty thousandths from where the drawing put it. That is a door that will not latch. Take it apart and every single piece passes.
+Put six of those in a row, all drifting the same direction, and the far end of the assembly sits thirty thousandths from where the drawing put it. That's a door that won't latch. Take it apart and every single piece passes.
 
-Fault and responsibility get treated as one tool and they are two. Fault is an inspection: it looks backward, returns a verdict, and the moment the verdict reads no defect found, it is finished. Responsibility is a gauge — it does not ask who did it, and it reads the same number whether the answer is your fault, someone else's, or nobody's.
+Fault and responsibility get treated as one tool and they're two. Fault is an inspection: it looks backward, returns a verdict, and the moment the verdict reads no defect found, it's finished. Responsibility is a gauge — it doesn't ask who did it, and it reads the same number whether the answer is your fault, someone else's, or nobody's.
 
 The new field note is about the failure where the audit comes back clean and the thing is still out of tolerance. [canonical link]
 
@@ -45,7 +45,7 @@ The new field note is about the failure where the audit comes back clean and the
 
 ## Note 1
 
-Errors can cancel — one part high, the next low, the stack comes out beautiful. That happens constantly and it is worth nothing, because you cannot order it.
+Errors can cancel — one part high, the next low, the stack comes out beautiful. That happens constantly and it's worth nothing, because you can't order it.
 
 ## Note 2
 
@@ -53,4 +53,4 @@ Being more careful about everything works out to being more careful about nothin
 
 ## Note 3 — canonical link
 
-Somebody has to hold the gauge against the part. There is exactly one man standing in front of it. [canonical link]
+Somebody has to hold the gauge against the part. There's exactly one man standing in front of it. [canonical link]

@@ -22,7 +22,7 @@ Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts unti
 
 ## Post 1
 
-A staked young tree is not being held up. The stake holds the roots still for a season while they get a grip in strange soil. The rule has three parts: low on the trunk, loose enough that the top can move, out in a year. Nobody forgets the first two.
+A staked young tree isn't being held up. The stake holds the roots still for a season while they get a grip in strange soil. The rule has three parts: low on the trunk, loose enough that the top can move, out in a year. Nobody forgets the first two.
 
 ## Post 2
 
@@ -38,7 +38,7 @@ Anybody who plants trees for a living has a rule for staking a young one: low on
 
 The third part is the one that gets missed, and the cost is specific. A tree builds its trunk out of being pushed by the wind. Held still, it grows tall and thin and falls over the first time it has to stand on its own.
 
-The new field note is about the men who are very good at supporting people — a new hire, a teenager, a brother in a bad year — and about the part of that support nothing reminds them to finish. It also says plainly where the rule gives way, because some people are not saplings. [canonical link]
+The new field note is about the men who are very good at supporting people — a new hire, a teenager, a brother in a bad year — and about the part of that support nothing reminds them to finish. It also says plainly where the rule gives way, because some people aren't saplings. [canonical link]
 
 # Substack Notes
 
@@ -48,8 +48,8 @@ A strap left on a young tree long enough stops being on the tree and starts bein
 
 ## Note 2
 
-A staked tree looks, if anything, more cared for than one left alone. A man who comes by every weekend to check the strap looks like the best kind of neighbour. That is why nobody reminds him the year is up.
+A staked tree looks, if anything, more cared for than one left alone. A man who comes by every weekend to check the strap looks like the best kind of neighbour. That's why nobody reminds him the year is up.
 
 ## Note 3 — canonical link
 
-Sometimes the stake comes off and the tree leans. That is miserable to watch. It is also the first day the trunk has had anything to read, and the wood that stands it back up gets laid down in the lean and nowhere else. [canonical link]
+Sometimes the stake comes off and the tree leans. That's miserable to watch. It's also the first day the trunk has had anything to read, and the wood that stands it back up gets laid down in the lean and nowhere else. [canonical link]
