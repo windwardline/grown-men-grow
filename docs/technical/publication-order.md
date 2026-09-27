@@ -63,6 +63,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 20 | `the-opener-doesnt-lift-the-door` | 2026-12-29 | |
 | 21 | `he-writes-both-parts` | 2027-01-05 | |
 | 22 | `everything-looks-straight-in-primer` | 2027-01-12 | |
+| 23 | `the-stake-was-supposed-to-come-off` | 2027-01-19 | |
 
 ## Why this order and not another
 
@@ -105,6 +106,12 @@ This is the first append since the spacing check landed, and it is the first one
 `everything-looks-straight-in-primer` was approved 2026-09-23 and appended at 22. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note.
 
 The register was read before the subject was chosen, as it was for position 21. The last `witness` piece sits at 20, so a `witness` note here would have been two slots away and failed the spacing check; the note is `assignment`. Position 21 opens `other`, and so does this one, so no trade run grows. Two clean appends in a row is still not evidence the rules hold under pressure, only that they were read in time twice.
+
+### Position 23 was appended, and the rules decided its stance
+
+`the-stake-was-supposed-to-come-off` was approved 2026-09-27 and appended at 23. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note.
+
+This is the first append where the spacing check, rather than the subject, ruled out a stance. The corpus had tilted mildly back toward obligation, and on that alone the slot called for `witness`; but witness pieces sit at 7, 10, 14, 17 and 20, and a fifth-gap of three at 23 would have put four on an exact beat. The note is `assignment`. Its `trade` opening follows two `other` openings at 21 and 22, a run of one. A `witness` piece clears at 24 or later.
 
 ### The spacing reorder of 2026-09-16, and why the rules are now checked
 
