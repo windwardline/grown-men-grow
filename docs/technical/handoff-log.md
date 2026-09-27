@@ -3798,3 +3798,23 @@ Step 4 of `~/.claude/scheduled-tasks/gmg-tuesday-publish-check/SKILL.md` now run
 **Verification:** every `gate:` line in `AGENTS.md` was run; results are in the pull request body.
 
 **Open, in order:** (1) The Thursday slot fired ten hours late on catch-up, the same scheduler substrate as before; nothing new to fix in this repository. (2) Carried forward, not re-verified by this session: the Substack slot decision, the Instagram traffic anomaly, the one-member list, the suspended A/B, the Ghost slot for register position 22, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-27 — Claude Code — Saturday Substack Note 2 for "Nobody Rigs to the Breaking Strength": stood down on a wrong-day fire
+
+**Client:** Claude Code (desktop), scheduled task `gmg-saturday-note`. **Branch:** `claude/saturday-note-2026-09-26-stand-down`.
+
+**The Saturday 2026-09-26 18:30 slot did not fire.** The task first ran at 03:18 ET on Sunday, 529 minutes after the slot. The preflight exited `20` with `weekdayMismatch: true`. That is the wrong-day guard added on 2026-09-20 doing its job: the essay precondition passes on a Sunday, and before the guard existed this same fire would have been measured against Sunday's slot. Nothing was typed, drafted, or posted, and no browser was opened.
+
+**The note is still unposted.** `verify-substack-notes.mjs` ran on the live machine and reconciled all 14 rows against 9 live notes. No live note carries this copy. The row stays blank rather than `missed`, because the founder posted last week's Saturday note by hand the next day. Writing a terminal outcome while one is still possible is the error this register was built to catch. If it goes out, the row takes `posted` with its permalink. If it does not, the next reconciliation records `missed`.
+
+**Copy for the founder, verbatim from `content/distribution/field-note-12-platforms.md`, Note 2.** Post it on `substack.com/@grownmengrow/notes` under the publication identity, with no link, hashtags, or image:
+
+> The overload is rarely one heroic yes. It is the extra account, the coaching nobody else stepped up for, the kitchen a contractor would take four months to do. Every one of those is defensible on its own, which is exactly how the total gets past him.
+
+**Files changed:** this log only.
+
+**External state changed:** none.
+
+**Verification:** preflight exit `20`, and the lock was not held past the run. `verify-substack-notes.mjs` exited 0 with 9 posted, 4 missed, and 1 pending. Every `gate:` line is recorded in the PR body.
+
+**Open, in order:** (1) The founder posts the copy above by hand or lets the slot go. Either way, the next reconciliation fills row 57. (2) Two Saturday evenings running have not fired because the application was closed. That is further evidence for the open founder question: record the Substack slots as founder-run rather than scheduled. (3) Carried forward, not re-verified by this session: the Instagram traffic anomaly, the one-member list, the suspended A/B, the Ghost slot for register position 22, and the extract-zip acceptances expiring 2026-11-09.
