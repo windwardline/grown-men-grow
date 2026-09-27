@@ -68,7 +68,7 @@ Thirty is a floor rather than a target: below it a five-point open-rate differen
 
 
 
-**Also unreachable, and separate from the sample-size problem.** Ghost's `/stats/` family and `/links/` return 403 to an Admin API integration key; they are session-authenticated for the admin UI only. Step 3's secondary metrics — 48-hour pageviews and per-post member conversions — cannot be collected programmatically. When the precondition is met, either those two numbers are read from the Ghost admin UI by hand or they are dropped from the protocol; that choice is still open and belongs with whoever restarts the A/B.
+**Pageviews are read from Ghost's own analytics, in the admin UI (settled 2026-09-27).** Ghost's `/stats/` family, `tinybird/token/`, and `/links/` return 403 to an Admin API integration key. They answer only to a signed-in admin session. Ghost(Pro) records web traffic natively, so no second tracker is needed and none was added. The Friday analytics task reads **Analytics → Web traffic** in the founder's signed-in Chrome, the same route it uses for Business Suite: unique visitors, total views, top content, and top sources for the week. Per-send email delivered and opened counts do come through the integration key, as `posts/?include=email`. A staff access token would put the stats endpoints within a script's reach. It was rejected because it carries the full rights of an administrator account, which is too broad a credential to hold for a read-only weekly number. This settles the choice this paragraph used to leave open: when the precondition is met, step 3's 48-hour pageviews come from that screen. Per-post member conversions come from the same Analytics section.
 
 ## The weekday premise broke on a Tuesday
 
@@ -78,7 +78,7 @@ Thirty is a floor rather than a target: below it a five-point open-rate differen
 
 **What can be said with the evidence in hand.** A slot is real only if the application happens to be open at it, and nothing about the day of week makes that reliable. Morning slots have a better record than midday and evening ones, which is consistent with when the machine is first used rather than with anything about audience timing. That is an observation about this machine, not about readers.
 
-**Deliberately not changed here.** No slot moves on this evidence. The Saturday move was founder-directed and this would be a second timing change made from a single miss, which is the reasoning the Saturday section itself flagged as thin. The open question is whether the Tuesday fragment slot should stay unattended at all, or join the Saturday note as a founder-run action; that is a founder decision and it is listed as open in the handoff log rather than settled here.
+**Deliberately not changed here.** No slot moves on this evidence. The Saturday move was founder-directed and this would be a second timing change made from a single miss, which is the reasoning the Saturday section itself flagged as thin. **Founder-ruled 2026-09-27: the slots stay scheduled, and a late post is accepted.** The founder will not be tied to the computer at specific times. On time is ideal. When a task fires late or stands down, posting late by hand is the accepted outcome, not a failure to escalate. The register keeps recording lateness as a fact. Neither slot becomes a founder-run action, and neither is raised again as an open decision.
 
 ## The evening Saturday slot missed, and the guard reported the wrong reason
 

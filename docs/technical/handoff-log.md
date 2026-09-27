@@ -3830,3 +3830,19 @@ Step 4 of `~/.claude/scheduled-tasks/gmg-tuesday-publish-check/SKILL.md` now run
 **External state changed:** one Substack note posted **by the founder**, not by an agent.
 
 **Verification:** `verify-substack-notes.mjs` after the edit, plus every `gate:` line. Results are in the PR body.
+
+## 2026-09-27 — Claude Code — founder rulings: late notes accepted; pageviews come from Ghost's own analytics
+
+**Client:** Claude Code. **Branch:** `claude/founder-rulings-2026-09-27`. This follows the readout above. The founder ruled on its three open items.
+
+**(1) Withdrawn.** Staging the Tuesday post and queueing Buffer are steps 1 and 3 of `gmg-monday-staging`. An empty Sunday queue is the expected state and should not have been raised. The Friday task's `SKILL.md` now says so, so it is not raised again.
+
+**(2) Founder-ruled.** The Substack slots stay scheduled, and a late hand-post is accepted. Recorded in `founder-decisions.md`. The open question in `publish-timing.md` is replaced with the ruling.
+
+**(3) Settled, with no new instrument.** A pageview source already existed. Ghost(Pro)'s native web analytics shows **49 unique visitors and 62 views over 30 days**, and **5 and 5 for Sep 21–27**. This week's visits went to "Nobody Rigs to the Breaking Strength" (3), "You Can't Outwork a Wrong Direction" (1), and the homepage (1), from Direct (4) and Bing (1). Over 30 days, sources were Direct 37, Bing 8, Facebook 2, Google 1, **Instagram 1**. The daily chart shows no rise for Sep 17–21. **That closes the anomaly: Instagram's 76 bio-link clicks never became visits to the site.**
+
+The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 to the integration key, confirmed this session on six endpoints. A staff access token would open them to a script. It was rejected as an administrator-rights credential held for a read-only weekly number. The Friday task now reads **Analytics → Web traffic** in the founder's signed-in Chrome, as it already does for Business Suite (new step 1a). The same edit corrects its step 1: per-send email counts come from `posts/?include=email`. This also settles the choice `publish-timing.md` had left open about step 3's 48-hour pageviews.
+
+**Files changed:** `docs/technical/publish-timing.md`, `docs/technical/founder-decisions.md`, this log. Outside the repository: `~/.claude/scheduled-tasks/gmg-friday-analytics/SKILL.md` (steps 1, 1a, 8). **External state changed:** none. Ghost analytics were read, not changed.
+
+**Open:** nothing new. Carried forward: distribution, the one-member list, the suspended A/B, the extract-zip acceptances expiring 2026-11-09.
