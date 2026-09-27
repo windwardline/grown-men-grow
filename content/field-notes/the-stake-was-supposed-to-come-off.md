@@ -7,15 +7,15 @@ access: public
 email_subject: The Stake Was Supposed to Come Off
 preview: Every turn of the strap was protecting the tree from something real. That is the whole problem.
 feature_image_alt: A young tree in a bright front lawn held by two wooden stakes and a green strap, beside the same kind of young tree standing on its own with its two pulled stakes and a coiled strap lying on the grass, in a paper collage.
-status: draft — NOT founder-approved
-approved: none — awaiting founder review
-publication_authorized: false — NOT authorized for publication; no Ghost slot, no newsletter, no social posting
+status: founder-approved
+approved: 2026-09-27 — essay, platform pack, and artwork approved as written on the day they were drafted; approval covers the work, not a slot
+publication_authorized: false — no Ghost slot named, no newsletter, no social posting; publication remains separately gated
 stance: assignment — the subject test fails for witness, and correctly: the strap is his and letting it out is a move he has; the closing hundred words turn to him and leave the move named but unmade
 closing_addresses_reader: yes — the last paragraph turns to him in the third person, names the strap as his, and leaves what he does with it as a "can"
 opening: trade — opens on how nursery trees are staked at planting, a landscaping practice
 personal_claims: none included; add only from founder-supplied facts
-artwork_status: complete; awaiting founder review under the per-article image rule and the photograph-exclusivity ruling
-origin: written 2026-09-27 by the Saturday draft task (fired Sunday 03:18 ET on catch-up) with the standing commission at `none`, so no commission line is cleared by this change set
+artwork_status: complete; founder-approved 2026-09-27 under the per-article image rule and the photograph-exclusivity ruling
+origin: written 2026-09-27 by the Saturday draft task (fired Sunday 03:18 ET on catch-up) with the standing commission at `none`, so no commission line is cleared by this change set. Approved the same day and moved into content/ at register position 23
 ---
 
 # Ghost essay source
@@ -146,10 +146,11 @@ He is very good at staking. The kid with the first car, the new guy on the crew,
 
 # Production notes
 
-- Drafted 2026-09-27 by the Saturday draft task, which fired Sunday 03:18 ET on catch-up after the desktop application was closed through its Saturday slot. Nothing about a draft depends on the weekday; the note-posting tasks carry the wrong-day guard, and this is not one of them.
+- Written and approved 2026-09-27 — essay, pack, and artwork, on the day it was drafted. Register position 23. No Ghost slot named; publication timing remains a later founder decision.
+- Drafted by the Saturday draft task, which fired Sunday 03:18 ET on catch-up after the desktop application was closed through its Saturday slot. Nothing about a draft depends on the weekday; the note-posting tasks carry the wrong-day guard, and this is not one of them.
 - Stance is `assignment`. `operating-cadence.md` carries `**Standing commission:** none`. The subject test fails for witness: the strap is his, and letting it out is a move he has.
 - The corpus duty was read before the subject was chosen. The 2026-09-16 measurement put `witness` at five in twenty-one; the bank is now five in twenty-three, and the last three approvals ran `assignment`. That is a mild tilt back toward obligation, and this was the slot to correct it, but the register forbids it here: witness pieces sit at 7, 10, 14, 17 and 20, so a `witness` note appended at 23 would put 14, 17, 20 and 23 on an exact three-slot beat and fail `witnessSpacingFaults`. A witness piece appended at 24 or later clears. The recommendation is recorded in the handoff log rather than acted on here, because setting a standing commission is the founder's call.
-- If appended at register position 23, the note clears both spacing checks: its `trade` opening follows two `other` openings at 21 and 22, a run of one; and it adds no witness row.
+- Placed at register position 23, where it clears both spacing checks: its `trade` opening follows two `other` openings at 21 and 22, a run of one; and it adds no witness row.
 - No first-person anecdote appears and no event is asserted as having happened; the essay runs in the generic present per the 2026-08-08 founder ruling, reaffirmed 2026-08-12. The son, the new guy, the brother, the partner, and the father are types, not reported people.
 - The arboriculture is ordinary practice, used as metaphor, not instruction: nursery stock is often staked to hold the root ball still while roots establish; the common guidance is to tie low and loosely enough for the top to flex, and to remove stakes after one growing season; trunks develop taper and strength in response to wind sway, and rigidly staked trees grow taller and thinner, sometimes wider above the tie than below; ties left on girdle the trunk by constricting the phloem under the bark. The "take the ties off and see if it stands" check is the standard end-of-season test.
 - Photography generated 2026-09-27 in the founder's ChatGPT project. Ten images were generated and two kept. Every rejection was made at full resolution against the quality gate, on physical tells, not on taste.

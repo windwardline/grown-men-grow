@@ -3900,3 +3900,17 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Verification:** every `gate:` line run by name; results are in the PR. No `cadence:` gate was run, because none is due to this change set.
 
 **Open, in order:** (1) Founder review of the delivered unit. On approval it moves to `content/` at register position 23 (or later), with its frontmatter flipped, a `must live under content/` gate line, and a `drafts/README.md` line. (2) The stance recommendation above. (3) Carried forward, unverified by this session: the Substack slot decision, the Instagram traffic anomaly, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-27 — Field Note 24 approved and moved into content/, register position 23
+
+**Client:** Claude Code (desktop app), continuing the `gmg-saturday-draft` session on the founder's instruction "Approved. Finish the work."
+
+**Scope completed.** Field Note 24, "The Stake Was Supposed to Come Off," moved from `drafts/` to `content/field-notes/` with its pack moved to `content/distribution/`. The approval markers on both were flipped, the note was appended at register position 23 (projected 2027-01-19), and a `must live under content/` gate was added. The render-script header, `drafts/README.md`, the register's append notes, and the decision log were updated to match. Nothing is published, sent, posted, or scheduled.
+
+**Files changed:** `content/field-notes/the-stake-was-supposed-to-come-off.md` and `content/distribution/field-note-24-platforms.md` (moved from `drafts/`), `drafts/README.md`, `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `docs/technical/handoff-log.md`, `scripts/render-field-note-24.mjs`, `scripts/verify-repository.mjs`.
+
+**External state changed:** none.
+
+**Verification:** the new Field Note 24 content gate was broken on purpose by re-tracking the pack under `drafts/` and failed by name before being restored. Every `gate:` line was run after staging; results are in the PR.
+
+**Open, in order:** (1) The standing-commission recommendation: `witness` for the next Saturday draft, so the corpus correction lands at 24 or later. It is the founder's call and `operating-cadence.md` still reads `none`. (2) A Ghost slot for position 23 is a later founder decision; the Monday staging task takes the lowest unpublished row. (3) Carried forward, unverified by this session: the Instagram traffic anomaly status, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.

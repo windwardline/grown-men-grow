@@ -18,8 +18,8 @@ import {
   writeAsset,
 } from "./lib/editorial-collage.mjs";
 
-// Field Note 24 — "The Stake Was Supposed to Come Off". Draft, not
-// founder-approved; no register position and no Ghost slot.
+// Field Note 24 — "The Stake Was Supposed to Come Off". Founder-approved
+// 2026-09-27; register position 23, no Ghost slot named.
 //
 // Signature vocabulary: a hand-drawn trunk taper — a young tree's trunk drawn
 // as its two edges from a hatched ground line. In its staked state a stake

@@ -569,6 +569,10 @@ if (tracked.includes('drafts/field-note-23-everything-looks-straight-in-primer.m
   || tracked.includes('drafts/field-note-23-platforms.md')) {
   fail('Approved Field Note 23 and its platform pack must live under content/, not drafts/.');
 }
+if (tracked.includes('drafts/field-note-24-the-stake-was-supposed-to-come-off.md')
+  || tracked.includes('drafts/field-note-24-platforms.md')) {
+  fail('Approved Field Note 24 and its platform pack must live under content/, not drafts/.');
+}
 
 const launchPackage = await readFile(path.join(root, 'content/instagram/launch-package.md'), 'utf8');
 const captionSource = launchPackage.split('\n## 8. Approved discovery classifications')[0];
