@@ -3830,3 +3830,33 @@ Step 4 of `~/.claude/scheduled-tasks/gmg-tuesday-publish-check/SKILL.md` now run
 **External state changed:** one Substack note posted **by the founder**, not by an agent.
 
 **Verification:** `verify-substack-notes.mjs` after the edit, plus every `gate:` line. Results are in the PR body.
+
+## 2026-09-27 — Claude Code — Friday analytics readout (week of 2026-09-21), run early Sunday morning
+
+**Client:** Claude Code. **Branch:** `claude/friday-analytics-2026-09-27`. The `gmg-friday-analytics` task fired at 03:18 ET on Sunday against a Friday slot. That is the fourth weekend slot in a row to fire only on catch-up. It fired in the same minute as `gmg-saturday-note`, whose run is recorded directly above.
+
+**Scope:** verification only. Nothing was published, posted, replied to, or sent.
+
+**Ghost.** Seven published posts. **1** member, unchanged since 2026-08-11. That member has opened 6 of 6 emails. This week's send, `nobody-rigs-to-the-breaking-strength` on 2026-09-22 at 08:00 ET, went to 1 recipient: 1 delivered, 1 opened, 0 failed. **Correction to the 2026-09-20 entry:** per-send counts *are* readable through an integration key. `/emails/` answers 403, but `posts/?include=email` returns `email_count`, `delivered_count`, `opened_count` and `failed_count` on each post. Clicks are not exposed that way. Site-wide `comments/` returns 0.
+
+**A/B protocol stays suspended at step 3.** The list is 1 against a floor of 30. No timing decision is due, so nothing was appended to `publish-timing.md`.
+
+**Platform numbers.** Every Buffer post sent on its slot: Bluesky Tue 12:00, LinkedIn Wed 10:00, Instagram Thu 09:00, Bluesky Sat 18:30. Buffer's queue and error lists are both empty.
+- **LinkedIn:** 123 impressions and 95 reach, 0 reactions, comments or shares. That is the page's best week. It closes open item 2 from 2026-09-20: last week's 0 was one post, not a trend. Last week's post still reads 0 on a metrics refresh dated today.
+- **Instagram:** the Sep 24 carousel has reach 4, views 10, 1 like, 0 saves, 0 shares, 0 follows. The like came from an outside account, not the house.
+- **Bluesky:** 0 on both posts. Profile: 0 followers, 14 posts, 0 replies or quotes across the feed. The feed's only 2 likes are on a 2026-08-11 post.
+- **Instagram followers:** 7 → **8**. The new follow landed Sep 21.
+
+**The Instagram anomaly stopped on its own, and how it stopped settles what it was.** Business Suite's daily account reach reads 210 / 199 / 185 / 165 / 127 for Sep 17–21, then **0 / 0 / 3 / 1 / 2** for Sep 22–26. Profile visits (25/18/15/16/5) and bio-link clicks (22/17/12/18/7) followed the same curve to zero. Five days produced **76 link clicks and 0 Ghost members**. The Sep 24 carousel went out during the quiet days and reached 4. Real readership does not fall from 127 to 0 overnight with no change in what the publication did. The earlier reading holds: this was automated or referral traffic, not an audience. The organic baseline is single-digit daily reach. Open item 1 from 2026-09-20 (a server-side pageview source) loses its urgency, since the traffic it would have checked has ended. It is still a founder call.
+
+**Moderation sweep: nothing to escalate on any surface.** Ghost comments: 0. Instagram DMs: Primary, General, Requests and Hidden Requests are all empty ("Delete all 0"). Instagram comments: 0, per Buffer and the notifications feed. LinkedIn: 0 comments. Bluesky: 0 replies and 0 quotes. Nothing hit the escalation rows in `community-moderation.md`. No reply was made to anyone. **`instagram.com/notifications` renders again.** On 2026-09-20 it hung on skeleton placeholders. Today it listed attributed activity, so open item 3 from that entry is closed. Account names are not recorded here.
+
+**Qualitative pass: still nothing said back.** Week seven: no comment, reply, DM, or conversation started on any surface. No question or objection has come up even once, so none can recur.
+
+**Corpus balance check: skipped, correctly.** The marker reads 2026-09-16 at 21 pieces, next due at 31. The bank is **23**: 22 field notes plus the launch essay. Eight to go.
+
+**Cadence gates, both run on the live machine.** `verify-publication-register.mjs`: all 23 rows agree with Ghost (7 published, 0 scheduled, 16 projected). `verify-substack-notes.mjs`: all 14 rows agree with the live feed (9 posted, 4 missed, 1 pending). Row 57, Saturday Note 2, belongs to the concurrent Saturday session and was not touched.
+
+**Files changed:** this log only. **External state changed:** none.
+
+**Open, in order:** (1) Tuesday 2026-09-29 has no Ghost post scheduled and Buffer's queue is empty. Monday's staging task has to fire. (2) Founder decision, carried: whether the Saturday and Tuesday Substack slots become founder-run. Weekend tasks have now fired only on catch-up four weeks running. (3) Founder decision, now lower priority: a server-side pageview source. (4) Carried forward: distribution, the one-member list, the suspended A/B, the extract-zip acceptances expiring 2026-11-09.
