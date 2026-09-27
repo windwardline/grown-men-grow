@@ -3818,3 +3818,15 @@ Step 4 of `~/.claude/scheduled-tasks/gmg-tuesday-publish-check/SKILL.md` now run
 **Verification:** preflight exit `20`, and the lock was not held past the run. `verify-substack-notes.mjs` exited 0 with 9 posted, 4 missed, and 1 pending. Every `gate:` line is recorded in the PR body.
 
 **Open, in order:** (1) The founder posts the copy above by hand or lets the slot go. Either way, the next reconciliation fills row 57. (2) Two Saturday evenings running have not fired because the application was closed. That is further evidence for the open founder question: record the Substack slots as founder-run rather than scheduled. (3) Carried forward, not re-verified by this session: the Instagram traffic anomaly, the one-member list, the suspended A/B, the Ghost slot for register position 22, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-27 — Claude Code — Correction: Saturday Substack Note 2 posted by the founder at 03:21 ET
+
+**Client:** Claude Code (desktop), same session as the entry above.
+
+**The note the previous entry left pending is now live.** I opened the notes profile in the founder's Chrome, and the founder posted the copy by hand. `verify-substack-notes.mjs` then found it at `c-346893821`, posted 2026-09-27T07:21:17Z, and its text matches the pack's approved copy byte for byte. Row 57 of `substack-notes.md` now reads `posted` with that permalink. The note went out **531 minutes after its Saturday 18:30 slot**, the second Saturday running to go out the next day by the founder's hand.
+
+**Files changed:** `docs/technical/substack-notes.md` (row 57), this log.
+
+**External state changed:** one Substack note posted **by the founder**, not by an agent.
+
+**Verification:** `verify-substack-notes.mjs` after the edit, plus every `gate:` line. Results are in the PR body.
