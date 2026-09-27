@@ -3914,3 +3914,17 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Verification:** the new Field Note 24 content gate was broken on purpose by re-tracking the pack under `drafts/` and failed by name before being restored. Every `gate:` line was run after staging; results are in the PR.
 
 **Open, in order:** (1) The standing-commission recommendation: `witness` for the next Saturday draft, so the corpus correction lands at 24 or later. It is the founder's call and `operating-cadence.md` still reads `none`. (2) A Ghost slot for position 23 is a later founder decision; the Monday staging task takes the lowest unpublished row. (3) Carried forward, unverified by this session: the Instagram traffic anomaly status, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-27 — Voice ruling installed, witness commission set
+
+**Client:** Claude Code (desktop app), continuing the `gmg-saturday-draft` session on the founder's instruction "Do it. We need to install a bit of a lighter, more human, charismatic voice."
+
+**Scope completed.** `**Standing commission:**` set to `witness`. A Voice section added to `content-pipeline.md`, with a pointer from `AGENTS.md`. The ruling is recorded in `founder-decisions.md` and the decision log. Both draft task prompts, `gmg-wednesday-draft` and `gmg-saturday-draft`, now carry the voice rules and a 900 to 1,400 word range. They also read the commission marker and the register by name, which they did not before.
+
+**Files changed:** `AGENTS.md`, `docs/technical/content-pipeline.md`, `docs/technical/operating-cadence.md`, `docs/technical/founder-decisions.md`, `docs/technical/decision-log.md`, `docs/technical/handoff-log.md`.
+
+**External state changed:** `~/.claude/scheduled-tasks/gmg-wednesday-draft/SKILL.md` and `~/.claude/scheduled-tasks/gmg-saturday-draft/SKILL.md`, outside this repository. No schedule changed.
+
+**Verification:** every `gate:` line was run after staging; results are in the PR. `verify-repository` asserts the commission marker's value is legal.
+
+**Open, in order:** (1) Wednesday 2026-09-30's draft is the first under both the commission and the voice ruling. It should land a `witness` note at 24 and clear the marker, or say why no subject passed. (2) Carried forward, unverified by this session: the Instagram traffic anomaly status, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.

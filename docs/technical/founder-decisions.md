@@ -129,3 +129,9 @@ Credentials remain in authenticated sessions, a password manager, macOS Keychain
 - [x] The Tuesday and Saturday Substack slots **stay scheduled**. The founder will not be tied to the computer at specific times. On time is ideal. When a task fires late, a late hand-post is accepted. It is not escalated, and it is not reopened as a decision.
 - [x] Lateness stays recorded in `substack-notes.md` as a fact about the slot, not as a defect.
 - [x] Readership is measured with Ghost's native web analytics, the one source that already exists. The Friday analytics task reads it through the founder's signed-in admin session, because Ghost's stats endpoints refuse an integration key. No second tracker was added to reader pages, and no admin-level staff token is held on disk.
+
+## Voice and the witness commission (founder-ruled 2026-09-27)
+
+- [x] New drafts carry a lighter, more human, more charismatic voice. The Voice section of `content-pipeline.md` records what that means on the page. Approved copy is not revised.
+- [x] Draft length is 900 to 1,400 words, a ceiling rather than a target.
+- [x] `**Standing commission:**` is set to `witness`. The next draft clears it on landing, or leaves it standing if no subject passes the subject test.

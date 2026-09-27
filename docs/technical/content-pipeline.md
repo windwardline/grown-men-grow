@@ -4,6 +4,19 @@ Status: operating standard, 2026-08-13. Written after the first automated draft 
 
 The unit of work is not an essay. It is a **complete field note**: the essay, the platform copy for every surface, and the imagery — delivered together, in chat, for the founder to approve in one pass. A draft without its pack cannot be scheduled, and half a unit is not progress.
 
+## Voice (founder ruling, 2026-09-27)
+
+The founder asked for a lighter, more human, more charismatic voice. The bank is careful and correct, and too often it reads like a man explaining a mechanism to a room. New drafts should read like the best company on the job site: someone who likes the reader, has seen a few things, and is enjoying telling this one.
+
+- **Contractions are the default.** "Doesn't," "he's," "that's." Keep the long form for emphasis, where it lands like a hand on the table. The bank's steady "does not" and "is not" is most of why it sounds like a lecture.
+- **Be good company.** The reader should be able to tell the writer is enjoying himself. Aim for a line in every section that is actually funny, found in the observation rather than bolted on.
+- **Carry the mechanism lightly.** Explain it in the fewest sentences that make it land, then use it. Once the reader has it, stop explaining.
+- **Like the man.** Write as the friend a few years ahead of him, not his counsellor and not his critic. Affection is allowed.
+- **Let the structure breathe.** Fewer section heads. Not every piece needs five sections and a concession section. Length is a ceiling, not a target: 900 to 1,400 words, and a piece that is finished at 950 stops there. Padding to a number kills the voice first.
+- **Hear it.** A sentence nobody would say across a tailgate gets rewritten.
+
+Nothing else moves. Every rule in `AGENTS.md` and `../editorial-underpinning.md` stands. Lighter is not glib: test 1 still applies, and no joke lands on a man in pain. The generic present, the ban on invented events, publication voice, and the witness gates are unchanged, and a witness piece still keeps its machinery, which is where its jokes live. Approved copy under `content/` is not revised to match.
+
 ## What a complete unit contains
 
 | Artifact | Path | Notes |
