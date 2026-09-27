@@ -20,11 +20,11 @@ Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts unti
 
 ## Post 1
 
-A man who never gets angry about anything has not achieved peace; he has stopped guarding anything.
+A man who never gets angry about anything hasn't achieved peace; he has stopped guarding anything.
 
 ## Post 2
 
-The alarm only knows one word: now. It cannot tell a real fire from burnt toast. Assessment is not in its job description.
+The alarm only knows one word: now. It can't tell a real fire from burnt toast. Assessment isn't in its job description.
 
 ## Post 3 — canonical link
 
@@ -32,7 +32,7 @@ Hear the alarm. Don't hand it the wheel. [canonical link]
 
 # LinkedIn Page
 
-Anger has qualities that look like leadership if you squint. It is decisive. It is certain. It arrives with energy when you are tired. It never says "I don't know" — which should be disqualifying, and instead we read it as confidence.
+Anger has qualities that look like leadership if you squint. It's decisive. It's certain. It arrives with energy when you're tired. It never says "I don't know" — which should be disqualifying, and instead we read it as confidence.
 
 And it gets results, short-term. Every one of those wins invoices later — in trust, mostly, paid out over years.
 

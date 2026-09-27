@@ -9,6 +9,7 @@ preview: A welder is not certified. He is certified in a position.
 feature_image_alt: Two steel plates butt-welded flat on a welding table with one clean finished bead, beside a practice plate standing upright with three vertical beads that run from rough to clean, in a paper collage.
 status: founder-approved
 approved: 2026-09-16 — essay, platform pack, and artwork approved as written on the day they were drafted; approval covers the work, not a slot
+revised: 2026-09-27 — voice revision under the founder ruling of that day (lighter, more human, more charismatic); arguments, facts, closings, and every line printed on a slide unchanged
 publication_authorized: false — no Ghost slot named, no newsletter, no social posting; publication remains separately gated
 stance: assignment — the subject test fails for witness, and correctly: practising out of position is a move he has, and the closing hundred words turn to him
 closing_addresses_reader: yes — the last paragraph turns to him and leaves which position is his to name
@@ -22,59 +23,59 @@ origin: written 2026-09-16 by the Wednesday draft task with the standing commiss
 
 “If you can move it, weld it flat.”
 
-Every shop has a version of that rule, and every shop is right. In the flat position gravity is on the welder’s side. The puddle sits where he puts it, the slag floats up out of the way, and a man of ordinary skill lays a better bead there than a very good welder lays upside down. So the work gets turned. There is a whole category of equipment — positioners, turning rolls, a chain hoist and a second pair of hands — that exists for no reason except to bring the joint around to where it can be welded flat.
+Every shop has a version of that rule, and every shop is right. In the flat position gravity's on the welder’s side. The puddle sits where he puts it, the slag floats up out of the way, and a man of ordinary skill lays a better bead there than a very good welder lays upside down. So the work gets turned. There's a whole category of equipment, positioners, turning rolls, a chain hoist and a second pair of hands, that exists for no reason except to bring the joint around to where it can be welded flat.
 
-This is not cutting corners. It is the trade knowing exactly where good work comes from.
+That isn't cutting corners. It's the trade knowing exactly where good work comes from.
 
 ## Certified in a position
 
-The tests know it too. A welder is not certified. He is certified in a position. Flat is one test. Horizontal is another. Vertical is harder, and overhead is harder than that, and a man who passes flat has proved that he can weld flat. Nobody in the trade confuses the two, because the paper says which one.
+The tests know it too. A welder is not certified. He is certified in a position. Flat is one test. Horizontal is another. Vertical is harder, overhead's harder than that, and a man who passes flat has proved he can weld flat. Nobody in the trade confuses the two, because the paper says which one.
 
-A grown man does not carry the paper, so he confuses them all the time.
+A grown man doesn't carry the paper, so he confuses them all the time.
 
-## He has been turning the work for years
+## He's been turning the work for years
 
-By forty-five a competent man has spent two decades doing something sensible: arranging his life so the work comes to him flat. He takes the job he is good at, then the promotion inside the thing he is good at. He keeps the friends who like what he already does. The hobby is the one he picked up at twenty-six. At dinner there are three subjects on which he is the man people ask, and the conversation has a way of ending up on one of them.
+By forty-five a competent man has spent two decades doing something sensible: arranging his life so the work comes to him flat. He takes the job he's good at, then the promotion inside the thing he's good at. He keeps the friends who like what he already does. The hobby is the one he picked up at twenty-six. At dinner there are three subjects he's the man people ask about, and the conversation has a way of ending up on one of them.
 
-None of this is vanity. It is a positioner. It is the trade’s own advice applied to a life, and it produces a life full of clean welds. Every one of those choices was right on the day it got made. Added together they make a shop where nothing is ever welded overhead, run by a man who takes the quality of the work as proof that he can weld.
+None of this is vanity. It's a positioner. It's the trade’s own advice applied to a life, and it produces a life full of clean welds. Every one of those choices was right the day it got made. Added together, they make a shop where nothing's ever welded overhead, run by a man who takes the quality of the work as proof that he can weld.
 
-It also produces a man who has not run an out-of-position bead in twenty years and has no way of knowing that he can’t.
+It also produces a man who hasn't run an out-of-position bead in twenty years and has no way of knowing he can't.
 
-## Some joints do not turn
+## Some joints don't turn
 
-A positioner handles what can be moved. Plenty cannot. A column is already standing. A pipe is already in the rack, thirty feet up, with the building finished around it. The joint is where it is, and the welder goes to it — on a lift, rod pointed at the ceiling, with molten steel doing what molten steel does above a man’s face.
+A positioner handles what can be moved. Plenty can't. A column's already standing. A pipe's already in the rack, thirty feet up, with the building finished around it. The joint is where it is, and the welder goes to it: on a lift, rod pointed at the ceiling, with molten steel doing what molten steel does above a man’s face.
 
-The joints in a life that do not turn tend to arrive the same way, already installed. The marriage reaching the stretch where what worked for twelve years stops working. A teenager who will not be managed, cannot be fixed, and needs something from his father that his father has never once been asked for. A body that quits doing the thing it did. A job that goes away and takes with it the only position he was ever tested in. A father who needs help with the buttons on his shirt.
+The joints in a life that don't turn tend to arrive the same way, already installed. The marriage reaching the stretch where what worked for twelve years stops working. A teenager who won't be managed, can't be fixed, and needs something from his father his father's never once been asked for. A body that quits doing the thing it did. A job that goes away and takes with it the only position he was ever tested in. A father who needs help with the buttons on his shirt.
 
-Nobody positions those. They come in overhead, and a man who has welded flat for twenty years goes up to them with a flat welder’s hands.
+Nobody positions those. They come in overhead, and a man who's welded flat for twenty years goes up to them with a flat welder’s hands.
 
 ## Cold lap
 
-Here is the part that costs something. He is bad at it. Not rusty. Bad, the way anybody is bad at a position he has not practised, and bad in front of people who have only ever watched him be good.
+Here's the part that costs something. He's bad at it. Not rusty. Bad, the way anybody's bad at a position he hasn't practised, and bad in front of people who've only ever watched him be good.
 
-A competent man who is bad at something in public does a specific thing. He makes it look right. Welding has a name for the result: cold lap. The metal gets laid onto the surface of the joint instead of fused into it. The bead is often tidy. It has an even ripple on it, and it sits on the steel like icing, and it holds nothing.
+A competent man who's bad at something in public does a specific thing. He makes it look right. Welding has a name for the result: cold lap. The metal gets laid onto the surface of the joint instead of fused into it. The bead's often tidy. It has an even ripple on it, it sits on the steel like icing, and it holds nothing.
 
-Cold lap is the grief handled in the voice he uses for meetings. It is the new situation given the full, confident treatment by a set of skills built for the old one. From the outside it frequently looks better than a real weld. The bend test finds it — the certification plate gets cut into strips and folded back on itself around a steel pin, and a cold-lapped joint opens like a book.
+Cold lap is the grief handled in the voice he uses for meetings. It's the new situation getting the full, confident treatment from a set of skills built for the old one. From outside it often looks better than a real weld. The bend test finds it: the certification plate gets cut into strips and folded back on itself around a steel pin, and a cold-lapped joint opens like a book.
 
-The other cost is quieter, and it is the one nobody mentions to him. People learn which joints he can do, and they stop bringing him the others. His wife takes the hard conversation to her sister. The boy takes his to a coach. Nothing is said, the work quietly goes elsewhere, and he experiences this as things being calm.
+The other cost is quieter, and nobody mentions it to him. People learn which joints he can do, and they stop bringing him the others. His wife takes the hard conversation to her sister. The boy takes his to a coach. Nothing gets said, the work quietly goes elsewhere, and he experiences this as things being calm.
 
 ## Six months
 
-Under the structural welding code, a welder’s qualification in a process lapses if he goes six months without using it. The rule is not bureaucratic. Hands forget. A skill is not a possession. It is something a man is currently doing, and six months is about how long it takes to stop being true.
+Under the structural welding code, a welder’s qualification in a process lapses if he goes six months without using it. That isn't bureaucracy. Hands forget. A skill isn't a possession. It's something a man is currently doing, and six months is about how long it takes to stop being true.
 
-That rule runs on everybody, with or without the paperwork. And one skill it runs on is almost never counted as a skill: being a beginner. Asking the question that makes him look slow. Being corrected by someone younger. Producing something ugly on the way to something decent, with a witness. Most competent men were good at that once. Most of them have gone a great deal longer than six months.
+That rule runs on everybody, paperwork or no paperwork. And one skill it runs on almost never gets counted as a skill: being a beginner. Asking the question that makes him look slow. Getting corrected by someone younger. Producing something ugly on the way to something decent, with a witness. Most competent men were good at that once. Most of them have gone a lot longer than six months.
 
 ## Coupons
 
-Welders practise on scrap. Two small plates tacked together, clamped up in whatever position is giving them trouble, burned in, cut apart, bent, thrown in the bin. Nothing depends on a coupon. That is its entire job — to be a joint that is allowed to be bad, in private, until it isn’t.
+Welders practise on scrap. Two small plates tacked together, clamped up in whatever position's giving them trouble, burned in, cut apart, bent, and thrown in the bin. Nothing depends on a coupon. That's its whole job: to be a joint that's allowed to be bad, in private, until it isn't.
 
-Nobody learns vertical-up alone, either. Somebody stands behind him, hood up, and tells him he is going too fast, which he is. There is no version of this where he gets good quietly and then reveals it. The trade does not pretend the first vertical beads are anything but funny, and the man standing behind him will say so, mostly with affection. It still lands. Being the worst person in a room on purpose costs a man past forty something specific, and nobody who has paid it calls it cheap.
+Nobody learns vertical-up alone, either. Somebody stands behind him, hood up, and tells him he's going too fast, which he is. There's no version where he gets good quietly and then unveils it. The trade doesn't pretend the first vertical beads are anything but funny, and the man standing behind him will say so, mostly with affection. It still lands. Being the worst person in a room on purpose costs a man past forty something specific, and nobody who's paid it calls it cheap.
 
-Nor does practice promise anything. Some men run coupons for a year and never lay a vertical bead anyone would certify. And for some the bend test has already been run — the marriage, the boy — and the joint opened. Scrap does not re-weld that one, and nothing about scrap pretends to.
+Nor does practice promise anything. Some men run coupons for a year and never lay a vertical bead anyone would certify. And for some the bend test's already been run, the marriage, the boy, and the joint opened. Scrap doesn't re-weld that one, and nothing about scrap pretends to.
 
-Some men have not seen the flat position in years. The one who has been looking after somebody. The one whose whole life came down and got rebuilt around him while he stood in it. This is not a note for that season. He is not short of out-of-position work. What he is short of is somebody to take the rod for twenty minutes.
+Some men haven't seen the flat position in years. The one who's been looking after somebody. The one whose whole life came down and got rebuilt around him while he stood in it. This isn't a note for that season. He's not short of out-of-position work. What he's short of is somebody to take the rod for twenty minutes.
 
-For the rest, what counts as scrap is his to say, and so is the position. It will not be a hard question. Most men know exactly which joint they have been turning the work to avoid, and the first beads laid on it will be ugly, and they are supposed to be.
+For the rest, what counts as scrap is his to say, and so is the position. It won't be a hard question. Most men know exactly which joint they've been turning the work to avoid, and the first beads laid on it will be ugly, and they're supposed to be.
 
 # Instagram carousel source
 
@@ -126,11 +127,11 @@ Nothing depends on a coupon. That is its entire job.
 
 Every shop has a version of the rule: if you can move it, weld it flat. Gravity is on the welder’s side in the flat position, and a man of ordinary skill lays a better bead there than a very good welder lays upside down. So the work gets turned. Whole categories of equipment exist for no reason except to bring the joint around to where it can be welded flat.
 
-A welder is not certified. He is certified in a position, and the paper says which one. A grown man does not carry the paper.
+A welder isn't certified. He's certified in a position, and the paper says which one. A grown man doesn't carry the paper.
 
-By forty-five a competent man has spent twenty years arranging his life so the work comes to him flat. The job he is good at, the friends who like what he already does, the three subjects at dinner. It is the trade’s own advice applied to a life, and it produces clean welds.
+By forty-five a competent man has spent twenty years arranging his life so the work comes to him flat. The job he's good at, the friends who like what he already does, the three subjects at dinner. It's the trade’s own advice applied to a life, and it produces clean welds.
 
-Some joints do not turn. They arrive already installed, and they come in overhead.
+Some joints don't turn. They arrive already installed, and they come in overhead.
 
 # Instagram alt text source
 

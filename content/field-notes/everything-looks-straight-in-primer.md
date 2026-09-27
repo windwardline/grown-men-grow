@@ -9,6 +9,7 @@ preview: He has an answer ready before the sentence finishes. It is almost never
 feature_image_alt: A car door and fender in flat grey primer in a bright body shop, a few soft dark smudges of guide coat left in its low spots, beside a long pale wooden sanding block lying on a workbench next to a folded blue shop towel, in a paper collage.
 status: founder-approved
 approved: 2026-09-23 — essay, platform pack, and artwork approved as written on the day they were drafted; approval covers the work, not a slot
+revised: 2026-09-27 — voice revision under the founder ruling of that day (lighter, more human, more charismatic); arguments, facts, closings, and every line printed on a slide unchanged
 publication_authorized: false — no Ghost slot named, no newsletter, no social posting; publication remains separately gated
 stance: assignment — the subject test fails for witness, and correctly: hearing the whole sentence is a move he has, and the closing hundred words turn to him
 closing_addresses_reader: yes — the last paragraph turns to him in the second person and leaves what he does with the reading named but unmade
@@ -22,37 +23,37 @@ origin: written 2026-09-23 by the Wednesday draft task with the standing commiss
 
 "Can I say something about the way you handled that?"
 
-There are ten words in that sentence and he hears about four of them. By *say something* the answer is already moving. Not a word yet, just the body getting there first: the shoulders set, the breath goes in and stays in, and somewhere behind the eyes a clerk pulls the file on whoever is talking and flips to the section on their own record, because if this is going to be a hearing he would like it to be a fair one.
+There are ten words in that sentence and he hears about four of them. By *say something* the answer's already moving. Not a word yet, just the body getting there first: the shoulders set, the breath goes in and stays in, and somewhere behind the eyes a clerk pulls the file on whoever's talking and flips to the section on their own record, because if this is going to be a hearing he'd like it to be a fair one.
 
-By the time the sentence finishes he has a response ready. It is usually good. It is almost never about what was said.
+By the time the sentence finishes he has a response ready. It's usually good. It's almost never about what was said.
 
 ## The guard went up for a reason
 
-Nobody builds that reflex for fun. Most men learn early that a correction is rarely only a correction. It comes with a verdict stapled to it, or it comes in front of people, or it is the opening move in a longer campaign that has nothing to do with the dishwasher. A boy who took every one of those at face value would be in pieces by fourteen. The guard went up because it needed to, and it has kept out plenty that deserved keeping out.
+Nobody builds that reflex for fun. Most men learn early that a correction is rarely only a correction. It comes with a verdict stapled to it, or it comes in front of people, or it's the opening move in a longer campaign that has nothing to do with the dishwasher. A boy who took every one of those at face value would be in pieces by fourteen. The guard went up because it needed to, and it's kept out plenty that deserved keeping out.
 
 The trouble is that it cannot tell who is at the door. It fires at the foreman and at his own son at the same speed. It fires at a stranger in a comment section and at the friend of twenty years who waited three weeks, picked a quiet moment on purpose, and opened with *can I say something*.
 
 ## Everything looks straight in primer
 
-Anyone who has done body work on a car learns this the expensive way. You pull the dent, fill it, sand it, and shoot the whole panel in primer, and it looks perfect. Flat grey, one colour, not a ripple in it. Run a palm across it and it feels straight too, because a hand is a generous instrument and it would like the job to be finished.
+Anybody who's done body work on a car learns this the expensive way. You pull the dent, fill it, sand it, and shoot the whole panel in primer, and it looks perfect. Flat grey, one colour, not a ripple in it. Run a palm across it and it feels straight too, because a hand is a generous instrument and would like the job to be finished.
 
 Then the colour goes on, and the clear over it, and the car rolls out into the sun, and the panel looks like a pond somebody tossed a rock in. Every low the primer was sitting on catches the light at once.
 
-Flat grey is not lying, exactly. It just has nothing to show him. A surface that is all one colour gives the eye no way to find where it dips.
+Flat grey isn't lying, exactly. It just has nothing to show him. A surface that's all one colour gives the eye no way to find where it dips.
 
 ## Guide coat
 
-So nobody who does this for a living trusts it. Before blocking a panel they dust it with guide coat, a thin, almost careless mist of a darker colour, and then sand the whole thing with a long flat block. The block rides the high spots and takes the dark off them first. The lows, which the block cannot reach, keep it.
+So nobody who does this for a living trusts it. Before blocking a panel they dust it with guide coat, a thin, almost careless mist of a darker colour, and then sand the whole thing with a long flat block. The block rides the high spots and takes the dark off them first. The lows, which the block can't reach, keep it.
 
-Inside a minute the panel draws a map of itself: clean grey where it is right, dark islands where it is not. Nothing about the panel changed. The low was there under the primer the whole time. What changed is that something from outside got laid across it that could not be fooled by how it felt.
+Inside a minute the panel draws a map of itself: clean grey where it's right, dark islands where it isn't. Nothing about the panel changed. The low was there under the primer the whole time. What changed is that something from outside got laid across it that couldn't be fooled by how it felt.
 
-That is what criticism is, when it is any good. Somebody else's colour, misted over a surface that looks fine to him, showing exactly where his own hand could not reach. Nobody enjoys watching the dark stay put.
+That's what criticism is, when it's any good. Somebody else's colour, misted over a surface that looks fine to him, showing exactly where his own hand couldn't reach. Nobody enjoys watching the dark stay put.
 
 ## He has a point about the spray gun
 
-Here is where he is right, and it should be granted in full. A great deal of criticism is delivered badly. Wrong moment, wrong room, wrong volume, with a history folded inside it that has nothing to do with the thing being named.
+Here's where he's right, and it should be granted in full. A great deal of criticism is delivered badly. Wrong moment, wrong room, wrong volume, with a history folded inside it that has nothing to do with the thing being named.
 
-Some of it is not criticism at all. It is the same coat sprayed on the same panel every day, heavy and deliberate, until he cannot see anything but dark and has stopped believing there was ever a straight panel under it. A man living inside that does not need a paragraph telling him to be more open. He needs it called what it is, and what he does about it is not a field note's to settle.
+Some of it isn't criticism at all. It's the same coat sprayed on the same panel every day, heavy and deliberate, until he can't see anything but dark and has stopped believing there was ever a straight panel under it. A man living inside that doesn't need a paragraph telling him to be more open. He needs it called what it is, and what he does about it isn't a field note's to settle.
 
 But most of the time a bad delivery is a complaint about the spray gun. The low is still where it is. A man can be completely right that it was said badly and completely wrong about the panel, and the reflex is very good at letting the first thing stand in for the second. *You could have said that better* is true in about half the places it gets used, and in all of them it ends the conversation about the panel.
 
@@ -60,21 +61,21 @@ But most of the time a bad delivery is a complaint about the spray gun. The low 
 
 This is the part that costs him, and it arrives without a sound.
 
-People are not stupid. The ones who try to tell him something and get the hearing, with the file and the counterclaims and forty minutes on tone, learn. Not in a day. The friend raises it once more, gets the same result, and moves it onto the list of subjects nobody brings up with him, somewhere near politics. His son stops bringing him the things he would have an opinion about. The crew stops saying the plan has a problem and starts quietly building around the plan. His partner gets careful, and from the inside careful can feel a lot like getting along.
+People aren't stupid. The ones who try to tell him something and get the hearing, with the file and the counterclaims and forty minutes on tone, learn. Not in a day. The friend raises it once more, gets the same result, and moves it onto the list of subjects nobody brings up with him, somewhere near politics. His son stops bringing him the things he'd have an opinion about. The crew stops saying the plan has a problem and starts quietly building around the plan. His partner gets careful, and from the inside careful can feel a lot like getting along.
 
 Nobody announces any of it. They just stop spraying.
 
-And the panel goes back to grey. For the first time in years nobody is telling him anything is wrong, and from inside, in complete good faith, that reads as the thing finally being fixed. A man who says he is just direct, and that people know they can be direct with him, is often standing next to a panel that went grey a long time ago.
+And the panel goes back to grey. For the first time in years nobody's telling him anything is wrong, and from inside, in complete good faith, that reads as the thing finally being fixed. A man who says he's just direct, and that people know they can be direct with him, is often standing next to a panel that went grey a long time ago.
 
-The hardest part is who stops first. It is the people closest to him, because they have the most to lose from a hearing and the most reason to keep the peace. The foreman will keep telling him. The foreman is paid to.
+The hardest part is who stops first. It's the people closest to him, because they have the most to lose from a hearing and the most reason to keep the peace. The foreman will keep telling him. The foreman is paid to.
 
-## He is still holding the block
+## He's still holding the block
 
-None of this asks him to agree. Sometimes the block comes down and the dark goes in two strokes, because it was a bit of overspray and not a low at all. Sometimes the other person is simply wrong about the panel. Taking the guide coat seriously does not hand anyone else the block. He sands, he reads what stays, and the reading is his.
+None of this asks him to agree. Sometimes the block comes down and the dark goes in two strokes, because it was a bit of overspray and not a low at all. Sometimes the other person's simply wrong about the panel. Taking the guide coat seriously doesn't hand anybody else the block. He sands, he reads what stays, and the reading is his.
 
 What it asks for is the length of the sentence. All ten words, before the clerk gets to the file.
 
-You probably already know whose guide coat stopped arriving, and roughly when. If nobody comes to mind, that is a reading too. What you do with it is yours. The dark only ever got put there by somebody who thought the panel was worth the trouble.
+You probably already know whose guide coat stopped arriving, and roughly when. If nobody comes to mind, that's a reading too. What you do with it is yours. The dark only ever got put there by somebody who thought the panel was worth the trouble.
 
 # Instagram carousel source
 
@@ -124,9 +125,9 @@ The foreman is paid to.
 
 # Instagram caption source
 
-"Can I say something about the way you handled that?" Ten words, and he hears about four of them. By the time the sentence finishes he has a response ready. It is usually good. It is almost never about what was said.
+"Can I say something about the way you handled that?" Ten words, and he hears about four of them. By the time the sentence finishes he has a response ready. It's usually good. It's almost never about what was said.
 
-Nobody builds that reflex for fun. A lot of criticism arrives with a verdict stapled to it, and the guard went up because it needed to. The trouble is that it cannot tell who is at the door.
+Nobody builds that reflex for fun. A lot of criticism arrives with a verdict stapled to it, and the guard went up because it needed to. The trouble is that it can't tell who is at the door.
 
 Body shops don't trust primer. Flat grey hides every low spot, so they mist the panel with a dark guide coat and block-sand it. The highs come clean and the lows keep the dark. Nothing about the panel changed; something from outside finally got laid across it.
 

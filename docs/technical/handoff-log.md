@@ -3928,3 +3928,17 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Verification:** every `gate:` line was run after staging; results are in the PR. `verify-repository` asserts the commission marker's value is legal.
 
 **Open, in order:** (1) Wednesday 2026-09-30's draft is the first under both the commission and the voice ruling. It should land a `witness` note at 24 and clear the marker, or say why no subject passed. (2) Carried forward, unverified by this session: the Instagram traffic anomaly status, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-27 — The bank revised to one voice (repository half)
+
+**Client:** Claude Code (desktop app), continuing the `gmg-saturday-draft` session on the founder's instruction to revise every essay to the new voice on every surface, with names changed where the voice requires it.
+
+**Scope completed.** All twenty-four essays in `content/` revised: the launch essay and twenty-three field notes. Two titles and four deks changed. The seventeen unpublished packs and captions got the same contraction pass. The Field Note 14 cover was re-rendered for its new title. Records are in `decision-log.md` and `founder-decisions.md`, and the Voice section of `content-pipeline.md` is corrected. Every note carries a `revised:` provenance line.
+
+**Guarded, not asserted.** A scratch guard derived 139 protected slide sentences from the carousel sources and the rendered SVGs, plus the four order-constraint callbacks and every closing-marker quote. All survived in all twenty-four essays, and every essay renders through `essayHtml`.
+
+**External state changed:** none yet. The Ghost and Medium updates follow this merge, from the merged copy, and get their own entry.
+
+**Verification:** all six `gate:` lines pass (214/214 tests; `verify-repository` over 764 tracked files; 230 SVGs). Both `cadence:` checks were run as well: `verify-substack-notes` reconciles every posted note unchanged, and `verify-publication-register` agrees with Ghost on all 24 rows. A `--dry-run` of Monday's staging builds the revised "The Lights Never Flickered".
+
+**Open, in order:** (1) Push the seven published essays to Ghost and Medium and verify parity. (2) Carried forward: the Instagram traffic anomaly status, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.

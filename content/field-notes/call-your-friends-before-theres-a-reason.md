@@ -12,6 +12,7 @@ closing_addresses_reader: yes — closes on a question to him: "Which friend hav
 opening: trade — opens on two men replacing a deck board
 status: founder-approved
 approved: 2026-08-08
+revised: 2026-09-27 — voice revision under the founder ruling of that day (lighter, more human, more charismatic); arguments, facts, closings, and every line printed on a slide unchanged
 personal_claims_verified: true
 publication_authorized: true — founder authorized the 2026-08-18 08:00 ET slot in the week-one plan (2026-08-10)
 social_copy_status: founder-approved
@@ -28,67 +29,67 @@ They may still leave feeling better.
 
 I mean that sincerely.
 
-Doing something together counts as intimacy for many men. It is one of the ways we have always built trust. The job matters, but so does the side-by-side arrangement. Nobody has to maintain eye contact while finding the sentence. A silence can remain a silence instead of becoming a problem to solve. The conversation gets to arrive indirectly, usually somewhere between the second trip to the hardware store and the discovery that neither man measured the thing correctly.
+Doing something together counts as intimacy for a lot of men. It's one of the ways we've always built trust. The job matters, but so does the side-by-side arrangement. Nobody has to hold eye contact while hunting for the sentence. A silence gets to stay a silence instead of becoming a problem to solve. The real conversation arrives sideways, usually somewhere between the second trip to the hardware store and the discovery that neither man measured the thing correctly.
 
-There is real affection in that. There is also safety.
+There's real affection in that. There's also safety.
 
-The trouble begins when the activity has to carry every subject forever.
+The trouble starts when the activity has to carry every subject forever.
 
 ## Doing something counts
 
-Male friendship is often described as emotionally thin because a lot of it happens around an object: a game, a grill, a car, a boat, a project, a shared complaint about a piece of software that was apparently designed by someone who hates people.
+Male friendship gets called emotionally thin because so much of it happens around an object: a game, a grill, a car, a boat, a project, a shared grievance against a piece of software apparently designed by someone who hates people.
 
-That criticism misses something important. Shared work and play are not distractions from friendship. They are part of its language. Men learn each other through reliability, humor, competence, patience, competition, and the small negotiations required to get anything done together.
+That criticism misses something. Shared work and play aren't a distraction from friendship. They're part of its language. Men learn each other through reliability, humor, competence, patience, competition, and the small negotiations it takes to get anything done together.
 
-You find out who a man is when the bolt will not move, the weather turns, the plan fails, or somebody has to admit he was confidently wrong.
+You find out who a man is when the bolt won't move, the weather turns, the plan fails, or somebody has to admit he was confidently wrong.
 
-Conversation is happening even when nobody announces it.
+The conversation is happening even when nobody announces it.
 
-But a language can be real and still have a limited vocabulary.
+But a language can be real and still have a small vocabulary.
 
-If two men can discuss engines for six years but cannot tell each other that a marriage is in trouble, the friendship may be genuine and still unfinished. If they can make each other laugh until they cannot breathe but have no way to say, “You have not seemed like yourself lately,” the humor remains real. It has simply been asked to do too much.
+If two men can talk engines for six years but can't tell each other a marriage is in trouble, the friendship may be genuine and still unfinished. If they can make each other laugh until they can't breathe but have no way to say, “You haven't seemed like yourself lately,” the humor's real. It's just been asked to do too much.
 
-We do this with history too. We call a man one of our closest friends because he has known us since college, the Navy, the first job, the old neighborhood, or the version of ourselves that still had hair and unreasonable confidence.
+We do this with history too. We call a man one of our closest friends because he's known us since college, the Navy, the first job, the old neighborhood, or the version of ourselves that still had hair and unreasonable confidence.
 
-History matters, but it cannot substitute for current knowledge.
+History matters, but it can't stand in for knowing each other now.
 
 I have mistaken shared history for present-tense intimacy. I assumed the friendship was secure because we could pick up where we left off. Sometimes what we were picking up was an old version of each other that neither of us had bothered to update.
 
-That is how a man can have friends who would cross the country for him and still have nobody who knows what Tuesday felt like.
+That's how a man can have friends who'd cross the country for him and still have nobody who knows what Tuesday felt like.
 
 ## We wait for a reason
 
 Men are often very good in an emergency.
 
-Give us a flat tire, a flooded basement, a hospital waiting room, or a truck that needs loading, and the response can be immediate. We show up. We bring the right tool and the wrong food. We make a joke that would be indefensible in any other setting. We stay until the practical thing is handled.
+Give us a flat tire, a flooded basement, a hospital waiting room, or a truck that needs loading, and the response is immediate. We show up. We bring the right tool and the wrong food. We make a joke that would be indefensible anywhere else. We stay until the practical thing is handled.
 
-This is love. It should be named as love.
+This is love. It should be called love.
 
-We can wait so faithfully for the emergency that we neglect the friendship meant to survive it.
+We can also wait so faithfully for the emergency that we neglect the friendship that's supposed to survive it.
 
-The call finally happens after the separation, the firing, the diagnosis, the arrest, the panic attack, or the night a man realizes he has been sitting in his car for forty minutes because going inside feels harder than he can explain.
+The call finally happens after the separation, the firing, the diagnosis, the arrest, the panic attack, or the night a man realizes he's been sitting in his car for forty minutes because going inside is harder than he can explain.
 
 Then everybody says some version of the same thing: Why didn’t you tell me?
 
-The honest answer may be that he did not know how. It may also be that the friendship had never practiced carrying anything smaller.
+The honest answer may be that he didn't know how. It may also be that the friendship had never practiced carrying anything smaller.
 
-You do not learn this kind of honesty at the edge of a cliff. The practice happens on ordinary ground: a friend says the new job is fine and you ask what “fine” means this time. You remember the custody hearing, the scan, the anniversary, or the interview without needing an alert from the disaster. One man says he has been a little off, and the other does not immediately turn the conversation into advice.
+You don't learn this kind of honesty at the edge of a cliff. You learn it on ordinary ground. A friend says the new job is fine and you ask what “fine” means this time. You remember the custody hearing, the scan, the anniversary, or the interview without needing a disaster to remind you. One man says he's been a little off, and the other doesn't immediately turn it into advice.
 
-Most important conversations do not begin with a perfect disclosure. They begin with somebody noticing.
+Most important conversations don't start with a perfect disclosure. They start with somebody noticing.
 
 ## Ask a question that can survive the reflex
 
 “You good?” is almost impossible to answer honestly.
 
-It sounds like a question. Grammatically, it is. In practice, it often means, “Please confirm that I do not need to change what we are doing.”
+It sounds like a question, and grammatically it is. In practice it usually means, “Please confirm I don't need to change what we're doing.”
 
-So the answer comes back on schedule.
+So the answer comes back right on schedule.
 
 “Yeah. You?”
 
-Nobody lied exactly. Nobody learned anything either.
+Nobody lied, exactly. Nobody learned anything either.
 
-A better question does not have to sound therapeutic. In fact, it probably should not. It just has to be specific enough to get past the reflex.
+A better question doesn't have to sound therapeutic. It probably shouldn't. It just has to be specific enough to get past the reflex.
 
 What has been taking up your head lately?
 
@@ -100,27 +101,27 @@ Do you want advice, help, or ten minutes to say the ugly version?
 
 Specific questions give a man something solid to answer. They also make it harder to hide inside a general status report.
 
-The same is true when asking for help. “We should catch up” is social vapor. “Can you talk Thursday after eight? I am having a rough week and could use a straight answer” gives the friendship a door.
+Same goes for asking for help. “We should catch up” is social vapor. “Can you talk Thursday after eight? I'm having a rough week and could use a straight answer” gives the friendship a door.
 
-This can feel embarrassingly formal at first. Fine. A lot of useful things feel awkward before they feel natural. We somehow tolerate calendar invitations for meetings that should have been emails. We can survive putting a real conversation on the calendar.
+It can feel embarrassingly formal at first. Fine. We tolerate calendar invites for meetings that should have been emails. We can survive putting a real conversation on the calendar.
 
-## Do not make a friend carry the whole structure
+## Don't make one friend carry the whole structure
 
-There is another way to get this wrong.
+There's another way to get this wrong.
 
-A man finally decides to be honest, chooses one trusted friend, and unloads three years of unprocessed life into every available conversation. Now that friend is the only witness and the person expected to know what happens next.
+A man finally decides to be honest, picks one trusted friend, and unloads three years of unprocessed life into every available conversation. Now that friend is the only witness and also the person expected to know what happens next.
 
-The arrangement can look intimate while functioning as a structural failure with good intentions.
+It can look like intimacy while working like a structural failure with good intentions.
 
-Friendship needs limits if it is going to remain friendship. A friend can love you and still not be available at midnight. He can hear the pain without agreeing with your account of what happened, and loyalty does not require him to join your grievance. Sometimes the honest response is that the problem exceeds what he knows how to carry.
+Friendship needs limits if it's going to stay friendship. A friend can love you and still not be available at midnight. He can hear the pain without agreeing with your account of what happened, and loyalty doesn't require him to sign up for your grievance. Sometimes the honest answer is that the problem is bigger than he knows how to carry.
 
 Nobody needs group therapy conducted near a lawn mower. The work is simpler: build a wider life.
 
-The friend who understands the marriage may know nothing about the work. A brother may hold the family history. Some problems need a therapist, physician, pastor, sponsor, or group because friendship alone cannot hold them. The exact arrangement will differ. No one person should become the entire emotional infrastructure.
+The friend who understands the marriage may know nothing about the work. A brother may hold the family history. Some problems need a therapist, physician, pastor, sponsor, or group, because friendship alone can't hold them. The arrangement will differ from man to man. No one person should be the entire emotional infrastructure.
 
-That includes a wife or partner. It also includes the one dependable friend who always answers.
+That includes a wife or partner. It also includes the one dependable friend who always picks up.
 
-Reciprocity matters here, although not as a ledger. Two men will not always need the same amount at the same time. One may carry more for a season. The friendship becomes unfair when one man is permanently known and the other is permanently useful.
+Reciprocity matters here, though not as a ledger. Two men won't always need the same amount at the same time, and one may carry more for a season. The friendship turns unfair when one man is permanently known and the other is permanently useful.
 
 Ask about his life after he helps you with yours.
 
@@ -128,19 +129,19 @@ Remember the answer.
 
 ## The ordinary call
 
-The best argument for calling a friend before there is a reason is that friendship deserves an ordinary life.
+The best argument for calling a friend before there's a reason is that friendship deserves an ordinary life.
 
-Not every conversation needs a breakthrough. Most should not. There should be bad jokes, unnecessary opinions, meals, errands, work, silence, and the kind of story that takes twenty minutes to explain and was not worth telling in the first place.
+Not every conversation needs a breakthrough. Most shouldn't. There should be bad jokes, unnecessary opinions, meals, errands, work, silence, and the kind of story that takes twenty minutes to tell and wasn't worth telling in the first place.
 
-Ordinary contact creates the conditions for the serious moments.
+Ordinary contact is what makes the serious moments possible.
 
-Trust rarely appears all at once. It accumulates through small evidence. He called back. He noticed. He did not make the hard thing weird. He told me when I was full of shit and did not seem to enjoy it too much. I could say less than the polished version and he stayed in the conversation.
+Trust rarely shows up all at once. It piles up out of small evidence. He called back. He noticed. He didn't make the hard thing weird. He told me when I was full of shit and didn't seem to enjoy it too much. I could say less than the polished version and he stayed in the conversation.
 
-Men do not need to abandon the ways we already know how to be friends. Keep the games, the projects, the long drives, the insults, the competition, the help that arrives with a toolbox.
+Men don't need to give up the ways we already know how to be friends. Keep the games, the projects, the long drives, the insults, the competition, the help that shows up carrying a toolbox.
 
-Just stop making those things carry the whole friendship by themselves.
+Just stop asking those things to carry the whole friendship by themselves.
 
-Call him while there is no emergency and nothing he needs to fix.
+Call him while there's no emergency and nothing he needs to fix.
 
 Give the friendship something besides history to live on.
 

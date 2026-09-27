@@ -1,5 +1,5 @@
 ---
-essay: Rest Is Not a Reward
+essay: Rest Isn’t a Reward
 canonical: https://grownmengrow.com/rest-is-not-a-reward/ (live only after launch)
 status: founder-approved
 approved: 2026-08-10 — rounds 7-10 approved in full

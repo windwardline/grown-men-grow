@@ -22,7 +22,7 @@ Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts unti
 
 ## Post 1
 
-"Can I say something about the way you handled that?" Ten words, and he hears about four of them. By "say something" the answer is already moving. It is usually a good answer. It is almost never about what was said.
+"Can I say something about the way you handled that?" Ten words, and he hears about four of them. By "say something" the answer is already moving. It's usually a good answer. It's almost never about what was said.
 
 ## Post 2
 
@@ -34,7 +34,7 @@ The people who try to tell him something and get a forty-minute hearing on tone 
 
 # LinkedIn Page
 
-Nobody builds the defensive reflex for fun. Most men learned early that a correction was rarely only a correction — it came with a verdict attached, or in front of people, or as the opening move in a longer campaign. The guard went up because it needed to. The trouble is that it cannot tell who is at the door, and it fires at the foreman and a friend of twenty years at the same speed.
+Nobody builds the defensive reflex for fun. Most men learned early that a correction was rarely only a correction — it came with a verdict attached, or in front of people, or as the opening move in a longer campaign. The guard went up because it needed to. The trouble is that it can't tell who is at the door, and it fires at the foreman and a friend of twenty years at the same speed.
 
 A lot of criticism is delivered badly, and that complaint deserves to be granted in full. But a bad delivery is a complaint about the spray gun. A man can be completely right that it was said badly and completely wrong about the panel.
 
@@ -44,7 +44,7 @@ The new field note is about guide coat: why a panel in primer looks straight unt
 
 ## Note 1
 
-Guide coat: a thin mist of a darker colour dusted over a primed panel before it is block-sanded. The long block rides the highs and takes the dark off them first. The lows, which the block cannot reach, keep it. Inside a minute the panel draws a map of itself.
+Guide coat: a thin mist of a darker colour dusted over a primed panel before it's block-sanded. The long block rides the highs and takes the dark off them first. The lows, which the block can't reach, keep it. Inside a minute the panel draws a map of itself.
 
 ## Note 2
 
@@ -52,4 +52,4 @@ Guide coat: a thin mist of a darker colour dusted over a primed panel before it 
 
 ## Note 3 — canonical link
 
-The hardest part is who stops telling him first. It is the people closest to him, because they have the most to lose from a hearing. The foreman will keep telling him. The foreman is paid to. [canonical link]
+The hardest part is who stops telling him first. It's the people closest to him, because they have the most to lose from a hearing. The foreman will keep telling him. The foreman is paid to. [canonical link]

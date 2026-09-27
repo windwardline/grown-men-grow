@@ -1,7 +1,7 @@
 ---
 title: The Line Was Capped, Not Removed
 slug: the-line-was-capped-not-removed
-dek: Nothing has run through it in years. It is still connected to everything you drink.
+dek: Nothing’s run through it in years. It’s still connected to everything you drink.
 byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: The Line Was Capped, Not Removed
@@ -9,6 +9,7 @@ preview: A cap costs four minutes and buys “someday” indefinitely.
 feature_image_alt: A capped copper stub standing in an open, freshly framed wall cavity in daylight, beside hands closing a tubing cutter on a copper line, in a paper collage.
 status: founder-approved
 approved: 2026-09-09 — essay, platform pack, and artwork approved as written on the day they were drafted; approval covers the work, not a slot
+revised: 2026-09-27 — voice revision under the founder ruling of that day (lighter, more human, more charismatic); arguments, facts, closings, and every line printed on a slide unchanged
 publication_authorized: false — no Ghost slot named, no newsletter, no social posting; publication remains separately gated
 stance: assignment — the subject test fails for witness, and correctly: deciding whether a branch of his own has a fixture on it is a move he has, and the closing hundred words turn to him
 closing_addresses_reader: yes — “Whether any of them come out is yours to say. But go and look at what is on the end.”
@@ -20,65 +21,65 @@ origin: written 2026-09-09 by the Wednesday draft task with the standing commiss
 
 # Ghost essay source
 
-The plumbing code has a rule about pipe that goes nowhere. When a fixture comes out — a bathroom gets reworked, a laundry sink leaves, a machine gets pulled off its line — the branch that fed it is not supposed to be capped where it stands. It gets cut back to the main. Not for tidiness. A length of pipe holding water with nothing pulling on it is a problem the rest of the building inherits.
+The plumbing code has a rule about pipe that goes nowhere. When a fixture comes out, a bathroom gets reworked, a laundry sink leaves, a machine gets pulled off its line, the branch that fed it isn't supposed to be capped where it stands. It gets cut back to the main. Not for tidiness. A length of pipe holding water with nothing pulling on it is a problem the rest of the building inherits.
 
 The trade calls it a dead leg, which is one of the few plumbing terms that sounds like exactly what it is.
 
 ## Capping is the right answer that day
 
-Give the cap its due, because the man who installs one is not being lazy. On the day, capping is correct. The fixture is gone, the water has to stop somewhere, and a cap stops it in four minutes with a fitting that costs less than lunch. Cutting the branch back to the main means locating the main, getting at it, shutting the building down, and making a joint somewhere harder to reach than where you are standing. Everybody caps it. The cap is not the mistake.
+Give the cap its due, because the man who installs one isn't being lazy. On the day, capping is correct. The fixture's gone, the water has to stop somewhere, and a cap stops it in four minutes with a fitting that costs less than lunch. Cutting back to the main means finding the main, getting at it, shutting the building down, and making a joint somewhere harder to reach than where you're standing. Everybody caps it. The cap is not the mistake.
 
-The mistake is that a cap is a complete-looking answer. It holds. It does not drip. It passes every test a man is likely to run on it, which is looking at it. Nothing is wrong in any way anyone could point to, so the branch stays.
+The mistake is that a cap looks like a complete answer. It holds. It does not drip. It passes every test a man is likely to run on it, which is looking at it. Nothing's wrong in any way anyone could point to, so the branch stays.
 
-## The water in it does not know the fixture is gone
+## The water in it doesn't know the fixture is gone
 
-Water that moves is fine. Water that sits becomes a different substance in about a week. It goes flat, warms to whatever the room is, and the treatment that made it safe on the way in gives out — chlorine is not a permanent property of water, it is a thing that gets spent.
+Water that moves is fine. Water that sits turns into a different substance in about a week. It goes flat, warms to whatever the room is, and the treatment that made it safe on the way in gives out. Chlorine isn't a permanent property of water; it's something that gets spent.
 
-What grows in the stub does not stay in the stub, because the stub is not a sealed jar. It is open at one end to the line everything else runs through. Every time water moves in the main, a little of what has been standing in that branch joins it.
+What grows in the stub doesn't stay in the stub, because the stub isn't a sealed jar. It is open at one end to the line everything else runs through. Every time water moves in the main, a little of what's been standing in that branch comes along.
 
-That is the part nobody's intuition supplies. A dead leg feels like a closed room in the house. It is closer to a bowl left out on the counter.
+That's the part nobody's intuition supplies. A dead leg feels like a closed room in the house. It's closer to a bowl left out on the counter.
 
 ## It never shows up as a leak
 
-If dead legs failed loudly they would have been cut out years ago. Men are good at loud failures. Something bursts, you shut the water off, you fix it, and the story ends with a repair and a decent anecdote.
+If dead legs failed loudly they'd have been cut out years ago. Men are good at loud failures. Something bursts, you shut the water off, you fix it, and the story ends with a repair and a decent anecdote.
 
-This does not do that. It shows up as a house whose water is faintly off in a way nobody can source. The coffee is fine but not right. Somebody says the ice tastes like the freezer. A guest says nothing and stops drinking from the tap. There is no incident and no date, so there is nothing to fix, which is a different thing from nothing being wrong.
+This doesn't do that. It shows up as a house whose water is faintly off in a way nobody can trace. The coffee's fine but not right. Somebody says the ice tastes like the freezer. A guest says nothing and quietly stops drinking from the tap. There's no incident and no date, so there's nothing to fix, which isn't the same as nothing being wrong.
 
 ## What a man capped
 
-Everybody has a few. Men do not usually end things. They stop.
+Everybody has a few. Men don't usually end things. They stop.
 
-The business that stopped operating and never got dissolved. The friendship that ended without either of them saying so, still nominally on. The degree, the band, the move to another city, the version of the work he was going to do by forty. The thing his father wanted for him. None of it got a decision. All of it got a cap — quietly stop putting anything through it, leave it in place, say nothing out loud.
+The business that stopped operating and never got dissolved. The friendship that ended without either of them saying so, still nominally on. The degree, the band, the move to another city, the version of the work he was going to be doing by forty. The thing his father wanted for him. None of it got a decision. All of it got a cap: quietly stop running anything through it, leave it in place, say nothing out loud.
 
-And the cap is doing work, which is exactly why it stays. As long as the branch is still there, nothing has been given up. He is not a man who quit. He is a man with something on hold. Four minutes and a fitting, and he owns “someday” outright, with no payments due.
+And the cap's doing a job, which is exactly why it stays. As long as the branch is there, nothing's been given up. He isn't a man who quit. He's a man with something on hold. Four minutes and a fitting, and he owns "someday" outright, with no payments due.
 
 Cutting that line back to the main costs a shutdown, a hard joint in an awkward place, and an admission with a date on it.
 
-So it is worth saying plainly: the cap is cheap because it is not the thing. It is the deferral of the thing, and it is priced accordingly.
+So it's worth saying plainly: the cap is cheap because it isn't the thing. It's the deferral of the thing, and it's priced accordingly.
 
 ## The test the trade actually runs
 
 The useful part of the trade's test is that it has no opinion about intention. It asks one question. Is there a fixture on the end of it?
 
-Not is one planned. Not could there be. Is anything downstream drawing water — now, this month, in the ordinary run of the year. If nothing is, it is a dead leg, whatever the man who capped it meant at the time. Intention has no flow rate.
+Not is one planned. Not could there be. Is anything downstream drawing water, now, this month, in the ordinary run of the year? If nothing is, it's a dead leg, whatever the man who capped it meant at the time. Intention has no flow rate.
 
-He is the one who knows what is on the end of his. Nobody who has not been in his building can tell him which branches have fixtures, and anybody who tries is guessing about a system he has not seen. But it is an answerable question, it is answerable this week, and the answer is rarely a mystery to the man holding it.
+He's the one who knows what's on the end of his. Nobody who hasn't been in his building can tell him which branches have fixtures, and anybody who tries is guessing about a system they haven't seen. But it's an answerable question, it's answerable this week, and the answer is rarely a mystery to the man holding it.
 
-## Dormant is not dead
+## Dormant isn't dead
 
-Here is the complication, because a rule this clean will get run too hard.
+Here's the complication, because a rule this clean will get run too hard.
 
-Some lines are shut down rather than abandoned. There is a real difference between a bathroom that is coming back in the spring and a bathroom that is a hallway now. Trades isolate live branches on purpose all the time — valve it, drain it, tag it, put it back in service when the work is done. That is not a dead leg. That is a plan with a valve on it.
+Some lines are shut down rather than abandoned. There's a real difference between a bathroom that's coming back in the spring and a bathroom that's a hallway now. Trades isolate live branches on purpose all the time: valve it, drain it, tag it, put it back in service when the work's done. That isn't a dead leg. That's a plan with a valve on it.
 
-The tell is not how a man feels about it. It is whether the isolation has the parts a plan has: a shutoff he can name, a drain, a date, and somebody besides him who knows the branch is there. A branch with none of those is not dormant. It is abandoned with a good mood attached.
+The tell isn't how a man feels about it. It's whether the isolation has the parts a plan has: a shutoff he can name, a drain, a date, and somebody besides him who knows the branch is there. A branch with none of those isn't dormant. It's abandoned with a good mood attached.
 
-And cutting back a line that did have a fixture coming is a real loss, not a hypothetical one. Some men will get that call wrong in the direction of cutting, and it will cost them something they wanted. No framework removes that cost. It is simply not larger than the cost of leaving every branch in the building capped and calling the result optionality.
+And cutting back a line that did have a fixture coming is a real loss, not a hypothetical one. Some men will get that call wrong in the direction of cutting, and it'll cost them something they wanted. No framework removes that cost. It's just not bigger than the cost of leaving every branch in the building capped and calling the result optionality.
 
 ## Back to the main
 
-Cutting a branch back is not braver than capping it. It is louder. It involves the main, so the water goes off, and other people in the building find out that something is happening. That is most of the resistance right there. A cap is private. A cut is not.
+Cutting a branch back isn't braver than capping it. It's louder. It involves the main, so the water goes off, and other people in the building find out something's happening. That's most of the resistance right there. A cap is private. A cut is not.
 
-You know roughly where yours are. You walked past one this week without stopping, which is the correct way to treat pipe that is not leaking.
+You know roughly where yours are. You walked past one this week without stopping, which is the correct way to treat pipe that isn't leaking.
 
 Whether any of them come out is yours to say. But go and look at what is on the end.
 
@@ -128,11 +129,11 @@ Go and look at what is on the end.
 
 # Instagram caption source
 
-The plumbing code has a rule about pipe that goes nowhere. When a fixture comes out, the branch that fed it is not supposed to be capped where it stands. It gets cut back to the main. A length of pipe holding water with nothing pulling on it is a problem the rest of the building inherits.
+The plumbing code has a rule about pipe that goes nowhere. When a fixture comes out, the branch that fed it isn't supposed to be capped where it stands. It gets cut back to the main. A length of pipe holding water with nothing pulling on it's a problem the rest of the building inherits.
 
-The cap is not the mistake. On the day, capping is correct — four minutes and a fitting, and the water stops. The mistake is that it looks finished. It holds, it does not drip, and it passes every test a man is likely to run on it, which is looking at it.
+The cap isn't the mistake. On the day, capping is correct — four minutes and a fitting, and the water stops. The mistake is that it looks finished. It holds, it doesn't drip, and it passes every test a man is likely to run on it, which is looking at it.
 
-Men do not usually end things. They stop. The business that never got dissolved, the friendship nobody called, the version of the work he was going to do by forty. All of it got a cap. As long as the branch is still there, nothing has been given up — he is not a man who quit, he is a man with something on hold.
+Men don't usually end things. They stop. The business that never got dissolved, the friendship nobody called, the version of the work he was going to do by forty. All of it got a cap. As long as the branch is still there, nothing has been given up — he isn't a man who quit, he's a man with something on hold.
 
 The trade's test has no opinion about intention. Is there a fixture on the end of it? Not is one planned. Is anything drawing water, this month, in the ordinary run of the year.
 

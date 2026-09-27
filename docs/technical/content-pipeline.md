@@ -15,7 +15,7 @@ The founder asked for a lighter, more human, more charismatic voice. The bank is
 - **Let the structure breathe.** Fewer section heads. Not every piece needs five sections and a concession section. Length is a ceiling, not a target: 900 to 1,400 words, and a piece that is finished at 950 stops there. Padding to a number kills the voice first.
 - **Hear it.** A sentence nobody would say across a tailgate gets rewritten.
 
-Nothing else moves. Every rule in `AGENTS.md` and `../editorial-underpinning.md` stands. Lighter is not glib: test 1 still applies, and no joke lands on a man in pain. The generic present, the ban on invented events, publication voice, and the witness gates are unchanged, and a witness piece still keeps its machinery, which is where its jokes live. Approved copy under `content/` is not revised to match.
+Nothing else moves. Every rule in `AGENTS.md` and `../editorial-underpinning.md` stands. Lighter is not glib: test 1 still applies, and no joke lands on a man in pain. The generic present, the ban on invented events, publication voice, and the witness gates are unchanged, and a witness piece still keeps its machinery, which is where its jokes live. The whole bank was revised to this voice on 2026-09-27, by founder ruling, so the body of work reads as one voice; a revision keeps every argument, fact, closing, and line printed on a slide, and the published copies on Ghost and Medium are kept identical to `content/`.
 
 ## What a complete unit contains
 

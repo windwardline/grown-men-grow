@@ -135,3 +135,9 @@ Credentials remain in authenticated sessions, a password manager, macOS Keychain
 - [x] New drafts carry a lighter, more human, more charismatic voice. The Voice section of `content-pipeline.md` records what that means on the page. Approved copy is not revised.
 - [x] Draft length is 900 to 1,400 words, a ceiling rather than a target.
 - [x] `**Standing commission:**` is set to `witness`. The next draft clears it on landing, or leaves it standing if no subject passes the subject test.
+
+## The bank revised to one voice (founder-ruled 2026-09-27)
+
+- [x] Every essay in the bank, the launch essay and all twenty-three field notes, is revised to the lighter voice. The seven published essays are updated on Ghost and Medium, so every surface matches `content/`.
+- [x] Titles change only where the voice requires it: "Rest Is Not a Reward" is now "Rest Isn’t a Reward", and "Somebody Is Up on His Ladder" is now "Somebody’s Up on His Ladder". Slugs and URLs do not change.
+- [x] The visuals stay usable. Every sentence printed on a rendered slide is kept verbatim in its essay. The one unpublished cover that printed an old title was re-rendered with the same photograph and layout. Posted Instagram assets are not re-cut.

@@ -26,7 +26,7 @@ Every shop has a version of the rule: if you can move it, weld it flat. In the f
 
 ## Post 2
 
-A welder is not certified. He is certified in a position. Flat is one test, overhead is another, and nobody in the trade confuses the two, because the paper says which one. A grown man does not carry the paper.
+A welder isn't certified. He's certified in a position. Flat is one test, overhead is another, and nobody in the trade confuses the two, because the paper says which one. A grown man doesn't carry the paper.
 
 ## Post 3 — canonical link
 
@@ -34,9 +34,9 @@ People learn which joints he can do, and they stop bringing him the others. Noth
 
 # LinkedIn Page
 
-By forty-five a competent man has spent two decades doing something sensible: arranging the work so it comes to him flat. The job he is good at, then the promotion inside the thing he is good at. The friends who like what he already does. Every one of those choices was right on the day it got made.
+By forty-five a competent man has spent two decades doing something sensible: arranging the work so it comes to him flat. The job he's good at, then the promotion inside the thing he's good at. The friends who like what he already does. Every one of those choices was right on the day it got made.
 
-Added together they make a shop where nothing is ever welded overhead, run by a man who takes the quality of the work as proof that he can weld. Some joints do not turn. They arrive already installed, and a man who has welded flat for twenty years goes up to them with a flat welder's hands.
+Added together they make a shop where nothing is ever welded overhead, run by a man who takes the quality of the work as proof that he can weld. Some joints don't turn. They arrive already installed, and a man who has welded flat for twenty years goes up to them with a flat welder's hands.
 
 The new field note is about welding positions: why the shop is right to turn the work, what cold lap looks like from the outside, and the six-month rule that runs on every skill whether anyone checks the paperwork or not. [canonical link]
 
@@ -48,8 +48,8 @@ Cold lap is a weld laid onto the surface of a joint instead of fused into it. Th
 
 ## Note 2
 
-Under the structural welding code, a welder's qualification lapses if he goes six months without using the process. Hands forget. A skill is not a possession. It is something a man is currently doing.
+Under the structural welding code, a welder's qualification lapses if he goes six months without using the process. Hands forget. A skill isn't a possession. It's something a man is currently doing.
 
 ## Note 3 — canonical link
 
-Welders practise on scrap. Nothing depends on a coupon. That is its entire job: to be a joint that is allowed to be bad, in private, until it isn't. [canonical link]
+Welders practise on scrap. Nothing depends on a coupon. That's its entire job: to be a joint that's allowed to be bad, in private, until it isn't. [canonical link]

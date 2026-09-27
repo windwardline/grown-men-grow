@@ -9,8 +9,9 @@ preview: You’re reading someone else’s odometer and calling it a route.
 feature_image_alt: Two neighboring garden beds at different heights in morning light, beside old photographs and a notebook spread on a wooden table, in a paper collage.
 status: founder-approved
 approved: 2026-08-09 under the ten-round directive; founder veto on sight
+revised: 2026-09-27 — voice revision under the founder ruling of that day (lighter, more human, more charismatic); arguments, facts, closings, and every line printed on a slide unchanged
 stance: assignment — the question is his to ask before the envy loads
-closing_addresses_reader: yes — "run your own route toward it. … then close the map. It was never yours."
+closing_addresses_reader: yes — "run your own route toward it. … Then close the map. It was never yours."
 opening: other — opens on two garden beds on one street
 personal_claims: none included; add only from founder-supplied facts
 artwork_status: complete; founder-approved 2026-08-10 with rounds 7-10
@@ -18,41 +19,41 @@ artwork_status: complete; founder-approved 2026-08-10 with rounds 7-10
 
 # Ghost essay source
 
-Two garden beds, side by side, one street. One is a foot taller than the other. A man can stand between them and learn exactly one thing: they are different. Different seed, different soil, different week the frost came.
+Two garden beds, side by side, one street. One's a foot taller than the other. A man can stand between them and learn exactly one thing: they're different. Different seed, different soil, a different week the frost came.
 
-He cannot learn what to do next. There are no instructions in the difference. But show a man another man's taller bed — his title, his house, his kid's scholarship, his shoulders at forty-six — and watch him treat it like a set of directions.
+He can't learn what to do next. There are no instructions in the difference. But show a man another man's taller bed, his title, his house, his kid's scholarship, his shoulders at forty-six, and watch him treat it like a set of directions.
 
 ## The map error
 
-Comparison feels like information because it *is* information. That is the trap in it. The other man's progress is real, measurable, sometimes genuinely instructive. The error is in what we do with it: we read someone else's odometer and call it a route.
+Comparison feels like information because it *is* information. That's the trap. The other man's progress is real, measurable, sometimes genuinely instructive. The error is in what we do with it: we read someone else's odometer and call it a route.
 
-His mileage tells you where his roads went. It tells you nothing about where yours go — different starting point, different loads, different weather, half the trip invisible. Every man you compare against is a map of terrain you will never drive.
+His mileage tells you where his roads went. It tells you nothing about where yours go: different starting point, different loads, different weather, half the trip invisible. Every man you measure yourself against is a map of terrain you'll never drive.
 
-The old advice says comparison steals joy, which is true but incomplete. The bigger theft is navigational. A man steering by other men is not going anywhere in particular. He is just staying in formation.
+The old advice says comparison steals joy, which is true but incomplete. The bigger theft is navigational. A man steering by other men isn't going anywhere in particular. He's just flying in formation.
 
 ## What it costs
 
-Formation-flying has real costs, and they compound quietly.
+Formation flying has real costs, and they compound quietly.
 
-It sets your pace by engines that aren't yours. Passing one man, you ease off — ahead is ahead — though your own destination may still be far. Trailing another, you redline through territory that deserved slow attention: young kids, a body asking for something, work that needed depth instead of speed.
+It sets your pace by engines that aren't yours. Pass one man and you ease off, because ahead is ahead, even if your own destination's still a long way out. Trail another and you redline through country that deserved slow attention: young kids, a body asking for something, work that needed depth instead of speed.
 
-It also curates your grief. The comparing man mourns not having what he was never headed toward — the boat he doesn't want, the pace he can't hold, the life that photographs better than it lives. That mourning is time and fuel, spent on a route that was never his.
+It also picks your grief for you. The comparing man mourns not having what he was never headed toward: the boat he doesn't want, the pace he can't hold, the life that photographs better than it lives. That mourning costs time and fuel, spent on a route that was never his.
 
 ## The only useful comparison
 
-There is one comparison worth keeping, and men who have done anything durable all seem to arrive at it: you, against you, over time.
+There's one comparison worth keeping, and men who've built anything durable all seem to land on it: you, against you, over time.
 
-Same driver, same roads, honest odometer. Am I stronger than last year — in the ways I decided matter, not the ways that photograph well? Is my patience longer than it was? Is the work deeper? Are the people closest to me getting a better or worse version than they got in March?
+Same driver, same roads, honest odometer. Am I stronger than last year, in the ways I decided matter and not the ways that photograph well? Is my patience longer than it was? Is the work deeper? Are the people closest to me getting a better or worse version of me than they got in March?
 
-That comparison has everything the sideways kind lacks: identical conditions, complete information, and a result you can act on tomorrow morning. It is also harsher, which may be why the sideways kind stays popular. The neighbor's garden never asks what you planted.
+That comparison has everything the sideways kind lacks: identical conditions, complete information, and a result you can act on tomorrow morning. It's also harsher, which may be why the sideways kind stays popular. The neighbor's garden never asks what you planted.
 
 ## Using other men correctly
 
 None of this means closing your eyes to other men. It means demoting them from map to *survey data*.
 
-Another man's life can show you what's possible — a way of being a father you hadn't seen, proof that the turn you're scared of survives being made. Taken that way, other men are a library. Taken as a map, they are a leash.
+Another man's life can show you what's possible: a way of being a father you hadn't seen, proof that the turn you're scared of survives being made. Read that way, other men are a library. Read as a map, they're a leash.
 
-The difference is one question, asked before the envy finishes loading: *do I actually want that, or do I just want to have it?* Want the thing — then study the man, take the notes, run your own route toward it. Want to have it — then close the map. It was never yours.
+The difference is one question, asked before the envy finishes loading: *do I actually want that, or do I just want to have it?* Want the thing? Then study the man, take the notes, run your own route toward it. Just want to have it? Then close the map. It was never yours.
 
 # Instagram carousel source
 
@@ -102,7 +103,7 @@ Two garden beds, side by side. One is a foot taller. A man can stand between the
 
 But show him another man’s title, house, shoulders — and watch him treat it like directions.
 
-Comparison feels like information because it is information. The error is reading someone else’s odometer and calling it a route. His mileage tells you where his roads went. Yours are different roads.
+Comparison feels like information because it's information. The error is reading someone else’s odometer and calling it a route. His mileage tells you where his roads went. Yours are different roads.
 
 The only comparison with complete information and identical conditions: you, against you, over time. It’s also harsher. The neighbor’s garden never asks what you planted.
 

@@ -22,11 +22,11 @@ Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts unti
 
 ## Post 1
 
-A garage door opener is about a third of a horsepower. That is a kitchen appliance. The door hanging under it weighs two hundred pounds. Those two numbers do not go together.
+A garage door opener is about a third of a horsepower. That's a kitchen appliance. The door hanging under it weighs two hundred pounds. Those two numbers don't go together.
 
 ## Post 2
 
-The opener is not lifting the door. It overcomes friction and settles an argument about direction. The lifting is done by a spring on a shaft above the opening, wound tight and painted the same colour as the ceiling.
+The opener isn't lifting the door. It overcomes friction and settles an argument about direction. The lifting is done by a spring on a shaft above the opening, wound tight and painted the same colour as the ceiling.
 
 ## Post 3 — canonical link
 
@@ -34,9 +34,9 @@ The spring makes no noise. The opener makes all of it. The loudest thing in the 
 
 # LinkedIn Page
 
-A balanced garage door, halfway up with the opener disconnected, stays where it is. It does not fall and it does not rise. Two hundred pounds of steel standing still in the air, because something overhead is holding exactly as much as it weighs and not an ounce more.
+A balanced garage door, halfway up with the opener disconnected, stays where it is. It doesn't fall and it doesn't rise. Two hundred pounds of steel standing still in the air, because something overhead is holding exactly as much as it weighs and not an ounce more.
 
-A man knows what his own effort sounds like. The early alarm is his, the hours are his, and the thing he made himself do in February when everything in him voted the other way is entirely his. So when the door goes up, he credits the motor — the part with his name on it, the part that answers when he pushes the button. What is actually taking the weight does not announce itself, because announcing is not what it is for.
+A man knows what his own effort sounds like. The early alarm is his, the hours are his, and the thing he made himself do in February when everything in him voted the other way is entirely his. So when the door goes up, he credits the motor — the part with his name on it, the part that answers when he pushes the button. What's actually taking the weight doesn't announce itself, because announcing isn't what it's for.
 
 The new field note is about counterbalance: why the loudest part of the assembly is doing the least work in it, what it costs to wind a spring by hand with no gauge on anything, and the fact that nothing on the wall ever reports the number. [canonical link]
 
@@ -44,12 +44,12 @@ The new field note is about counterbalance: why the loudest part of the assembly
 
 ## Note 1
 
-When a door stops going up, the opener gets the blame, and a bigger one goes in. Three-quarter horsepower, belt drive, quieter, an app. The door still does not go up. Three quarters of a horse cannot lift two hundred pounds either.
+When a door stops going up, the opener gets the blame, and a bigger one goes in. Three-quarter horsepower, belt drive, quieter, an app. The door still doesn't go up. Three quarters of a horse can't lift two hundred pounds either.
 
 ## Note 2
 
-The care arrives mis-tensioned, because it is applied by people with bars in their hands and no gauge on anything. A half turn heavy and the door will not stay down. A half turn light and the whole house learns the sound.
+The care arrives mis-tensioned, because it's applied by people with bars in their hands and no gauge on anything. A half turn heavy and the door won't stay down. A half turn light and the whole house learns the sound.
 
 ## Note 3 — canonical link
 
-A torsion spring is rated for about ten thousand cycles, and there is no counter on it. No light comes on at nine thousand. The door in its last week goes up exactly like the door in its first. [canonical link]
+A torsion spring is rated for about ten thousand cycles, and there's no counter on it. No light comes on at nine thousand. The door in its last week goes up exactly like the door in its first. [canonical link]

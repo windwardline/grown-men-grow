@@ -1,7 +1,7 @@
 ---
 title: A Temp Wall Comes Out in April
 slug: a-temp-wall-comes-out-in-april
-dek: It goes up in a hurry out of whatever is in the truck, and it holds the whole floor.
+dek: It goes up in a hurry out of whatever’s in the truck, and it holds the whole floor.
 byline: none — publication voice (founder ruling 2026-08-10)
 access: public
 email_subject: A Temp Wall Comes Out in April
@@ -9,6 +9,7 @@ preview: Nobody frames a temp wall plumb. It is not going to be there in April.
 feature_image_alt: A title-free paper collage pairing a photograph of a rough temporary stud wall standing in a stripped-open room with a photograph of two opposing cedar shims tapped between a top plate and a ceiling joist, beside a drawn load-path mark of a short bar over a post reaching a hatched ground line.
 status: founder-approved
 approved: 2026-08-30 — essay, platform pack, and artwork approved together, in one pass
+revised: 2026-09-27 — voice revision under the founder ruling of that day (lighter, more human, more charismatic); arguments, facts, closings, and every line printed on a slide unchanged
 publication_authorized: false — approval covers the work and a register position, not a Ghost slot; publication, newsletter delivery, and posting remain separately gated
 stance: witness — the subject test passes: the wall comes out on a schedule he did not set, and he has no move in it
 closing_addresses_reader: no — witness gate 1: ends on the last fact, "The room goes into use," and turns to him nowhere
@@ -25,11 +26,11 @@ origin: written 2026-08-30 by the Saturday draft task, against the standing comm
 
 Taking a bearing wall out of a house is mostly the business of not taking it out yet.
 
-The wall is holding up the floor above it, and the floor above it has no interest in anybody's plan for the dining room. So before a saw goes near the studs, a second wall goes up three feet away, out of whatever lumber happens to be in the truck. Sole plate screwed down through the finish floor. Top plate against the joists. Studs at sixteen inches, because that is the spacing a man's hands already know without being asked.
+The wall's holding up the floor above it, and the floor above it has no interest in anybody's plans for the dining room. So before a saw goes near the studs, a second wall goes up three feet away, out of whatever lumber happens to be in the truck. Sole plate screwed down through the finish floor. Top plate against the joists. Studs at sixteen inches, because that's the spacing a man's hands already know without being asked.
 
-Then two shims at the top, tapped in from opposite sides until the plate stops moving. Not jacked. Jacked hard cracks the ceiling it is supposed to be protecting. Snug, and then nothing.
+Then two shims at the top, tapped in from opposite sides until the plate stops moving. Not jacked. Jacked hard cracks the ceiling it's supposed to be protecting. Snug, and then nothing.
 
-Somewhere in that tapping the load leaves the old wall and arrives on the new one, and the house generally has a comment about it. A pop from upstairs. A door that has closed the same way for thirty years suddenly wanting a shoulder.
+Somewhere in that tapping the load leaves the old wall and arrives on the new one, and the house usually has something to say about it. A pop from upstairs. A door that's closed the same way for thirty years suddenly wanting a shoulder.
 
 Then the real wall comes out, and the room stands open with a stick-built thing in the middle of it doing every bit of the work and looking like absolutely nothing.
 
@@ -37,51 +38,51 @@ Then the real wall comes out, and the room stands open with a stick-built thing 
 
 A temp wall is not support. It is a transfer.
 
-Weight that lands on it has to keep going — down the studs, through the plate, into a beam or a bearing wall in the basement, and finally onto a footing sitting in dirt that has been there since the house went up. Miss that path and the wall has held nothing. It has lifted the load off the old wall and set it down in the middle of a floor that was never asked to carry it, and everyone involved feels better for a few weeks.
+Weight that lands on it has to keep going: down the studs, through the plate, into a beam or a bearing wall in the basement, and finally onto a footing sitting in dirt that's been there since the house went up. Miss that path and the wall's held nothing. It's lifted the load off the old wall and set it down in the middle of a floor that was never asked to carry it, and everybody involved feels better for a few weeks.
 
 *Let me know if you need anything* is a wall built with no path to the ground.
 
-It goes up in four seconds. It is sincere. It is also, structurally, a decoration, because the only way weight gets into it is if the load stands up, crosses the room, and puts it there. The men who say it are not lying, and a good number of them would come. It simply does not reach anything.
+It goes up in four seconds. It is sincere. It's also, structurally, a decoration, because the only way weight gets into it is if the load stands up, crosses the room, and puts it there. The men who say it aren't lying, and a good number of them would come. It just doesn't reach anything.
 
 ## Nobody planned this opening
 
-There is a Thursday with a funeral in it, and then there is a Friday, which is worse, because Thursday at least came with a schedule.
+There's a Thursday with a funeral in it, and then there's a Friday, which is worse, because Thursday at least came with a schedule.
 
-The first two weeks are well staffed. People know what to do with two weeks. Food shows up in disposable pans with masking tape on the lid saying 350 for forty minutes, and there are six of them, and the freezer was already full. Somebody's wife runs a spreadsheet with names in one column and days in the other. The driveway does not have a clear hour in it.
+The first two weeks are well staffed. People know what to do with two weeks. Food shows up in disposable pans with masking tape on the lid saying 350 for forty minutes, and there are six of them, and the freezer was already full. Somebody's wife runs a spreadsheet with names in one column and days in the other. The driveway doesn't have a clear hour in it.
 
 None of that is the shoring. That is the demolition crew, and demolition always draws a crowd.
 
 ## Week three
 
-The wall is out for something like nine months. Nobody has a protocol for week three.
+The wall's out for something like nine months. Nobody has a protocol for week three.
 
-What happens instead is that his grass gets cut on Saturdays by a man with his own yard and a bad hip. The dog gets walked at six by somebody who does not own a dog and has no particular feelings about this one. His truck gets taken for inspection and comes back inspected with the tank full, which is a thing that gets done to a truck and not mentioned afterward. Four phone calls to an insurance company get handled on a Tuesday afternoon and he is never told which four.
+What happens instead is that his grass gets cut on Saturdays by a man with his own yard and a bad hip. The dog gets walked at six by somebody who doesn't own a dog and has no particular feelings about this one. His truck gets taken for inspection and comes back inspected with the tank full, which is a thing that gets done to a truck and never mentioned afterward. Four phone calls to an insurance company get handled on a Tuesday afternoon and he's never told which four.
 
-He does not ask for any of it. Asked, he says no. Every man in the driveway worked that out a long time ago, which is why nobody asks him, and the not-asking is not rudeness. It is the only arrangement that functions.
+He doesn't ask for any of it. Asked, he says no. Every man in the driveway worked that out a long time ago, which is why nobody asks him, and the not-asking isn't rudeness. It's the only arrangement that works.
 
 ## It does not get built well
 
 Nobody frames a temp wall plumb. It is not going to be there in April.
 
-Somebody says the thing about a reason, in a kitchen, holding a plate. Somebody who was solid all through Thursday is not around by March, and it is not coldness — nobody told him there was a March, and there is no way to find out except by being the one still standing there. Two of them decide, between themselves, that he needs to talk, and sit him down at his own table and run at it for an hour, and that hour is the worst one of that month by a distance.
+Somebody says the thing about a reason, in a kitchen, holding a plate. Somebody who was solid all through Thursday isn't around by March, and it isn't coldness. Nobody told him there was a March, and there's no way to find out except by being the one still standing there. Two of them decide between themselves that he needs to talk, and sit him down at his own table and run at it for an hour, and that hour's the worst one of the month by a distance.
 
-A man cleans out the garage as a favor and throws away a coffee can of mixed screws that was not garbage, and the size of the reaction surprises everybody in the room, him most of all.
+A man cleans out the garage as a favor and throws away a coffee can of mixed screws that wasn't garbage, and the size of the reaction surprises everybody in the room, him most of all.
 
 And he resents it. That gets left out of these every time, so it goes in here.
 
-Not the men. The arrangement. Being the load instead of one of the guys with a hammer. The way the whole thing runs on a schedule he was not consulted about, in his own driveway, with his own mower, out of his own can of gas. He tells two of them, separately, that they can stop now. Both say some version of yeah, sure. Neither one stops.
+Not the men. The arrangement. Being the load instead of one of the guys with a hammer. The way the whole thing runs on a schedule nobody consulted him about, in his own driveway, with his own mower, out of his own can of gas. He tells two of them, separately, that they can stop now. Both say some version of yeah, sure. Neither one stops.
 
 ## Most floors take the deflection
 
 This should go in plainly rather than be left for someone to work out later.
 
-A good number of men have nothing under them at all, and that is the ordinary condition rather than the exception. The load goes into the floor, and the floor takes it, because that is what floors do. Eight years on there is a hump in an upstairs hallway that a home inspector will find and nobody will be able to account for. He will have a word for those eight years, and the word will be *fine*.
+A good number of men have nothing under them at all, and that's the ordinary condition rather than the exception. The load goes into the floor, and the floor takes it, because that's what floors do. Eight years on there's a hump in an upstairs hallway that a home inspector will find and nobody will be able to account for. He'll have a word for those eight years, and the word will be *fine*.
 
 ## April
 
-What goes in permanently is not the same wall, and nobody involved pretends it is. It is a beam. Different shape, different span, same floor, and the room is a different room now.
+What goes in permanently isn't the same wall, and nobody involved pretends it is. It's a beam. Different shape, different span, same floor, and the room's a different room now.
 
-The shims come out first, backed off with a hammer, and there is a moment in there where the load moves again and everybody finds out at the same time whether the beam is taking it. It takes it. It deflects an eighth of an inch doing so, because that is what a beam does under its design load, and upstairs a door that has been sticking since February goes back to closing on its own.
+The shims come out first, backed off with a hammer, and there's a moment where the load moves again and everybody finds out at the same time whether the beam's taking it. It takes it. It deflects an eighth of an inch doing so, because that's what a beam does under its design load, and upstairs a door that's been sticking since February goes back to closing on its own.
 
 The studs come out in about ten minutes. Somebody backs the screws out of the sole plate and pulls it up off the finish floor, and underneath there are four holes in the oak packed with sawdust and nine months of somebody else's boots.
 
@@ -137,11 +138,11 @@ Taking a bearing wall out of a house is mostly the business of not taking it out
 
 The thing that separates a temp wall from a decoration is the path underneath it. Weight that lands on it has to keep going — down the studs, through the plate, into a beam in the basement, finally onto a footing sitting in dirt. Miss that path and the wall has held nothing. It has moved the load into a floor that was never asked to carry it.
 
-*Let me know if you need anything* is a wall built with no path to the ground. It goes up in four seconds, it is sincere, and the only way weight ever gets into it is if the load stands up, crosses the room, and puts it there.
+*Let me know if you need anything* is a wall built with no path to the ground. It goes up in four seconds, it's sincere, and the only way weight ever gets into it's if the load stands up, crosses the room, and puts it there.
 
-The first two weeks after a funeral are well staffed. Nobody has a protocol for week three. The grass gets cut on Saturdays by a man with his own yard and a bad hip. The dog gets walked at six by somebody who does not own a dog.
+The first two weeks after a funeral are well staffed. Nobody has a protocol for week three. The grass gets cut on Saturdays by a man with his own yard and a bad hip. The dog gets walked at six by somebody who doesn't own a dog.
 
-Nobody frames a temp wall plumb. It is not going to be there in April.
+Nobody frames a temp wall plumb. It isn't going to be there in April.
 
 # Instagram alt text source
 
