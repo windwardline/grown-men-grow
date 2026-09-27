@@ -3942,3 +3942,15 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Verification:** all six `gate:` lines pass (214/214 tests; `verify-repository` over 764 tracked files; 230 SVGs). Both `cadence:` checks were run as well: `verify-substack-notes` reconciles every posted note unchanged, and `verify-publication-register` agrees with Ghost on all 24 rows. A `--dry-run` of Monday's staging builds the revised "The Lights Never Flickered".
 
 **Open, in order:** (1) Push the seven published essays to Ghost and Medium and verify parity. (2) Carried forward: the Instagram traffic anomaly status, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-27 — The bank revised to one voice (surfaces half)
+
+**Client:** Claude Code (desktop app), same session, after the repository half merged as #219.
+
+**External state changed, all public:** seven Ghost posts updated in place (bodies; Field Note 4's dek and meta description; Field Note 7's title, SEO title, and email subject). Seven Medium stories re-published with revised bodies; Field Note 4's subtitle and Field Note 7's title were also changed there. No slug, URL, canonical, feature image, publish date, tag, or newsletter binding changed. Nothing was sent. No new post was created.
+
+**Verification:** Ghost: a dry re-run of the sync reports every body and field equal to `origin/main`. `verify-publication-register` agrees on all 24 rows. `https://grownmengrow.com/rest-is-not-a-reward/` answers 200 under the new title. Medium: all seven public pages hash-equal to the source body, quotes normalised, and every canonical is Ghost's. One story's server-rendered copy lagged the edit by some minutes and was re-checked once it had caught up.
+
+**Files changed:** `docs/technical/decision-log.md`, `docs/technical/handoff-log.md`.
+
+**Open, in order:** (1) Monday's staging will stage the revised "The Lights Never Flickered"; a dry run already builds it. (2) Thursday's Medium import will carry revised text from Ghost automatically. (3) Carried forward: the Instagram traffic anomaly status, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.
