@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn24-03-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn24-03-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn24-03-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 24 · 03 / 07</text>
+  <text x="74" y="300" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="70" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">A tree builds its trunk</text><text x="74" y="390" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="70" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">out of being</text><text x="74" y="480" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="70" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">pushed around.</text>
+    <line x1="505.0" y1="1010.0" x2="735.0" y2="1010.0" stroke="#121416" stroke-width="4" stroke-linecap="round"/><line x1="505.0" y1="1010.0" x2="495.0" y2="1022.0" stroke="#121416" stroke-width="2.5" opacity="0.6"/><line x1="551.0" y1="1010.0" x2="541.0" y2="1022.0" stroke="#121416" stroke-width="2.5" opacity="0.6"/><line x1="597.0" y1="1010.0" x2="587.0" y2="1022.0" stroke="#121416" stroke-width="2.5" opacity="0.6"/><line x1="643.0" y1="1010.0" x2="633.0" y2="1022.0" stroke="#121416" stroke-width="2.5" opacity="0.6"/><line x1="689.0" y1="1010.0" x2="679.0" y2="1022.0" stroke="#121416" stroke-width="2.5" opacity="0.6"/><line x1="735.0" y1="1010.0" x2="725.0" y2="1022.0" stroke="#121416" stroke-width="2.5" opacity="0.6"/><path d="M580.9 1010.0 C607.6 982.4 609.6 908.8 609.6 826.0 L609.6 550.0 L630.4 550.0 L630.4 826.0 C630.4 908.8 632.4 982.4 659.1 1010.0 Z" fill="#EEE6D8" stroke="#121416" stroke-width="4" stroke-linejoin="round"/><path d="M398.0 586.8 C444.0 574.8 490.0 596.8 536.0 582.8" fill="none" stroke="#3A1518" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+    <path d="M434.8 632.8 C471.6 624.8 508.4 640.8 536.0 629.8" fill="none" stroke="#3A1518" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <text x="76" y="1130" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">Hold the top still and nothing is asking.</text>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn24-03-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

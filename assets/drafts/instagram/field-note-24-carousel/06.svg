@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn24-06-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn24-06-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn24-06-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#3A1518"/>
+  <text x="58" y="94" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 24 · 06 / 07</text>
+  <text x="74" y="300" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="64" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">A strap left on</text><text x="74" y="384" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="64" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">long enough stops</text><text x="74" y="468" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="64" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">being on the tree</text><text x="74" y="552" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="64" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">and starts being</text><text x="74" y="636" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="64" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">in it.</text>
+    <line x1="660.0" y1="1060.0" x2="940.0" y2="1060.0" stroke="#EEE6D8" stroke-width="4" stroke-linecap="round"/><line x1="660.0" y1="1060.0" x2="650.0" y2="1072.0" stroke="#EEE6D8" stroke-width="2.5" opacity="0.6"/><line x1="716.0" y1="1060.0" x2="706.0" y2="1072.0" stroke="#EEE6D8" stroke-width="2.5" opacity="0.6"/><line x1="772.0" y1="1060.0" x2="762.0" y2="1072.0" stroke="#EEE6D8" stroke-width="2.5" opacity="0.6"/><line x1="828.0" y1="1060.0" x2="818.0" y2="1072.0" stroke="#EEE6D8" stroke-width="2.5" opacity="0.6"/><line x1="884.0" y1="1060.0" x2="874.0" y2="1072.0" stroke="#EEE6D8" stroke-width="2.5" opacity="0.6"/><line x1="940.0" y1="1060.0" x2="930.0" y2="1072.0" stroke="#EEE6D8" stroke-width="2.5" opacity="0.6"/><path d="M787.4 1060.0 L787.4 858.4 C774.8 852.4 774.8 832.4 783.6 814.4 L783.6 500.0 L816.4 500.0 L816.4 814.4 C825.2 832.4 825.2 852.4 812.6 858.4 L812.6 1060.0 Z" fill="#3A1518" stroke="#EEE6D8" stroke-width="4" stroke-linejoin="round"/><line x1="784.4" y1="858.4" x2="815.6" y2="858.4" stroke="#B14F3F" stroke-width="6" stroke-linecap="round"/>
+    <text x="76" y="1010" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="46" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">All it does now</text><text x="76" y="1072" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="46" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">is squeeze.</text>
+  <text x="58" y="1292" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn24-06-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

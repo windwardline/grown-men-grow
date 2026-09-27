@@ -3798,3 +3798,27 @@ Step 4 of `~/.claude/scheduled-tasks/gmg-tuesday-publish-check/SKILL.md` now run
 **Verification:** every `gate:` line in `AGENTS.md` was run; results are in the pull request body.
 
 **Open, in order:** (1) The Thursday slot fired ten hours late on catch-up, the same scheduler substrate as before; nothing new to fix in this repository. (2) Carried forward, not re-verified by this session: the Substack slot decision, the Instagram traffic anomaly, the one-member list, the suspended A/B, the Ghost slot for register position 22, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-27 — Saturday draft: Field Note 24, "The Stake Was Supposed to Come Off", a complete assignment unit
+
+**Client:** Claude Code (desktop app), `gmg-saturday-draft` scheduled task. It fired Sunday 03:18 ET on catch-up, the desktop application having been closed through the Saturday slot. A draft carries no weekday dependency, so the run proceeded.
+
+**Scope completed.** The week's second complete field note, drafted end to end: essay, platform pack, two photographs, render script, seven carousel slides, feature image, review sheet, and gate entries in one change set. Nothing is published, sent, posted, or staged. Work ran in a separate worktree on `claude/saturday-draft-2026-09-27`, because another session was switching branches in the shared checkout at the start of the run.
+
+**Backfill ran first and found nothing owing.** All twenty-two approved notes were checked against the complete-unit table: packs `field-note-02` through `23`, render scripts `02` through `23`, twenty-two carousels, a review sheet each, and a feature image per slug, with `verify-repository` green before any new work began.
+
+**Subject and shape.** Staking a young tree: the stake holds the roots still, the rule is low, loose, and out in a year, and the third part is the one nobody keeps. A tree builds its trunk from being bent by wind, so a tree held still grows tall and thin, and a strap left on grows into the bark. The man is the one doing the staking, well, for people who needed it, and the piece names where the rule gives way. No note in the bank covers support that outstays its purpose, and none uses trees. It is concrete and outward-facing where Wednesday's note on hearing criticism was interior. `opening: trade`.
+
+**Stance is `assignment`, and the corpus duty was read before the subject was chosen.** Witness stands at five in twenty-three, and the last three approvals ran `assignment`: a mild tilt, and on the corpus alone this was the slot to correct it. The register forbids it. Witness pieces sit at 7, 10, 14, 17 and 20, so a `witness` note appended at 23 puts four on an exact three-slot beat and fails the spacing check. **Recommendation for the founder, not acted on:** the next `witness` piece is due at position 24 or later, which a standing commission of `witness` for the next Saturday draft would produce if Wednesday's note takes 23. Setting that commission is the founder's call.
+
+**Imagery: ten generated, two kept.** The grown-in strap failed five times: a band jutting past the trunk's silhouette, a trunk ending in a flat cut-off top, and three bark renders carrying a fine cross-hatched micro-texture at 1:1. One of those was accepted on first review and rejected on a closer crop, to hold it to the same standard. Two trunk-flare closes failed on the same hatch, and a cut-free strap still life rendered as a rigid bangle. Close bark is a failing mechanism for this generator, so slide 6 went type-led and the close became a wide shot. Two generations failed on ChatGPT's side as misrouted edits; the last prompt went to the project's other Editorial Photography Request thread. Every kept prompt and every rejection is in the note's production notes.
+
+**Signature mark.** A `trunk taper` in three states: staked (straight, pinched at the strap, stake beside), free (flared at the ground, wind strokes clear of it), and grown in (no stake, trunk swollen over the band).
+
+**Files changed:** `drafts/field-note-24-the-stake-was-supposed-to-come-off.md`, `drafts/field-note-24-platforms.md`, `drafts/README.md`, `scripts/render-field-note-24.mjs`, `scripts/render-review-contact-sheets.mjs`, `scripts/verify-repository.mjs`, `assets/source/editorial/{staked-sapling-front-lawn,pulled-stakes-young-tree}.png`, `assets/drafts/instagram/field-note-24-carousel/` (7 PNG/SVG pairs), `assets/drafts/ghost/feature-images/the-stake-was-supposed-to-come-off.{png,svg}`, `assets/drafts/review/field-note-24-carousel.png`, `docs/technical/handoff-log.md`.
+
+**External state changed:** none beyond the ChatGPT project, where twelve prompts were sent across the project's two Editorial Photography Request threads.
+
+**Verification:** every `gate:` line run by name; results are in the PR. No `cadence:` gate was run, because none is due to this change set.
+
+**Open, in order:** (1) Founder review of the delivered unit. On approval it moves to `content/` at register position 23 (or later), with its frontmatter flipped, a `must live under content/` gate line, and a `drafts/README.md` line. (2) The stance recommendation above. (3) Carried forward, unverified by this session: the Substack slot decision, the Instagram traffic anomaly, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.
