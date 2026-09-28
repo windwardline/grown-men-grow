@@ -4000,3 +4000,17 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **The rule is enforced outside this repository.** It lives in the global `~/AGENTS.md` "Published media" section and in `FLEET.md` "Published media carries no embedded AI indicator" (windwardline/windwardline#129, merged 2026-09-28). `scripts/media_provenance.rb` enforces it inside the fleet conformance checker, which audits every media file committed to every fleet repository, this one included. No gate in this repository checks it. A windwardline follow-up makes the strip tool also preserve and prove PNG sRGB, gamma and density and JPEG ICC, orientation and colour space; the #223 review caught that the tool claimed this without checking.
 
 **Open, in order:** (1) Every image banked from here is stripped with `strip-ai-provenance FILE...` before it is committed. That launcher runs windwardline's script from `origin/main`, and the step is now in the banking procedure. (2) The founder's call, not recorded as decided: whether the 2026-09-27 ruling amends the 2026-08-10 decision to leave AI-disclosure fields empty. `scripts/queue-week-buffer.mjs` still sets `isAiGenerated: false` on every Instagram post; do not change it without a founder decision. (3) The Ghost copies are unverified; nothing needs doing unless one is found marked. (4) Carried forward, not re-checked by this session: the open items of the Week 8 staging entry above.
+
+## 2026-09-28 — Monday staging run: Week 8 re-verified, nothing changed
+
+**Client:** Claude Code (desktop app), the `gmg-monday-staging` scheduled task, Monday 11:29 AM ET. The week was already staged by the task's early Sunday run (entry of 2026-09-27 above); this run verified it and staged nothing.
+
+**Hold check:** `**Active hold:** none`. None of the five conditions found. Not held.
+
+**External state changed:** none. No Ghost, Buffer, iCloud, or platform write was made.
+
+**Verification.** `verify-publication-register --fix`: nothing to record, all 24 rows agree (7 published, 1 scheduled, 16 projected). Staging dry run for `the-lights-never-flickered` at 2026-09-29T12:00Z builds the payload with alt text present. Ghost: `scheduled` for 2026-09-29 12:00Z (8:00 AM ET), newsletter `default-newsletter`, segment `all`, feature image and alt set; `title`, `custom_excerpt`, `meta_title`, `meta_description`, `email_subject`, and `feature_image_alt` all equal `buildPostPayload`. `verify-repository` passes. Feed tile: Buffer's most recent sent Instagram post is still Nobody Rigs (2026-09-24, `sling-capacity-tag`); this week's slide 1 is `base-plates-anchor-bolts`. Buffer: `queue-week-buffer --dry-run` refuses because all four posts already exist, and the queue reads back at 2026-09-29 16:00Z Bluesky, 09-30 14:00Z LinkedIn, 10-01 13:00Z Instagram, 10-03 22:30Z Bluesky, matching the schedule of record. iCloud kit: all four folders and the READ ME present; both Substack paste files equal `noteCopyForSlug` output and carry no emphasis marks.
+
+**Files changed:** `docs/technical/handoff-log.md`.
+
+**Open, in order:** (1) Tuesday 12:00 PM: Substack Note 1, note task first, then the founder from kit folder 1. (2) Thursday: optional Story reshare with link sticker (folder 3). (3) Saturday 6:30 PM: Substack Note 2 (folder 2). (4) Carried forward, not re-checked here: the `isAiGenerated` founder question from the 2026-09-28 provenance entry, the Instagram traffic anomaly, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.
