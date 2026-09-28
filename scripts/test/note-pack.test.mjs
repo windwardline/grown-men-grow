@@ -43,6 +43,16 @@ test('the last note stops at the next top-level section', () => {
   assert.equal(extractNote(PACK, 3), 'Note three body. [canonical link]');
 });
 
+test('markdown emphasis is removed, because Substack stores a note body as plain text', () => {
+  const pack = '# Substack Notes\n\n## Note 1\n\nNever says *somebody covered for me* or **ever**.\n';
+  assert.equal(extractNote(pack, 1), 'Never says somebody covered for me or ever.');
+});
+
+test('an asterisk that is not emphasis is left alone', () => {
+  const pack = '# Substack Notes\n\n## Note 1\n\nTwo * three is six, and a footnote*.\n';
+  assert.equal(extractNote(pack, 1), 'Two * three is six, and a footnote*.');
+});
+
 test('a missing note is refused rather than returning empty copy', () => {
   assert.throws(() => extractNote(PACK, 4), /Note 4/);
   assert.throws(() => extractNote('# Instagram\n\nbody\n', 1), /Substack Notes/);

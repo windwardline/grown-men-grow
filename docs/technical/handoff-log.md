@@ -3968,3 +3968,19 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Pending sweep:** Ghost 0 scheduled, 0 drafts; Medium 0 drafts, 0 scheduled; Buffer 0 scheduled, draft, sending, or error; iCloud kits cover published weeks only. Nothing pending carried old copy.
 
 **Open, in order:** (1) Monday staging of "The Lights Never Flickered" from revised copy. (2) Carried forward: the Instagram traffic anomaly status, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-09-27 — Week 8 staged: "The Lights Never Flickered" scheduled, Buffer queued
+
+**Client:** Claude Code (desktop app), the `gmg-monday-staging` task fired Sunday evening; the founder said to proceed early.
+
+**Hold check:** no active hold, and none of the five conditions found. Staged.
+
+**External state changed.** Ghost: `the-lights-never-flickered` scheduled for 2026-09-29 12:00Z (8:00 AM ET), newsletter `default-newsletter`, segment `all`, feature image and alt set. Nothing published or sent. Buffer: four posts queued and read back `VERIFIED` (Bluesky Tue 12:00 PM, LinkedIn Wed 10:00 AM, Instagram carousel Thu 9:00 AM with alt 7/7, Bluesky Sat 6:30 PM). iCloud: `Instagram/Week 08 — The Lights Never Flickered/` built, backup copy taken from Buffer's own queued text.
+
+**Verification.** `verify-publication-register --fix` found nothing to record before staging, and agrees on all 24 rows after it (7 published, 1 scheduled). The staging dry run built the payload with alt text present. Live metadata equals `buildPostPayload` on all six fields, and body text equals the source after tag stripping. Feed tile: slide 1 is built on `base-plates-anchor-bolts`; Buffer's last sent Instagram post (2026-09-24) was Nobody Rigs on `sling-capacity-tag`. `verify-substack-notes` passes with this week's two rows added.
+
+**Fixed in this change set.** Note 2 of this week's pack carries markdown emphasis, `*somebody covered for me*`, the first Substack note to do so. Substack stores a note's `body` as plain text, so the verbatim extractor would have handed the founder literal asterisks, and an italicized post would never equal its pack in the register. `extractNote` now removes emphasis marks; no posted note contained any, so no existing row's comparison changes. Two tests added.
+
+**Files changed:** `scripts/lib/note-pack.mjs`, `scripts/test/note-pack.test.mjs`, `docs/technical/publication-order.md` (row 7 `scheduled`), `docs/technical/substack-notes.md` (two rows), `docs/technical/handoff-log.md`.
+
+**Open, in order:** (1) Tuesday: Substack Note 1 at 12:00 PM, note task first, then the founder from folder 1. (2) Thursday: optional Story with link sticker. (3) Saturday: Substack Note 2 at 6:30 PM, pasted plain. (4) Carried forward from earlier entries, not re-checked here: the Instagram traffic anomaly, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.

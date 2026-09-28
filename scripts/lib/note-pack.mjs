@@ -87,9 +87,21 @@ export function extractNote(markdown, note) {
     throw new Error(what);
   }
 
-  const copy = body.join('\n').trim();
+  const copy = stripEmphasis(body.join('\n').trim());
   if (copy.length === 0) throw new Error(`Note ${note} is empty in the pack.`);
   return copy;
+}
+
+/**
+ * Markdown emphasis removed, leaving the words. Substack keeps a note's
+ * formatting in `body_json` and its `body` as plain text, which is what the
+ * register compares against. With the marks left in, a pasted note either shows
+ * readers literal asterisks or, italicized by hand, never equals its own pack.
+ * Field Note 11's Note 2 was the first to carry emphasis (found 2026-09-27).
+ * A delimiter must hug a word on both sides, so `2 * 3` and `footnote*` survive.
+ */
+function stripEmphasis(text) {
+  return text.replace(/(\*\*|\*)(?=\S)([^*\n]*?\S)\1/g, '$2');
 }
 
 /** Approved copy for one note of the essay at `slug`. */
