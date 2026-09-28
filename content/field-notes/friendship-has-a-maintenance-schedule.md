@@ -125,15 +125,15 @@ Going first isn't losing. It's ownership.
 
 # Instagram caption source
 
-Men are excellent at maintenance. We change oil early, seal decks before the rain, sharpen things, rotate things, check the smoke detectors because a firefighter on TV told us to thirty years ago.
+Men are excellent at maintenance. We change oil early, seal decks before the rain, sharpen things, rotate things, and check the smoke detectors because a firefighter on TV told us to thirty years ago.
 
-Then we take the two or three friendships we would run into traffic for and maintain them never.
+Then we take the two or three friendships we'd run into traffic for and maintain them never.
 
-The myth is that a strong friendship shouldn't need upkeep — that effort means it was fake all along. We don't apply that logic to anything else we respect.
+The myth is that a strong friendship shouldn't need upkeep, and that needing effort means it was fake all along. We don't apply that logic to anything else we respect.
 
 The schedule is short and unromantic, which is the point: a call with no reason on a normal Tuesday, a specific question instead of "how's everything," one honest sentence about your own life, and a plan with an actual date in it.
 
-Somebody has to go first. Going first is not losing. It's what stewardship sounds like on the phone.
+Somebody has to go first. Going first isn't losing. It's what stewardship sounds like on the phone.
 
 # Instagram alt text source
 

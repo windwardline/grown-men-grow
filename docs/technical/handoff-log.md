@@ -3955,6 +3955,20 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 
 **Open, in order:** (1) Monday's staging will stage the revised "The Lights Never Flickered"; a dry run already builds it. (2) Thursday's Medium import will carry revised text from Ghost automatically. (3) Carried forward: the Instagram traffic anomaly status, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.
 
+## 2026-09-27 — Instagram captions revised; pending-publication sweep
+
+**Client:** Claude Code (desktop app), same session.
+
+**External state changed, all public:** the captions of all ten live Instagram posts on @grownmengrow were edited in place. No image, alt text, location, or collaborator was changed, no post was created or deleted, and nothing was boosted.
+
+**Files changed:** the `# Instagram caption source` of the six published field notes; `content/instagram/launch-package.md` (five captions); `docs/technical/decision-log.md`; this log.
+
+**Verification:** each caption was hash-equal to its revised source in the edit field before saving, then confirmed on the reloaded live post. `verify-repository` still finds all five approved launch tag lines.
+
+**Pending sweep:** Ghost 0 scheduled, 0 drafts; Medium 0 drafts, 0 scheduled; Buffer 0 scheduled, draft, sending, or error; iCloud kits cover published weeks only. Nothing pending carried old copy.
+
+**Open, in order:** (1) Monday staging of "The Lights Never Flickered" from revised copy. (2) Carried forward: the Instagram traffic anomaly status, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.
+
 ## 2026-09-27 — Week 8 staged: "The Lights Never Flickered" scheduled, Buffer queued
 
 **Client:** Claude Code (desktop app), the `gmg-monday-staging` task fired Sunday evening; the founder said to proceed early.

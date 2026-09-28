@@ -97,11 +97,11 @@ Put it on the schedule. Not after. On.
 
 # Instagram caption source
 
-Watch a man close down a job site. Tools wiped, blades retracted, cords coiled the right way — he has opinions about the wrong way. Everything valuable gets put away properly so it works tomorrow.
+Watch a man close down a job site. Tools wiped, blades retracted, cords coiled the right way, because he has opinions about the wrong way. Everything valuable gets put away properly so it works tomorrow.
 
-Then he goes inside and treats himself like the one tool that doesn’t need it.
+Then he goes inside and treats himself like the one tool that doesn't need it.
 
-The earning model of rest — rest is what you get after — sounds disciplined. It’s just debt, deferred at interest. And collapse is not rest: if nothing comes back, you didn’t rest, you ran out.
+The earning model of rest, where rest is what you get after, sounds disciplined. It's just debt, deferred at interest. And collapse isn't rest: if nothing comes back, you didn't rest, you ran out.
 
 The maintenance model is unromantic on purpose: scheduled, not earned. By interval, not by feeling. Nobody calls the truck lazy for needing oil.
 
