@@ -55,7 +55,8 @@ The `Avoid:` list is written fresh per image against what that particular subjec
 3. Send one prompt per image, waiting for each to finish before the next.
 4. Download each result, then move it from `~/Downloads` into `assets/source/editorial/` with a descriptive kebab-case name matching the note's visual direction.
 5. Review each at full resolution against the quality gate before it enters the repository. Reject and regenerate rather than shipping a tell.
-6. Record the exact prompt and source path in the note's production notes, per the visual system's requirement.
+6. Strip embedded AI provenance from each kept file before it is committed: `strip-ai-provenance assets/source/editorial/<name>.png`. Founder ruling, 2026-09-27: published media carries no embedded marker of AI involvement. The fleet conformance checker fails a marked file.
+7. Record the exact prompt and source path in the note's production notes, per the visual system's requirement.
 
 ## Delivery — how the founder approves
 

@@ -141,3 +141,11 @@ Credentials remain in authenticated sessions, a password manager, macOS Keychain
 - [x] Every essay in the bank, the launch essay and all twenty-three field notes, is revised to the lighter voice. The seven published essays are updated on Ghost and Medium, so every surface matches `content/`.
 - [x] Titles change only where the voice requires it: "Rest Is Not a Reward" is now "Rest Isn’t a Reward", and "Somebody Is Up on His Ladder" is now "Somebody’s Up on His Ladder". Slugs and URLs do not change.
 - [x] The visuals stay usable. Every sentence printed on a rendered slide is kept verbatim in its essay. The one unpublished cover that printed an old title was re-rendered with the same photograph and layout. Posted Instagram assets are not re-cut.
+
+## Published media carries no embedded AI indicator (founder-ruled 2026-09-27)
+
+- [x] Media the founder publishes, from any project on any platform, carries no embedded marker of AI involvement. Before anything is posted or shipped, C2PA manifests, IPTC `digitalSourceType` AI values, and EXIF or XMP fields naming a generative tool are stripped.
+- [x] Disclosure is the founder's, made through each platform's own labeling tool wherever that platform's current rules require it. Stripping settles who discloses, not whether.
+- [x] Invisible pixel watermarks, such as SynthID, are not touched.
+- [x] Files already marked were stripped before the rule landed: the 78 editorial source images here, in #223, merged 2026-09-28. The fleet audit found no other media file in the repository marked. Git history keeps the earlier versions.
+- [x] The rule is fleet-wide. It lives in the global `~/AGENTS.md` and in `FLEET.md` (windwardline/windwardline), and the fleet conformance checker enforces it.

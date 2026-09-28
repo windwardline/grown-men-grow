@@ -224,6 +224,17 @@ All ten rounds' photography is complete; each file passed the full-resolution be
 
 All image-generation conversations now live in a dedicated ChatGPT Project named **Grown Men Grow** on the founder's Plus account (`https://chatgpt.com/g/g-p-6a7964e544d08191b72ae9209ec84f73-grown-men-grow/project`), pinned in the sidebar. It contains the six conversations that produced the complete 35-photo editorial library. Standing practice for future rounds: start every new image-generation chat inside this project so prompts, style continuity, and generation history stay in one place. The house prompt structure recorded above still governs every request.
 
+## Stripping AI provenance before banking (recorded 2026-09-28)
+
+The founder ruled on 2026-09-27 that published media carries no embedded marker of AI involvement. Every image banked here before that date carried one: a C2PA manifest and an IPTC `trainedAlgorithmicMedia` source type, removed from all 78 in #223. Standing practice for every new image:
+
+1. Download it and compare hashes to catch a duplicate before naming it, as recorded under the Field Note 13 set below. Do this first, because stripping changes the file's bytes.
+2. Move it here under its descriptive name and review it at full resolution, per the procedure in `docs/technical/content-pipeline.md`.
+3. Run `strip-ai-provenance assets/source/editorial/<name>.png`. It removes C2PA manifests, IPTC `digitalSourceType` AI values, and EXIF or XMP fields naming a generative tool.
+4. Commit only the stripped file. The fleet conformance checker audits every committed media file and fails a marked one.
+
+Invisible pixel watermarks are not touched. Disclosure is the founder's, through each platform's own labeling tool where its rules require one.
+
 
 ## Field Note 13 set (generated 2026-08-19)
 
