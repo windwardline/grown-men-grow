@@ -4015,6 +4015,20 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 
 **Open, in order:** (1) Tuesday 12:00 PM: Substack Note 1, note task first, then the founder from kit folder 1. (2) Thursday: optional Story reshare with link sticker (folder 3). (3) Saturday 6:30 PM: Substack Note 2 (folder 2). (4) Carried forward, not re-checked here: the `isAiGenerated` founder question from the 2026-09-28 provenance entry, the Instagram traffic anomaly, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.
 
+## 2026-10-08 — Claude Code — handlebars and brace-expansion advisories patched by override
+
+**Client:** Claude Code, a subagent of the weekly fleet-health run. **Branch:** `fix/osv-advisories-2026-10-08`, in a worktree off `origin/main`.
+
+**Scope completed.** `Dependency scan / osv-scan` was red on two packages under gscan: handlebars 4.7.9 (GHSA-8r5x-fm3f-whwj and GHSA-p8wg-vrv2-v86f, both critical, and GHSA-xw65-4hp5-5hc7) and brace-expansion 5.0.9 (GHSA-6j4f-fj2g-mc7p, GHSA-qhr7-859c-m2p7, GHSA-q2hr-2g5m-vwhr). gscan 6.6.1 is the latest release and pins handlebars to exactly 4.7.9, so no upgrade path exists. Two caret overrides in `theme/pnpm-workspace.yaml` lift them to 4.7.10 and 5.0.12; each names the release that retires it. The block's comment no longer claims `verify-dependency-exemptions.mjs` polices overrides, because that script reads only `osv-scanner.toml`. No minimum-release-age soak is configured, and pnpm 11.20.0 installed handlebars 4.7.10 without one. The extract-zip suppressions are untouched.
+
+**Files changed:** `theme/pnpm-workspace.yaml`, `theme/pnpm-lock.yaml` (only the two packages and the overrides block moved), and this log.
+
+**External state changed:** none. Nothing public changed.
+
+**Verification:** local osv-scanner 2.6.0 with the repository config reports no issues, with the two extract-zip entries filtered. All six `gate:` lines pass (216 script tests). `verify-dependency-exemptions` passes for both entries.
+
+**Open, in order:** (1) Drop each override when gscan or minimatch moves past it on its own. (2) Carried forward: the extract-zip acceptances expiring 2026-11-09.
+
 ## 2026-10-08 — Monday staging run, fired Thursday: Week 9 staged after a missed week
 
 **Client:** Claude Code (desktop app), the `gmg-monday-staging` scheduled task. It fired Thursday 2026-10-08 at 8:26 PM ET. Every scheduled task on this machine last ran 2026-09-27/28 and all of them fired together at 2026-10-09 00:26Z. The desktop application was closed in between. The 2026-10-05 Monday run never happened, so nothing was scheduled for the 2026-10-06 slot. **No field note went out that Tuesday.** Work was done in a separate worktree, `staging/week-09-ask-for-help`, because the Tuesday publish check fired in the same burst against the shared checkout.
