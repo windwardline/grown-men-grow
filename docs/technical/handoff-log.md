@@ -4028,3 +4028,33 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Verification:** local osv-scanner 2.6.0 with the repository config reports no issues, with the two extract-zip entries filtered. All six `gate:` lines pass (216 script tests). `verify-dependency-exemptions` passes for both entries.
 
 **Open, in order:** (1) Drop each override when gscan or minimatch moves past it on its own. (2) Carried forward: the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-10-08 — Claude Code — Friday analytics readout (weeks of 2026-09-28 and 2026-10-05), run Thursday evening
+
+**Client:** Claude Code. **Branch:** `claude/friday-analytics-2026-10-08`. The `gmg-friday-analytics` task fired at 20:31 ET on Thursday. No readout ran for Friday 2026-10-02, and this log holds no entry after 2026-09-28, so this covers both weeks since the last readout.
+
+**Scope:** verification only. Nothing was published, posted, replied to, or sent.
+
+**Ghost.** Eight published posts. **1** member, unchanged since 2026-08-11. That member has opened 7 of 7 emails. Week 8's send, `the-lights-never-flickered` on 2026-09-29 at 08:00 ET, went to 1 recipient: 1 delivered, 1 opened, 0 failed. **No post was published on Tuesday 2026-10-06**, so no email went out this week. `ask-for-help-while-its-still-cheap`, the register's row 8 projected for 10-06, is now scheduled in Ghost for 2026-10-13 12:00Z, with four Buffer posts queued for 10-13 to 10-17. A concurrent session is staging that week; staging belongs to `gmg-monday-staging`, so this entry does not touch it.
+
+**Pageviews (Ghost web analytics, signed-in admin).** Last 7 days (Oct 2–8): **3 unique visitors, 3 views**, all to the homepage, all Direct. Last 30 days: **33 visitors, 39 views**, down from 49 and 62 on 2026-09-27. Top content: Homepage 14, You Can't Outwork a Wrong Direction 9, Rest Isn't a Reward 7, Start Here 3, Nobody Rigs to the Breaking Strength 3, The Lights Never Flickered 2. Sources: Direct 26, Bing 6, Google 1. Instagram has dropped out of the 30-day sources. Newsletters tab: no send in the last 7 days, 1 subscriber.
+
+**A/B protocol stays suspended at step 3.** The list is 1 against a floor of 30. No timing decision is due, so nothing was appended to `publish-timing.md`.
+
+**Platform numbers.** Every Week 8 Buffer post sent on its slot: Bluesky Tue 12:03, LinkedIn Wed 10:02, Instagram Thu 09:05, Bluesky Sat 18:30. Buffer's error list is empty.
+- **LinkedIn:** the 2026-09-30 post reads **0 impressions, 0 reach** on a metrics refresh dated 2026-10-08. Week 7's post holds at 129 impressions and 100 reach.
+- **Instagram:** the 2026-10-01 carousel has reach 4, views 9, 0 interactions, 0 saves, 0 shares, 0 follows. Buffer and Business Suite's Content table agree. Followers: **8**, unchanged. Business Suite account reach is 0–2 a day from Sep 28 to Oct 7, profile visits 2 (Oct 5 and 6), link clicks 0 since Sep 21.
+- **Bluesky:** 0 on both Week 8 posts. Profile: 0 followers, 16 posts, 0 replies, 0 quotes, 2 likes across the feed, both on old posts.
+- **Substack:** `verify-substack-notes.mjs` agrees with the live feed on all 16 rows (10 posted, 4 missed, 2 pending). The two pending rows are Week 8's notes.
+
+**Moderation sweep: nothing to escalate on any surface.** Ghost comments: 0 on each of the 8 published posts, read per post. Instagram DMs: Primary and General are empty, and Requests and Hidden Requests both read "Delete all 0". Instagram comments: 0, per Buffer and the Content table. The notifications feed renders and shows no activity after Sep 27. LinkedIn: 0 comments. Bluesky: 0 replies and 0 quotes. No reply was made to anyone.
+
+**Qualitative pass: still nothing said back.** Nine weeks in, no comment, reply, DM, or conversation has come in on any surface. No question or objection has been raised, so none can recur.
+
+**Corpus balance check: skipped, correctly.** The marker reads 2026-09-16 at 21 pieces, next due at 31. The bank is **24**: 23 field notes plus the launch essay.
+
+**Cadence gates.** `verify-substack-notes.mjs` passes. `verify-publication-register.mjs` **fails** on one row: `ask-for-help-while-its-still-cheap` has a blank State while Ghost holds it `scheduled`. That disagreement comes from the in-flight staging session described above, which also has an uncommitted change to row 7 in the shared checkout. It is left for that session to record. This branch was cut from `origin/main` in a separate worktree so the change stays untouched.
+
+**Files changed:** this log only. **External state changed:** none. Ghost analytics, Business Suite and Instagram were read, not changed. A Business Suite "Goals moved" tip and an Instagram notifications prompt were dismissed without accepting either.
+
+**Open, in order:** (1) The staging session's register update for rows 7 and 8, which belongs to that session. (2) Carried forward: distribution, the one-member list, the suspended A/B, the `isAiGenerated` founder question from 2026-09-28, and the extract-zip acceptances expiring 2026-11-09.
