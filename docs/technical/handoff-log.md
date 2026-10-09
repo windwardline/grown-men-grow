@@ -4028,3 +4028,37 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Verification:** local osv-scanner 2.6.0 with the repository config reports no issues, with the two extract-zip entries filtered. All six `gate:` lines pass (216 script tests). `verify-dependency-exemptions` passes for both entries.
 
 **Open, in order:** (1) Drop each override when gscan or minimatch moves past it on its own. (2) Carried forward: the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-10-08 — Thursday Medium import, fired late: Week 8 "The Lights Never Flickered" published on Medium
+
+**Client:** Claude Code (desktop app), the `gmg-thursday-medium` scheduled task, fired Thursday 2026-10-08 ~8:34 PM ET in the catch-up burst after the application sat closed since 2026-09-28. The 2026-10-01 import never ran; this run did it.
+
+**Preconditions.** `latestPublishedPost()` returned `the-lights-never-flickered`, published 2026-09-29 12:00Z (228 h earlier; no essay published 2026-10-06). Title recorded: "The Lights Never Flickered". Canonical answered 200 (in-browser fetch). Medium Drafts empty; profile feed lists seven stories, none this one.
+
+**External state changed, public:** one Medium story published, https://grownmengrow.medium.com/the-lights-never-flickered-bf5e6148d902. Nothing else: no Ghost, Buffer, Substack, or account change; no share buttons used.
+
+**Corrections.** Title: imported as the `meta_title` with ` | Grown Men Grow`; suffix removed, now exactly the Ghost title. Body: the `Grown Men Grow 4 min read` line deleted character by character (a triple-click selection spilled into the image block, so it was not used); dek, image, and essay intact. Preview image: imported empty; set to the story's only image, the feature image. Tags from `content/distribution/field-note-11-platforms.md`: `Men` was third behind *Mental Health* and *Mental Health Awareness* and was taken with Down ×3 after confirming the highlight; Work, Masculinity, Personal Growth ranked first; Essays was *Essays (new)*. Chips read back: Men, Work, Masculinity, Personal Growth, Essays. Canonical: Advanced Settings showed the box checked and a stored value of `https://grownmengrow.com/the-lights-never-flickered/` before publishing.
+
+**Verification after publishing.** In-page `fetch` of the story: HTTP 200, 202,695 bytes, `<link rel="canonical" href="https://grownmengrow.com/the-lights-never-flickered/"/>`, `h1` "The Lights Never Flickered", zero `Grown Men Grow N min read` strings. Not checked with `curl`.
+
+**Noted, not changed:** the pack's Medium subtitle ("The load lands somewhere. Nobody tells him where.") differs from the Ghost dek the importer carried ("He works all of August under lights he assumes come from the street."). The task does not set the subtitle, so the canonical dek was kept; whether the pack line is stale after the 2026-09-27 revision is a founder question.
+
+**Files changed:** `docs/technical/handoff-log.md` only. The uncommitted `docs/technical/publication-order.md` change in the shared checkout belongs to another session and was not touched.
+
+**Open, in order:** (1) This entry still needs its branch, PR, and gate run; the session hit its usage limit before committing. (2) Week 9's import falls on Thursday 2026-10-15 after the 2026-10-13 essay. (3) Carried forward from the Week 9 staging entry on `staging/week-09-ask-for-help`.
+
+## 2026-10-09 — Medium subtitles follow the dek; "the newest version wins" ruled
+
+**Client:** Claude Code (desktop app), the same session as the entry above, after the founder ruled on its open subtitle question.
+
+**Ruling:** when two copies of the same line disagree, the newest version of record wins. The older copy is fixed in the same change set and never carried as a question. One discrepancy triggers a sweep of the whole population. Recorded in `decision-log.md` and `founder-decisions.md`.
+
+**Sweep.** 21 of 23 essay packs gave the Medium subtitle as the essay's dek. Three did not. Field Note 7 (published) had "Collapse is not rest. It's running out." Field Note 11 (published) had its `preview` line. Field Note 13 (unpublished) also had its `preview` line. None came from the 2026-09-27 voice revision; each predates it. All three now give the dek.
+
+**External state changed:** none. The live Medium stories for Field Notes 7 and 11 already serve the dek as `og:description`, read in-browser on 2026-10-09, so the corrected packs now match what was posted. Field Note 13 is not yet on Medium.
+
+**Enforced:** `verify-repository.mjs` fails a pack whose Medium subtitle is not its essay's current dek. Before the packs were fixed, it failed on exactly those three and nothing else. After, it passes.
+
+**Files changed:** `scripts/verify-repository.mjs`, `content/distribution/field-note-07-platforms.md`, `content/distribution/field-note-11-platforms.md`, `content/distribution/field-note-13-platforms.md`, `docs/technical/decision-log.md`, `docs/technical/founder-decisions.md`, `AGENTS.md`, this log. The entry above was written on 2026-10-08 in the shared checkout and lands here; its open item (1) is closed by this change set and its subtitle note is resolved by the ruling.
+
+**Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entry on `staging/week-09-ask-for-help`.

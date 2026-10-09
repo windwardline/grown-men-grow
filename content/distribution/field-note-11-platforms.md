@@ -16,7 +16,7 @@ Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts unti
 # Medium
 
 - Import the live Ghost URL through Medium's URL importer only; verify the canonical points to Ghost before publishing.
-- Subtitle: The load lands somewhere. Nobody tells him where.
+- Subtitle: He works all of August under lights he assumes come from the street.
 - Tags: Men, Work, Masculinity, Personal Growth, Essays
 
 # Bluesky

@@ -149,3 +149,10 @@ Credentials remain in authenticated sessions, a password manager, macOS Keychain
 - [x] Invisible pixel watermarks, such as SynthID, are not touched.
 - [x] Files already marked were stripped before the rule landed: the 78 editorial source images here, in #223, merged 2026-09-28. The fleet audit found no other media file in the repository marked. Git history keeps the earlier versions.
 - [x] The rule is fleet-wide. It lives in the global `~/AGENTS.md` and in `FLEET.md` (windwardline/windwardline), and the fleet conformance checker enforces it.
+
+## The newest version wins (founder-ruled 2026-10-09)
+
+- [x] When two copies of the same line disagree, the newest version of record wins, and the older copy is corrected in the same change set. Agents fix the discrepancy rather than raise it.
+- [x] For an essay, the newest version is its source under `content/`; packs, captions, and platform fields follow it. Drift from the 2026-09-27 voice revision is resolved in favour of the revised copy.
+- [x] One discrepancy triggers a sweep of the whole population before the fix lands.
+- [x] Applied first to Medium subtitles: three packs (Field Notes 7, 11, 13) now give the essay's dek, and `verify-repository.mjs` holds every pack to it.

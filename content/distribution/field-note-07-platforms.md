@@ -13,7 +13,7 @@ Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts unti
 # Medium
 
 - Import the live Ghost URL through Medium's URL importer only; verify the canonical points to Ghost before publishing.
-- Subtitle: Collapse is not rest. It's running out.
+- Subtitle: You don’t earn maintenance. You schedule it.
 - Tags: Men, Rest, Burnout, Masculinity, Personal Growth
 
 # Bluesky
