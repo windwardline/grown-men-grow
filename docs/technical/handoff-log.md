@@ -4028,3 +4028,17 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Verification:** local osv-scanner 2.6.0 with the repository config reports no issues, with the two extract-zip entries filtered. All six `gate:` lines pass (216 script tests). `verify-dependency-exemptions` passes for both entries.
 
 **Open, in order:** (1) Drop each override when gscan or minimatch moves past it on its own. (2) Carried forward: the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-10-08 — Tuesday note task (late catch-up fire): stood down, no Week 9 essay
+
+**Client:** Claude Code (desktop app), the `gmg-tuesday-note` scheduled task. It fired Thursday 2026-10-08 at 8:33 PM ET, two days after its Tuesday 12:00 PM slot, as a catch-up on app launch.
+
+**Preflight:** `note-task-preflight --task gmg-tuesday-note --slot 12:00 --note 1` exited `20`, stand down: "this week's essay has not published." Ghost's latest published post is `the-lights-never-flickered` (2026-09-29 12:00Z); the publication week opened 2026-10-06 and nothing has published in it. A re-run at 2:00 AM ET on 2026-10-09 returned the same verdict. The preflight released its own lock both times.
+
+**External state changed:** none. Chrome and Substack were not opened. No note was staged or posted.
+
+**Context.** Row 8, `ask-for-help-while-its-still-cheap`, projected for 2026-10-06, had no Ghost post. Another session holds local branch `staging/week-09-ask-for-help` ("Week 9 staged in Ghost and queued in Buffer after the missed Oct 6 slot"), not yet on `origin`; the missed week is owned there, not here. The shared checkout also holds another session's uncommitted row 7 `published` correction in `publication-order.md`; this entry leaves it untouched.
+
+**Files changed:** `docs/technical/handoff-log.md`.
+
+**Open, in order:** (1) The next Tuesday note run posts Week 9's Note 1 once its essay publishes; nothing for this task until then. (2) Carried forward, not re-checked: the open items of the 2026-09-28 entries.
