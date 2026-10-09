@@ -4014,3 +4014,17 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Files changed:** `docs/technical/handoff-log.md`.
 
 **Open, in order:** (1) Tuesday 12:00 PM: Substack Note 1, note task first, then the founder from kit folder 1. (2) Thursday: optional Story reshare with link sticker (folder 3). (3) Saturday 6:30 PM: Substack Note 2 (folder 2). (4) Carried forward, not re-checked here: the `isAiGenerated` founder question from the 2026-09-28 provenance entry, the Instagram traffic anomaly, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-10-08 — Claude Code — Saturday note task, fired Thursday: stood down, nothing posted
+
+**Client:** Claude Code (desktop), scheduled task `gmg-saturday-note`. **Branch:** `claude/saturday-note-2026-10-08-stand-down`.
+
+**The run fired Thursday 2026-10-08 at 8:38 PM ET** in the same catch-up burst that the Monday staging entry describes. The preflight exited `20` with the reason `this week's essay has not published`: the publication week opened 2026-10-06, and the latest published post is still `the-lights-never-flickered` (2026-09-29). That is correct, because no field note went out on 2026-10-06. Week 9 is scheduled for 2026-10-13. The essay check refused before the weekday guard was consulted. Either one would have stood the run down. No browser was opened, and nothing was typed, drafted, or posted.
+
+**No copy to hand over.** The only Saturday note this fire could have served is Week 8's (slot 2026-10-03 18:30). The staging run already recorded it `missed` after `verify-substack-notes` confirmed no live note carries it. The next Saturday slot is 2026-10-17 18:30, for Week 9.
+
+**Files changed:** this log only.
+
+**External state changed:** none. The preflight releases its own lock on a stand-down.
+
+**Open, in order:** (1) Saturday 2026-10-17 6:30 PM: Week 9 Note 2. (2) The application was closed from 2026-09-28 to 2026-10-08, so every task missed its slot. That is the same evidence as before for the open founder question about founder-run Substack slots.
