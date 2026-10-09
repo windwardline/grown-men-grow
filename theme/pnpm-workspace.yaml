@@ -6,18 +6,27 @@
 allowBuilds:
   dtrace-provider: false
 
-# There are deliberately no `overrides` here. One existed briefly on
-# 2026-09-09, forcing multer off gscan 6.4.2's exact 2.2.0 pin, and it was
-# removed the same day when gscan 6.6.0 turned out to drop multer altogether.
 # An override is a workaround for an upstream that has not moved yet; when the
 # upstream moves, the override has to go, or it outlives its reason as a pin
-# nobody remembers choosing. `scripts/verify-dependency-exemptions.mjs` is what
-# makes that non-optional — it re-derives from the registry whether each
-# exemption still has a premise, so this file cannot quietly keep a workaround
-# the world has stopped needing.
+# nobody remembers choosing. One existed briefly on 2026-09-09, forcing multer
+# off gscan 6.4.2's exact 2.2.0 pin, and was removed the same day when gscan
+# 6.6.0 dropped multer altogether. Nothing checks these mechanically yet:
+# scripts/verify-dependency-exemptions.mjs re-derives osv-scanner.toml
+# suppressions, not this block, so each entry names the release that retires it.
 #
-# If one is ever needed again: it goes here, not in package.json's `pnpm`
-# field. pnpm 11 stopped reading that field and ignores it with a warning, so
-# an override written there is silently not applied — worse than absent,
-# because the lockfile still resolves the vulnerable version while the
-# repository looks fixed.
+# Ranges are caret, never exact: an exact pin freezes today's judgment and
+# becomes the vulnerability when an advisory range widens.
+#
+# They go here, not in package.json's `pnpm` field. pnpm 11 stopped reading
+# that field and ignores it with a warning, so an override written there is
+# silently not applied: the lockfile still resolves the vulnerable version
+# while the repository looks fixed.
+overrides:
+  # gscan 6.6.1 pins handlebars to exactly 4.7.9. GHSA-8r5x-fm3f-whwj,
+  # GHSA-p8wg-vrv2-v86f and GHSA-xw65-4hp5-5hc7 are fixed in 4.7.10.
+  # Remove when a gscan release depends on handlebars >=4.7.10.
+  handlebars@^4: ^4.7.10
+  # minimatch 10.2.6 under gscan resolves brace-expansion 5.0.9.
+  # GHSA-6j4f-fj2g-mc7p, GHSA-qhr7-859c-m2p7 and GHSA-q2hr-2g5m-vwhr are
+  # fixed in 5.0.12. Remove when minimatch resolves >=5.0.12 on its own.
+  brace-expansion@^5: ^5.0.12
