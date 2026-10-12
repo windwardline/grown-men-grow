@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { extractNote, resolvePackForSlug, noteCopyForSlug } from '../lib/note-pack.mjs';
+import { canonicalSlug, extractNote, resolvePackForSlug, noteCopyForSlug } from '../lib/note-pack.mjs';
 
 const distribution = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..', 'content', 'distribution');
 
@@ -116,4 +116,20 @@ test('the note posted on 2026-08-18 is what the pack still yields', () => {
     copy,
     'Doing something together counts as intimacy for many men. The job matters, but so does the side-by-side arrangement. Nobody has to maintain eye contact while finding the sentence.',
   );
+});
+
+// verify-repository.mjs reads a pack's slug to hold its Medium subtitle to the
+// essay's dek. It reads it here, so the gate and the note tasks can never
+// disagree about which essay a pack belongs to.
+test('canonicalSlug reads the slug from either frontmatter spelling', () => {
+  assert.equal(canonicalSlug('---\ncanonical_url: https://grownmengrow.com/alpha/\n---\n'), 'alpha');
+  assert.equal(canonicalSlug('---\ncanonical: https://grownmengrow.com/beta/ (live only after launch)\n---\n'), 'beta');
+  assert.equal(canonicalSlug('---\ncanonical: https://grownmengrow.com/gamma\n---\n'), 'gamma');
+});
+
+test('canonicalSlug returns undefined, never a guess, when there is no single slug', () => {
+  assert.equal(canonicalSlug('---\nstatus: founder-approved\n---\n'), undefined);
+  assert.equal(canonicalSlug('---\ncanonical: https://grownmengrow.com/\n---\n'), undefined);
+  assert.equal(canonicalSlug('---\ncanonical: https://grownmengrow.com/a/b/\n---\n'), undefined);
+  assert.equal(canonicalSlug('---\ncanonical: not a url\n---\n'), undefined);
 });
