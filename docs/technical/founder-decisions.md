@@ -155,4 +155,5 @@ Credentials remain in authenticated sessions, a password manager, macOS Keychain
 - [x] When two copies of the same line disagree, the newest version of record wins, and the older copy is corrected in the same change set. Agents fix the discrepancy rather than raise it.
 - [x] For an essay, the newest version is its source under `content/`; packs, captions, and platform fields follow it. Drift from the 2026-09-27 voice revision is resolved in favour of the revised copy.
 - [x] One discrepancy triggers a sweep of the whole population before the fix lands.
+- [x] A published pack's posted copy changes only together with its live post, in one change set. Where the live copy cannot be edited, the pack keeps what was posted, because `verify-substack-notes` compares posted notes to it byte for byte.
 - [x] Applied first to Medium subtitles: three packs (Field Notes 7, 11, 13) now give the essay's dek, and `verify-repository.mjs` holds every pack to it.

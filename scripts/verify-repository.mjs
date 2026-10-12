@@ -6,6 +6,7 @@ import { lstat, readFile, readdir } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 
 import { parseHold } from './lib/hold-state.mjs';
+import { canonicalSlug } from './lib/note-pack.mjs';
 import { DEFAULT_PUBLISH_WEEKDAY, NOTE_TASK_SLOT_WEEKDAYS } from './lib/note-slot.mjs';
 import { tradeRunFaults, witnessSkeletonFaults, witnessSpacingFaults } from './lib/register-spacing.mjs';
 import path from 'node:path';
@@ -874,7 +875,7 @@ for (const [label, file] of packs) {
   if (mediumStart === -1) continue;
   const nextSection = lines.findIndex((line, index) => index > mediumStart && line.startsWith('# '));
   const mediumLines = lines.slice(mediumStart, nextSection === -1 ? lines.length : nextSection);
-  const packSlug = text.match(/^canonical(?:_url)?:\s*https:\/\/grownmengrow\.com\/([a-z0-9-]+)\//m)?.[1];
+  const packSlug = canonicalSlug(text);
   const subtitleLine = mediumLines.find((line) => mediumSubtitleLabel.test(line));
   if (!packSlug || !deks.has(packSlug)) {
     fail(`${file} names no canonical slug with a dek on record, so ${label}'s Medium subtitle cannot be checked against it.`);

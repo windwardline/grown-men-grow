@@ -4110,3 +4110,19 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Verification:** `verify-ghost-theme`, `pnpm --dir theme install --frozen-lockfile`, `pnpm --dir theme test`, theme zip with GScan, `node --test` (216 pass, 0 fail), `verify-repository`, `verify-svg-xml` (238 SVGs), and `git diff --check` all pass.
 
 **Open, in order:** (1) Founder review of Field Note 25: essay, pack, and artwork. On approval it moves to `content/` and is appended at register position 24. (2) The Medium tag "Baseball" is new to the bank; confirm the autocomplete commits it on import. (3) Carried forward, not re-checked here: the open items of the entries above.
+
+## 2026-10-12 — Review follow-ups to #229: shared slug reader, the count, and where the ruling yields
+
+**Client:** Claude Code (desktop app), same session as the two entries above. #229 merged 2026-10-12 15:11Z after `main` was merged in to clear a handoff-log conflict. Its advisory review raised four findings. All four held, and all four are fixed here.
+
+**Correction to the 2026-10-09 entry:** it says "21 of 23 essay packs". There are 24 packs, the launch essay plus Field Notes 2 to 24, so it is 21 of 24. The three fixed packs and the gate are unaffected. `decision-log.md` carries the corrected figure.
+
+**Fixed.** (1) `verify-repository.mjs` read the canonical slug with its own regex. `scripts/lib/note-pack.mjs` declares itself the single pack reader, so it now exports `canonicalSlug`, which returns undefined rather than a guess, and the gate imports it. Two tests added. (2) The ruling read as if every derived copy follows the newest version. `decision-log.md` and `founder-decisions.md` now state where it yields: a published pack's posted-copy sections change only together with the live post, because `verify-substack-notes` compares posted notes to the pack byte for byte. Unpublished packs always follow. (3) `content-pipeline.md`, the spec a draft composes a pack against, now says the Medium subtitle is the dek verbatim.
+
+**External state changed:** none.
+
+**Verification:** with one pack's subtitle broken on purpose, `verify-repository` failed on exactly that pack; restored, it passes. Gate results are in the PR.
+
+**Files changed:** `scripts/lib/note-pack.mjs`, `scripts/test/note-pack.test.mjs`, `scripts/verify-repository.mjs`, `docs/technical/decision-log.md`, `docs/technical/founder-decisions.md`, `docs/technical/content-pipeline.md`, this log.
+
+**Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entry.
