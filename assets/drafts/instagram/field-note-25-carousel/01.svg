@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn25-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn25-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn25-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 25 · 01 / 07</text>
+  <text x="64" y="260" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="104" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.6">HE STAYS</text>
+    <text x="64" y="372" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="104" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.6">AT SHORT.</text>
+    <text x="68" y="444" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="30" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">The ball goes under his glove, and the</text><text x="68" y="486" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="30" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">inning keeps going with him in it.</text>
+    <g transform="rotate(-0.9 610 840)">
+    <rect x="318" y="540" width="584" height="634" fill="#60735A"/>
+    <rect x="326" y="526" width="568" height="628" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/infield-glove-raked-dirt.png" x="330" y="530" width="560" height="620" preserveAspectRatio="xMidYMid slice" filter="url(#fn25-01-photo)"/>
+  </g>
+    <g transform="rotate(-3 577 529)">
+    <rect x="470" y="506" width="214" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="478" y1="513" x2="674" y2="510" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <rect x="91.0" y="1025.0" width="170.0" height="170.0" fill="#EEE6D8" stroke="#121416" stroke-width="4"/><path d="M176.0 1162.7 L228.7 1110.0 L176.0 1057.3 L123.3 1110.0 Z" fill="none" stroke="#121416" stroke-width="2" opacity="0.45"/><path d="M176.0 1156.4 L222.4 1110.0 L176.0 1063.6 L129.6 1110.0 L176.0 1156.4" fill="none" stroke="#B14F3F" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><rect x="224.4" y="1105.8" width="8.5" height="8.5" fill="#EEE6D8" stroke="#121416" stroke-width="2.5" transform="rotate(45 228.7 1110.0)"/><rect x="171.8" y="1053.0" width="8.5" height="8.5" fill="#EEE6D8" stroke="#121416" stroke-width="2.5" transform="rotate(45 176.0 1057.3)"/><rect x="119.0" y="1105.8" width="8.5" height="8.5" fill="#EEE6D8" stroke="#121416" stroke-width="2.5" transform="rotate(45 123.3 1110.0)"/><path d="M171.8 1158.5 L180.3 1158.5 L180.3 1162.7 L176.0 1167.0 L171.8 1162.7 Z" fill="#EEE6D8" stroke="#121416" stroke-width="2.5"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn25-01-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
