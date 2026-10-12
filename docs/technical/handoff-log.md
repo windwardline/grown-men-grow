@@ -4092,3 +4092,21 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Files changed:** `scripts/verify-repository.mjs`, `content/distribution/field-note-07-platforms.md`, `content/distribution/field-note-11-platforms.md`, `content/distribution/field-note-13-platforms.md`, `docs/technical/decision-log.md`, `docs/technical/founder-decisions.md`, `AGENTS.md`, this log. The entry above was written on 2026-10-08 in the shared checkout and lands here; its open item (1) is closed by this change set and its subtitle note is resolved by the ruling.
 
 **Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entry on `staging/week-09-ask-for-help`.
+
+## 2026-10-12 — Wednesday draft task: Field Note 25 "He Stays at Short", a complete witness unit, drafted
+
+**Client:** Claude Code (desktop app), the `gmg-wednesday-draft` scheduled task. It fired Friday 2026-10-09 ~01:54 ET on catch-up, was interrupted by a usage limit after two images, and was resumed Monday 2026-10-12. **Branch:** `claude/wednesday-draft-2026-10-09`, worktree `/Users/peacock/Projects/_worktrees/gmg-wednesday-draft-2026-10-09`.
+
+**Backfill check:** all 23 approved notes in `content/field-notes/` carry a pack, render script, carousel, feature image, review sheet, and gate entries; `verify-repository` passes over them. Nothing to backfill.
+
+**Scope completed.** `**Standing commission:** witness` was read in `operating-cadence.md`. The subject is a shortstop's error and being kept in the game after it, the underpinning's "kept on when he was the problem" drawn literally: the extra out is the pitcher's to get, the manager leaves him at short, and the scoring rule guarantees nothing he does afterward reaches back into the inning. Stance `witness`, closing addresses the reader `no`, opening `other`. 1,045 words. The commission is cleared to `none` in this change set. Spacing checked by running `register-spacing.mjs` against the register with the note appended at 24: witness at 7, 10, 14, 17, 20, 24, no trade-run, gap, beat, or skeleton-heading fault.
+
+**Files changed:** `drafts/field-note-25-he-stays-at-short.md`, `drafts/field-note-25-platforms.md`, `drafts/README.md`, `docs/technical/operating-cadence.md` (commission `none`), `scripts/render-field-note-25.mjs` (new scorebook-box mark), `scripts/verify-repository.mjs` (required file, carousel family, feature-image count 27, three editorial sources, review sheet), `scripts/render-review-contact-sheets.mjs`, `assets/source/editorial/{infield-glove-raked-dirt,base-chalk-line-low-sun,pitchers-mound-rosin-bag}.png`, `assets/drafts/instagram/field-note-25-carousel/01–07.{svg,png}`, `assets/drafts/ghost/feature-images/he-stays-at-short.{svg,png}`, `assets/drafts/review/field-note-25-carousel.png`, and this log. The sheet renderer rewrote the 28 existing review sheets with byte-level differences only; those were restored rather than committed.
+
+**Imagery.** Five generated in the founder's ChatGPT project, three kept, each stripped with `strip-ai-provenance` (0 markers after). Rejected: the first glove (X-lacing across the palm faces of the finger stalls, tangled heel lacing) and the first base (crackle-grid micro-texture on its top). Prompts and reasons are in the note's production notes.
+
+**External state changed:** none public. Three images generated in ChatGPT. No Ghost, Buffer, Medium, Substack, Instagram, or account change. Nothing published, sent, or posted.
+
+**Verification:** `verify-ghost-theme`, `pnpm --dir theme install --frozen-lockfile`, `pnpm --dir theme test`, theme zip with GScan, `node --test` (216 pass, 0 fail), `verify-repository`, `verify-svg-xml` (238 SVGs), and `git diff --check` all pass.
+
+**Open, in order:** (1) Founder review of Field Note 25: essay, pack, and artwork. On approval it moves to `content/` and is appended at register position 24. (2) The Medium tag "Baseball" is new to the bank; confirm the autocomplete commits it on import. (3) Carried forward, not re-checked here: the open items of the entries above.
