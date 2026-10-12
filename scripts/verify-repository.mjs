@@ -831,6 +831,21 @@ if (packs.size === 0) {
 // running, so it is caught here instead.
 const mediumTagLabel = /^-\s*(?:Tags|Suggested topics):\s*/i;
 const mediumTag = /^[A-Za-z0-9][A-Za-z0-9 -]*$/;
+// A pack's Medium subtitle is the essay's current dek, and the dek in the
+// essay's frontmatter is the newest version of record. Three packs disagreed
+// on 2026-10-09: Field Notes 11 and 13 carried the essay's `preview` line and
+// Field Note 7 a line nothing else used. The Medium importer takes the dek from
+// Ghost, so Field Note 11 went live on 2026-10-08 with a subtitle its own pack
+// contradicted, and the pack was the copy that was wrong. The dek population
+// is derived from every tracked content file that declares a slug and a dek.
+const mediumSubtitleLabel = /^-\s*Subtitle:\s*/i;
+const deks = new Map();
+for (const file of tracked.filter((name) => /^content\/(?:field-notes|ghost)\/[^/]+\.md$/.test(name))) {
+  const source = await readFile(path.join(root, file), 'utf8');
+  const slug = source.match(/^slug:\s*(\S+)\s*$/m)?.[1];
+  const dek = source.match(/^dek:\s*(.+?)\s*$/m)?.[1];
+  if (slug && dek) deks.set(slug, dek);
+}
 for (const [label, file] of packs) {
   const text = await readFile(path.join(root, file), 'utf8');
   const lines = text.split('\n');
@@ -853,6 +868,18 @@ for (const [label, file] of packs) {
   if (mediumStart === -1) continue;
   const nextSection = lines.findIndex((line, index) => index > mediumStart && line.startsWith('# '));
   const mediumLines = lines.slice(mediumStart, nextSection === -1 ? lines.length : nextSection);
+  const packSlug = text.match(/^canonical(?:_url)?:\s*https:\/\/grownmengrow\.com\/([a-z0-9-]+)\//m)?.[1];
+  const subtitleLine = mediumLines.find((line) => mediumSubtitleLabel.test(line));
+  if (!packSlug || !deks.has(packSlug)) {
+    fail(`${file} names no canonical slug with a dek on record, so ${label}'s Medium subtitle cannot be checked against it.`);
+  } else if (!subtitleLine) {
+    fail(`${file} gives no Medium subtitle for ${label}; it should read the essay's dek.`);
+  } else {
+    const subtitle = subtitleLine.replace(mediumSubtitleLabel, '').replaceAll('**', '').trim();
+    if (subtitle !== deks.get(packSlug)) {
+      fail(`${file} gives ${label}'s Medium subtitle as "${subtitle}", but the essay's dek is "${deks.get(packSlug)}". The dek is the newest version; the pack follows it.`);
+    }
+  }
   const tagLine = mediumLines.find((line) => mediumTagLabel.test(line));
   if (!tagLine) {
     fail(`${file} does not list Medium tags for ${label}; the import slot has nothing to enter.`);

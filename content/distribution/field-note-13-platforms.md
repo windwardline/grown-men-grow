@@ -17,7 +17,7 @@ Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts unti
 
 - Import the live Ghost URL through Medium's URL importer only; verify the canonical points to Ghost before publishing.
 - Take the title from the Ghost post's `title` field, never from what the importer produced.
-- Subtitle: The surface hardens first, and it hardens fast. That is not the same as strength.
+- Subtitle: Set is not the same as cured.
 - Tags: Men, Grief, Masculinity, Personal Growth, Essays
 
 # Bluesky
