@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn25-06-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn25-06-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn25-06-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 25 · 06 / 07</text>
+  <g transform="rotate(-0.6 620 490)">
+    <rect x="288" y="150" width="664" height="714" fill="#60735A"/>
+    <rect x="296" y="136" width="648" height="708" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/pitchers-mound-rosin-bag.png" x="300" y="140" width="640" height="700" preserveAspectRatio="xMidYMid slice" filter="url(#fn25-06-photo)"/>
+  </g>
+    <g transform="rotate(-4 465 141)">
+    <rect x="360" y="118" width="210" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="368" y1="125" x2="560" y2="122" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="76" y="940" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="64" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">Nobody comes out</text><text x="76" y="1022" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="64" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">of the dugout.</text>
+    <text x="78" y="1110" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="38" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">The pitcher gets the ball back and</text><text x="78" y="1164" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="38" font-weight="400" font-style="normal" text-anchor="start" letter-spacing="0.2">goes to work on the next hitter.</text>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn25-06-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
