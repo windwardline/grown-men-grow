@@ -4212,6 +4212,7 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 
 **Files changed:** `docs/technical/substack-notes.md`, `docs/technical/publication-order.md` and this log, through the merge.
 
+
 ## 2026-10-12 — Review follow-ups to #233: the canonical reader pins its host and is the only reader
 
 **Client:** Claude Code (desktop app), same session. #233's advisory review failed on its first run: the reviewer returned `is_error` after 19 seconds, a runner-side failure that said nothing about the change. It was re-run, and it passed with three findings. All three held, and all three are fixed here.
