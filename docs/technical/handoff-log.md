@@ -4147,3 +4147,17 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Verification:** results of all `gate:` lines are in the PR; the register checks (constraints, spacing, witness skeleton) run inside `verify-repository`.
 
 **Open, in order:** (1) Publication timing for position 24 is the Monday staging task's, in register order. (2) Field Note 26, an `assignment` draft in `drafts/`, awaits founder review; on approval it lands at 25, where its stance clears the spacing check. (3) The Medium tag "Baseball" is new to the bank; the Thursday import should confirm the autocomplete commits it.
+
+## 2026-10-13 — Monday staging run, fired Tuesday: Week 9 verified after it published
+
+**Client:** Claude Code (desktop app), the `gmg-monday-staging` scheduled task. It first fired at 00:32 ET Tuesday, was interrupted after the register check, and was re-run at 09:19 ET, after the 8:00 AM publish. The week was staged on 2026-10-08 by the run recorded in PR #231, which is still open and conflicted. This run staged nothing.
+
+**Hold check:** `**Active hold:** none`. None of the five conditions found. Not held.
+
+**External state changed:** none. No Ghost, Buffer, iCloud, or platform write was made.
+
+**Verification.** `verify-publication-register --fix` recorded row 7 (`the-lights-never-flickered`) and row 8 (`ask-for-help-while-its-still-cheap`) as `published`; all 24 rows now agree with Ghost (9 published, 0 scheduled, 15 projected). Staging dry run for row 8 at 2026-10-13T12:00Z builds the payload with alt text present. Ghost: `published` 2026-10-13 12:00Z, newsletter `default-newsletter`, segment `all`, email `submitted` to 1 recipient, feature image set; `title`, `custom_excerpt`, `meta_title`, `meta_description`, `email_subject`, and `feature_image_alt` all equal `buildPostPayload`. Feed tile: Buffer's most recent sent Instagram post is The Lights Never Flickered (2026-10-01); this week's slide 1 is the hardware-store counter photograph, a different image. Buffer: `queue-week-buffer --dry-run` refuses because all four posts exist, and the queue reads back at 10-13 16:00Z Bluesky, 10-14 14:00Z LinkedIn, 10-15 13:00Z Instagram, 10-17 22:30Z Bluesky, matching the schedule of record. iCloud kit: all four folders and the READ ME present; both Substack paste files equal `noteCopyForSlug` output and carry no emphasis marks. All six `gate:` lines pass (218 tests); `git diff --check` clean.
+
+**Files changed:** `docs/technical/publication-order.md` (rows 7 and 8), `docs/technical/handoff-log.md`.
+
+**Open, in order:** (1) Today 12:00 PM: Substack Note 1, note task first, then the founder from kit folder 1. (2) Thursday 7:00 AM: Medium URL import; the Week 8 import is overdue per PR #231. (3) Thursday: optional Story reshare with link sticker (folder 3). (4) Saturday 6:30 PM: Substack Note 2 (folder 2). (5) PR #231 conflicts on rows 7 and 8, which this change records; its Substack-notes and handoff content still needs merging by its owner. (6) Next Monday stages row 9, `you-can-walk-on-it-tomorrow`, for 2026-10-20.
