@@ -4133,3 +4133,17 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 - The 2026-10-09 Saturday draft, "His Name Is Still on the Board," was not adopted because it duplicates Field Note 25 and would fail witness spacing at 25. It remains uncommitted in `_worktrees/gmg-saturday-draft-2026-10-09`. Field Note 25 landed in #232 during this run and cleared the `witness` commission. This change does not touch it.
 - Merged origin/main after #232. Conflicts in `verify-repository.mjs`, `render-review-contact-sheets.mjs` and this log were resolved by keeping both notes, and the feature-image count is now 28.
 - Next: founder review of Field Notes 25 and 26. The 2026-10-09 worktrees can be removed once the founder has seen this entry.
+
+## 2026-10-13 — Claude Code — Field Note 25 "He Stays at Short" founder-approved, register position 24
+
+**Client:** Claude Code (desktop app), continuing the `gmg-wednesday-draft` session after the founder replied "Approved" to the delivered unit. **Branch:** `claude/field-note-25-approved`.
+
+**Scope completed.** Essay and platform pack moved from `drafts/` to `content/field-notes/he-stays-at-short.md` and `content/distribution/field-note-25-platforms.md`, with `status: founder-approved`, approval dates, and `publication_authorized: false` (approval covers the work, not a slot). Appended at register position 24, projected 2027-01-26, with a section recording why. Render-script header, decision log, and `drafts/README.md` updated. A must-live-under-content gate was added to `verify-repository.mjs` and broken on purpose by re-tracking the pack under `drafts/`; it failed by name before this was committed.
+
+**Files changed:** `content/field-notes/he-stays-at-short.md` and `content/distribution/field-note-25-platforms.md` (moved from `drafts/`), `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `drafts/README.md`, `scripts/render-field-note-25.mjs` (comment only), `scripts/verify-repository.mjs`, and this log.
+
+**External state changed:** none. No Ghost post, Buffer queue, Medium story, Substack note, or account touched. Nothing published, sent, or posted.
+
+**Verification:** results of all `gate:` lines are in the PR; the register checks (constraints, spacing, witness skeleton) run inside `verify-repository`.
+
+**Open, in order:** (1) Publication timing for position 24 is the Monday staging task's, in register order. (2) Field Note 26, an `assignment` draft in `drafts/`, awaits founder review; on approval it lands at 25, where its stance clears the spacing check. (3) The Medium tag "Baseball" is new to the bank; the Thursday import should confirm the autocomplete commits it.
