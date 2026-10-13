@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="fn25-feature-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn25-feature-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn25-feature-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="#F8F3EA"/>
+  <rect x="1244" y="0" width="356" height="1000" fill="#3A1518"/>
+  <g transform="rotate(-0.8 420 500)">
+    <rect x="78" y="80" width="684" height="874" fill="#60735A"/>
+    <rect x="86" y="66" width="668" height="868" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/infield-glove-raked-dirt.png" x="90" y="70" width="660" height="860" preserveAspectRatio="xMidYMid slice" filter="url(#fn25-feature-photo)"/>
+  </g>
+  <g transform="rotate(1.3 990 490)">
+    <rect x="778" y="220" width="424" height="574" fill="#3A1518"/>
+    <rect x="786" y="206" width="408" height="568" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/pitchers-mound-rosin-bag.png" x="790" y="210" width="400" height="560" preserveAspectRatio="xMidYMid slice" filter="url(#fn25-feature-photo)"/>
+  </g>
+  <g transform="rotate(-3 441 69)">
+    <rect x="330" y="46" width="222" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="338" y1="53" x2="542" y2="50" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g transform="rotate(4 978 209)">
+    <rect x="880" y="186" width="196" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="888" y1="193" x2="1066" y2="190" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <rect x="1312.0" y="180.0" width="220.0" height="220.0" fill="#3A1518" stroke="#EEE6D8" stroke-width="4"/><path d="M1422.0 358.2 L1490.2 290.0 L1422.0 221.8 L1353.8 290.0 Z" fill="none" stroke="#EEE6D8" stroke-width="2" opacity="0.45"/><path d="M1422.0 350.0 L1482.0 290.0 L1422.0 230.0 L1362.0 290.0 L1422.0 350.0" fill="none" stroke="#F8F3EA" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="10.0 9.0" opacity="0.8"/><rect x="1484.7" y="284.5" width="11.0" height="11.0" fill="#3A1518" stroke="#EEE6D8" stroke-width="2.5" transform="rotate(45 1490.2 290.0)"/><rect x="1416.5" y="216.3" width="11.0" height="11.0" fill="#3A1518" stroke="#EEE6D8" stroke-width="2.5" transform="rotate(45 1422.0 221.8)"/><rect x="1348.3" y="284.5" width="11.0" height="11.0" fill="#3A1518" stroke="#EEE6D8" stroke-width="2.5" transform="rotate(45 1353.8 290.0)"/><path d="M1416.5 352.7 L1427.5 352.7 L1427.5 358.2 L1422.0 363.7 L1416.5 358.2 Z" fill="#3A1518" stroke="#EEE6D8" stroke-width="2.5"/><line x1="1474.8" y1="400.0" x2="1532.0" y2="342.8" stroke="#F8F3EA" stroke-width="6" stroke-linecap="round"/>
+  <rect x="1312.0" y="590.0" width="220.0" height="220.0" fill="#3A1518" stroke="#EEE6D8" stroke-width="4"/><path d="M1422.0 768.2 L1490.2 700.0 L1422.0 631.8 L1353.8 700.0 Z" fill="none" stroke="#EEE6D8" stroke-width="2" opacity="0.45"/><path d="M1422.0 760.0 L1482.0 700.0 L1422.0 640.0 L1362.0 700.0 L1422.0 760.0" fill="none" stroke="#F8F3EA" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><rect x="1484.7" y="694.5" width="11.0" height="11.0" fill="#3A1518" stroke="#EEE6D8" stroke-width="2.5" transform="rotate(45 1490.2 700.0)"/><rect x="1416.5" y="626.3" width="11.0" height="11.0" fill="#3A1518" stroke="#EEE6D8" stroke-width="2.5" transform="rotate(45 1422.0 631.8)"/><rect x="1348.3" y="694.5" width="11.0" height="11.0" fill="#3A1518" stroke="#EEE6D8" stroke-width="2.5" transform="rotate(45 1353.8 700.0)"/><path d="M1416.5 762.7 L1427.5 762.7 L1427.5 768.2 L1422.0 773.7 L1416.5 768.2 Z" fill="#3A1518" stroke="#EEE6D8" stroke-width="2.5"/>
+  <path d="M640 972 C744 950 852 984 956 958" fill="none" stroke="#B14F3F" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect width="1600" height="1000" filter="url(#fn25-feature-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

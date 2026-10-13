@@ -4029,6 +4029,155 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 
 **Open, in order:** (1) Drop each override when gscan or minimatch moves past it on its own. (2) Carried forward: the extract-zip acceptances expiring 2026-11-09.
 
+## 2026-10-08 — Claude Code — Friday analytics readout (weeks of 2026-09-28 and 2026-10-05), run Thursday evening
+
+**Client:** Claude Code. **Branch:** `claude/friday-analytics-2026-10-08`. The `gmg-friday-analytics` task fired at 20:31 ET on Thursday. No readout ran for Friday 2026-10-02, and this log holds no entry after 2026-09-28, so this covers both weeks since the last readout.
+
+**Scope:** verification only. Nothing was published, posted, replied to, or sent.
+
+**Ghost.** Eight published posts. **1** member, unchanged since 2026-08-11. That member has opened 7 of 7 emails. Week 8's send, `the-lights-never-flickered` on 2026-09-29 at 08:00 ET, went to 1 recipient: 1 delivered, 1 opened, 0 failed. **No post was published on Tuesday 2026-10-06**, so no email went out this week. `ask-for-help-while-its-still-cheap`, the register's row 8 projected for 10-06, is now scheduled in Ghost for 2026-10-13 12:00Z, with four Buffer posts queued for 10-13 to 10-17. A concurrent session is staging that week; staging belongs to `gmg-monday-staging`, so this entry does not touch it.
+
+**Pageviews (Ghost web analytics, signed-in admin).** Last 7 days (Oct 2–8): **3 unique visitors, 3 views**, all to the homepage, all Direct. Last 30 days: **33 visitors, 39 views**, down from 49 and 62 on 2026-09-27. Top content: Homepage 14, You Can't Outwork a Wrong Direction 9, Rest Isn't a Reward 7, Start Here 3, Nobody Rigs to the Breaking Strength 3, The Lights Never Flickered 2. Sources: Direct 26, Bing 6, Google 1. Instagram has dropped out of the 30-day sources. Newsletters tab: no send in the last 7 days, 1 subscriber.
+
+**A/B protocol stays suspended at step 3.** The list is 1 against a floor of 30. No timing decision is due, so nothing was appended to `publish-timing.md`.
+
+**Platform numbers.** Every Week 8 Buffer post sent on its slot: Bluesky Tue 12:03, LinkedIn Wed 10:02, Instagram Thu 09:05, Bluesky Sat 18:30. Buffer's error list is empty.
+- **LinkedIn:** the 2026-09-30 post reads **0 impressions, 0 reach** on a metrics refresh dated 2026-10-08. Week 7's post holds at 129 impressions and 100 reach.
+- **Instagram:** the 2026-10-01 carousel has reach 4, views 9, 0 interactions, 0 saves, 0 shares, 0 follows. Buffer and Business Suite's Content table agree. Followers: **8**, unchanged. Business Suite account reach is 0–2 a day from Sep 28 to Oct 7, profile visits 2 (Oct 5 and 6), link clicks 0 since Sep 21.
+- **Bluesky:** 0 on both Week 8 posts. Profile: 0 followers, 16 posts, 0 replies, 0 quotes, 2 likes across the feed, both on old posts.
+- **Substack:** `verify-substack-notes.mjs` agrees with the live feed on all 16 rows (10 posted, 4 missed, 2 pending). The two pending rows are Week 8's notes.
+
+**Moderation sweep: nothing to escalate on any surface.** Ghost comments: 0 on each of the 8 published posts, read per post. Instagram DMs: Primary and General are empty, and Requests and Hidden Requests both read "Delete all 0". Instagram comments: 0, per Buffer and the Content table. The notifications feed renders and shows no activity after Sep 27. LinkedIn: 0 comments. Bluesky: 0 replies and 0 quotes. No reply was made to anyone.
+
+**Qualitative pass: still nothing said back.** Nine weeks in, no comment, reply, DM, or conversation has come in on any surface. No question or objection has been raised, so none can recur.
+
+**Corpus balance check: skipped, correctly.** The marker reads 2026-09-16 at 21 pieces, next due at 31. The bank is **24**: 23 field notes plus the launch essay.
+
+**Cadence gates.** `verify-substack-notes.mjs` passes. `verify-publication-register.mjs` **fails** on one row: `ask-for-help-while-its-still-cheap` has a blank State while Ghost holds it `scheduled`. That disagreement comes from the in-flight staging session described above, which also has an uncommitted change to row 7 in the shared checkout. It is left for that session to record. This branch was cut from `origin/main` in a separate worktree so the change stays untouched.
+
+**Files changed:** this log only. **External state changed:** none. Ghost analytics, Business Suite and Instagram were read, not changed. A Business Suite "Goals moved" tip and an Instagram notifications prompt were dismissed without accepting either.
+
+**Open, in order:** (1) The staging session's register update for rows 7 and 8, which belongs to that session. (2) Carried forward: distribution, the one-member list, the suspended A/B, the `isAiGenerated` founder question from 2026-09-28, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-10-08 — Thursday Medium import, fired late: Week 8 "The Lights Never Flickered" published on Medium
+
+**Client:** Claude Code (desktop app), the `gmg-thursday-medium` scheduled task, fired Thursday 2026-10-08 ~8:34 PM ET in the catch-up burst after the application sat closed since 2026-09-28. The 2026-10-01 import never ran; this run did it.
+
+**Preconditions.** `latestPublishedPost()` returned `the-lights-never-flickered`, published 2026-09-29 12:00Z (228 h earlier; no essay published 2026-10-06). Title recorded: "The Lights Never Flickered". Canonical answered 200 (in-browser fetch). Medium Drafts empty; profile feed lists seven stories, none this one.
+
+**External state changed, public:** one Medium story published, https://grownmengrow.medium.com/the-lights-never-flickered-bf5e6148d902. Nothing else: no Ghost, Buffer, Substack, or account change; no share buttons used.
+
+**Corrections.** Title: imported as the `meta_title` with ` | Grown Men Grow`; suffix removed, now exactly the Ghost title. Body: the `Grown Men Grow 4 min read` line deleted character by character (a triple-click selection spilled into the image block, so it was not used); dek, image, and essay intact. Preview image: imported empty; set to the story's only image, the feature image. Tags from `content/distribution/field-note-11-platforms.md`: `Men` was third behind *Mental Health* and *Mental Health Awareness* and was taken with Down ×3 after confirming the highlight; Work, Masculinity, Personal Growth ranked first; Essays was *Essays (new)*. Chips read back: Men, Work, Masculinity, Personal Growth, Essays. Canonical: Advanced Settings showed the box checked and a stored value of `https://grownmengrow.com/the-lights-never-flickered/` before publishing.
+
+**Verification after publishing.** In-page `fetch` of the story: HTTP 200, 202,695 bytes, `<link rel="canonical" href="https://grownmengrow.com/the-lights-never-flickered/"/>`, `h1` "The Lights Never Flickered", zero `Grown Men Grow N min read` strings. Not checked with `curl`.
+
+**Noted, not changed:** the pack's Medium subtitle ("The load lands somewhere. Nobody tells him where.") differs from the Ghost dek the importer carried ("He works all of August under lights he assumes come from the street."). The task does not set the subtitle, so the canonical dek was kept; whether the pack line is stale after the 2026-09-27 revision is a founder question.
+
+**Files changed:** `docs/technical/handoff-log.md` only. The uncommitted `docs/technical/publication-order.md` change in the shared checkout belongs to another session and was not touched.
+
+**Open, in order:** (1) This entry still needs its branch, PR, and gate run; the session hit its usage limit before committing. (2) Week 9's import falls on Thursday 2026-10-15 after the 2026-10-13 essay. (3) Carried forward from the Week 9 staging entry on `staging/week-09-ask-for-help`.
+
+## 2026-10-09 — Medium subtitles follow the dek; "the newest version wins" ruled
+
+**Client:** Claude Code (desktop app), the same session as the entry above, after the founder ruled on its open subtitle question.
+
+**Ruling:** when two copies of the same line disagree, the newest version of record wins. The older copy is fixed in the same change set and never carried as a question. One discrepancy triggers a sweep of the whole population. Recorded in `decision-log.md` and `founder-decisions.md`.
+
+**Sweep.** 21 of 23 essay packs gave the Medium subtitle as the essay's dek. Three did not. Field Note 7 (published) had "Collapse is not rest. It's running out." Field Note 11 (published) had its `preview` line. Field Note 13 (unpublished) also had its `preview` line. None came from the 2026-09-27 voice revision; each predates it. All three now give the dek.
+
+**External state changed:** none. The live Medium stories for Field Notes 7 and 11 already serve the dek as `og:description`, read in-browser on 2026-10-09, so the corrected packs now match what was posted. Field Note 13 is not yet on Medium.
+
+**Enforced:** `verify-repository.mjs` fails a pack whose Medium subtitle is not its essay's current dek. Before the packs were fixed, it failed on exactly those three and nothing else. After, it passes.
+
+**Files changed:** `scripts/verify-repository.mjs`, `content/distribution/field-note-07-platforms.md`, `content/distribution/field-note-11-platforms.md`, `content/distribution/field-note-13-platforms.md`, `docs/technical/decision-log.md`, `docs/technical/founder-decisions.md`, `AGENTS.md`, this log. The entry above was written on 2026-10-08 in the shared checkout and lands here; its open item (1) is closed by this change set and its subtitle note is resolved by the ruling.
+
+**Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entry on `staging/week-09-ask-for-help`.
+
+## 2026-10-12 — Wednesday draft task: Field Note 25 "He Stays at Short", a complete witness unit, drafted
+
+**Client:** Claude Code (desktop app), the `gmg-wednesday-draft` scheduled task. It fired Friday 2026-10-09 ~01:54 ET on catch-up, was interrupted by a usage limit after two images, and was resumed Monday 2026-10-12. **Branch:** `claude/wednesday-draft-2026-10-09`, worktree `/Users/peacock/Projects/_worktrees/gmg-wednesday-draft-2026-10-09`.
+
+**Backfill check:** all 23 approved notes in `content/field-notes/` carry a pack, render script, carousel, feature image, review sheet, and gate entries; `verify-repository` passes over them. Nothing to backfill.
+
+**Scope completed.** `**Standing commission:** witness` was read in `operating-cadence.md`. The subject is a shortstop's error and being kept in the game after it, the underpinning's "kept on when he was the problem" drawn literally: the extra out is the pitcher's to get, the manager leaves him at short, and the scoring rule guarantees nothing he does afterward reaches back into the inning. Stance `witness`, closing addresses the reader `no`, opening `other`. 1,045 words. The commission is cleared to `none` in this change set. Spacing checked by running `register-spacing.mjs` against the register with the note appended at 24: witness at 7, 10, 14, 17, 20, 24, no trade-run, gap, beat, or skeleton-heading fault.
+
+**Files changed:** `drafts/field-note-25-he-stays-at-short.md`, `drafts/field-note-25-platforms.md`, `drafts/README.md`, `docs/technical/operating-cadence.md` (commission `none`), `scripts/render-field-note-25.mjs` (new scorebook-box mark), `scripts/verify-repository.mjs` (required file, carousel family, feature-image count 27, three editorial sources, review sheet), `scripts/render-review-contact-sheets.mjs`, `assets/source/editorial/{infield-glove-raked-dirt,base-chalk-line-low-sun,pitchers-mound-rosin-bag}.png`, `assets/drafts/instagram/field-note-25-carousel/01–07.{svg,png}`, `assets/drafts/ghost/feature-images/he-stays-at-short.{svg,png}`, `assets/drafts/review/field-note-25-carousel.png`, and this log. The sheet renderer rewrote the 28 existing review sheets with byte-level differences only; those were restored rather than committed.
+
+**Imagery.** Five generated in the founder's ChatGPT project, three kept, each stripped with `strip-ai-provenance` (0 markers after). Rejected: the first glove (X-lacing across the palm faces of the finger stalls, tangled heel lacing) and the first base (crackle-grid micro-texture on its top). Prompts and reasons are in the note's production notes.
+
+**External state changed:** none public. Three images generated in ChatGPT. No Ghost, Buffer, Medium, Substack, Instagram, or account change. Nothing published, sent, or posted.
+
+**Verification:** `verify-ghost-theme`, `pnpm --dir theme install --frozen-lockfile`, `pnpm --dir theme test`, theme zip with GScan, `node --test` (216 pass, 0 fail), `verify-repository`, `verify-svg-xml` (238 SVGs), and `git diff --check` all pass.
+
+**Open, in order:** (1) Founder review of Field Note 25: essay, pack, and artwork. On approval it moves to `content/` and is appended at register position 24. (2) The Medium tag "Baseball" is new to the bank; confirm the autocomplete commits it on import. (3) Carried forward, not re-checked here: the open items of the entries above.
+
+## 2026-10-12 — Review follow-ups to #229: shared slug reader, the count, and where the ruling yields
+
+**Client:** Claude Code (desktop app), same session as the two entries above. #229 merged 2026-10-12 15:11Z after `main` was merged in to clear a handoff-log conflict. Its advisory review raised four findings. All four held, and all four are fixed here.
+
+**Correction to the 2026-10-09 entry:** it says "21 of 23 essay packs". There are 24 packs, the launch essay plus Field Notes 2 to 24, so it is 21 of 24. The three fixed packs and the gate are unaffected. `decision-log.md` carries the corrected figure.
+
+**Fixed.** (1) `verify-repository.mjs` read the canonical slug with its own regex. `scripts/lib/note-pack.mjs` declares itself the single pack reader, so it now exports `canonicalSlug`, which returns undefined rather than a guess, and the gate imports it. Two tests added. (2) The ruling read as if every derived copy follows the newest version. `decision-log.md` and `founder-decisions.md` now state where it yields: a published pack's posted-copy sections change only together with the live post, because `verify-substack-notes` compares posted notes to the pack byte for byte. Unpublished packs always follow. (3) `content-pipeline.md`, the spec a draft composes a pack against, now says the Medium subtitle is the dek verbatim.
+
+**External state changed:** none.
+
+**Verification:** with one pack's subtitle broken on purpose, `verify-repository` failed on exactly that pack; restored, it passes. Gate results are in the PR.
+
+**Files changed:** `scripts/lib/note-pack.mjs`, `scripts/test/note-pack.test.mjs`, `scripts/verify-repository.mjs`, `docs/technical/decision-log.md`, `docs/technical/founder-decisions.md`, `docs/technical/content-pipeline.md`, this log.
+
+**Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entry.
+## 2026-10-12 — Saturday draft task (Claude Code): Field Note 26 drafted, unit complete for review
+
+- Client: Claude Code desktop, scheduled task `gmg-saturday-draft`, fired Monday on catch-up. Draft only. Nothing published, sent, or posted.
+- Added `drafts/field-note-26-he-hasnt-been-bad-at-anything-in-years.md` (assignment, 939 words, `other` opening), `drafts/field-note-26-platforms.md`, `scripts/render-field-note-26.mjs` (centering mark), three photographs in `assets/source/editorial/` (stripped of provenance), the carousel, the feature image, the review sheet, and gate entries in `verify-repository.mjs` and `render-review-contact-sheets.mjs`.
+- The 2026-10-09 Saturday draft, "His Name Is Still on the Board," was not adopted because it duplicates Field Note 25 and would fail witness spacing at 25. It remains uncommitted in `_worktrees/gmg-saturday-draft-2026-10-09`. Field Note 25 landed in #232 during this run and cleared the `witness` commission. This change does not touch it.
+- Merged origin/main after #232. Conflicts in `verify-repository.mjs`, `render-review-contact-sheets.mjs` and this log were resolved by keeping both notes, and the feature-image count is now 28.
+- Next: founder review of Field Notes 25 and 26. The 2026-10-09 worktrees can be removed once the founder has seen this entry.
+
+## 2026-10-13 — Claude Code — Field Note 25 "He Stays at Short" founder-approved, register position 24
+
+**Client:** Claude Code (desktop app), continuing the `gmg-wednesday-draft` session after the founder replied "Approved" to the delivered unit. **Branch:** `claude/field-note-25-approved`.
+
+**Scope completed.** Essay and platform pack moved from `drafts/` to `content/field-notes/he-stays-at-short.md` and `content/distribution/field-note-25-platforms.md`, with `status: founder-approved`, approval dates, and `publication_authorized: false` (approval covers the work, not a slot). Appended at register position 24, projected 2027-01-26, with a section recording why. Render-script header, decision log, and `drafts/README.md` updated. A must-live-under-content gate was added to `verify-repository.mjs` and broken on purpose by re-tracking the pack under `drafts/`; it failed by name before this was committed.
+
+**Files changed:** `content/field-notes/he-stays-at-short.md` and `content/distribution/field-note-25-platforms.md` (moved from `drafts/`), `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `drafts/README.md`, `scripts/render-field-note-25.mjs` (comment only), `scripts/verify-repository.mjs`, and this log.
+
+**External state changed:** none. No Ghost post, Buffer queue, Medium story, Substack note, or account touched. Nothing published, sent, or posted.
+
+**Verification:** results of all `gate:` lines are in the PR; the register checks (constraints, spacing, witness skeleton) run inside `verify-repository`.
+
+**Open, in order:** (1) Publication timing for position 24 is the Monday staging task's, in register order. (2) Field Note 26, an `assignment` draft in `drafts/`, awaits founder review; on approval it lands at 25, where its stance clears the spacing check. (3) The Medium tag "Baseball" is new to the bank; the Thursday import should confirm the autocomplete commits it.
+
+## 2026-10-13 — Monday staging run, fired Tuesday: Week 9 verified after it published
+
+**Client:** Claude Code (desktop app), the `gmg-monday-staging` scheduled task. It first fired at 00:32 ET Tuesday, was interrupted after the register check, and was re-run at 09:19 ET, after the 8:00 AM publish. The week was staged on 2026-10-08 by the run recorded in PR #231, which is still open and conflicted. This run staged nothing.
+
+**Hold check:** `**Active hold:** none`. None of the five conditions found. Not held.
+
+**External state changed:** none. No Ghost, Buffer, iCloud, or platform write was made.
+
+**Verification.** `verify-publication-register --fix` recorded row 7 (`the-lights-never-flickered`) and row 8 (`ask-for-help-while-its-still-cheap`) as `published`; all 24 rows now agree with Ghost (9 published, 0 scheduled, 15 projected). Staging dry run for row 8 at 2026-10-13T12:00Z builds the payload with alt text present. Ghost: `published` 2026-10-13 12:00Z, newsletter `default-newsletter`, segment `all`, email `submitted` to 1 recipient, feature image set; `title`, `custom_excerpt`, `meta_title`, `meta_description`, `email_subject`, and `feature_image_alt` all equal `buildPostPayload`. Feed tile: Buffer's most recent sent Instagram post is The Lights Never Flickered (2026-10-01); this week's slide 1 is the hardware-store counter photograph, a different image. Buffer: `queue-week-buffer --dry-run` refuses because all four posts exist, and the queue reads back at 10-13 16:00Z Bluesky, 10-14 14:00Z LinkedIn, 10-15 13:00Z Instagram, 10-17 22:30Z Bluesky, matching the schedule of record. iCloud kit: all four folders and the READ ME present; both Substack paste files equal `noteCopyForSlug` output and carry no emphasis marks. All six `gate:` lines pass (218 tests); `git diff --check` clean.
+
+**Files changed:** `docs/technical/publication-order.md` (rows 7 and 8), `docs/technical/handoff-log.md`.
+
+**Open, in order:** (1) Today 12:00 PM: Substack Note 1, note task first, then the founder from kit folder 1. (2) Thursday 7:00 AM: Medium URL import; the Week 8 import is overdue per PR #231. (3) Thursday: optional Story reshare with link sticker (folder 3). (4) Saturday 6:30 PM: Substack Note 2 (folder 2). (5) PR #231 conflicts on rows 7 and 8, which this change records; its Substack-notes and handoff content still needs merging by its owner. (6) Next Monday stages row 9, `you-can-walk-on-it-tomorrow`, for 2026-10-20.
+
+## 2026-10-13 — Tuesday note task: Note 1 staged, founder posted, verified live
+
+**Client:** Claude Code (desktop app), scheduled task `gmg-tuesday-note`, fired at 11:45 ET.
+
+**Preflight:** `note-task-preflight --slot 12:00 --note 1` exited `10`, early by 846 s. Hold `none`. Essay `ask-for-help-while-its-still-cheap` published 2026-10-13 12:00Z. Pack `content/distribution/field-note-05-platforms.md`. The run waited until 12:00:00 ET and then read the profile again.
+
+**External state changed:** Substack Note 1 is **public**: `c-360057758`, posted at 12:09 PM ET under the Grown Men Grow identity, 9 minutes after the slot. The agent typed the approved copy into the composer at 12:00. Keystroke `type` succeeded this week. The founder clicked Post, per the 2026-08-25 ruling. Before the composer opened, the profile showed Edit profile and its top note was dated Sep 27. After the post, the note was confirmed in a separate tab with its text intact. Lock released.
+
+**Register:** not edited here. PR #231 adds this week's rows as pending. Row `ask-for-help-while-its-still-cheap#1` must now read `posted` with `c-360057758`. Until it does, `verify-substack-notes` fails on the blank row, as designed.
+
+**Verification:** `verify-substack-notes` before staging: 16 rows agree with 10 live notes. Only this log changed.
+
+**Files changed:** `docs/technical/handoff-log.md`.
+
+**Open, in order:** (1) Record row #1 as `posted` / `c-360057758` once #231 lands, or in #231. (2) PR #231 is still conflicted. (3) Saturday 10-17 18:30: Note 2.
+
 ## 2026-10-08 — Monday staging run, fired Thursday: Week 9 staged after a missed week
 
 **Client:** Claude Code (desktop app), the `gmg-monday-staging` scheduled task. It fired Thursday 2026-10-08 at 8:26 PM ET. Every scheduled task on this machine last ran 2026-09-27/28 and all of them fired together at 2026-10-09 00:26Z. The desktop application was closed in between. The 2026-10-05 Monday run never happened, so nothing was scheduled for the 2026-10-06 slot. **No field note went out that Tuesday.** Work was done in a separate worktree, `staging/week-09-ask-for-help`, because the Tuesday publish check fired in the same burst against the shared checkout.
@@ -4048,3 +4197,17 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **No new public prose.** Everything in the kit was copied verbatim from approved sources or from Buffer. The READ ME is operating instructions to the founder, not publication copy, so the nine tests were not applicable.
 
 **Open, in order:** (1) Tuesday 2026-10-13 12:00 PM: Substack Note 1, note task first, then the founder from kit folder 1. (2) Thursday 10-15: optional Story reshare with link sticker (folder 3). (3) Saturday 10-17 6:30 PM: Substack Note 2 (folder 2). (4) **Week 8's Medium import never ran.** `gmg-thursday-medium` last fired 2026-09-24. `the-lights-never-flickered` has been canonical-live since 09-29, so its import is past due; it falls to that task or the founder. (5) The Wednesday and Saturday draft tasks and the 10-02 Friday analytics also did not run during the gap. (6) The schedule now runs one week behind the register's projected dates; every later row slides by a week unless the founder chooses otherwise. (7) Carried forward, not re-checked here: the `isAiGenerated` founder question, the Instagram traffic anomaly, the one-member list, the suspended A/B, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-10-13 — #231 brought current with `main`; Note 1 recorded
+
+**Client:** Claude Code (desktop app), continuing the Tuesday publish-check session at the founder's request.
+
+**Scope.** Merged `main` into #231 after #236, #237 and #239 landed. In the register, row 8 takes `main`'s `published`, because Ghost published the essay at 12:00Z. In this log, every entry is kept in landing order. Row `ask-for-help-while-its-still-cheap#1` now reads `posted` / `c-360057758`, as the #239 entry asked.
+
+**Finding.** `verify-substack-notes` fails on that row. The live text and the pack are the same 122 characters except one: the pack's straight apostrophe in "They're" is a curly apostrophe (U+2019) on Substack. The composer applies smart quotes as text is typed. Earlier posted notes carried no apostrophes, so the checker had never seen this. Note 2 ("he's") will hit it on Saturday. The fix goes in the checker, in its own PR: compare after folding only that substitution. The approved copy stays as written.
+
+**Superseded:** the unpushed `claude/tuesday-publish-check-2026-10-13` branch. #237 recorded the same rows first, so the branch is deleted unmerged.
+
+**External state changed:** none.
+
+**Files changed:** `docs/technical/substack-notes.md`, `docs/technical/publication-order.md` and this log, through the merge.

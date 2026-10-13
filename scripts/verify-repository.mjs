@@ -6,6 +6,7 @@ import { lstat, readFile, readdir } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 
 import { parseHold } from './lib/hold-state.mjs';
+import { canonicalSlug } from './lib/note-pack.mjs';
 import { DEFAULT_PUBLISH_WEEKDAY, NOTE_TASK_SLOT_WEEKDAYS } from './lib/note-slot.mjs';
 import { tradeRunFaults, witnessSkeletonFaults, witnessSpacingFaults } from './lib/register-spacing.mjs';
 import path from 'node:path';
@@ -452,6 +453,8 @@ const requiredFiles = [
   'scripts/render-field-note-22.mjs',
   'scripts/render-field-note-23.mjs',
   'scripts/render-field-note-24.mjs',
+  'scripts/render-field-note-25.mjs',
+  'scripts/render-field-note-26.mjs',
   'scripts/verify-dependency-exemptions.mjs',
   'scripts/verify-required-checks.mjs',
   'scripts/verify-publication-register.mjs',
@@ -573,6 +576,10 @@ if (tracked.includes('drafts/field-note-24-the-stake-was-supposed-to-come-off.md
   || tracked.includes('drafts/field-note-24-platforms.md')) {
   fail('Approved Field Note 24 and its platform pack must live under content/, not drafts/.');
 }
+if (tracked.includes('drafts/field-note-25-he-stays-at-short.md')
+  || tracked.includes('drafts/field-note-25-platforms.md')) {
+  fail('Approved Field Note 25 and its platform pack must live under content/, not drafts/.');
+}
 
 const launchPackage = await readFile(path.join(root, 'content/instagram/launch-package.md'), 'utf8');
 const captionSource = launchPackage.split('\n## 8. Approved discovery classifications')[0];
@@ -639,11 +646,13 @@ await validateAssetFamily('assets/drafts/instagram/field-note-21-carousel', 7, 1
 await validateAssetFamily('assets/drafts/instagram/field-note-22-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-23-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-24-carousel', 7, 1080, 1350);
+await validateAssetFamily('assets/drafts/instagram/field-note-25-carousel', 7, 1080, 1350);
+await validateAssetFamily('assets/drafts/instagram/field-note-26-carousel', 7, 1080, 1350);
 await validatePhotographExclusivity('assets/drafts/instagram');
 await validatePublicationOrder();
 await validateCrossReferences();
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
-await validateAssetFamily('assets/drafts/ghost/feature-images', 26, 1600, 1000);
+await validateAssetFamily('assets/drafts/ghost/feature-images', 28, 1600, 1000);
 await validateEditorialConcepts();
 const editorialSources = new Map([
   ['friends-in-conversation', { width: 1023, height: 1537 }],
@@ -724,6 +733,12 @@ const editorialSources = new Map([
   ['gloss-panel-low-sun', { width: 1024, height: 1536 }],
   ['staked-sapling-front-lawn', { width: 1024, height: 1536 }],
   ['pulled-stakes-young-tree', { width: 1024, height: 1536 }],
+  ['infield-glove-raked-dirt', { width: 1024, height: 1536 }],
+  ['base-chalk-line-low-sun', { width: 1024, height: 1536 }],
+  ['pitchers-mound-rosin-bag', { width: 1024, height: 1536 }],
+  ['first-bowl-studio-shelf', { width: 1024, height: 1536 }],
+  ['ware-board-six-cups', { width: 1024, height: 1536 }],
+  ['lopsided-bowl-entry-console', { width: 1024, height: 1536 }],
 ]);
 await validateNamedPngs('assets/source/editorial', editorialSources);
 await validateNamedPngs('assets/drafts/brand/banners', new Map([
@@ -758,6 +773,8 @@ const reviewSheets = new Map([
   ['field-note-22-carousel', { width: 1362, height: 1004 }],
   ['field-note-23-carousel', { width: 1362, height: 1004 }],
   ['field-note-24-carousel', { width: 1362, height: 1004 }],
+  ['field-note-25-carousel', { width: 1362, height: 1004 }],
+  ['field-note-26-carousel', { width: 1362, height: 1004 }],
   ['ghost-social-cards', { width: 1310, height: 884 }],
   ['pinned-introduction', { width: 1362, height: 1004 }],
   ['recognition-carousel', { width: 1362, height: 1004 }],
@@ -831,6 +848,21 @@ if (packs.size === 0) {
 // running, so it is caught here instead.
 const mediumTagLabel = /^-\s*(?:Tags|Suggested topics):\s*/i;
 const mediumTag = /^[A-Za-z0-9][A-Za-z0-9 -]*$/;
+// A pack's Medium subtitle is the essay's current dek, and the dek in the
+// essay's frontmatter is the newest version of record. Three packs disagreed
+// on 2026-10-09: Field Notes 11 and 13 carried the essay's `preview` line and
+// Field Note 7 a line nothing else used. The Medium importer takes the dek from
+// Ghost, so Field Note 11 went live on 2026-10-08 with a subtitle its own pack
+// contradicted, and the pack was the copy that was wrong. The dek population
+// is derived from every tracked content file that declares a slug and a dek.
+const mediumSubtitleLabel = /^-\s*Subtitle:\s*/i;
+const deks = new Map();
+for (const file of tracked.filter((name) => /^content\/(?:field-notes|ghost)\/[^/]+\.md$/.test(name))) {
+  const source = await readFile(path.join(root, file), 'utf8');
+  const slug = source.match(/^slug:\s*(\S+)\s*$/m)?.[1];
+  const dek = source.match(/^dek:\s*(.+?)\s*$/m)?.[1];
+  if (slug && dek) deks.set(slug, dek);
+}
 for (const [label, file] of packs) {
   const text = await readFile(path.join(root, file), 'utf8');
   const lines = text.split('\n');
@@ -853,6 +885,18 @@ for (const [label, file] of packs) {
   if (mediumStart === -1) continue;
   const nextSection = lines.findIndex((line, index) => index > mediumStart && line.startsWith('# '));
   const mediumLines = lines.slice(mediumStart, nextSection === -1 ? lines.length : nextSection);
+  const packSlug = canonicalSlug(text);
+  const subtitleLine = mediumLines.find((line) => mediumSubtitleLabel.test(line));
+  if (!packSlug || !deks.has(packSlug)) {
+    fail(`${file} names no canonical slug with a dek on record, so ${label}'s Medium subtitle cannot be checked against it.`);
+  } else if (!subtitleLine) {
+    fail(`${file} gives no Medium subtitle for ${label}; it should read the essay's dek.`);
+  } else {
+    const subtitle = subtitleLine.replace(mediumSubtitleLabel, '').replaceAll('**', '').trim();
+    if (subtitle !== deks.get(packSlug)) {
+      fail(`${file} gives ${label}'s Medium subtitle as "${subtitle}", but the essay's dek is "${deks.get(packSlug)}". The dek is the newest version; the pack follows it.`);
+    }
+  }
   const tagLine = mediumLines.find((line) => mediumTagLabel.test(line));
   if (!tagLine) {
     fail(`${file} does not list Medium tags for ${label}; the import slot has nothing to enter.`);
