@@ -64,6 +64,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 21 | `he-writes-both-parts` | 2027-01-05 | |
 | 22 | `everything-looks-straight-in-primer` | 2027-01-12 | |
 | 23 | `the-stake-was-supposed-to-come-off` | 2027-01-19 | |
+| 24 | `he-hasnt-been-bad-at-anything-in-years` | 2027-01-26 | |
 
 ## Why this order and not another
 
@@ -112,6 +113,12 @@ The register was read before the subject was chosen, as it was for position 21. 
 `the-stake-was-supposed-to-come-off` was approved 2026-09-27 and appended at 23. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note.
 
 This is the first append where the spacing check, rather than the subject, ruled out a stance. The corpus had tilted mildly back toward obligation, and on that alone the slot called for `witness`; but witness pieces sit at 7, 10, 14, 17 and 20, and a fifth-gap of three at 23 would have put four on an exact beat. The note is `assignment`. Its `trade` opening follows two `other` openings at 21 and 22, a run of one. A `witness` piece clears at 24 or later.
+
+### Position 24 was appended, and it moves the next witness piece back one slot
+
+`he-hasnt-been-bad-at-anything-in-years` was approved 2026-10-13 and appended at 24. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note.
+
+It is `assignment` with an `other` opening after the `trade` opening at 23, so no trade run grows and no witness gap changes. It was drafted after Field Note 25, which is `witness` and still awaits approval, but approved first, so it takes the slot Field Note 25 was drafted for. Field Note 25 at 25 still clears both checks: five slots from the witness piece at 20, and the gaps would run three, four, three, three and five, with no four on an exact beat.
 
 ### The spacing reorder of 2026-09-16, and why the rules are now checked
 

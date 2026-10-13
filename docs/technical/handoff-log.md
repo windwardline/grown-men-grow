@@ -4133,3 +4133,11 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 - The 2026-10-09 Saturday draft, "His Name Is Still on the Board," was not adopted because it duplicates Field Note 25 and would fail witness spacing at 25. It remains uncommitted in `_worktrees/gmg-saturday-draft-2026-10-09`. Field Note 25 landed in #232 during this run and cleared the `witness` commission. This change does not touch it.
 - Merged origin/main after #232. Conflicts in `verify-repository.mjs`, `render-review-contact-sheets.mjs` and this log were resolved by keeping both notes, and the feature-image count is now 28.
 - Next: founder review of Field Notes 25 and 26. The 2026-10-09 worktrees can be removed once the founder has seen this entry.
+
+## 2026-10-13 — Field Note 26 approved and moved into content/ (Claude Code)
+
+- Client: Claude Code desktop, in the same session that drafted the note. The founder approved the complete unit in chat ("Approved.").
+- Moved `drafts/field-note-26-he-hasnt-been-bad-at-anything-in-years.md` → `content/field-notes/he-hasnt-been-bad-at-anything-in-years.md` and `drafts/field-note-26-platforms.md` → `content/distribution/field-note-26-platforms.md`. Flipped `status`, `approved`, `publication_authorized`, and `artwork_status`, and corrected the production note's spacing line to the real position.
+- `docs/technical/publication-order.md`: appended at position 24, projected 2027-01-26, with its entry. `scripts/verify-repository.mjs`: a must-live-under-content gate for Field Note 26. `scripts/render-field-note-26.mjs`: header comment only. Also updated `docs/technical/decision-log.md` and `drafts/README.md`.
+- External state: none. No Ghost slot is named; nothing is published, scheduled, sent, or posted.
+- Open: Field Note 25 awaits founder review and would land at 25, where it clears both spacing checks. Publication timing for Field Note 26 is a later founder decision.

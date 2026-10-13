@@ -18,8 +18,8 @@ import {
   writeAsset,
 } from "./lib/editorial-collage.mjs";
 
-// Field Note 26 — "He Hasn't Been Bad at Anything in Years". Draft, not
-// founder-approved; written 2026-10-12 by the Saturday draft task.
+// Field Note 26 — "He Hasn't Been Bad at Anything in Years". Founder-approved
+// 2026-10-13; register position 24, no Ghost slot named.
 //
 // Signature vocabulary: a hand-drawn centering mark — a wheel head seen from
 // above, drawn as one ink circle with a small rust cross at its true center,

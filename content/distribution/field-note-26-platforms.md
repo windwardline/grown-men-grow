@@ -1,9 +1,9 @@
 ---
 essay: He Hasn't Been Bad at Anything in Years
 canonical: https://grownmengrow.com/he-hasnt-been-bad-at-anything-in-years/ (live only after publication)
-status: draft — NOT founder-approved
-approved: no
-publication_authorized: false — NOT authorized for publication or social posting
+status: founder-approved
+approved: 2026-10-13 — approved as written alongside the essay and artwork
+publication_authorized: false — approval covers the copy, not a slot; posting remains separately gated
 image_rule: per-article — this pack may use only Field Note 26 imagery: first-bowl-studio-shelf, ware-board-six-cups, lopsided-bowl-entry-console
 stance_note: assignment — every excerpt leaves the choice with him; none tells him to take anything up, and each keeps the essay's concession that time and tiredness are real
 ---
