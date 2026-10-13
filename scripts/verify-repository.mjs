@@ -576,6 +576,10 @@ if (tracked.includes('drafts/field-note-24-the-stake-was-supposed-to-come-off.md
   || tracked.includes('drafts/field-note-24-platforms.md')) {
   fail('Approved Field Note 24 and its platform pack must live under content/, not drafts/.');
 }
+if (tracked.includes('drafts/field-note-25-he-stays-at-short.md')
+  || tracked.includes('drafts/field-note-25-platforms.md')) {
+  fail('Approved Field Note 25 and its platform pack must live under content/, not drafts/.');
+}
 if (tracked.includes('drafts/field-note-26-he-hasnt-been-bad-at-anything-in-years.md')
   || tracked.includes('drafts/field-note-26-platforms.md')) {
   fail('Approved Field Note 26 and its platform pack must live under content/, not drafts/.');
