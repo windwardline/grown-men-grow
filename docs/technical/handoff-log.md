@@ -4161,3 +4161,19 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Files changed:** `docs/technical/publication-order.md` (rows 7 and 8), `docs/technical/handoff-log.md`.
 
 **Open, in order:** (1) Today 12:00 PM: Substack Note 1, note task first, then the founder from kit folder 1. (2) Thursday 7:00 AM: Medium URL import; the Week 8 import is overdue per PR #231. (3) Thursday: optional Story reshare with link sticker (folder 3). (4) Saturday 6:30 PM: Substack Note 2 (folder 2). (5) PR #231 conflicts on rows 7 and 8, which this change records; its Substack-notes and handoff content still needs merging by its owner. (6) Next Monday stages row 9, `you-can-walk-on-it-tomorrow`, for 2026-10-20.
+
+## 2026-10-13 — Tuesday note task: Note 1 staged, founder posted, verified live
+
+**Client:** Claude Code (desktop app), scheduled task `gmg-tuesday-note`, fired at 11:45 ET.
+
+**Preflight:** `note-task-preflight --slot 12:00 --note 1` exited `10`, early by 846 s. Hold `none`. Essay `ask-for-help-while-its-still-cheap` published 2026-10-13 12:00Z. Pack `content/distribution/field-note-05-platforms.md`. The run waited until 12:00:00 ET and then read the profile again.
+
+**External state changed:** Substack Note 1 is **public**: `c-360057758`, posted at 12:09 PM ET under the Grown Men Grow identity, 9 minutes after the slot. The agent typed the approved copy into the composer at 12:00. Keystroke `type` succeeded this week. The founder clicked Post, per the 2026-08-25 ruling. Before the composer opened, the profile showed Edit profile and its top note was dated Sep 27. After the post, the note was confirmed in a separate tab with its text intact. Lock released.
+
+**Register:** not edited here. PR #231 adds this week's rows as pending. Row `ask-for-help-while-its-still-cheap#1` must now read `posted` with `c-360057758`. Until it does, `verify-substack-notes` fails on the blank row, as designed.
+
+**Verification:** `verify-substack-notes` before staging: 16 rows agree with 10 live notes. Only this log changed.
+
+**Files changed:** `docs/technical/handoff-log.md`.
+
+**Open, in order:** (1) Record row #1 as `posted` / `c-360057758` once #231 lands, or in #231. (2) PR #231 is still conflicted. (3) Saturday 10-17 18:30: Note 2.
