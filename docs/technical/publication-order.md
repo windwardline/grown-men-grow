@@ -65,6 +65,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 22 | `everything-looks-straight-in-primer` | 2027-01-12 | |
 | 23 | `the-stake-was-supposed-to-come-off` | 2027-01-19 | |
 | 24 | `he-stays-at-short` | 2027-01-26 | |
+| 25 | `he-hasnt-been-bad-at-anything-in-years` | 2027-02-02 | |
 
 ## Why this order and not another
 
@@ -119,6 +120,12 @@ This is the first append where the spacing check, rather than the subject, ruled
 `he-stays-at-short` was approved 2026-10-13 and appended at 24. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note.
 
 This is the first note written to a standing commission since the spacing check landed, and the slot was chosen before the subject was. The founder set `witness` on 2026-09-27 after position 23 could not take one. At 24 the witness pieces sit at 7, 10, 14, 17, 20 and 24, gaps of three, four, three, three and four, so no four fall on an exact beat and the nearest pair is four apart. Its `other` opening follows the `trade` opening at 23, a run of one. The next witness piece clears at 27 or later.
+
+### Position 25 was appended, and the order of approval did not move it
+
+`he-hasnt-been-bad-at-anything-in-years` was approved 2026-10-13 and appended at 25. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note.
+
+Its approval change set first claimed 24, written while Field Note 25 was still in review. Field Note 25 was approved and merged at 24 first, so this note takes 25 and neither register entry is reordered. It is `assignment`, so the witness pieces stay at 7, 10, 14, 17, 20 and 24. Its `other` opening follows the `other` opening at 24, so no trade run grows.
 
 ### The spacing reorder of 2026-09-16, and why the rules are now checked
 

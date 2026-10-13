@@ -7,15 +7,15 @@ access: public
 email_subject: He Hasn't Been Bad at Anything in Years
 preview: The first night on a pottery wheel produces an ashtray. It was supposed to be a bowl.
 feature_image_alt: A lopsided green-glazed stoneware bowl on a wooden shelf in a bright pottery studio among other students’ pieces, beside a row of six small unglazed cups on a ware board that run from squat and leaning to nearly straight, in a paper collage.
-status: draft — NOT founder-approved
-approved: no
-publication_authorized: false — NOT authorized for publication, newsletter delivery, metadata, or social posting
+status: founder-approved
+approved: 2026-10-13 — essay, platform pack, and artwork approved as written the day after they were drafted; approval covers the work, not a slot
+publication_authorized: false — no Ghost slot named, no newsletter, no social posting; publication remains separately gated
 stance: assignment — the subject test fails for witness: whether he walks into a room as a beginner is his to decide, and the piece leaves that decision with him rather than receiving him in it
 closing_addresses_reader: yes — the last hundred words hand him the choice ("is his call") without issuing it, then close on the bowl
 opening: other — opens on a man's week narrowing to what he's already good at, not on a trade mechanism; the trades appear only as his competence, and the setting is a pottery class
 personal_claims: none included; add only from founder-supplied facts
-artwork_status: complete for review; three photographs generated 2026-10-12 for this note under the house prompt, two rejections recorded below; not founder-approved
-origin: written 2026-10-12 by the Saturday draft task (fired Monday on catch-up); replaces the 2026-10-09 Saturday draft, which duplicated Field Note 25 and could not clear register spacing
+artwork_status: complete; founder-approved 2026-10-13 under the per-article image rule and the photograph-exclusivity ruling
+origin: written 2026-10-12 by the Saturday draft task (fired Monday on catch-up); replaces the 2026-10-09 Saturday draft, which duplicated Field Note 25 and could not clear register spacing. Approved 2026-10-13 and moved into content/ at register position 25
 ---
 
 # Ghost essay source
@@ -131,10 +131,11 @@ Some of why he stopped is real. Time is real, and a man who's competent all day 
 
 # Production notes
 
+- Approved 2026-10-13 as written: essay, pack, and artwork. Register position 25. No Ghost slot named; publication timing remains a later founder decision.
 - Drafted 2026-10-12 by the Saturday draft task, which fired on Monday on catch-up. The task's 2026-10-09 run had left an unfinished Saturday draft, "His Name Is Still on the Board," uncommitted in the `gmg-saturday-draft-2026-10-09` worktree. It was not adopted: it is a `witness` piece about a man kept on through a year he can't work out of, which is the same event as Field Note 25, "He Stays at Short," written the same night by the Wednesday task under the same commission — Field Note 25 even carries the board draft's idea in a paragraph of its own ("A man prices a job wrong and the company eats it, and next week his name's still on the schedule"). The week's two would have been siblings, and a second `witness` piece at register position 25 would sit one slot from Field Note 25 at 24 and fail the spacing check. It is left untouched where it lies rather than deleted.
 - Stance is `assignment`, chosen from the register before the subject. The `witness` commission belonged to Field Note 25, which cleared it to `none` when it landed in #232 while this note was in review, so this note neither takes nor touches it. A second `witness` piece this week would sit at 25, one slot from Field Note 25, and the spacing check rules that out. The corpus duty points the same way once Field Note 25 lands — the bank since the 2026-09-16 measurement runs four `assignment` approvals, and Field Note 25 is this week's correction.
 - The subject test fails for witness: whether he walks into a room as a beginner is his to decide. The piece leaves the decision with him ("is his call") and does not issue it; nothing in it says he should take up anything, and it concedes plainly that time is real, that a man competent all day for money is entitled to not be tested at night, and that some men try it and hate it.
-- Register spacing. Witness pieces sit at 7, 10, 14, 17 and 20, with Field Note 25 drafted for 24. Appended at 25 behind it, this note is `assignment`, so no witness gap changes. Its `other` opening follows Field Note 25's `other` opening and Field Note 24's `trade` opening, so no trade run grows. If Field Note 25 is not approved, this note at 24 is equally clear.
+- Register spacing. Drafted and approved after Field Note 25 went to review; Field Note 25 was approved and merged at 24 first, so this note takes 25. It is `assignment`, so the witness pieces stay at 7, 10, 14, 17, 20 and 24. Its `other` opening follows the `other` opening at 24, so no trade run grows.
 - Shape against Wednesday's. Field Note 25 is concrete and external — a ballfield, a scoring rule, a man being carried by other people's verbs. This one is interior and reflective: a man's own week, what he has stopped doing and why, with the studio as the one place the essay goes outside his head. It shares no subject, mechanism, or opening gambit with anything in the bank.
 - No first-person anecdote appears and no event is asserted as having happened; the essay runs in the generic present per the 2026-08-08 founder ruling, reaffirmed 2026-08-12. The man, the instructor, the kid at the next wheel, the retired guy two wheels down and the best man in the shop are types, not reported people.
 - Facts carried lightly: centering clay on the wheel is the first skill taught in wheel-throwing and is notoriously hard for beginners; improvement is steepest early in practice and flattens with expertise, a well-established pattern in skill acquisition; glazes change colour in the firing, so the result is often not the colour the student expected; community studios commonly return glaze-fired work a few weeks after it is made.

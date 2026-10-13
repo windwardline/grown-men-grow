@@ -941,3 +941,12 @@ Founder instruction, 2026-08-30: finish the work and stop carrying open items. E
 - **The corpus test is not due.** The marker reads a bank of 21 with the next measurement at 31. This note takes the bank to 25. No measurement was made.
 - **Five images were generated and three kept.** A palm-up glove failed on lacing drawn across the finger stalls, and a base failed on a crackle-grid texture. The prompts and reasons are in the note's production notes.
 - **Named for the founder in the draft report and approved with it:** the man let go after an ordinary error, rather than kept on, as the reader the piece serves worst; gate 2 ("so a man should ___") as the gate that came closest, in the off-field paragraph; and the one throw to first in the last section, kept because the scoring rule says it changes nothing.
+
+## 2026-10-13 — Field Note 26 approved at register position 25
+
+- **Status:** Approved by the founder as written — essay, platform pack, and artwork — the day after it was drafted, after the complete unit was delivered in chat, and moved into `content/` at register position 25. No Ghost slot is named and publication remains separately gated.
+- **Two approvals raced for one slot.** This note's approval change set (#238) was written for 24 while Field Note 25 was still in review. Field Note 25 was approved the same day and merged at 24 first, so this note takes 25. Nothing was reordered.
+- **Stance and opening.** `assignment`: whether he walks into a room as a beginner is his to decide. The witness pieces stay at 7, 10, 14, 17, 20 and 24. The `other` opening follows the `other` opening at 24, so no trade run grows.
+- **The corpus test is not due.** The marker reads a bank of 21 with the next measurement at 31. This note takes the bank to 26. No measurement was made.
+- **Two images were rejected on physical tells; three were kept.** A pottery wheel whose splash pan rendered as a brimming basin, and keys hovering at a bowl's rim with a ring through nothing. Both mechanisms were written out of frame. The prompts are in the note's production notes.
+- **Named for the founder in the draft report and approved with it:** "a pretty small country to have retired into at forty-four" was the closest call on test 8; the refusal to soften the cost of being a beginner was the closest call on test 2; and the man working sixty hours with no free evening was named as the reader it serves worst. All stand as approved.
