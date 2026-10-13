@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { canonicalSlug, extractNote, resolvePackForSlug, noteCopyForSlug } from '../lib/note-pack.mjs';
+import { CANONICAL_ORIGIN, canonicalSlug, extractNote, resolvePackForSlug, noteCopyForSlug } from '../lib/note-pack.mjs';
 
 const distribution = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..', 'content', 'distribution');
 
@@ -154,4 +154,11 @@ test('a malformed canonical on one pack does not break resolution of another', (
   writeFileSync(path.join(dir, 'good.md'), '---\ncanonical: https://grownmengrow.com/good/\n---\n');
   assert.equal(path.basename(resolvePackForSlug({ slug: 'good', dir })), 'good.md');
   assert.throws(() => resolvePackForSlug({ slug: 'missing', dir }), /No distribution pack/);
+});
+
+// queue-week-buffer.mjs builds each post's canonical link as
+// `${CANONICAL_ORIGIN}/${slug}/`. The reader must accept exactly what the
+// builder writes, or a host change would split them silently.
+test('the URL the queue script builds is one the reader accepts', () => {
+  assert.equal(canonicalSlug(`---\ncanonical: ${CANONICAL_ORIGIN}/the-lights-never-flickered/\n---\n`), 'the-lights-never-flickered');
 });

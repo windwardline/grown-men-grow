@@ -4126,6 +4126,14 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Files changed:** `scripts/lib/note-pack.mjs`, `scripts/test/note-pack.test.mjs`, `scripts/verify-repository.mjs`, `docs/technical/decision-log.md`, `docs/technical/founder-decisions.md`, `docs/technical/content-pipeline.md`, this log.
 
 **Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entry.
+## 2026-10-12 — Saturday draft task (Claude Code): Field Note 26 drafted, unit complete for review
+
+- Client: Claude Code desktop, scheduled task `gmg-saturday-draft`, fired Monday on catch-up. Draft only. Nothing published, sent, or posted.
+- Added `drafts/field-note-26-he-hasnt-been-bad-at-anything-in-years.md` (assignment, 939 words, `other` opening), `drafts/field-note-26-platforms.md`, `scripts/render-field-note-26.mjs` (centering mark), three photographs in `assets/source/editorial/` (stripped of provenance), the carousel, the feature image, the review sheet, and gate entries in `verify-repository.mjs` and `render-review-contact-sheets.mjs`.
+- The 2026-10-09 Saturday draft, "His Name Is Still on the Board," was not adopted because it duplicates Field Note 25 and would fail witness spacing at 25. It remains uncommitted in `_worktrees/gmg-saturday-draft-2026-10-09`. Field Note 25 landed in #232 during this run and cleared the `witness` commission. This change does not touch it.
+- Merged origin/main after #232. Conflicts in `verify-repository.mjs`, `render-review-contact-sheets.mjs` and this log were resolved by keeping both notes, and the feature-image count is now 28.
+- Next: founder review of Field Notes 25 and 26. The 2026-10-09 worktrees can be removed once the founder has seen this entry.
+
 
 ## 2026-10-12 — Review follow-ups to #233: the canonical reader pins its host and is the only reader
 
@@ -4133,10 +4141,12 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 
 **Fixed.** (1) `canonicalSlug` accepted any host. The regex it replaced pinned `grownmengrow.com`, so #233 had dropped the only check on a pack's canonical host. A pack pointing its canonical at Medium would have passed the subtitle gate. It now requires `https://grownmengrow.com` and exactly one path segment. (2) `resolvePackForSlug`, which the note tasks use, kept its own parse. One malformed canonical on any pack threw `ERR_INVALID_URL` and broke lookups for every slug. It now matches through `canonicalSlug`, exactly, so a bad pack yields no slug and nothing else breaks. (3) Both behaviours now have tests: a wrong host or scheme yields no slug, and a malformed pack does not stop another pack from resolving.
 
+**Second review round, also fixed here.** The re-run review of this PR found two minor gaps, both fixed in this change set. (4) The host was asserted twice: `queue-week-buffer.mjs` built Buffer's canonical link from its own literal. `CANONICAL_ORIGIN` is now exported and the queue script builds from it, and a test proves the reader accepts exactly the URL the builder writes. (5) A wrong-host canonical reported a missing dek. The gate now names the two causes separately, and each message was seen firing on a deliberately broken pack. `AGENTS.md` states the canonical-host precondition.
+
 **External state changed:** none.
 
-**Verification:** `note-pack` tests 16/16, including the live-catalogue resolution test. With Field Note 13's canonical pointed at medium.com on purpose, `verify-repository` failed on exactly that pack; restored, it passes. Gate results are in the PR.
+**Verification:** `note-pack` tests 17/17, including the live-catalogue resolution test. With Field Note 13's canonical pointed at medium.com on purpose, `verify-repository` failed on exactly that pack; restored, it passes. Gate results are in the PR.
 
-**Files changed:** `scripts/lib/note-pack.mjs`, `scripts/test/note-pack.test.mjs`, this log.
+**Files changed:** `scripts/lib/note-pack.mjs`, `scripts/test/note-pack.test.mjs`, `scripts/queue-week-buffer.mjs`, `scripts/verify-repository.mjs`, `AGENTS.md`, this log.
 
 **Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entry.

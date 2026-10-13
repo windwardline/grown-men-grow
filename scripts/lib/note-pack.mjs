@@ -23,7 +23,7 @@ export const DEFAULT_PACK_DIR = path.resolve(
 
 const CANONICAL_LINE = /^canonical(?:_url)?:\s*(\S+)/m;
 
-const CANONICAL_ORIGIN = 'https://grownmengrow.com';
+export const CANONICAL_ORIGIN = 'https://grownmengrow.com';
 
 /**
  * The slug a pack's canonical URL names, or undefined unless that URL is
