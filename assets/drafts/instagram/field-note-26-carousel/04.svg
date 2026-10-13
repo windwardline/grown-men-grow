@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn26-04-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn26-04-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn26-04-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 26 · 04 / 07</text>
+  <text x="74" y="280" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="58" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">A man who only does</text><text x="74" y="356" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="58" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">what he already does</text><text x="74" y="432" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="58" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">well has parked his</text><text x="74" y="508" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="58" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">whole life on the flat</text><text x="74" y="584" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="58" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">end of every curve</text><text x="74" y="660" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="58" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">he owns.</text>
+    <circle cx="700.0" cy="940.0" r="200.0" fill="none" stroke="#121416" stroke-width="7.0"/><circle cx="740.0" cy="916.0" r="124.0" fill="none" stroke="#71706B" stroke-width="10.0"/><circle cx="740.0" cy="916.0" r="88.0" fill="none" stroke="#71706B" stroke-width="8.4"/><path d="M786.3 892.4 A52.0 52.0 0 1 1 748.1 864.6" fill="none" stroke="#71706B" stroke-width="6.8" stroke-linecap="round"/><line x1="682.0" y1="940.0" x2="718.0" y2="940.0" stroke="#B14F3F" stroke-width="8.0" stroke-linecap="round"/>
+    <line x1="700.0" y1="922.0" x2="700.0" y2="958.0" stroke="#B14F3F" stroke-width="8.0" stroke-linecap="round"/>
+    <path d="M80 1222 C300 1202 520 1218 742 1210 C862 1206 942 1212 1002 1210" fill="none" stroke="#B14F3F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn26-04-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

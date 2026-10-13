@@ -4126,6 +4126,13 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Files changed:** `scripts/lib/note-pack.mjs`, `scripts/test/note-pack.test.mjs`, `scripts/verify-repository.mjs`, `docs/technical/decision-log.md`, `docs/technical/founder-decisions.md`, `docs/technical/content-pipeline.md`, this log.
 
 **Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entry.
+## 2026-10-12 — Saturday draft task (Claude Code): Field Note 26 drafted, unit complete for review
+
+- Client: Claude Code desktop, scheduled task `gmg-saturday-draft`, fired Monday on catch-up. Draft only. Nothing published, sent, or posted.
+- Added `drafts/field-note-26-he-hasnt-been-bad-at-anything-in-years.md` (assignment, 939 words, `other` opening), `drafts/field-note-26-platforms.md`, `scripts/render-field-note-26.mjs` (centering mark), three photographs in `assets/source/editorial/` (stripped of provenance), the carousel, the feature image, the review sheet, and gate entries in `verify-repository.mjs` and `render-review-contact-sheets.mjs`.
+- The 2026-10-09 Saturday draft, "His Name Is Still on the Board," was not adopted because it duplicates Field Note 25 and would fail witness spacing at 25. It remains uncommitted in `_worktrees/gmg-saturday-draft-2026-10-09`. Field Note 25 landed in #232 during this run and cleared the `witness` commission. This change does not touch it.
+- Merged origin/main after #232. Conflicts in `verify-repository.mjs`, `render-review-contact-sheets.mjs` and this log were resolved by keeping both notes, and the feature-image count is now 28.
+- Next: founder review of Field Notes 25 and 26. The 2026-10-09 worktrees can be removed once the founder has seen this entry.
 
 ## 2026-10-13 — Claude Code — Field Note 25 "He Stays at Short" founder-approved, register position 24
 
@@ -4139,4 +4146,4 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 
 **Verification:** results of all `gate:` lines are in the PR; the register checks (constraints, spacing, witness skeleton) run inside `verify-repository`.
 
-**Open, in order:** (1) Publication timing for position 24 is the Monday staging task's, in register order. (2) A parallel Saturday draft session holds Field Note 26 in worktree `gmg-saturday-draft-2026-10-12`; it lands at 25 or later, where a `witness` piece would fail the spacing check (24 to 25 is one slot). (3) The Medium tag "Baseball" is new to the bank; the Thursday import should confirm the autocomplete commits it.
+**Open, in order:** (1) Publication timing for position 24 is the Monday staging task's, in register order. (2) Field Note 26, an `assignment` draft in `drafts/`, awaits founder review; on approval it lands at 25, where its stance clears the spacing check. (3) The Medium tag "Baseball" is new to the bank; the Thursday import should confirm the autocomplete commits it.
