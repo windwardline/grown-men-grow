@@ -4230,6 +4230,20 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 
 **Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entry.
 
+## 2026-10-13 — Review follow-ups to #235: the host gate is in the contract, and the theme's copy is reconciled
+
+**Client:** Claude Code (desktop app), same session. #235 merged 2026-10-13 20:48Z with every check green. Its final review raised three non-blocking findings. All three held, and all three are fixed here.
+
+**Fixed.** (1) The host-literal check shipped without a sentence in `AGENTS.md`, the contract that names every gate. It is named now, with its `scripts/test/` exemption and the reason for it. (2) `theme/package.json` carried the host in its author url and email, and it ships in the published theme zip, so "lives once" was false outside `scripts/`. `verify-repository` now reconciles both fields against `CANONICAL_ORIGIN`; it was seen failing on each when they were changed on purpose, and passing once restored. (3) The new loop shadowed the module's `relative()` helper and dropped its path-separator normalisation. It now uses the helper.
+
+**Correction to the 2026-10-12 entry for #233:** its third-round paragraph was written on 2026-10-13 into an entry dated the 12th, while that entry was still unmerged. The work it records happened on the 13th.
+
+**External state changed:** none.
+
+**Files changed:** `scripts/verify-repository.mjs`, `AGENTS.md`, this log.
+
+**Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entries.
+
 ## 2026-10-13 — Claude Code — Field Note 26 "He Hasn't Been Bad at Anything in Years" founder-approved, register position 25
 
 **Client:** Claude Code (desktop app). Took over PR #238, which a parallel session opened for this approval at register position 24 while Field Note 25 was still in review. Field Note 25 merged at 24 first (#236), so #238 conflicted in five files. Its half-finished merge in `gmg-fn26-approval` was aborted and redone against current `main`.
