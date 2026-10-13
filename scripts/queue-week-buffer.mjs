@@ -18,6 +18,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { ghostAdmin } from './lib/ghost-admin.mjs';
+import { CANONICAL_ORIGIN } from './lib/note-pack.mjs';
 import { bufferGraphql, bufferPosts, BUFFER_ORGANIZATION_ID } from './lib/buffer-api.mjs';
 import { resolvePackForSlug } from './lib/note-pack.mjs';
 import { buildWeekBufferPosts, carouselLabel } from './lib/week-buffer-posts.mjs';
@@ -39,7 +40,7 @@ const post = ghost.posts?.[0];
 if (!post) fail(`Ghost has no post with slug ${slug}.`);
 if (!['scheduled', 'published'].includes(post.status)) fail(`Ghost post ${slug} is ${post.status}, not scheduled or published.`);
 if (post.status === 'scheduled' && !post.newsletter) fail(`Ghost post ${slug} is scheduled with no newsletter bound; fix that first.`);
-const canonicalUrl = `https://grownmengrow.com/${slug}/`;
+const canonicalUrl = `${CANONICAL_ORIGIN}/${slug}/`;
 
 // 2. Build every post from approved copy before touching the network.
 const packPath = resolvePackForSlug({ slug });
