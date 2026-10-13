@@ -23,15 +23,20 @@ export const DEFAULT_PACK_DIR = path.resolve(
 
 const CANONICAL_LINE = /^canonical(?:_url)?:\s*(\S+)/m;
 
+const CANONICAL_ORIGIN = 'https://grownmengrow.com';
+
 /**
- * The single path segment a pack's canonical URL names, or undefined when it
- * names none, several, or is not a URL. Undefined rather than a guess, so a
- * caller that needs a slug can fail closed.
+ * The slug a pack's canonical URL names, or undefined unless that URL is
+ * exactly one path segment on https://grownmengrow.com. Ghost is the only
+ * canonical surface, so a pack pointing anywhere else names no essay.
+ * Undefined rather than a guess, so callers can fail closed.
  */
 export function canonicalSlug(markdown) {
   const canonical = CANONICAL_LINE.exec(markdown)?.[1];
   if (!canonical || !URL.canParse(canonical)) return undefined;
-  const segments = new URL(canonical).pathname.split('/').filter(Boolean);
+  const url = new URL(canonical);
+  if (url.origin !== CANONICAL_ORIGIN) return undefined;
+  const segments = url.pathname.split('/').filter(Boolean);
   return segments.length === 1 ? segments[0] : undefined;
 }
 
@@ -43,13 +48,10 @@ export function resolvePackForSlug({ slug, dir = DEFAULT_PACK_DIR }) {
   const matches = readdirSync(dir)
     .filter((name) => name.endsWith('.md'))
     .sort()
-    .filter((name) => {
-      const canonical = CANONICAL_LINE.exec(readFileSync(path.join(dir, name), 'utf8'))?.[1];
-      if (!canonical) return false;
-      // Whole path segment only: `rest-is-not-a-reward` must not match
-      // `rest-is-not-a-reward-yet`.
-      return new URL(canonical).pathname.split('/').filter(Boolean).includes(slug);
-    });
+    // Exact match through the one reader: `rest-is-not-a-reward` never matches
+    // `rest-is-not-a-reward-yet`, and a malformed canonical on another pack
+    // yields no slug instead of throwing.
+    .filter((name) => canonicalSlug(readFileSync(path.join(dir, name), 'utf8')) === slug);
 
   if (matches.length === 0) throw new Error(`No distribution pack in ${dir} has canonical slug "${slug}".`);
   if (matches.length > 1) {

@@ -4126,3 +4126,17 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Files changed:** `scripts/lib/note-pack.mjs`, `scripts/test/note-pack.test.mjs`, `scripts/verify-repository.mjs`, `docs/technical/decision-log.md`, `docs/technical/founder-decisions.md`, `docs/technical/content-pipeline.md`, this log.
 
 **Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entry.
+
+## 2026-10-12 — Review follow-ups to #233: the canonical reader pins its host and is the only reader
+
+**Client:** Claude Code (desktop app), same session. #233's advisory review failed on its first run: the reviewer returned `is_error` after 19 seconds, a runner-side failure that said nothing about the change. It was re-run, and it passed with three findings. All three held, and all three are fixed here.
+
+**Fixed.** (1) `canonicalSlug` accepted any host. The regex it replaced pinned `grownmengrow.com`, so #233 had dropped the only check on a pack's canonical host. A pack pointing its canonical at Medium would have passed the subtitle gate. It now requires `https://grownmengrow.com` and exactly one path segment. (2) `resolvePackForSlug`, which the note tasks use, kept its own parse. One malformed canonical on any pack threw `ERR_INVALID_URL` and broke lookups for every slug. It now matches through `canonicalSlug`, exactly, so a bad pack yields no slug and nothing else breaks. (3) Both behaviours now have tests: a wrong host or scheme yields no slug, and a malformed pack does not stop another pack from resolving.
+
+**External state changed:** none.
+
+**Verification:** `note-pack` tests 16/16, including the live-catalogue resolution test. With Field Note 13's canonical pointed at medium.com on purpose, `verify-repository` failed on exactly that pack; restored, it passes. Gate results are in the PR.
+
+**Files changed:** `scripts/lib/note-pack.mjs`, `scripts/test/note-pack.test.mjs`, this log.
+
+**Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entry.

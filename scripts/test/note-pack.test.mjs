@@ -133,3 +133,25 @@ test('canonicalSlug returns undefined, never a guess, when there is no single sl
   assert.equal(canonicalSlug('---\ncanonical: https://grownmengrow.com/a/b/\n---\n'), undefined);
   assert.equal(canonicalSlug('---\ncanonical: not a url\n---\n'), undefined);
 });
+
+// The regex canonicalSlug replaced pinned grownmengrow.com. A pack whose
+// canonical points at another surface (a Medium URL pasted by mistake) must
+// not yield a slug, or the subtitle gate passes a pack the Medium import
+// would then point at the wrong place.
+test('canonicalSlug refuses any host or scheme but https://grownmengrow.com', () => {
+  assert.equal(canonicalSlug('---\ncanonical: https://medium.com/rest-is-not-a-reward\n---\n'), undefined);
+  assert.equal(canonicalSlug('---\ncanonical: http://grownmengrow.com/rest-is-not-a-reward/\n---\n'), undefined);
+  assert.equal(canonicalSlug('---\ncanonical: mailto:rest-is-not-a-reward\n---\n'), undefined);
+});
+
+// One malformed pack must not take resolution down for every other slug: the
+// note tasks look up a valid slug and previously died on a TypeError thrown
+// from inside the filter while parsing an unrelated pack.
+test('a malformed canonical on one pack does not break resolution of another', (t) => {
+  const dir = mkdtempSync(path.join(tmpdir(), 'gmg-packs-'));
+  t.after(() => rmSync(dir, { recursive: true, force: true }));
+  writeFileSync(path.join(dir, 'bad.md'), '---\ncanonical: not a url\n---\n');
+  writeFileSync(path.join(dir, 'good.md'), '---\ncanonical: https://grownmengrow.com/good/\n---\n');
+  assert.equal(path.basename(resolvePackForSlug({ slug: 'good', dir })), 'good.md');
+  assert.throws(() => resolvePackForSlug({ slug: 'missing', dir }), /No distribution pack/);
+});
