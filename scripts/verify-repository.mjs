@@ -614,11 +614,20 @@ for (const script of scriptFiles) await checkImportsResolve(script);
 // Tests keep their literals, so a fixture can still catch the constant moving.
 const publicationHost = new URL(CANONICAL_ORIGIN).host;
 for (const script of scriptFiles) {
-  const relative = path.relative(root, script);
-  if (relative === 'scripts/lib/note-pack.mjs' || relative.startsWith('scripts/test/')) continue;
+  const file = relative(script);
+  if (file === 'scripts/lib/note-pack.mjs' || file.startsWith('scripts/test/')) continue;
   if ((await readFile(script, 'utf8')).includes(publicationHost)) {
-    fail(`${relative} carries the publication host "${publicationHost}" as a literal; import CANONICAL_ORIGIN from scripts/lib/note-pack.mjs instead.`);
+    fail(`${file} carries the publication host "${publicationHost}" as a literal; import CANONICAL_ORIGIN from scripts/lib/note-pack.mjs instead.`);
   }
+}
+// The theme's author block is the one copy JSON cannot import, and it ships in
+// the published theme zip, so it is reconciled against the constant instead.
+const themeAuthor = JSON.parse(await readFile(path.join(root, 'theme/package.json'), 'utf8')).author ?? {};
+if (!URL.canParse(themeAuthor.url ?? '') || new URL(themeAuthor.url).origin !== CANONICAL_ORIGIN) {
+  fail(`theme/package.json gives the author url as "${themeAuthor.url}", but the publication is ${CANONICAL_ORIGIN}.`);
+}
+if (themeAuthor.email?.split('@')[1] !== publicationHost) {
+  fail(`theme/package.json gives the author email as "${themeAuthor.email}", which is not on the publication host ${publicationHost}.`);
 }
 
 const themeResult = spawnSync(process.execPath, ['scripts/verify-ghost-theme.mjs'], {
