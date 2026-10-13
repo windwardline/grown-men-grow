@@ -6,7 +6,7 @@ import { lstat, readFile, readdir } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 
 import { parseHold } from './lib/hold-state.mjs';
-import { canonicalSlug } from './lib/note-pack.mjs';
+import { CANONICAL_ORIGIN, canonicalSlug } from './lib/note-pack.mjs';
 import { DEFAULT_PUBLISH_WEEKDAY, NOTE_TASK_SLOT_WEEKDAYS } from './lib/note-slot.mjs';
 import { tradeRunFaults, witnessSkeletonFaults, witnessSpacingFaults } from './lib/register-spacing.mjs';
 import path from 'node:path';
@@ -608,6 +608,18 @@ const scriptFiles = tracked
   .map((file) => path.join(root, file));
 for (const script of scriptFiles) checkNodeSyntax(script);
 for (const script of scriptFiles) await checkImportsResolve(script);
+// The publication host is declared once, as CANONICAL_ORIGIN. A second literal
+// is how queue-week-buffer.mjs built Buffer's canonical link until 2026-10-12,
+// and a host change would have split it from the reader with nothing noticing.
+// Tests keep their literals, so a fixture can still catch the constant moving.
+const publicationHost = new URL(CANONICAL_ORIGIN).host;
+for (const script of scriptFiles) {
+  const relative = path.relative(root, script);
+  if (relative === 'scripts/lib/note-pack.mjs' || relative.startsWith('scripts/test/')) continue;
+  if ((await readFile(script, 'utf8')).includes(publicationHost)) {
+    fail(`${relative} carries the publication host "${publicationHost}" as a literal; import CANONICAL_ORIGIN from scripts/lib/note-pack.mjs instead.`);
+  }
+}
 
 const themeResult = spawnSync(process.execPath, ['scripts/verify-ghost-theme.mjs'], {
   cwd: root,
@@ -887,8 +899,10 @@ for (const [label, file] of packs) {
   const mediumLines = lines.slice(mediumStart, nextSection === -1 ? lines.length : nextSection);
   const packSlug = canonicalSlug(text);
   const subtitleLine = mediumLines.find((line) => mediumSubtitleLabel.test(line));
-  if (!packSlug || !deks.has(packSlug)) {
-    fail(`${file} names no canonical slug with a dek on record, so ${label}'s Medium subtitle cannot be checked against it.`);
+  if (!packSlug) {
+    fail(`${file} has no canonical that names one essay: ${label}'s canonical must be ${CANONICAL_ORIGIN}/<slug>/, because Ghost is the only canonical surface.`);
+  } else if (!deks.has(packSlug)) {
+    fail(`${file} names the slug "${packSlug}", but no essay under content/ declares that slug with a dek, so ${label}'s Medium subtitle cannot be checked.`);
   } else if (!subtitleLine) {
     fail(`${file} gives no Medium subtitle for ${label}; it should read the essay's dek.`);
   } else {

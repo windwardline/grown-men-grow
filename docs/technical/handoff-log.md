@@ -4211,3 +4211,22 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **External state changed:** none.
 
 **Files changed:** `docs/technical/substack-notes.md`, `docs/technical/publication-order.md` and this log, through the merge.
+
+
+## 2026-10-12 — Review follow-ups to #233: the canonical reader pins its host and is the only reader
+
+**Client:** Claude Code (desktop app), same session. #233's advisory review failed on its first run: the reviewer returned `is_error` after 19 seconds, a runner-side failure that said nothing about the change. It was re-run, and it passed with three findings. All three held, and all three are fixed here.
+
+**Fixed.** (1) `canonicalSlug` accepted any host. The regex it replaced pinned `grownmengrow.com`, so #233 had dropped the only check on a pack's canonical host. A pack pointing its canonical at Medium would have passed the subtitle gate. It now requires `https://grownmengrow.com` and exactly one path segment. (2) `resolvePackForSlug`, which the note tasks use, kept its own parse. One malformed canonical on any pack threw `ERR_INVALID_URL` and broke lookups for every slug. It now matches through `canonicalSlug`, exactly, so a bad pack yields no slug and nothing else breaks. (3) Both behaviours now have tests: a wrong host or scheme yields no slug, and a malformed pack does not stop another pack from resolving.
+
+**Second review round, also fixed here.** The re-run review of this PR found two minor gaps, both fixed in this change set. (4) The host was asserted twice: `queue-week-buffer.mjs` built Buffer's canonical link from its own literal. `CANONICAL_ORIGIN` is now exported and the queue script builds from it, and a test checks that the reader accepts the URL shape the builder uses. (5) A wrong-host canonical reported a missing dek. The gate now names the two causes separately, and each message was seen firing on a deliberately broken pack. `AGENTS.md` states the canonical-host precondition.
+
+**Third review round, also fixed here.** That test rebuilds the queue script's template rather than reading it, so it cannot tell if the script grows its own host again. `verify-repository` now fails any tracked script outside `note-pack.mjs` and `scripts/test/` that carries the publication host, derived from `CANONICAL_ORIGIN`; it was seen firing on a planted literal. `resolvePackForSlug` now names any pack whose canonical yields no slug, instead of reporting only that no pack matched, with a test.
+
+**External state changed:** none.
+
+**Verification:** `note-pack` tests 18/18, including the live-catalogue resolution test. With Field Note 13's canonical pointed at medium.com on purpose, `verify-repository` failed on exactly that pack; restored, it passes. Gate results are in the PR.
+
+**Files changed:** `scripts/lib/note-pack.mjs`, `scripts/test/note-pack.test.mjs`, `scripts/queue-week-buffer.mjs`, `scripts/verify-repository.mjs`, `AGENTS.md`, this log.
+
+**Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entry.
