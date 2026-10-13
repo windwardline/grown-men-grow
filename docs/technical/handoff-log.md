@@ -4258,3 +4258,17 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **External state changed:** none. Two public Medium topic pages were read; nothing was written. No Ghost, Buffer, Substack, or account change.
 
 **Open, in order:** (1) Publication timing for positions 24 and 25 is the Monday staging task's, in register order. (2) No active draft remains in `drafts/`.
+
+## 2026-10-13 — `verify-substack-notes` folds the composer's smart quotes
+
+**Client:** Claude Code (desktop app), continuing the Tuesday publish-check session.
+
+**Defect.** Substack's composer turns typed straight quotes into curly ones. Note 1 (`c-360057758`) went out with the pack's "They're" as "They’re". The checker then called a note posted exactly as approved a verbatim breach. The reverse direction had the same hole. A pending row whose copy went out curly would not have matched, so the stale-register check, the one this register exists for, would have passed it in silence. Earlier notes carried no apostrophes. Saturday's Note 2 ("he's") would have hit both.
+
+**Fix.** `foldComposerQuotes` in `scripts/lib/substack-notes.mjs` maps ‘ ’ to ' and “ ” to ", and nothing else. It is applied to both sides of both comparisons. Three tests cover it: curly quotes alone pass; curly quotes plus a changed word still fail; a pending row whose copy went out curly still fails as stale. The approved copy is unchanged. `AGENTS.md` now says what "byte-for-byte" excepts.
+
+**Verification:** run against #231's register and the live feed, the fixed checker reconciles every row, including `ask-for-help-while-its-still-cheap#1`. Gate results are in the PR.
+
+**External state changed:** none.
+
+**Files changed:** `scripts/lib/substack-notes.mjs`, `scripts/test/substack-notes.test.mjs`, `AGENTS.md`, this log.
