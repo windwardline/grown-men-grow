@@ -4092,3 +4092,10 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Files changed:** `scripts/verify-repository.mjs`, `content/distribution/field-note-07-platforms.md`, `content/distribution/field-note-11-platforms.md`, `content/distribution/field-note-13-platforms.md`, `docs/technical/decision-log.md`, `docs/technical/founder-decisions.md`, `AGENTS.md`, this log. The entry above was written on 2026-10-08 in the shared checkout and lands here; its open item (1) is closed by this change set and its subtitle note is resolved by the ruling.
 
 **Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entry on `staging/week-09-ask-for-help`.
+
+## 2026-10-12 — Saturday draft task (Claude Code): Field Note 26 drafted, unit complete for review
+
+- Client: Claude Code desktop, scheduled task `gmg-saturday-draft`, fired Monday on catch-up. Draft only. Nothing published, sent, or posted.
+- Added `drafts/field-note-26-he-hasnt-been-bad-at-anything-in-years.md` (assignment, 939 words, `other` opening), `drafts/field-note-26-platforms.md`, `scripts/render-field-note-26.mjs` (centering mark), three photographs in `assets/source/editorial/` (stripped of provenance), the carousel, the feature image, the review sheet, and gate entries in `verify-repository.mjs` and `render-review-contact-sheets.mjs`.
+- The 2026-10-09 Saturday draft, "His Name Is Still on the Board," was not adopted because it duplicates Field Note 25 and would fail witness spacing at 25. It remains uncommitted in `_worktrees/gmg-saturday-draft-2026-10-09`. Field Note 25 also remains uncommitted in `_worktrees/gmg-wednesday-draft-2026-10-09`. It owns the `witness` commission, which this change leaves untouched.
+- Next: land Field Note 25. Whichever of the two PRs merges second must reconcile the feature-image count (26 → 28).
