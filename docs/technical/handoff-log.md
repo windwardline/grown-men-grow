@@ -4245,6 +4245,20 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 
 **Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entries.
 
+## 2026-10-13 — Claude Code — Field Note 26 "He Hasn't Been Bad at Anything in Years" founder-approved, register position 25
+
+**Client:** Claude Code (desktop app). Took over PR #238, which a parallel session opened for this approval at register position 24 while Field Note 25 was still in review. Field Note 25 merged at 24 first (#236), so #238 conflicted in five files. Its half-finished merge in `gmg-fn26-approval` was aborted and redone against current `main`.
+
+**Scope completed.** Kept #238's moves: the essay is at `content/field-notes/he-hasnt-been-bad-at-anything-in-years.md` and the pack at `content/distribution/field-note-26-platforms.md`, both `status: founder-approved` with `publication_authorized: false`. Resolved every conflict toward `main` and re-applied this note at **25**, projected 2027-02-02. That covers the register row and its section, the decision-log entry, `drafts/README.md` (no active draft), a must-live-under-content gate placed after Field Note 25's, the note's origin, approval and spacing lines, and the render-script header. The 24-claiming text from #238 does not survive anywhere. Witness pieces stay at 7, 10, 14, 17, 20 and 24; this note's `other` opening follows `other` at 24.
+
+**Field Note 25's Medium tags, checked rather than handed on.** The previous entry left "confirm the Baseball tag" open for someone else; the import is this agent's job, so the check is too. Read live on medium.com: `Baseball` is an established topic (38K stories, 14.9K followers) and so is `Forgiveness` (16.3K stories), so neither will commit as a new tag. `Baseball` is a prefix of larger topics, so it is handled like every short tag in the import: Down to the exact match, Return, then the chips read back before publishing.
+
+**Files changed:** `content/field-notes/he-hasnt-been-bad-at-anything-in-years.md`, `content/distribution/field-note-26-platforms.md` (moved from `drafts/` by #238), `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `drafts/README.md`, `scripts/render-field-note-26.mjs` (comment only), `scripts/verify-repository.mjs`, and this log.
+
+**External state changed:** none. Two public Medium topic pages were read; nothing was written. No Ghost, Buffer, Substack, or account change.
+
+**Open, in order:** (1) Publication timing for positions 24 and 25 is the Monday staging task's, in register order. (2) No active draft remains in `drafts/`.
+
 ## 2026-10-13 — `verify-substack-notes` folds the composer's smart quotes
 
 **Client:** Claude Code (desktop app), continuing the Tuesday publish-check session.
