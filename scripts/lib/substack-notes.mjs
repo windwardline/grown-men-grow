@@ -19,11 +19,22 @@
 // until now nothing checked it after the fact; a note edited on the platform
 // after posting would have left no trace at all.
 //
+// One substitution is folded before comparing, and only one: Substack's
+// composer turns typed straight quotes into curly ones, so the pack's
+// "They're" went out as "They’re" on 2026-10-13 and read as a breach. Folding
+// is applied to both sides and in both directions; every other byte still
+// counts.
+//
 // Pure. The network call lives in the runner.
 
 const ROW = /^\|\s*`([a-z0-9-]+)`\s*\|\s*(\d+)\s*\|\s*([^|]*?)\s*\|\s*([^|]*?)\s*\|\s*([^|]*?)\s*\|$/gm;
 
 export const STATES = new Set(['posted', 'missed', '']);
+
+/** The composer's smart-quote substitution, undone. Nothing else is normalised. */
+export function foldComposerQuotes(text) {
+  return text.replace(/[‘’]/g, "'").replace(/[“”]/g, '"');
+}
 
 /** Slot wall-clock, as written in the register: `YYYY-MM-DD HH:MM` in ET. */
 const SLOT = /^(\d{4})-(\d{2})-(\d{2})\s+(\d{2}):(\d{2})$/;
@@ -148,7 +159,7 @@ export function reconcileNotes({ rows, copy, live }) {
         );
         continue;
       }
-      if (liveNote.body !== approved) {
+      if (foldComposerQuotes(liveNote.body) !== foldComposerQuotes(approved)) {
         failures.push(
           `${key}: ${row.permalink} is live but its text is not the pack's verbatim copy `
           + `(live ${liveNote.body.length} chars, pack ${approved.length}).`,
@@ -167,7 +178,7 @@ export function reconcileNotes({ rows, copy, live }) {
     // Not claimed as posted: the register says this note is missed or still
     // pending. The live feed must agree. This direction is the one that was
     // wrong in main twice, and it is the reason the check is bidirectional.
-    const stray = live.find((n) => n.body === approved);
+    const stray = live.find((n) => foldComposerQuotes(n.body) === foldComposerQuotes(approved));
     if (stray) {
       const claim = row.state === 'missed' ? 'missed' : 'still pending';
       failures.push(

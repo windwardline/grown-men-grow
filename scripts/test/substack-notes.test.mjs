@@ -86,6 +86,35 @@ test('a trailing space in the live text is still a verbatim breach, not a near-e
   assert.ok(failures.some((f) => /verbatim/i.test(f)), failures.join('\n'));
 });
 
+// Substack's composer turns typed straight quotes into curly ones. On
+// 2026-10-13 the pack's "They're" went out as "They’re", and the check called
+// a note posted exactly as approved a verbatim breach.
+test('the composer turning straight quotes curly is not a verbatim breach', () => {
+  const rows = parseRegister(TABLE);
+  const copy = { ...COPY, 'essay-one#1': `They're "first," verbatim.` };
+  const live = LIVE.map((n) => (n.id === '1001' ? { ...n, body: 'They’re “first,” verbatim.' } : n));
+  const { failures } = reconcileNotes({ rows, copy, live });
+  assert.deepEqual(failures, []);
+});
+
+test('quote folding hides no other edit: a curly quote plus a changed word still fails', () => {
+  const rows = parseRegister(TABLE);
+  const copy = { ...COPY, 'essay-one#1': `They're first, verbatim.` };
+  const live = LIVE.map((n) => (n.id === '1001' ? { ...n, body: 'They’re first, improved.' } : n));
+  const { failures } = reconcileNotes({ rows, copy, live });
+  assert.ok(failures.some((f) => /verbatim/i.test(f)), failures.join('\n'));
+});
+
+// The direction a byte comparison would silently lose: a pending row whose
+// copy is already live with curly quotes must still read as stale.
+test('a pending row whose copy went out with curly quotes still fails as stale', () => {
+  const rows = parseRegister(TABLE);
+  const copy = { ...COPY, 'essay-two#2': `Fourth note, he's verbatim.` };
+  const live = [...LIVE, { id: '1004', date: '2026-09-19T22:46:00.000Z', body: 'Fourth note, he’s verbatim.' }];
+  const { failures } = reconcileNotes({ rows, copy, live });
+  assert.ok(failures.some((f) => /essay-two/.test(f) && /c-1004/.test(f)), failures.join('\n'));
+});
+
 // The bug this whole register exists for. On 2026-09-08 and again on
 // 2026-09-12 the handoff log asserted a note was unposted, merged that claim to
 // main, and the founder posted minutes later. Nothing could detect it, because
