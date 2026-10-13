@@ -18,8 +18,8 @@ import {
   writeAsset,
 } from "./lib/editorial-collage.mjs";
 
-// Field Note 25 — "He Stays at Short". Draft, awaiting founder review; no
-// register position and no Ghost slot named.
+// Field Note 25 — "He Stays at Short". Founder-approved 2026-10-13;
+// register position 24, no Ghost slot named.
 //
 // Signature vocabulary: a hand-drawn scorebook-box mark — a square scorebook
 // cell with a small diamond inscribed in it and a run's path drawn around the

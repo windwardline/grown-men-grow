@@ -4126,3 +4126,17 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Files changed:** `scripts/lib/note-pack.mjs`, `scripts/test/note-pack.test.mjs`, `scripts/verify-repository.mjs`, `docs/technical/decision-log.md`, `docs/technical/founder-decisions.md`, `docs/technical/content-pipeline.md`, this log.
 
 **Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entry.
+
+## 2026-10-13 — Claude Code — Field Note 25 "He Stays at Short" founder-approved, register position 24
+
+**Client:** Claude Code (desktop app), continuing the `gmg-wednesday-draft` session after the founder replied "Approved" to the delivered unit. **Branch:** `claude/field-note-25-approved`.
+
+**Scope completed.** Essay and platform pack moved from `drafts/` to `content/field-notes/he-stays-at-short.md` and `content/distribution/field-note-25-platforms.md`, with `status: founder-approved`, approval dates, and `publication_authorized: false` (approval covers the work, not a slot). Appended at register position 24, projected 2027-01-26, with a section recording why. Render-script header, decision log, and `drafts/README.md` updated. A must-live-under-content gate was added to `verify-repository.mjs` and broken on purpose by re-tracking the pack under `drafts/`; it failed by name before this was committed.
+
+**Files changed:** `content/field-notes/he-stays-at-short.md` and `content/distribution/field-note-25-platforms.md` (moved from `drafts/`), `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `drafts/README.md`, `scripts/render-field-note-25.mjs` (comment only), `scripts/verify-repository.mjs`, and this log.
+
+**External state changed:** none. No Ghost post, Buffer queue, Medium story, Substack note, or account touched. Nothing published, sent, or posted.
+
+**Verification:** results of all `gate:` lines are in the PR; the register checks (constraints, spacing, witness skeleton) run inside `verify-repository`.
+
+**Open, in order:** (1) Publication timing for position 24 is the Monday staging task's, in register order. (2) A parallel Saturday draft session holds Field Note 26 in worktree `gmg-saturday-draft-2026-10-12`; it lands at 25 or later, where a `witness` piece would fail the spacing check (24 to 25 is one slot). (3) The Medium tag "Baseball" is new to the bank; the Thursday import should confirm the autocomplete commits it.
