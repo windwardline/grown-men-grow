@@ -53,7 +53,18 @@ export function resolvePackForSlug({ slug, dir = DEFAULT_PACK_DIR }) {
     // yields no slug instead of throwing.
     .filter((name) => canonicalSlug(readFileSync(path.join(dir, name), 'utf8')) === slug);
 
-  if (matches.length === 0) throw new Error(`No distribution pack in ${dir} has canonical slug "${slug}".`);
+  if (matches.length === 0) {
+    // A pack whose canonical yields no slug is still in the directory, so a
+    // bare "not found" would send the operator looking for a file that exists.
+    const unreadable = readdirSync(dir)
+      .filter((name) => name.endsWith('.md'))
+      .sort()
+      .filter((name) => canonicalSlug(readFileSync(path.join(dir, name), 'utf8')) === undefined);
+    const cause = unreadable.length === 0
+      ? ''
+      : ` ${unreadable.join(', ')} name no essay: a canonical must be ${CANONICAL_ORIGIN}/<slug>/.`;
+    throw new Error(`No distribution pack in ${dir} has canonical slug "${slug}".${cause}`);
+  }
   if (matches.length > 1) {
     throw new Error(`Slug "${slug}" matches more than one distribution pack: ${matches.join(', ')}.`);
   }

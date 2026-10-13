@@ -162,3 +162,16 @@ test('a malformed canonical on one pack does not break resolution of another', (
 test('the URL the queue script builds is one the reader accepts', () => {
   assert.equal(canonicalSlug(`---\ncanonical: ${CANONICAL_ORIGIN}/the-lights-never-flickered/\n---\n`), 'the-lights-never-flickered');
 });
+
+// A pack whose canonical points elsewhere is still sitting in the directory.
+// "No distribution pack has slug X" sends the operator looking for a file
+// that exists, so the resolver names the packs it could not read instead.
+test('a wrong-host canonical is named as the cause, not reported as a missing pack', (t) => {
+  const dir = mkdtempSync(path.join(tmpdir(), 'gmg-packs-'));
+  t.after(() => rmSync(dir, { recursive: true, force: true }));
+  writeFileSync(path.join(dir, 'pasted.md'), '---\ncanonical: https://medium.com/@x/some-essay-abc123\n---\n');
+  assert.throws(
+    () => resolvePackForSlug({ slug: 'some-essay', dir }),
+    (error) => /pasted\.md/.test(error.message) && error.message.includes(`${CANONICAL_ORIGIN}/<slug>/`),
+  );
+});

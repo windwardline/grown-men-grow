@@ -576,6 +576,10 @@ if (tracked.includes('drafts/field-note-24-the-stake-was-supposed-to-come-off.md
   || tracked.includes('drafts/field-note-24-platforms.md')) {
   fail('Approved Field Note 24 and its platform pack must live under content/, not drafts/.');
 }
+if (tracked.includes('drafts/field-note-25-he-stays-at-short.md')
+  || tracked.includes('drafts/field-note-25-platforms.md')) {
+  fail('Approved Field Note 25 and its platform pack must live under content/, not drafts/.');
+}
 
 const launchPackage = await readFile(path.join(root, 'content/instagram/launch-package.md'), 'utf8');
 const captionSource = launchPackage.split('\n## 8. Approved discovery classifications')[0];
@@ -604,6 +608,18 @@ const scriptFiles = tracked
   .map((file) => path.join(root, file));
 for (const script of scriptFiles) checkNodeSyntax(script);
 for (const script of scriptFiles) await checkImportsResolve(script);
+// The publication host is declared once, as CANONICAL_ORIGIN. A second literal
+// is how queue-week-buffer.mjs built Buffer's canonical link until 2026-10-12,
+// and a host change would have split it from the reader with nothing noticing.
+// Tests keep their literals, so a fixture can still catch the constant moving.
+const publicationHost = new URL(CANONICAL_ORIGIN).host;
+for (const script of scriptFiles) {
+  const relative = path.relative(root, script);
+  if (relative === 'scripts/lib/note-pack.mjs' || relative.startsWith('scripts/test/')) continue;
+  if ((await readFile(script, 'utf8')).includes(publicationHost)) {
+    fail(`${relative} carries the publication host "${publicationHost}" as a literal; import CANONICAL_ORIGIN from scripts/lib/note-pack.mjs instead.`);
+  }
+}
 
 const themeResult = spawnSync(process.execPath, ['scripts/verify-ghost-theme.mjs'], {
   cwd: root,

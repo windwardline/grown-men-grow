@@ -47,8 +47,8 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 4 | `rest-is-not-a-reward` | 2026-09-08 | published |
 | 5 | `you-cant-outwork-a-wrong-direction` | 2026-09-15 | published |
 | 6 | `nobody-rigs-to-the-breaking-strength` | 2026-09-22 | published |
-| 7 | `the-lights-never-flickered` | 2026-09-29 | scheduled |
-| 8 | `ask-for-help-while-its-still-cheap` | 2026-10-06 | |
+| 7 | `the-lights-never-flickered` | 2026-09-29 | published |
+| 8 | `ask-for-help-while-its-still-cheap` | 2026-10-06 | published |
 | 9 | `you-can-walk-on-it-tomorrow` | 2026-10-13 | |
 | 10 | `somebody-is-up-on-his-ladder` | 2026-10-20 | |
 | 11 | `comparison-is-a-bad-map` | 2026-10-27 | |
@@ -64,6 +64,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 21 | `he-writes-both-parts` | 2027-01-05 | |
 | 22 | `everything-looks-straight-in-primer` | 2027-01-12 | |
 | 23 | `the-stake-was-supposed-to-come-off` | 2027-01-19 | |
+| 24 | `he-stays-at-short` | 2027-01-26 | |
 
 ## Why this order and not another
 
@@ -112,6 +113,12 @@ The register was read before the subject was chosen, as it was for position 21. 
 `the-stake-was-supposed-to-come-off` was approved 2026-09-27 and appended at 23. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note.
 
 This is the first append where the spacing check, rather than the subject, ruled out a stance. The corpus had tilted mildly back toward obligation, and on that alone the slot called for `witness`; but witness pieces sit at 7, 10, 14, 17 and 20, and a fifth-gap of three at 23 would have put four on an exact beat. The note is `assignment`. Its `trade` opening follows two `other` openings at 21 and 22, a run of one. A `witness` piece clears at 24 or later.
+
+### Position 24 was appended, and the commission placed it
+
+`he-stays-at-short` was approved 2026-10-13 and appended at 24. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note.
+
+This is the first note written to a standing commission since the spacing check landed, and the slot was chosen before the subject was. The founder set `witness` on 2026-09-27 after position 23 could not take one. At 24 the witness pieces sit at 7, 10, 14, 17, 20 and 24, gaps of three, four, three, three and four, so no four fall on an exact beat and the nearest pair is four apart. Its `other` opening follows the `trade` opening at 23, a run of one. The next witness piece clears at 27 or later.
 
 ### The spacing reorder of 2026-09-16, and why the rules are now checked
 

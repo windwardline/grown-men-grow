@@ -1,9 +1,9 @@
 ---
 essay: He Stays at Short
 canonical: https://grownmengrow.com/he-stays-at-short/ (live only after publication)
-status: draft — NOT founder-approved
-approved: none — awaiting founder review alongside the essay and artwork
-publication_authorized: false — NOT authorized; no slot, no posting
+status: founder-approved
+approved: 2026-10-13 — approved as written alongside the essay and artwork
+publication_authorized: false — approval covers the copy, not a slot; posting remains separately gated
 image_rule: per-article — this pack may use only Field Note 25 imagery: infield-glove-raked-dirt, base-chalk-line-low-sun, pitchers-mound-rosin-bag
 stance_note: witness — every excerpt keeps him as the one being kept on; none turns to the reader or gives him a move, and the closing note ends on the lineup card
 ---

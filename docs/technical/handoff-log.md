@@ -4134,6 +4134,50 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 - Merged origin/main after #232. Conflicts in `verify-repository.mjs`, `render-review-contact-sheets.mjs` and this log were resolved by keeping both notes, and the feature-image count is now 28.
 - Next: founder review of Field Notes 25 and 26. The 2026-10-09 worktrees can be removed once the founder has seen this entry.
 
+## 2026-10-13 — Claude Code — Field Note 25 "He Stays at Short" founder-approved, register position 24
+
+**Client:** Claude Code (desktop app), continuing the `gmg-wednesday-draft` session after the founder replied "Approved" to the delivered unit. **Branch:** `claude/field-note-25-approved`.
+
+**Scope completed.** Essay and platform pack moved from `drafts/` to `content/field-notes/he-stays-at-short.md` and `content/distribution/field-note-25-platforms.md`, with `status: founder-approved`, approval dates, and `publication_authorized: false` (approval covers the work, not a slot). Appended at register position 24, projected 2027-01-26, with a section recording why. Render-script header, decision log, and `drafts/README.md` updated. A must-live-under-content gate was added to `verify-repository.mjs` and broken on purpose by re-tracking the pack under `drafts/`; it failed by name before this was committed.
+
+**Files changed:** `content/field-notes/he-stays-at-short.md` and `content/distribution/field-note-25-platforms.md` (moved from `drafts/`), `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `drafts/README.md`, `scripts/render-field-note-25.mjs` (comment only), `scripts/verify-repository.mjs`, and this log.
+
+**External state changed:** none. No Ghost post, Buffer queue, Medium story, Substack note, or account touched. Nothing published, sent, or posted.
+
+**Verification:** results of all `gate:` lines are in the PR; the register checks (constraints, spacing, witness skeleton) run inside `verify-repository`.
+
+**Open, in order:** (1) Publication timing for position 24 is the Monday staging task's, in register order. (2) Field Note 26, an `assignment` draft in `drafts/`, awaits founder review; on approval it lands at 25, where its stance clears the spacing check. (3) The Medium tag "Baseball" is new to the bank; the Thursday import should confirm the autocomplete commits it.
+
+## 2026-10-13 — Monday staging run, fired Tuesday: Week 9 verified after it published
+
+**Client:** Claude Code (desktop app), the `gmg-monday-staging` scheduled task. It first fired at 00:32 ET Tuesday, was interrupted after the register check, and was re-run at 09:19 ET, after the 8:00 AM publish. The week was staged on 2026-10-08 by the run recorded in PR #231, which is still open and conflicted. This run staged nothing.
+
+**Hold check:** `**Active hold:** none`. None of the five conditions found. Not held.
+
+**External state changed:** none. No Ghost, Buffer, iCloud, or platform write was made.
+
+**Verification.** `verify-publication-register --fix` recorded row 7 (`the-lights-never-flickered`) and row 8 (`ask-for-help-while-its-still-cheap`) as `published`; all 24 rows now agree with Ghost (9 published, 0 scheduled, 15 projected). Staging dry run for row 8 at 2026-10-13T12:00Z builds the payload with alt text present. Ghost: `published` 2026-10-13 12:00Z, newsletter `default-newsletter`, segment `all`, email `submitted` to 1 recipient, feature image set; `title`, `custom_excerpt`, `meta_title`, `meta_description`, `email_subject`, and `feature_image_alt` all equal `buildPostPayload`. Feed tile: Buffer's most recent sent Instagram post is The Lights Never Flickered (2026-10-01); this week's slide 1 is the hardware-store counter photograph, a different image. Buffer: `queue-week-buffer --dry-run` refuses because all four posts exist, and the queue reads back at 10-13 16:00Z Bluesky, 10-14 14:00Z LinkedIn, 10-15 13:00Z Instagram, 10-17 22:30Z Bluesky, matching the schedule of record. iCloud kit: all four folders and the READ ME present; both Substack paste files equal `noteCopyForSlug` output and carry no emphasis marks. All six `gate:` lines pass (218 tests); `git diff --check` clean.
+
+**Files changed:** `docs/technical/publication-order.md` (rows 7 and 8), `docs/technical/handoff-log.md`.
+
+**Open, in order:** (1) Today 12:00 PM: Substack Note 1, note task first, then the founder from kit folder 1. (2) Thursday 7:00 AM: Medium URL import; the Week 8 import is overdue per PR #231. (3) Thursday: optional Story reshare with link sticker (folder 3). (4) Saturday 6:30 PM: Substack Note 2 (folder 2). (5) PR #231 conflicts on rows 7 and 8, which this change records; its Substack-notes and handoff content still needs merging by its owner. (6) Next Monday stages row 9, `you-can-walk-on-it-tomorrow`, for 2026-10-20.
+
+## 2026-10-13 — Tuesday note task: Note 1 staged, founder posted, verified live
+
+**Client:** Claude Code (desktop app), scheduled task `gmg-tuesday-note`, fired at 11:45 ET.
+
+**Preflight:** `note-task-preflight --slot 12:00 --note 1` exited `10`, early by 846 s. Hold `none`. Essay `ask-for-help-while-its-still-cheap` published 2026-10-13 12:00Z. Pack `content/distribution/field-note-05-platforms.md`. The run waited until 12:00:00 ET and then read the profile again.
+
+**External state changed:** Substack Note 1 is **public**: `c-360057758`, posted at 12:09 PM ET under the Grown Men Grow identity, 9 minutes after the slot. The agent typed the approved copy into the composer at 12:00. Keystroke `type` succeeded this week. The founder clicked Post, per the 2026-08-25 ruling. Before the composer opened, the profile showed Edit profile and its top note was dated Sep 27. After the post, the note was confirmed in a separate tab with its text intact. Lock released.
+
+**Register:** not edited here. PR #231 adds this week's rows as pending. Row `ask-for-help-while-its-still-cheap#1` must now read `posted` with `c-360057758`. Until it does, `verify-substack-notes` fails on the blank row, as designed.
+
+**Verification:** `verify-substack-notes` before staging: 16 rows agree with 10 live notes. Only this log changed.
+
+**Files changed:** `docs/technical/handoff-log.md`.
+
+**Open, in order:** (1) Record row #1 as `posted` / `c-360057758` once #231 lands, or in #231. (2) PR #231 is still conflicted. (3) Saturday 10-17 18:30: Note 2.
+
 
 ## 2026-10-12 — Review follow-ups to #233: the canonical reader pins its host and is the only reader
 
@@ -4141,11 +4185,13 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 
 **Fixed.** (1) `canonicalSlug` accepted any host. The regex it replaced pinned `grownmengrow.com`, so #233 had dropped the only check on a pack's canonical host. A pack pointing its canonical at Medium would have passed the subtitle gate. It now requires `https://grownmengrow.com` and exactly one path segment. (2) `resolvePackForSlug`, which the note tasks use, kept its own parse. One malformed canonical on any pack threw `ERR_INVALID_URL` and broke lookups for every slug. It now matches through `canonicalSlug`, exactly, so a bad pack yields no slug and nothing else breaks. (3) Both behaviours now have tests: a wrong host or scheme yields no slug, and a malformed pack does not stop another pack from resolving.
 
-**Second review round, also fixed here.** The re-run review of this PR found two minor gaps, both fixed in this change set. (4) The host was asserted twice: `queue-week-buffer.mjs` built Buffer's canonical link from its own literal. `CANONICAL_ORIGIN` is now exported and the queue script builds from it, and a test proves the reader accepts exactly the URL the builder writes. (5) A wrong-host canonical reported a missing dek. The gate now names the two causes separately, and each message was seen firing on a deliberately broken pack. `AGENTS.md` states the canonical-host precondition.
+**Second review round, also fixed here.** The re-run review of this PR found two minor gaps, both fixed in this change set. (4) The host was asserted twice: `queue-week-buffer.mjs` built Buffer's canonical link from its own literal. `CANONICAL_ORIGIN` is now exported and the queue script builds from it, and a test checks that the reader accepts the URL shape the builder uses. (5) A wrong-host canonical reported a missing dek. The gate now names the two causes separately, and each message was seen firing on a deliberately broken pack. `AGENTS.md` states the canonical-host precondition.
+
+**Third review round, also fixed here.** That test rebuilds the queue script's template rather than reading it, so it cannot tell if the script grows its own host again. `verify-repository` now fails any tracked script outside `note-pack.mjs` and `scripts/test/` that carries the publication host, derived from `CANONICAL_ORIGIN`; it was seen firing on a planted literal. `resolvePackForSlug` now names any pack whose canonical yields no slug, instead of reporting only that no pack matched, with a test.
 
 **External state changed:** none.
 
-**Verification:** `note-pack` tests 17/17, including the live-catalogue resolution test. With Field Note 13's canonical pointed at medium.com on purpose, `verify-repository` failed on exactly that pack; restored, it passes. Gate results are in the PR.
+**Verification:** `note-pack` tests 18/18, including the live-catalogue resolution test. With Field Note 13's canonical pointed at medium.com on purpose, `verify-repository` failed on exactly that pack; restored, it passes. Gate results are in the PR.
 
 **Files changed:** `scripts/lib/note-pack.mjs`, `scripts/test/note-pack.test.mjs`, `scripts/queue-week-buffer.mjs`, `scripts/verify-repository.mjs`, `AGENTS.md`, this log.
 
