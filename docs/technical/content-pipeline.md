@@ -64,7 +64,7 @@ Everything goes in chat, in one pass, because that is where approval happens. A 
 
 1. The essay title, its stance, and a two-sentence summary of the argument.
 2. **The full essay text inline.**
-3. **Every platform's copy inline** — Medium subtitle and tags, all Bluesky posts, the LinkedIn post, all Substack Notes, the Instagram caption, and all seven carousel slides.
+3. **Every platform's copy inline** — Medium subtitle (the essay's dek, verbatim: Medium lifts the dek at import, and `verify-repository.mjs` fails a pack that gives anything else) and tags, all Bluesky posts, the LinkedIn post, all Substack Notes, the Instagram caption, and all seven carousel slides.
 4. **The images themselves**, sent as files so they render in chat. The seven carousel slides, the feature image, and the review sheet. Not paths — the images.
 5. The nine tests from `../editorial-underpinning.md`, with anything that came close to failing named rather than smoothed over.
 6. What is still missing, if anything, and why.

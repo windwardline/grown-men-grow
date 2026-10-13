@@ -4093,9 +4093,43 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 
 **Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entry on `staging/week-09-ask-for-help`.
 
+## 2026-10-12 — Wednesday draft task: Field Note 25 "He Stays at Short", a complete witness unit, drafted
+
+**Client:** Claude Code (desktop app), the `gmg-wednesday-draft` scheduled task. It fired Friday 2026-10-09 ~01:54 ET on catch-up, was interrupted by a usage limit after two images, and was resumed Monday 2026-10-12. **Branch:** `claude/wednesday-draft-2026-10-09`, worktree `/Users/peacock/Projects/_worktrees/gmg-wednesday-draft-2026-10-09`.
+
+**Backfill check:** all 23 approved notes in `content/field-notes/` carry a pack, render script, carousel, feature image, review sheet, and gate entries; `verify-repository` passes over them. Nothing to backfill.
+
+**Scope completed.** `**Standing commission:** witness` was read in `operating-cadence.md`. The subject is a shortstop's error and being kept in the game after it, the underpinning's "kept on when he was the problem" drawn literally: the extra out is the pitcher's to get, the manager leaves him at short, and the scoring rule guarantees nothing he does afterward reaches back into the inning. Stance `witness`, closing addresses the reader `no`, opening `other`. 1,045 words. The commission is cleared to `none` in this change set. Spacing checked by running `register-spacing.mjs` against the register with the note appended at 24: witness at 7, 10, 14, 17, 20, 24, no trade-run, gap, beat, or skeleton-heading fault.
+
+**Files changed:** `drafts/field-note-25-he-stays-at-short.md`, `drafts/field-note-25-platforms.md`, `drafts/README.md`, `docs/technical/operating-cadence.md` (commission `none`), `scripts/render-field-note-25.mjs` (new scorebook-box mark), `scripts/verify-repository.mjs` (required file, carousel family, feature-image count 27, three editorial sources, review sheet), `scripts/render-review-contact-sheets.mjs`, `assets/source/editorial/{infield-glove-raked-dirt,base-chalk-line-low-sun,pitchers-mound-rosin-bag}.png`, `assets/drafts/instagram/field-note-25-carousel/01–07.{svg,png}`, `assets/drafts/ghost/feature-images/he-stays-at-short.{svg,png}`, `assets/drafts/review/field-note-25-carousel.png`, and this log. The sheet renderer rewrote the 28 existing review sheets with byte-level differences only; those were restored rather than committed.
+
+**Imagery.** Five generated in the founder's ChatGPT project, three kept, each stripped with `strip-ai-provenance` (0 markers after). Rejected: the first glove (X-lacing across the palm faces of the finger stalls, tangled heel lacing) and the first base (crackle-grid micro-texture on its top). Prompts and reasons are in the note's production notes.
+
+**External state changed:** none public. Three images generated in ChatGPT. No Ghost, Buffer, Medium, Substack, Instagram, or account change. Nothing published, sent, or posted.
+
+**Verification:** `verify-ghost-theme`, `pnpm --dir theme install --frozen-lockfile`, `pnpm --dir theme test`, theme zip with GScan, `node --test` (216 pass, 0 fail), `verify-repository`, `verify-svg-xml` (238 SVGs), and `git diff --check` all pass.
+
+**Open, in order:** (1) Founder review of Field Note 25: essay, pack, and artwork. On approval it moves to `content/` and is appended at register position 24. (2) The Medium tag "Baseball" is new to the bank; confirm the autocomplete commits it on import. (3) Carried forward, not re-checked here: the open items of the entries above.
+
+## 2026-10-12 — Review follow-ups to #229: shared slug reader, the count, and where the ruling yields
+
+**Client:** Claude Code (desktop app), same session as the two entries above. #229 merged 2026-10-12 15:11Z after `main` was merged in to clear a handoff-log conflict. Its advisory review raised four findings. All four held, and all four are fixed here.
+
+**Correction to the 2026-10-09 entry:** it says "21 of 23 essay packs". There are 24 packs, the launch essay plus Field Notes 2 to 24, so it is 21 of 24. The three fixed packs and the gate are unaffected. `decision-log.md` carries the corrected figure.
+
+**Fixed.** (1) `verify-repository.mjs` read the canonical slug with its own regex. `scripts/lib/note-pack.mjs` declares itself the single pack reader, so it now exports `canonicalSlug`, which returns undefined rather than a guess, and the gate imports it. Two tests added. (2) The ruling read as if every derived copy follows the newest version. `decision-log.md` and `founder-decisions.md` now state where it yields: a published pack's posted-copy sections change only together with the live post, because `verify-substack-notes` compares posted notes to the pack byte for byte. Unpublished packs always follow. (3) `content-pipeline.md`, the spec a draft composes a pack against, now says the Medium subtitle is the dek verbatim.
+
+**External state changed:** none.
+
+**Verification:** with one pack's subtitle broken on purpose, `verify-repository` failed on exactly that pack; restored, it passes. Gate results are in the PR.
+
+**Files changed:** `scripts/lib/note-pack.mjs`, `scripts/test/note-pack.test.mjs`, `scripts/verify-repository.mjs`, `docs/technical/decision-log.md`, `docs/technical/founder-decisions.md`, `docs/technical/content-pipeline.md`, this log.
+
+**Open, in order:** (1) Week 9 Medium import, Thursday 2026-10-15. (2) Carried forward from the Week 9 staging entry.
 ## 2026-10-12 — Saturday draft task (Claude Code): Field Note 26 drafted, unit complete for review
 
 - Client: Claude Code desktop, scheduled task `gmg-saturday-draft`, fired Monday on catch-up. Draft only. Nothing published, sent, or posted.
 - Added `drafts/field-note-26-he-hasnt-been-bad-at-anything-in-years.md` (assignment, 939 words, `other` opening), `drafts/field-note-26-platforms.md`, `scripts/render-field-note-26.mjs` (centering mark), three photographs in `assets/source/editorial/` (stripped of provenance), the carousel, the feature image, the review sheet, and gate entries in `verify-repository.mjs` and `render-review-contact-sheets.mjs`.
-- The 2026-10-09 Saturday draft, "His Name Is Still on the Board," was not adopted because it duplicates Field Note 25 and would fail witness spacing at 25. It remains uncommitted in `_worktrees/gmg-saturday-draft-2026-10-09`. Field Note 25 also remains uncommitted in `_worktrees/gmg-wednesday-draft-2026-10-09`. It owns the `witness` commission, which this change leaves untouched.
-- Next: land Field Note 25. Whichever of the two PRs merges second must reconcile the feature-image count (26 → 28).
+- The 2026-10-09 Saturday draft, "His Name Is Still on the Board," was not adopted because it duplicates Field Note 25 and would fail witness spacing at 25. It remains uncommitted in `_worktrees/gmg-saturday-draft-2026-10-09`. Field Note 25 landed in #232 during this run and cleared the `witness` commission. This change does not touch it.
+- Merged origin/main after #232. Conflicts in `verify-repository.mjs`, `render-review-contact-sheets.mjs` and this log were resolved by keeping both notes, and the feature-image count is now 28.
+- Next: founder review of Field Notes 25 and 26. The 2026-10-09 worktrees can be removed once the founder has seen this entry.

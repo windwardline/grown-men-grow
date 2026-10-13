@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn25-05-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn25-05-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn25-05-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#EEE6D8"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 25 · 05 / 07</text>
+  <rect x="610" y="190" width="390" height="540" fill="url(#fn25-05-dots)"/>
+    <text x="74" y="300" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">Everybody</text><text x="74" y="384" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">on the field</text><text x="74" y="468" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">is working an</text><text x="74" y="552" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">inning that,</text><text x="74" y="636" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">on paper,</text><text x="74" y="720" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">already ended.</text>
+    <text x="74" y="900" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">They're playing on past the end</text><text x="74" y="956" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="40" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">for a mistake none of them made.</text>
+    <rect x="750.0" y="1060.0" width="180.0" height="180.0" fill="#EEE6D8" stroke="#121416" stroke-width="4"/><path d="M840.0 1205.8 L895.8 1150.0 L840.0 1094.2 L784.2 1150.0 Z" fill="none" stroke="#121416" stroke-width="2" opacity="0.45"/><path d="M840.0 1199.1 L889.1 1150.0 L840.0 1100.9 L790.9 1150.0 L840.0 1199.1" fill="none" stroke="#B14F3F" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="10.0 9.0" opacity="0.8"/><rect x="891.3" y="1145.5" width="9.0" height="9.0" fill="#EEE6D8" stroke="#121416" stroke-width="2.5" transform="rotate(45 895.8 1150.0)"/><rect x="835.5" y="1089.7" width="9.0" height="9.0" fill="#EEE6D8" stroke="#121416" stroke-width="2.5" transform="rotate(45 840.0 1094.2)"/><rect x="779.7" y="1145.5" width="9.0" height="9.0" fill="#EEE6D8" stroke="#121416" stroke-width="2.5" transform="rotate(45 784.2 1150.0)"/><path d="M835.5 1201.3 L844.5 1201.3 L844.5 1205.8 L840.0 1210.3 L835.5 1205.8 Z" fill="#EEE6D8" stroke="#121416" stroke-width="2.5"/><line x1="883.2" y1="1240.0" x2="930.0" y2="1193.2" stroke="#121416" stroke-width="6" stroke-linecap="round"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn25-05-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

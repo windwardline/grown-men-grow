@@ -6,6 +6,7 @@ import { lstat, readFile, readdir } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 
 import { parseHold } from './lib/hold-state.mjs';
+import { canonicalSlug } from './lib/note-pack.mjs';
 import { DEFAULT_PUBLISH_WEEKDAY, NOTE_TASK_SLOT_WEEKDAYS } from './lib/note-slot.mjs';
 import { tradeRunFaults, witnessSkeletonFaults, witnessSpacingFaults } from './lib/register-spacing.mjs';
 import path from 'node:path';
@@ -452,6 +453,7 @@ const requiredFiles = [
   'scripts/render-field-note-22.mjs',
   'scripts/render-field-note-23.mjs',
   'scripts/render-field-note-24.mjs',
+  'scripts/render-field-note-25.mjs',
   'scripts/render-field-note-26.mjs',
   'scripts/verify-dependency-exemptions.mjs',
   'scripts/verify-required-checks.mjs',
@@ -640,12 +642,13 @@ await validateAssetFamily('assets/drafts/instagram/field-note-21-carousel', 7, 1
 await validateAssetFamily('assets/drafts/instagram/field-note-22-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-23-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-24-carousel', 7, 1080, 1350);
+await validateAssetFamily('assets/drafts/instagram/field-note-25-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-26-carousel', 7, 1080, 1350);
 await validatePhotographExclusivity('assets/drafts/instagram');
 await validatePublicationOrder();
 await validateCrossReferences();
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
-await validateAssetFamily('assets/drafts/ghost/feature-images', 27, 1600, 1000);
+await validateAssetFamily('assets/drafts/ghost/feature-images', 28, 1600, 1000);
 await validateEditorialConcepts();
 const editorialSources = new Map([
   ['friends-in-conversation', { width: 1023, height: 1537 }],
@@ -726,6 +729,9 @@ const editorialSources = new Map([
   ['gloss-panel-low-sun', { width: 1024, height: 1536 }],
   ['staked-sapling-front-lawn', { width: 1024, height: 1536 }],
   ['pulled-stakes-young-tree', { width: 1024, height: 1536 }],
+  ['infield-glove-raked-dirt', { width: 1024, height: 1536 }],
+  ['base-chalk-line-low-sun', { width: 1024, height: 1536 }],
+  ['pitchers-mound-rosin-bag', { width: 1024, height: 1536 }],
   ['first-bowl-studio-shelf', { width: 1024, height: 1536 }],
   ['ware-board-six-cups', { width: 1024, height: 1536 }],
   ['lopsided-bowl-entry-console', { width: 1024, height: 1536 }],
@@ -763,6 +769,7 @@ const reviewSheets = new Map([
   ['field-note-22-carousel', { width: 1362, height: 1004 }],
   ['field-note-23-carousel', { width: 1362, height: 1004 }],
   ['field-note-24-carousel', { width: 1362, height: 1004 }],
+  ['field-note-25-carousel', { width: 1362, height: 1004 }],
   ['field-note-26-carousel', { width: 1362, height: 1004 }],
   ['ghost-social-cards', { width: 1310, height: 884 }],
   ['pinned-introduction', { width: 1362, height: 1004 }],
@@ -874,7 +881,7 @@ for (const [label, file] of packs) {
   if (mediumStart === -1) continue;
   const nextSection = lines.findIndex((line, index) => index > mediumStart && line.startsWith('# '));
   const mediumLines = lines.slice(mediumStart, nextSection === -1 ? lines.length : nextSection);
-  const packSlug = text.match(/^canonical(?:_url)?:\s*https:\/\/grownmengrow\.com\/([a-z0-9-]+)\//m)?.[1];
+  const packSlug = canonicalSlug(text);
   const subtitleLine = mediumLines.find((line) => mediumSubtitleLabel.test(line));
   if (!packSlug || !deks.has(packSlug)) {
     fail(`${file} names no canonical slug with a dek on record, so ${label}'s Medium subtitle cannot be checked against it.`);

@@ -23,6 +23,18 @@ export const DEFAULT_PACK_DIR = path.resolve(
 
 const CANONICAL_LINE = /^canonical(?:_url)?:\s*(\S+)/m;
 
+/**
+ * The single path segment a pack's canonical URL names, or undefined when it
+ * names none, several, or is not a URL. Undefined rather than a guess, so a
+ * caller that needs a slug can fail closed.
+ */
+export function canonicalSlug(markdown) {
+  const canonical = CANONICAL_LINE.exec(markdown)?.[1];
+  if (!canonical || !URL.canParse(canonical)) return undefined;
+  const segments = new URL(canonical).pathname.split('/').filter(Boolean);
+  return segments.length === 1 ? segments[0] : undefined;
+}
+
 /** The pack whose canonical URL names `slug`. Throws unless exactly one does. */
 export function resolvePackForSlug({ slug, dir = DEFAULT_PACK_DIR }) {
   if (typeof slug !== 'string' || slug.length === 0) {
