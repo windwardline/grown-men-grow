@@ -4272,3 +4272,87 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **External state changed:** none.
 
 **Files changed:** `scripts/lib/substack-notes.mjs`, `scripts/test/substack-notes.test.mjs`, `AGENTS.md`, this log.
+
+## 2026-10-08 — Tuesday note task (late catch-up fire): stood down, no Week 9 essay
+
+**Client:** Claude Code (desktop app), the `gmg-tuesday-note` scheduled task. It fired Thursday 2026-10-08 at 8:33 PM ET, two days after its Tuesday 12:00 PM slot, as a catch-up on app launch.
+
+**Preflight:** `note-task-preflight --task gmg-tuesday-note --slot 12:00 --note 1` exited `20`, stand down: "this week's essay has not published." Ghost's latest published post is `the-lights-never-flickered` (2026-09-29 12:00Z); the publication week opened 2026-10-06 and nothing has published in it. A re-run at 2:00 AM ET on 2026-10-09 returned the same verdict. The preflight released its own lock both times.
+
+**External state changed:** none. Chrome and Substack were not opened. No note was staged or posted.
+
+**Context.** Row 8, `ask-for-help-while-its-still-cheap`, projected for 2026-10-06, had no Ghost post. Another session holds local branch `staging/week-09-ask-for-help` ("Week 9 staged in Ghost and queued in Buffer after the missed Oct 6 slot"), not yet on `origin`; the missed week is owned there, not here. The shared checkout also holds another session's uncommitted row 7 `published` correction in `publication-order.md`; this entry leaves it untouched.
+
+**Files changed:** `docs/technical/handoff-log.md`.
+
+**Open, in order:** (1) The next Tuesday note run posts Week 9's Note 1 once its essay publishes; nothing for this task until then. (2) Carried forward, not re-checked: the open items of the 2026-09-28 entries.
+
+## 2026-10-08 — Claude Code — Saturday note task, fired Thursday: stood down, nothing posted
+
+**Client:** Claude Code (desktop), scheduled task `gmg-saturday-note`. **Branch:** `claude/saturday-note-2026-10-08-stand-down`.
+
+**The run fired Thursday 2026-10-08 at 8:38 PM ET** in the same catch-up burst that the Monday staging entry describes. The preflight exited `20` with the reason `this week's essay has not published`: the publication week opened 2026-10-06, and the latest published post is still `the-lights-never-flickered` (2026-09-29). That is correct, because no field note went out on 2026-10-06. Week 9 is scheduled for 2026-10-13. The essay check refused before the weekday guard was consulted. Either one would have stood the run down. No browser was opened, and nothing was typed, drafted, or posted.
+
+**No copy to hand over.** The only Saturday note this fire could have served is Week 8's (slot 2026-10-03 18:30). The staging run already recorded it `missed` after `verify-substack-notes` confirmed no live note carries it. The next Saturday slot is 2026-10-17 18:30, for Week 9.
+
+**Files changed:** this log only.
+
+**External state changed:** none. The preflight releases its own lock on a stand-down.
+
+**Open, in order:** (1) Saturday 2026-10-17 6:30 PM: Week 9 Note 2. (2) The application was closed from 2026-09-28 to 2026-10-08, so every task missed its slot. That is the same evidence as before for the open founder question about founder-run Substack slots.
+
+## 2026-10-12 — Saturday note task fired Monday and stood down; no essay this publication week
+
+**Client:** Claude Code (desktop app), the `gmg-saturday-note` scheduled task. It is slotted for Saturday 2026-10-10 at 6:30 PM ET and fired on Monday 2026-10-12 at about 11:08 AM ET, when the app was next opened.
+
+**Outcome.** `note-task-preflight --task gmg-saturday-note --slot 18:30 --note 2` exited `20`, reason `this week's essay has not published`. The publication week opened 2026-10-06, and the latest published essay is `the-lights-never-flickered` (2026-09-29). Nothing was posted, and Chrome and the Substack profile were not opened. The preflight released its own lock.
+
+**Why there was no note.** The app was closed from 2026-09-28 to 2026-10-08, so no field note was scheduled for 2026-10-06 (#231). The 2026-10-10 slot had no note to post and no row in `substack-notes.md`. A blank row there would invent a missed slot. Week 9's essay, `ask-for-help-while-its-still-cheap`, is scheduled for 2026-10-13 12:00Z under #231. Its Saturday note falls on 2026-10-17.
+
+**External state changed:** none.
+
+**Files changed:** `docs/technical/handoff-log.md`.
+
+**Open, in order:** (1) #231 lands the Week 9 register and note rows; this entry depends on none of it. (2) Tuesday 2026-10-13 12:00 PM: Substack Note 1 for Week 9. (3) Saturday 2026-10-17 6:30 PM: Substack Note 2. (4) Carried forward, not re-checked here: the open items of #228, #230 and #231.
+
+## 2026-10-12 — Claude Code — Friday analytics readout, run Monday (Oct 8–12)
+
+**Client:** Claude Code. **Branch:** `claude/friday-analytics-2026-10-12`. The `gmg-friday-analytics` task fired Monday 11:08 ET as the catch-up for Friday 2026-10-09. The previous readout ran Thursday 2026-10-08, so this covers the four days since.
+
+**Scope:** verification only. Nothing was published, posted, paid, replied to, or sent.
+
+**Founder decision due, not owned by any task: Ghost(Pro) billing.** Every Ghost Admin page carries the banner "Your payment didn't go through. Complete your payment by Nov 7 to avoid suspension (27 days left)." No earlier entry records it. Suspension would take down the publication, the archive, and the only member list. Paying is the founder's action.
+
+**Ghost.** **1** member, unchanged since 2026-08-11. No post published since `the-lights-never-flickered` on 2026-09-29 (1 sent, 1 delivered, 1 opened, 0 failed). `ask-for-help-while-its-still-cheap` is `scheduled` for 2026-10-13 12:00Z.
+
+**Pageviews (Ghost web analytics, signed-in admin).** Last 7 days (Oct 6–12): **3 visitors, 3 views**: Homepage 2, The Lights Never Flickered 1. Sources: Direct 2, Bluesky 1. That Bluesky visit is the first Bluesky referral the 30-day window has shown. Last 30 days: **29 visitors, 33 views**, down from 33 and 39 on 2026-10-08. Top content: Homepage 10, You Can't Outwork a Wrong Direction 9, Rest Isn't a Reward 5, The Lights Never Flickered 3, Nobody Rigs 3, Start Here 2. Sources: Direct 22, Bing 6, Bluesky 1. Newsletters tab: no send in 7 days, 1 subscriber.
+
+**A/B protocol stays suspended at step 3**, with 1 recipient against a floor of 30. No timing decision is due, so `publish-timing.md` is unchanged.
+
+**Platform numbers.** Buffer sent nothing between 2026-10-03 and this run. Week 9's four posts are queued for 10-13 to 10-17. Week 8's metrics, refreshed 10-11 and 10-12, have not moved: Instagram carousel reach 4, views 9, 0 interactions; LinkedIn **0 impressions**. The LinkedIn post was checked on the Page itself and is live and public, so the zero is a real reading and not a failed post. Instagram, per Business Suite: 28-day reach 776, but daily reach for Oct 4–10 totals **1**, and no follows. Nearly all of the 28-day figure is the Sep 17–21 anomaly. Bluesky: 0 followers, 16 posts, 0 replies, 0 quotes, 2 likes.
+
+**Moderation sweep: nothing to escalate.** Ghost comments: 0 on all 8 published posts (public comments API, per post). Instagram DMs: Primary, General, and Requests are all empty. Notifications show no activity after Sep 27. LinkedIn Page activity: "No page activity". Bluesky: 0 replies, 0 quotes. The public API cannot see mentions without a session. No reply was made.
+
+**Qualitative pass:** still nothing said back on any surface, so there is no recurring question or objection to report.
+
+**Corpus balance check: skipped.** The marker reads 2026-09-16 at 21, next due at 31. The bank is 24: 23 field notes plus the launch essay.
+
+**Cadence gates.** `verify-substack-notes.mjs` passes. `verify-publication-register.mjs` fails on rows 7 (`scheduled` in the register, `published` in Ghost) and 8 (blank, `scheduled` in Ghost). Open PR #231 (`staging/week-09-ask-for-help`) already carries both corrections. When this run started, #228, #230, and #231 had reported no CI since they opened on 2026-10-09, and #228 conflicted. A concurrent session merged #229 during this run. Those PRs belong to their owning sessions and were left alone.
+
+**Files changed:** this log only. **External state changed:** none. Ghost analytics, Business Suite, Instagram, and the LinkedIn Page were read, not changed.
+
+**Open, in order:** (1) Founder: the Ghost(Pro) payment before Nov 7. (2) PR #231 must merge so the register agrees with Ghost before the next staging decision. (3) Carried forward: distribution, the one-member list, the suspended A/B, the `isAiGenerated` founder question from 2026-09-28, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-10-13 — Worktree cleanup: four stranded entries landed, superseded PRs closed
+
+**Client:** Claude Code (desktop app), at the founder's request after the Tuesday publish check.
+
+**Landed above, verbatim and in date order:** four handoff entries that never reached `main`. Two came from #228 and #230, open since 2026-10-09 and closed unmerged as folded in here. Two were local commits never pushed: `24649e3` (Saturday note, 10-12) and `e2fb394` (Friday analytics, 10-12). They are history, so they are appended rather than rewritten, and their "Open" lists are as of their dates. #231 has since merged and the register agrees with Ghost. The Ghost(Pro) payment, due by Nov 7, is still the founder's.
+
+**Archived, not deleted:** the unadopted 2026-10-09 Saturday draft, "His Name Is Still on the Board", which duplicated Field Note 25. It was never committed, and its filenames now collide with the approved Field Note 26. Its three files are in `~/.local/share/grown-men-grow/archive/unadopted-drafts/2026-10-09-his-name-is-still-on-the-board/` and were verified byte-for-byte against the originals.
+
+**Removed:** every worktree whose work is on `main` or archived, and the matching local and remote branches. `.worktrees/` is now in `.gitignore`, so a live worktree never shows as untracked in the main checkout.
+
+**External state changed:** #228 and #230 closed unmerged. Merged branches deleted from the remote.
+
+**Files changed:** `.gitignore`, this log.

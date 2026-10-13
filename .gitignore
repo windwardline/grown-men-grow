@@ -28,3 +28,6 @@ exports/
 # Local handoff inputs; never publish or commit as a unit
 /codex_handoff_pack_v0_2/
 /*.pdf
+
+# Local git worktrees; never tracked
+.worktrees/
