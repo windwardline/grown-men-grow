@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn27-07-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn27-07-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn27-07-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 27 · 07 / 07</text>
+  <g transform="rotate(0.6 540 482)">
+    <rect x="212" y="162" width="656" height="674" fill="#60735A"/>
+    <rect x="220" y="148" width="640" height="668" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/worn-hammer-handle-pegboard.png" x="224" y="152" width="632" height="660" preserveAspectRatio="xMidYMid slice" filter="url(#fn27-07-photo)"/>
+  </g>
+    <g transform="rotate(3 622 153)">
+    <rect x="520" y="130" width="204" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="528" y1="137" x2="714" y2="134" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="78" y="900" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="46" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">The old key still opens the door.</text>
+    <text x="80" y="1010" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">Somebody's being cut</text><text x="80" y="1066" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="42" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">from him right now.</text>
+    <circle cx="769.2" cy="1166.2" r="30.8" fill="none" stroke="#121416" stroke-width="2.2"/>
+    <circle cx="760.0" cy="1166.2" r="8.6" fill="none" stroke="#121416" stroke-width="2.2"/><path d="M800.0 1150.0 L810.8 1150.0 L821.7 1166.2 L828.7 1166.2 L839.6 1150.0 L850.5 1158.4 L857.5 1158.4 L868.4 1150.0 L879.3 1170.7 L886.3 1170.7 L897.2 1150.0 L908.1 1161.7 L915.1 1161.7 L926.0 1150.0 L936.9 1168.1 L943.9 1168.1 L954.8 1150.0 L962.0 1150.0 L980.0 1167.8 L962.0 1182.4 L800.0 1182.4 Z" fill="none" stroke="#121416" stroke-width="2.2" stroke-linejoin="miter"/><line x1="825.2" y1="1140.3" x2="825.2" y2="1128.9" stroke="#B14F3F" stroke-width="2.9" stroke-linecap="round"/><line x1="854.0" y1="1140.3" x2="854.0" y2="1134.4" stroke="#B14F3F" stroke-width="2.9" stroke-linecap="round"/><line x1="882.8" y1="1140.3" x2="882.8" y2="1125.8" stroke="#B14F3F" stroke-width="2.9" stroke-linecap="round"/><line x1="911.6" y1="1140.3" x2="911.6" y2="1132.1" stroke="#B14F3F" stroke-width="2.9" stroke-linecap="round"/><line x1="940.4" y1="1140.3" x2="940.4" y2="1127.6" stroke="#B14F3F" stroke-width="2.9" stroke-linecap="round"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn27-07-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

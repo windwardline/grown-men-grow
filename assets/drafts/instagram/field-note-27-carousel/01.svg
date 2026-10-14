@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn27-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn27-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn27-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 27 · 01 / 07</text>
+  <text x="64" y="250" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="84" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.6">THE WEAR</text>
+    <text x="64" y="346" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="84" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.6">COPIES TOO.</text>
+    <text x="68" y="420" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="30" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">The key machine can't tell the pattern</text><text x="68" y="462" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="30" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">from twenty years in somebody's pocket.</text>
+    <g transform="rotate(0.8 610 825)">
+    <rect x="318" y="520" width="584" height="644" fill="#60735A"/>
+    <rect x="326" y="506" width="568" height="638" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/worn-key-and-copy-counter.png" x="330" y="510" width="560" height="630" preserveAspectRatio="xMidYMid slice" filter="url(#fn27-01-photo)"/>
+  </g>
+    <g transform="rotate(4 667 509)">
+    <rect x="560" y="486" width="214" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="568" y1="493" x2="764" y2="490" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <circle cx="105.8" cy="1168.0" r="34.2" fill="none" stroke="#121416" stroke-width="2.4"/>
+    <circle cx="95.5" cy="1168.0" r="9.6" fill="none" stroke="#121416" stroke-width="2.4"/><path d="M140.0 1150.0 L152.0 1150.0 C160.0 1150.0 160.0 1161.1 168.0 1161.1 C176.0 1161.1 176.0 1150.0 184.0 1150.0 C192.0 1150.0 192.0 1155.8 200.0 1155.8 C208.0 1155.8 208.0 1150.0 216.0 1150.0 C224.0 1150.0 224.0 1164.2 232.0 1164.2 C240.0 1164.2 240.0 1150.0 248.0 1150.0 C256.0 1150.0 256.0 1158.0 264.0 1158.0 C272.0 1158.0 272.0 1150.0 280.0 1150.0 C288.0 1150.0 288.0 1162.4 296.0 1162.4 C304.0 1162.4 304.0 1150.0 312.0 1150.0 L320.0 1150.0 L340.0 1169.8 L320.0 1186.0 L140.0 1186.0 Z" fill="none" stroke="#121416" stroke-width="2.4" stroke-linejoin="round"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn27-01-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

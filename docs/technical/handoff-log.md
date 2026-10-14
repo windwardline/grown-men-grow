@@ -4356,3 +4356,41 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **External state changed:** #228 and #230 closed unmerged. Merged branches deleted from the remote.
 
 **Files changed:** `.gitignore`, this log.
+
+## 2026-10-14 — Wednesday draft task (Claude Code): Field Note 27 drafted, photographs outstanding
+
+**Client:** Claude Code desktop, scheduled task `gmg-wednesday-draft`. Draft only. Nothing published, sent, or posted.
+
+**Backfill:** checked first and found nothing to build. All 25 approved notes carry a pack, a render script, a seven-slide carousel, a feature image, a review sheet, and gate entries.
+
+**Drafted:** "The Wear Copies Too" (`assignment`, 956 words, `trade` opening on a key-duplicating machine). The `**Standing commission:**` line read `none` and is untouched. At register position 26 it starts a trade run of one after the `other` openings at 24 and 25; a witness piece there would have sat two slots from 24.
+
+**Not done, and why:** the Chrome extension did not respond on two attempts, so per `content-pipeline.md` step 1 image work stopped. No photographs, carousel, feature image, or review sheet exist. `scripts/render-field-note-27.mjs` is written (bitting-profile mark) and was checked with photo-free previews in the session scratchpad only; it has not been run against the repository. Its gate entries are deliberately absent because each would fail the build until the photographs exist. The three house prompts are in the note's production notes, ready to send.
+
+**Files changed:** `drafts/field-note-27-the-wear-copies-too.md`, `drafts/field-note-27-platforms.md`, `scripts/render-field-note-27.mjs`, `drafts/README.md`, this log.
+
+**Verification:** the six `gate:` lines in `AGENTS.md` and `git diff --check`, all passing, rerun after staging.
+
+**Open, in order:** (1) Generate the three photographs in the founder's ChatGPT project once Chrome is reachable, run the quality gate, strip provenance, then run `scripts/render-field-note-27.mjs` and add the review-sheet entry and the gate entries (`requiredFiles`, `validateAssetFamily`, three editorial sources, feature-image count to 29 on the draft branch). (2) Founder review of the essay and pack.
+
+## 2026-10-14 — Field Note 27 artwork completed (Claude Code), supersedes the "photographs outstanding" entry above
+
+**Client:** Claude Code desktop, the same session, continued at the founder's request ("Finish the work"). Draft only. Nothing published, sent, or posted.
+
+**Done:** Chrome responded on retry. Three photographs were generated in a new thread in the founder's ChatGPT project, **Grown Men Grow**. Three candidates were rejected at full resolution and recorded in the note: a spilled-milk glass spotless inside, a steel rule with garbled pseudo-numerals, and a hammer head with a scratched pseudo-stamp. All three kept files were stripped, and the re-scan found an indicator on 0 of 3. The render script was rendered, and its marks were moved off the canvas and panel edges. The carousel, feature image, and review sheet now exist. Gate entries were added: `requiredFiles`, `validateAssetFamily`, three editorial sources, the review sheet, and the feature-image count from 28 to 29. The alt text was rewritten to match the photographs as generated. The sheet renderer re-encodes every sheet, so the 28 unrelated sheets it touched were restored rather than committed.
+
+**Files changed:** `drafts/field-note-27-the-wear-copies-too.md`, `drafts/README.md`, `scripts/render-field-note-27.mjs`, `scripts/render-review-contact-sheets.mjs`, `scripts/verify-repository.mjs`, `assets/source/editorial/{worn-key-and-copy-counter,kitchen-table-milk-towel,worn-hammer-handle-pegboard}.png`, `assets/drafts/instagram/field-note-27-carousel/` (7 SVG/PNG pairs), `assets/drafts/ghost/feature-images/the-wear-copies-too.{svg,png}`, `assets/drafts/review/field-note-27-carousel.png`, this log.
+
+**External state changed:** one new ChatGPT thread in the founder's project. Branch `content/field-note-27-draft` pushed. PR #243 opened.
+
+**Open, in order:** (1) Founder review of the complete unit. (2) On approval, move the note and pack to `content/` at register position 26.
+
+## 2026-10-14 — Field Note 27 approved, moved to content/ at register position 26 (Claude Code)
+
+**Client:** Claude Code desktop, same session, on the founder's "Approved." Nothing published, sent, or posted. No Ghost slot named.
+
+**Done:** The note and pack moved to `content/field-notes/the-wear-copies-too.md` and `content/distribution/field-note-27-platforms.md`, and their markers were flipped to `founder-approved`. Register row 26 was appended, projected 2027-02-09, and both spacing checks still pass. A must-live-under-content guard was added for Field Note 27 and was broken on purpose before commit to prove it fails by name. The decision log and `drafts/README.md` were updated. Auto-merge on #243 was disarmed while this commit was added, then re-armed after it.
+
+**Files changed:** the two moved files, `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `drafts/README.md`, `scripts/render-field-note-27.mjs` (header comment), `scripts/verify-repository.mjs`, this log.
+
+**Open, in order:** (1) Nothing new. The Monday staging task picks the lowest-numbered unpublished row as usual.

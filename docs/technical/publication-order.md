@@ -66,6 +66,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 23 | `the-stake-was-supposed-to-come-off` | 2027-01-19 | |
 | 24 | `he-stays-at-short` | 2027-01-26 | |
 | 25 | `he-hasnt-been-bad-at-anything-in-years` | 2027-02-02 | |
+| 26 | `the-wear-copies-too` | 2027-02-09 | |
 
 ## Why this order and not another
 
@@ -126,6 +127,10 @@ This is the first note written to a standing commission since the spacing check 
 `he-hasnt-been-bad-at-anything-in-years` was approved 2026-10-13 and appended at 25. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note.
 
 Its approval change set first claimed 24, written while Field Note 25 was still in review. Field Note 25 was approved and merged at 24 first, so this note takes 25 and neither register entry is reordered. It is `assignment`, so the witness pieces stay at 7, 10, 14, 17, 20 and 24. Its `other` opening follows the `other` opening at 24, so no trade run grows.
+
+### Position 26 was appended
+
+`the-wear-copies-too` was approved 2026-10-14 and appended at 26. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note. It is `assignment`, so the witness pieces stay at 7, 10, 14, 17, 20 and 24. Its `trade` opening follows `other` openings at 24 and 25, so it starts a run of one.
 
 ### The spacing reorder of 2026-09-16, and why the rules are now checked
 

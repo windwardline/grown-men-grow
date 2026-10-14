@@ -245,6 +245,14 @@ const sheets = [
     itemHeight: 375,
   },
   {
+    name: "field-note-27-carousel",
+    title: "Field Note 27 carousel",
+    items: numbered("instagram/field-note-27-carousel", 7),
+    columns: 4,
+    itemWidth: 300,
+    itemHeight: 375,
+  },
+  {
     name: "stories-static-reel",
     title: "Stories, static post, and Reel cover",
     items: [

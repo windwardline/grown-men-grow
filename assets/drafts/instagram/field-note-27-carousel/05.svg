@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn27-05-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn27-05-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn27-05-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#EEE6D8"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 27 · 05 / 07</text>
+  <rect x="596" y="196" width="398" height="560" fill="url(#fn27-05-dots)"/>
+    <text x="74" y="300" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="84" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">His father</text><text x="74" y="402" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="84" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">was a copy</text><text x="74" y="504" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="84" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">too.</text>
+    <text x="74" y="900" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">Most of the wear was</text><text x="74" y="968" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">nobody's design.</text>
+    <circle cx="725.8" cy="1168.0" r="34.2" fill="none" stroke="#121416" stroke-width="2.4"/>
+    <circle cx="715.5" cy="1168.0" r="9.6" fill="none" stroke="#121416" stroke-width="2.4"/><path d="M760.0 1150.0 L772.0 1150.0 C780.0 1150.0 780.0 1161.1 788.0 1161.1 C796.0 1161.1 796.0 1150.0 804.0 1150.0 C812.0 1150.0 812.0 1155.8 820.0 1155.8 C828.0 1155.8 828.0 1150.0 836.0 1150.0 C844.0 1150.0 844.0 1164.2 852.0 1164.2 C860.0 1164.2 860.0 1150.0 868.0 1150.0 C876.0 1150.0 876.0 1158.0 884.0 1158.0 C892.0 1158.0 892.0 1150.0 900.0 1150.0 C908.0 1150.0 908.0 1162.4 916.0 1162.4 C924.0 1162.4 924.0 1150.0 932.0 1150.0 L940.0 1150.0 L960.0 1169.8 L940.0 1186.0 L760.0 1186.0 Z" fill="none" stroke="#121416" stroke-width="2.4" stroke-linejoin="round"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn27-05-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
