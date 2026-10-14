@@ -4356,3 +4356,19 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **External state changed:** #228 and #230 closed unmerged. Merged branches deleted from the remote.
 
 **Files changed:** `.gitignore`, this log.
+
+## 2026-10-14 — Wednesday draft task (Claude Code): Field Note 27 drafted, photographs outstanding
+
+**Client:** Claude Code desktop, scheduled task `gmg-wednesday-draft`. Draft only. Nothing published, sent, or posted.
+
+**Backfill:** checked first and found nothing to build. All 25 approved notes carry a pack, a render script, a seven-slide carousel, a feature image, a review sheet, and gate entries.
+
+**Drafted:** "The Wear Copies Too" (`assignment`, 956 words, `trade` opening on a key-duplicating machine). The `**Standing commission:**` line read `none` and is untouched. At register position 26 it starts a trade run of one after the `other` openings at 24 and 25; a witness piece there would have sat two slots from 24.
+
+**Not done, and why:** the Chrome extension did not respond on two attempts, so per `content-pipeline.md` step 1 image work stopped. No photographs, carousel, feature image, or review sheet exist. `scripts/render-field-note-27.mjs` is written (bitting-profile mark) and was checked with photo-free previews in the session scratchpad only; it has not been run against the repository. Its gate entries are deliberately absent because each would fail the build until the photographs exist. The three house prompts are in the note's production notes, ready to send.
+
+**Files changed:** `drafts/field-note-27-the-wear-copies-too.md`, `drafts/field-note-27-platforms.md`, `scripts/render-field-note-27.mjs`, `drafts/README.md`, this log.
+
+**Verification:** the six `gate:` lines in `AGENTS.md` and `git diff --check`, all passing, rerun after staging.
+
+**Open, in order:** (1) Generate the three photographs in the founder's ChatGPT project once Chrome is reachable, run the quality gate, strip provenance, then run `scripts/render-field-note-27.mjs` and add the review-sheet entry and the gate entries (`requiredFiles`, `validateAssetFamily`, three editorial sources, feature-image count to 29 on the draft branch). (2) Founder review of the essay and pack.
