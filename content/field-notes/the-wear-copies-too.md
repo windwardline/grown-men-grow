@@ -7,15 +7,15 @@ access: public
 email_subject: The Wear Copies Too
 preview: The key machine can't tell which parts of the old key are the pattern and which parts are twenty years in somebody's pocket.
 feature_image_alt: Two brass house keys side by side on a wooden hardware-store counter, one old and dulled and one freshly cut and bright beside curls of brass shaving, next to two claw hammers on a garage pegboard, the older one's hickory handle worn dark where a hand held it, in a paper collage.
-status: draft — NOT founder-approved
-approved: no
-publication_authorized: false — NOT authorized for publication, newsletter delivery, metadata, or social posting
+status: founder-approved
+approved: 2026-10-14 — essay, platform pack, and artwork approved as written on the day they were drafted; approval covers the work, not a slot
+publication_authorized: false — no Ghost slot named, no newsletter, no social posting; publication remains separately gated
 stance: assignment — the subject test fails for witness: sorting what he inherited into pattern and wear is a move he has, and the piece leaves the move with him ("his call") rather than receiving him in it
 closing_addresses_reader: yes — the last hundred words name who is being cut from him now and hand him the half second, without telling him what to do with it
 opening: trade — opens on a hardware-store key-duplicating machine, a locksmith's mechanism
 personal_claims: none included; add only from founder-supplied facts
-artwork_status: complete for review; three photographs generated 2026-10-14 for this note under the house prompt, three rejections recorded below; not founder-approved
-origin: written 2026-10-14 by the Wednesday draft task
+artwork_status: complete; founder-approved 2026-10-14 under the per-article image rule and the photograph-exclusivity ruling
+origin: written 2026-10-14 by the Wednesday draft task. Approved 2026-10-14 and moved into content/ at register position 26
 ---
 
 # Ghost essay source
@@ -119,7 +119,8 @@ Most of what got copied is good. Some of it never should have been, and nobody g
 
 # Production notes
 
-- Drafted 2026-10-14 by the Wednesday draft task. Register position 26 if approved as written.
+- Approved 2026-10-14 as written: essay, pack, and artwork. Register position 26. No Ghost slot named; publication timing remains a later founder decision.
+- Drafted 2026-10-14 by the Wednesday draft task.
 - Backfill came first and found nothing to build: all 25 approved notes carry a pack, a render script, a seven-slide carousel, a feature image, a review sheet, and gate entries.
 - Stance is `assignment`. The `**Standing commission:**` line reads `none`, so no witness piece was owed, and a witness piece at 26 would sit two slots from the one at 24 and fail the spacing check. The subject test fails for witness on its own terms: sorting what he inherited is a move he has. The piece leaves it with him ("his call", "theirs to decide") and concedes that some men decide it isn't worth digging into.
 - Register spacing. Rows 24 and 25 open `other`, so a `trade` opening at 26 starts a run of one. The witness pieces stay at 7, 10, 14, 17, 20 and 24.

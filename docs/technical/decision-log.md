@@ -950,3 +950,11 @@ Founder instruction, 2026-08-30: finish the work and stop carrying open items. E
 - **The corpus test is not due.** The marker reads a bank of 21 with the next measurement at 31. This note takes the bank to 26. No measurement was made.
 - **Two images were rejected on physical tells; three were kept.** A pottery wheel whose splash pan rendered as a brimming basin, and keys hovering at a bowl's rim with a ring through nothing. Both mechanisms were written out of frame. The prompts are in the note's production notes.
 - **Named for the founder in the draft report and approved with it:** "a pretty small country to have retired into at forty-four" was the closest call on test 8; the refusal to soften the cost of being a beginner was the closest call on test 2; and the man working sixty hours with no free evening was named as the reader it serves worst. All stand as approved.
+
+## 2026-10-14 — Field Note 27 approved at register position 26
+
+- **Status:** The founder approved the essay, platform pack, and artwork as written on the day they were drafted, after the complete unit was delivered in chat. They moved into `content/` at register position 26. No Ghost slot is named, and publication remains separately gated.
+- **Stance and opening.** `assignment`: sorting what he inherited into pattern and wear is his to do. The witness pieces stay at 7, 10, 14, 17, 20 and 24. Its `trade` opening follows `other` openings at 24 and 25, so it starts a run of one.
+- **The corpus test is not due.** The marker reads a bank of 21 with the next measurement at 31. This note takes the bank to 27. No measurement was made.
+- **Three images were rejected on tells and three were kept.** The rejects were a milk glass spotless inside after spilling, a steel rule with garbled pseudo-numerals, and a hammer head with a scratched pseudo-stamp. The prompts are in the note's production notes.
+- **Named for the founder in the draft report and approved with it:** the man whose father hit him, and who fears he has come close with his own kid, as the reader the piece serves worst. "Maybe he was. It didn't make the house safe." was the closest call on test 2. Test 9 is thin in this piece. All stand as approved.

@@ -1,9 +1,9 @@
 ---
 essay: The Wear Copies Too
 canonical: https://grownmengrow.com/the-wear-copies-too/ (live only after publication)
-status: draft — NOT founder-approved
-approved: no
-publication_authorized: false — NOT authorized for publication or social posting
+status: founder-approved
+approved: 2026-10-14 — approved as written alongside the essay and artwork
+publication_authorized: false — approval covers the copy, not a slot; posting remains separately gated
 image_rule: per-article — this pack may use only Field Note 27 imagery: worn-key-and-copy-counter, kitchen-table-milk-towel, worn-hammer-handle-pegboard
 stance_note: assignment — every excerpt leaves the sorting with him; none tells him what to keep or cut, and none lets the father stand as only damage
 ---

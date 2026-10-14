@@ -4384,3 +4384,13 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **External state changed:** one new ChatGPT thread in the founder's project. Branch `content/field-note-27-draft` pushed. PR #243 opened.
 
 **Open, in order:** (1) Founder review of the complete unit. (2) On approval, move the note and pack to `content/` at register position 26.
+
+## 2026-10-14 — Field Note 27 approved, moved to content/ at register position 26 (Claude Code)
+
+**Client:** Claude Code desktop, same session, on the founder's "Approved." Nothing published, sent, or posted. No Ghost slot named.
+
+**Done:** The note and pack moved to `content/field-notes/the-wear-copies-too.md` and `content/distribution/field-note-27-platforms.md`, and their markers were flipped to `founder-approved`. Register row 26 was appended, projected 2027-02-09, and both spacing checks still pass. A must-live-under-content guard was added for Field Note 27 and was broken on purpose before commit to prove it fails by name. The decision log and `drafts/README.md` were updated. Auto-merge on #243 was disarmed while this commit was added, then re-armed after it.
+
+**Files changed:** the two moved files, `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `drafts/README.md`, `scripts/render-field-note-27.mjs` (header comment), `scripts/verify-repository.mjs`, this log.
+
+**Open, in order:** (1) Nothing new. The Monday staging task picks the lowest-numbered unpublished row as usual.

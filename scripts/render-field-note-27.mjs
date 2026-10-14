@@ -18,7 +18,8 @@ import {
   writeAsset,
 } from "./lib/editorial-collage.mjs";
 
-// Field Note 27 — "The Wear Copies Too". Draft, not founder-approved.
+// Field Note 27 — "The Wear Copies Too". Founder-approved 2026-10-14;
+// register position 26, no Ghost slot named.
 //
 // Signature vocabulary: a hand-drawn bitting profile — a house key seen from
 // the side, its bow a ring and its blade carrying five cuts along the top
