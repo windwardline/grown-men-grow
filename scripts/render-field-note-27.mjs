@@ -34,9 +34,8 @@ import {
 // route line, tally, ledger, alarm arc, diverging fork, anode section, bubble
 // vial, branch stub or bead mark.
 //
-// Photography: three source images specified for this note under the house
-// prompt and unique to it. They had not been generated when this script was
-// written; see the note's production notes.
+// Photography: three source images generated for this note under the house
+// prompt and unique to it.
 const KEYS = "editorial/worn-key-and-copy-counter.png";
 const MILK = "editorial/kitchen-table-milk-towel.png";
 const HAMMER = "editorial/worn-hammer-handle-pegboard.png";
@@ -112,7 +111,7 @@ const slides = [
     ${lines(["The key machine can't tell the pattern", "from twenty years in somebody's pocket."], {x: 68, y: 420, size: 30, leading: 42, family: SERIF, weight: 400, style: "italic", fill: SMOKE, tracking: 0.2})}
     ${photo({name: KEYS, x: 330, y: 510, width: 560, height: 630, rotation: 0.8, position: "xMidYMid", backing: GREEN, id: "fn27-01"})}
     ${tape(560, 486, 214, 4)}
-    ${bittingMark(110, 1150, {width: 200, wear: 0.7})}`,
+    ${bittingMark(140, 1150, {width: 200, wear: 0.7})}`,
   }),
   // 2 — torn oxblood field, reverse serif type. Three generations of copy.
   portraitCanvas({
@@ -137,7 +136,7 @@ const slides = [
     total: 7,
     label: LABEL,
     body: `${lines(["A real locksmith", "doesn't need", "the key."], {x: 74, y: 290, size: 76, leading: 96, family: SERIF, weight: 700, tracking: 0})}
-    ${bittingMark(250, 760, {width: 700})}
+    ${bittingMark(300, 760, {width: 660})}
     ${lines(["He cuts from the code."], {x: 78, y: 1120, size: 52, leading: 66, family: SERIF, weight: 400, style: "italic", fill: OXBLOOD, tracking: 0.2})}
     ${scribble("M80 1176 C260 1160 440 1172 620 1166", RUST, 8)}`,
   }),
@@ -173,7 +172,7 @@ const slides = [
     headerColor: PAPER_LIGHT,
     footerColor: PAPER,
     body: `${lines(["“That's just how I am”", "is what a worn key", "would say if it", "could talk."], {x: 74, y: 300, size: 66, leading: 86, family: SERIF, weight: 700, fill: PAPER_LIGHT, tracking: 0})}
-    ${bittingMark(260, 900, {width: 620, wear: 0.8, ticks: true, line: PAPER_LIGHT})}`,
+    ${bittingMark(290, 900, {width: 600, wear: 0.8, ticks: true, line: PAPER_LIGHT})}`,
   }),
   // 7 — close, image-led on the handed-down hammer.
   portraitCanvas({
@@ -200,8 +199,8 @@ const feature = `<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="10
   ${photo({name: HAMMER, x: 790, y: 210, width: 400, height: 560, rotation: -1.4, position: "xMidYMid", backing: OXBLOOD, id: "fn27-feature"})}
   ${tape(420, 46, 222, 4)}
   ${tape(880, 186, 196, -4)}
-  ${bittingMark(1330, 290, {width: 230, wear: 0.8, line: PAPER_LIGHT})}
-  ${bittingMark(1330, 720, {width: 230, line: PAPER_LIGHT})}
+  ${bittingMark(1352, 290, {width: 206, wear: 0.8, line: PAPER_LIGHT})}
+  ${bittingMark(1352, 720, {width: 206, line: PAPER_LIGHT})}
   ${scribble("M620 972 C724 948 832 984 936 956", RUST, 10)}
   ${grain(1600, 1000, "fn27-feature", 0.22)}
 </svg>`;

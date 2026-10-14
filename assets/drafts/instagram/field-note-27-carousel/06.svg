@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn27-06-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn27-06-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn27-06-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#3A1518"/>
+  <text x="58" y="94" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 27 · 06 / 07</text>
+  <text x="74" y="300" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">“That's just how I am”</text><text x="74" y="386" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">is what a worn key</text><text x="74" y="472" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">would say if it</text><text x="74" y="558" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="66" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">could talk.</text>
+    <circle cx="187.4" cy="954.0" r="102.6" fill="none" stroke="#F8F3EA" stroke-width="7.2"/>
+    <circle cx="156.6" cy="954.0" r="28.7" fill="none" stroke="#F8F3EA" stroke-width="7.2"/><path d="M290.0 900.0 L326.0 900.0 C350.0 900.0 350.0 930.2 374.0 930.2 C398.0 930.2 398.0 900.0 422.0 900.0 C446.0 900.0 446.0 915.7 470.0 915.7 C494.0 915.7 494.0 900.0 518.0 900.0 C542.0 900.0 542.0 938.7 566.0 938.7 C590.0 938.7 590.0 900.0 614.0 900.0 C638.0 900.0 638.0 921.8 662.0 921.8 C686.0 921.8 686.0 900.0 710.0 900.0 C734.0 900.0 734.0 933.9 758.0 933.9 C782.0 933.9 782.0 900.0 806.0 900.0 L830.0 900.0 L890.0 959.4 L830.0 1008.0 L290.0 1008.0 Z" fill="none" stroke="#F8F3EA" stroke-width="7.2" stroke-linejoin="round"/><line x1="374.0" y1="867.6" x2="374.0" y2="829.8" stroke="#B14F3F" stroke-width="9.6" stroke-linecap="round"/><line x1="470.0" y1="867.6" x2="470.0" y2="847.9" stroke="#B14F3F" stroke-width="9.6" stroke-linecap="round"/><line x1="566.0" y1="867.6" x2="566.0" y2="819.2" stroke="#B14F3F" stroke-width="9.6" stroke-linecap="round"/><line x1="662.0" y1="867.6" x2="662.0" y2="840.4" stroke="#B14F3F" stroke-width="9.6" stroke-linecap="round"/><line x1="758.0" y1="867.6" x2="758.0" y2="825.3" stroke="#B14F3F" stroke-width="9.6" stroke-linecap="round"/>
+  <text x="58" y="1292" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn27-06-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
