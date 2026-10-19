@@ -4441,6 +4441,22 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 
 **Open, in order:** (1) Carried forward: distribution and the one-member list, the suspended A/B, the `isAiGenerated` founder question from 2026-09-28, and the extract-zip acceptances expiring 2026-11-09.
 
+## 2026-10-19 — Claude Code — Correction to this morning's Friday analytics readout
+
+**Client:** Claude Code. **Branch:** `claude/friday-analytics-2026-10-19-correction`. The advisory review of PR #245 found two sentences in the readout above that misstate this log's history. The log is append-only, so the corrections are recorded here.
+
+**1. LinkedIn, week 8: the count moved after two readouts recorded it as settled.** The readout says week 9's 9 impressions are "up from 1 impression in week 8." The 1 is what Buffer reports today: the 2026-09-30 post reads 1 impression and 1 reach, metrics refreshed 2026-10-18. The 2026-10-08 and 2026-10-12 readouts both recorded that post at 0 on refreshed metrics. So the figure moved from 0 to 1 eighteen days after posting. Buffer's LinkedIn counts can keep settling after a refresh, and a "has not moved" reading taken within two weeks of posting is provisional. The week-on-week comparison is 0 to 9 at the time of each reading, or 1 to 9 on today's figures.
+
+**Where that leaves open item (2) of the 2026-09-20 readout**, the drop from 25 impressions to 0: it was not a trend. Week 7 later reached 129 impressions, so LinkedIn is not stuck at zero. The weekly figures are 25, 0, 129, then 1 and 9, which is volatile on a very small base. The item is closed. No platform decision rests on it.
+
+**2. Instagram notifications did not fail through October.** The readout says the route "had failed since 2026-09-20." It had not. The 2026-09-27 readout recorded it rendering again and closed the item, and the 2026-10-08 and 2026-10-12 readouts both read it. The sentence came from a stale working note on this machine, not from this run's observation. The route has rendered at every readout since 2026-09-27. The working note is corrected.
+
+**Also closed, and not named above:** item (2) of the 2026-10-12 Open list. PR #231 is in `main` as `7c58954`, and the register reconciles against Ghost on all 27 rows.
+
+**Files changed:** this log only. **External state changed:** none.
+
+**Open, in order:** unchanged from the readout above.
+
 ## 2026-10-19 — Saturday note task (Claude Code): Note 2 posted by the founder, 1,872 minutes late
 
 **Client:** Claude Code desktop, scheduled task `gmg-saturday-note`, run at the founder's direction after the preflight stood down.
