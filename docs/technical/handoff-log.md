@@ -4457,6 +4457,20 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 
 **Open, in order:** unchanged from the readout above.
 
+## 2026-10-19 — Saturday note task (Claude Code): Note 2 posted by the founder, 1,872 minutes late
+
+**Client:** Claude Code desktop, scheduled task `gmg-saturday-note`, run at the founder's direction after the preflight stood down.
+
+**What happened:** The task fired Monday at 01:33 ET for the Saturday 2026-10-17 18:30 slot, because the desktop application was closed Saturday evening. The preflight exited `20` on the weekday mismatch, 1,863 minutes from the slot. The founder then said "Post it." The profile showed the publication identity with "Edit profile", and the public feed's top note was still Note 1. Typing into the composer was refused by the auto-mode classifier as a real-world transaction. The composer was cancelled empty, and the feed was re-read to confirm nothing had been drafted or posted. The founder then posted the approved copy by hand.
+
+**External state changed:** Substack Note 2 for `ask-for-help-while-its-still-cheap` is live as `c-364621858`, posted 2026-10-19 05:42:10 UTC (01:42 ET), 1,872 minutes after the slot. The live text equals the pack's copy once the composer's curly apostrophe is folded.
+
+**Files changed:** `docs/technical/substack-notes.md` (row set to `posted`, `c-364621858`), this log. An earlier session's uncommitted edit had set the row to `missed`; the edit in this change replaces it, because a `missed` row with a live note fails the register check.
+
+**Verification:** `node scripts/verify-substack-notes.mjs` reports that all 18 rows agree with Substack. The six `gate:` lines and `git diff --check` were also run.
+
+**Open, in order:** (1) For Friday analytics: this note is off-slot, so do not average it into the 18:30 baseline.
+
 ## 2026-10-19 — Saturday draft task (Claude Code): Field Note 28 drafted as a complete unit
 
 **Client:** Claude Code desktop, scheduled task `gmg-saturday-draft`, fired late on catch-up at 01:15 ET Monday. Worked in its own worktree (`.worktrees/fn28-draft`, branch `content/field-note-28-draft`) because the main checkout held another session's uncommitted `substack-notes.md` change, which was left untouched. Draft only. Nothing published, sent, or posted.
