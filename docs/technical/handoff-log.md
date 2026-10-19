@@ -4470,3 +4470,33 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Verification:** `node scripts/verify-substack-notes.mjs` reports that all 18 rows agree with Substack. The six `gate:` lines and `git diff --check` were also run.
 
 **Open, in order:** (1) For Friday analytics: this note is off-slot, so do not average it into the 18:30 baseline.
+
+## 2026-10-19 — Saturday draft task (Claude Code): Field Note 28 drafted as a complete unit
+
+**Client:** Claude Code desktop, scheduled task `gmg-saturday-draft`, fired late on catch-up at 01:15 ET Monday. Worked in its own worktree (`.worktrees/fn28-draft`, branch `content/field-note-28-draft`) because the main checkout held another session's uncommitted `substack-notes.md` change, which was left untouched. Draft only. Nothing published, sent, or posted.
+
+**Backfill:** checked first and found nothing to build. All 26 approved field notes with collateral carry a pack, a render script, a seven-slide carousel, a feature image, a review sheet, and gate entries; `verify-repository.mjs` was green on `main` before any change.
+
+**Drafted:** "The Sweep Has Nowhere Else to Be" (`witness`, 962 words, `other` opening on a man being dropped on a group ride). `**Standing commission:**` read `none` and is untouched; the stance was taken under the standing corpus duty, because positions 21–26 hold one witness piece against five assignments. At position 27 it sits exactly three slots after 24, the last three witness gaps run three, four, three, and its `other` opening follows the `trade` opening at 26. One section head, "Go on ahead," which matches none of the skeleton patterns. Distinct from Wednesday's assignment piece "The Wear Copies Too" (indoor, inherited, a key machine).
+
+**Artwork:** six images generated in the founder's ChatGPT project, continuing the latest Editorial Photography Request thread; three rejected at full resolution (a pedal growing from a bicycle hub, pseudo-lettering on helmet shells twice, a wavy guardrail splice), bicycles and helmets then left out of frame. Three kept and stripped; the re-scan found an indicator on 0 of 3. Signature mark: the sweep mark (rider circles on a road line, a rust dot whose distance from the last circle never changes). The review-sheet renderer re-encoded 28 unrelated sheets; those were restored rather than committed.
+
+**Files changed:** `drafts/field-note-28-the-sweep-has-nowhere-else-to-be.md`, `drafts/field-note-28-platforms.md`, `drafts/README.md`, `scripts/render-field-note-28.mjs`, `scripts/render-review-contact-sheets.mjs`, `scripts/verify-repository.mjs` (required file, `validateAssetFamily`, three editorial sources, review sheet, feature-image count 29 → 30), `assets/source/editorial/{switchback-climb-morning,saddle-bag-kit-bench,cafe-table-two-bottles}.png`, `assets/drafts/instagram/field-note-28-carousel/` (7 SVG/PNG pairs), `assets/drafts/ghost/feature-images/the-sweep-has-nowhere-else-to-be.{svg,png}`, `assets/drafts/review/field-note-28-carousel.png`, this log.
+
+**External state changed:** six new images in the existing ChatGPT thread. Nothing else: the branch is committed locally but was **not pushed**, because `git push` needed an approval that no one was present to give in this unattended run, so no PR exists yet.
+
+**Verification:** the six `gate:` lines in `AGENTS.md` — `verify-ghost-theme`, `pnpm --dir theme test`, the theme zip with GScan, the script unit tests (225 of 225), `verify-repository`, `verify-svg-xml` — all passing, plus `git diff --check` clean.
+
+**Open, in order:** (1) Push `content/field-note-28-draft` from `.worktrees/fn28-draft` and open its PR with auto-merge armed last. (2) Founder review of the complete unit. (3) On approval, move the note and pack to `content/` at register position 27, flip both markers to `founder-approved`, append the register row, add the must-live-under-content guard, and clear nothing else: the commission already reads `none`.
+
+## 2026-10-19 — Field Note 28 approved, moved to content/ at register position 27 (Claude Code)
+
+**Client:** Claude Code desktop, same session, on the founder's "Approved. Finish the work." Nothing published, sent, or posted. No Ghost slot named.
+
+**Done:** The note and pack moved to `content/field-notes/the-sweep-has-nowhere-else-to-be.md` and `content/distribution/field-note-28-platforms.md`, with both markers flipped to `founder-approved`. Register row 27 was appended, projected 2027-02-16, and both spacing checks still pass. A must-live-under-content guard was added for Field Note 28 and broken on purpose before commit to prove it fails by name. The decision log, `drafts/README.md`, and the render script's header were updated. The commission line still reads `none`.
+
+**Files changed:** the two moved files, `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `drafts/README.md`, `scripts/render-field-note-28.mjs` (header comment), `scripts/verify-repository.mjs`, this log.
+
+**Supersedes:** item (1) of the entry above. The founder was present for this step, so the branch is pushed and its PR opened with auto-merge armed last.
+
+**Open, in order:** (1) Nothing new. The Monday staging task picks the lowest-numbered unpublished row as usual.
