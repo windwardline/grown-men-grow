@@ -4500,3 +4500,19 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Supersedes:** item (1) of the entry above. The founder was present for this step, so the branch is pushed and its PR opened with auto-merge armed last.
 
 **Open, in order:** (1) Nothing new. The Monday staging task picks the lowest-numbered unpublished row as usual.
+
+## 2026-10-19 — Claude Code — Dependabot alerts #1 and #3 dismissed against the extract-zip acceptances
+
+**Client:** Claude Code. **Branch:** `chore/dismiss-extract-zip-alerts-2026-10-19`.
+
+**Finding:** the repository's only two open Dependabot alerts were #1 (GHSA-jmr9-qjv8-65gv) and #3 (GHSA-7pqw-9j4j-h8q3), both high, both `extract-zip` in `theme/pnpm-lock.yaml`, and both with no patched version. They are the two advisories `osv-scanner.toml` already accepts until 2026-11-09. OSV honoured the acceptance and Dependabot kept reporting them, because a suppression does not dismiss an alert.
+
+**Upgrade checked first:** the registry has `extract-zip` 2.0.1 as its latest, unchanged since 2023. `gscan` is on 6.6.1, the version the theme already pins. `@tryghost/zip` 3.5.18 shipped 2026-10-14, and it still depends on `extract-zip ^2.0.1`. The lock resolves 3.5.13, so a bump changes nothing. No override is possible, because there is no fixed version to override to. `node scripts/verify-dependency-exemptions.mjs` reports that both premises hold.
+
+**External state changed:** alerts #1 and #3 dismissed as `tolerable_risk`, 2026-10-19 06:00 UTC. The comment matches the OSV acceptance: no release above 2.0.1, devDependency only, the sole extraction is the theme zip this repository builds, and the premise is re-checked by the verifier.
+
+**Fleet sweep, same session:** open Dependabot alerts were listed for all 17 `windwardline` repositories. The only other repository with an open alert is pathfinder, #6 (braces, GHSA-vfj7-8cjw-p6xm), handled in pathfinder. commis-goods, ops, and windwardline have Dependabot alerts disabled, so the API cannot show anything for them.
+
+**Files changed:** this log only.
+
+**Open, in order:** (1) At the 2026-11-09 re-decision, a dismissal does not expire the way `ignoreUntil` does. If either risk is not re-accepted that day, reopen its alert along with lifting the suppression, so the two surfaces agree.
