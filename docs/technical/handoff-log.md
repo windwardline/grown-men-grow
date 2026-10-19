@@ -4394,3 +4394,31 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Files changed:** the two moved files, `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `drafts/README.md`, `scripts/render-field-note-27.mjs` (header comment), `scripts/verify-repository.mjs`, this log.
 
 **Open, in order:** (1) Nothing new. The Monday staging task picks the lowest-numbered unpublished row as usual.
+
+## 2026-10-19 — Claude Code — Friday analytics readout, run Monday (Oct 12–18)
+
+**Client:** Claude Code. **Branch:** `claude/friday-analytics-2026-10-19`. The `gmg-friday-analytics` task fired Monday 01:32 ET as the catch-up for Friday 2026-10-16. It covers the week since the 2026-10-12 readout.
+
+**Scope:** verification only. Nothing was published, posted, paid, replied to, or sent.
+
+**Closed since last readout: Ghost(Pro) billing.** The payment banner is gone from every Admin page, and the Ghost(Pro) billing history lists the 10 Oct 2026 invoice as Paid. Item (1) of the 2026-10-12 Open list needs nothing further.
+
+**Ghost.** **1** member, unchanged since 2026-08-11. `ask-for-help-while-its-still-cheap` published 2026-10-13 12:00Z: 1 sent, 1 delivered, 1 opened, 0 failed. Nothing is scheduled.
+
+**Pageviews (Ghost web analytics, signed-in admin).** Last 7 days (Oct 13–19): **5 visitors, 7 views**. Homepage 4, Ask for Help While It's Still Cheap 2, Start Here 1. Sources: Direct 5. Last 30 days: **24 visitors, 28 views**, down from 29 and 33. Top content: Homepage 10, You Can't Outwork a Wrong Direction 7, The Lights Never Flickered 3, Nobody Rigs 3, Start Here 2, Ask for Help 2. Sources: Direct 18, Bing 5, Bluesky 1. Newsletters tab: 1 subscriber, one send in 7 days, opened.
+
+**A/B protocol stays suspended at step 3**, with 1 recipient against a floor of 30. No timing decision is due, so `publish-timing.md` is unchanged.
+
+**Platform numbers, week 9.** All four Buffer posts sent on slot: Bluesky Tue 12:00, LinkedIn Wed 10:00, Instagram Thu 09:00, Bluesky Sat 18:30. Instagram carousel: reach **2**, views 7, 0 saves, 0 shares, 0 follows. LinkedIn: impressions **9**, reach 6, 0 reactions, 0 comments, up from 1 impression in week 8. Bluesky: 0 reactions, 0 replies, 0 reposts on both posts. Bluesky profile: 0 followers, 18 posts, 2 likes and 0 replies or quotes across the feed. Business Suite, Oct 11–17: Instagram reach 2, follows 0, which matches the per-post figure. Its 28-day reach of 281 is still almost entirely the Sep 20–21 anomaly.
+
+**Moderation sweep: nothing to escalate.** Ghost comments: 0 on all 9 published posts. Instagram DMs: Primary, General, Requests, and Hidden Requests are all empty, and both requests pages read "Delete all 0". Instagram notifications render again. The route had failed since 2026-09-20. They show nothing after Sep 27 and no comments. LinkedIn: 0 comments on both recent posts (Buffer metrics). Bluesky: 0 replies, 0 quotes. Mentions still need a session. No reply was made.
+
+**Qualitative pass:** nothing said back on any surface, so there is no recurring question or objection to report.
+
+**Corpus balance check: skipped.** The marker reads 2026-09-16 at 21, next due at 31. The bank is 27: 26 field notes plus the launch essay.
+
+**Cadence gates.** `verify-publication-register.mjs` passes, 27 rows agreeing with Ghost. `verify-substack-notes.mjs` passes. The shared checkout holds an uncommitted `missed` row for Note 2 of the 10-13 essay. It belongs to the Saturday-note session, so this run left it alone.
+
+**Files changed:** this log only. **External state changed:** none. Ghost Admin, Business Suite, and Instagram were read, not changed.
+
+**Open, in order:** (1) Carried forward: distribution and the one-member list, the suspended A/B, the `isAiGenerated` founder question from 2026-09-28, and the extract-zip acceptances expiring 2026-11-09.
