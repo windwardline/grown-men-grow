@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn28-04-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn28-04-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn28-04-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 28 · 04 / 07</text>
+  <text x="74" y="290" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="70" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">If the last man is going</text><text x="74" y="380" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="70" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">nine miles an hour</text><text x="74" y="470" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="70" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">up the hill, so is</text><text x="74" y="560" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="70" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">the sweep,</text>
+    <line x1="150.0" y1="1000.0" x2="930.0" y2="797.2" stroke="#121416" stroke-width="7.8" stroke-linecap="round"/><circle cx="867.6" cy="786.5" r="23.4" fill="none" stroke="#121416" stroke-width="7.8"/><circle cx="789.6" cy="806.8" r="23.4" fill="none" stroke="#121416" stroke-width="7.8"/><circle cx="711.6" cy="827.1" r="23.4" fill="none" stroke="#121416" stroke-width="7.8"/><circle cx="633.6" cy="847.4" r="23.4" fill="none" stroke="#121416" stroke-width="7.8"/><circle cx="337.2" cy="924.4" r="23.4" fill="none" stroke="#121416" stroke-width="7.8"/><circle cx="278.7" cy="939.6" r="21.5" fill="#B14F3F"/>
+    <text x="78" y="1130" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">who could do eighteen.</text>
+    <path d="M80 1184 C250 1170 420 1180 600 1174" fill="none" stroke="#B14F3F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn28-04-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

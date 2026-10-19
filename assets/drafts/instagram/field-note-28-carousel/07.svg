@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn28-07-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn28-07-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn28-07-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 28 · 07 / 07</text>
+  <g transform="rotate(-0.6 540 490)">
+    <rect x="218" y="160" width="644" height="694" fill="#60735A"/>
+    <rect x="226" y="146" width="628" height="688" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/cafe-table-two-bottles.png" x="230" y="150" width="620" height="680" preserveAspectRatio="xMidYMid slice" filter="url(#fn28-07-photo)"/>
+  </g>
+    <g transform="rotate(-3 602 151)">
+    <rect x="500" y="128" width="204" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="508" y1="135" x2="694" y2="132" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="78" y="920" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="46" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">The sweep's ride uploads</text><text x="78" y="980" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="46" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">like everyone else's.</text>
+    <text x="80" y="1050" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="36" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">It sits on his profile under his name</text><text x="80" y="1100" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="36" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">for anybody to see, with no caption.</text>
+    <line x1="780.0" y1="1200.0" x2="980.0" y2="1200.0" stroke="#121416" stroke-width="2.0" stroke-linecap="round"/><circle cx="968.0" cy="1193.1" r="6.0" fill="none" stroke="#121416" stroke-width="2.0"/><circle cx="951.0" cy="1193.1" r="6.0" fill="none" stroke="#121416" stroke-width="2.0"/><circle cx="934.0" cy="1193.1" r="6.0" fill="none" stroke="#121416" stroke-width="2.0"/><circle cx="917.0" cy="1193.1" r="6.0" fill="none" stroke="#121416" stroke-width="2.0"/><circle cx="900.0" cy="1193.1" r="6.0" fill="none" stroke="#121416" stroke-width="2.0"/><circle cx="885.0" cy="1193.1" r="5.5" fill="#B14F3F"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn28-07-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
