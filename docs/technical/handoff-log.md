@@ -4394,3 +4394,21 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Files changed:** the two moved files, `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `drafts/README.md`, `scripts/render-field-note-27.mjs` (header comment), `scripts/verify-repository.mjs`, this log.
 
 **Open, in order:** (1) Nothing new. The Monday staging task picks the lowest-numbered unpublished row as usual.
+
+## 2026-10-19 — Thursday Medium task, catch-up run (Claude Code): Week 9 essay imported and published on Medium
+
+**Client:** Claude Code desktop, scheduled task `gmg-thursday-medium`. It was due Thursday 2026-10-15 at 7:00 AM and fired on the next app launch, Monday 2026-10-19 at 01:31 ET. Standing authorization: week-one plan, 2026-08-10.
+
+**Essay:** Ghost's latest published post is `ask-for-help-while-its-still-cheap`, published 2026-10-13 12:00 UTC, well past 40 hours. Its canonical answered 200. Ghost `title` "Ask for Help While It’s Still Cheap"; `meta_title` carried the `| Grown Men Grow` suffix, as usual.
+
+**Not a double import:** the profile listed eight stories, the newest "The Lights Never Flickered", so the Week 8 import the 2026-10-12 entry called overdue did land. Stories → Drafts was empty.
+
+**Imported and corrected:** the importer took the `meta_title`; the title was set to the Ghost `title`. The `Grown Men Grow 2 min read` line was deleted. The preview image had arrived already set from the feature image and was left alone. The subtitle matched the dek, Ghost's `custom_excerpt`, and the pack's `- Subtitle:` line, so no repo copy changed. Tags from `content/distribution/field-note-05-platforms.md`: Men (third behind Mental Health and Mental Health Awareness), Self Improvement, Masculinity, Help (second behind Self Help), Personal Growth. Each was highlighted and checked on screen before Return. The committed chips read back as exactly those five. Canonical in Advanced Settings: `https://grownmengrow.com/ask-for-help-while-its-still-cheap/`. The share buttons were not used.
+
+**Live:** https://grownmengrow.medium.com/ask-for-help-while-its-still-cheap-dcb20cf5e81f. Fetched from the page context: HTTP 200, and the server HTML carries exactly one `<link rel="canonical" href="https://grownmengrow.com/ask-for-help-while-its-still-cheap/"/>`.
+
+**External state changed:** one Medium story published on @grownmengrow. No Ghost, Buffer, Substack, Instagram, or account change.
+
+**Files changed:** this log. The main checkout's uncommitted `docs/technical/substack-notes.md` belongs to the Saturday-note session and was not touched. This entry was written in a separate worktree.
+
+**Open, in order:** (1) None for Medium until next Thursday's import.
