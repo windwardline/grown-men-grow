@@ -1,8 +1,9 @@
 ---
 essay: The Sweep Has Nowhere Else to Be
 canonical: https://grownmengrow.com/the-sweep-has-nowhere-else-to-be/ (live only after publication)
-status: draft — NOT founder-approved
-publication_authorized: false — not authorized for publication or posting
+status: founder-approved
+approved: 2026-10-19 — approved as written alongside the essay and artwork
+publication_authorized: false — approval covers the copy, not a slot; posting remains separately gated
 image_rule: per-article — this pack may use only Field Note 28 imagery: switchback-climb-morning, saddle-bag-kit-bench, cafe-table-two-bottles
 stance_note: witness — no excerpt tells him anything or asks him anything; each ends on what the sweep does, and none grades the sweep's technique
 ---

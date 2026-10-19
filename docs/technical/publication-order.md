@@ -67,6 +67,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 24 | `he-stays-at-short` | 2027-01-26 | |
 | 25 | `he-hasnt-been-bad-at-anything-in-years` | 2027-02-02 | |
 | 26 | `the-wear-copies-too` | 2027-02-09 | |
+| 27 | `the-sweep-has-nowhere-else-to-be` | 2027-02-16 | |
 
 ## Why this order and not another
 
@@ -131,6 +132,10 @@ Its approval change set first claimed 24, written while Field Note 25 was still 
 ### Position 26 was appended
 
 `the-wear-copies-too` was approved 2026-10-14 and appended at 26. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note. It is `assignment`, so the witness pieces stay at 7, 10, 14, 17, 20 and 24. Its `trade` opening follows `other` openings at 24 and 25, so it starts a run of one.
+
+### Position 27 was appended
+
+`the-sweep-has-nowhere-else-to-be` was approved 2026-10-19 and appended at 27. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note. It is `witness`, three slots after the witness piece at 24, so the witness pieces sit at 7, 10, 14, 17, 20, 24 and 27; the last three gaps run three, four, three and no four fall on an exact beat. Its `other` opening follows the `trade` opening at 26, so no trade run grows.
 
 ### The spacing reorder of 2026-09-16, and why the rules are now checked
 

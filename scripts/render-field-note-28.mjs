@@ -18,8 +18,8 @@ import {
   writeAsset,
 } from "./lib/editorial-collage.mjs";
 
-// Field Note 28 — "The Sweep Has Nowhere Else to Be". Draft, NOT
-// founder-approved; written 2026-10-19 by the Saturday draft task.
+// Field Note 28 — "The Sweep Has Nowhere Else to Be". Founder-approved
+// 2026-10-19; register position 27, no Ghost slot named.
 //
 // Signature vocabulary: a hand-drawn sweep mark — a short road line with five
 // small open circles strung along it for riders and one solid rust dot for the

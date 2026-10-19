@@ -4412,3 +4412,15 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Verification:** the six `gate:` lines in `AGENTS.md` — `verify-ghost-theme`, `pnpm --dir theme test`, the theme zip with GScan, the script unit tests (225 of 225), `verify-repository`, `verify-svg-xml` — all passing, plus `git diff --check` clean.
 
 **Open, in order:** (1) Push `content/field-note-28-draft` from `.worktrees/fn28-draft` and open its PR with auto-merge armed last. (2) Founder review of the complete unit. (3) On approval, move the note and pack to `content/` at register position 27, flip both markers to `founder-approved`, append the register row, add the must-live-under-content guard, and clear nothing else: the commission already reads `none`.
+
+## 2026-10-19 — Field Note 28 approved, moved to content/ at register position 27 (Claude Code)
+
+**Client:** Claude Code desktop, same session, on the founder's "Approved. Finish the work." Nothing published, sent, or posted. No Ghost slot named.
+
+**Done:** The note and pack moved to `content/field-notes/the-sweep-has-nowhere-else-to-be.md` and `content/distribution/field-note-28-platforms.md`, with both markers flipped to `founder-approved`. Register row 27 was appended, projected 2027-02-16, and both spacing checks still pass. A must-live-under-content guard was added for Field Note 28 and broken on purpose before commit to prove it fails by name. The decision log, `drafts/README.md`, and the render script's header were updated. The commission line still reads `none`.
+
+**Files changed:** the two moved files, `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `drafts/README.md`, `scripts/render-field-note-28.mjs` (header comment), `scripts/verify-repository.mjs`, this log.
+
+**Supersedes:** item (1) of the entry above. The founder was present for this step, so the branch is pushed and its PR opened with auto-merge armed last.
+
+**Open, in order:** (1) Nothing new. The Monday staging task picks the lowest-numbered unpublished row as usual.
