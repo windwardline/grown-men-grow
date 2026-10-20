@@ -4536,3 +4536,17 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **No new public prose.** Everything in the kit was copied verbatim from approved sources or from Buffer. The READ ME is operating instructions to the founder, not publication copy, so the nine tests were not applicable.
 
 **Open, in order:** (1) Tuesday 2026-10-27 12:00 PM: Substack Note 1, the note task first, then the founder from kit folder 1. (2) Thursday 10-29 7:00 AM: Medium import, owned by `gmg-thursday-medium`. (3) Thursday 10-29: optional Story reshare with link sticker (folder 3). (4) Saturday 10-31 6:30 PM: Substack Note 2, owned by the note task. (5) This task has now missed its Monday window twice in three weeks (10-05 never fired; 10-19 fired Tuesday 9:07). Each miss costs a week of the schedule, and nothing alerts before 8:00 AM Tuesday that the slot is empty.
+
+## 2026-10-20 — Tuesday note task (Claude Code): stood down, no essay published this week
+
+**Client:** Claude Code, scheduled task `gmg-tuesday-note`. Fired 14:01 ET against an 11:45 schedule; the 12:00 slot had already passed.
+
+**Outcome:** stand-down. `note-task-preflight.mjs` exited `20` with `this week's essay has not published`. The latest published essay is `ask-for-help-while-its-still-cheap` (2026-10-13). The publication week opened 2026-10-20, and Ghost holds nothing published in it, because Week 10 (`you-can-walk-on-it-tomorrow`) was staged for 2026-10-27 after the missed Monday slot (#251). Chrome, the profile and the composer were not touched. The preflight released its own lock.
+
+**External state changed:** none. Nothing was staged, posted or sent.
+
+**Registers:** `substack-notes.md` has no row for 2026-10-20, and the week's Note 1 row is already pending at 2026-10-27 12:00. No change was needed.
+
+**Files changed:** `docs/technical/handoff-log.md`.
+
+**Open, in order:** (1) Tuesday 2026-10-27 12:00 PM: Note 1 for `you-can-walk-on-it-tomorrow`, owned by this task. (2) Saturday 2026-10-24: the Saturday note task should also stand down on the same premise.
