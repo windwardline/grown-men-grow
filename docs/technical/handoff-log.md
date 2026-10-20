@@ -4516,3 +4516,23 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Files changed:** this log only.
 
 **Open, in order:** (1) At the 2026-11-09 re-decision, a dismissal does not expire the way `ignoreUntil` does. If either risk is not re-accepted that day, reopen its alert along with lifting the suppression, so the two surfaces agree.
+
+## 2026-10-20 — Monday staging run, fired Tuesday: Week 10 staged for Oct 27 after a missed slot
+
+**Client:** Claude Code (desktop app), the `gmg-monday-staging` scheduled task. It fired Tuesday 2026-10-20 at 9:07 AM ET, 67 minutes after the 8:00 AM slot it exists to fill. Nothing had been staged for 2026-10-20. **No field note went out that Tuesday.**
+
+**Hold check:** `**Active hold:** none`. None of the five conditions were found in anything this run can see, so the week was not held.
+
+**Scope completed.** `verify-publication-register --fix` found nothing to record: 9 published, 0 scheduled. The next unpublished row is 9, `you-can-walk-on-it-tomorrow` (Field Note 13, `status: founder-approved` 2026-08-19). Following the 2026-10-08 precedent, it was staged for **Tuesday 2026-10-27 12:00Z (8:00 AM EDT; DST ends Nov 1)**, the next schedule-of-record slot. It was not published off-slot today. The row keeps its 2026-10-13 projection, because the register's sequence is the authority and its dates are projections. The schedule now runs two weeks behind the projected dates.
+
+**External state changed.** Ghost: post `6ad768020c7ac2000131f436` was created and `scheduled` for 2026-10-27T12:00Z, newsletter `default-newsletter`, segment `all`, with the feature image uploaded to Ghost storage. Buffer: four posts were created and read back VERIFIED, at 10-27 16:00Z Bluesky, 10-28 14:00Z LinkedIn, 10-29 13:00Z Instagram (7 slides, alt 7/7) and 10-31 22:30Z Bluesky. iCloud: the kit `Week 10 — You Can Walk on It Tomorrow`. Nothing was published or sent by this run.
+
+**Verification.** The staging dry run built the payload with alt text present. After staging, `title`, `custom_excerpt`, `meta_title`, `meta_description`, `email_subject` and `feature_image_alt` read back from Ghost all equal `buildPostPayload`: zero divergences. Feed tile: this week's slide 1 is built on `covered-slab-curing`, and Buffer's most recent sent Instagram post (2026-10-15, Ask for Help) used `hardware-counter-question`. `verify-repository` passes. `queue-week-buffer --dry-run` printed the four slots before the live run. `verify-publication-register` agrees on all 28 rows (9 published, 1 scheduled). `verify-substack-notes` agrees on all 20 rows (12 posted, 6 missed, 2 pending). The kit's note paste files are `noteCopyForSlug` output. The backup copy was taken from Buffer's queued text, and the alt lines from the note's frontmatter.
+
+**Pack correction.** The Field Note 13 pack's feed-tile note said the carousel cover was type-led and carried no photography. That was true before the 2026-08-19 image-led rebuild and false after it. The note was rewritten to name `covered-slab-curing.png` as the cover. Only that scheduling note changed; no platform copy was touched.
+
+**Files changed:** `docs/technical/publication-order.md` (row 9 `scheduled`), `docs/technical/substack-notes.md` (two pending rows for Week 10), `content/distribution/field-note-13-platforms.md` (feed-tile note only), `docs/technical/handoff-log.md`.
+
+**No new public prose.** Everything in the kit was copied verbatim from approved sources or from Buffer. The READ ME is operating instructions to the founder, not publication copy, so the nine tests were not applicable.
+
+**Open, in order:** (1) Tuesday 2026-10-27 12:00 PM: Substack Note 1, the note task first, then the founder from kit folder 1. (2) Thursday 10-29 7:00 AM: Medium import, owned by `gmg-thursday-medium`. (3) Thursday 10-29: optional Story reshare with link sticker (folder 3). (4) Saturday 10-31 6:30 PM: Substack Note 2, owned by the note task. (5) This task has now missed its Monday window twice in three weeks (10-05 never fired; 10-19 fired Tuesday 9:07). Each miss costs a week of the schedule, and nothing alerts before 8:00 AM Tuesday that the slot is empty.

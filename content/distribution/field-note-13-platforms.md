@@ -11,7 +11,7 @@ image_rule: per-article — this pack may use only Field Note 13 imagery, which 
 
 Native adaptations per `docs/technical/distribution-plan.md`. Nothing posts until the canonical Ghost URL is live and each platform's gate passes. Ghost remains canonical; Medium is the only full-essay surface.
 
-**Feed-tile note for whoever schedules this.** Field Note 13 carries no photography. Its carousel cover is type-led, which means it can't collide with any other tile on a photograph — but it can collide on *appearance*, since the launch set already includes two type-led covers. Check the live feed for a type-led neighbour before queueing the Instagram slot; the repository gate can't see what Buffer has already sent.
+**Feed-tile note for whoever schedules this.** Field Note 13's carousel cover is image-led on `covered-slab-curing.png` since the 2026-08-19 rebuild; the photograph-exclusivity gate holds it to this asset. Before queueing the Instagram slot, confirm Buffer's most recent sent Instagram post is not built on the same photograph; the repository gate can't see what Buffer has already sent.
 
 # Medium
 
