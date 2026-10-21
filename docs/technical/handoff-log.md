@@ -4550,3 +4550,19 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Files changed:** `docs/technical/handoff-log.md`.
 
 **Open, in order:** (1) Tuesday 2026-10-27 12:00 PM: Note 1 for `you-can-walk-on-it-tomorrow`, owned by this task. (2) Saturday 2026-10-24: the Saturday note task should also stand down on the same premise.
+
+## 2026-10-21 — Wednesday draft task (Claude Code): Field Note 29 drafted, complete unit for review
+
+**Client:** Claude Code, scheduled task `gmg-wednesday-draft`. Chrome and the extension responded; images were generated through the founder's ChatGPT project.
+
+**Backfill:** none needed. All 27 approved notes in `content/field-notes/` carry a pack, render script, carousel, feature image, review sheet and gate entries.
+
+**Scope completed.** Field Note 29, "Nobody Bids a Job at 3 A.M.," drafted as an `assignment` piece with an `other` opening: worry as a contractor who prices every job in the house at four in the morning without walking any of them, the contingency line in a bid as the mechanism, and the daylight walk as his move. `**Standing commission:**` read `none` and is untouched. The next open register position is 28; witness sits at 27, so witness was unavailable there and an assignment was the honest stance. The unit is complete: platform pack, three new photographs, a render script with a flashlight-and-beam mark used by no other note, seven carousel slides, feature image, review sheet, and gate entries. Three generated images were rejected at full resolution on physical tells (a skewed hatch with floorboards changing direction, an access panel out of perspective, a tailgate cable anchored mid-gate); one prompt failed to generate and was resent. All three kept files were stripped of AI provenance (0 of 3 flagged on re-scan).
+
+**External state changed:** six prompts were sent in the ChatGPT project's Editorial Photography Request thread. Nothing was published, sent or posted. The four rejected or superseded downloads remain in `~/Downloads`, because removing them needed an approval this unattended run could not get.
+
+**Files changed:** `drafts/field-note-29-nobody-bids-a-job-at-3-am.md`, `drafts/field-note-29-platforms.md`, `drafts/README.md`, `scripts/render-field-note-29.mjs`, `scripts/render-review-contact-sheets.mjs`, `scripts/verify-repository.mjs`, `assets/source/editorial/{hallway-flashlight-first-light,screwdriver-flashlight-tub-floor,two-flashlights-porch-step}.png`, `assets/drafts/instagram/field-note-29-carousel/01–07.{svg,png}`, `assets/drafts/ghost/feature-images/nobody-bids-a-job-at-3-am.{svg,png}`, `assets/drafts/review/field-note-29-carousel.png`, `docs/technical/handoff-log.md`.
+
+**Verification:** `verify-ghost-theme` pass; `pnpm --dir theme test` pass; theme zip + GScan pass; script unit tests 225/225 pass; `verify-repository` pass once the new files were staged (its only earlier failure was the untracked render script); `verify-svg-xml` pass (270 files); `git diff --check` clean. Unrelated review sheets that re-rendered with byte drift were restored rather than committed.
+
+**Open, in order:** (1) Founder review of Field Note 29. On approval, move the note and pack to `content/`, append register row 28, and add the must-live-under-content guard. (2) The stray downloads in `~/Downloads` can be deleted by hand.

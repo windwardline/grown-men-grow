@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn29-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn29-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn29-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 29 · 01 / 07</text>
+  <text x="64" y="250" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="80" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.6">NOBODY BIDS A JOB</text>
+    <text x="64" y="342" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="80" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.6">AT 3 A.M.</text>
+    <text x="68" y="416" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="28" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">The man who prices every worry in the house</text><text x="68" y="454" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="28" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">at four in the morning has never walked</text><text x="68" y="492" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="28" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">a single one of them.</text>
+    <g transform="rotate(0.8 630 860)">
+    <rect x="318" y="550" width="624" height="654" fill="#3A1518"/>
+    <rect x="326" y="536" width="608" height="648" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/hallway-flashlight-first-light.png" x="330" y="540" width="600" height="640" preserveAspectRatio="xMidYMid slice" filter="url(#fn29-01-photo)"/>
+  </g>
+    <g transform="rotate(-3 667 541)">
+    <rect x="560" y="518" width="214" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="568" y1="525" x2="764" y2="522" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <polygon points="132.1,1126.7 300.0,1084.8 300.0,1195.2 132.1,1153.3" fill="none" stroke="#121416" stroke-width="2.8" stroke-dasharray="6.9 6.0" stroke-linejoin="round"/><rect x="70.0" y="1132.6" width="46.0" height="14.7" rx="3.7" fill="#121416"/><polygon points="116.0,1132.6 132.1,1126.7 132.1,1153.3 116.0,1147.4" fill="#121416"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn29-01-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

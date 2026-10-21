@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn29-06-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn29-06-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn29-06-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#3A1518"/>
+  <text x="58" y="94" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 29 · 06 / 07</text>
+  <text x="74" y="300" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="68" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">What the walk buys</text><text x="74" y="388" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="68" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">isn't a better number.</text>
+    <text x="78" y="520" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="50" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">It's a job instead of a dread.</text>
+    <polygon points="331.4,872.4 930.0,723.2 930.0,1116.8 331.4,967.6" fill="#B14F3F" opacity="0.88"/><rect x="110.0" y="893.8" width="164.0" height="52.5" rx="13.1" fill="#F8F3EA"/><polygon points="274.0,893.8 331.4,872.4 331.4,967.6 274.0,946.2" fill="#F8F3EA"/>
+  <text x="58" y="1292" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn29-06-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
