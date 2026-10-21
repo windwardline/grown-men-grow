@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn29-02-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn29-02-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn29-02-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#EEE6D8"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 29 · 02 / 07</text>
+  <rect x="56" y="226" width="968" height="760" fill="#3A1518" transform="rotate(0.6 540 606)"/>
+    <g transform="rotate(-3 291 227)">
+    <rect x="180" y="204" width="222" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="188" y1="211" x2="392" y2="208" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <g transform="rotate(4 858 985)">
+    <rect x="760" y="962" width="196" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="768" y1="969" x2="946" y2="966" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="106" y="360" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="68" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">There's a contractor</text><text x="106" y="450" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="68" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">who only works nights.</text>
+    <polygon points="270.4,729.8 650.0,635.2 650.0,884.8 270.4,790.2" fill="none" stroke="#F8F3EA" stroke-width="6.2" stroke-dasharray="15.6 13.5" stroke-linejoin="round"/><rect x="130.0" y="743.4" width="104.0" height="33.3" rx="8.3" fill="#F8F3EA"/><polygon points="234.0,743.4 270.4,729.8 270.4,790.2 234.0,776.6" fill="#F8F3EA"/>
+    <text x="76" y="1100" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="38" font-weight="700" font-style="italic" text-anchor="start" letter-spacing="0">He's never once come in under. In fairness,</text><text x="76" y="1154" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="38" font-weight="700" font-style="italic" text-anchor="start" letter-spacing="0">he's never been inside any of the buildings.</text>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn29-02-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

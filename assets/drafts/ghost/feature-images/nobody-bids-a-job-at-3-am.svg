@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="fn29-feature-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn29-feature-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn29-feature-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="#F8F3EA"/>
+  <rect x="1244" y="0" width="356" height="1000" fill="#3A1518"/>
+  <g transform="rotate(0.8 420 500)">
+    <rect x="78" y="80" width="684" height="874" fill="#3A1518"/>
+    <rect x="86" y="66" width="668" height="868" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/hallway-flashlight-first-light.png" x="90" y="70" width="660" height="860" preserveAspectRatio="xMidYMid slice" filter="url(#fn29-feature-photo)"/>
+  </g>
+  <g transform="rotate(-1.4 990 500)">
+    <rect x="778" y="240" width="424" height="554" fill="#60735A"/>
+    <rect x="786" y="226" width="408" height="548" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/two-flashlights-porch-step.png" x="790" y="230" width="400" height="540" preserveAspectRatio="xMidYMid slice" filter="url(#fn29-feature-photo)"/>
+  </g>
+  <g transform="rotate(4 531 69)">
+    <rect x="420" y="46" width="222" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="428" y1="53" x2="632" y2="50" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <g transform="rotate(-4 978 229)">
+    <rect x="880" y="206" width="196" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="888" y1="213" x2="1066" y2="210" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+  <polygon points="1360.2,314.9 1550.0,267.6 1550.0,392.4 1360.2,345.1" fill="none" stroke="#F8F3EA" stroke-width="3.1" stroke-dasharray="7.8 6.8" stroke-linejoin="round"/><rect x="1290.0" y="321.7" width="52.0" height="16.6" rx="4.2" fill="#F8F3EA"/><polygon points="1342.0,321.7 1360.2,314.9 1360.2,345.1 1342.0,338.3" fill="#F8F3EA"/>
+  <g opacity="0.92"><g transform="translate(1290.0 642.0) rotate(13)"><polygon points="70.2,-15.1 260.0,-62.4 260.0,62.4 70.2,15.1" fill="#B14F3F" opacity="0.88"/><rect x="0.0" y="-8.3" width="52.0" height="16.6" rx="4.2" fill="#F8F3EA"/><polygon points="52.0,-8.3 70.2,-15.1 70.2,15.1 52.0,8.3" fill="#F8F3EA"/></g><g transform="translate(1290.0 738.0) rotate(-13)"><polygon points="70.2,-15.1 260.0,-62.4 260.0,62.4 70.2,15.1" fill="#B14F3F" opacity="0.88"/><rect x="0.0" y="-8.3" width="52.0" height="16.6" rx="4.2" fill="#F8F3EA"/><polygon points="52.0,-8.3 70.2,-15.1 70.2,15.1 52.0,8.3" fill="#F8F3EA"/></g></g>
+  <path d="M620 972 C724 948 832 984 936 956" fill="none" stroke="#B14F3F" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect width="1600" height="1000" filter="url(#fn29-feature-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

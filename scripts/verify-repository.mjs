@@ -457,6 +457,7 @@ const requiredFiles = [
   'scripts/render-field-note-26.mjs',
   'scripts/render-field-note-27.mjs',
   'scripts/render-field-note-28.mjs',
+  'scripts/render-field-note-29.mjs',
   'scripts/verify-dependency-exemptions.mjs',
   'scripts/verify-required-checks.mjs',
   'scripts/verify-publication-register.mjs',
@@ -594,6 +595,10 @@ if (tracked.includes('drafts/field-note-28-the-sweep-has-nowhere-else-to-be.md')
   || tracked.includes('drafts/field-note-28-platforms.md')) {
   fail('Approved Field Note 28 and its platform pack must live under content/, not drafts/.');
 }
+if (tracked.includes('drafts/field-note-29-nobody-bids-a-job-at-3-am.md')
+  || tracked.includes('drafts/field-note-29-platforms.md')) {
+  fail('Approved Field Note 29 and its platform pack must live under content/, not drafts/.');
+}
 
 const launchPackage = await readFile(path.join(root, 'content/instagram/launch-package.md'), 'utf8');
 const captionSource = launchPackage.split('\n## 8. Approved discovery classifications')[0];
@@ -685,11 +690,12 @@ await validateAssetFamily('assets/drafts/instagram/field-note-25-carousel', 7, 1
 await validateAssetFamily('assets/drafts/instagram/field-note-26-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-27-carousel', 7, 1080, 1350);
 await validateAssetFamily('assets/drafts/instagram/field-note-28-carousel', 7, 1080, 1350);
+await validateAssetFamily('assets/drafts/instagram/field-note-29-carousel', 7, 1080, 1350);
 await validatePhotographExclusivity('assets/drafts/instagram');
 await validatePublicationOrder();
 await validateCrossReferences();
 await validateAssetFamily('assets/drafts/ghost/social-cards', 4, 1200, 630);
-await validateAssetFamily('assets/drafts/ghost/feature-images', 30, 1600, 1000);
+await validateAssetFamily('assets/drafts/ghost/feature-images', 31, 1600, 1000);
 await validateEditorialConcepts();
 const editorialSources = new Map([
   ['friends-in-conversation', { width: 1023, height: 1537 }],
@@ -782,6 +788,9 @@ const editorialSources = new Map([
   ['switchback-climb-morning', { width: 1024, height: 1536 }],
   ['saddle-bag-kit-bench', { width: 1024, height: 1536 }],
   ['cafe-table-two-bottles', { width: 1024, height: 1536 }],
+  ['hallway-flashlight-first-light', { width: 1024, height: 1536 }],
+  ['screwdriver-flashlight-tub-floor', { width: 1024, height: 1536 }],
+  ['two-flashlights-porch-step', { width: 1024, height: 1536 }],
 ]);
 await validateNamedPngs('assets/source/editorial', editorialSources);
 await validateNamedPngs('assets/drafts/brand/banners', new Map([
@@ -820,6 +829,7 @@ const reviewSheets = new Map([
   ['field-note-26-carousel', { width: 1362, height: 1004 }],
   ['field-note-27-carousel', { width: 1362, height: 1004 }],
   ['field-note-28-carousel', { width: 1362, height: 1004 }],
+  ['field-note-29-carousel', { width: 1362, height: 1004 }],
   ['ghost-social-cards', { width: 1310, height: 884 }],
   ['pinned-introduction', { width: 1362, height: 1004 }],
   ['recognition-carousel', { width: 1362, height: 1004 }],
