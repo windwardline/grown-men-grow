@@ -595,6 +595,10 @@ if (tracked.includes('drafts/field-note-28-the-sweep-has-nowhere-else-to-be.md')
   || tracked.includes('drafts/field-note-28-platforms.md')) {
   fail('Approved Field Note 28 and its platform pack must live under content/, not drafts/.');
 }
+if (tracked.includes('drafts/field-note-29-nobody-bids-a-job-at-3-am.md')
+  || tracked.includes('drafts/field-note-29-platforms.md')) {
+  fail('Approved Field Note 29 and its platform pack must live under content/, not drafts/.');
+}
 
 const launchPackage = await readFile(path.join(root, 'content/instagram/launch-package.md'), 'utf8');
 const captionSource = launchPackage.split('\n## 8. Approved discovery classifications')[0];

@@ -18,8 +18,8 @@ import {
   writeAsset,
 } from "./lib/editorial-collage.mjs";
 
-// Field Note 29 — "Nobody Bids a Job at 3 A.M." Draft for founder review
-// (2026-10-21); not approved, no register position, no Ghost slot.
+// Field Note 29 — "Nobody Bids a Job at 3 A.M." Founder-approved
+// 2026-10-21; register position 28, no Ghost slot named.
 //
 // Signature vocabulary: a hand-drawn flashlight mark — a short barrel and a
 // flared head, with the cone it would throw drawn ahead of it. In its off state

@@ -1,9 +1,9 @@
 ---
 essay: Nobody Bids a Job at 3 A.M.
 canonical: https://grownmengrow.com/nobody-bids-a-job-at-3-am/ (live only after publication)
-status: draft — NOT founder-approved
-approved: none
-publication_authorized: false — draft for founder review; posting remains separately gated
+status: founder-approved
+approved: 2026-10-21 — approved as written alongside the essay and artwork
+publication_authorized: false — approval covers the copy, not a slot; posting remains separately gated
 image_rule: per-article — this pack may use only Field Note 29 imagery: hallway-flashlight-first-light, screwdriver-flashlight-tub-floor, two-flashlights-porch-step
 stance_note: assignment — the excerpts describe the night estimate and the daylight walk; none tells him which job to walk or when
 ---

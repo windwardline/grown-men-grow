@@ -4566,3 +4566,15 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Verification:** `verify-ghost-theme` pass; `pnpm --dir theme test` pass; theme zip + GScan pass; script unit tests 225/225 pass; `verify-repository` pass once the new files were staged (its only earlier failure was the untracked render script); `verify-svg-xml` pass (270 files); `git diff --check` clean. Unrelated review sheets that re-rendered with byte drift were restored rather than committed.
 
 **Open, in order:** (1) Founder review of Field Note 29. On approval, move the note and pack to `content/`, append register row 28, and add the must-live-under-content guard. (2) The stray downloads in `~/Downloads` can be deleted by hand.
+
+## 2026-10-21 — Field Note 29 approved (Claude Code): moved to content/ at register position 28
+
+**Client:** Claude Code, the same session as the Wednesday draft task, on the founder's instruction "Approved. Finish the work in its entirety and clean up after yourself."
+
+**Scope completed.** The note and pack moved from `drafts/` to `content/field-notes/nobody-bids-a-job-at-3-am.md` and `content/distribution/field-note-29-platforms.md`, with both `status` markers flipped to `founder-approved`, approval recorded as covering the work and not a slot. Register row 28 appended (projected 2027-02-23), with its appended-position note. A must-live-under-content guard was added to `verify-repository.mjs`, the render script header was updated, `drafts/README.md` records the move, and the decision log records the approval. Both changes ride PR #253.
+
+**External state changed:** none beyond GitHub. Nothing was published, scheduled, sent or posted.
+
+**Files changed:** `content/field-notes/nobody-bids-a-job-at-3-am.md` (moved), `content/distribution/field-note-29-platforms.md` (moved), `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `docs/technical/handoff-log.md`, `drafts/README.md`, `scripts/render-field-note-29.mjs`, `scripts/verify-repository.mjs`.
+
+**Open:** none for this note. A Ghost slot for it is a later decision, made by the staging task when the register reaches row 28.
