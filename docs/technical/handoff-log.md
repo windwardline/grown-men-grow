@@ -4578,3 +4578,17 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Files changed:** `content/field-notes/nobody-bids-a-job-at-3-am.md` (moved), `content/distribution/field-note-29-platforms.md` (moved), `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `docs/technical/handoff-log.md`, `drafts/README.md`, `scripts/render-field-note-29.mjs`, `scripts/verify-repository.mjs`.
 
 **Open:** none for this note. A Ghost slot for it is a later decision, made by the staging task when the register reaches row 28.
+
+## 2026-10-22 — Thursday Medium task (Claude Code): stood down, no new essay to import
+
+**Client:** Claude Code, scheduled task `gmg-thursday-medium`. Fired 08:20 ET against the 07:00 slot.
+
+**Outcome:** stand-down. Ghost's latest published post is still `ask-for-help-while-its-still-cheap` (published 2026-10-13 12:00 UTC, 216 hours earlier). It was imported on 2026-10-20 and is the story already live on Medium. Week 10 (`you-can-walk-on-it-tomorrow`) is scheduled for 2026-10-27, so this week has no essay to syndicate.
+
+**Checked in the founder's Chrome, not assumed from the log:** Stories → Drafts reads "No stories in draft," so no stale import is waiting. The live story https://grownmengrow.medium.com/ask-for-help-while-its-still-cheap-dcb20cf5e81f, fetched from its own page context, returned HTTP 200 with exactly one `<link rel="canonical" href="https://grownmengrow.com/ask-for-help-while-its-still-cheap/"/>`, and the profile page lists it. A fetch from medium.com to the profile subdomain failed cross-origin; the check was rerun same-origin rather than counted.
+
+**External state changed:** none. Nothing imported, edited or published. The task's tab was closed.
+
+**Files changed:** `docs/technical/handoff-log.md`.
+
+**Open, in order:** (1) Thursday 2026-10-29 07:00: import `you-can-walk-on-it-tomorrow` once it has been live 40 hours, owned by this task. (2) Saturday 2026-10-24: the Saturday note task stands down on the same premise.
