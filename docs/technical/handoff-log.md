@@ -4592,3 +4592,31 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Files changed:** `docs/technical/handoff-log.md`.
 
 **Open, in order:** (1) Thursday 2026-10-29 07:00: import `you-can-walk-on-it-tomorrow` once it has been live 40 hours, owned by this task. (2) Saturday 2026-10-24: the Saturday note task stands down on the same premise.
+
+## 2026-10-24 — Claude Code — Friday analytics readout, run Saturday (Oct 18–24)
+
+**Client:** Claude Code. **Branch:** `claude/friday-analytics-2026-10-24`. The `gmg-friday-analytics` task ran Saturday 10:21 ET as the catch-up for Friday 2026-10-23. It covers the week since the 2026-10-19 readout.
+
+**Scope:** verification only. Nothing was published, posted, replied to, or sent.
+
+**A dark week, as staged.** No essay went out: the 2026-10-20 slot was missed and Week 10 (`you-can-walk-on-it-tomorrow`) is scheduled for 2026-10-27 12:00Z. Buffer sent nothing between 2026-10-17 22:30Z and today, and its four Week 10 posts are queued for 10-27 through 10-31. The near-zero numbers below are the empty week, not a decline.
+
+**Ghost.** **1** member, unchanged since 2026-08-11. No send this week. Per-send counts on the last four sends are unchanged: 1 sent, 1 delivered, 1 opened, 0 failed each. Comments: 0 site-wide (`comments/` total 0).
+
+**Pageviews (Ghost web analytics, signed-in admin).** Last 7 days (Oct 18–24): **3 visitors, 3 views**, all Homepage, all Direct. Last 30 days: **16 visitors, 20 views**, down from 24 and 28. Top content: Homepage 9, The Lights Never Flickered 3, Nobody Rigs 3, Start Here 2, Ask for Help 2, A Confession Can Still Be Selfish 1. Sources: Direct 14, Bing 1, Bluesky 1. Newsletters tab: 1 subscriber, no sends in 7 days.
+
+**A/B protocol stays suspended at step 3**, with 1 recipient against a floor of 30. No timing decision is due, so `publish-timing.md` is unchanged.
+
+**Platform numbers.** Nothing posted this week. Week 9 figures re-read: LinkedIn settled again, from 9 impressions and 6 reach on 10-19 to **10 and 7**; Instagram carousel unchanged at reach 2, views 7, 0 saves, 0 shares; both Bluesky posts 0 reactions, replies, reposts. Business Suite's daily series shows 0 Instagram reach and 0 views for every day Oct 18–23; 28-day reach is 5, views 46. Bluesky profile: 0 followers, 18 posts, 2 likes and 0 replies or quotes across the feed.
+
+**Moderation sweep: nothing to escalate.** Ghost comments: 0. Instagram DMs: Primary empty; Requests and Hidden Requests both read "Delete all 0". The Business Suite inbox URL redirected back to Insights, so DMs were read on instagram.com. Instagram comments: 0 per Buffer metrics and 0 content interactions in the daily series. LinkedIn: 0 comments (Buffer). Bluesky: 0 replies, 0 quotes; mention search answered 403 without a session, so mentions remain unread. No reply was made.
+
+**Qualitative pass:** nothing said back on any surface, so there is no recurring question or objection to report.
+
+**Corpus balance check: skipped.** The marker reads 2026-09-16 at 21, next due at 31. The bank is 29: 28 field notes plus the launch essay.
+
+**Cadence gates.** `verify-publication-register.mjs` passes, 29 rows agreeing with Ghost (9 published, 1 scheduled, 19 projected). `verify-substack-notes.mjs` passes.
+
+**Files changed:** this log only. **External state changed:** none. Ghost Admin, Business Suite, Instagram, and the public Bluesky API were read, not changed.
+
+**Open, in order:** (1) Carried forward: distribution and the one-member list, the suspended A/B, the `isAiGenerated` founder question from 2026-09-28, and the extract-zip acceptances expiring 2026-11-09.
