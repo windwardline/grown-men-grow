@@ -4632,3 +4632,23 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Files changed:** `docs/technical/handoff-log.md`.
 
 **Open, in order:** (1) Tuesday 2026-10-27: Ghost publishes Week 10 at 08:00 ET and the Tuesday note task posts Note 1 at its slot. (2) Saturday 2026-10-31 18:30 ET: this task posts Week 10's Note 2.
+
+## 2026-10-25 — Saturday draft task (Claude Code): Field Note 30, "The First Nut Waits," drafted as a complete unit
+
+**Client:** Claude Code, scheduled task `gmg-saturday-draft`, fired Sunday 2026-10-25 on catch-up. Chrome and the extension responded; imagery was generated in the founder's ChatGPT project.
+
+**Backfill came first and found nothing:** all 28 approved notes carry a pack, render script, seven-slide carousel, feature image, review sheet, and gate entries.
+
+**Stance and register.** `**Standing commission:**` read `none` and is unchanged. The next register position is 29; witness pieces sit at 7, 10, 14, 17, 20, 24 and 27, so a witness piece at 29 would fail the three-slot minimum. The piece is `assignment` with a `trade` opening, after `other` openings at 27 and 28. Corpus: 8 witness in 29 (28 percent); the recent run has not tilted back toward obligation. No corpus measurement is due (marker: next at 31).
+
+**The draft.** Lug nuts tightened in a star: a man who runs one part of his life all the way down first finds the rest seated crooked around it. Wednesday's note was interior and set at night; this one is external and mechanical. 941 words, three section heads, closing does not address the reader.
+
+**Imagery.** Nine images generated, three kept, six rejected on physical tells at full resolution (a socket mounted on the side of a ratchet head; pseudo-lettering etched on the shaft, twice; a cross wrench balanced on end with the wrong shadow; wrenches floating under their hooks; a square drive pointing out of the head's edge). All three kept files stripped with `strip-ai-provenance` (0 of 3 carry an indicator). The signature is a bolt-circle mark. Its seated state shows torque stripes rather than a solid star, because a filled star in a circle reads as a pentacle.
+
+**Files changed:** `drafts/field-note-30-the-first-nut-waits.md`, `drafts/field-note-30-platforms.md`, `drafts/README.md`, `scripts/render-field-note-30.mjs`, `scripts/render-review-contact-sheets.mjs`, `scripts/verify-repository.mjs`, `assets/source/editorial/{torque-wrench-shop-towel,lug-wrench-driveway-tire,torque-wrenches-wall-rack}.png`, `assets/drafts/instagram/field-note-30-carousel/01–07.{png,svg}`, `assets/drafts/ghost/feature-images/the-first-nut-waits.{png,svg}`, `assets/drafts/review/field-note-30-carousel.png`, and this log. The review-sheet renderer also rewrote 28 unrelated sheets with byte-only differences; those were restored, not committed.
+
+**Verification:** `verify-ghost-theme` pass; theme install and `pnpm --dir theme test` pass; theme zip plus GScan pass; script unit tests 225 of 225 pass; `verify-repository` pass (902 tracked files, 34 review sheets, 96 editorial sources); `verify-svg-xml` pass (278 SVGs); `git diff --check` clean.
+
+**External state changed:** ChatGPT project thread received nine image prompts. Nothing published, posted, scheduled or sent. The draft is not founder-approved and not authorized for publication.
+
+**Open, in order:** (1) Founder review of Field Note 30: essay, pack and artwork. On approval it moves to `content/` at register position 29 with a must-live-under-content guard.
