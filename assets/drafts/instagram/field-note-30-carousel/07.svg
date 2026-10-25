@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn30-07-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn30-07-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn30-07-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 30 · 07 / 07</text>
+  <g transform="rotate(-0.6 540 490)">
+    <rect x="218" y="160" width="644" height="694" fill="#3A1518"/>
+    <rect x="226" y="146" width="628" height="688" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/torque-wrenches-wall-rack.png" x="230" y="150" width="620" height="680" preserveAspectRatio="xMidYMid slice" filter="url(#fn30-07-photo)"/>
+  </g>
+    <g transform="rotate(-3 602 151)">
+    <rect x="500" y="128" width="204" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="508" y1="135" x2="694" y2="132" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="78" y="920" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="46" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">Come back after fifty miles</text><text x="78" y="980" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="46" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">and we'll check the torque.</text>
+    <text x="80" y="1050" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="36" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">The offer just stands,</text><text x="80" y="1100" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="36" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0">the wrench hangs on the wall.</text>
+    <g opacity="0.94"><circle cx="880.0" cy="1120.0" r="124.8" fill="none" stroke="#121416" stroke-width="3.5" opacity="0.55"/><circle cx="880.0" cy="1120.0" r="32.8" fill="none" stroke="#121416" stroke-width="3.5" opacity="0.55"/><circle cx="880.0" cy="1042.0" r="13.3" fill="#121416"/><circle cx="954.2" cy="1095.9" r="13.3" fill="#121416"/><circle cx="925.8" cy="1183.1" r="13.3" fill="#121416"/><circle cx="834.2" cy="1183.1" r="13.3" fill="#121416"/><circle cx="805.8" cy="1095.9" r="13.3" fill="#121416"/><line x1="880.0" y1="1061.9" x2="880.0" y2="1022.1" stroke="#B14F3F" stroke-width="5.5" stroke-linecap="round"/><line x1="935.3" y1="1102.0" x2="973.1" y2="1089.8" stroke="#B14F3F" stroke-width="5.5" stroke-linecap="round"/><line x1="914.2" y1="1167.0" x2="937.5" y2="1199.2" stroke="#B14F3F" stroke-width="5.5" stroke-linecap="round"/><line x1="845.8" y1="1167.0" x2="822.5" y2="1199.2" stroke="#B14F3F" stroke-width="5.5" stroke-linecap="round"/><line x1="824.7" y1="1102.0" x2="786.9" y2="1089.8" stroke="#B14F3F" stroke-width="5.5" stroke-linecap="round"/></g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn30-07-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn30-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn30-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn30-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 30 · 01 / 07</text>
+  <text x="64" y="250" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="88" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.6">THE FIRST NUT</text>
+    <text x="64" y="348" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="88" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.6">WAITS</text>
+    <text x="68" y="422" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="28" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">A man getting his life in order tends to run</text><text x="68" y="460" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="28" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">one nut all the way down before he touches</text><text x="68" y="498" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="28" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">the others.</text>
+    <g transform="rotate(-0.8 630 860)">
+    <rect x="318" y="550" width="624" height="654" fill="#3A1518"/>
+    <rect x="326" y="536" width="608" height="648" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/torque-wrench-shop-towel.png" x="330" y="540" width="600" height="640" preserveAspectRatio="xMidYMid slice" filter="url(#fn30-01-photo)"/>
+  </g>
+    <g transform="rotate(3 667 541)">
+    <rect x="560" y="518" width="214" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="568" y1="525" x2="764" y2="522" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <g opacity="0.94"><circle cx="170.0" cy="1060.0" r="112.0" fill="none" stroke="#121416" stroke-width="3.1" opacity="0.55"/><circle cx="170.0" cy="1060.0" r="29.4" fill="none" stroke="#121416" stroke-width="3.1" opacity="0.55"/><circle cx="170.0" cy="990.0" r="11.9" fill="#B14F3F"/><circle cx="236.6" cy="1038.4" r="11.9" fill="#F8F3EA" stroke="#121416" stroke-width="3.1"/><circle cx="211.1" cy="1116.6" r="11.9" fill="#F8F3EA" stroke="#121416" stroke-width="3.1"/><circle cx="128.9" cy="1116.6" r="11.9" fill="#F8F3EA" stroke="#121416" stroke-width="3.1"/><circle cx="103.4" cy="1038.4" r="11.9" fill="#F8F3EA" stroke="#121416" stroke-width="3.1"/></g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn30-01-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
