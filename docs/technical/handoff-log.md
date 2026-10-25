@@ -4620,3 +4620,15 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Files changed:** this log only. **External state changed:** none. Ghost Admin, Business Suite, Instagram, and the public Bluesky API were read, not changed.
 
 **Open, in order:** (1) Carried forward: distribution and the one-member list, the suspended A/B, the `isAiGenerated` founder question from 2026-09-28, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-10-25 — Saturday note task (Claude Code): stood down, no essay published this week
+
+**Client:** Claude Code, scheduled task `gmg-saturday-note`. The 2026-10-24 18:30 ET slot did not fire while the desktop application was closed; the task caught up on Sunday 2026-10-25 at 11:37 ET.
+
+**Outcome:** stand-down. `note-task-preflight.mjs` exited `20` with "this week's essay has not published": the latest Ghost post is still `ask-for-help-while-its-still-cheap` (2026-10-13 12:00 UTC), and the publication week opened 2026-10-20 has no essay. Week 10 (`you-can-walk-on-it-tomorrow`) is scheduled for 2026-10-27. The preflight released its own lock. Chrome and the Substack profile were not opened, because nothing was to be posted.
+
+**External state changed:** none. Nothing was drafted, posted or sent.
+
+**Files changed:** `docs/technical/handoff-log.md`.
+
+**Open, in order:** (1) Tuesday 2026-10-27: Ghost publishes Week 10 at 08:00 ET and the Tuesday note task posts Note 1 at its slot. (2) Saturday 2026-10-31 18:30 ET: this task posts Week 10's Note 2.
