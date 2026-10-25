@@ -18,8 +18,8 @@ import {
   writeAsset,
 } from "./lib/editorial-collage.mjs";
 
-// Field Note 30 — "The First Nut Waits." Draft for founder review, written
-// 2026-10-25; not founder-approved and not authorized for publication.
+// Field Note 30 — "The First Nut Waits." Founder-approved 2026-10-25;
+// register position 29, no Ghost slot named.
 //
 // Signature vocabulary: a hand-drawn bolt-circle mark — five studs on a circle,
 // a wheel hub seen face-on. In its one state a single stud is filled solid and
