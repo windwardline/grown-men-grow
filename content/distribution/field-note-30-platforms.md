@@ -1,9 +1,9 @@
 ---
 essay: The First Nut Waits
 canonical: https://grownmengrow.com/the-first-nut-waits/ (live only after publication)
-status: draft — NOT founder-approved
-approved: no
-publication_authorized: false — NOT authorized for publication or social posting
+status: founder-approved
+approved: 2026-10-25 — approved as written alongside the essay and artwork
+publication_authorized: false — approval covers the copy, not a slot; posting remains separately gated
 image_rule: per-article — this pack may use only Field Note 30 imagery: torque-wrench-shop-towel, lug-wrench-driveway-tire, torque-wrenches-wall-rack
 stance_note: assignment — the excerpts describe the star pattern and the nut run down first; none tells him which nut to back off, and each keeps the essay's concession that some seasons get no pattern
 ---

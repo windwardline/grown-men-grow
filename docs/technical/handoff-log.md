@@ -4652,3 +4652,15 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **External state changed:** ChatGPT project thread received nine image prompts. Nothing published, posted, scheduled or sent. The draft is not founder-approved and not authorized for publication.
 
 **Open, in order:** (1) Founder review of Field Note 30: essay, pack and artwork. On approval it moves to `content/` at register position 29 with a must-live-under-content guard.
+
+## 2026-10-25 — Field Note 30 approved and moved into content (Claude Code)
+
+**Client:** Claude Code, the same session that drafted the note under `gmg-saturday-draft`. The founder approved the complete unit in chat ("Approved. Finish the work.").
+
+**Scope completed:** `drafts/field-note-30-the-first-nut-waits.md` moved to `content/field-notes/the-first-nut-waits.md` and `drafts/field-note-30-platforms.md` to `content/distribution/field-note-30-platforms.md`, with `status: founder-approved` and approval dates on both. Register row 29 appended to `publication-order.md`, projected 2027-03-02 with no state. A must-live-under-content guard was added to `verify-repository.mjs`. The approval is recorded in `decision-log.md`, `drafts/README.md` is updated, and the render script's header now carries the approval.
+
+**Files changed:** `content/field-notes/the-first-nut-waits.md`, `content/distribution/field-note-30-platforms.md` (both renamed from `drafts/`), `docs/technical/publication-order.md`, `docs/technical/decision-log.md`, `docs/technical/handoff-log.md`, `drafts/README.md`, `scripts/verify-repository.mjs`, `scripts/render-field-note-30.mjs`.
+
+**External state changed:** none. No Ghost post, schedule, newsletter, Buffer post, or Substack note was created. Approval covers the work and a register position, not a slot.
+
+**Open, in order:** (1) The Monday staging task picks up the lowest-numbered unpublished row; position 29 is reached in order. (2) The corpus test falls due at a bank of 31, one approval away.
