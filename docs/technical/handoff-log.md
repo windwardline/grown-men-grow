@@ -4664,3 +4664,31 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **External state changed:** none. No Ghost post, schedule, newsletter, Buffer post, or Substack note was created. Approval covers the work and a register position, not a slot.
 
 **Open, in order:** (1) The Monday staging task picks up the lowest-numbered unpublished row; position 29 is reached in order. (2) The corpus test falls due at a bank of 31, one approval away.
+
+## 2026-10-26 — Monday staging task (Claude Code): Week 10 verified, nothing new staged
+
+**Client:** Claude Code, scheduled task `gmg-monday-staging`, fired Monday 2026-10-26 at 12:16 ET.
+
+**Hold:** checked first. `**Active hold:** none`. No crisis, public event, reply escalation, copy error or compromise sign was found, so the week fires.
+
+**Register.** `verify-publication-register.mjs --fix` recorded nothing and agrees with Ghost on all 30 rows (9 published, 1 scheduled, 20 projected). Row 9, `you-can-walk-on-it-tomorrow`, is the lowest unpublished row and the one scheduled.
+
+**Ghost.** The post is `scheduled` for 2026-10-27 12:00Z, which is 8:00 AM EDT (DST ends 2026-11-01). The newsletter is bound to `default-newsletter` with segment `all`. It has a feature image and alt text, and visibility is public. `buildPostPayload` was built from `content/` and diffed against the live post: `title`, `custom_excerpt`, `meta_title`, `meta_description`, `email_subject` and `feature_image_alt` all match. No divergence.
+
+**Dry run.** `stage-next-field-note.mjs you-can-walk-on-it-tomorrow 2026-10-27T12:00:00Z --dry-run` builds cleanly (alt text present, 6,357 bytes of HTML). That proves the payload, not the three Ghost calls.
+
+**Pack and carousel.** `content/distribution/field-note-13-platforms.md` reads `status: founder-approved`. `assets/drafts/instagram/field-note-13-carousel/` holds 01–07 PNG/SVG. `verify-repository.mjs` passes.
+
+**Feed tile.** This week's slide 1 is built on `covered-slab-curing.png`, which is exclusive to Field Note 13. Buffer's most recent sent Instagram post (2026-10-15 13:00Z, the "Ask for Help" carousel) uses different photography. Clear.
+
+**Buffer.** `queue-week-buffer.mjs --dry-run` answered `REFUSED: 4 of this week's posts already exist in Buffer`, meaning the week was already queued on 2026-10-20. The live run was not repeated. A read-back shows the four posts at their slots: Bluesky 10-27 16:00Z, LinkedIn 10-28 14:00Z, Instagram 10-29 13:00Z, Bluesky 10-31 22:30Z.
+
+**iCloud kit** (`Week 10 — You Can Walk on It Tomorrow`, built 2026-10-20). Both Substack paste files were checked verbatim against the pack. The backup instructions name a `Caption.txt` that the carousel folder did not hold. It was added from Buffer's queued caption and checked verbatim against the note's `# Instagram caption source`. The READ ME status line now records today's re-check. No new prose was written, so the nine tests had nothing to run against.
+
+**Files changed:** `docs/technical/handoff-log.md`. Outside the repository: the Week 10 iCloud kit READ ME and a new `Caption.txt` in it.
+
+**External state changed:** none. Ghost and Buffer were read, not written.
+
+**Verification:** `verify-ghost-theme` pass; theme install and `pnpm --dir theme test` pass; theme zip plus GScan pass; script unit tests 225 of 225 pass; `verify-repository` pass; `verify-svg-xml` pass; `git diff --check` clean.
+
+**Open, in order:** (1) Tue 2026-10-27 08:00 ET: Ghost publishes and emails Week 10. The Tuesday publish check flips row 9 to `published`. (2) Tue 12:00 PM: the Tuesday note task posts Substack Note 1, or the founder posts it from kit folder 1. (3) Thu 2026-10-29 07:00: Medium import. Optional: Story with link sticker after 9:00 (kit folder 3). (4) Sat 2026-10-31 18:30: Substack Note 2 (kit folder 2). (5) Carried forward: the corpus test falls due at a bank of 31, and the extract-zip acceptances expire 2026-11-09.
