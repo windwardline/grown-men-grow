@@ -49,7 +49,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 6 | `nobody-rigs-to-the-breaking-strength` | 2026-09-22 | published |
 | 7 | `the-lights-never-flickered` | 2026-09-29 | published |
 | 8 | `ask-for-help-while-its-still-cheap` | 2026-10-06 | published |
-| 9 | `you-can-walk-on-it-tomorrow` | 2026-10-13 | scheduled |
+| 9 | `you-can-walk-on-it-tomorrow` | 2026-10-13 | published |
 | 10 | `somebody-is-up-on-his-ladder` | 2026-10-20 | |
 | 11 | `comparison-is-a-bad-map` | 2026-10-27 | |
 | 12 | `every-part-passed-inspection` | 2026-11-03 | |

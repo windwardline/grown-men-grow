@@ -4692,3 +4692,19 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Verification:** `verify-ghost-theme` pass; theme install and `pnpm --dir theme test` pass; theme zip plus GScan pass; script unit tests 225 of 225 pass; `verify-repository` pass; `verify-svg-xml` pass; `git diff --check` clean.
 
 **Open, in order:** (1) Tue 2026-10-27 08:00 ET: Ghost publishes and emails Week 10. The Tuesday publish check flips row 9 to `published`. (2) Tue 12:00 PM: the Tuesday note task posts Substack Note 1, or the founder posts it from kit folder 1. (3) Thu 2026-10-29 07:00: Medium import. Optional: Story with link sticker after 9:00 (kit folder 3). (4) Sat 2026-10-31 18:30: Substack Note 2 (kit folder 2). (5) Carried forward: the corpus test falls due at a bank of 31, and the extract-zip acceptances expire 2026-11-09.
+
+## 2026-10-27 — Tuesday note task (Claude Code): stood down, 387 minutes past the slot
+
+**Client:** Claude Code, scheduled task `gmg-tuesday-note`, fired 18:26 ET on catch-up rather than at 11:45.
+
+**Outcome:** `note-task-preflight.mjs` exited `20`: 387 minutes past the 12:00 slot, beyond the 60-minute grace window. Hold `none`; this week's essay, "You Can Walk on It Tomorrow," is live (Ghost published 08:00 ET). Nothing was staged and the browser was not opened. The approved Note 1 copy from `content/distribution/field-note-13-platforms.md` stands unposted.
+
+**Registers reconciled:** `verify-substack-notes.mjs` confirmed no live note carries Note 1's copy, so row `you-can-walk-on-it-tomorrow` #1 now reads `missed`; the check passes (12 posted, 7 missed, 1 pending). `verify-publication-register.mjs` found row 9 still `scheduled` for a post Ghost reports published; `--fix` recorded it as `published` and the check passes.
+
+**Files changed:** `docs/technical/substack-notes.md`, `docs/technical/publication-order.md`, this log.
+
+**External state changed:** none. Nothing posted, staged, scheduled or sent.
+
+**Verification:** both cadence checks pass after the edits; session gates listed in the PR.
+
+**Open, in order:** (1) Saturday's Note 2 slot (2026-10-31 18:30) is owned by `gmg-saturday-note`. (2) If the founder posts Note 1 late by hand, the row flips to `posted` and the Substack check will fail until it does, by design.
