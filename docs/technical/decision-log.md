@@ -984,3 +984,28 @@ Founder instruction, 2026-08-30: finish the work and stop carrying open items. E
 - **Six images were rejected on tells and three were kept.** The rejects were a socket mounted on the side of a ratchet head, pseudo-lettering etched on a wrench shaft twice, a cross wrench balanced on end with a shadow that didn't match it, wrenches floating beneath their hooks, and a square drive pointing out of a ratchet head's edge. The grip end and the tool heads were then written out of frame, and the cross wrench laid flat. The prompts are in the note's production notes.
 - **The mark changed before delivery.** The seated state of the bolt-circle mark first drew a solid rust star in a circle, which reads as a pentacle. It now shows torque stripes on five filled studs, and the star appears only dashed and numbered, as a manual draws it.
 - **Named for the founder in the draft report and approved with it:** the man whose first nut keeps him sober, served by two sentences in "The expensive part," as the reader the piece serves worst. "Honestly, good for him" was the closest call on test 2. All stand as approved.
+
+## 2026-10-29 — Field Note 31 approved at register position 30
+
+- **Status:** The founder approved the essay, platform pack, and artwork ("Approved.") on the day they were drafted, after the complete unit was delivered in chat. They moved into `content/` at register position 30. No Ghost slot is named, and publication remains separately gated.
+- **Stance and opening.** `assignment`: whether he hands the tongs over is a move he has, and the close shows the folding chair as available rather than telling him to take it. The witness pieces stay at 7, 10, 14, 17, 20, 24 and 27. Its `other` opening follows a `trade` opening at 29, so the trade run there stays at one. `**Standing commission:**` read `none` throughout and is untouched.
+- **Images.** Three prompts, three kept, no rejections. Each was reviewed at full resolution in crops (tong arms, shelf slats, every chair frame, every finger) and carried no physical tell. The prompts are in the note's production notes.
+- **Named for the founder in the draft report and approved with it:** the man for whom the grill is the only way through the gate, served by a full paragraph that calls his tongs a ticket, as the reader the piece serves worst. Test 2 came closest: the paragraph about the person who stopped mentioning the post was added so the price is not his alone.
+
+## 2026-10-29 — The corpus test at thirty-one pieces, on schedule
+
+- **Status:** Measured, at the threshold the 2026-09-16 marker set. Field Note 31's approval took the bank to thirty-one, and `verify-repository.mjs` failed on it until this entry existed.
+- **The measurement, derived from the tracked markers rather than recalled.** Thirty field notes and Essay 1.
+
+| | 2026-08-12 (11) | 2026-08-26 (15) | 2026-09-16 (21) | 2026-10-29 (31) |
+|---|---|---|---|---|
+| `witness` | 1 (9%) | 2 (13%) | 5 (24%) | 7 (23%) |
+| Closing addresses him | 9 (82%) | 11 (73%) | 13 (62%) | 19 (61%) |
+
+  The twelve closings that do not turn to him: the seven `witness` pieces, where it is the gate (`the-lights-never-flickered`, `somebody-is-up-on-his-ladder`, `a-temp-wall-comes-out-in-april`, `the-rod-goes-first`, `the-opener-doesnt-lift-the-door`, `he-stays-at-short`, `the-sweep-has-nowhere-else-to-be`), and five `assignment` pieces that decline to end on an instruction: `anger-is-a-terrible-manager`, `nobody-rigs-to-the-breaking-strength`, `the-error-is-half-the-difference`, and, new since the last measurement, `the-first-nut-waits` and `hes-been-at-the-grill-since-noon`.
+- **The judgment.** The proportion has held, not grown. Of the ten pieces since 2026-09-16, two are `witness` and eight `assignment`, which keeps witness at about a quarter of the bank. That is the level the Stance section describes, and it arrived without a correction: one of the two came through a standing commission, the other under the standing corpus duty. A reader who has read everything has been held seven times and asked to act twenty-four, and the asking has kept getting quieter: two of the eight new assignment pieces leave the move standing rather than issuing it. The seventh principle is not failing at the corpus level, and nothing here argues for a commission.
+- **The skeleton the last measurement found has not come back.** The two new witness pieces open on a game and on a group ride rather than a mechanism, and neither carries the "done badly" / "the man with less" pair. "He Stays at Short" runs three heads; "The Sweep Has Nowhere Else to Be" runs one. The heading check enforces the phrasing; this reading is what says the shape changed too.
+- **A count was wrong in the meantime.** Field Note 30's production notes gave the bank at 29 as "eight of them `witness` (28 percent)". The markers say seven (24 percent). The line is corrected in place with the date, because a wrong number in an internal note is an input to the next corpus judgment. That miscount is the reason this entry derives its numbers from the markers.
+- **The next measurement** falls at forty-one pieces, ten on from this one, per `editorial-underpinning.md`.
+
+**Corpus test last measured:** 2026-10-29 at a bank of 31 pieces; next due at 41.

@@ -1,9 +1,9 @@
 ---
 essay: He's Been at the Grill Since Noon
 canonical: https://grownmengrow.com/hes-been-at-the-grill-since-noon/ (live only after publication)
-status: draft — NOT founder-approved
-approved: no
-publication_authorized: false — NOT authorized for publication or social posting
+status: founder-approved
+approved: 2026-10-29 — approved as written alongside the essay and artwork
+publication_authorized: false — approval covers the copy, not a slot; posting remains separately gated
 image_rule: per-article — this pack may use only Field Note 31 imagery: tongs-kettle-grill-shelf, lawn-chairs-loose-circle, tongs-handed-over
 stance_note: assignment — the excerpts describe the grill as a post and price the hand-off; none tells him to put the tongs down, and the pack keeps the essay's concession that for some men the post is the ticket in
 ---
