@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn31-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn31-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn31-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 31 · 01 / 07</text>
+  <text x="64" y="250" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="76" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.6">HE'S BEEN AT THE GRILL</text>
+    <text x="64" y="340" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="76" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.6">SINCE NOON</text>
+    <text x="68" y="414" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="28" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">The man working the grill is at every party</text><text x="68" y="452" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="28" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">and in almost none of it.</text>
+    <g transform="rotate(0.8 660 850)">
+    <rect x="368" y="530" width="584" height="674" fill="#60735A"/>
+    <rect x="376" y="516" width="568" height="668" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/tongs-kettle-grill-shelf.png" x="380" y="520" width="560" height="660" preserveAspectRatio="xMidYMid slice" filter="url(#fn31-01-photo)"/>
+  </g>
+    <g transform="rotate(-3 707 521)">
+    <rect x="600" y="498" width="214" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="608" y1="505" x2="804" y2="502" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <g opacity="0.94"><rect x="82.7" y="1037.1" width="162.8" height="45.9" rx="3.0" fill="none" stroke="#121416" stroke-width="2.6"/><circle cx="103.1" cy="1019.3" r="8.9" fill="#121416"/><circle cx="143.8" cy="1019.3" r="8.9" fill="#121416"/><circle cx="184.4" cy="1019.3" r="8.9" fill="#121416"/><circle cx="225.2" cy="1019.3" r="8.9" fill="#121416"/><circle cx="103.1" cy="1100.7" r="8.9" fill="#121416"/><circle cx="143.8" cy="1100.7" r="8.9" fill="#121416"/><circle cx="184.4" cy="1100.7" r="8.9" fill="#121416"/><circle cx="225.2" cy="1100.7" r="8.9" fill="#F8F3EA" stroke="#121416" stroke-width="2.6" stroke-dasharray="3.7 3.0"/><circle cx="291.4" cy="1100.7" r="16.3" fill="none" stroke="#121416" stroke-width="2.6"/><line x1="280.1" y1="1092.6" x2="302.7" y2="1092.6" stroke="#121416" stroke-width="2.6"/><line x1="278.4" y1="1100.7" x2="304.4" y2="1100.7" stroke="#121416" stroke-width="2.6"/><line x1="280.1" y1="1108.8" x2="302.7" y2="1108.8" stroke="#121416" stroke-width="2.6"/><circle cx="322.5" cy="1100.7" r="7.5" fill="#B14F3F"/></g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn31-01-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn31-06-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn31-06-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn31-06-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#3A1518"/>
+  <text x="58" y="94" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 31 · 06 / 07</text>
+  <text x="74" y="300" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="86" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">The burgers</text><text x="74" y="404" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="86" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">will be worse.</text>
+    <text x="78" y="520" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="44" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">That's just true.</text>
+    <g opacity="0.94"><rect x="235.5" y="794.9" width="462.0" height="130.2" rx="8.4" fill="none" stroke="#F8F3EA" stroke-width="7.4"/><circle cx="293.3" cy="744.5" r="25.2" fill="#F8F3EA"/><circle cx="408.8" cy="744.5" r="25.2" fill="#F8F3EA"/><circle cx="524.3" cy="744.5" r="25.2" fill="#F8F3EA"/><circle cx="639.8" cy="744.5" r="25.2" fill="#F8F3EA"/><circle cx="293.3" cy="975.5" r="25.2" fill="#F8F3EA"/><circle cx="408.8" cy="975.5" r="25.2" fill="#F8F3EA"/><circle cx="524.3" cy="975.5" r="25.2" fill="#F8F3EA"/><circle cx="639.8" cy="975.5" r="25.2" fill="#3A1518" stroke="#F8F3EA" stroke-width="7.4" stroke-dasharray="10.5 8.4"/><circle cx="827.7" cy="975.5" r="46.2" fill="none" stroke="#F8F3EA" stroke-width="7.4"/><line x1="795.7" y1="952.4" x2="859.7" y2="952.4" stroke="#F8F3EA" stroke-width="7.4"/><line x1="790.7" y1="975.5" x2="864.7" y2="975.5" stroke="#F8F3EA" stroke-width="7.4"/><line x1="795.7" y1="998.6" x2="859.7" y2="998.6" stroke="#F8F3EA" stroke-width="7.4"/><circle cx="915.9" cy="947.7" r="21.4" fill="#B14F3F"/><circle cx="915.9" cy="1003.3" r="21.4" fill="#F8F3EA"/></g>
+  <text x="58" y="1292" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn31-06-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
