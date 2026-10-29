@@ -4726,3 +4726,21 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **External state changed:** one Medium story published on @grownmengrow. Nothing else posted, scheduled or sent.
 
 **Open, in order:** (1) Sat 2026-10-31 18:30: Substack Note 2, owned by `gmg-saturday-note`. (2) Carried forward: the corpus test falls due at a bank of 31, and the extract-zip acceptances expire 2026-11-09.
+
+## 2026-10-29 — Wednesday draft (Claude Code): Field Note 31, "He's Been at the Grill Since Noon," complete unit for review
+
+**Client:** Claude Code, scheduled task `gmg-wednesday-draft`, fired Thursday 14:35 ET on catch-up. Chrome and the extension responded; imagery was produced in the founder's ChatGPT project.
+
+**Backfill:** none needed. `verify-repository.mjs` passed on `main` before any change, and every approved note in `content/field-notes/` carries a pack, render script, carousel, feature image, review sheet and gate entries.
+
+**Stance and register:** `**Standing commission:**` read `none` and is untouched. Stance `assignment`, opening `other`, for register position 30: it follows a `trade` opening at 29, and witness pieces stay at 7, 10, 14, 17, 20, 24 and 27.
+
+**Scope:** a 902-word essay in the generic present about the man who works the grill all afternoon: the grill as a post with a built-in exit, who came to see him, and what handing the tongs over costs, including the man for whom the post is the only way through the gate. Platform pack (Medium subtitle equals the dek), three new photographs (three prompts, three kept, no rejections, each reviewed at full resolution in crops), `render-field-note-31.mjs` with a new table-plan mark, a seven-slide carousel, a feature image, a review sheet, and gate entries.
+
+**Files changed:** `drafts/field-note-31-hes-been-at-the-grill-since-noon.md`, `drafts/field-note-31-platforms.md`, `drafts/README.md`, `scripts/render-field-note-31.mjs`, `scripts/render-review-contact-sheets.mjs`, `scripts/verify-repository.mjs`, `assets/source/editorial/{tongs-kettle-grill-shelf,lawn-chairs-loose-circle,tongs-handed-over}.png`, `assets/drafts/instagram/field-note-31-carousel/01–07.{svg,png}`, `assets/drafts/ghost/feature-images/hes-been-at-the-grill-since-noon.{svg,png}`, `assets/drafts/review/field-note-31-carousel.png`, this log. The contact-sheet renderer rewrote 28 unrelated sheets with byte-only diffs; they were restored.
+
+**External state changed:** three images generated in the ChatGPT project thread. Nothing published, posted, scheduled or sent. The draft is not founder-approved.
+
+**Verification:** `verify-ghost-theme`, theme install, theme test, theme zip with GScan, the script unit tests (225 pass), `verify-repository`, `verify-svg-xml` and `git diff --check` all pass. `strip-ai-provenance` found an indicator on 0 of 3 kept photographs.
+
+**Open, in order:** (1) Founder review of Field Note 31. (2) On approval, the move to `content/` brings the bank to 31, where `**Corpus test last measured:**` (2026-09-16, bank 21) says the measurement falls due; the approval change set records it in the decision log, or the checker fails. (3) Sat 2026-10-31 18:30: Substack Note 2, owned by `gmg-saturday-note`. (4) Carried forward: the extract-zip acceptances expire 2026-11-09.

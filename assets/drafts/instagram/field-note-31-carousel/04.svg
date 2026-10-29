@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn31-04-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn31-04-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn31-04-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 31 · 04 / 07</text>
+  <text x="74" y="290" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">The five most respected</text><text x="74" y="370" fill="#121416" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="62" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">words in the backyard:</text>
+    <g opacity="0.94"><rect x="206.5" y="628.7" width="506.0" height="142.6" rx="9.2" fill="none" stroke="#121416" stroke-width="8.1"/><circle cx="269.8" cy="573.5" r="27.6" fill="#121416"/><circle cx="396.3" cy="573.5" r="27.6" fill="#121416"/><circle cx="522.8" cy="573.5" r="27.6" fill="#121416"/><circle cx="649.3" cy="573.5" r="27.6" fill="#121416"/><circle cx="269.8" cy="826.5" r="27.6" fill="#121416"/><circle cx="396.3" cy="826.5" r="27.6" fill="#121416"/><circle cx="522.8" cy="826.5" r="27.6" fill="#121416"/><circle cx="649.3" cy="826.5" r="27.6" fill="#F8F3EA" stroke="#121416" stroke-width="8.1" stroke-dasharray="11.5 9.2"/><circle cx="855.1" cy="826.5" r="50.6" fill="none" stroke="#121416" stroke-width="8.1"/><line x1="820.0" y1="801.2" x2="890.2" y2="801.2" stroke="#121416" stroke-width="8.1"/><line x1="814.6" y1="826.5" x2="895.6" y2="826.5" stroke="#121416" stroke-width="8.1"/><line x1="820.0" y1="851.8" x2="890.2" y2="851.8" stroke="#121416" stroke-width="8.1"/><circle cx="951.7" cy="826.5" r="23.5" fill="#B14F3F"/></g>
+    <text x="78" y="1080" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="64" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">“I gotta flip these.”</text>
+    <path d="M80 1150 C260 1136 450 1148 660 1140" fill="none" stroke="#B14F3F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn31-04-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
