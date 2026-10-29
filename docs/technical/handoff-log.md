@@ -4708,3 +4708,21 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Verification:** both cadence checks pass after the edits; session gates listed in the PR.
 
 **Open, in order:** (1) Saturday's Note 2 slot (2026-10-31 18:30) is owned by `gmg-saturday-note`. (2) If the founder posts Note 1 late by hand, the row flips to `posted` and the Substack check will fail until it does, by design.
+
+## 2026-10-29 — Thursday Medium import (Claude Code): "You Can Walk on It Tomorrow" live on Medium
+
+**Client:** Claude Code, scheduled task `gmg-thursday-medium`, fired 14:35 ET on catch-up rather than at 06:45. Standing authorization for the weekly import is the 2026-08-10 week-one plan.
+
+**Preconditions:** `latestPublishedPost()` returned `you-can-walk-on-it-tomorrow`, published 2026-10-27 12:00Z, 54.6 hours before the run (rule: 40). The canonical URL answered 200. Ghost `title` "You Can Walk on It Tomorrow"; `meta_title` carries the `| Grown Men Grow` suffix; `custom_excerpt` equals the essay `dek` and the Field Note 13 pack subtitle, "Set is not the same as cured." No drift, so no pack was touched.
+
+**Duplicate check:** the profile feed listed nine stories, none this one; Stories → Drafts was empty.
+
+**Import and corrections:** imported through medium.com/p/import in the founder's signed-in Chrome. The importer produced the `meta_title`; the suffix was removed so the title reads exactly the Ghost `title`. The `Grown Men Grow 4 min read` line was deleted. The preview image had already been set from the feature artwork and was left alone. The subtitle arrived as the dek. Tags were entered one per call, each exact match highlighted before Return (`Men` sat third behind *Mental Health* and *Mental Health Awareness*), and the chips read back Men, Grief, Masculinity, Personal Growth, Essays, matching the pack. Advanced Settings held the stored canonical `https://grownmengrow.com/you-can-walk-on-it-tomorrow/`. Published; no share button was used.
+
+**Verification:** https://grownmengrow.medium.com/you-can-walk-on-it-tomorrow-80cdedab1553. An in-browser fetch of the story URL (HTTP 200, 163 KB of server HTML) carries `<link rel="canonical" href="https://grownmengrow.com/you-can-walk-on-it-tomorrow/"/>`. The live page shows the correct title and the five tags, and no byline line in the body.
+
+**Files changed:** this log.
+
+**External state changed:** one Medium story published on @grownmengrow. Nothing else posted, scheduled or sent.
+
+**Open, in order:** (1) Sat 2026-10-31 18:30: Substack Note 2, owned by `gmg-saturday-note`. (2) Carried forward: the corpus test falls due at a bank of 31, and the extract-zip acceptances expire 2026-11-09.
