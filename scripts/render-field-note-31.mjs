@@ -18,8 +18,8 @@ import {
   writeAsset,
 } from "./lib/editorial-collage.mjs";
 
-// Field Note 31 — "He's Been at the Grill Since Noon." Draft for founder
-// review, 2026-10-29; not approved, no register position.
+// Field Note 31 — "He's Been at the Grill Since Noon." Founder-approved
+// 2026-10-29; register position 30, no Ghost slot named.
 //
 // Signature vocabulary: a hand-drawn table-plan mark — a long table seen from
 // above with chairs drawn as small rings along both sides, the way a caterer

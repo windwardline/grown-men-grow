@@ -605,6 +605,10 @@ if (tracked.includes('drafts/field-note-30-the-first-nut-waits.md')
   || tracked.includes('drafts/field-note-30-platforms.md')) {
   fail('Approved Field Note 30 and its platform pack must live under content/, not drafts/.');
 }
+if (tracked.includes('drafts/field-note-31-hes-been-at-the-grill-since-noon.md')
+  || tracked.includes('drafts/field-note-31-platforms.md')) {
+  fail('Approved Field Note 31 and its platform pack must live under content/, not drafts/.');
+}
 
 const launchPackage = await readFile(path.join(root, 'content/instagram/launch-package.md'), 'utf8');
 const captionSource = launchPackage.split('\n## 8. Approved discovery classifications')[0];

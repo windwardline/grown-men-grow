@@ -4744,3 +4744,17 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Verification:** `verify-ghost-theme`, theme install, theme test, theme zip with GScan, the script unit tests (225 pass), `verify-repository`, `verify-svg-xml` and `git diff --check` all pass. `strip-ai-provenance` found an indicator on 0 of 3 kept photographs.
 
 **Open, in order:** (1) Founder review of Field Note 31. (2) On approval, the move to `content/` brings the bank to 31, where `**Corpus test last measured:**` (2026-09-16, bank 21) says the measurement falls due; the approval change set records it in the decision log, or the checker fails. (3) Sat 2026-10-31 18:30: Substack Note 2, owned by `gmg-saturday-note`. (4) Carried forward: the extract-zip acceptances expire 2026-11-09.
+
+## 2026-10-29 — Field Note 31 approved, register position 30, corpus test measured at 31 (Claude Code)
+
+**Client:** Claude Code, same session as the Wednesday draft run, on the founder's live instruction ("Approved. Finish the work and cleanup.").
+
+**Scope:** moved `hes-been-at-the-grill-since-noon` and its platform pack from `drafts/` to `content/`, flipped both to `founder-approved` with `publication_authorized: false`, appended register row 30, added the must-live-under-content guard, and updated the render script header and `drafts/README.md`. The approval took the bank to 31, so the corpus test was measured: 7 witness (23%) and 19 closings that address him (61%), of 31. The judgment and the new marker (next due at 41) are in the decision log. Field Note 30's production notes miscounted the witness pieces as eight; the markers say seven, and the line is corrected with its date.
+
+**Files changed:** `content/field-notes/hes-been-at-the-grill-since-noon.md` and `content/distribution/field-note-31-platforms.md` (moved from `drafts/`), `content/field-notes/the-first-nut-waits.md` (one production-note count), `docs/technical/decision-log.md`, `docs/technical/publication-order.md`, `drafts/README.md`, `scripts/render-field-note-31.mjs`, `scripts/verify-repository.mjs`, this log.
+
+**External state changed:** none. Nothing published, posted, scheduled or sent. No Ghost slot is named.
+
+**Cleanup:** the earlier draft PR (#262) merged. This change was built in a scratch worktree so the shared checkout, which another session had switched to its own branch, was left alone; the worktree and its local branches are removed after merge.
+
+**Open, in order:** (1) Sat 2026-10-31 18:30: Substack Note 2, owned by `gmg-saturday-note`. (2) Carried forward: the extract-zip acceptances expire 2026-11-09.

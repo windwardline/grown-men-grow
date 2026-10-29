@@ -70,6 +70,7 @@ Sequence is the authority. Dates are projections from the Tuesday 8:00 AM slot a
 | 27 | `the-sweep-has-nowhere-else-to-be` | 2027-02-16 | |
 | 28 | `nobody-bids-a-job-at-3-am` | 2027-02-23 | |
 | 29 | `the-first-nut-waits` | 2027-03-02 | |
+| 30 | `hes-been-at-the-grill-since-noon` | 2027-03-09 | |
 
 ## Why this order and not another
 
@@ -142,6 +143,10 @@ Its approval change set first claimed 24, written while Field Note 25 was still 
 ### Position 28 was appended
 
 `nobody-bids-a-job-at-3-am` was approved 2026-10-21 and appended at 28. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note. It is `assignment`, so the witness pieces stay at 7, 10, 14, 17, 20, 24 and 27; a witness piece could not have taken this slot, one away from 27. Its `other` opening follows the `other` opening at 27, so no trade run grows.
+
+### Position 30 was appended
+
+`hes-been-at-the-grill-since-noon` was approved 2026-10-29 and appended at 30. Appending moves nothing: every projection above it is untouched, and none of the three binding constraints involves it, because the essay contains no reference to another note. It is `assignment`, so the witness pieces stay at 7, 10, 14, 17, 20, 24 and 27. Its `other` opening follows a `trade` opening at 29, so the trade run there stays at one.
 
 ### Position 29 was appended
 
