@@ -4758,3 +4758,33 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Cleanup:** the earlier draft PR (#262) merged. This change was built in a scratch worktree so the shared checkout, which another session had switched to its own branch, was left alone; the worktree and its local branches are removed after merge.
 
 **Open, in order:** (1) Sat 2026-10-31 18:30: Substack Note 2, owned by `gmg-saturday-note`. (2) Carried forward: the extract-zip acceptances expire 2026-11-09.
+
+## 2026-10-30 — Claude Code — Friday analytics readout (Oct 24–30)
+
+**Client:** Claude Code, scheduled task `gmg-friday-analytics`, on its Friday for the first time in weeks (15:43 ET). **Branch:** `claude/friday-analytics-2026-10-30`. It covers the week since the 2026-10-24 readout.
+
+**Scope:** verification only. Nothing was published, posted, replied to, or sent.
+
+**Week 10 went out.** `you-can-walk-on-it-tomorrow` published 2026-10-27 12:00Z. Buffer sent Bluesky (10-27), LinkedIn (10-28) and Instagram (10-29); the Saturday Bluesky post is queued for 10-31 22:30Z.
+
+**Ghost.** **1** member, unchanged; 0 new since 10-23. Week 10 send: 1 sent, 1 delivered, 1 opened, 0 failed. Comments: 0 site-wide.
+
+**Pageviews (Ghost web analytics, signed-in admin).** Last 7 days (Oct 24–30): **4 visitors, 6 views**. Top content: You Can Walk on It Tomorrow 2, Homepage 2, You Can't Outwork a Wrong Direction 1, Start Here 1. Sources: Direct 3, Bluesky 1. Last 30 days: **16 visitors, 22 views** (was 16 and 20). Top content: Homepage 11, Start Here 3, The Lights Never Flickered 3, You Can Walk on It Tomorrow 2, Ask for Help 2. Sources: Direct 14, Bluesky 2. Newsletters tab: 1 subscriber, 100% open on the one send.
+
+**The LinkedIn post reached people for the first time, and no visit can be traced to it.** Buffer reports the Week 10 LinkedIn post at **306 impressions, 231 reach**, an engagement rate of 0.33% (about one click), 0 reactions, 0 comments. Every earlier LinkedIn post reached between 1 and 7. Ghost recorded no LinkedIn source in either window. The LinkedIn app often drops the referrer, so one click could sit inside Direct; that cannot be shown either way. This is the same gap as Instagram's 76 claimed bio-link clicks against one recorded visitor: platform reach is not readership, and Ghost remains the measure. Worth watching whether the reach repeats; one post is not a pattern.
+
+**A/B protocol stays suspended at step 3**, with 1 recipient against a floor of 30. No timing decision is due, so `publish-timing.md` is unchanged.
+
+**Platform numbers.** Instagram carousel (10-29): reach 3, views 8, 0 saves, 0 shares, 0 follows (Buffer). Business Suite 28 days to 10-29: views 17, reach 3, 0 content interactions, 0 link clicks, 3 profile visits (none this week); follower demographics stay hidden below 100 followers. Bluesky: 0 reactions, replies or reposts on the 10-27 post; profile 0 followers, 19 posts.
+
+**Moderation sweep: nothing to escalate.** Ghost comments: 0. Instagram DMs on instagram.com: Primary, General, Requests and Hidden Requests all empty. Instagram comments: 0 (Buffer, Business Suite). LinkedIn comments: 0 (Buffer). Bluesky: the founder's session was signed in, so notifications and chats were read directly for the first time rather than through the public API. Notifications hold only the two-month-old likes and follows; the Mentions tab is empty; chats and requests are empty. No reply was made.
+
+**Qualitative pass:** nothing said back on any surface, so there is no recurring question or objection to report.
+
+**Corpus balance check: skipped.** Measured 2026-10-29 at a bank of 31; next due at 41.
+
+**Cadence gates.** `verify-publication-register.mjs` passes, 31 rows agreeing with Ghost (10 published, 0 scheduled, 21 projected). `verify-substack-notes.mjs` passes, 20 rows (12 posted, 7 missed, 1 pending).
+
+**Files changed:** this log only. **External state changed:** none. Ghost Admin, Buffer, Business Suite, Instagram and Bluesky were read, not changed.
+
+**Open, in order:** (1) Sat 2026-10-31 18:30: Substack Note 2, owned by `gmg-saturday-note`. (2) Mon 2026-11-02: staging the 11-03 essay, owned by `gmg-monday-staging`; no post is scheduled yet, which is expected. (3) Carried forward: distribution and the one-member list, the suspended A/B, the `isAiGenerated` founder question from 2026-09-28, and the extract-zip acceptances expiring 2026-11-09.
