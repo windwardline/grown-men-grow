@@ -4789,6 +4789,22 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 
 **Open, in order:** (1) Sat 2026-10-31 18:30: Substack Note 2, owned by `gmg-saturday-note`. (2) Mon 2026-11-02: staging the 11-03 essay, owned by `gmg-monday-staging`; no post is scheduled yet, which is expected. (3) Carried forward: distribution and the one-member list, the suspended A/B, the `isAiGenerated` founder question from 2026-09-28, and the extract-zip acceptances expiring 2026-11-09.
 
+## 2026-10-31 — Claude Code — Saturday Substack Note 2 posted on slot
+
+**Client:** Claude Code, scheduled task `gmg-saturday-note`, fired 18:28 ET. **Branch:** `docs/saturday-note-2026-10-31`.
+
+**Scope:** posted Week 10's Substack Note 2 for `you-can-walk-on-it-tomorrow` from `content/distribution/field-note-13-platforms.md`. Preflight returned `wait` (66 s, hold `none`, essay published 2026-10-27); the profile was read before the wait and again after it, showing the Grown Men Grow identity with Edit profile and the Oct 19 note on top. The copy came from the preflight's `copy` field and typed in full through the Chrome `computer` action. A zoom of the composer before posting showed every word present. The only difference was the composer's straight-to-curly apostrophe, which the register check already undoes.
+
+**External state changed:** one Substack note is public at `https://substack.com/@grownmengrow/note/c-375411310`, timestamped Oct 31, 2026, 6:30 PM ET. That is on slot. After a reload it showed at the top of the profile under the publication identity, with its text intact. Lock released.
+
+**Files changed:** `docs/technical/substack-notes.md` (row `you-can-walk-on-it-tomorrow` / 2 set to `posted`, `c-375411310`), this log.
+
+**Bearing on the register's standing observation:** `substack-notes.md` says every note so far went out with a person at the keyboard. This one went out from an unattended scheduled run, and the keystroke action was not blocked. That paragraph is left as written because it feeds an open founder question. One clean run does not show the mechanism is reliable. The intermittent truncation recorded there is why the composer was read back before posting.
+
+**CI fix in the same PR.** This PR's `Dependency scan / osv-scan` failed on GHSA-g3hv-75wg-m249, published 2026-10-30. It is a minimatch globparts denial of service that affects every release below 11.0.1. The only consumer is `readdir-glob@3.0.0` under gscan, which asks for `^10.2.2`, so `main` was failing the same way. A patched release exists, so the fix is an override rather than an `osv-scanner.toml` acceptance: `minimatch@^10: ^11.0.1` in `theme/pnpm-workspace.yaml`, with the release that retires it named. It resolves to 11.0.3, four days old, and pnpm wrote no cooling-off waiver. readdir-glob imports only the `Minimatch` class. It was exercised directly against 11.0.3 and matched the theme's 11 `.hbs` files. All six gates pass, as does `verify-dependency-exemptions.mjs`. Files: `theme/pnpm-workspace.yaml`, `theme/pnpm-lock.yaml`.
+
+**Open, in order:** (1) Mon 2026-11-02: staging the 11-03 essay, owned by `gmg-monday-staging`. (2) Carried forward: the one-member list, the suspended A/B, the `isAiGenerated` founder question from 2026-09-28, and the extract-zip acceptances expiring 2026-11-09.
+
 ## 2026-10-31 — Claude Code — Saturday draft, Field Note 32, "He Won't Remember the Drive"
 
 **Client:** Claude Code, scheduled task `gmg-saturday-draft`, fired 18:47 ET. **Branch:** `content/field-note-32-draft`.
