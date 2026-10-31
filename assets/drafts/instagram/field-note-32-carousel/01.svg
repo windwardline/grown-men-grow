@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn32-01-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn32-01-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn32-01-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#F8F3EA"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 32 · 01 / 07</text>
+  <text x="64" y="250" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="76" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.6">HE WON'T REMEMBER</text>
+    <text x="64" y="340" fill="#3A1518" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="76" font-weight="900" font-style="normal" text-anchor="start" letter-spacing="0.6">THE DRIVE</text>
+    <text x="68" y="414" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="28" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">The nurse gives the instructions</text><text x="68" y="452" fill="#71706B" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="28" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">to the man who drove him.</text>
+    <g transform="rotate(-0.8 680 850)">
+    <rect x="388" y="520" width="584" height="694" fill="#60735A"/>
+    <rect x="396" y="506" width="568" height="688" fill="#F8F3EA"/>
+    <image href="/assets/source/editorial/waiting-room-chairs-morning.png" x="400" y="510" width="560" height="680" preserveAspectRatio="xMidYMid slice" filter="url(#fn32-01-photo)"/>
+  </g>
+    <g transform="rotate(3 717 511)">
+    <rect x="610" y="488" width="214" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="618" y1="495" x2="814" y2="492" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <g opacity="0.94"><path d="M145.6 1039.8 L145.6 1014.0 L171.4 1014.0" fill="none" stroke="#121416" stroke-width="4.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M248.6 1014.0 L274.4 1014.0 L274.4 1039.8" fill="none" stroke="#121416" stroke-width="4.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M274.4 1080.2 L274.4 1106.0 L248.6 1106.0" fill="none" stroke="#121416" stroke-width="4.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M171.4 1106.0 L145.6 1106.0 L145.6 1080.2" fill="none" stroke="#121416" stroke-width="4.1" stroke-linecap="round" stroke-linejoin="round"/><circle cx="178.7" cy="1045.3" r="7.8" fill="#F8F3EA" stroke="#121416" stroke-width="4.1"/></g>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn32-01-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

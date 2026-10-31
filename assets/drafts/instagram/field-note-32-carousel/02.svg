@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn32-02-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn32-02-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn32-02-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#EEE6D8"/>
+  <text x="58" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#121416" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 32 · 02 / 07</text>
+  <rect x="60" y="230" width="960" height="740" fill="#3A1518" transform="rotate(-0.6 540 600)"/>
+    <g transform="rotate(-3 331 231)">
+    <rect x="220" y="208" width="222" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="228" y1="215" x2="432" y2="212" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <g transform="rotate(4 878 969)">
+    <rect x="780" y="946" width="196" height="46" fill="#D9CBAF" opacity="0.74"/>
+    <line x1="788" y1="953" x2="966" y2="950" stroke="#fff" stroke-opacity="0.38"/>
+  </g>
+    <text x="110" y="380" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="80" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">He doesn't</text><text x="110" y="476" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="80" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">leave alone.</text>
+    <g opacity="0.94"><path d="M621.0 732.6 L621.0 685.0 L668.6 685.0" fill="none" stroke="#F8F3EA" stroke-width="7.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M811.4 685.0 L859.0 685.0 L859.0 732.6" fill="none" stroke="#F8F3EA" stroke-width="7.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M859.0 807.4 L859.0 855.0 L811.4 855.0" fill="none" stroke="#F8F3EA" stroke-width="7.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M668.6 855.0 L621.0 855.0 L621.0 807.4" fill="none" stroke="#F8F3EA" stroke-width="7.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="682.2" cy="742.8" r="14.5" fill="#3A1518" stroke="#F8F3EA" stroke-width="7.6"/></g>
+    <text x="76" y="1090" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="44" font-weight="700" font-style="italic" text-anchor="start" letter-spacing="0">Not in a cab, not in a rideshare,</text><text x="76" y="1148" fill="#3A1518" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="44" font-weight="700" font-style="italic" text-anchor="start" letter-spacing="0">not on foot.</text>
+  <text x="58" y="1292" fill="#71706B" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn32-02-paper)" opacity="0.22" pointer-events="none"/>
+</svg>

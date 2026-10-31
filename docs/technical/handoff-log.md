@@ -4804,3 +4804,21 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **CI fix in the same PR.** This PR's `Dependency scan / osv-scan` failed on GHSA-g3hv-75wg-m249, published 2026-10-30. It is a minimatch globparts denial of service that affects every release below 11.0.1. The only consumer is `readdir-glob@3.0.0` under gscan, which asks for `^10.2.2`, so `main` was failing the same way. A patched release exists, so the fix is an override rather than an `osv-scanner.toml` acceptance: `minimatch@^10: ^11.0.1` in `theme/pnpm-workspace.yaml`, with the release that retires it named. It resolves to 11.0.3, four days old, and pnpm wrote no cooling-off waiver. readdir-glob imports only the `Minimatch` class. It was exercised directly against 11.0.3 and matched the theme's 11 `.hbs` files. All six gates pass, as does `verify-dependency-exemptions.mjs`. Files: `theme/pnpm-workspace.yaml`, `theme/pnpm-lock.yaml`.
 
 **Open, in order:** (1) Mon 2026-11-02: staging the 11-03 essay, owned by `gmg-monday-staging`. (2) Carried forward: the one-member list, the suspended A/B, the `isAiGenerated` founder question from 2026-09-28, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-10-31 — Claude Code — Saturday draft, Field Note 32, "He Won't Remember the Drive"
+
+**Client:** Claude Code, scheduled task `gmg-saturday-draft`, fired 18:47 ET. **Branch:** `content/field-note-32-draft`.
+
+**Scope:** a complete unit for founder review: essay, platform pack, three new photographs, render script with a new viewfinder mark, seven-slide carousel, feature image, review sheet, and gate entries. Backfill came first and found nothing to do; `verify-repository.mjs` passed on `main` before any change.
+
+**Stance:** `witness`, under the standing corpus duty. `**Standing commission:**` read `none` and is untouched. Positions 28–30 are three assignments since the witness piece at 27; the next open position is 31, four slots on, and the last three witness gaps would run four, three, four. The opening is `other`, following `other` at 30. The subject test passes: the clinic's escort rule takes the decision of how he gets home and the sedation takes the memory, and nothing he does inside the morning changes either.
+
+**Images:** three prompts, three kept, no rejections, each reviewed at full resolution in crops. All three stripped with `strip-ai-provenance`; the re-scan found an indicator on 0 of 3. Prompts are in the draft's production notes.
+
+**Files changed:** `drafts/field-note-32-he-wont-remember-the-drive.md`, `drafts/field-note-32-platforms.md`, `drafts/README.md`, `scripts/render-field-note-32.mjs`, `scripts/render-review-contact-sheets.mjs`, `scripts/verify-repository.mjs`, `assets/source/editorial/{waiting-room-chairs-morning,apple-juice-recovery-tray,keys-folded-sheet-counter}.png`, `assets/drafts/instagram/field-note-32-carousel/01–07` (SVG and PNG), `assets/drafts/ghost/feature-images/he-wont-remember-the-drive.{svg,png}`, `assets/drafts/review/field-note-32-carousel.png`, this log. The review-sheet renderer rewrote 28 unrelated sheets with byte-only diffs; those were restored, not committed.
+
+**Verification:** `verify-ghost-theme` pass; theme install (frozen lockfile) pass; theme test pass; theme zip plus GScan pass; script unit tests 225 of 225 pass; `verify-repository` pass (948 tracked files, 36 review sheets, 102 editorial sources); `verify-svg-xml` pass (294 SVGs); `git diff --cached --check` clean.
+
+**External state changed:** three images generated in the founder's ChatGPT project, continuing the existing Editorial Photography Request thread. Nothing published, posted, scheduled or sent. The draft is not founder-approved and has no register position.
+
+**Open, in order:** (1) Founder review of Field Note 32. On approval it moves to `content/` at register position 31 with a must-live-under-content guard. (2) Mon 2026-11-02: staging, owned by `gmg-monday-staging`. (3) Carried forward: the extract-zip acceptances expire 2026-11-09.
