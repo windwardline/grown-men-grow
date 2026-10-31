@@ -60,7 +60,7 @@ An unreachable feed fails closed: an unread feed is not an empty one.
 | `ask-for-help-while-its-still-cheap` | 1 | 2026-10-13 12:00 | posted | `c-360057758` |
 | `ask-for-help-while-its-still-cheap` | 2 | 2026-10-17 18:30 | posted | `c-364621858` |
 | `you-can-walk-on-it-tomorrow` | 1 | 2026-10-27 12:00 | missed |  |
-| `you-can-walk-on-it-tomorrow` | 2 | 2026-10-31 18:30 |  |  |
+| `you-can-walk-on-it-tomorrow` | 2 | 2026-10-31 18:30 | posted | `c-375411310` |
 
 ## What the rows say, as of 2026-09-22
 
