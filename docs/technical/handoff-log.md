@@ -4788,3 +4788,17 @@ The gap was access, not measurement. `stats/*` and `tinybird/token/` return 403 
 **Files changed:** this log only. **External state changed:** none. Ghost Admin, Buffer, Business Suite, Instagram and Bluesky were read, not changed.
 
 **Open, in order:** (1) Sat 2026-10-31 18:30: Substack Note 2, owned by `gmg-saturday-note`. (2) Mon 2026-11-02: staging the 11-03 essay, owned by `gmg-monday-staging`; no post is scheduled yet, which is expected. (3) Carried forward: distribution and the one-member list, the suspended A/B, the `isAiGenerated` founder question from 2026-09-28, and the extract-zip acceptances expiring 2026-11-09.
+
+## 2026-10-31 — Claude Code — Saturday Substack Note 2 posted on slot
+
+**Client:** Claude Code, scheduled task `gmg-saturday-note`, fired 18:28 ET. **Branch:** `docs/saturday-note-2026-10-31`.
+
+**Scope:** posted Week 10's Substack Note 2 for `you-can-walk-on-it-tomorrow` from `content/distribution/field-note-13-platforms.md`. Preflight returned `wait` (66 s, hold `none`, essay published 2026-10-27); the profile was read before the wait and again after it, showing the Grown Men Grow identity with Edit profile and the Oct 19 note on top. The copy came from the preflight's `copy` field and typed in full through the Chrome `computer` action. A zoom of the composer before posting showed every word present. The only difference was the composer's straight-to-curly apostrophe, which the register check already undoes.
+
+**External state changed:** one Substack note is public at `https://substack.com/@grownmengrow/note/c-375411310`, timestamped Oct 31, 2026, 6:30 PM ET. That is on slot. After a reload it showed at the top of the profile under the publication identity, with its text intact. Lock released.
+
+**Files changed:** `docs/technical/substack-notes.md` (row `you-can-walk-on-it-tomorrow` / 2 set to `posted`, `c-375411310`), this log.
+
+**Bearing on the register's standing observation:** `substack-notes.md` says every note so far went out with a person at the keyboard. This one went out from an unattended scheduled run, and the keystroke action was not blocked. That paragraph is left as written because it feeds an open founder question. One clean run does not show the mechanism is reliable. The intermittent truncation recorded there is why the composer was read back before posting.
+
+**Open, in order:** (1) Mon 2026-11-02: staging the 11-03 essay, owned by `gmg-monday-staging`. (2) Carried forward: the one-member list, the suspended A/B, the `isAiGenerated` founder question from 2026-09-28, and the extract-zip acceptances expiring 2026-11-09.
