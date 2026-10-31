@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <filter id="fn32-06-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+    <filter id="fn32-06-photo" x="-5%" y="-5%" width="110%" height="110%">
+      <feColorMatrix type="saturate" values="0.9"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.03" intercept="0.01"/>
+        <feFuncG type="linear" slope="1.02" intercept="0.01"/>
+        <feFuncB type="linear" slope="0.99" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="fn32-06-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.55" fill="#121416" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="#3A1518"/>
+  <text x="58" y="94" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="4.1">GROWN MEN GROW</text>
+  <text x="1022" y="94" fill="#F8F3EA" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="end" letter-spacing="2.7">FIELD NOTE 32 · 06 / 07</text>
+  <text x="74" y="300" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="70" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">The drive has exactly</text><text x="74" y="388" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="70" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">one person who'll</text><text x="74" y="476" fill="#F8F3EA" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="70" font-weight="700" font-style="normal" text-anchor="start" letter-spacing="0">remember it,</text>
+    <text x="78" y="600" fill="#EEE6D8" font-family="Bodoni 72, Didot, Georgia, Times New Roman, serif" font-size="52" font-weight="400" font-style="italic" text-anchor="start" letter-spacing="0.2">and he's driving.</text>
+    <g opacity="0.94"><path d="M251.0 862.6 L251.0 815.0 L298.6 815.0" fill="none" stroke="#F8F3EA" stroke-width="7.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M441.4 815.0 L489.0 815.0 L489.0 862.6" fill="none" stroke="#F8F3EA" stroke-width="7.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M489.0 937.4 L489.0 985.0 L441.4 985.0" fill="none" stroke="#F8F3EA" stroke-width="7.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M298.6 985.0 L251.0 985.0 L251.0 937.4" fill="none" stroke="#F8F3EA" stroke-width="7.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="312.2" cy="872.8" r="14.5" fill="#3A1518" stroke="#F8F3EA" stroke-width="7.6"/><path d="M591.0 862.6 L591.0 815.0 L638.6 815.0" fill="none" stroke="#F8F3EA" stroke-width="7.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M781.4 815.0 L829.0 815.0 L829.0 862.6" fill="none" stroke="#F8F3EA" stroke-width="7.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M829.0 937.4 L829.0 985.0 L781.4 985.0" fill="none" stroke="#F8F3EA" stroke-width="7.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M638.6 985.0 L591.0 985.0 L591.0 937.4" fill="none" stroke="#F8F3EA" stroke-width="7.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="652.2" cy="872.8" r="14.5" fill="#B14F3F"/></g>
+  <text x="58" y="1292" fill="#EEE6D8" font-family="Arial Narrow, Helvetica Neue Condensed, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="900" letter-spacing="2.5">@GROWNMENGROW</text>
+  <rect width="1080" height="1350" filter="url(#fn32-06-paper)" opacity="0.22" pointer-events="none"/>
+</svg>
